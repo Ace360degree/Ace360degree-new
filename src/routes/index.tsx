@@ -2,8 +2,8 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
-import heroMesh from "@/assets/hero-mesh.jpg";
-import showreel from "@/assets/showreel.jpg";
+import heroMesh from "@/assets/index/AI growth visualization.png";
+import showreel from "@/assets/index/teamwork.png";
 import caseMos from "@/assets/case-mos.jpg";
 import caseCosmos from "@/assets/case-cosmos.jpg";
 import caseRexello from "@/assets/case-rexello.jpg";
@@ -12,6 +12,12 @@ import caseKsa from "@/assets/case-ksa.jpg";
 import caseLiving from "@/assets/case-living.jpg";
 import blogFeatured from "@/assets/blog-featured.jpg";
 import whyTeam from "@/assets/why-team.jpg";
+import webIcon from "@/assets/index/web.png";
+import seoIcon from "@/assets/index/seo.png";
+import pmIcon from "@/assets/index/PM.png";
+import viIcon from "@/assets/index/VI.png";
+import appIcon from "@/assets/index/App.png";
+import crmIcon from "@/assets/index/CRM.png";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -29,19 +35,19 @@ function Hero() {
           </span>
           <h1 className="text-balance text-5xl md:text-6xl lg:text-7xl font-medium leading-[1.05] tracking-tight">
             Where Strategy Meets{" "}
-            <span className="font-serif italic font-normal">Creativity</span> — And Brands Grow{" "}
+            <span className="font-serif italic font-normal">Creativity</span> & Brands Grow{" "}
             <span className="font-serif italic font-normal">Fearlessly</span>
           </h1>
           <p className="mt-8 max-w-[52ch] text-pretty text-lg text-ink leading-relaxed">
-            At Ace360degree, we help ambitious brands grow through AI-powered, data-driven digital
-            marketing, impactful branding, and scalable technology solutions. From startups to
-            enterprises — our team crafts measurable digital success stories across India, UAE, UK,
-            and USA.
+            At Ace360degree, we help ambitious brands grow through AI-powered,
+            data-driven digital marketing, impactful branding, and scalable technology
+            solutions. From startups to enterprises — our team crafts measurable digital
+            success stories across India, UAE, UK, Australia, Canada & USA.
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
             <a
               href="#cta"
-              className="inline-flex items-center gap-2 bg-brand py-3 pr-5 pl-2.5 text-sm font-semibold text-dark ring-1 ring-brand hover:brightness-95 transition"
+              className="inline-flex items-center gap-2 bg-brand rounded-2xl py-3 pr-5 pl-2.5 text-sm font-semibold text-dark ring-1 ring-brand hover:brightness-95 transition"
             >
               <span className="grid place-items-center size-6 rounded-full bg-dark/10">
                 <span className="size-1.5 rounded-full bg-dark" />
@@ -50,7 +56,7 @@ function Hero() {
             </a>
             <a
               href="#cta"
-              className="inline-flex items-center px-6 py-3 text-sm font-semibold text-dark border border-dark/15 hover:bg-dark hover:text-canvas transition"
+              className="inline-flex items-center px-6 py-3 rounded-2xl text-sm font-semibold text-dark border border-dark/15 hover:bg-dark hover:text-canvas transition"
             >
               Schedule Consultation
             </a>
@@ -64,15 +70,15 @@ function Hero() {
               alt="AI growth visualization"
               width={1024}
               height={1024}
-              className="w-full aspect-square object-cover rounded-md outline outline-1 -outline-offset-1 outline-dark/5 shadow-xl shadow-dark/5"
+              className="w-full aspect-square object-cover rounded-md"
             />
-            <div className="absolute -bottom-6 -left-6 bg-canvas p-5 ring-1 ring-dark/5 shadow-xl shadow-dark/5 max-w-[220px]">
+            <div className="absolute -bottom-6 -left-6 rounded-2xl bg-canvas p-5 ring-1 ring-dark/5 shadow-xl shadow-dark/5 max-w-[220px]">
               <div className="text-3xl font-serif italic text-brand leading-none">+142%</div>
               <div className="text-[10px] uppercase tracking-[0.18em] text-dark/50 mt-2">
                 Avg. Conversion Lift
               </div>
             </div>
-            <div className="absolute -top-5 right-4 bg-dark text-canvas px-4 py-2 text-[10px] uppercase tracking-[0.2em]">
+            <div className="absolute -top-5 right-4 rounded-2xl bg-dark text-canvas px-6 py-4 text-[12px] uppercase tracking-[0.2em]">
               AI · Data · Growth
             </div>
           </div>
@@ -152,13 +158,13 @@ function Showreel() {
             build is engineered for performance and built to scale.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
-            <a href="#cta" className="inline-flex items-center gap-2 bg-dark text-canvas py-3 pr-5 pl-2.5 text-sm font-semibold hover:bg-dark/90 transition">
+            <a href="#cta" className="inline-flex items-center gap-2 bg-dark text-canvas rounded-2xl py-3 pr-5 pl-2.5 text-sm font-semibold hover:bg-dark/90 transition">
               <span className="grid place-items-center size-6 rounded-full bg-canvas/10">
                 <span className="size-1.5 rounded-full bg-canvas" />
               </span>
               Start a Project
             </a>
-            <a href="#cta" className="inline-flex items-center px-6 py-3 text-sm font-semibold border border-dark/15 hover:bg-dark hover:text-canvas transition">
+            <a href="#cta" className="inline-flex items-center px-6 py-3 rounded-2xl text-sm font-semibold border border-dark/15 hover:bg-dark hover:text-canvas transition">
               Book Consultation
             </a>
           </div>
@@ -171,16 +177,53 @@ function Showreel() {
 /* ---------------- Services ---------------- */
 function Services() {
   const services = [
-    { cat: "Digital Marketing", title: "SEO", line: "Rank Higher. Get Found.", desc: "Optimizing your digital footprint to dominate search results and capture high-intent traffic." },
-    { cat: "Digital Marketing", title: "Performance Marketing", line: "Clicks That Convert.", desc: "Data-driven campaigns engineered for ROI, lead generation, and aggressive scale." },
-    { cat: "Branding", title: "Social Media", line: "Build. Engage. Grow.", desc: "Strategic storytelling that turns followers into brand advocates across every platform." },
-    { cat: "Branding", title: "Visual Identity", line: "Iconic Brand Presence.", desc: "Distinct identity systems — logos, colors, typography — built to outlast trends." },
-    { cat: "Technology", title: "Web Development", line: "Fast. Scalable. Future-Ready.", desc: "High-performance digital architectures with seamless UX across every device." },
-    { cat: "Technology", title: "AI & Automation", line: "Work Smarter. Scale Faster.", desc: "Machine learning and custom workflows that eliminate bottlenecks and accelerate growth." },
+    {
+      cat: "Digital Platforms",
+      title: "Web Design & Development",
+      line: "Fast. Scalable. Future-Ready.",
+      desc: "Create fast, scalable and conversion-focused websites engineered for exceptional user experience, search visibility and sustainable business growth.",
+      icon: webIcon,
+    },
+    {
+      cat: "Organic Growth",
+      title: "SEO",
+      line: "Rank Higher. Get Found.",
+      desc: "Improve your visibility on Google and AI-powered search with SEO, GEO and AEO strategies that attract qualified traffic, increase authority.",
+      icon: seoIcon,
+    },
+    {
+      cat: "Paid Acquisition",
+      title: "Performance Marketing",
+      line: "Clicks That Convert.",
+      desc: "Google Ads & Meta Ads campaigns engineered for maximum ROI, qualified lead generation and scalable business growth.",
+      icon: pmIcon,
+    },
+    {
+      cat: "Brand Systems",
+      title: "Visual Identity",
+      line: "Iconic Brand Presence.",
+      desc: "Develop distinctive visual systems—including logos, typography, colors and brand guidelines—that communicate credibility & consistency.",
+      icon: viIcon,
+    },
+    {
+      cat: "Digital Experiences",
+      title: "Mobile App Development",
+      line: "iOS · Android",
+      desc: "Build intuitive, scalable mobile applications that enhance customer engagement, streamline operations and accelerate business growth.",
+      icon: appIcon,
+    },
+    {
+      cat: "Business Automation",
+      title: "CRM & ERP Solutions",
+      line: "Automate. Manage. Scale.",
+      desc: "Centralise your business operations with custom CRM and ERP solutions that automate workflows, improve team collaboration & provide real-time business insights.",
+      icon: crmIcon,
+    },
   ];
+
   return (
     <section id="services" className="relative py-32 bg-background overflow-hidden">
-      <div className="absolute top-12 left-6 text-[18vw] md:text-[14vw] font-bold text-dark/[0.04] select-none pointer-events-none tracking-tighter leading-none uppercase">
+      <div className="absolute top-12 left-6 text-[18vw] md:text-[14vw] font-bold text-dark/[0.07] select-none pointer-events-none tracking-tighter leading-none uppercase">
         Services
       </div>
       <div className="relative mx-auto max-w-7xl px-6">
@@ -189,12 +232,12 @@ function Services() {
             Our Expertise
           </span>
           <h2 className="mt-4 text-4xl md:text-5xl font-medium leading-tight text-balance">
-            Where Strategy Meets <span className="font-serif italic">Creativity</span> — and
-            Technology Drives <span className="font-serif italic">Growth</span>
+            Everything You Need to Build,<br />— Market &amp;{" "}
+            <span className="font-serif italic">Grow</span>
           </h2>
           <p className="mt-6 text-ink leading-relaxed max-w-[58ch]">
-            AI-powered marketing, branding, and technology solutions engineered for measurable
-            business growth.
+            AI-powered Growth marketing, branding, and technology solutions engineered for
+            measurable business growth.
           </p>
         </div>
 
@@ -202,13 +245,16 @@ function Services() {
           {services.map((s, i) => (
             <div
               key={s.title}
-              className="bg-background p-10 group hover:bg-canvas transition-colors relative"
+              className="bg-background p-10 group hover:bg-canvas transition-colors relative flex flex-col"
             >
-              <div className="flex items-center justify-between mb-8">
-                <div className="size-10 bg-brand/15 grid place-items-center">
-                  <div className="size-3.5 bg-brand" />
-                </div>
-                <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-dark/40">
+              {/* Top row: icon + number */}
+              <div className="flex items-start justify-between mb-6">
+                <img
+                  src={s.icon}
+                  alt={s.title}
+                  className="h-14 w-14 object-contain"
+                />
+                <span className="text-[11px] font-mono text-dark/30 tracking-widest">
                   0{i + 1}
                 </span>
               </div>
@@ -221,6 +267,16 @@ function Services() {
               <div className="mt-8 h-px w-12 bg-brand transition-all duration-500 group-hover:w-full" />
             </div>
           ))}
+        </div>
+
+        {/* CTA */}
+        <div className="mt-14 flex justify-center">
+          <a
+            href="/services"
+            className="inline-flex items-center bg-dark text-canvas text-sm font-semibold px-10 py-4 rounded-2xl hover:bg-dark/85 transition-all duration-200"
+          >
+            View All Services
+          </a>
         </div>
       </div>
     </section>
@@ -274,13 +330,13 @@ function SaaS() {
 /* ---------------- Achievements ---------------- */
 function Achievements() {
   const stats = [
-    { n: "6+", label: "Years of Experience" },
+    { n: "15+", label: "Years of Experience" },
     { n: "300+", label: "Projects Completed" },
-    { n: "45+", label: "Clients" },
+    { n: "50+", label: "Clients" },
     { n: "∞", label: "Cups of Coffee" },
   ];
   return (
-    <section className="bg-brand py-20">
+    <section className="bg-[#E5950C] py-20">
       <div className="mx-auto max-w-7xl px-6">
         <p className="text-center text-xs uppercase tracking-[0.22em] font-semibold text-dark/70 mb-10">
           Trusted by Businesses · Driven by Results
@@ -345,64 +401,83 @@ function Testimonials() {
       quote:
         "Ace360degree transformed our digital footprint. Their AI-led campaigns lifted our qualified lead volume by 3x within a single quarter.",
       author: "Director, MOS Utility",
-      brand: "MOS Utility",
     },
     {
       quote:
         "Strategy, design, technology — all from one team. The Amigo Academy launch was the smoothest roll-out we've ever done.",
       author: "Founder, Amigo Academy",
-      brand: "Amigo Academy",
     },
     {
       quote:
         "Their team understood the nuance of our regional market and delivered a brand presence that truly resonates across KSA.",
-      author: "Marketing Head, KSA",
-      brand: "KSA Group",
+      author: "Marketing Head, KSA Group",
     },
   ];
+
   const [i, setI] = useState(0);
+
   useEffect(() => {
-    const t = setInterval(() => setI((v) => (v + 1) % items.length), 6000);
+    const t = setInterval(() => setI((v) => (v + 1) % items.length), 5000);
     return () => clearInterval(t);
-  }, []);
+  }, [items.length]);
+
   return (
-    <section className="py-28 bg-canvas">
-      <div className="mx-auto max-w-5xl px-6 text-center">
+    <section className="relative py-28 bg-canvas overflow-hidden">
+      {/* Background watermark */}
+      <div className="absolute inset-0 flex items-start justify-center pointer-events-none select-none">
+        <span className="text-[12vw] font-bold text-dark/[0.07] tracking-tighter leading-none uppercase whitespace-nowrap">
+          TESTIMONIALS
+        </span>
+      </div>
+
+      <div className="relative mx-auto max-w-5xl px-6 text-center">
+        {/* Label */}
         <span className="text-brand font-semibold text-xs tracking-[0.22em] uppercase">
           Testimonials
         </span>
-        <h2 className="mt-4 text-4xl md:text-5xl font-medium leading-tight text-balance">
+
+        {/* Heading */}
+        <h2 className="mt-3 text-4xl md:text-5xl font-medium leading-tight">
           What Our Clients <span className="font-serif italic">Say</span>
         </h2>
-        <div className="mt-14 relative min-h-[260px]">
-          {items.map((t, idx) => (
+
+        {/* Slider */}
+        <div className="mt-14 relative" style={{ minHeight: "260px" }}>
+          {items.map((item, idx) => (
             <div
               key={idx}
-              className={`absolute inset-0 transition-opacity duration-700 ${
-                idx === i ? "opacity-100" : "opacity-0 pointer-events-none"
-              }`}
+              className={`transition-opacity duration-700 ${idx === i ? "opacity-100" : "opacity-0 pointer-events-none absolute inset-0"
+                }`}
             >
-              <div className="bg-background border border-dark/5 shadow-sm p-10 md:p-14 max-w-3xl mx-auto">
-                <div className="text-brand text-3xl font-serif italic mb-6">"</div>
+              <div className="bg-white border border-dark/8 shadow-sm rounded-md mx-auto max-w-2xl px-10 py-12 md:px-16 md:py-14 text-left">
+                {/* Opening quote mark */}
+                <div className="text-brand text-5xl font-serif leading-none mb-4 select-none">"</div>
+
+                {/* Quote */}
                 <p className="text-xl md:text-2xl font-medium leading-snug text-dark text-balance">
-                  {t.quote}
+                  {item.quote}
                 </p>
-                <div className="mt-8 text-xs uppercase tracking-[0.22em] text-dark/60 font-semibold">
-                  — {t.author}
+
+                {/* Author */}
+                <div className="mt-8 text-[11px] uppercase tracking-[0.22em] text-dark/50 font-semibold">
+                  — {item.author}
                 </div>
               </div>
             </div>
           ))}
         </div>
-        <div className="mt-8 flex justify-center gap-2">
+
+        {/* Dot indicators */}
+        <div className="mt-8 flex justify-center items-center gap-2">
           {items.map((_, idx) => (
             <button
               key={idx}
               aria-label={`Testimonial ${idx + 1}`}
               onClick={() => setI(idx)}
-              className={`h-1.5 transition-all ${
-                idx === i ? "w-8 bg-brand" : "w-4 bg-dark/15"
-              }`}
+              className={`rounded-full transition-all duration-300 ${idx === i
+                ? "w-8 h-1.5 bg-brand"
+                : "w-4 h-1.5 bg-dark/15 hover:bg-dark/25"
+                }`}
             />
           ))}
         </div>
@@ -412,25 +487,41 @@ function Testimonials() {
 }
 
 /* ---------------- Logos ---------------- */
+const brandGlob = import.meta.glob<{ default: string }>(
+  "@/assets/index/brands/*",
+  { eager: true }
+);
+
+const brandLogos = Object.entries(brandGlob).map(([path, mod]) => ({
+  src: mod.default,
+  alt: path.split("/").pop()?.replace(/\.[^.]+$/, "").replace(/[-_]/g, " ") ?? "",
+}));
+
 function Logos() {
-  const brands = ["MOS", "Cosmos", "Rexello", "Amigo", "KSA", "Living", "Hertels", "Aspire", "Verde", "Nimbus"];
   return (
-    <section className="py-20 bg-background border-y border-dark/5">
-      <div className="mx-auto max-w-7xl px-6">
-        <p className="text-center text-xs font-semibold uppercase tracking-[0.22em] text-dark/55 mb-10">
+    <section className="py-12 bg-background border-y border-dark/5">
+      <div className="mx-auto max-w-7xl px-6 mb-10">
+        <p className="text-center text-xs font-semibold uppercase tracking-[0.22em] text-dark/50">
           Brands That Trust Us
         </p>
-        <div className="overflow-hidden">
-          <div className="animate-marquee">
-            {[...brands, ...brands].map((b, i) => (
-              <div
-                key={i}
-                className="flex-shrink-0 px-10 py-4 text-2xl font-serif italic text-dark/30 hover:text-brand transition-colors whitespace-nowrap"
-              >
-                {b}.
-              </div>
-            ))}
-          </div>
+      </div>
+
+      {/* overflow-hidden only on the scroll wrapper — prevents vertical clipping */}
+      <div className="overflow-hidden logo-row">
+        <div className="flex items-center gap-14 animate-marquee">
+          {[...brandLogos, ...brandLogos].map((logo, i) => (
+            <div
+              key={i}
+              className="logo-item flex-shrink-0 h-24 w-56 flex items-center justify-center p-1"
+            >
+              <img
+                src={logo.src}
+                alt={logo.alt}
+                className="w-full h-full object-contain grayscale opacity-40 transition-all duration-300"
+                loading="lazy"
+              />
+            </div>
+          ))}
         </div>
       </div>
     </section>
@@ -578,11 +669,10 @@ function Blog() {
               <button
                 key={c}
                 onClick={() => setActive(c)}
-                className={`px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] border transition ${
-                  active === c
-                    ? "bg-dark text-canvas border-dark"
-                    : "border-dark/15 text-dark/70 hover:border-dark"
-                }`}
+                className={`px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] border transition ${active === c
+                  ? "bg-dark text-canvas border-dark"
+                  : "border-dark/15 text-dark/70 hover:border-dark"
+                  }`}
               >
                 {c}
               </button>
@@ -717,7 +807,7 @@ function Index() {
       <Ticker />
       <Showreel />
       <Services />
-      <SaaS />
+      {/* <SaaS /> */}
       <Achievements />
       <Process />
       <Testimonials />

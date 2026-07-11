@@ -147,7 +147,8 @@ export function SiteHeader() {
                 <a
                   key={item.label}
                   href={item.to}
-                  className="px-4 py-2 text-sm font-normal text-gray-600 hover:text-gray-900 transition-colors rounded-md"
+                  className="px-4 py-2 text-sm font-normal transition-colors rounded-md"
+                  style={{ color: 'rgba(24, 24, 24, 0.8)' }}
                 >
                   {item.label}
                 </a>
@@ -158,72 +159,14 @@ export function SiteHeader() {
               <div
                 key={item.label}
                 className="relative"
-                onMouseEnter={() => setOpenMenu(item.label)}
-                onMouseLeave={() => setOpenMenu(null)}
               >
                 <a
                   href={item.to}
-                  className={`inline-flex items-center gap-1 px-4 py-2 text-sm font-normal rounded-md transition-colors ${isOpen ? "text-gray-900" : "text-gray-600 hover:text-gray-900"
-                    }`}
+                  className="inline-flex items-center gap-1 px-4 py-2 text-sm font-normal rounded-md transition-colors"
+                  style={{ color: 'rgba(24, 24, 24, 0.8)' }}
                 >
                   {item.label}
-                  <svg
-                    width="10"
-                    height="10"
-                    viewBox="0 0 12 12"
-                    className={`transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
-                  >
-                    <path
-                      d="M2 4l4 4 4-4"
-                      stroke="currentColor"
-                      strokeWidth="1.5"
-                      fill="none"
-                      strokeLinecap="round"
-                    />
-                  </svg>
                 </a>
-
-                {isOpen && (
-                  <div
-                    className="absolute left-1/2 -translate-x-1/2 top-full pt-2"
-                    style={{
-                      minWidth: item.groups!.length > 1 ? "min(880px, 90vw)" : "240px",
-                    }}
-                  >
-                    <div className="bg-white border border-gray-100 shadow-xl rounded-xl p-5">
-                      <div
-                        className={`grid gap-6 ${item.groups!.length >= 3
-                          ? "grid-cols-2 md:grid-cols-4"
-                          : item.groups!.length === 2
-                            ? "grid-cols-2"
-                            : "grid-cols-1"
-                          }`}
-                      >
-                        {item.groups!.map((group, gi) => (
-                          <div key={gi}>
-                            {group.title && (
-                              <div className="text-[10px] uppercase tracking-[0.2em] text-gray-400 font-semibold mb-3">
-                                {group.title}
-                              </div>
-                            )}
-                            <ul className="space-y-1">
-                              {group.items.map((sub) => (
-                                <li key={sub.to}>
-                                  <a
-                                    href={sub.to}
-                                    className="block text-sm text-gray-500 hover:text-gray-900 transition-colors py-1"
-                                  >
-                                    {sub.label}
-                                  </a>
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                )}
               </div>
             );
           })}
