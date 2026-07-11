@@ -1,0 +1,422 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { useState } from "react";
+import { SiteHeader } from "@/components/site-header";
+import { SiteFooter } from "@/components/site-footer";
+import contactHero from "@/assets/contact-hero.jpg";
+
+export const Route = createFileRoute("/contact")({
+  head: () => ({
+    meta: [
+      { title: "Contact Ace360degree | Get in Touch with Mumbai's Leading Digital Agency" },
+      {
+        name: "description",
+        content:
+          "Get in touch with Ace360degree — India's full-service digital marketing and technology agency. We respond within 24 hours.",
+      },
+      { property: "og:title", content: "Contact Ace360degree" },
+      {
+        property: "og:description",
+        content: "Let's talk about your next big idea — branding, digital marketing, web, AI automation.",
+      },
+      { property: "og:image", content: contactHero },
+    ],
+  }),
+  component: ContactPage,
+});
+
+const services = [
+  "Digital Marketing",
+  "Branding & Design",
+  "Website / App Development",
+  "Automation & AI Tools",
+  "Other",
+];
+
+const quickActions = [
+  { label: "WhatsApp", value: "+91 98201 65488", href: "https://wa.me/919820165488", icon: "💬" },
+  { label: "Business Enquiries", value: "sales@a360pl.com", href: "mailto:sales@a360pl.com", icon: "✉" },
+  { label: "Partnerships", value: "connect@ace360degree.com", href: "mailto:connect@ace360degree.com", icon: "🤝" },
+  { label: "Careers", value: "careers@ace360degree.com", href: "mailto:careers@ace360degree.com", icon: "★" },
+];
+
+const globalPresence = [
+  { flag: "🇬🇧", name: "UK" },
+  { flag: "🇺🇸", name: "USA" },
+  { flag: "🇦🇺", name: "Australia" },
+  { flag: "🇦🇪", name: "UAE" },
+];
+
+function Field({
+  label,
+  name,
+  type = "text",
+  required,
+  textarea,
+}: {
+  label: string;
+  name: string;
+  type?: string;
+  required?: boolean;
+  textarea?: boolean;
+}) {
+  const [val, setVal] = useState("");
+  const [focus, setFocus] = useState(false);
+  const active = focus || val.length > 0;
+  const Cmp = textarea ? "textarea" : "input";
+  return (
+    <div className="relative">
+      <label
+        className={`pointer-events-none absolute left-0 transition-all duration-200 ${
+          active ? "top-0 text-[11px] tracking-wide uppercase text-dark/60" : "top-4 text-base text-dark/55"
+        }`}
+      >
+        {label}
+        {required && <span className="text-dark">*</span>}
+      </label>
+      <Cmp
+        name={name}
+        type={type}
+        required={required}
+        value={val}
+        onChange={(e: any) => setVal(e.target.value)}
+        onFocus={() => setFocus(true)}
+        onBlur={() => setFocus(false)}
+        rows={textarea ? 4 : undefined}
+        className="w-full bg-transparent border-b border-dark/25 pt-5 pb-2 text-dark outline-none focus:border-dark transition-colors resize-none"
+      />
+    </div>
+  );
+}
+
+function ContactPage() {
+  const [submitted, setSubmitted] = useState(false);
+  return (
+    <div className="min-h-screen bg-canvas text-dark">
+      <SiteHeader />
+
+      {/* HERO */}
+      <section className="relative">
+        <div className="mx-auto max-w-7xl px-6 pt-10 pb-6">
+          <nav className="text-xs text-dark/50 tracking-wide">
+            <a href="/" className="hover:text-brand">Home</a> <span className="mx-1">/</span>{" "}
+            <span className="text-dark">Contact</span>
+          </nav>
+        </div>
+        <div className="mx-auto max-w-7xl px-6 grid lg:grid-cols-12 gap-10 pb-20">
+          <div className="lg:col-span-7 flex flex-col justify-center">
+            <span className="text-[11px] tracking-[0.3em] uppercase text-brand font-semibold">
+              Contact Ace360degree
+            </span>
+            <h1 className="mt-5 font-serif text-5xl md:text-7xl leading-[1.02] tracking-tight">
+              Let's talk about your <em className="text-brand not-italic">next big idea.</em>
+            </h1>
+            <p className="mt-6 text-lg text-dark/70 max-w-xl">
+              Whether you're looking to grow your brand, build a website, or automate your business — we'd love to hear
+              from you. Our team will get back within 24 hours.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <a
+                href="#form"
+                className="inline-flex items-center gap-2 bg-dark text-canvas px-5 py-3 text-sm font-semibold hover:bg-dark/90 transition"
+              >
+                Schedule a Call <span aria-hidden>→</span>
+              </a>
+              <a
+                href="#form"
+                className="inline-flex items-center gap-2 border border-dark/20 px-5 py-3 text-sm font-semibold hover:border-dark transition"
+              >
+                Send a Message <span aria-hidden>→</span>
+              </a>
+              <a
+                href="https://wa.me/919820165488"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center justify-center size-11 rounded-full bg-brand text-dark hover:brightness-95 transition"
+                aria-label="WhatsApp"
+              >
+                💬
+              </a>
+            </div>
+          </div>
+          <div className="lg:col-span-5">
+            <div className="relative aspect-[4/5] overflow-hidden rounded-sm">
+              <img
+                src={contactHero}
+                alt="Ace360degree team in conversation"
+                width={1600}
+                height={1200}
+                className="h-full w-full object-cover"
+              />
+              <div className="absolute bottom-4 left-4 right-4 bg-canvas/90 backdrop-blur p-4">
+                <p className="text-xs uppercase tracking-[0.25em] text-dark/60">Where conversations begin</p>
+                <p className="font-serif text-xl mt-1">Mumbai · India</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CONTACT + FORM */}
+      <section id="form" className="bg-light">
+        <div className="mx-auto max-w-7xl px-6 py-24 grid lg:grid-cols-12 gap-12">
+          {/* LEFT */}
+          <div className="lg:col-span-5">
+            <span className="text-[11px] tracking-[0.3em] uppercase text-dark/55">Reach us directly</span>
+            <h2 className="mt-3 font-serif text-4xl md:text-5xl leading-tight">Prefer talking first?</h2>
+            <p className="mt-4 text-dark/70">
+              We're just a call, email, or WhatsApp away. No bots, no queues — real humans, real fast.
+            </p>
+
+            <div className="mt-10 border-t border-dark/10">
+              <div className="py-6 border-b border-dark/10">
+                <p className="text-xs uppercase tracking-[0.25em] text-dark/55">Head Office · India</p>
+                <p className="mt-2 font-medium">Office No. 12, Evershine Mall</p>
+                <p className="text-dark/70">New Link Road, Malad West, Mumbai – 400064</p>
+              </div>
+              <div className="py-6 border-b border-dark/10 flex justify-between">
+                <span className="text-dark/60">Phone</span>
+                <a href="tel:+919820165488" className="font-medium hover:text-brand">+91 98201 65488</a>
+              </div>
+              <div className="py-6 border-b border-dark/10 flex justify-between">
+                <span className="text-dark/60">Email</span>
+                <a href="mailto:info@ace360degree.com" className="font-medium hover:text-brand">
+                  info@ace360degree.com
+                </a>
+              </div>
+              <div className="py-6 flex justify-between">
+                <span className="text-dark/60">Hours</span>
+                <span className="font-medium">Mon – Sat · 10:00 – 19:00 IST</span>
+              </div>
+            </div>
+
+            {/* Global presence */}
+            <div className="mt-10">
+              <p className="text-xs uppercase tracking-[0.25em] text-dark/55">Global Presence</p>
+              <div className="mt-4 flex flex-wrap gap-2">
+                {globalPresence.map((g) => (
+                  <span
+                    key={g.name}
+                    className="inline-flex items-center gap-2 border border-dark/15 bg-canvas px-3 py-1.5 text-sm"
+                  >
+                    <span>{g.flag}</span> {g.name}
+                  </span>
+                ))}
+              </div>
+              <p className="mt-3 text-sm text-dark/60 italic">
+                Expanding globally — because great ideas know no borders.
+              </p>
+            </div>
+          </div>
+
+          {/* RIGHT — Form */}
+          <div className="lg:col-span-7">
+            <div className="bg-brand rounded-2xl p-8 md:p-12 shadow-[0_30px_80px_-40px_rgba(0,0,0,0.35)]">
+              <h3 className="font-serif text-4xl md:text-5xl leading-[1.05] text-dark">
+                Got Ideas?<br />We've got the skills.
+              </h3>
+              <p className="mt-4 text-dark/80 max-w-md">
+                Tell us a little about your project and we'll connect you with the right team.
+              </p>
+
+              {submitted ? (
+                <div className="mt-10 bg-canvas p-8 rounded-lg">
+                  <p className="text-xs uppercase tracking-[0.25em] text-brand font-semibold">Received</p>
+                  <p className="mt-3 font-serif text-2xl">Thank you for reaching out.</p>
+                  <p className="mt-2 text-dark/70">
+                    Our team will connect within 24 hours. In the meantime, explore our recent{" "}
+                    <a href="/portfolio" className="underline">case studies</a> or{" "}
+                    <a href="/services" className="underline">services</a>.
+                  </p>
+                </div>
+              ) : (
+                <form
+                  className="mt-10 space-y-7"
+                  onSubmit={(e) => {
+                    e.preventDefault();
+                    setSubmitted(true);
+                  }}
+                >
+                  <div className="grid md:grid-cols-2 gap-7">
+                    <Field label="Name" name="name" required />
+                    <Field label="Company Name" name="company" />
+                    <Field label="Email" name="email" type="email" required />
+                    <Field label="Phone" name="phone" type="tel" required />
+                  </div>
+
+                  <div className="relative">
+                    <label className="block text-[11px] tracking-wide uppercase text-dark/70 mb-2">
+                      Service Interest*
+                    </label>
+                    <select
+                      required
+                      defaultValue=""
+                      className="w-full bg-transparent border-b border-dark/30 py-3 text-dark outline-none focus:border-dark"
+                    >
+                      <option value="" disabled>Select a service</option>
+                      {services.map((s) => (
+                        <option key={s} value={s}>{s}</option>
+                      ))}
+                    </select>
+                  </div>
+
+                  <Field label="Message / Project Brief" name="message" required textarea />
+
+                  <div>
+                    <label className="block text-[11px] tracking-wide uppercase text-dark/70 mb-2">
+                      Upload File (Optional)
+                    </label>
+                    <input
+                      type="file"
+                      className="block w-full text-sm text-dark/80 file:mr-4 file:py-2 file:px-4 file:border-0 file:bg-dark file:text-canvas file:text-xs file:uppercase file:tracking-wider file:cursor-pointer hover:file:bg-dark/90"
+                    />
+                  </div>
+
+                  <button
+                    type="submit"
+                    className="group inline-flex items-center gap-3 bg-dark text-canvas px-6 py-3.5 text-sm font-semibold hover:bg-dark/90 transition"
+                  >
+                    Send Inquiry
+                    <span className="transition-transform group-hover:translate-x-1">→</span>
+                  </button>
+                  <p className="text-xs text-dark/70">
+                    We respect your time — and your inbox. No spam. Just solutions that work.
+                  </p>
+                </form>
+              )}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* QUICK CONTACT OPTIONS */}
+      <section className="bg-canvas">
+        <div className="mx-auto max-w-7xl px-6 py-20">
+          <div className="flex items-end justify-between flex-wrap gap-4">
+            <div>
+              <span className="text-[11px] tracking-[0.3em] uppercase text-brand font-semibold">Quick Actions</span>
+              <h2 className="mt-3 font-serif text-3xl md:text-4xl">Pick the channel that fits you best.</h2>
+            </div>
+          </div>
+          <div className="mt-10 grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+            {quickActions.map((a) => (
+              <a
+                key={a.label}
+                href={a.href}
+                target={a.href.startsWith("http") ? "_blank" : undefined}
+                rel="noreferrer"
+                className="group block border border-dark/10 bg-light p-6 hover:bg-dark hover:text-canvas transition-all duration-300"
+              >
+                <span className="text-2xl">{a.icon}</span>
+                <p className="mt-6 text-xs uppercase tracking-[0.25em] opacity-70">{a.label}</p>
+                <p className="mt-1 font-medium break-all">{a.value}</p>
+                <p className="mt-6 text-xs uppercase tracking-[0.2em] flex items-center gap-1">
+                  Connect <span className="transition-transform group-hover:translate-x-1">→</span>
+                </p>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* MAP */}
+      <section className="bg-light">
+        <div className="mx-auto max-w-7xl px-6 pt-20">
+          <div className="flex items-end justify-between flex-wrap gap-4">
+            <div>
+              <span className="text-[11px] tracking-[0.3em] uppercase text-brand font-semibold">Visit Us</span>
+              <h2 className="mt-3 font-serif text-3xl md:text-4xl">Find us in the heart of Mumbai.</h2>
+              <p className="mt-2 text-dark/60 italic">Where creativity meets caffeine ☕</p>
+            </div>
+            <a
+              href="https://maps.google.com/?q=Evershine+Mall+Malad+West+Mumbai"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 border border-dark/20 px-5 py-3 text-sm font-semibold hover:border-dark transition"
+            >
+              Get Directions <span aria-hidden>→</span>
+            </a>
+          </div>
+        </div>
+        <div className="mt-10 w-full h-[460px]">
+          <iframe
+            title="Ace360degree office map"
+            src="https://www.google.com/maps?q=Evershine+Mall,+Malad+West,+Mumbai&output=embed"
+            className="w-full h-full border-0 grayscale-[0.2]"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          />
+        </div>
+      </section>
+
+      {/* FINAL CTA */}
+      <section className="bg-dark text-canvas">
+        <div className="mx-auto max-w-7xl px-6 py-28 text-center">
+          <span className="text-[11px] tracking-[0.3em] uppercase text-brand font-semibold">Let's Build</span>
+          <h2 className="mt-5 font-serif text-5xl md:text-7xl leading-[1.02] tracking-tight">
+            Ready to start something <em className="text-brand not-italic">awesome?</em>
+          </h2>
+          <p className="mt-6 max-w-2xl mx-auto text-canvas/70 text-lg">
+            Book a discovery call today and let's discuss how Ace360degree can help you grow through strategy,
+            creativity, and technology.
+          </p>
+          <div className="mt-10 flex flex-wrap gap-3 justify-center">
+            <a
+              href="#form"
+              className="inline-flex items-center gap-2 bg-brand text-dark px-6 py-3.5 text-sm font-semibold hover:brightness-95 transition"
+            >
+              Schedule a Call <span aria-hidden>→</span>
+            </a>
+            <a
+              href="#form"
+              className="inline-flex items-center gap-2 border border-canvas/30 px-6 py-3.5 text-sm font-semibold hover:border-canvas transition"
+            >
+              Send Your Brief <span aria-hidden>→</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* SOCIAL */}
+      <section className="bg-canvas">
+        <div className="mx-auto max-w-4xl px-6 py-20 text-center">
+          <span className="text-[11px] tracking-[0.3em] uppercase text-brand font-semibold">Stay Connected</span>
+          <h3 className="mt-3 font-serif text-3xl md:text-4xl">Let's stay in touch.</h3>
+          <p className="mt-3 text-dark/70">
+            Follow us for ideas, case studies, and behind-the-scenes moments from the Ace360degree team.
+          </p>
+          <div className="mt-8 flex flex-wrap justify-center gap-3">
+            {["LinkedIn", "Instagram", "YouTube", "Facebook", "X"].map((s) => (
+              <a
+                key={s}
+                href="#"
+                className="border border-dark/15 px-5 py-2.5 text-sm hover:bg-dark hover:text-canvas transition"
+              >
+                {s}
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <SiteFooter />
+
+      {/* Sticky utility bar */}
+      <div className="fixed bottom-4 left-1/2 -translate-x-1/2 z-40 hidden md:flex items-center gap-1 bg-dark text-canvas rounded-full shadow-2xl px-2 py-2 backdrop-blur">
+        <a href="tel:+919820165488" className="px-4 py-2 text-xs uppercase tracking-wider hover:text-brand">📞 Call</a>
+        <span className="w-px h-4 bg-canvas/20" />
+        <a
+          href="https://wa.me/919820165488"
+          target="_blank"
+          rel="noreferrer"
+          className="px-4 py-2 text-xs uppercase tracking-wider hover:text-brand"
+        >
+          💬 WhatsApp
+        </a>
+        <span className="w-px h-4 bg-canvas/20" />
+        <a href="mailto:info@ace360degree.com" className="px-4 py-2 text-xs uppercase tracking-wider hover:text-brand">
+          ✉ Email
+        </a>
+      </div>
+    </div>
+  );
+}
