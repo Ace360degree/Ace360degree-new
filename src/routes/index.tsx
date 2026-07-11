@@ -1,15 +1,15 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef, ReactNode } from "react";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import heroMesh from "@/assets/index/AI growth visualization.png";
 import showreel from "@/assets/index/teamwork.png";
-import caseMos from "@/assets/case-mos.jpg";
-import caseCosmos from "@/assets/case-cosmos.jpg";
-import caseRexello from "@/assets/case-rexello.jpg";
-import caseAmigo from "@/assets/case-amigo.jpg";
-import caseKsa from "@/assets/case-ksa.jpg";
-import caseLiving from "@/assets/case-living.jpg";
+import caseMos from "@/assets/index/story/MOS Utility.png";
+import caseCosmos from "@/assets/index/story/Cosmos.png";
+import caseRexello from "@/assets/index/story/Rexello Castors.png";
+import caseAmigo from "@/assets/index/story/Amigo Academy.png";
+import caseKsa from "@/assets/index/story/KSA Group.png";
+import caseLiving from "@/assets/index/story/Living Concepts.png";
 import blogFeatured from "@/assets/blog-featured.jpg";
 import whyTeam from "@/assets/why-team.jpg";
 import webIcon from "@/assets/index/web.png";
@@ -19,11 +19,82 @@ import viIcon from "@/assets/index/VI.png";
 import appIcon from "@/assets/index/App.png";
 import crmIcon from "@/assets/index/CRM.png";
 
+// Industry icons
+import healthcareIcon from "@/assets/index/industry/healthcare.png";
+import educationIcon from "@/assets/index/industry/education.png";
+import industryIcon from "@/assets/index/industry/industry.png";
+import fintechIcon from "@/assets/index/industry/fintech.png";
+import estateIcon from "@/assets/index/industry/estate.png";
+import lifestyleIcon from "@/assets/index/industry/lifestyle.png";
+
 export const Route = createFileRoute("/")({
   component: Index,
 });
 
+/* ---------------- Animations & Utilities ---------------- */
+function FadeIn({ children, delay = 0, className = "" }: { children: ReactNode; delay?: number; className?: string }) {
+  const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+    if (ref.current) observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <div
+      ref={ref}
+      className={`transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
+        } ${className}`}
+      style={{ transitionDelay: `${delay}ms` }}
+    >
+      {children}
+    </div>
+  );
+}
+
+function CountUp({ end, suffix = "", duration = 2000 }: { end: number; suffix?: string; duration?: number }) {
+  const [count, setCount] = useState(0);
+  const ref = useRef<HTMLSpanElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          let startTimestamp: number | null = null;
+          const step = (timestamp: number) => {
+            if (!startTimestamp) startTimestamp = timestamp;
+            const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+
+            // easeOutQuart easing function
+            const easeProgress = 1 - Math.pow(1 - progress, 4);
+
+            setCount(Math.floor(easeProgress * end));
+            if (progress < 1) {
+              window.requestAnimationFrame(step);
+            }
+          };
+          window.requestAnimationFrame(step);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.5 }
+    );
+    if (ref.current) observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, [end, duration]);
+
+  return <span ref={ref}>{count}{suffix}</span>;
+}
 /* ---------------- Hero ---------------- */
 function Hero() {
   return (
@@ -47,12 +118,12 @@ function Hero() {
           <div className="mt-10 flex flex-wrap gap-4">
             <a
               href="#cta"
-              className="inline-flex items-center gap-2 bg-brand rounded-2xl py-3 pr-5 pl-2.5 text-sm font-semibold text-dark ring-1 ring-brand hover:brightness-95 transition"
+              className="group relative inline-flex items-center gap-2 bg-brand rounded-2xl py-3 px-6 text-sm font-semibold text-dark ring-1 ring-brand hover:brightness-95 transition overflow-hidden"
             >
-              <span className="grid place-items-center size-6 rounded-full bg-dark/10">
+              <span className="absolute left-2.5 grid place-items-center size-6 rounded-full bg-dark/10 transition-all duration-500 ease-out group-hover:left-[calc(100%-2rem)]">
                 <span className="size-1.5 rounded-full bg-dark" />
               </span>
-              Get Free Digital Audit
+              <span className="pl-6 group-hover:-translate-x-2 transition-transform duration-500">Get Free Digital Audit</span>
             </a>
             <a
               href="#cta"
@@ -72,13 +143,13 @@ function Hero() {
               height={1024}
               className="w-full aspect-square object-cover rounded-md"
             />
-            <div className="absolute -bottom-6 -left-6 rounded-2xl bg-canvas p-5 ring-1 ring-dark/5 shadow-xl shadow-dark/5 max-w-[220px]">
+            <div className="absolute -bottom-6 -left-6 rounded-2xl bg-canvas p-5 ring-1 ring-dark/5 shadow-xl shadow-dark/5 max-w-[220px] animate-float">
               <div className="text-3xl font-serif italic text-brand leading-none">+142%</div>
               <div className="text-[10px] uppercase tracking-[0.18em] text-dark/50 mt-2">
                 Avg. Conversion Lift
               </div>
             </div>
-            <div className="absolute -top-5 right-4 rounded-2xl bg-dark text-canvas px-6 py-4 text-[12px] uppercase tracking-[0.2em]">
+            <div className="absolute -top-5 right-4 rounded-2xl bg-dark text-canvas px-6 py-4 text-[12px] uppercase tracking-[0.2em] animate-float-delayed">
               AI · Data · Growth
             </div>
           </div>
@@ -330,10 +401,10 @@ function SaaS() {
 /* ---------------- Achievements ---------------- */
 function Achievements() {
   const stats = [
-    { n: "15+", label: "Years of Experience" },
-    { n: "300+", label: "Projects Completed" },
-    { n: "50+", label: "Clients" },
-    { n: "∞", label: "Cups of Coffee" },
+    { n: 15, suffix: "+", label: "Years of Experience" },
+    { n: 300, suffix: "+", label: "Projects Completed" },
+    { n: 50, suffix: "+", label: "Clients" },
+    { n: "∞", suffix: "", label: "Cups of Coffee" },
   ];
   return (
     <section className="bg-[#E5950C] py-20">
@@ -345,7 +416,7 @@ function Achievements() {
           {stats.map((s) => (
             <div key={s.label}>
               <div className="text-5xl md:text-6xl font-medium text-dark mb-2 tabular-nums">
-                {s.n}
+                {typeof s.n === "number" ? <CountUp end={s.n} suffix={s.suffix} /> : s.n}
               </div>
               <div className="text-xs font-semibold uppercase tracking-[0.2em] text-dark/65">
                 {s.label}
@@ -501,7 +572,7 @@ function Logos() {
   return (
     <section className="py-12 bg-background border-y border-dark/5">
       <div className="mx-auto max-w-7xl px-6 mb-10">
-        <p className="text-center text-xs font-semibold uppercase tracking-[0.22em] text-dark/50">
+        <p className="text-center text-s font-semibold uppercase tracking-[0.22em] text-dark/50">
           Brands That Trust Us
         </p>
       </div>
@@ -517,7 +588,7 @@ function Logos() {
               <img
                 src={logo.src}
                 alt={logo.alt}
-                className="w-full h-full object-contain grayscale opacity-40 transition-all duration-300"
+                className="w-full h-full object-contain grayscale opacity-100 transition-all duration-300"
                 loading="lazy"
               />
             </div>
@@ -616,7 +687,7 @@ function WhyAce() {
             Why Ace360degree
           </span>
           <h2 className="mt-4 text-4xl md:text-5xl font-medium leading-tight text-balance">
-            Why Leading Brands{" "}
+            Leading Brands{" "}
             <span className="font-serif italic">Choose Ace360degree</span>
           </h2>
           <div className="mt-10 grid sm:grid-cols-2 gap-x-10 gap-y-8">
@@ -660,7 +731,7 @@ function Blog() {
               Insights
             </span>
             <h2 className="mt-4 text-4xl md:text-5xl font-medium leading-tight text-balance">
-              Digital Marketing, Branding &amp;{" "}
+              Growth  Marketing, Branding &amp;{" "}
               <span className="font-serif italic">Technology Insights</span>
             </h2>
           </div>
@@ -728,36 +799,36 @@ function Blog() {
 /* ---------------- Industries ---------------- */
 function Industries() {
   const items = [
-    { t: "BFSI", d: "Banking, Financial Services & Insurance" },
-    { t: "Manufacturing", d: "Industrial & B2B" },
-    { t: "Education", d: "EdTech & Institutions" },
-    { t: "Healthcare", d: "Hospitals, Clinics & HealthTech" },
-    { t: "Real Estate", d: "Developers & PropTech" },
-    { t: "Lifestyle", d: "Retail, Fashion & D2C" },
+    { t: "Healthcare", d: "Hospitals, Clinics & HealthTech", icon: healthcareIcon },
+    { t: "Education", d: "EdTech & Institutions", icon: educationIcon },
+    { t: "Manufacturing", d: "Industrial & B2B", icon: industryIcon },
+    { t: "Fintech & BFSI", d: "Banking, Financial Services & Insurance", icon: fintechIcon },
+    { t: "Real Estate", d: "Developers & PropTech", icon: estateIcon },
+    { t: "SaaS & Technology", d: "Software, Cloud & IT Services", icon: webIcon },
+    { t: "Architecture / Interior / Furniture", d: "Design, Decor & Infrastructure", icon: estateIcon },
+    { t: "D2C & Retail Brand", d: "Retail, Fashion & D2C", icon: lifestyleIcon },
   ];
   return (
-    <section className="py-32 bg-background">
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="max-w-3xl mb-16">
-          <span className="text-brand font-semibold text-xs tracking-[0.22em] uppercase">
-            Industries
-          </span>
-          <h2 className="mt-4 text-4xl md:text-5xl font-medium leading-tight text-balance">
-            Industries We Empower Through{" "}
-            <span className="font-serif italic">Digital Innovation</span>
-          </h2>
-        </div>
-        <div className="grid grid-cols-2 lg:grid-cols-3 gap-px bg-dark/5 border border-dark/5">
+    <section className="py-24 bg-[#FFA20B]">
+      <div className="mx-auto max-w-6xl px-6 text-start text-dark">
+        <h2 className="text-4xl md:text-5xl font-medium leading-tight text-balance mb-12">
+          Industries We Empower <br className="hidden md:block" />
+          Through <span className="font-serif italic">Digital Innovation</span>
+        </h2>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-dark/10 border border-dark/10">
           {items.map((it) => (
             <div
               key={it.t}
-              className="bg-background p-10 group hover:bg-canvas transition-colors"
+              className="bg-white p-8 text-left group hover:bg-canvas transition-colors flex flex-col justify-between min-h-[220px]"
             >
-              <div className="size-12 grid place-items-center bg-brand/15 mb-6">
-                <div className="size-4 bg-brand" />
+              <div className="h-20 flex justify-start mb-6">
+                <img src={it.icon} alt={it.t} className="h-full w-auto object-contain object-left" />
               </div>
-              <h3 className="text-xl font-medium tracking-tight">{it.t}</h3>
-              <p className="text-sm text-ink mt-2">{it.d}</p>
+              <div>
+                <h3 className="text-xl font-semibold text-dark tracking-tight">{it.t}</h3>
+                <p className="text-sm text-dark/60 mt-2 leading-relaxed">{it.d}</p>
+              </div>
             </div>
           ))}
         </div>
@@ -782,13 +853,13 @@ function FinalCta() {
           Mumbai's AI-powered, ROI-driven agency partner — ready to build your next chapter.
         </p>
         <div className="mt-10 flex flex-wrap justify-center gap-4">
-          <a className="inline-flex items-center gap-2 bg-brand py-3 pr-5 pl-2.5 text-sm font-semibold text-dark ring-1 ring-brand hover:brightness-95 transition cursor-pointer">
+          <a className="inline-flex items-center gap-2 bg-brand py-3 pr-5 pl-2.5 text-sm rounded-2xl font-semibold text-dark ring-1 ring-brand hover:brightness-95 transition cursor-pointer">
             <span className="grid place-items-center size-6 rounded-full bg-dark/10">
               <span className="size-1.5 rounded-full bg-dark" />
             </span>
             Let's Collaborate
           </a>
-          <a className="inline-flex items-center px-6 py-3 text-sm font-semibold border border-dark/15 hover:bg-dark hover:text-canvas transition cursor-pointer">
+          <a className="inline-flex items-center px-6 py-3 text-sm font-semibold border border-dark/15 rounded-2xl hover:bg-dark hover:text-canvas transition cursor-pointer">
             Schedule Call
           </a>
         </div>
@@ -804,19 +875,19 @@ function Index() {
     <main className="bg-canvas font-sans text-dark">
       <SiteHeader />
       <Hero />
-      <Ticker />
-      <Showreel />
-      <Services />
+      <FadeIn><Ticker /></FadeIn>
+      <FadeIn><Showreel /></FadeIn>
+      <FadeIn><Services /></FadeIn>
       {/* <SaaS /> */}
-      <Achievements />
-      <Process />
-      <Testimonials />
-      <Logos />
-      <Portfolio />
-      <WhyAce />
-      <Blog />
-      <Industries />
-      <FinalCta />
+      <FadeIn><Achievements /></FadeIn>
+      <FadeIn><Process /></FadeIn>
+      <FadeIn><Testimonials /></FadeIn>
+      <FadeIn><Logos /></FadeIn>
+      <FadeIn><Portfolio /></FadeIn>
+      <FadeIn><WhyAce /></FadeIn>
+      <FadeIn><Blog /></FadeIn>
+      <FadeIn><Industries /></FadeIn>
+      <FadeIn><FinalCta /></FadeIn>
       <SiteFooter />
     </main>
   );

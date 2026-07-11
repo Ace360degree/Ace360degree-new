@@ -9,103 +9,9 @@ type NavItem = {
 };
 
 const NAV: NavItem[] = [
-  {
-    label: "Services",
-    to: "/services",
-    groups: [
-      {
-        title: "Growth Marketing",
-        items: [
-          { label: "Overview", to: "/growth-marketing" },
-          { label: "Performance Marketing", to: "/performance-marketing" },
-          { label: "Search Visibility (SEO)", to: "/search-visibility" },
-          { label: "Social Media Marketing", to: "/social-media-marketing" },
-          { label: "Content Marketing", to: "/content-marketing" },
-          { label: "Conversion Optimization", to: "/conversion-optimization" },
-          { label: "Marketing Automation", to: "/marketing-automation" },
-          { label: "Analytics & Growth Intelligence", to: "/analytics-growth-intelligence" },
-          { label: "Influencer & Community", to: "/influencer-advocacy-community-marketing" },
-          { label: "Corporate B2B Growth", to: "/corporate-b2b-growth-marketing" },
-          { label: "PR & Reputation", to: "/public-relations-reputation-management" },
-          { label: "Event Marketing", to: "/event-marketing-brand-experiences" },
-          { label: "YouTube Growth", to: "/youtube-growth-channel-strategy" },
-          { label: "Podcast Strategy", to: "/podcast-strategy-production" },
-        ],
-      },
-      {
-        title: "Branding & Creative",
-        items: [
-          { label: "Overview", to: "/branding-creative" },
-          { label: "Brand Strategy", to: "/brand-strategy" },
-          { label: "Logo & Visual Identity", to: "/logo-visual-identity" },
-          { label: "Packaging & Product", to: "/packaging-product-branding" },
-          { label: "Corporate Communication Design", to: "/corporate-communication-design" },
-          { label: "Marketing Communication", to: "/marketing-communication" },
-          { label: "Motion Graphics & Animation", to: "/motion-graphics-animation" },
-          { label: "Corporate Films & Video", to: "/corporate-films-video-production" },
-        ],
-      },
-      {
-        title: "Technology",
-        items: [
-          { label: "Overview", to: "/technology" },
-          { label: "Website Design & Development", to: "/website-design-development" },
-          { label: "UI/UX & Product Engineering", to: "/ui-ux-design-product-engineering" },
-          { label: "Mobile App Development", to: "/mobile-app-development" },
-          { label: "CRM & ERP Solutions", to: "/crm-erp-solutions" },
-        ],
-      },
-      {
-        title: "AI Transformation",
-        items: [
-          { label: "Overview", to: "/ai-transformation" },
-          { label: "AI Strategy & Readiness", to: "/ai-strategy-readiness-assessment" },
-          { label: "AI Workflow Automation", to: "/ai-workflow-automation" },
-          { label: "AI Content Marketing Systems", to: "/ai-content-marketing-systems" },
-          { label: "AI Customer Experience", to: "/ai-customer-experience-solutions" },
-        ],
-      },
-    ],
-  },
-  {
-    label: "Industries",
-    to: "/industries",
-    groups: [
-      {
-        items: [
-          { label: "All Industries", to: "/industries" },
-          { label: "Manufacturing", to: "/industries/manufacturing" },
-          { label: "Healthcare", to: "/industries/healthcare" },
-          { label: "Education", to: "/industries/education" },
-          { label: "Fintech", to: "/industries/fintech" },
-          { label: "Architecture & Interiors", to: "/industries/architecture" },
-        ],
-      },
-    ],
-  },
-  {
-    label: "Casestudies",
-    to: "/portfolio",
-    groups: [
-      {
-        title: "Active Partnerships",
-        items: [
-          { label: "All Case Studies", to: "/portfolio" },
-          { label: "Amigo Academy", to: "/case-amigo-academy" },
-          { label: "MOS Utility", to: "/case-mos-utility" },
-          { label: "Cosmos Seals India", to: "/case-cosmos-seals" },
-          { label: "Rexello Castors", to: "/case-rexello-castors" },
-          { label: "Living Concepts", to: "/case-living-concepts" },
-        ],
-      },
-      {
-        title: "Enterprise Experience",
-        items: [
-          { label: "2009–2025 Legacy", to: "/success-stories/enterprise-experience" },
-        ],
-      },
-    ],
-  },
+  { label: "Services", to: "/services" },
+  { label: "Industries", to: "/industries" },
+  { label: "Casestudies", to: "/portfolio" },
   { label: "Insights", to: "/blog" },
   { label: "About", to: "/about" },
   { label: "Contact", to: "/contact" },
@@ -130,25 +36,22 @@ export function SiteHeader() {
         : "bg-white border-b border-gray-100"
         }`}
     >
-      <div className="mx-auto flex h-[72px] max-w-[1400px] items-center justify-between px-8">
+      <div className="mx-auto flex h-24 max-w-[1400px] items-center justify-between px-8">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2 shrink-0">
-          <img src={logo} alt="Ace360degree" className="h-10 w-auto" width={140} height={40} />
+          <img src={logo} alt="Ace360degree" className="h-16 w-auto" />
         </Link>
 
-        {/* Centered Nav */}
         <nav className="hidden lg:flex items-center gap-0.5">
           {NAV.map((item) => {
             const hasMenu = !!item.groups?.length;
-            const isOpen = openMenu === item.label;
 
             if (!hasMenu) {
               return (
                 <a
                   key={item.label}
                   href={item.to}
-                  className="px-4 py-2 text-sm font-normal transition-colors rounded-md"
-                  style={{ color: 'rgba(24, 24, 24, 0.8)' }}
+                  className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-[#FFA20B] transition-colors rounded-md"
                 >
                   {item.label}
                 </a>
@@ -162,8 +65,7 @@ export function SiteHeader() {
               >
                 <a
                   href={item.to}
-                  className="inline-flex items-center gap-1 px-4 py-2 text-sm font-normal rounded-md transition-colors"
-                  style={{ color: 'rgba(24, 24, 24, 0.8)' }}
+                  className="inline-flex items-center gap-1 px-4 py-2 text-sm font-medium text-gray-700 hover:text-[#FFA20B] transition-colors rounded-md"
                 >
                   {item.label}
                 </a>
