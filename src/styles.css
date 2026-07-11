@@ -83,7 +83,7 @@
 .animate-marquee {
   display: flex;
   width: max-content;
-  animation: marquee 50s linear infinite;
+  animation: marquee 90s linear infinite;
 }
 
 /* Pause marquee when hovering anywhere in the logo strip */
@@ -126,8 +126,15 @@
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 .animate-float {

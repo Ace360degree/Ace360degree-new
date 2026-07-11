@@ -6,7 +6,7 @@ export function SiteFooter() {
     <footer className="bg-[#181818] relative overflow-hidden pt-24 pb-12 font-sans">
       {/* Yellow Ring */}
       <div className="absolute top-1/2 right-0 translate-x-[55%] -translate-y-[50%] opacity-90 pointer-events-none z-0">
-        <div className="w-[400px] h-[400px] sm:w-[400px] sm:h-[400px] md:w-[600px] md:h-[600px] border-[120px] md:border-[200px] border-[#FFA20B] rounded-full"></div>
+        <div className="w-[400px] h-[400px] sm:w-[400px] sm:h-[400px] md:w-[600px] md:h-[600px] border-[120px] md:border-[200px] border-[#FFA20B] rounded-full shadow-[0_0_80px_rgba(255,162,11,0.6)]"></div>
       </div>
 
       <div className="mx-auto max-w-[1400px] px-8 relative z-10">
@@ -65,12 +65,12 @@ export function SiteFooter() {
                 </div>
               </div>
 
-              <div className="pt-4 flex gap-4 items-start">
-                <div className="size-5 text-white text-[14px] font-bold">CIN</div>
-                <div>
-                  <div className="text-white/60 font-semibold tracking-wide text-[12px]"> U72901MH2022PTC382331</div>
-                  <div className="text-[12px] uppercase mt-1 font-semibold text-white/60">Altreen 360 Creative Solutions Private Limited</div>
+              <div className="pt-4 space-y-2">
+                <div className="flex gap-4 items-center">
+                  <div className="w-5 text-white text-[14px] font-bold">CIN</div>
+                  <div className="text-white/60 font-semibold tracking-wide text-[12px]">U72901MH2022PTC382331</div>
                 </div>
+                <div className="text-[12px] uppercase font-semibold text-white/60">Altreen 360 Creative Solutions Private Limited</div>
               </div>
             </div>
           </div>
