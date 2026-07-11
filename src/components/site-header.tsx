@@ -293,7 +293,7 @@ export function SiteHeader() {
             ))}
             <a
               href="/#cta"
-              className="flex w-full justify-center items-center bg-[#FFB330] hover:bg-[#E09010] text-[#181818] text-sm font-semibold px-5 py-3 rounded-full transition-all duration-200"
+              className="flex w-full justify-center items-center bg-[#FFB330] hover:bg-[#E09010] text-[#181818] text-sm font-semibold px-5 py-3 rounded-2xl transition-all duration-200"
               onClick={() => setMobileOpen(false)}
             >
               Book a Strategy Call
