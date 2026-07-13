@@ -96,7 +96,7 @@ const solutions = [
       "Build high-performance websites designed to attract the right audience, strengthen your brand credibility and convert visitors into qualified enquiries.",
     items: ["Corporate Websites", "WordPress", "Shopify", "Laravel", "React JS","Business Websites","Landing Pages"],
     cta: "Explore Website Development",
-    href: "/growth-marketing",
+    href: "/website-design-development",
     image: svcDigital,
   },
   {
@@ -107,7 +107,7 @@ const solutions = [
       "Increase your online visibility with data-driven SEO, AEO & GEO strategies that improve rankings, attract high-intent visitors, and generate sustainable organic growth.",
     items: ["SEO Audits", "Technical SEO", "On-Page SEO", "Local SEO", "E-Commerce SEO","GEO","AEO"],
     cta: "Explore SEO / AEO / GEO Services",
-    href: "/branding-creative",
+    href: "/search-visibility",
     image: svcBranding,
   },
   {
@@ -118,7 +118,7 @@ const solutions = [
       "Create data-driven advertising campaigns across Google and Meta that generate high-quality leads, increase conversions, and deliver measurable return on investment.",
     items: ["Google Ads", "Meta Ads", "Shopping Ads", "Remarketing", "Performance Analytics"],
     cta: "Explore Performance Marketing",
-    href: "/technology",
+    href: "/performance-marketing",
     image: svcTechnology,
   },
   {
@@ -129,7 +129,7 @@ const solutions = [
       "Leverage practical AI solutions that improve productivity, decision-making and customer experiences across the business.",
     items: ["Android", "iOS", "Flutter", "React Native", "API Integration"],
     cta: "Explore Mobile App Development",
-    href: "/ai-transformation",
+    href: "/mobile-app-development",
     image: servicesHero1,
   },
     {
@@ -140,7 +140,7 @@ const solutions = [
       "Digitize and automate your business processes with custom CRM and ERP solutions that improve productivity, enhance collaboration, and provide complete operational visibility.",
     items: ["Custom CRM", "ERP Solutions", "Workflow Automation", "Dashboard & Analytics  ", "System Integration"],
     cta: "Explore CRM & ERP Solutions",
-    href: "/ai-transformation",
+    href: "/crm-erp-solutions",
     image: servicesHero2,
   },
     {
@@ -151,7 +151,7 @@ const solutions = [
       "Develop a clear brand strategy that defines your positioning, messaging, and identity to create meaningful connections and long-term business value.",
     items: ["Brand Positioning", "Brand Messaging", "Brand Architecture", "Market Research", "Brand Guidelines"],
     cta: "Explore Brand Strategy",
-    href: "/ai-transformation",
+    href: "/brand-strategy",
     image: servicesHero3,
   },
     {
@@ -162,7 +162,7 @@ const solutions = [
       "Design distinctive logos and cohesive visual identity systems that build recognition, communicate your brand values ",
     items: ["Logo Design", "Brand Identity", "UI/Color Palette Design", "Typography", "Brand Guidelines"],
     cta: "Explore Logo & Visual Identity",
-    href: "/ai-transformation",
+    href: "/logo-visual-identity",
     image: servicesHero4,
   },
     {
@@ -173,7 +173,7 @@ const solutions = [
       "Create intuitive user interfaces and seamless digital experiences that improve usability, increase engagement, and transform ideas.",
     items: ["UX Research", "UI Design", "Wireframing", "Prototyping", "Design Systems"],
     cta: "Explore UI / UX & Product Engineering",
-    href: "/ai-transformation",
+    href: "/ui-ux-design-product-engineering",
     image: servicesHero5,
   },
     {
@@ -184,7 +184,7 @@ const solutions = [
       "Create strategic content that educates, builds authority, improves search visibility & nurtures prospects throughout every stage of customer Journey.",
     items: ["SEO Content", "Website Copywriting", "Blogs", "Case Studies", "Email Marketing"],
     cta: "Explore Content Marketing",
-    href: "/ai-transformation",
+    href: "/content-marketing",
     image: servicesHero6,
   },
     {
@@ -195,7 +195,7 @@ const solutions = [
       "Streamline marketing processes with intelligent automation that nurtures leads, improves engagement, and delivers personalized customer experiences at scale.",
     items: ["Email Automation", "WhatsApp Automation", "Lead Nurturing", "CRM Integration", "Workflow Automation"],
     cta: "Explore Marketing Automation",
-    href: "/ai-transformation",
+    href: "/marketing-automation",
     image: servicesHero7,
   },
     {
@@ -206,7 +206,7 @@ const solutions = [
       "Optimize every stage of your digital journey with data-driven strategies that improve user experience, increase conversions & maximize your marketing ROI.",
     items: ["Landing Page Optimization", "A/B Testing", "Conversion Tracking", "Heatmaps", "User Journey Analysis"],
     cta: "Explore Conversion Optimization",
-    href: "/ai-transformation",
+    href: "/conversion-optimization",
     image: servicesHero8,
   },
    {
@@ -217,7 +217,7 @@ const solutions = [
       "Create strategic social media campaigns that strengthen your brand presence, engage the right audience, and support long-term business growth across every platform.",
     items: ["Instagram Marketing", "Facebook Marketing", "LinkedIn Marketing", "Content Strategy", "Community Management"],
     cta: "Explore Social Media Marketing",
-    href: "/ai-transformation",
+    href: "/social-media-marketing",
     image: servicesHero9,
   },
    {
@@ -228,7 +228,7 @@ const solutions = [
       "Develop impactful marketing communication that strengthens your brand, supports campaigns, and delivers consistent messaging across every customer touchpoint.",
     items: ["Campaign Strategy", "Marketing Collateral", "Sales Presentations", "Brochures", "Digital Creatives"],
     cta: "Explore Marketing Communication",
-    href: "/ai-transformation",
+    href: "/marketing-communication",
     image: servicesHero10,
   },
    {
@@ -239,7 +239,7 @@ const solutions = [
       "Create professional corporate communication materials that strengthen credibility, build stakeholder trust, and ensure consistent brand communication across every business touchpoint.",
     items: ["Company Profile", "Corporate Brochures", "Annual Reports", "Corporate Collateral", "Investor Presentations"],
     cta: "Explore Corporate Communication Design",
-    href: "/ai-transformation",
+    href: "/corporate-communication-design",
     image: servicesHero12,
   },
    {
@@ -250,7 +250,7 @@ const solutions = [
       "Design distinctive packaging and product visuals that enhance shelf appeal, strengthen brand recognition, and create memorable customer experiences across retail and digital marketplaces.",
     items: ["Packaging Design", "Label Design", "Product Branding", "Retail Packaging", "Print Production"],
     cta: "Explore Packaging & Product Design",
-    href: "/ai-transformation",
+    href: "/packaging-product-branding",
     image: servicesHero13,
   },
    {
@@ -261,7 +261,7 @@ const solutions = [
       "Create engaging motion graphics and animations that simplify complex messages, capture attention, and elevate your brand across digital marketing, presentations, and social media.",
     items: ["2D Animation", "Motion Graphics", "Explainer Videos", "Product Animation", "API IntegrationSocial Media Reels"],
     cta: "Explore Motion Graphics & Animation",
-    href: "/ai-transformation",
+    href: "/motion-graphics-animation",
     image: servicesHero14,
   },
    {
@@ -272,7 +272,7 @@ const solutions = [
       "Produce high-quality corporate films and videos that showcase your business, engage your audience, and build trust through authentic visual storytelling.",
     items: ["Corporate Films", "Brand Videos", "Product Videos", "Testimonial Videos", "Drone Shoots"],
     cta: "Explore Corporate Films & Videos",
-    href: "/ai-transformation",
+    href: "/corporate-films-video-production",
     image: servicesHero15,
   },
   

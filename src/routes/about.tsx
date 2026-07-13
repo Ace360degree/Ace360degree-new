@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import aboutHero from "@/assets/about-hero.jpg";
-import aboutStory from "@/assets/about-story.jpg";
+import aboutStory from "@/assets/about-storyy1.jpg";
 import founderAsset from "@/assets/founder-altaf.jpg.asset.png";
 import aboutTeam from "@/assets/about-team.png";
 
