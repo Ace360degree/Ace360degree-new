@@ -7,9 +7,23 @@ import svcBranding from "@/assets/svc-branding.jpg";
 import svcDigital from "@/assets/svc-digital.jpg";
 import svcSpecialized from "@/assets/svc-specialized.jpg";
 import svcTechnology from "@/assets/svc-technology.jpg";
-import caseMos from "@/assets/case-mos.jpg";
-import caseRexello from "@/assets/case-rexello.jpg";
-import caseAmigo from "@/assets/case-amigo.jpg";
+import caseMos from "@/assets/case-mosy1.jpg";
+import caseRexello from "@/assets/Rexelloy1.jpg";
+import caseAmigo from "@/assets/case-amigoy1.jpg";
+import servicesHero1 from "@/assets/services-hero1.jpg";
+import servicesHero2 from "@/assets/services-hero2.jpg";
+import servicesHero3 from "@/assets/services-hero3.jpg";
+import servicesHero4 from "@/assets/services-hero4.jpg";
+import servicesHero5 from "@/assets/services-hero5.jpg";
+import servicesHero6 from "@/assets/services-hero6.jpg";
+import servicesHero7 from "@/assets/services-hero7.jpg";
+import servicesHero8 from "@/assets/services-hero8.jpg";
+import servicesHero9 from "@/assets/services-hero9.jpg";
+import servicesHero10 from "@/assets/services-hero10.jpg";
+import servicesHero12 from "@/assets/services-hero12.jpg";
+import servicesHero13 from "@/assets/services-hero13.jpg";
+import servicesHero14 from "@/assets/services-hero14.jpg";
+import servicesHero15 from "@/assets/services-hero15.jpg";
 
 export const Route = createFileRoute("/services")({
   component: ServicesPage,
@@ -76,48 +90,192 @@ function Reveal({ children, delay = 0 }: { children: React.ReactNode; delay?: nu
 const solutions = [
   {
     n: "01",
-    tag: "Growth Marketing",
-    title: "Need More Customers & Leads?",
+    tag: "WEBSITE DESIGN & DEVELOPMENT",
+    title: "Need a Website That Actually Grows Your Business?",
     copy:
-      "Build predictable customer acquisition systems through SEO, performance marketing, content marketing and digital growth strategies.",
-    items: ["SEO", "Performance Marketing", "Social Media", "Content Marketing", "Marketing Automation"],
-    cta: "Explore Growth Marketing",
+      "Build high-performance websites designed to attract the right audience, strengthen your brand credibility and convert visitors into qualified enquiries.",
+    items: ["Corporate Websites", "WordPress", "Shopify", "Laravel", "React JS","Business Websites","Landing Pages"],
+    cta: "Explore Website Development",
     href: "/growth-marketing",
     image: svcDigital,
   },
   {
     n: "02",
-    tag: "Branding & Creative",
-    title: "Need Better Brand Visibility?",
+    tag: "SEARCH ENGINE OPTIMIZATION",
+    title: "Want More Qualified Traffic from Google & GPTS?",
     copy:
-      "Create memorable brands that build trust, authority and market recognition across every customer touchpoint.",
-    items: ["Brand Strategy", "Visual Identity", "Packaging", "Creative Design", "Corporate Communication"],
-    cta: "Explore Branding & Creative",
+      "Increase your online visibility with data-driven SEO, AEO & GEO strategies that improve rankings, attract high-intent visitors, and generate sustainable organic growth.",
+    items: ["SEO Audits", "Technical SEO", "On-Page SEO", "Local SEO", "E-Commerce SEO","GEO","AEO"],
+    cta: "Explore SEO / AEO / GEO Services",
     href: "/branding-creative",
     image: svcBranding,
   },
   {
     n: "03",
-    tag: "Technology",
-    title: "Need Better Digital Platforms & Systems?",
+    tag: "PERFORMANCE MARKETING",
+    title: "Every Click Should Drive Business Growth.",
     copy:
-      "Build websites, applications, CRM/ERP and connected digital ecosystems designed for growth, efficiency and conversion at scale.",
-    items: ["Website Development", "Mobile Apps", "UI/UX Design", "CRM & ERP", "Automation & Integrations"],
-    cta: "Explore Technology",
+      "Create data-driven advertising campaigns across Google and Meta that generate high-quality leads, increase conversions, and deliver measurable return on investment.",
+    items: ["Google Ads", "Meta Ads", "Shopping Ads", "Remarketing", "Performance Analytics"],
+    cta: "Explore Performance Marketing",
     href: "/technology",
     image: svcTechnology,
   },
   {
     n: "04",
-    tag: "AI Transformation",
-    title: "Ready For AI Adoption?",
+    tag: "MOBILE APP DEVELOPMENT",
+    title: "Build Mobile Apps Your Customers Love to Use.",
     copy:
       "Leverage practical AI solutions that improve productivity, decision-making and customer experiences across the business.",
-    items: ["AI Strategy", "AI Workflows", "AI Content Systems", "AI Customer Experience", "Intelligent Automation"],
-    cta: "Explore AI Transformation",
+    items: ["Android", "iOS", "Flutter", "React Native", "API Integration"],
+    cta: "Explore Mobile App Development",
     href: "/ai-transformation",
-    image: servicesHero,
+    image: servicesHero1,
   },
+    {
+    n: "05",
+    tag: "CRM & ERP SOLUTIONS",
+    title: "Streamline Operations. Accelerate Business Growth.",
+    copy:
+      "Digitize and automate your business processes with custom CRM and ERP solutions that improve productivity, enhance collaboration, and provide complete operational visibility.",
+    items: ["Custom CRM", "ERP Solutions", "Workflow Automation", "Dashboard & Analytics  ", "System Integration"],
+    cta: "Explore CRM & ERP Solutions",
+    href: "/ai-transformation",
+    image: servicesHero2,
+  },
+    {
+    n: "06",
+    tag: "BRAND STRATEGY",
+    title: "Build a Brand That Inspires Trust & Drives Growth.",
+    copy:
+      "Develop a clear brand strategy that defines your positioning, messaging, and identity to create meaningful connections and long-term business value.",
+    items: ["Brand Positioning", "Brand Messaging", "Brand Architecture", "Market Research", "Brand Guidelines"],
+    cta: "Explore Brand Strategy",
+    href: "/ai-transformation",
+    image: servicesHero3,
+  },
+    {
+    n: "07",
+    tag: "LOGO & VISUAL IDENTITY",
+    title: "Create a Visual Identity That Makes Your Brand Memorable.",
+    copy:
+      "Design distinctive logos and cohesive visual identity systems that build recognition, communicate your brand values ",
+    items: ["Logo Design", "Brand Identity", "UI/Color Palette Design", "Typography", "Brand Guidelines"],
+    cta: "Explore Logo & Visual Identity",
+    href: "/ai-transformation",
+    image: servicesHero4,
+  },
+    {
+    n: "08",
+    tag: "UI / UX & PRODUCT ENGINEERING",
+    title: "Design Digital Experiences Users Love to Interact With.",
+    copy:
+      "Create intuitive user interfaces and seamless digital experiences that improve usability, increase engagement, and transform ideas.",
+    items: ["UX Research", "UI Design", "Wireframing", "Prototyping", "Design Systems"],
+    cta: "Explore UI / UX & Product Engineering",
+    href: "/ai-transformation",
+    image: servicesHero5,
+  },
+    {
+    n: "09",
+    tag: "CONTENT MARKETING",
+    title: "Turn Valuable Content Into Qualified Business Opportunities.",
+    copy:
+      "Create strategic content that educates, builds authority, improves search visibility & nurtures prospects throughout every stage of customer Journey.",
+    items: ["SEO Content", "Website Copywriting", "Blogs", "Case Studies", "Email Marketing"],
+    cta: "Explore Content Marketing",
+    href: "/ai-transformation",
+    image: servicesHero6,
+  },
+    {
+    n: "10",
+    tag: "Marketing automation",
+    title: "Automate Customer Journeys. Accelerate Business Growth.",
+    copy:
+      "Streamline marketing processes with intelligent automation that nurtures leads, improves engagement, and delivers personalized customer experiences at scale.",
+    items: ["Email Automation", "WhatsApp Automation", "Lead Nurturing", "CRM Integration", "Workflow Automation"],
+    cta: "Explore Marketing Automation",
+    href: "/ai-transformation",
+    image: servicesHero7,
+  },
+    {
+    n: "11",
+    tag: "CONVERSION OPTIMIZATION",
+    title: "Turn More Visitors Into Customers.",
+    copy:
+      "Optimize every stage of your digital journey with data-driven strategies that improve user experience, increase conversions & maximize your marketing ROI.",
+    items: ["Landing Page Optimization", "A/B Testing", "Conversion Tracking", "Heatmaps", "User Journey Analysis"],
+    cta: "Explore Conversion Optimization",
+    href: "/ai-transformation",
+    image: servicesHero8,
+  },
+   {
+    n: "12",
+    tag: "SOCIAL MEDIA MARKETING",
+    title: "Build Meaningful Connections Beyond the Feed.",
+    copy:
+      "Create strategic social media campaigns that strengthen your brand presence, engage the right audience, and support long-term business growth across every platform.",
+    items: ["Instagram Marketing", "Facebook Marketing", "LinkedIn Marketing", "Content Strategy", "Community Management"],
+    cta: "Explore Social Media Marketing",
+    href: "/ai-transformation",
+    image: servicesHero9,
+  },
+   {
+    n: "13",
+    tag: "MARKETING COMMUNICATION",
+    title: "Communicate the Right Message. Inspire the Right Action.",
+    copy:
+      "Develop impactful marketing communication that strengthens your brand, supports campaigns, and delivers consistent messaging across every customer touchpoint.",
+    items: ["Campaign Strategy", "Marketing Collateral", "Sales Presentations", "Brochures", "Digital Creatives"],
+    cta: "Explore Marketing Communication",
+    href: "/ai-transformation",
+    image: servicesHero10,
+  },
+   {
+    n: "14",
+    tag: "CORPORATE COMMUNICATION DESIGN",
+    title: "Communicate Your Business with Clarity & Confidence.",
+    copy:
+      "Create professional corporate communication materials that strengthen credibility, build stakeholder trust, and ensure consistent brand communication across every business touchpoint.",
+    items: ["Company Profile", "Corporate Brochures", "Annual Reports", "Corporate Collateral", "Investor Presentations"],
+    cta: "Explore Corporate Communication Design",
+    href: "/ai-transformation",
+    image: servicesHero12,
+  },
+   {
+    n: "15",
+    tag: "PACKAGING & PRODUCT DESIGN",
+    title: "Packaging That Captures Attention and Drives Purchase Decisions.",
+    copy:
+      "Design distinctive packaging and product visuals that enhance shelf appeal, strengthen brand recognition, and create memorable customer experiences across retail and digital marketplaces.",
+    items: ["Packaging Design", "Label Design", "Product Branding", "Retail Packaging", "Print Production"],
+    cta: "Explore Packaging & Product Design",
+    href: "/ai-transformation",
+    image: servicesHero13,
+  },
+   {
+    n: "16",
+    tag: "MOTION GRAPHICS & ANIMATION",
+    title: "Bring Ideas to Life Through Motion.",
+    copy:
+      "Create engaging motion graphics and animations that simplify complex messages, capture attention, and elevate your brand across digital marketing, presentations, and social media.",
+    items: ["2D Animation", "Motion Graphics", "Explainer Videos", "Product Animation", "API IntegrationSocial Media Reels"],
+    cta: "Explore Motion Graphics & Animation",
+    href: "/ai-transformation",
+    image: servicesHero14,
+  },
+   {
+    n: "17",
+    tag: "CORPORATE FILMS & VIDEOS",
+    title: "Tell Your Brand Story Through Powerful Visual.",
+    copy:
+      "Produce high-quality corporate films and videos that showcase your business, engage your audience, and build trust through authentic visual storytelling.",
+    items: ["Corporate Films", "Brand Videos", "Product Videos", "Testimonial Videos", "Drone Shoots"],
+    cta: "Explore Corporate Films & Videos",
+    href: "/ai-transformation",
+    image: servicesHero15,
+  },
+  
 ];
 
 const whyUs = [
@@ -432,7 +590,7 @@ function ServicesPage() {
             </div>
           </div>
 
-          <form
+          {/* <form
             id="contact-form"
             onSubmit={(e) => e.preventDefault()}
             className="lg:col-span-5 bg-canvas p-7 lg:p-8 space-y-3"
@@ -454,7 +612,7 @@ function ServicesPage() {
             <button className="w-full bg-dark text-canvas px-6 py-3.5 text-sm font-semibold hover:bg-dark/90 transition">
               Request Discovery Call →
             </button>
-          </form>
+          </form> */}
         </div>
       </section>
 
