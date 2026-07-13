@@ -8,7 +8,7 @@ import svcDigital from "@/assets/svc-digital.jpg";
 import svcSpecialized from "@/assets/svc-specialized.jpg";
 import svcTechnology from "@/assets/svc-technology.jpg";
 import caseMos from "@/assets/case-mosy1.jpg";
-import caseRexello from "@/assets/rexelloy1.jpg";
+import caseRexello from "@/assets/Rexelloy1.jpg";
 import caseAmigo from "@/assets/case-amigoy1.jpg";
 import servicesHero1 from "@/assets/services-hero1.jpg";
 import servicesHero2 from "@/assets/services-hero2.jpg";
