@@ -2,10 +2,11 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
-import heroImg from "@/assets/svc-branding.jpg";
-import caseMos from "@/assets/case-mos.jpg";
-import caseAmigo from "@/assets/case-amigo.jpg";
-import caseRexello from "@/assets/case-rexello.jpg";
+import heroImg from "@/assets/svc-brandingy3.jpg";
+import caseMos from "@/assets/case-mosy3.jpg";
+import caseAmigo from "@/assets/case-amigoy2.jpg";
+import caseRexello from "@/assets/case-rexelloy2.jpg";
+import futurescope from "@/assets/futuresope.png";
 
 export const Route = createFileRoute("/crm-erp-solutions")({
   component: CrmErpPage,
@@ -225,7 +226,7 @@ const stories = [
       "Improved sales team coordination, stronger distributor relationship management, faster reporting cycles and the data-driven visibility that supports strategic decision-making.",
   },
   {
-    img: caseMos,
+    img: futurescope,
     client: "Future SaaS Platforms",
     challenge:
       "Organisations across sectors needing bespoke workflow automation solutions — moving from manual processes and disconnected tools to integrated digital systems that reduce effort, improve accuracy and support growth.",

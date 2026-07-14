@@ -2,10 +2,10 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
-import heroImg from "@/assets/svc-branding.jpg";
-import caseMos from "@/assets/case-mos.jpg";
-import caseRexello from "@/assets/case-rexello.jpg";
-import caseAmigo from "@/assets/case-amigo.jpg";
+import heroImg from "@/assets/svc-brandingy5.jpg";
+import caseMos from "@/assets/case-mosy7.jpg";
+import caseRexello from "@/assets/case-rexelloy7.jpg";
+import caseAmigo from "@/assets/case-amigoy7.jpg";
 
 export const Route = createFileRoute("/corporate-communication-design")({
   component: CorporateCommunicationPage,

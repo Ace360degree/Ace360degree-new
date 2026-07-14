@@ -2,10 +2,11 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
-import heroImg from "@/assets/svc-branding.jpg";
-import caseMos from "@/assets/case-mos.jpg";
-import caseAmigo from "@/assets/case-amigo.jpg";
-import caseCosmos from "@/assets/case-cosmos.jpg";
+import heroImg from "@/assets/svc-brandingy1.jpg";
+import caseMos from "@/assets/case-mosy2.jpg";
+import caseAmigo from "@/assets/case-amigoy2.jpg";
+import caseCosmos from "@/assets/case-cosmosy1.jpg";
+import caseKuwal from "@/assets/case-kuwaly1.png";  
 
 export const Route = createFileRoute("/website-design-development")({
   component: WebsiteDesignPage,
@@ -252,7 +253,7 @@ const stories = [
       "Stronger international enquiry generation, improved brand perception in overseas markets and a digital platform that supports ongoing export growth and distributor confidence.",
   },
   {
-    img: caseMos,
+    img: caseKuwal,
     client: "Kuwal Sanam Architects",
     challenge:
       "A premium architecture practice needing a digital presence that communicated design philosophy, showcased portfolio work and created the kind of aesthetic credibility that attracts high-value residential and commercial commissions.",

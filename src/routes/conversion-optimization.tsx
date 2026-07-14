@@ -2,10 +2,10 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
-import heroImg from "@/assets/services-hero.jpg";
-import caseAmigo from "@/assets/case-amigo.jpg";
-import caseMos from "@/assets/case-mos.jpg";
-import caseRexello from "@/assets/case-rexello.jpg";
+import heroImg from "@/assets/services-heroy5.jpg";
+import caseAmigo from "@/assets/case-amigoy6.jpg";
+import caseMos from "@/assets/case-mosy6.jpg";
+import caseRexello from "@/assets/case-rexelloy6.jpg";
 
 export const Route = createFileRoute("/conversion-optimization")({
   component: ConversionOptimizationPage,

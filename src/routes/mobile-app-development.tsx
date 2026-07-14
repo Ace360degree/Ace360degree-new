@@ -2,10 +2,10 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
-import heroImg from "@/assets/svc-branding.jpg";
-import caseMos from "@/assets/case-mos.jpg";
-import caseAmigo from "@/assets/case-amigo.jpg";
-import caseRexello from "@/assets/case-rexello.jpg";
+import heroImg from "@/assets/svc-brandingy2.jpg";
+import caseMos from "@/assets/case-mosy2.jpg";
+import caseAmigo from "@/assets/case-amigoy2.jpg";
+import caseRexello from "@/assets/case-rexelloy1.jpg";
 
 export const Route = createFileRoute("/mobile-app-development")({
   component: MobileAppPage,
