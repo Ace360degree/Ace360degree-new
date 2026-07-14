@@ -2,10 +2,10 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
-import heroImg from "@/assets/svc-branding.jpg";
-import caseRexello from "@/assets/case-rexello.jpg";
-import caseKsa from "@/assets/case-ksa.jpg";
-import caseAmigo from "@/assets/case-amigo.jpg";
+import heroImg from "@/assets/svc-brandingy4.jpg";
+import caseRexello from "@/assets/case-rexelloy3.jpg";
+import caseKsa from "@/assets/case-ksay2.jpg";
+import caseAmigo from "@/assets/case-amigoy5.jpg";
 
 export const Route = createFileRoute("/logo-visual-identity")({
   component: VisualIdentityPage,
@@ -368,10 +368,10 @@ function VisualIdentityPage() {
         <section className="bg-light">
           <div className="mx-auto max-w-7xl px-6 py-24">
             <div className="max-w-3xl">
-              <span className="text-[11px] tracking-[0.3em] uppercase text-brand font-semibold">
+              <span className="text-[11px] tracking-[0.45em] uppercase text-brand font-semibold">
                 Business Challenges We Help Solve
               </span>
-              <h2 className="mt-3 font-serif text-4xl md:text-5xl leading-tight">
+              <h2 className="mt-4 font-serif text-[40px] md:text-[58px] leading-[1.06] tracking-[-0.02em] text-dark">
                 The visual question is almost always a business question in disguise.
               </h2>
               <p className="mt-4 text-dark/70">
@@ -450,11 +450,11 @@ function VisualIdentityPage() {
       <Reveal>
         <section className="bg-dark text-canvas">
           <div className="mx-auto max-w-7xl px-6 py-28">
-            <div className="max-w-2xl">
-              <span className="text-[11px] tracking-[0.3em] uppercase text-brand font-semibold">
+            <div className="max-w-3xl">
+              <span className="text-[11px] tracking-[0.45em] uppercase text-brand font-semibold">
                 The Ace360degree Visual Identity Framework
               </span>
-              <h2 className="mt-3 font-serif text-4xl md:text-5xl leading-tight">
+              <h2 className="mt-4 font-serif text-[40px] md:text-[58px] leading-[1.06] tracking-[-0.02em] text-dark">
                 Research. Conceptualize. Design. Refine. Deploy.
               </h2>
               <p className="mt-5 text-canvas/70">
@@ -482,33 +482,33 @@ function VisualIdentityPage() {
       <Reveal>
         <section className="bg-canvas">
           <div className="mx-auto max-w-7xl px-6 py-24">
-            <div className="max-w-2xl">
+            <div className="max-w-3xl">
               <span className="text-[11px] tracking-[0.3em] uppercase text-brand font-semibold">
                 Visual Identity In Action
               </span>
               <h2 className="mt-3 font-serif text-4xl md:text-5xl leading-tight">
                 Visual identity is a business investment — not a creative indulgence.
               </h2>
-              <p className="mt-4 text-dark/70">
-                The compounding return of recognition, consistency and trust — measured in
-                recall, preference and customer confidence.
+              <p className="mt-6 max-w-2xl text-sm md:text-[15px] leading-7 text-dark/65">
+                The compounding return of recognition, consistency and trust â€” measured in recall, preference and customer
+                shaping perception — consistently and at scale..
               </p>
             </div>
 
-            <div className="mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-dark/10 border border-dark/10">
+            <div className="mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-px border border-dark/10 bg-dark/10">
               {valuePillars.map((p, i) => (
-                <div key={p.t} className="bg-canvas p-8 hover:bg-brand/10 transition-colors">
-                  <p className="text-[11px] uppercase tracking-[0.25em] text-dark/45 font-semibold">
-                    0{i + 1}
+                <div key={p.t} className="bg-canvas p-6 md:p-7 min-h-[168px]">
+                  <p className="text-[11px] uppercase tracking-[0.35em] text-dark/45">
+                    {String(i + 1).padStart(2, "0")}
                   </p>
-                  <h3 className="mt-3 font-serif text-2xl">{p.t}</h3>
-                  <p className="mt-3 text-sm text-dark/70 leading-relaxed">{p.b}</p>
+                  <h3 className="mt-5 font-serif text-[28px] leading-[1.15] text-dark">{p.t}</h3>
+                  <p className="mt-4 text-sm md:text-[15px] leading-5 text-dark/65">{p.b}</p>
                 </div>
               ))}
             </div>
 
             <div className="mt-14 border-t border-dark/10 pt-10">
-              <p className="font-serif text-3xl md:text-4xl max-w-3xl leading-tight">
+              <p className="font-serif text-3xl md:text-[44px] max-w-3xl leading-tight">
                 Great brands are recognized{" "}
                 <span className="text-brand">before they are read.</span>
               </p>

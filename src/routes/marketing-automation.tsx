@@ -2,10 +2,10 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
-import heroImg from "@/assets/services-hero.jpg";
-import caseAmigo from "@/assets/case-amigo.jpg";
-import caseMos from "@/assets/case-mos.jpg";
-import caseRexello from "@/assets/case-rexello.jpg";
+import heroImg from "@/assets/services-heroy1.jpg";
+import caseAmigo from "@/assets/case-amigoy6.jpg";
+import caseMos from "@/assets/case-mosy6.jpg";
+import caseRexello from "@/assets/case-rexelloy6.jpg";
 
 export const Route = createFileRoute("/marketing-automation")({
   component: MarketingAutomationPage,
@@ -480,26 +480,26 @@ function MarketingAutomationPage() {
       <Reveal>
         <section className="bg-canvas">
           <div className="mx-auto max-w-7xl px-6 py-24">
-            <div className="max-w-2xl">
-              <span className="text-[11px] tracking-[0.3em] uppercase text-brand font-semibold">
+            <div className="max-w-3xl">
+              <span className="text-[11px] tracking-[0.45em] uppercase text-brand font-semibold">
                 Platforms & Integrations
               </span>
-              <h2 className="mt-3 font-serif text-4xl md:text-5xl leading-tight">
+              <h2 className="mt-4 font-serif text-[40px] md:text-[58px] leading-[1.06] tracking-[-0.02em] text-dark">
                 Connected systems create better customer experiences.
               </h2>
-              <p className="mt-4 text-dark/70">
-                We are platform-agnostic. We work with your existing systems — and connect them into
-                an intelligent, automated stack designed around your customer.
+              <p className="mt-6 max-w-2xl text-sm md:text-[15px] leading-7 text-dark/65">
+                We are platform-agnostic. We work with your existing systems — and connect them into an intelligent, automated stack
+                designed around your customer.
               </p>
             </div>
 
-            <div className="mt-12 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-px bg-dark/10 border border-dark/10">
+            <div className="mt-12 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-px border border-dark/10 bg-dark/10">
               {platforms.map((p) => (
                 <div
                   key={p}
-                  className="bg-canvas p-6 text-center hover:bg-brand/10 transition-colors"
+                  className="bg-canvas min-h-[76px] px-4 py-5 flex items-center justify-center text-center"
                 >
-                  <p className="font-serif text-lg">{p}</p>
+                  <p className="font-serif text-[17px] leading-none text-dark">{p}</p>
                 </div>
               ))}
             </div>
