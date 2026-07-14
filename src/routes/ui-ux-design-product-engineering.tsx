@@ -2,11 +2,11 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
-import heroImg from "@/assets/svc-branding.jpg";
-import caseAmigo from "@/assets/case-amigo.jpg";
-import caseMos from "@/assets/case-mos.jpg";
-import caseCosmos from "@/assets/case-cosmos.jpg";
-import caseRexello from "@/assets/case-rexello.jpg";
+import heroImg from "@/assets/svc-branding.a11.jpg";
+import caseAmigo from "@/assets/case-amigo.a12.jpg";
+import caseMos from "@/assets/case-mos.a13.jpg";
+import caseRexello  from "@/assets/case-rexello.a14.jpg";
+import  caseCosmos from "@/assets/case-rexello.a15.jpg";
 
 export const Route = createFileRoute("/ui-ux-design-product-engineering")({
   component: UxProductPage,
@@ -428,7 +428,7 @@ function UxProductPage() {
             </div>
           </div>
           <div className="lg:col-span-5">
-            <div className="relative aspect-[4/5] overflow-hidden rounded-sm">
+            <div className="relative aspect-[5/4] overflow-hidden rounded-sm">
               <img
                 src={heroImg}
                 alt="Product design and engineering partner building intuitive digital experiences and scalable platforms"
