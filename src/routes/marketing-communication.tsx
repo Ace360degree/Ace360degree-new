@@ -2,11 +2,11 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
-import heroMesh from "@/assets/hero-mesh.jpg";
-import caseMos from "@/assets/case-mos.jpg";
-import caseCosmos from "@/assets/case-cosmos.jpg";
-import caseRexello from "@/assets/case-rexello.jpg";
-import caseAmigo from "@/assets/case-amigo.jpg";
+import heroMesh from "@/assets/hero-mesh.1.jpg";
+import caseMos from "@/assets/case-mos.2.jpg";
+import caseCosmos from "@/assets/case-cosmos.4.jpg";
+import caseRexello from "@/assets/case-rexello.7.jpg";
+import caseAmigo from "@/assets/case-amigo.5.jpg";
 
 export const Route = createFileRoute("/marketing-communication")({
   component: MarketingCommunicationPage,

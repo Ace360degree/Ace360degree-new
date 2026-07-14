@@ -2,10 +2,10 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
-import heroImg from "@/assets/svc-branding.jpg";
-import caseKsa from "@/assets/case-ksa.jpg";
-import caseRexello from "@/assets/case-rexello.jpg";
-import caseLiving from "@/assets/case-living.jpg";
+import heroImg from "@/assets/svc-branding.a1.jpg";
+import caseKsa from "@/assets/case-ksa.a2.jpg";
+import caseRexello from "@/assets/case-rexello.a3.jpg";
+import caseLiving from "@/assets/case-living.a4.jpg";
 
 export const Route = createFileRoute("/brand-strategy")({
   component: BrandStrategyPage,

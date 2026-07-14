@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
-import heroImg from "@/assets/services-hero.jpg";
+import heroImg from "@/assets/services-hero.a3.jpg";
 
 export const Route = createFileRoute("/performance-marketing")({
   component: PerformanceMarketingPage,
