@@ -2,11 +2,11 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
-import heroImg from "@/assets/svc-branding.jpg";
-import caseMos from "@/assets/case-mos.jpg";
-import caseAmigo from "@/assets/case-amigo.jpg";
-import caseRexello from "@/assets/case-rexello.jpg";
-import casePain from "@/assets/case-living.jpg";
+import heroImg from "@/assets/svc-branding.222.jpg";
+import caseMos from "@/assets/case-mos.414.jpg";
+import  caseRexello from "@/assets/case-amigo.151.jpg";
+import  caseAmigo from "@/assets/case-rexello.515.jpg";
+import casePain from "@/assets/case-living.212.jpg";
 
 export const Route = createFileRoute("/corporate-films-video-production")({
   component: CorporateFilmsPage,

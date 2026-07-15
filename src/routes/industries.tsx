@@ -22,17 +22,17 @@ import {
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 
-import indManufacturing from "@/assets/industry-manufacturing.jpg";
-import indFinance from "@/assets/industry-finance.jpg";
-import indEducation from "@/assets/industry-education.jpg";
-import indHealthcare from "@/assets/industry-healthcare.jpg";
-import indArchitecture from "@/assets/industry-architecture.jpg";
-import caseMos from "@/assets/case-mos.jpg";
-import caseRexello from "@/assets/case-rexello.jpg";
-import caseAmigo from "@/assets/case-amigo.jpg";
-import caseCosmos from "@/assets/case-cosmos.jpg";
-import caseLiving from "@/assets/case-living.jpg";
-import caseKsa from "@/assets/case-ksa.jpg";
+import indManufacturing from "@/assets/industry-manufacturing323.jpg";
+import indFinance from "@/assets/industry-finance.212.jpg";
+import indEducation from "@/assets/industry-education.333.jpg";
+import indHealthcare from "@/assets/industry-healthcare.444.jpg";
+import indArchitecture from "@/assets/industry-architecture.414.jpg";
+import  caseMos from "@/assets/case-mos.999.jpg";
+import caseRexello from "@/assets/case-rexello.2222.jpg";
+import  caseCosmos from "@/assets/case-amigo.323.jpg";
+import caseAmigo from "@/assets/case-cosmos.343.jpg";
+import caseLiving from "@/assets/case-living.555.jpg";
+import caseKsa from "@/assets/case-ksa.323.jpg";
 
 export const Route = createFileRoute("/industries")({
   component: IndustriesPage,
