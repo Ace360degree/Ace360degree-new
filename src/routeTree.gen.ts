@@ -16,6 +16,7 @@ import { Route as TechnologyRouteImport } from './routes/technology'
 import { Route as SocialMediaMarketingRouteImport } from './routes/social-media-marketing'
 import { Route as ServicesRouteImport } from './routes/services'
 import { Route as SearchVisibilityRouteImport } from './routes/search-visibility'
+import { Route as RealEstateRouteImport } from './routes/real-estate'
 import { Route as PublicRelationsReputationManagementRouteImport } from './routes/public-relations-reputation-management'
 import { Route as PortfolioRouteImport } from './routes/portfolio'
 import { Route as PodcastStrategyProductionRouteImport } from './routes/podcast-strategy-production'
@@ -31,6 +32,7 @@ import { Route as IndustriesRouteImport } from './routes/industries'
 import { Route as GrowthMarketingRouteImport } from './routes/growth-marketing'
 import { Route as GrowthRouteImport } from './routes/growth'
 import { Route as EventMarketingBrandExperiencesRouteImport } from './routes/event-marketing-brand-experiences'
+import { Route as D2cRetailbrandRouteImport } from './routes/d2c-retailbrand'
 import { Route as CrmErpSolutionsRouteImport } from './routes/crm-erp-solutions'
 import { Route as CorporateFilmsVideoProductionRouteImport } from './routes/corporate-films-video-production'
 import { Route as CorporateCommunicationDesignRouteImport } from './routes/corporate-communication-design'
@@ -57,6 +59,7 @@ import { Route as AiContentMarketingSystemsRouteImport } from './routes/ai-conte
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as SuccessStoriesEnterpriseExperienceRouteImport } from './routes/success-stories.enterprise-experience'
+import { Route as IndustriesRealEstateRouteImport } from './routes/industries_.real-estate'
 import { Route as IndustriesManufacturingRouteImport } from './routes/industries_.manufacturing'
 import { Route as IndustriesHealthcareRouteImport } from './routes/industries_.healthcare'
 import { Route as IndustriesFintechRouteImport } from './routes/industries_.fintech'
@@ -100,6 +103,11 @@ const ServicesRoute = ServicesRouteImport.update({
 const SearchVisibilityRoute = SearchVisibilityRouteImport.update({
   id: '/search-visibility',
   path: '/search-visibility',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RealEstateRoute = RealEstateRouteImport.update({
+  id: '/real-estate',
+  path: '/real-estate',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PublicRelationsReputationManagementRoute =
@@ -182,6 +190,11 @@ const EventMarketingBrandExperiencesRoute =
     path: '/event-marketing-brand-experiences',
     getParentRoute: () => rootRouteImport,
   } as any)
+const D2cRetailbrandRoute = D2cRetailbrandRouteImport.update({
+  id: '/d2c-retailbrand',
+  path: '/d2c-retailbrand',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const CrmErpSolutionsRoute = CrmErpSolutionsRouteImport.update({
   id: '/crm-erp-solutions',
   path: '/crm-erp-solutions',
@@ -320,6 +333,11 @@ const SuccessStoriesEnterpriseExperienceRoute =
     path: '/success-stories/enterprise-experience',
     getParentRoute: () => rootRouteImport,
   } as any)
+const IndustriesRealEstateRoute = IndustriesRealEstateRouteImport.update({
+  id: '/industries_/real-estate',
+  path: '/industries/real-estate',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndustriesManufacturingRoute = IndustriesManufacturingRouteImport.update({
   id: '/industries_/manufacturing',
   path: '/industries/manufacturing',
@@ -378,6 +396,7 @@ export interface FileRoutesByFullPath {
   '/corporate-communication-design': typeof CorporateCommunicationDesignRoute
   '/corporate-films-video-production': typeof CorporateFilmsVideoProductionRoute
   '/crm-erp-solutions': typeof CrmErpSolutionsRoute
+  '/d2c-retailbrand': typeof D2cRetailbrandRoute
   '/event-marketing-brand-experiences': typeof EventMarketingBrandExperiencesRoute
   '/growth': typeof GrowthRoute
   '/growth-marketing': typeof GrowthMarketingRoute
@@ -393,6 +412,7 @@ export interface FileRoutesByFullPath {
   '/podcast-strategy-production': typeof PodcastStrategyProductionRoute
   '/portfolio': typeof PortfolioRoute
   '/public-relations-reputation-management': typeof PublicRelationsReputationManagementRoute
+  '/real-estate': typeof RealEstateRoute
   '/search-visibility': typeof SearchVisibilityRoute
   '/services': typeof ServicesRoute
   '/social-media-marketing': typeof SocialMediaMarketingRoute
@@ -406,6 +426,7 @@ export interface FileRoutesByFullPath {
   '/industries/fintech': typeof IndustriesFintechRoute
   '/industries/healthcare': typeof IndustriesHealthcareRoute
   '/industries/manufacturing': typeof IndustriesManufacturingRoute
+  '/industries/real-estate': typeof IndustriesRealEstateRoute
   '/success-stories/enterprise-experience': typeof SuccessStoriesEnterpriseExperienceRoute
 }
 export interface FileRoutesByTo {
@@ -434,6 +455,7 @@ export interface FileRoutesByTo {
   '/corporate-communication-design': typeof CorporateCommunicationDesignRoute
   '/corporate-films-video-production': typeof CorporateFilmsVideoProductionRoute
   '/crm-erp-solutions': typeof CrmErpSolutionsRoute
+  '/d2c-retailbrand': typeof D2cRetailbrandRoute
   '/event-marketing-brand-experiences': typeof EventMarketingBrandExperiencesRoute
   '/growth': typeof GrowthRoute
   '/growth-marketing': typeof GrowthMarketingRoute
@@ -449,6 +471,7 @@ export interface FileRoutesByTo {
   '/podcast-strategy-production': typeof PodcastStrategyProductionRoute
   '/portfolio': typeof PortfolioRoute
   '/public-relations-reputation-management': typeof PublicRelationsReputationManagementRoute
+  '/real-estate': typeof RealEstateRoute
   '/search-visibility': typeof SearchVisibilityRoute
   '/services': typeof ServicesRoute
   '/social-media-marketing': typeof SocialMediaMarketingRoute
@@ -462,6 +485,7 @@ export interface FileRoutesByTo {
   '/industries/fintech': typeof IndustriesFintechRoute
   '/industries/healthcare': typeof IndustriesHealthcareRoute
   '/industries/manufacturing': typeof IndustriesManufacturingRoute
+  '/industries/real-estate': typeof IndustriesRealEstateRoute
   '/success-stories/enterprise-experience': typeof SuccessStoriesEnterpriseExperienceRoute
 }
 export interface FileRoutesById {
@@ -491,6 +515,7 @@ export interface FileRoutesById {
   '/corporate-communication-design': typeof CorporateCommunicationDesignRoute
   '/corporate-films-video-production': typeof CorporateFilmsVideoProductionRoute
   '/crm-erp-solutions': typeof CrmErpSolutionsRoute
+  '/d2c-retailbrand': typeof D2cRetailbrandRoute
   '/event-marketing-brand-experiences': typeof EventMarketingBrandExperiencesRoute
   '/growth': typeof GrowthRoute
   '/growth-marketing': typeof GrowthMarketingRoute
@@ -506,6 +531,7 @@ export interface FileRoutesById {
   '/podcast-strategy-production': typeof PodcastStrategyProductionRoute
   '/portfolio': typeof PortfolioRoute
   '/public-relations-reputation-management': typeof PublicRelationsReputationManagementRoute
+  '/real-estate': typeof RealEstateRoute
   '/search-visibility': typeof SearchVisibilityRoute
   '/services': typeof ServicesRoute
   '/social-media-marketing': typeof SocialMediaMarketingRoute
@@ -519,6 +545,7 @@ export interface FileRoutesById {
   '/industries_/fintech': typeof IndustriesFintechRoute
   '/industries_/healthcare': typeof IndustriesHealthcareRoute
   '/industries_/manufacturing': typeof IndustriesManufacturingRoute
+  '/industries_/real-estate': typeof IndustriesRealEstateRoute
   '/success-stories/enterprise-experience': typeof SuccessStoriesEnterpriseExperienceRoute
 }
 export interface FileRouteTypes {
@@ -549,6 +576,7 @@ export interface FileRouteTypes {
     | '/corporate-communication-design'
     | '/corporate-films-video-production'
     | '/crm-erp-solutions'
+    | '/d2c-retailbrand'
     | '/event-marketing-brand-experiences'
     | '/growth'
     | '/growth-marketing'
@@ -564,6 +592,7 @@ export interface FileRouteTypes {
     | '/podcast-strategy-production'
     | '/portfolio'
     | '/public-relations-reputation-management'
+    | '/real-estate'
     | '/search-visibility'
     | '/services'
     | '/social-media-marketing'
@@ -577,6 +606,7 @@ export interface FileRouteTypes {
     | '/industries/fintech'
     | '/industries/healthcare'
     | '/industries/manufacturing'
+    | '/industries/real-estate'
     | '/success-stories/enterprise-experience'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -605,6 +635,7 @@ export interface FileRouteTypes {
     | '/corporate-communication-design'
     | '/corporate-films-video-production'
     | '/crm-erp-solutions'
+    | '/d2c-retailbrand'
     | '/event-marketing-brand-experiences'
     | '/growth'
     | '/growth-marketing'
@@ -620,6 +651,7 @@ export interface FileRouteTypes {
     | '/podcast-strategy-production'
     | '/portfolio'
     | '/public-relations-reputation-management'
+    | '/real-estate'
     | '/search-visibility'
     | '/services'
     | '/social-media-marketing'
@@ -633,6 +665,7 @@ export interface FileRouteTypes {
     | '/industries/fintech'
     | '/industries/healthcare'
     | '/industries/manufacturing'
+    | '/industries/real-estate'
     | '/success-stories/enterprise-experience'
   id:
     | '__root__'
@@ -661,6 +694,7 @@ export interface FileRouteTypes {
     | '/corporate-communication-design'
     | '/corporate-films-video-production'
     | '/crm-erp-solutions'
+    | '/d2c-retailbrand'
     | '/event-marketing-brand-experiences'
     | '/growth'
     | '/growth-marketing'
@@ -676,6 +710,7 @@ export interface FileRouteTypes {
     | '/podcast-strategy-production'
     | '/portfolio'
     | '/public-relations-reputation-management'
+    | '/real-estate'
     | '/search-visibility'
     | '/services'
     | '/social-media-marketing'
@@ -689,6 +724,7 @@ export interface FileRouteTypes {
     | '/industries_/fintech'
     | '/industries_/healthcare'
     | '/industries_/manufacturing'
+    | '/industries_/real-estate'
     | '/success-stories/enterprise-experience'
   fileRoutesById: FileRoutesById
 }
@@ -718,6 +754,7 @@ export interface RootRouteChildren {
   CorporateCommunicationDesignRoute: typeof CorporateCommunicationDesignRoute
   CorporateFilmsVideoProductionRoute: typeof CorporateFilmsVideoProductionRoute
   CrmErpSolutionsRoute: typeof CrmErpSolutionsRoute
+  D2cRetailbrandRoute: typeof D2cRetailbrandRoute
   EventMarketingBrandExperiencesRoute: typeof EventMarketingBrandExperiencesRoute
   GrowthRoute: typeof GrowthRoute
   GrowthMarketingRoute: typeof GrowthMarketingRoute
@@ -733,6 +770,7 @@ export interface RootRouteChildren {
   PodcastStrategyProductionRoute: typeof PodcastStrategyProductionRoute
   PortfolioRoute: typeof PortfolioRoute
   PublicRelationsReputationManagementRoute: typeof PublicRelationsReputationManagementRoute
+  RealEstateRoute: typeof RealEstateRoute
   SearchVisibilityRoute: typeof SearchVisibilityRoute
   ServicesRoute: typeof ServicesRoute
   SocialMediaMarketingRoute: typeof SocialMediaMarketingRoute
@@ -745,6 +783,7 @@ export interface RootRouteChildren {
   IndustriesFintechRoute: typeof IndustriesFintechRoute
   IndustriesHealthcareRoute: typeof IndustriesHealthcareRoute
   IndustriesManufacturingRoute: typeof IndustriesManufacturingRoute
+  IndustriesRealEstateRoute: typeof IndustriesRealEstateRoute
   SuccessStoriesEnterpriseExperienceRoute: typeof SuccessStoriesEnterpriseExperienceRoute
 }
 
@@ -797,6 +836,13 @@ declare module '@tanstack/react-router' {
       path: '/search-visibility'
       fullPath: '/search-visibility'
       preLoaderRoute: typeof SearchVisibilityRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/real-estate': {
+      id: '/real-estate'
+      path: '/real-estate'
+      fullPath: '/real-estate'
+      preLoaderRoute: typeof RealEstateRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/public-relations-reputation-management': {
@@ -902,6 +948,13 @@ declare module '@tanstack/react-router' {
       path: '/event-marketing-brand-experiences'
       fullPath: '/event-marketing-brand-experiences'
       preLoaderRoute: typeof EventMarketingBrandExperiencesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/d2c-retailbrand': {
+      id: '/d2c-retailbrand'
+      path: '/d2c-retailbrand'
+      fullPath: '/d2c-retailbrand'
+      preLoaderRoute: typeof D2cRetailbrandRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/crm-erp-solutions': {
@@ -1086,6 +1139,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SuccessStoriesEnterpriseExperienceRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/industries_/real-estate': {
+      id: '/industries_/real-estate'
+      path: '/industries/real-estate'
+      fullPath: '/industries/real-estate'
+      preLoaderRoute: typeof IndustriesRealEstateRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/industries_/manufacturing': {
       id: '/industries_/manufacturing'
       path: '/industries/manufacturing'
@@ -1168,6 +1228,7 @@ const rootRouteChildren: RootRouteChildren = {
   CorporateCommunicationDesignRoute: CorporateCommunicationDesignRoute,
   CorporateFilmsVideoProductionRoute: CorporateFilmsVideoProductionRoute,
   CrmErpSolutionsRoute: CrmErpSolutionsRoute,
+  D2cRetailbrandRoute: D2cRetailbrandRoute,
   EventMarketingBrandExperiencesRoute: EventMarketingBrandExperiencesRoute,
   GrowthRoute: GrowthRoute,
   GrowthMarketingRoute: GrowthMarketingRoute,
@@ -1185,6 +1246,7 @@ const rootRouteChildren: RootRouteChildren = {
   PortfolioRoute: PortfolioRoute,
   PublicRelationsReputationManagementRoute:
     PublicRelationsReputationManagementRoute,
+  RealEstateRoute: RealEstateRoute,
   SearchVisibilityRoute: SearchVisibilityRoute,
   ServicesRoute: ServicesRoute,
   SocialMediaMarketingRoute: SocialMediaMarketingRoute,
@@ -1197,6 +1259,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndustriesFintechRoute: IndustriesFintechRoute,
   IndustriesHealthcareRoute: IndustriesHealthcareRoute,
   IndustriesManufacturingRoute: IndustriesManufacturingRoute,
+  IndustriesRealEstateRoute: IndustriesRealEstateRoute,
   SuccessStoriesEnterpriseExperienceRoute:
     SuccessStoriesEnterpriseExperienceRoute,
 }

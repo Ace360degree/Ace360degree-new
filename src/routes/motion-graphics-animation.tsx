@@ -2,10 +2,10 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
-import heroImg from "@/assets/svc-branding.jpg";
-import caseMos from "@/assets/case-mos.jpg";
-import caseAmigo from "@/assets/case-amigo.jpg";
-import caseRexello from "@/assets/case-rexello.jpg";
+import heroImg from "@/assets/svc-branding.23.jpg";
+import caseMos from "@/assets/case-mos.1114.jpg";
+import caseAmigo from "@/assets/case-amigo.1115.jpg";
+import caseRexello from "@/assets/case-rexello.121.jpg";
 
 export const Route = createFileRoute("/motion-graphics-animation")({
   component: MotionGraphicsAnimationPage,

@@ -32,8 +32,8 @@ import {
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 
-import heroImg from "@/assets/industry-education.jpg";
-import caseAmigo from "@/assets/case-amigo-academy.jpg";
+import heroImg from "@/assets/industry-education.1111.jpg";
+import caseAmigo from "@/assets/case-amigo-academy.117.jpg";
 
 export const Route = createFileRoute("/industries_/education")({
   component: EducationPage,

@@ -31,8 +31,8 @@ import {
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 
-import heroImg from "@/assets/industry-finance.jpg";
-import caseMos from "@/assets/case-mos.jpg";
+import heroImg from "@/assets/industry-finance.444.jpg";
+import caseMos from "@/assets/case-mos.3333.jpg";
 import caseArcil from "@/assets/case-arcil.jpg";
 
 export const Route = createFileRoute("/industries_/fintech")({
@@ -55,8 +55,7 @@ export const Route = createFileRoute("/industries_/fintech")({
       },
       {
         property: "og:title",
-        content:
-          "Financial Services & Fintech Growth, Technology & AI Partner | Ace360degree",
+        content: "Financial Services & Fintech Growth, Technology & AI Partner | Ace360degree",
       },
       {
         property: "og:description",
@@ -135,54 +134,68 @@ const sectors = [
 const challenges = [
   {
     title: "Trust & Credibility Gap",
-    body:
-      "Financial buyers move on credibility. A weak brand, dated website or thin content makes acquisition expensive and conversion slow.",
+    body: "Financial buyers move on credibility. A weak brand, dated website or thin content makes acquisition expensive and conversion slow.",
     solution:
       "Premium brand systems, authority content, thought leadership and reputation programs that earn investor and customer trust.",
   },
   {
     title: "Rising Customer Acquisition Cost",
-    body:
-      "Paid CAC keeps climbing. Generic campaigns produce clicks but not qualified investors, borrowers or policyholders.",
+    body: "Paid CAC keeps climbing. Generic campaigns produce clicks but not qualified investors, borrowers or policyholders.",
     solution:
       "Intent-led performance, SEO, advisor enablement and lifecycle marketing focused on lifetime value, not just leads.",
   },
   {
     title: "Compliance-Bound Marketing",
-    body:
-      "SEBI, RBI, IRDAI and global regulators constrain messaging. Most agencies don't understand the guardrails.",
+    body: "SEBI, RBI, IRDAI and global regulators constrain messaging. Most agencies don't understand the guardrails.",
     solution:
       "Compliance-aware creative, disclosure-led storytelling and regulator-friendly content workflows.",
   },
   {
     title: "Legacy Digital Infrastructure",
-    body:
-      "Onboarding journeys, customer portals and websites built years ago can't compete with new-age fintech experiences.",
+    body: "Onboarding journeys, customer portals and websites built years ago can't compete with new-age fintech experiences.",
     solution:
       "Modern web platforms, customer portals, partner & advisor consoles integrated with core systems and CRMs.",
   },
   {
     title: "Fragmented Data & CX",
-    body:
-      "Customer data sits in silos across CRM, core banking, broking platforms and policy systems. CX suffers.",
+    body: "Customer data sits in silos across CRM, core banking, broking platforms and policy systems. CX suffers.",
     solution:
       "Unified marketing, CRM and data layers — with AI-driven personalization across acquisition, onboarding and service.",
   },
   {
     title: "AI Readiness & Transformation",
-    body:
-      "Boards expect an AI agenda. Most teams don't know where AI pays back without compliance or reputation risk.",
+    body: "Boards expect an AI agenda. Most teams don't know where AI pays back without compliance or reputation risk.",
     solution:
       "AI readiness assessment, governed use-case roadmap and pragmatic AI deployment in sales, ops, CX and risk.",
   },
 ];
 
 const framework = [
-  { step: "01", title: "Diagnose", body: "Audit brand, funnel, tech stack, compliance posture and growth gaps." },
-  { step: "02", title: "Position", body: "Sharpen category positioning, trust signals and customer narrative." },
-  { step: "03", title: "Build", body: "Modernize digital platforms, content engines and AI-ready data layer." },
-  { step: "04", title: "Acquire", body: "Run intent SEO, performance, advisor enablement and lifecycle programs." },
-  { step: "05", title: "Scale", body: "Layer AI, automation and analytics for compounding LTV growth." },
+  {
+    step: "01",
+    title: "Diagnose",
+    body: "Audit brand, funnel, tech stack, compliance posture and growth gaps.",
+  },
+  {
+    step: "02",
+    title: "Position",
+    body: "Sharpen category positioning, trust signals and customer narrative.",
+  },
+  {
+    step: "03",
+    title: "Build",
+    body: "Modernize digital platforms, content engines and AI-ready data layer.",
+  },
+  {
+    step: "04",
+    title: "Acquire",
+    body: "Run intent SEO, performance, advisor enablement and lifecycle programs.",
+  },
+  {
+    step: "05",
+    title: "Scale",
+    body: "Layer AI, automation and analytics for compounding LTV growth.",
+  },
 ];
 
 const capabilities = [
@@ -233,17 +246,49 @@ const capabilities = [
 ];
 
 const aiUseCases = [
-  { icon: Users, title: "AI-Led Acquisition", body: "Intent scoring, look-alike modelling and personalised journeys for investors, borrowers and policyholders." },
-  { icon: Workflow, title: "Onboarding & KYC Intelligence", body: "Smart KYC, document AI and conversational onboarding for faster, compliant activation." },
-  { icon: ShieldCheck, title: "Service & Support Copilots", body: "AI assistants for relationship managers, advisors and contact centers — with compliance guardrails." },
-  { icon: BarChart3, title: "Analytics & Risk Intelligence", body: "Portfolio, churn, fraud and propensity models layered into marketing, CX and operations." },
+  {
+    icon: Users,
+    title: "AI-Led Acquisition",
+    body: "Intent scoring, look-alike modelling and personalised journeys for investors, borrowers and policyholders.",
+  },
+  {
+    icon: Workflow,
+    title: "Onboarding & KYC Intelligence",
+    body: "Smart KYC, document AI and conversational onboarding for faster, compliant activation.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Service & Support Copilots",
+    body: "AI assistants for relationship managers, advisors and contact centers — with compliance guardrails.",
+  },
+  {
+    icon: BarChart3,
+    title: "Analytics & Risk Intelligence",
+    body: "Portfolio, churn, fraud and propensity models layered into marketing, CX and operations.",
+  },
 ];
 
 const reasons = [
-  { icon: Landmark, title: "Deep BFSI & Fintech DNA", body: "Years of working with banks, NBFCs, ARCs, fintechs, brokers, AMCs and insurers across India and global markets." },
-  { icon: Workflow, title: "Marketing + Tech + AI Under One Roof", body: "One strategic partner across brand, growth, platforms and AI — no agency hopping or vendor sprawl." },
-  { icon: Lock, title: "Compliance-Aware By Design", body: "Workflows, creative and tech built with SEBI, RBI, IRDAI and global regulator realities in mind." },
-  { icon: Globe2, title: "Built For India & Global Markets", body: "Programs designed for domestic BFSI and cross-border financial services in UAE, UK and US." },
+  {
+    icon: Landmark,
+    title: "Deep BFSI & Fintech DNA",
+    body: "Years of working with banks, NBFCs, ARCs, fintechs, brokers, AMCs and insurers across India and global markets.",
+  },
+  {
+    icon: Workflow,
+    title: "Marketing + Tech + AI Under One Roof",
+    body: "One strategic partner across brand, growth, platforms and AI — no agency hopping or vendor sprawl.",
+  },
+  {
+    icon: Lock,
+    title: "Compliance-Aware By Design",
+    body: "Workflows, creative and tech built with SEBI, RBI, IRDAI and global regulator realities in mind.",
+  },
+  {
+    icon: Globe2,
+    title: "Built For India & Global Markets",
+    body: "Programs designed for domestic BFSI and cross-border financial services in UAE, UK and US.",
+  },
 ];
 
 const futureBullets = [
@@ -308,9 +353,7 @@ function FaqItem({ q, a }: { q: string; a: string }) {
           <Plus className="h-5 w-5 shrink-0 text-primary" />
         )}
       </button>
-      {open && (
-        <p className="pb-6 pr-10 text-base leading-relaxed text-muted-foreground">{a}</p>
-      )}
+      {open && <p className="pb-6 pr-10 text-base leading-relaxed text-muted-foreground">{a}</p>}
     </div>
   );
 }
@@ -323,49 +366,59 @@ function FintechPage() {
 
       {/* HERO */}
       <section className="relative overflow-hidden border-b border-border/60 bg-gradient-to-b from-background via-background to-muted/30">
-        <div className="absolute inset-0 -z-10 opacity-[0.10]">
-          <img src={heroImg} alt="" className="h-full w-full object-cover" />
-        </div>
         <div className="mx-auto max-w-7xl px-6 pb-20 pt-28 lg:pt-32">
-          <Reveal>
-            <div className="inline-flex items-center gap-2 rounded-full border border-border/70 bg-background/70 px-4 py-1.5 text-xs uppercase tracking-[0.18em] text-muted-foreground backdrop-blur">
-              <Landmark className="h-3.5 w-3.5 text-primary" />
-              Industry Solutions · Financial Services & Fintech
+          <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-14">
+            <div className="lg:col-span-7">
+              <Reveal>
+                <div className="inline-flex items-center gap-2 rounded-full border border-border/70 bg-background/70 px-4 py-1.5 text-xs uppercase tracking-[0.18em] text-muted-foreground backdrop-blur">
+                  <Landmark className="h-3.5 w-3.5 text-primary" />
+                  Industry Solutions · Financial Services & Fintech
+                </div>
+              </Reveal>
+
+              <Reveal delay={80}>
+                <h1 className="mt-8 max-w-5xl font-serif text-5xl leading-[1.05] tracking-tight text-foreground md:text-6xl lg:text-7xl">
+                  Growth, Marketing, Technology & AI for{" "}
+                  <span className="italic text-primary">Financial Services</span> & Fintech
+                </h1>
+              </Reveal>
+
+              <Reveal delay={160}>
+                <p className="mt-7 max-w-3xl text-lg leading-relaxed text-muted-foreground md:text-xl">
+                  A strategic growth partner for banks, NBFCs, fintechs, brokers, wealth managers
+                  and insurers — building trust, scaling acquisition and leading AI-driven
+                  transformation, with compliance at the core.
+                </p>
+              </Reveal>
+
+              <Reveal delay={240}>
+                <div className="mt-10 flex flex-wrap gap-3">
+                  <Link
+                    to="/contact"
+                    className="inline-flex items-center gap-2 rounded-full bg-foreground px-6 py-3 text-sm font-medium text-background transition hover:bg-foreground/90"
+                  >
+                    Book Discovery Call <ArrowRight className="h-4 w-4" />
+                  </Link>
+                  <Link
+                    to="/portfolio"
+                    className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-6 py-3 text-sm font-medium text-foreground transition hover:bg-muted"
+                  >
+                    View Financial Services Work <ArrowUpRight className="h-4 w-4" />
+                  </Link>
+                </div>
+              </Reveal>
             </div>
-          </Reveal>
 
-          <Reveal delay={80}>
-            <h1 className="mt-8 max-w-5xl font-serif text-5xl leading-[1.05] tracking-tight text-foreground md:text-6xl lg:text-7xl">
-              Growth, Marketing, Technology & AI for{" "}
-              <span className="italic text-primary">Financial Services</span> &
-              Fintech
-            </h1>
-          </Reveal>
-
-          <Reveal delay={160}>
-            <p className="mt-7 max-w-3xl text-lg leading-relaxed text-muted-foreground md:text-xl">
-              A strategic growth partner for banks, NBFCs, fintechs, brokers, wealth managers
-              and insurers — building trust, scaling acquisition and leading AI-driven
-              transformation, with compliance at the core.
-            </p>
-          </Reveal>
-
-          <Reveal delay={240}>
-            <div className="mt-10 flex flex-wrap gap-3">
-              <Link
-                to="/contact"
-                className="inline-flex items-center gap-2 rounded-full bg-foreground px-6 py-3 text-sm font-medium text-background transition hover:bg-foreground/90"
-              >
-                Book Discovery Call <ArrowRight className="h-4 w-4" />
-              </Link>
-              <Link
-                to="/portfolio"
-                className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-6 py-3 text-sm font-medium text-foreground transition hover:bg-muted"
-              >
-                View Financial Services Work <ArrowUpRight className="h-4 w-4" />
-              </Link>
-            </div>
-          </Reveal>
+            <Reveal delay={140} className="lg:col-span-5">
+              <div className="overflow-hidden rounded-[28px] border border-border/60 bg-background shadow-[0_24px_80px_rgba(17,17,17,0.08)]">
+                <img
+                  src={heroImg}
+                  alt="Financial services and fintech growth visualization"
+                  className="aspect-[4/3] w-full object-cover"
+                />
+              </div>
+            </Reveal>
+          </div>
 
           <Reveal delay={320}>
             <div className="mt-16 grid grid-cols-2 gap-6 border-t border-border/60 pt-10 md:grid-cols-4">
@@ -392,26 +445,24 @@ function FintechPage() {
         <div className="mx-auto max-w-7xl px-6 py-24">
           <div className="grid gap-14 lg:grid-cols-12">
             <Reveal className="lg:col-span-5">
-              <div className="text-xs uppercase tracking-[0.18em] text-primary">
-                The Shift
-              </div>
+              <div className="text-xs uppercase tracking-[0.18em] text-primary">The Shift</div>
               <h2 className="mt-4 font-serif text-4xl leading-tight text-foreground md:text-5xl">
                 Financial services have changed. Most institutions haven't caught up.
               </h2>
             </Reveal>
             <Reveal delay={120} className="lg:col-span-7">
               <p className="text-lg leading-relaxed text-muted-foreground">
-                Customers expect Amazon-grade experiences from their bank, broker and
-                insurer. Distribution is moving from branches and DSAs to search, social,
-                creators and embedded finance. New-age fintechs are setting the benchmark
-                for onboarding, UX and personalisation.
+                Customers expect Amazon-grade experiences from their bank, broker and insurer.
+                Distribution is moving from branches and DSAs to search, social, creators and
+                embedded finance. New-age fintechs are setting the benchmark for onboarding, UX and
+                personalisation.
               </p>
               <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
-                The financial institutions that win the next decade won't be the ones
-                with the loudest marketing — they'll be the ones with the strongest{" "}
+                The financial institutions that win the next decade won't be the ones with the
+                loudest marketing — they'll be the ones with the strongest{" "}
                 <span className="text-foreground">trust</span>, the sharpest{" "}
-                <span className="text-foreground">digital experience</span>, and the
-                most <span className="text-foreground">intelligent systems</span>.
+                <span className="text-foreground">digital experience</span>, and the most{" "}
+                <span className="text-foreground">intelligent systems</span>.
               </p>
               <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
                 That's the partnership Ace360degree brings.
@@ -603,8 +654,8 @@ function FintechPage() {
                   <div className="font-serif text-2xl text-foreground">MOS Utility</div>
                   <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                     Brand, digital, technology and growth partner for a fast-scaling fintech
-                    distribution platform — across acquisition, partner enablement and
-                    customer experience.
+                    distribution platform — across acquisition, partner enablement and customer
+                    experience.
                   </p>
                   <Link
                     to="/case-mos-utility"
@@ -622,9 +673,9 @@ function FintechPage() {
                 <div className="p-7">
                   <div className="font-serif text-2xl text-foreground">ARCIL</div>
                   <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                    Enterprise experience with India's pioneering asset reconstruction
-                    company — corporate communications, brand and digital initiatives for
-                    a deeply regulated financial enterprise.
+                    Enterprise experience with India's pioneering asset reconstruction company —
+                    corporate communications, brand and digital initiatives for a deeply regulated
+                    financial enterprise.
                   </p>
                 </div>
               </div>
@@ -637,9 +688,18 @@ function FintechPage() {
             </div>
             <div className="mt-6 grid gap-4 md:grid-cols-3">
               {[
-                { name: "NBFCs & Lending", body: "Digital programs for new-age lending and credit platforms." },
-                { name: "Broking & WealthTech", body: "Acquisition and CX for trading and wealth platforms." },
-                { name: "Insurance & Insurtech", body: "Brand and lifecycle marketing for insurers and insurtechs." },
+                {
+                  name: "NBFCs & Lending",
+                  body: "Digital programs for new-age lending and credit platforms.",
+                },
+                {
+                  name: "Broking & WealthTech",
+                  body: "Acquisition and CX for trading and wealth platforms.",
+                },
+                {
+                  name: "Insurance & Insurtech",
+                  body: "Brand and lifecycle marketing for insurers and insurtechs.",
+                },
               ].map((e) => (
                 <div key={e.name} className="rounded-2xl border border-border/70 bg-card p-7">
                   <div className="font-serif text-xl text-foreground">{e.name}</div>
@@ -740,9 +800,7 @@ function FintechPage() {
       <section className="border-b border-border/60">
         <div className="mx-auto max-w-7xl px-6 py-24">
           <Reveal>
-            <div className="text-xs uppercase tracking-[0.18em] text-primary">
-              Related Services
-            </div>
+            <div className="text-xs uppercase tracking-[0.18em] text-primary">Related Services</div>
             <h2 className="mt-4 max-w-3xl font-serif text-4xl leading-tight text-foreground md:text-5xl">
               Services financial services leaders engage us for.
             </h2>
@@ -778,7 +836,12 @@ function FintechPage() {
 
           <div className="mt-12 grid gap-6 md:grid-cols-2">
             {[
-              { name: "MOS Utility", tag: "Fintech Distribution", img: caseMos, to: "/case-mos-utility" },
+              {
+                name: "MOS Utility",
+                tag: "Fintech Distribution",
+                img: caseMos,
+                to: "/case-mos-utility",
+              },
               { name: "ARCIL", tag: "Asset Reconstruction", img: caseArcil, to: "/portfolio" },
             ].map((c) => (
               <div
@@ -825,9 +888,9 @@ function FintechPage() {
           </Reveal>
           <Reveal delay={180}>
             <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">
-              Talk to our team about a tailored growth, brand, technology and AI roadmap for
-              your bank, NBFC, fintech, broking, wealth or insurance business — across India
-              and global markets.
+              Talk to our team about a tailored growth, brand, technology and AI roadmap for your
+              bank, NBFC, fintech, broking, wealth or insurance business — across India and global
+              markets.
             </p>
           </Reveal>
           <Reveal delay={240}>
