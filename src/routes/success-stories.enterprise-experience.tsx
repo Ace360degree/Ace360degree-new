@@ -1,7 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
-import heroImg from "@/assets/enterprise-experience-hero.jpg";
+import heroImg from "@/assets/legaacyy1hero.jpg";
+import lessonsBanner from "@/assets/legaacyy2banner.png";
 
 export const Route = createFileRoute("/success-stories/enterprise-experience")({
   head: () => ({
@@ -153,49 +154,58 @@ function EnterpriseExperiencePage() {
 
 function Hero() {
   return (
-    <section className="relative overflow-hidden bg-dark text-canvas">
-      <div className="absolute inset-0">
-        <img
-          src={heroImg}
-          alt="Executive boardroom representing enterprise experience"
-          className="h-full w-full object-cover opacity-40"
-          width={1600}
-          height={900}
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-dark/70 via-dark/80 to-dark" />
-      </div>
-      <div className="relative mx-auto max-w-7xl px-6 pt-32 pb-24 lg:pt-44 lg:pb-32">
-        <div className="text-[11px] uppercase tracking-[0.28em] text-brand">
-          Success Stories · Enterprise Experience
-        </div>
-        <h1 className="mt-6 font-serif text-4xl md:text-6xl lg:text-7xl tracking-tight max-w-5xl text-balance">
-          Enterprise Experience That{" "}
-          <em className="text-brand not-italic">Built Our Foundation</em>.
-        </h1>
-        <p className="mt-8 max-w-3xl text-lg md:text-xl text-canvas/75 leading-relaxed">
-          Every engagement strengthened our thinking. Every partnership
-          expanded our capabilities.
-        </p>
-        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl text-canvas/70 leading-relaxed">
-          <p>
-            Before Ace360degree became a Growth, Branding, Technology and AI
-            partner, we worked with leading enterprise organizations across
-            pharmaceuticals, manufacturing, financial services, architecture
-            and lifestyle brands.
-          </p>
-          <p>
-            These collaborations challenged us to think beyond execution — to
-            understand governance, large-scale digital communication,
-            stakeholder management and enterprise-grade delivery. While these
-            projects represent an earlier chapter of our journey, the
-            experience continues to shape every client engagement today.
-          </p>
+    <section className="bg-white text-dark">
+      <div className="mx-auto max-w-7xl px-6 py-16 md:py-20 lg:py-24">
+        <div className="grid items-start gap-10 lg:grid-cols-12 lg:gap-16">
+          {/* Left column */}
+          <div className="lg:col-span-7">
+            <div className="text-[11px] font-medium uppercase tracking-[0.28em] text-brand">
+              Success Stories &middot; Enterprise Experience
+            </div>
+
+            <h1 className="mt-5 font-serif text-[40px] leading-[1.05] tracking-[-0.01em] text-dark sm:text-[48px] md:text-[54px]">
+              Enterprise Experience That
+              <br />
+              <span className="text-brand">Built Our Foundation</span>
+              <span className="text-brand">.</span>
+            </h1>
+
+            <p className="mt-7 max-w-xl text-[17px] leading-[1.6] text-dark/90">
+              Every engagement strengthened our thinking. Every partnership expanded our capabilities.
+            </p>
+
+            <div className="mt-10 grid gap-6 text-[14.5px] leading-[1.7] text-dark/75 sm:grid-cols-2 sm:gap-10">
+              <p>
+                Before Ace360degree became a Growth, Branding, Technology and AI partner, we
+                worked with leading enterprise organizations across pharmaceuticals,
+                manufacturing, financial services, architecture and lifestyle brands.
+              </p>
+              <p>
+                These collaborations challenged us to think beyond execution — to understand
+                governance, large-scale digital communication, stakeholder management and
+                enterprise-grade delivery. While these projects represent an earlier chapter of
+                our journey, the experience continues to shape every client engagement today.
+              </p>
+            </div>
+          </div>
+
+          {/* Right column: image */}
+          <div className="lg:col-span-5">
+            <div className="w-full max-w-[420px] overflow-hidden lg:ml-auto">
+              <img
+                src={heroImg}
+                alt="Enterprise experience boardroom collaboration"
+                className="h-full w-full object-cover"
+                width={900}
+                height={620}
+              />
+            </div>
+          </div>
         </div>
       </div>
     </section>
   );
 }
-
 /* ---------------- Featured Enterprise Cards ---------------- */
 
 function Featured() {
@@ -261,28 +271,64 @@ function Featured() {
 /* ---------------- Lessons ---------------- */
 
 function Lessons() {
+  const lessonTiles = [...lessons, null];
+
   return (
-    <section className="bg-canvas py-24 lg:py-32">
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
+    <section className="bg-[#fbfaf7] py-14 md:py-18 lg:py-20">
+      <div className="mx-auto max-w-[1160px] px-6">
+        <div className="grid gap-10 lg:grid-cols-12 lg:gap-14">
           <div className="lg:col-span-5">
-            <div className="text-[11px] uppercase tracking-[0.22em] text-dark/55">
+            <div className="text-[10px] uppercase tracking-[0.34em] text-dark/40">
               What These Projects Taught Us
             </div>
-            <h2 className="mt-4 font-serif text-4xl md:text-5xl tracking-tight text-balance">
+            <h2 className="mt-4 max-w-[15ch] font-serif text-[38px] leading-[0.94] tracking-[-0.04em] text-dark sm:text-[50px] md:text-[50px]">
               The disciplines we{" "}
-              <em className="text-brand not-italic">carried forward</em>.
+              <span className="text-brand">carried forward.</span>
             </h2>
+
+            <div className="mt-10 overflow-hidden rounded-[12px] bg-[#eee6dc] shadow-[0_12px_30px_rgba(0,0,0,0.08)]">
+              <img
+                src={lessonsBanner}
+                alt="Wooden growth staircase representing enterprise lessons"
+                className="h-full w-full object-cover object-center"
+                loading="lazy"
+                width={1200}
+                height={800}
+              />
+            </div>
           </div>
-          <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-px bg-dark/10">
-            {lessons.map((l) => (
-              <div key={l.t} className="bg-canvas p-7">
-                <div className="font-serif text-xl tracking-tight">{l.t}</div>
-                <p className="mt-3 text-sm text-dark/70 leading-relaxed">
-                  {l.b}
-                </p>
-              </div>
-            ))}
+
+          <div className="lg:col-span-7">
+            <div className="grid grid-cols-1 md:grid-cols-2">
+              {lessonTiles.map((l, index) => {
+                const isPlaceholder = l === null;
+                const isRightColumn = index % 2 === 1;
+                const isLowerRow = index >= 2;
+
+                return (
+                  <div
+                    key={isPlaceholder ? "lesson-placeholder" : l.t}
+                    className={[
+                      "min-h-[132px] px-6 py-7 md:px-8 md:py-8",
+                      isLowerRow ? "border-t border-[#e6e1d9]" : "",
+                      isRightColumn ? "md:border-l" : "",
+                      isPlaceholder ? "bg-[#e3e3e1]" : "bg-transparent",
+                    ].join(" ")}
+                  >
+                    {isPlaceholder ? null : (
+                      <>
+                        <h3 className="max-w-[16ch] font-serif text-[18px] leading-[1.15] tracking-[-0.02em] text-dark">
+                          {l.t}
+                        </h3>
+                        <p className="mt-3 max-w-[27ch] text-[14px] leading-[1.7] text-dark/60">
+                          {l.b}
+                        </p>
+                      </>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>
@@ -499,3 +545,5 @@ function FinalCTA() {
     </section>
   );
 }
+
+

@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
-import careersHero from "@/assets/careers-hero.jpg";
+import careersHero from "@/assets/careers-heroy1.jpg";
 import life1 from "@/assets/careers-life-1.jpg";
 import life2 from "@/assets/careers-life-2.jpg";
 import life3 from "@/assets/careers-life-3.jpg";

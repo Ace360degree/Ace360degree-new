@@ -2,13 +2,27 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
-import heroImg from "@/assets/blog-hero.jpg";
+import heroImg from "@/assets/blog-heroy1.jpg";
 import b1 from "@/assets/blog-1.jpg";
 import b2 from "@/assets/blog-2.jpg";
 import b3 from "@/assets/blog-3.jpg";
 import b4 from "@/assets/blog-4.jpg";
 import b5 from "@/assets/blog-5.jpg";
 import b6 from "@/assets/blog-6.jpg";
+
+import a1 from "@/assets/blog-y1.jpg";
+import a2 from "@/assets/blog-y2.jpg";
+import a3 from "@/assets/blog-y3.jpg";
+import a4 from "@/assets/blog-y4.jpg";
+import a5 from "@/assets/blog-y5.jpg";
+import a6 from "@/assets/blog-y6.jpg";
+import a7 from "@/assets/blog-y7.jpg";
+import a8 from "@/assets/blog-y8.jpg";
+import a9 from "@/assets/blog-y9.jpg";
+import a10 from "@/assets/blog-y10.jpg";
+import a11 from "@/assets/blog-y11.jpg";
+import a12 from "@/assets/blog-y12.jpg";
+
 
 export const Route = createFileRoute("/blog")({
   head: () => ({
@@ -73,16 +87,16 @@ const TRENDING: Article[] = [
 ];
 
 const ARTICLES: Article[] = [
-  { title: "How to Promote a Digital Marketing Agency on Social Media", category: "Digital Marketing", date: "12 May 2026", read: "9 min", excerpt: "Proven strategies for growth and client acquisition — positioning, content cadence, and lead-gen tactics for modern agencies.", image: b1, href: "https://ace360degree.com/blog/how-to-promote-digital-marketing-agency-on-social-media" },
-  { title: "Cosmos Seals SEO Case Study: Industrial SEO That Actually Works", category: "Case Studies", date: "09 May 2026", read: "8 min", excerpt: "Why industrial SEO feels slow but compounds — a B2B case study across India, UAE and more.", image: b5, href: "https://ace360degree.com/blog/industrial-seo-case-study-b2b-india-uae" },
-  { title: "How to Run a Social Media Marketing Agency Successfully", category: "Inside Ace360degree", date: "20 Apr 2026", read: "10 min", excerpt: "A complete step-by-step guide to building a foundation that lasts beyond the first ten clients.", image: b6, href: "https://ace360degree.com/blog/how-to-run-a-social-media-marketing-agency-successfully-a-complete-step-by-step-guide" },
-  { title: "Benefits of Hiring a Social Media Marketing Agency for Ecommerce", category: "Digital Marketing", date: "01 Apr 2026", read: "6 min", excerpt: "Why social media has become essential for ecommerce growth — and what to look for in a partner.", image: b3, href: "https://ace360degree.com/blog/benefits-of-hiring-social-media-marketing-agency-for-ecommerce" },
-  { title: "How a Digital Marketing Agency Helps Dentists Increase Appointments", category: "Industry Trends", date: "06 Mar 2026", read: "7 min", excerpt: "Recognizing the real problem — empty chairs and irregular bookings rarely look like a marketing issue at first.", image: b2, href: "https://ace360degree.com/blog/digital-marketing-agency-for-dentists" },
-  { title: "Conversion Rate Optimization: Turning Visitors into Enquiries", category: "Technology", date: "25 Feb 2026", read: "8 min", excerpt: "Why traffic alone does not grow a business — a CRO framework rooted in real funnel diagnostics.", image: b4, href: "https://ace360degree.com/blog/conversion-rate-optimization-enquiries" },
-  { title: "The Future of Digital Agencies: AI, Branding & Technology in 2025", category: "Industry Trends", date: "26 Nov 2025", read: "7 min", excerpt: "Why digital agencies must evolve — ad-only shops won't survive the next era of integrated brand and tech.", image: b5, href: "https://ace360degree.com/blog/future-digital-agencies-2025-ai-branding-technology" },
-  { title: "Why Every Brand Needs a Content Marketing Strategy in 2025", category: "Branding & Design", date: "18 Nov 2025", read: "6 min", excerpt: "Ads stop. Content doesn't. If your ad budget vanished today, how long would your brand survive online?", image: b3, href: "https://ace360degree.com/blog/content-marketing-strategy-2025" },
-  { title: "Top 5 Website Mistakes That Kill SEO & Conversions in 2025", category: "Technology", date: "10 Nov 2025", read: "5 min", excerpt: "Your website is still the center of your digital ecosystem — here are the silent failures most teams miss.", image: b4, href: "https://ace360degree.com/blog/top-5-website-mistakes-that-kill-seo-conversions" },
-  { title: "Meta Ads vs Google Ads: Which Drives Better ROI in 2025?", category: "Digital Marketing", date: "07 Nov 2025", read: "6 min", excerpt: "The big question every brand is asking — a practical breakdown by stage, intent, and category.", image: b1, href: "https://ace360degree.com/blog/meta-ads-vs-google-ads-which-drives-better-roi" },
+  { title: "How to Promote a Digital Marketing Agency on Social Media", category: "Digital Marketing", date: "12 May 2026", read: "9 min", excerpt: "Proven strategies for growth and client acquisition — positioning, content cadence, and lead-gen tactics for modern agencies.", image: a11, href: "https://ace360degree.com/blog/how-to-promote-digital-marketing-agency-on-social-media" },
+  { title: "Cosmos Seals SEO Case Study: Industrial SEO That Actually Works", category: "Case Studies", date: "09 May 2026", read: "8 min", excerpt: "Why industrial SEO feels slow but compounds — a B2B case study across India, UAE and more.", image: a7, href: "https://ace360degree.com/blog/industrial-seo-case-study-b2b-india-uae" },
+  { title: "How to Run a Social Media Marketing Agency Successfully", category: "Inside Ace360degree", date: "20 Apr 2026", read: "10 min", excerpt: "A complete step-by-step guide to building a foundation that lasts beyond the first ten clients.", image: a8, href: "https://ace360degree.com/blog/how-to-run-a-social-media-marketing-agency-successfully-a-complete-step-by-step-guide" },
+  { title: "Benefits of Hiring a Social Media Marketing Agency for Ecommerce", category: "Digital Marketing", date: "01 Apr 2026", read: "6 min", excerpt: "Why social media has become essential for ecommerce growth — and what to look for in a partner.", image: a2, href: "https://ace360degree.com/blog/benefits-of-hiring-social-media-marketing-agency-for-ecommerce" },
+  { title: "How a Digital Marketing Agency Helps Dentists Increase Appointments", category: "Industry Trends", date: "06 Mar 2026", read: "7 min", excerpt: "Recognizing the real problem — empty chairs and irregular bookings rarely look like a marketing issue at first.", image: a5, href: "https://ace360degree.com/blog/digital-marketing-agency-for-dentists" },
+  { title: "Conversion Rate Optimization: Turning Visitors into Enquiries", category: "Technology", date: "25 Feb 2026", read: "8 min", excerpt: "Why traffic alone does not grow a business — a CRO framework rooted in real funnel diagnostics.", image: a9, href: "https://ace360degree.com/blog/conversion-rate-optimization-enquiries" },
+  { title: "The Future of Digital Agencies: AI, Branding & Technology in 2025", category: "Industry Trends", date: "26 Nov 2025", read: "7 min", excerpt: "Why digital agencies must evolve — ad-only shops won't survive the next era of integrated brand and tech.", image: a7, href: "https://ace360degree.com/blog/future-digital-agencies-2025-ai-branding-technology" },
+  { title: "Why Every Brand Needs a Content Marketing Strategy in 2025", category: "Branding & Design", date: "18 Nov 2025", read: "6 min", excerpt: "Ads stop. Content doesn't. If your ad budget vanished today, how long would your brand survive online?", image: a5, href: "https://ace360degree.com/blog/content-marketing-strategy-2025" },
+  { title: "Top 5 Website Mistakes That Kill SEO & Conversions in 2025", category: "Technology", date: "10 Nov 2025", read: "5 min", excerpt: "Your website is still the center of your digital ecosystem — here are the silent failures most teams miss.", image: a10, href: "https://ace360degree.com/blog/top-5-website-mistakes-that-kill-seo-conversions" },
+  { title: "Meta Ads vs Google Ads: Which Drives Better ROI in 2025?", category: "Digital Marketing", date: "07 Nov 2025", read: "6 min", excerpt: "The big question every brand is asking — a practical breakdown by stage, intent, and category.", image: a3, href: "https://ace360degree.com/blog/meta-ads-vs-google-ads-which-drives-better-roi" },
 ];
 
 function BlogPage() {
