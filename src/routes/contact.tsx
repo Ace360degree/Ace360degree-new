@@ -3,6 +3,10 @@ import { useState } from "react";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import contactHero from "@/assets/contact-hero.a1.jpg";
+import whatappIcon from "@/assets/whatappiconcontant.png";
+import mailIcon from "@/assets/mailiconcontant.png";
+import handIcon from "@/assets/handiconcontant.png";
+import starIcon from "@/assets/stariconcontant.png";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -47,25 +51,25 @@ const quickActions = [
     label: "WhatsApp",
     value: "+91 98201 65488",
     href: "https://wa.me/919820165488",
-    icon: "💬",
+    icon: whatappIcon,
   },
   {
     label: "Business Enquiries",
     value: "sales@a360pl.com",
     href: "mailto:sales@a360pl.com",
-    icon: "✉",
+    icon: mailIcon,
   },
   {
     label: "Partnerships",
     value: "connect@ace360degree.com",
     href: "mailto:connect@ace360degree.com",
-    icon: "🤝",
+    icon: handIcon,
   },
   {
     label: "Careers",
     value: "careers@ace360degree.com",
     href: "mailto:careers@ace360degree.com",
-    icon: "★",
+    icon: starIcon,
   },
 ];
 
@@ -502,10 +506,16 @@ function ContactPage() {
                     ? "noopener noreferrer"
                     : undefined
                 }
-                className="group block border border-dark/10 bg-light p-6 transition-all duration-300 hover:bg-dark hover:text-canvas"
+                className="group block border border-dark/10 bg-light p-6 transition-all duration-300 hover:bg-yellow-500 hover:text-canvas"
               >
-                <span className="text-2xl" aria-hidden="true">
-                  {action.icon}
+                <span className="grid size-12 place-items-center rounded-full bg-canvas/90 p-2 shadow-sm transition-colors group-hover:bg-white">
+                  <img
+                    src={action.icon}
+                    alt=""
+                    aria-hidden="true"
+                    className="h-full w-full object-contain"
+                    loading="lazy"
+                  />
                 </span>
 
                 <p className="mt-6 text-xs uppercase tracking-[0.25em] opacity-70">

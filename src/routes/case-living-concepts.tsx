@@ -1,7 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
-import heroImg from "@/assets/case-living-concepts-hero.jpg";
+import heroImg from "@/assets/livingconceptsheroace.png";
+import bannerImg from "@/assets/livingconceptsace1.png";
 
 export const Route = createFileRoute("/case-living-concepts")({
   head: () => ({
@@ -144,42 +145,57 @@ function LivingConceptsCaseStudyPage() {
       <SiteHeader />
 
       {/* HERO */}
-      <section className="relative overflow-hidden border-b border-border/40">
-        <div className="absolute inset-0">
-          <img
-            src={heroImg}
-            alt="Living Concepts — premium luxury interior living room"
-            className="h-full w-full object-cover opacity-25"
-            width={1600}
-            height={912}
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/85 to-background" />
-        </div>
-        <div className="relative container mx-auto px-6 py-24 md:py-32">
-          <div className="max-w-4xl">
-            <div className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-3 py-1 text-xs uppercase tracking-[0.2em] text-primary">
+       <section className="border-b border-black/5 bg-[#fbfaf7]">
+      <div className="mx-auto max-w-[1540px] px-6 py-8 md:py-10 lg:py-12">
+        <div className="grid items-start gap-8 lg:grid-cols-12 lg:gap-12">
+          <div className="lg:col-span-6">
+            <div className="inline-flex items-center rounded-full border border-[#f2d9af] bg-[#fff8ef] px-3 py-1 text-[10px] uppercase tracking-[0.28em] text-[#e7a62a]">
               Success Story
             </div>
-            <h1 className="mt-6 text-4xl md:text-6xl font-semibold leading-[1.05] tracking-tight">
-              Designing a Premium Digital Experience for a Luxury Interior & Furniture Brand
+ 
+            <h1 className="mt-4 max-w-[70ch] text-balance font-sans text-[34px] font-semibold leading-[0.94] tracking-[-0.055em] text-[#1f1f1f] sm:text-[46px] md:text-[54px] lg:text-[60px]">
+              Designing a Premium Digital Experience for a Luxury Interior &
+              Furniture Brand
             </h1>
-            <p className="mt-6 text-lg md:text-xl text-muted-foreground max-w-3xl">
+ 
+            <p className="mt-5 max-w-[55ch] text-[14px] leading-[1.55] text-[#66615a] sm:text-[15px]">
               How Ace360degree helped{" "}
-              <span className="text-foreground font-medium">Living Concepts</span> elevate its digital presence,
-              strengthen brand perception and create an online experience that reflects premium craftsmanship.
+              <span className="font-medium text-[#222]">Living Concepts</span>{" "}
+              elevate its digital presence, strengthen brand perception and
+              create an online experience that reflects premium craftsmanship.
             </p>
-            <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+ 
+            <div className="mt-8 grid gap-3 sm:grid-cols-2 md:grid-cols-4">
               {snapshot.map((s) => (
-                <div key={s.k} className="rounded-xl border border-border/60 bg-card/60 p-4 backdrop-blur">
-                  <div className="text-[11px] uppercase tracking-[0.18em] text-muted-foreground">{s.k}</div>
-                  <div className="mt-1 text-sm font-medium">{s.v}</div>
+                <div
+                  key={s.k}
+                  className="min-h-[84px] rounded-[10px] border border-[#ece7df] bg-white px-4 py-3.5 shadow-[0_1px_0_rgba(0,0,0,0.02)]"
+                >
+                  <div className="text-[9px] uppercase tracking-[0.28em] text-[#a8a29b]">
+                    {s.k}
+                  </div>
+                  <div className="mt-1 text-[11px] leading-[1.35] text-[#1f1f1f]">
+                    {s.v}
+                  </div>
                 </div>
               ))}
             </div>
           </div>
+ 
+          <div className="lg:col-span-5 lg:pt-1">
+            <div className="ml-auto w-full max-w-[620px] overflow-hidden rounded-[8px] bg-[#efe8df] shadow-[0_16px_40px_rgba(0,0,0,0.08)]">
+              <img
+                src={heroImg}
+                alt="Living Concepts premium living room concept"
+                className="h-full w-full object-cover object-center"
+                width={1200}
+                height={900}
+              />
+            </div>
+          </div>
         </div>
-      </section>
-
+      </div>
+    </section>
       {/* CONTEXT */}
       <section className="container mx-auto px-6 py-20 md:py-28">
         <div className="grid lg:grid-cols-12 gap-12">
@@ -331,20 +347,47 @@ function LivingConceptsCaseStudyPage() {
       </section>
 
       {/* PARTNERSHIP TIMELINE */}
-      <section className="container mx-auto px-6 py-20 md:py-28">
-        <div className="max-w-3xl">
-          <div className="text-xs uppercase tracking-[0.2em] text-primary">How the Partnership Unfolded</div>
-          <h2 className="mt-3 text-3xl md:text-4xl font-semibold tracking-tight">From Discovery to Long-Term Growth</h2>
+      <section className="bg-[#fbfaf7] py-16 md:py-20 lg:py-24">
+        <div className="mx-auto max-w-[1200px] px-6">
+          <div className="grid gap-10 lg:grid-cols-12 lg:gap-14">
+            <div className="lg:col-span-6">
+              <div className="text-[10px] uppercase tracking-[0.34em] text-[#e7a62a]">
+                How the Partnership Unfolded
+              </div>
+              <h2 className="mt-3 max-w-[12ch] text-[36px] font-semibold leading-[0.98] tracking-[-0.045em] text-[#1f1f1f] sm:text-[44px] md:text-[50px]">
+                From Discovery to Long-Term Growth
+              </h2>
+
+              <ol className="mt-10 space-y-6">
+                {unfolded.map((u, i) => (
+                  <li key={u} className="relative pl-9">
+                    <span className="absolute left-[2px] top-1.5 h-3.5 w-3.5 rounded-full bg-[#ffb22f]" />
+                    <span className="absolute left-[7px] top-7 bottom-[-22px] w-px bg-[#ece4d8]" />
+                    <div className="text-[9px] uppercase tracking-[0.34em] text-[#a8a29b]">
+                      Phase {i + 1}
+                    </div>
+                    <div className="mt-1 text-[17px] leading-[1.2] text-[#1f1f1f]">
+                      {u}
+                    </div>
+                  </li>
+                ))}
+              </ol>
+            </div>
+
+            <div className="lg:col-span-6 lg:pt-4">
+              <div className="ml-auto w-full max-w-[370px] overflow-hidden rounded-[8px] bg-[#efe8df] shadow-[0_16px_40px_rgba(0,0,0,0.08)]">
+                <img
+                  src={bannerImg}
+                  alt="Living Concepts luxury interior experience"
+                  className="h-full w-full object-cover object-center"
+                  width={1200}
+                  height={900}
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </div>
         </div>
-        <ol className="mt-12 relative border-l border-border/60 max-w-3xl ml-3">
-          {unfolded.map((u, i) => (
-            <li key={u} className="pl-8 pb-8 relative">
-              <span className="absolute -left-[9px] top-1 h-4 w-4 rounded-full bg-primary ring-4 ring-background" />
-              <div className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Phase {i + 1}</div>
-              <div className="mt-1 text-lg font-medium">{u}</div>
-            </li>
-          ))}
-        </ol>
       </section>
 
       {/* BLUEPRINT */}
@@ -508,3 +551,4 @@ function LivingConceptsCaseStudyPage() {
     </div>
   );
 }
+
