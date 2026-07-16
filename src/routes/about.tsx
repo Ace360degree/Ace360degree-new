@@ -2,8 +2,9 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
-import aboutHero from "@/assets/about-hero.jpg";
+import aboutHero from "@/assets/about-heroy1.jpg";
 import aboutStory from "@/assets/about-storyy1.jpg";
+import aboutCtaImg from "@/assets/aboutctaimg.png";
 import founderAsset from "@/assets/founder-altaf.jpg.asset.png";
 import aboutTeam from "@/assets/about-team.png";
 
@@ -134,16 +135,22 @@ function Hero() {
               <span aria-hidden>→</span>
             </a>
           </div>
-          <div className="lg:col-span-5">
-                 <img
-                src={aboutHero}
-                alt="Ace360degree creative team collaborating"
-                className="h-full w-full object-cover"
-                width={1024}
-                height={1280}
-              />
-            {/* <div className="relative overflow-hidden rounded-2xl shadow-[0_30px_80px_-30px_rgba(0,0,0,0.35)] aspect-[4/5]"> </div> */}
-          </div>
+<div className="lg:col-span-5">
+  <div className="relative">
+    {/* Bottom shadow */}
+    <div className="absolute -bottom-4 left-[8%] h-12 w-[84%] rounded-full bg-black/30 blur-2xl" />
+
+    <div className="relative aspect-[4/5] overflow-hidden rounded-2xl">
+      <img
+        src={aboutHero}
+        alt="Ace360degree creative team collaborating"
+        className="h-full w-full object-cover"
+        width={1024}
+        height={1280}
+      />
+    </div>
+  </div>
+</div>
         </div>
       </div>
     </section>
@@ -670,43 +677,56 @@ function Team() {
 /* ---------- Final CTA ---------- */
 function FinalCta() {
   return (
-    <section className="bg-canvas py-20 md:py-28">
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="relative overflow-hidden rounded-3xl bg-[#181818] text-canvas px-8 md:px-16 py-24 text-center">
-          {/* Radial orange glow - matches Figma: FFB330 35% -> 0% */}
+    <section className="bg-canvas py-16 md:py-24">
+      <div className="mx-auto max-w-[1190px] px-5 md:px-8">
+        <div className="relative overflow-hidden rounded-[18px] border border-white/5 bg-[#120b05] text-center text-[#f7f2ea] shadow-[0_26px_90px_rgba(0,0,0,0.18)]">
+          <img
+            src={aboutCtaImg}
+            alt=""
+            aria-hidden="true"
+            className="absolute inset-0 h-full w-full object-cover opacity-35"
+            loading="lazy"
+            width={1144}
+            height={413}
+          />
           <div
             aria-hidden
-            className="absolute inset-0"
-            style={{
-              background:
-                'radial-gradient(ellipse 90% 80% at 50% 100%, rgba(255,179,48,0.35) 0%, rgba(255,179,48,0) 60%)',
-            }}
+            className="absolute inset-0 bg-[radial-gradient(ellipse_72%_82%_at_50%_100%,rgba(255,179,48,0.46)_0%,rgba(255,179,48,0.22)_20%,rgba(255,179,48,0.1)_34%,rgba(255,179,48,0)_64%),linear-gradient(to_bottom,rgba(18,11,5,0.14),rgba(18,11,5,0.56))]"
           />
-
-          <div className="relative mx-auto max-w-3xl">
-            <span className="text-[11px] tracking-[0.22em] uppercase text-brand">
-              Let's Build What's Next
-            </span>
-            <h2 className="mt-5 text-balance text-4xl md:text-6xl font-medium tracking-tight leading-[1.05]">
-              Let's build <span className="font-serif italic">what's next.</span>
-            </h2>
-            <p className="mt-6 text-canvas/65 text-lg leading-relaxed">
-              Whether you're looking to attract customers, strengthen your brand,
-              modernize operations or explore AI opportunities — our team is ready to help.
-            </p>
-            <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-              <a
-                href="/contact"
-                className="inline-flex items-center gap-3 bg-brand justify-center rounded-xl border text-dark px-7 py-3.5 text-sm font-semibold hover:brightness-95 transition"
-              >
-                Book Discovery Call <span aria-hidden>→</span>
-              </a>
-              <a
+          <div
+            aria-hidden
+            className="absolute inset-0 opacity-[0.22] bg-[radial-gradient(circle_at_12%_10%,rgba(255,255,255,0.9)_0_1px,transparent_1.6px),radial-gradient(circle_at_26%_14%,rgba(255,255,255,0.7)_0_1px,transparent_1.6px),radial-gradient(circle_at_78%_12%,rgba(255,255,255,0.7)_0_1px,transparent_1.6px),radial-gradient(circle_at_92%_15%,rgba(255,255,255,0.85)_0_1px,transparent_1.6px),radial-gradient(circle_at_5%_22%,rgba(255,255,255,0.55)_0_1px,transparent_1.6px),radial-gradient(circle_at_95%_22%,rgba(255,255,255,0.5)_0_1px,transparent_1.6px)]"
+          />
+          <div
+            aria-hidden
+            className="absolute left-1/2 top-[58%] h-[300px] w-[720px] -translate-x-1/2 rounded-full bg-[#ffb330]/[0.14] blur-[90px]"
+          />
+          <div className="relative px-6 py-14 sm:px-10 sm:py-16 md:px-14 md:py-20">
+            <div className="mx-auto flex max-w-[760px] flex-col items-center">
+              <span className="text-[10px] font-medium tracking-[0.28em] text-[#d9a433] uppercase">
+                LET'S BUILD WHAT'S NEXT
+              </span>
+              <h2 className="mt-4 flex flex-wrap items-baseline justify-center gap-x-1 text-[44px] font-normal leading-[0.95] tracking-[-0.045em] text-[#fff9f0] sm:text-[56px] md:text-[68px]">
+                <span>Let's build</span>
+                <span className="font-serif italic tracking-[-0.03em]">what&apos;s next.</span>
+              </h2>
+              <p className="mt-6 max-w-[720px] text-[14px] leading-[1.55] text-white/55 sm:text-[15px] md:text-[16px]">
+                Whether you're looking to attract customers, strengthen your brand, modernize operations or explore AI opportunities - our team is ready to help.
+              </p>
+              <div className="mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row">
+                <a
                   href="/contact"
-                  className="inline-flex items-center justify-center rounded-xl border border-white bg-white px-5 py-3 text-sm font-semibold text-black shadow-[0_4px_10px_rgba(0,0,0,0.25)] transition hover:bg-gray-100"
-                  >
-                 Start A Project
-            </a>
+                  className="inline-flex h-12 items-center justify-center rounded-[10px] bg-[#ffbe2e] px-7 text-[13px] font-semibold text-[#1a1207] shadow-[0_10px_24px_rgba(0,0,0,0.26)] transition hover:brightness-95"
+                >
+                  Book Discovery Call <span aria-hidden className="ml-2">&rarr;</span>
+                </a>
+                <a
+                  href="/contact"
+                  className="inline-flex h-12 items-center justify-center rounded-[10px] bg-white px-6 text-[13px] font-semibold text-[#101010] shadow-[0_10px_24px_rgba(0,0,0,0.18)] transition hover:bg-white/95"
+                >
+                  Start A Project
+                </a>
+              </div>
             </div>
           </div>
         </div>

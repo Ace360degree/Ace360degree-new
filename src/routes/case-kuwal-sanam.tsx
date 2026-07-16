@@ -17,11 +17,12 @@ import {
   ArrowRight,
   CheckCircle2,
 } from "lucide-react";
-import heroImg from "@/assets/case-ksa-hero.jpg";
-import interiorImg from "@/assets/case-ksa-interior.jpg";
-import facadeImg from "@/assets/case-ksa-facade.jpg";
-import blueprintImg from "@/assets/case-ksa-blueprint.jpg";
-import staircaseImg from "@/assets/case-ksa-staircase.jpg";
+import heroImg from "@/assets/caseksaheroy1.png";
+import interiorImg from "@/assets/case-ksa-interiory1.jpg";
+import facadeImg from "@/assets/case-ksa-facadey1.jpg";
+import blueprintImg from "@/assets/case-ksa-blueprinty1.jpg";
+import staircaseImg from "@/assets/case-ksa-staircasey1.jpg";
+import blueprintImg1 from "@/assets/case-ksa-blueprinty2.jpg";
 
 export const Route = createFileRoute("/case-kuwal-sanam")({
   head: () => ({
@@ -96,43 +97,59 @@ function KSACaseStudyPage() {
       <SiteHeader />
 
       {/* HERO */}
-      <section className="relative overflow-hidden border-b border-border/40">
-        <div className="absolute inset-0">
+<section className="border-b border-black/5 bg-[#fbfaf7]">
+  <div className="mx-auto max-w-[1480px]  md:py-16 lg:py-20">
+    <div className="grid items-start gap-9 lg:grid-cols-12 lg:gap-14">
+      <div className="lg:col-span-7">
+        <div className="inline-flex items-center gap-1.5 rounded-full border border-[#f2d9af] bg-[#fff8ef] px-3 py-1.5 text-[10px] font-medium uppercase tracking-[0.22em] text-[#e7a62a]">
+          <span className="flex h-4 w-4 items-center justify-center rounded-full bg-[#f7dfa8] text-[#c8850f]">
+            <Building2 className="h-2.5 w-2.5" />
+          </span>
+          Success Story <span className="text-[#e7a62a]/50">|</span> Architecture
+        </div>
+
+        <h1 className="mt-6 max-w-[24ch] font-sans text-[34px] font-bold leading-[1.12] tracking-[-0.02em] text-[#1a1a1a] sm:text-[42px] md:text-[48px] lg:text-[52px]">
+          A Masterpiece of Design and Technology for One of India&apos;s Most Refined Architecture Firms.
+        </h1>
+
+        <p className="mt-6 max-w-[54ch] text-[15px] leading-[1.65] text-[#7a756c]">
+          A collaboration of vision and precision — where an architect&apos;s imagination met{" "}
+          <span className="font-semibold text-[#4a453d]">Ace360degree&apos;s</span> engineering to create a
+          digital masterpiece.
+        </p>
+
+        <div className="mt-10 grid grid-cols-2 gap-4 md:grid-cols-4">
+          {snapshot.map(({ k, v, Icon }) => (
+            <div
+              key={k}
+              className="rounded-[10px] border border-[#ece7df] bg-white px-4 py-4"
+            >
+              <Icon className="h-4 w-4 text-[#e29d1a]" />
+              <div className="mt-3 text-[9px] font-medium uppercase tracking-[0.22em] text-[#a8a29b]">
+                {k}
+              </div>
+              <div className="mt-1.5 text-[12px] font-medium leading-[1.35] text-[#1f1f1f]">
+                {v}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="lg:col-span-5">
+        <div className="ml-auto w-full max-w-[480px] overflow-hidden rounded-[10px]">
           <img
             src={heroImg}
-            alt="Kuwal Sanam Architects — minimal luxury interior"
-            className="h-full w-full object-cover opacity-30"
-            width={1600}
-            height={900}
+            alt="Kuwal Sanam Architects architectural concept board"
+            className="h-full w-full object-cover object-center"
+            width={1200}
+            height={800}
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/85 to-background" />
         </div>
-        <div className="relative container mx-auto px-6 py-24 md:py-32">
-          <div className="max-w-4xl">
-            <div className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-3 py-1 text-xs uppercase tracking-[0.2em] text-primary">
-              <Building2 className="h-3.5 w-3.5" />
-              Success Story · Architecture
-            </div>
-            <h1 className="mt-6 text-4xl md:text-6xl font-semibold leading-[1.05] tracking-tight">
-              A Masterpiece of Design and Technology for One of India's Most Refined Architecture Firms.
-            </h1>
-            <p className="mt-6 text-lg md:text-xl text-muted-foreground max-w-3xl">
-              A collaboration of vision and precision — where an architect's imagination met{" "}
-              <span className="text-foreground font-medium">Ace360degree's</span> engineering to
-              create a digital masterpiece.
-            </p>
-            <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-              {snapshot.map(({ k, v, Icon }) => (
-                <div key={k} className="rounded-xl border border-border/60 bg-card/60 p-4 backdrop-blur">
-                  <Icon className="h-5 w-5 text-primary" />
-                  <div className="mt-3 text-[11px] uppercase tracking-[0.18em] text-muted-foreground">{k}</div>
-                  <div className="mt-1 text-sm font-medium">{v}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* SHOWCASE STRIP */}
       <section className="container mx-auto px-6 py-16">
@@ -197,7 +214,7 @@ function KSACaseStudyPage() {
               </div>
             </div>
             <div className="lg:col-span-5">
-              <img src={blueprintImg} alt="Architectural blueprint flat lay" width={1200} height={900} loading="lazy" className="w-full rounded-2xl border border-border/60 object-cover" />
+              <img src={blueprintImg1} alt="Architectural blueprint flat lay" width={1200} height={900} loading="lazy" className="w-full rounded-2xl border border-border/60 object-cover" />
             </div>
           </div>
         </div>
@@ -383,3 +400,4 @@ function KSACaseStudyPage() {
     </div>
   );
 }
+
