@@ -1,8 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
-import heroImg from "@/assets/case-cosmos-seals-hero.jpg";
-
+import heroImg from "@/assets/Cosmoshero1.png";
+import bannerImg from "@/assets/Cosmosbannery2.png";
 export const Route = createFileRoute("/case-cosmos-seals")({
   head: () => ({
     meta: [
@@ -144,19 +144,10 @@ function CosmosSealsCaseStudyPage() {
       <SiteHeader />
 
       {/* HERO */}
-      <section className="relative overflow-hidden border-b border-border/40">
-        <div className="absolute inset-0">
-          <img
-            src={heroImg}
-            alt="Cosmos Seals India — high-performance industrial sealing solutions"
-            className="h-full w-full object-cover opacity-25"
-            width={1600}
-            height={912}
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/85 to-background" />
-        </div>
+      <section className="relative overflow-hidden border-b border-black/5 bg-[#fbfaf7]">
+      
         <div className="relative container mx-auto px-6 py-24 md:py-32">
-          <div className="max-w-4xl">
+          <div className="max-w-4xl lg:max-w-[58%]">
             <div className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-3 py-1 text-xs uppercase tracking-[0.2em] text-primary">
               Success Story
             </div>
@@ -175,6 +166,17 @@ function CosmosSealsCaseStudyPage() {
                   <div className="mt-1 text-sm font-medium">{s.v}</div>
                 </div>
               ))}
+            </div>
+            <div className="mt-10 hidden lg:block lg:absolute lg:right-6 lg:top-1/2 lg:w-[34%] lg:max-w-[620px] lg:-translate-y-1/2">
+              <div className="overflow-hidden rounded-[8px] bg-[#efe8df] shadow-[0_16px_40px_rgba(0,0,0,0.08)]">
+                <img
+                  src={heroImg}
+                  alt="Cosmos Seals India premium industrial branding visual"
+                  className="h-full w-full object-cover object-center"
+                  width={1200}
+                  height={1400}
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -322,19 +324,40 @@ function CosmosSealsCaseStudyPage() {
 
       {/* PARTNERSHIP TIMELINE */}
       <section className="container mx-auto px-6 py-20 md:py-28">
-        <div className="max-w-3xl">
-          <div className="text-xs uppercase tracking-[0.2em] text-primary">How the Partnership Unfolded</div>
-          <h2 className="mt-3 text-3xl md:text-4xl font-semibold tracking-tight">From Discovery to Long-Term Growth</h2>
+        <div className="grid items-start gap-12 lg:grid-cols-12 lg:gap-14">
+          <div className="lg:col-span-5">
+            <div className="text-xs uppercase tracking-[0.28em] text-[#e7a62a]">How the Partnership Unfolded</div>
+            <h2 className="mt-3 text-xl md:text-4xl font-semibold tracking-tight">
+              From Discovery to Long-Term Growth
+            </h2>
+            <ol className="mt-12 relative ml-3 border-l border-[#ece7df]">
+              {unfolded.map((u, i) => (
+                <li key={u} className="relative pb-8 pl-8 last:pb-0">
+                  <span className="absolute -left-[9px] top-1 h-4 w-4 rounded-full bg-[#ffb133] ring-4 ring-white" />
+                  <div className="text-[11px] uppercase tracking-[0.3em] text-[#a8a29b]">
+                    Phase {i + 1}
+                  </div>
+                  <div className="mt-1 text-[18px] leading-[1.35] text-[#1f1f1f]">
+                    {u}
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </div>
+
+          <div className="lg:col-span-7">
+            <div className="ml-auto w-full max-w-[640px] overflow-hidden rounded-[24px] bg-[#091d3c] shadow-[0_18px_50px_rgba(0,0,0,0.12)]">
+              <img
+                src={bannerImg}
+                alt="Cosmos Seals India growth partnership visual"
+                className="h-full w-full object-cover object-center"
+                width={1200}
+                height={900}
+                loading="lazy"
+              />
+            </div>
+          </div>
         </div>
-        <ol className="mt-12 relative border-l border-border/60 max-w-3xl ml-3">
-          {unfolded.map((u, i) => (
-            <li key={u} className="pl-8 pb-8 relative">
-              <span className="absolute -left-[9px] top-1 h-4 w-4 rounded-full bg-primary ring-4 ring-background" />
-              <div className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Phase {i + 1}</div>
-              <div className="mt-1 text-lg font-medium">{u}</div>
-            </li>
-          ))}
-        </ol>
       </section>
 
       {/* BLUEPRINT */}
@@ -463,7 +486,11 @@ function CosmosSealsCaseStudyPage() {
 
       {/* FINAL CTA */}
       <section className="container mx-auto px-6 pb-24 md:pb-32">
-        <div className="relative overflow-hidden rounded-3xl border border-border/60 bg-gradient-to-br from-primary/10 via-card to-card p-10 md:p-16">
+        
+        <div className=" relative overflow-hidden rounded-3xl
+      border border-black/5
+      bg-[linear-gradient(163deg,rgba(255,179,48,0.25)_20%,rgba(255,179,48,0.08)_50%,#ffffff_65%,#ffffff_100%)]
+      p-10 md:p-16">
           <div className="max-w-3xl">
             <h2 className="text-3xl md:text-5xl font-semibold tracking-tight">
               Engineering Stronger Digital Foundations for Manufacturing Growth.

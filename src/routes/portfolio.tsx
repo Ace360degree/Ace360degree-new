@@ -2,13 +2,13 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
-import portfolioHero from "@/assets/portfolio-hero.jpg";
-import caseMos from "@/assets/case-mos.jpg";
-import caseKsa from "@/assets/case-ksa.jpg";
-import caseAmigo from "@/assets/case-amigo.jpg";
-import caseRexello from "@/assets/case-rexello.jpg";
-import caseCosmos from "@/assets/case-cosmos.jpg";
-import caseLiving from "@/assets/case-living.jpg";
+import portfolioHero from "@/assets/herostories.jpg";
+import caseMos from "@/assets/case-mossy1.jpg";
+import caseKsa from "@/assets/case-mossy6.jpg";
+import caseAmigo from "@/assets/case-mossy2.jpg";
+import caseRexello from "@/assets/case-mossy3.jpg";
+import caseCosmos from "@/assets/case-mossy4.jpg";
+import caseLiving from "@/assets/case-mossy5.jpg";
 
 export const Route = createFileRoute("/portfolio")({
   component: PortfolioPage,
@@ -65,6 +65,7 @@ type CaseStudy = {
   outcome: string;
   quote?: string;
   image: string;
+  href: string;
 };
 
 const cases: CaseStudy[] = [
@@ -81,6 +82,7 @@ const cases: CaseStudy[] = [
       "Consistent lead generation, 10–15 monthly videos and a unified digital ecosystem powering long-term business growth.",
     quote: "Ace360degree is our one-stop digital partner.",
     image: caseMos,
+    href: "/case-mos-utility",
   },
   {
     client: "Amigo Academy",
@@ -94,6 +96,7 @@ const cases: CaseStudy[] = [
     outcome:
       "₹12L+ revenue from ₹2L Meta spend, streamlined student lifecycle operations and compounding marketing ROI.",
     image: caseAmigo,
+    href: "/case-amigo-academy",
   },
   {
     client: "Rexello Castors",
@@ -108,6 +111,7 @@ const cases: CaseStudy[] = [
       "3× engagement growth, expanded global visibility and a 15-year strategic partnership that continues to scale.",
     quote: "My one-stop shop for everything digital.",
     image: caseRexello,
+    href: "/case-rexello-castors",
   },
   {
     client: "Cosmos Seals",
@@ -122,6 +126,7 @@ const cases: CaseStudy[] = [
       "#1 ranking for Mechanical Seal keywords, qualified inbound leads and a global-grade digital identity.",
     quote: "Ace360degree made us look and perform like a global brand.",
     image: caseCosmos,
+    href: "/case-cosmos-seals",
   },
   {
     client: "Living Concepts",
@@ -135,6 +140,7 @@ const cases: CaseStudy[] = [
     outcome:
       "A premium, content-rich online experience that mirrors the brand's design philosophy and supports retail growth.",
     image: caseLiving,
+    href: "/case-living-concepts",
   },
   {
     client: "KSA — Kuwal Sanam Architects",
@@ -149,6 +155,7 @@ const cases: CaseStudy[] = [
       "A signature digital identity that wins client trust before the first meeting and elevates inbound positioning.",
     quote: "Whatever we dreamt, they created exactly the same.",
     image: caseKsa,
+    href: "/case-kuwal-sanam",
   },
 ];
 
@@ -245,7 +252,7 @@ function Hero() {
               <span className="bg-brand/95 px-2 -mx-2 text-dark">Results.</span>
             </h1>
             <p className="mt-8 max-w-2xl text-lg leading-relaxed text-dark/65 text-pretty">
-              Since 2009, Ace360degree has partnered with businesses across manufacturing, healthcare,
+               healthcare,
               education, fintech, architecture, hospitality and service industries to solve growth
               challenges through marketing, branding, technology and AI.
             </p>
@@ -368,7 +375,7 @@ function CaseCard({ item, index }: { item: CaseStudy; index: number }) {
         <div className="mt-7 flex items-center justify-between gap-4 pt-6 border-t border-dark/5">
           <div className="text-xs uppercase tracking-[0.22em] text-dark/40">{item.client}</div>
           <Link
-            to="/contact"
+            to={item.href}
             className="shrink-0 inline-flex items-center gap-1 text-sm font-semibold text-dark hover:text-brand transition"
           >
             Discuss a Similar Story <span aria-hidden>→</span>

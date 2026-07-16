@@ -10,14 +10,19 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as YoutubeGrowthChannelStrategyRouteImport } from './routes/youtube-growth-channel-strategy'
+import { Route as WebsiteDevelopmentUnitedStatesRouteImport } from './routes/website-development-united-states'
 import { Route as WebsiteDesignDevelopmentRouteImport } from './routes/website-design-development'
+import { Route as UnitedStateHomeRouteImport } from './routes/united-stateHome'
 import { Route as UiUxDesignProductEngineeringRouteImport } from './routes/ui-ux-design-product-engineering'
+import { Route as TermsConditionRouteImport } from './routes/terms-condition'
 import { Route as TechnologyRouteImport } from './routes/technology'
 import { Route as SocialMediaMarketingRouteImport } from './routes/social-media-marketing'
 import { Route as ServicesRouteImport } from './routes/services'
 import { Route as SearchVisibilityRouteImport } from './routes/search-visibility'
+import { Route as RefundsRouteImport } from './routes/refunds'
 import { Route as RealEstateRouteImport } from './routes/real-estate'
 import { Route as PublicRelationsReputationManagementRouteImport } from './routes/public-relations-reputation-management'
+import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as PortfolioRouteImport } from './routes/portfolio'
 import { Route as PodcastStrategyProductionRouteImport } from './routes/podcast-strategy-production'
 import { Route as PerformanceMarketingRouteImport } from './routes/performance-marketing'
@@ -32,6 +37,8 @@ import { Route as IndustriesRouteImport } from './routes/industries'
 import { Route as GrowthMarketingRouteImport } from './routes/growth-marketing'
 import { Route as GrowthRouteImport } from './routes/growth'
 import { Route as EventMarketingBrandExperiencesRouteImport } from './routes/event-marketing-brand-experiences'
+import { Route as DisclaimerRouteImport } from './routes/disclaimer'
+import { Route as D2cRetailbrandRouteImport } from './routes/d2c-retailbrand'
 import { Route as CrmErpSolutionsRouteImport } from './routes/crm-erp-solutions'
 import { Route as CorporateFilmsVideoProductionRouteImport } from './routes/corporate-films-video-production'
 import { Route as CorporateCommunicationDesignRouteImport } from './routes/corporate-communication-design'
@@ -49,6 +56,7 @@ import { Route as CareersRouteImport } from './routes/careers'
 import { Route as BrandingCreativeRouteImport } from './routes/branding-creative'
 import { Route as BrandStrategyRouteImport } from './routes/brand-strategy'
 import { Route as BlogRouteImport } from './routes/blog'
+import { Route as ApprovalsRouteImport } from './routes/approvals'
 import { Route as AnalyticsGrowthIntelligenceRouteImport } from './routes/analytics-growth-intelligence'
 import { Route as AiWorkflowAutomationRouteImport } from './routes/ai-workflow-automation'
 import { Route as AiTransformationRouteImport } from './routes/ai-transformation'
@@ -75,18 +83,34 @@ const YoutubeGrowthChannelStrategyRoute =
     path: '/youtube-growth-channel-strategy',
     getParentRoute: () => rootRouteImport,
   } as any)
+const WebsiteDevelopmentUnitedStatesRoute =
+  WebsiteDevelopmentUnitedStatesRouteImport.update({
+    id: '/website-development-united-states',
+    path: '/website-development-united-states',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const WebsiteDesignDevelopmentRoute =
   WebsiteDesignDevelopmentRouteImport.update({
     id: '/website-design-development',
     path: '/website-design-development',
     getParentRoute: () => rootRouteImport,
   } as any)
+const UnitedStateHomeRoute = UnitedStateHomeRouteImport.update({
+  id: '/united-stateHome',
+  path: '/united-stateHome',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const UiUxDesignProductEngineeringRoute =
   UiUxDesignProductEngineeringRouteImport.update({
     id: '/ui-ux-design-product-engineering',
     path: '/ui-ux-design-product-engineering',
     getParentRoute: () => rootRouteImport,
   } as any)
+const TermsConditionRoute = TermsConditionRouteImport.update({
+  id: '/terms-condition',
+  path: '/terms-condition',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const TechnologyRoute = TechnologyRouteImport.update({
   id: '/technology',
   path: '/technology',
@@ -107,6 +131,9 @@ const SearchVisibilityRoute = SearchVisibilityRouteImport.update({
   path: '/search-visibility',
   getParentRoute: () => rootRouteImport,
 } as any)
+const RefundsRoute = RefundsRouteImport.update({
+  id: '/refunds',
+  path: '/refunds',
 const RealEstateRoute = RealEstateRouteImport.update({
   id: '/real-estate',
   path: '/real-estate',
@@ -118,6 +145,11 @@ const PublicRelationsReputationManagementRoute =
     path: '/public-relations-reputation-management',
     getParentRoute: () => rootRouteImport,
   } as any)
+const PrivacyRoute = PrivacyRouteImport.update({
+  id: '/privacy',
+  path: '/privacy',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PortfolioRoute = PortfolioRouteImport.update({
   id: '/portfolio',
   path: '/portfolio',
@@ -192,6 +224,14 @@ const EventMarketingBrandExperiencesRoute =
     path: '/event-marketing-brand-experiences',
     getParentRoute: () => rootRouteImport,
   } as any)
+const DisclaimerRoute = DisclaimerRouteImport.update({
+  id: '/disclaimer',
+  path: '/disclaimer',
+const D2cRetailbrandRoute = D2cRetailbrandRouteImport.update({
+  id: '/d2c-retailbrand',
+  path: '/d2c-retailbrand',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const CrmErpSolutionsRoute = CrmErpSolutionsRouteImport.update({
   id: '/crm-erp-solutions',
   path: '/crm-erp-solutions',
@@ -278,6 +318,11 @@ const BrandStrategyRoute = BrandStrategyRouteImport.update({
 const BlogRoute = BlogRouteImport.update({
   id: '/blog',
   path: '/blog',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApprovalsRoute = ApprovalsRouteImport.update({
+  id: '/approvals',
+  path: '/approvals',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AnalyticsGrowthIntelligenceRoute =
@@ -394,6 +439,7 @@ export interface FileRoutesByFullPath {
   '/ai-transformation': typeof AiTransformationRoute
   '/ai-workflow-automation': typeof AiWorkflowAutomationRoute
   '/analytics-growth-intelligence': typeof AnalyticsGrowthIntelligenceRoute
+  '/approvals': typeof ApprovalsRoute
   '/blog': typeof BlogRouteWithChildren
   '/brand-strategy': typeof BrandStrategyRoute
   '/branding-creative': typeof BrandingCreativeRoute
@@ -411,6 +457,8 @@ export interface FileRoutesByFullPath {
   '/corporate-communication-design': typeof CorporateCommunicationDesignRoute
   '/corporate-films-video-production': typeof CorporateFilmsVideoProductionRoute
   '/crm-erp-solutions': typeof CrmErpSolutionsRoute
+  '/disclaimer': typeof DisclaimerRoute
+  '/d2c-retailbrand': typeof D2cRetailbrandRoute
   '/event-marketing-brand-experiences': typeof EventMarketingBrandExperiencesRoute
   '/growth': typeof GrowthRoute
   '/growth-marketing': typeof GrowthMarketingRoute
@@ -425,14 +473,19 @@ export interface FileRoutesByFullPath {
   '/performance-marketing': typeof PerformanceMarketingRoute
   '/podcast-strategy-production': typeof PodcastStrategyProductionRoute
   '/portfolio': typeof PortfolioRoute
+  '/privacy': typeof PrivacyRoute
   '/public-relations-reputation-management': typeof PublicRelationsReputationManagementRoute
+  '/refunds': typeof RefundsRoute
   '/real-estate': typeof RealEstateRoute
   '/search-visibility': typeof SearchVisibilityRoute
   '/services': typeof ServicesRoute
   '/social-media-marketing': typeof SocialMediaMarketingRoute
   '/technology': typeof TechnologyRoute
+  '/terms-condition': typeof TermsConditionRoute
   '/ui-ux-design-product-engineering': typeof UiUxDesignProductEngineeringRoute
+  '/united-stateHome': typeof UnitedStateHomeRoute
   '/website-design-development': typeof WebsiteDesignDevelopmentRoute
+  '/website-development-united-states': typeof WebsiteDevelopmentUnitedStatesRoute
   '/youtube-growth-channel-strategy': typeof YoutubeGrowthChannelStrategyRoute
   '/blog/why-businesses-need-growth-partner-not-marketing-agency': typeof BlogWhyBusinessesNeedGrowthPartnerNotMarketingAgencyRoute
   '/industries/architecture': typeof IndustriesArchitectureRoute
@@ -455,6 +508,7 @@ export interface FileRoutesByTo {
   '/ai-transformation': typeof AiTransformationRoute
   '/ai-workflow-automation': typeof AiWorkflowAutomationRoute
   '/analytics-growth-intelligence': typeof AnalyticsGrowthIntelligenceRoute
+  '/approvals': typeof ApprovalsRoute
   '/blog': typeof BlogRouteWithChildren
   '/brand-strategy': typeof BrandStrategyRoute
   '/branding-creative': typeof BrandingCreativeRoute
@@ -472,6 +526,8 @@ export interface FileRoutesByTo {
   '/corporate-communication-design': typeof CorporateCommunicationDesignRoute
   '/corporate-films-video-production': typeof CorporateFilmsVideoProductionRoute
   '/crm-erp-solutions': typeof CrmErpSolutionsRoute
+  '/disclaimer': typeof DisclaimerRoute
+  '/d2c-retailbrand': typeof D2cRetailbrandRoute
   '/event-marketing-brand-experiences': typeof EventMarketingBrandExperiencesRoute
   '/growth': typeof GrowthRoute
   '/growth-marketing': typeof GrowthMarketingRoute
@@ -486,14 +542,19 @@ export interface FileRoutesByTo {
   '/performance-marketing': typeof PerformanceMarketingRoute
   '/podcast-strategy-production': typeof PodcastStrategyProductionRoute
   '/portfolio': typeof PortfolioRoute
+  '/privacy': typeof PrivacyRoute
   '/public-relations-reputation-management': typeof PublicRelationsReputationManagementRoute
+  '/refunds': typeof RefundsRoute
   '/real-estate': typeof RealEstateRoute
   '/search-visibility': typeof SearchVisibilityRoute
   '/services': typeof ServicesRoute
   '/social-media-marketing': typeof SocialMediaMarketingRoute
   '/technology': typeof TechnologyRoute
+  '/terms-condition': typeof TermsConditionRoute
   '/ui-ux-design-product-engineering': typeof UiUxDesignProductEngineeringRoute
+  '/united-stateHome': typeof UnitedStateHomeRoute
   '/website-design-development': typeof WebsiteDesignDevelopmentRoute
+  '/website-development-united-states': typeof WebsiteDevelopmentUnitedStatesRoute
   '/youtube-growth-channel-strategy': typeof YoutubeGrowthChannelStrategyRoute
   '/blog/why-businesses-need-growth-partner-not-marketing-agency': typeof BlogWhyBusinessesNeedGrowthPartnerNotMarketingAgencyRoute
   '/industries/architecture': typeof IndustriesArchitectureRoute
@@ -517,6 +578,7 @@ export interface FileRoutesById {
   '/ai-transformation': typeof AiTransformationRoute
   '/ai-workflow-automation': typeof AiWorkflowAutomationRoute
   '/analytics-growth-intelligence': typeof AnalyticsGrowthIntelligenceRoute
+  '/approvals': typeof ApprovalsRoute
   '/blog': typeof BlogRouteWithChildren
   '/brand-strategy': typeof BrandStrategyRoute
   '/branding-creative': typeof BrandingCreativeRoute
@@ -534,6 +596,8 @@ export interface FileRoutesById {
   '/corporate-communication-design': typeof CorporateCommunicationDesignRoute
   '/corporate-films-video-production': typeof CorporateFilmsVideoProductionRoute
   '/crm-erp-solutions': typeof CrmErpSolutionsRoute
+  '/disclaimer': typeof DisclaimerRoute
+  '/d2c-retailbrand': typeof D2cRetailbrandRoute
   '/event-marketing-brand-experiences': typeof EventMarketingBrandExperiencesRoute
   '/growth': typeof GrowthRoute
   '/growth-marketing': typeof GrowthMarketingRoute
@@ -548,14 +612,19 @@ export interface FileRoutesById {
   '/performance-marketing': typeof PerformanceMarketingRoute
   '/podcast-strategy-production': typeof PodcastStrategyProductionRoute
   '/portfolio': typeof PortfolioRoute
+  '/privacy': typeof PrivacyRoute
   '/public-relations-reputation-management': typeof PublicRelationsReputationManagementRoute
+  '/refunds': typeof RefundsRoute
   '/real-estate': typeof RealEstateRoute
   '/search-visibility': typeof SearchVisibilityRoute
   '/services': typeof ServicesRoute
   '/social-media-marketing': typeof SocialMediaMarketingRoute
   '/technology': typeof TechnologyRoute
+  '/terms-condition': typeof TermsConditionRoute
   '/ui-ux-design-product-engineering': typeof UiUxDesignProductEngineeringRoute
+  '/united-stateHome': typeof UnitedStateHomeRoute
   '/website-design-development': typeof WebsiteDesignDevelopmentRoute
+  '/website-development-united-states': typeof WebsiteDevelopmentUnitedStatesRoute
   '/youtube-growth-channel-strategy': typeof YoutubeGrowthChannelStrategyRoute
   '/blog/why-businesses-need-growth-partner-not-marketing-agency': typeof BlogWhyBusinessesNeedGrowthPartnerNotMarketingAgencyRoute
   '/industries_/architecture': typeof IndustriesArchitectureRoute
@@ -580,6 +649,7 @@ export interface FileRouteTypes {
     | '/ai-transformation'
     | '/ai-workflow-automation'
     | '/analytics-growth-intelligence'
+    | '/approvals'
     | '/blog'
     | '/brand-strategy'
     | '/branding-creative'
@@ -597,6 +667,8 @@ export interface FileRouteTypes {
     | '/corporate-communication-design'
     | '/corporate-films-video-production'
     | '/crm-erp-solutions'
+    | '/disclaimer'
+    | '/d2c-retailbrand'
     | '/event-marketing-brand-experiences'
     | '/growth'
     | '/growth-marketing'
@@ -611,14 +683,19 @@ export interface FileRouteTypes {
     | '/performance-marketing'
     | '/podcast-strategy-production'
     | '/portfolio'
+    | '/privacy'
     | '/public-relations-reputation-management'
+    | '/refunds'
     | '/real-estate'
     | '/search-visibility'
     | '/services'
     | '/social-media-marketing'
     | '/technology'
+    | '/terms-condition'
     | '/ui-ux-design-product-engineering'
+    | '/united-stateHome'
     | '/website-design-development'
+    | '/website-development-united-states'
     | '/youtube-growth-channel-strategy'
     | '/blog/why-businesses-need-growth-partner-not-marketing-agency'
     | '/industries/architecture'
@@ -641,6 +718,7 @@ export interface FileRouteTypes {
     | '/ai-transformation'
     | '/ai-workflow-automation'
     | '/analytics-growth-intelligence'
+    | '/approvals'
     | '/blog'
     | '/brand-strategy'
     | '/branding-creative'
@@ -658,6 +736,8 @@ export interface FileRouteTypes {
     | '/corporate-communication-design'
     | '/corporate-films-video-production'
     | '/crm-erp-solutions'
+    | '/disclaimer'
+    | '/d2c-retailbrand'
     | '/event-marketing-brand-experiences'
     | '/growth'
     | '/growth-marketing'
@@ -672,14 +752,19 @@ export interface FileRouteTypes {
     | '/performance-marketing'
     | '/podcast-strategy-production'
     | '/portfolio'
+    | '/privacy'
     | '/public-relations-reputation-management'
+    | '/refunds'
     | '/real-estate'
     | '/search-visibility'
     | '/services'
     | '/social-media-marketing'
     | '/technology'
+    | '/terms-condition'
     | '/ui-ux-design-product-engineering'
+    | '/united-stateHome'
     | '/website-design-development'
+    | '/website-development-united-states'
     | '/youtube-growth-channel-strategy'
     | '/blog/why-businesses-need-growth-partner-not-marketing-agency'
     | '/industries/architecture'
@@ -702,6 +787,7 @@ export interface FileRouteTypes {
     | '/ai-transformation'
     | '/ai-workflow-automation'
     | '/analytics-growth-intelligence'
+    | '/approvals'
     | '/blog'
     | '/brand-strategy'
     | '/branding-creative'
@@ -719,6 +805,8 @@ export interface FileRouteTypes {
     | '/corporate-communication-design'
     | '/corporate-films-video-production'
     | '/crm-erp-solutions'
+    | '/disclaimer'
+    | '/d2c-retailbrand'
     | '/event-marketing-brand-experiences'
     | '/growth'
     | '/growth-marketing'
@@ -733,14 +821,19 @@ export interface FileRouteTypes {
     | '/performance-marketing'
     | '/podcast-strategy-production'
     | '/portfolio'
+    | '/privacy'
     | '/public-relations-reputation-management'
+    | '/refunds'
     | '/real-estate'
     | '/search-visibility'
     | '/services'
     | '/social-media-marketing'
     | '/technology'
+    | '/terms-condition'
     | '/ui-ux-design-product-engineering'
+    | '/united-stateHome'
     | '/website-design-development'
+    | '/website-development-united-states'
     | '/youtube-growth-channel-strategy'
     | '/blog/why-businesses-need-growth-partner-not-marketing-agency'
     | '/industries_/architecture'
@@ -764,6 +857,7 @@ export interface RootRouteChildren {
   AiTransformationRoute: typeof AiTransformationRoute
   AiWorkflowAutomationRoute: typeof AiWorkflowAutomationRoute
   AnalyticsGrowthIntelligenceRoute: typeof AnalyticsGrowthIntelligenceRoute
+  ApprovalsRoute: typeof ApprovalsRoute
   BlogRoute: typeof BlogRouteWithChildren
   BrandStrategyRoute: typeof BrandStrategyRoute
   BrandingCreativeRoute: typeof BrandingCreativeRoute
@@ -781,6 +875,8 @@ export interface RootRouteChildren {
   CorporateCommunicationDesignRoute: typeof CorporateCommunicationDesignRoute
   CorporateFilmsVideoProductionRoute: typeof CorporateFilmsVideoProductionRoute
   CrmErpSolutionsRoute: typeof CrmErpSolutionsRoute
+  DisclaimerRoute: typeof DisclaimerRoute
+  D2cRetailbrandRoute: typeof D2cRetailbrandRoute
   EventMarketingBrandExperiencesRoute: typeof EventMarketingBrandExperiencesRoute
   GrowthRoute: typeof GrowthRoute
   GrowthMarketingRoute: typeof GrowthMarketingRoute
@@ -795,14 +891,19 @@ export interface RootRouteChildren {
   PerformanceMarketingRoute: typeof PerformanceMarketingRoute
   PodcastStrategyProductionRoute: typeof PodcastStrategyProductionRoute
   PortfolioRoute: typeof PortfolioRoute
+  PrivacyRoute: typeof PrivacyRoute
   PublicRelationsReputationManagementRoute: typeof PublicRelationsReputationManagementRoute
+  RefundsRoute: typeof RefundsRoute
   RealEstateRoute: typeof RealEstateRoute
   SearchVisibilityRoute: typeof SearchVisibilityRoute
   ServicesRoute: typeof ServicesRoute
   SocialMediaMarketingRoute: typeof SocialMediaMarketingRoute
   TechnologyRoute: typeof TechnologyRoute
+  TermsConditionRoute: typeof TermsConditionRoute
   UiUxDesignProductEngineeringRoute: typeof UiUxDesignProductEngineeringRoute
+  UnitedStateHomeRoute: typeof UnitedStateHomeRoute
   WebsiteDesignDevelopmentRoute: typeof WebsiteDesignDevelopmentRoute
+  WebsiteDevelopmentUnitedStatesRoute: typeof WebsiteDevelopmentUnitedStatesRoute
   YoutubeGrowthChannelStrategyRoute: typeof YoutubeGrowthChannelStrategyRoute
   IndustriesArchitectureRoute: typeof IndustriesArchitectureRoute
   IndustriesD2cRetailbrandRoute: typeof IndustriesD2cRetailbrandRoute
@@ -825,6 +926,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof YoutubeGrowthChannelStrategyRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/website-development-united-states': {
+      id: '/website-development-united-states'
+      path: '/website-development-united-states'
+      fullPath: '/website-development-united-states'
+      preLoaderRoute: typeof WebsiteDevelopmentUnitedStatesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/website-design-development': {
       id: '/website-design-development'
       path: '/website-design-development'
@@ -832,11 +940,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof WebsiteDesignDevelopmentRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/united-stateHome': {
+      id: '/united-stateHome'
+      path: '/united-stateHome'
+      fullPath: '/united-stateHome'
+      preLoaderRoute: typeof UnitedStateHomeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/ui-ux-design-product-engineering': {
       id: '/ui-ux-design-product-engineering'
       path: '/ui-ux-design-product-engineering'
       fullPath: '/ui-ux-design-product-engineering'
       preLoaderRoute: typeof UiUxDesignProductEngineeringRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/terms-condition': {
+      id: '/terms-condition'
+      path: '/terms-condition'
+      fullPath: '/terms-condition'
+      preLoaderRoute: typeof TermsConditionRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/technology': {
@@ -867,6 +989,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SearchVisibilityRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/refunds': {
+      id: '/refunds'
+      path: '/refunds'
+      fullPath: '/refunds'
+      preLoaderRoute: typeof RefundsRouteImport
     '/real-estate': {
       id: '/real-estate'
       path: '/real-estate'
@@ -879,6 +1006,13 @@ declare module '@tanstack/react-router' {
       path: '/public-relations-reputation-management'
       fullPath: '/public-relations-reputation-management'
       preLoaderRoute: typeof PublicRelationsReputationManagementRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy': {
+      id: '/privacy'
+      path: '/privacy'
+      fullPath: '/privacy'
+      preLoaderRoute: typeof PrivacyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/portfolio': {
@@ -977,6 +1111,18 @@ declare module '@tanstack/react-router' {
       path: '/event-marketing-brand-experiences'
       fullPath: '/event-marketing-brand-experiences'
       preLoaderRoute: typeof EventMarketingBrandExperiencesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/disclaimer': {
+      id: '/disclaimer'
+      path: '/disclaimer'
+      fullPath: '/disclaimer'
+      preLoaderRoute: typeof DisclaimerRouteImport
+    '/d2c-retailbrand': {
+      id: '/d2c-retailbrand'
+      path: '/d2c-retailbrand'
+      fullPath: '/d2c-retailbrand'
+      preLoaderRoute: typeof D2cRetailbrandRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/crm-erp-solutions': {
@@ -1096,6 +1242,13 @@ declare module '@tanstack/react-router' {
       path: '/blog'
       fullPath: '/blog'
       preLoaderRoute: typeof BlogRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/approvals': {
+      id: '/approvals'
+      path: '/approvals'
+      fullPath: '/approvals'
+      preLoaderRoute: typeof ApprovalsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/analytics-growth-intelligence': {
@@ -1254,6 +1407,7 @@ const rootRouteChildren: RootRouteChildren = {
   AiTransformationRoute: AiTransformationRoute,
   AiWorkflowAutomationRoute: AiWorkflowAutomationRoute,
   AnalyticsGrowthIntelligenceRoute: AnalyticsGrowthIntelligenceRoute,
+  ApprovalsRoute: ApprovalsRoute,
   BlogRoute: BlogRouteWithChildren,
   BrandStrategyRoute: BrandStrategyRoute,
   BrandingCreativeRoute: BrandingCreativeRoute,
@@ -1271,6 +1425,8 @@ const rootRouteChildren: RootRouteChildren = {
   CorporateCommunicationDesignRoute: CorporateCommunicationDesignRoute,
   CorporateFilmsVideoProductionRoute: CorporateFilmsVideoProductionRoute,
   CrmErpSolutionsRoute: CrmErpSolutionsRoute,
+  DisclaimerRoute: DisclaimerRoute,
+  D2cRetailbrandRoute: D2cRetailbrandRoute,
   EventMarketingBrandExperiencesRoute: EventMarketingBrandExperiencesRoute,
   GrowthRoute: GrowthRoute,
   GrowthMarketingRoute: GrowthMarketingRoute,
@@ -1286,15 +1442,20 @@ const rootRouteChildren: RootRouteChildren = {
   PerformanceMarketingRoute: PerformanceMarketingRoute,
   PodcastStrategyProductionRoute: PodcastStrategyProductionRoute,
   PortfolioRoute: PortfolioRoute,
+  PrivacyRoute: PrivacyRoute,
   PublicRelationsReputationManagementRoute:
     PublicRelationsReputationManagementRoute,
+  RefundsRoute: RefundsRoute,
   RealEstateRoute: RealEstateRoute,
   SearchVisibilityRoute: SearchVisibilityRoute,
   ServicesRoute: ServicesRoute,
   SocialMediaMarketingRoute: SocialMediaMarketingRoute,
   TechnologyRoute: TechnologyRoute,
+  TermsConditionRoute: TermsConditionRoute,
   UiUxDesignProductEngineeringRoute: UiUxDesignProductEngineeringRoute,
+  UnitedStateHomeRoute: UnitedStateHomeRoute,
   WebsiteDesignDevelopmentRoute: WebsiteDesignDevelopmentRoute,
+  WebsiteDevelopmentUnitedStatesRoute: WebsiteDevelopmentUnitedStatesRoute,
   YoutubeGrowthChannelStrategyRoute: YoutubeGrowthChannelStrategyRoute,
   IndustriesArchitectureRoute: IndustriesArchitectureRoute,
   IndustriesD2cRetailbrandRoute: IndustriesD2cRetailbrandRoute,
