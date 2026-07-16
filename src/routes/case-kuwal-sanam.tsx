@@ -137,13 +137,13 @@ function KSACaseStudyPage() {
       </div>
 
       <div className="lg:col-span-5">
-        <div className="ml-auto w-full max-w-[480px] overflow-hidden rounded-[10px]">
+        <div className="ml-5 w-full max-w-[680px] overflow-hidden rounded-[10px]">
           <img
             src={heroImg}
             alt="Kuwal Sanam Architects architectural concept board"
             className="h-full w-full object-cover object-center"
-            width={1200}
-            height={800}
+            width={1400}
+            height={1000}
           />
         </div>
       </div>

@@ -1,7 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
-import heroImg from "@/assets/case-rexello-hero.jpg";
+import heroImg from "@/assets/heroRexelloy1.jpg";
+import aboutImg from "@/assets/bannerRexelloy1.jpg";
+import bannerImg from "@/assets/bannerRexelloy2.jpg";
 
 export const Route = createFileRoute("/case-rexello-castors")({
   head: () => ({
@@ -144,19 +146,10 @@ function RexelloCaseStudyPage() {
       <SiteHeader />
 
       {/* HERO */}
-      <section className="relative overflow-hidden border-b border-border/40">
-        <div className="absolute inset-0">
-          <img
-            src={heroImg}
-            alt="Rexello Castors — modern industrial manufacturing facility"
-            className="h-full w-full object-cover opacity-25"
-            width={1600}
-            height={912}
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/85 to-background" />
-        </div>
+      <section className="relative overflow-hidden border-b border-black/5 bg-white">
+        
         <div className="relative container mx-auto px-6 py-24 md:py-32">
-          <div className="max-w-4xl">
+          <div className="max-w-4xl lg:max-w-[58%]">
             <div className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-3 py-1 text-xs uppercase tracking-[0.2em] text-primary">
               Success Story
             </div>
@@ -175,6 +168,18 @@ function RexelloCaseStudyPage() {
                   <div className="mt-1 text-sm font-medium">{s.v}</div>
                 </div>
               ))}
+            </div>
+            <div className="mt-1 hidden lg:block lg:absolute lg:right-6 lg:top-1/2 lg:w-[40%] lg:max-w-[600px] lg:-translate-y-1/2">
+              <div className="overflow-hidden rounded-[18px] bg-white shadow-[0_18px_50px_rgba(0,0,0,0.10)]">
+                <img
+                  src={heroImg}
+                  alt="Rexello Castors growth and digital-first brand visual"
+                  className="h-full w-full object-cover object-center"
+                  width={1200}
+                  height={720}
+                  loading="lazy"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -208,31 +213,72 @@ function RexelloCaseStudyPage() {
       </section>
 
       {/* ABOUT */}
-      <section className="border-y border-border/40 bg-muted/30">
-        <div className="container mx-auto px-6 py-20 md:py-24">
-          <div className="text-xs uppercase tracking-[0.2em] text-primary">About the Client</div>
-          <h2 className="mt-3 text-3xl md:text-4xl font-semibold tracking-tight max-w-3xl">
-            Engineering Reliable Mobility Solutions for Industries Worldwide.
-          </h2>
-          <div className="mt-6 max-w-3xl space-y-4 text-muted-foreground leading-relaxed">
-            <p>
-              Rexello Castors Pvt. Ltd. is one of India's trusted manufacturers of industrial castors and material
-              handling mobility solutions, serving diverse industries with high-quality engineering products.
-            </p>
-            <p>
-              With decades of manufacturing expertise and a strong reputation in the market, the next stage of growth
-              required a stronger digital presence that reflected the company's leadership and technical capabilities.
-            </p>
-          </div>
-          <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-5 gap-3">
-            {aboutPoints.map((i) => (
-              <div key={i} className="rounded-xl border border-border/60 bg-card p-5">
-                <div className="text-sm font-medium">{i}</div>
-              </div>
-            ))}
+<section className="border-b border-black/5 bg-[#fbfaf7]">
+  <div className="mx-auto max-w-[1460px] px-7 py-10 md:px-8 md:py-12 lg:py-14">
+    <div className="grid items-start gap-10 lg:grid-cols-[1.55fr_0.65fr] lg:gap-16">
+      {/* Left Content */}
+      <div className="pt-10 lg:pt-11">
+        <div className="text-[9px] font-medium uppercase tracking-[0.34em] text-[#e7a62a]">
+          About the Client
+        </div>
+
+        <h2 className="mt-3 max-w-[720px] text-[28px] font-semibold leading-[1.02] tracking-[-0.045em] text-[#1f1f1f] sm:text-[32px] lg:text-[35px]">
+          Engineering Reliable Mobility Solutions for Industries Worldwide.
+        </h2>
+
+        <div className="mt-6 max-w-3xl space-y-4 text-muted-foreground leading-relaxed">
+          <p>
+            Rexello Castors Pvt. Ltd. is one of India&apos;s trusted
+            manufacturers of industrial castors and material handling mobility
+            solutions, serving diverse industries with high-quality engineering
+            products.
+          </p>
+
+          <p>
+            With decades of manufacturing expertise and a strong reputation in
+            the market, the next stage of growth required a stronger digital
+            presence that reflected the company&apos;s leadership and technical
+            capabilities.
+          </p>
+        </div>
+      </div>
+
+      {/* Right Image */}
+      <div className="flex justify-start lg:justify-center">
+        <div className="h-[300px] w-full max-w-[310px] overflow-hidden bg-[#eee9e1]">
+          <img
+            src={aboutImg}
+            alt="Rexello Castors industrial logistics visual"
+            className="h-full w-full object-cover object-center"
+            width={900}
+            height={900}
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+
+    {/* Feature Cards */}
+    <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-5 gap-3">
+      {aboutPoints.map((item) => (
+        <div
+          key={item}
+          className="
+            flex min-h-[80px] items-center
+            rounded-[6px]
+            border border-[#efebe5]
+            bg-white
+            px-5 py-4
+          "
+        >
+          <div className="text-sm font-medium">
+            {item}
           </div>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
 
       {/* CHALLENGES */}
       <section className="container mx-auto px-6 py-20 md:py-28">
@@ -327,19 +373,34 @@ function RexelloCaseStudyPage() {
 
       {/* PARTNERSHIP TIMELINE */}
       <section className="container mx-auto px-6 py-20 md:py-28">
-        <div className="max-w-3xl">
-          <div className="text-xs uppercase tracking-[0.2em] text-primary">How the Partnership Unfolded</div>
-          <h2 className="mt-3 text-3xl md:text-4xl font-semibold tracking-tight">From Discovery to Long-Term Growth</h2>
+        <div className="grid items-center gap-12 lg:grid-cols-[0.95fr_1.05fr]">
+          <div className="max-w-3xl">
+            <div className="text-xs uppercase tracking-[0.2em] text-primary">How the Partnership Unfolded</div>
+            <h2 className="mt-3 text-3xl md:text-4xl font-semibold tracking-tight">From Discovery to Long-Term Growth</h2>
+            <ol className="mt-12 relative border-l border-border/60 ml-3">
+              {unfolded.map((u, i) => (
+                <li key={u} className="pl-8 pb-8 relative last:pb-0">
+                  <span className="absolute -left-[9px] top-1 h-4 w-4 rounded-full bg-primary ring-4 ring-background" />
+                  <div className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Phase {i + 1}</div>
+                  <div className="mt-1 text-lg font-medium">{u}</div>
+                </li>
+              ))}
+            </ol>
+          </div>
+
+          <div className="lg:pl-8">
+            <div className="overflow-hidden rounded-[22px] bg-muted shadow-[0_20px_60px_rgba(0,0,0,0.12)]">
+              <img
+                src={bannerImg}
+                alt="Rexello Castors manufacturing and digital growth banner"
+                className="h-full w-full object-cover"
+                width={1200}
+                height={760}
+                loading="lazy"
+              />
+            </div>
+          </div>
         </div>
-        <ol className="mt-12 relative border-l border-border/60 max-w-3xl ml-3">
-          {unfolded.map((u, i) => (
-            <li key={u} className="pl-8 pb-8 relative">
-              <span className="absolute -left-[9px] top-1 h-4 w-4 rounded-full bg-primary ring-4 ring-background" />
-              <div className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Phase {i + 1}</div>
-              <div className="mt-1 text-lg font-medium">{u}</div>
-            </li>
-          ))}
-        </ol>
       </section>
 
       {/* BLUEPRINT */}
@@ -443,7 +504,10 @@ function RexelloCaseStudyPage() {
 
       {/* FINAL CTA */}
       <section className="container mx-auto px-6 pb-24 md:pb-32">
-        <div className="relative overflow-hidden rounded-3xl border border-border/60 bg-gradient-to-br from-primary/10 via-card to-card p-10 md:p-16">
+        <div className="relative overflow-hidden rounded-3xl
+      border border-black/5
+      bg-[linear-gradient(163deg,rgba(255,179,48,0.25)_20%,rgba(255,179,48,0.08)_50%,#ffffff_65%,#ffffff_100%)]
+      p-10 md:p-16">
           <div className="max-w-3xl">
             <h2 className="text-3xl md:text-5xl font-semibold tracking-tight">
               Building Industrial Brands That Engineers Trust and Buyers Choose.

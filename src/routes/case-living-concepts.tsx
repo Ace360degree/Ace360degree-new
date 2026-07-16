@@ -3,6 +3,7 @@ import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import heroImg from "@/assets/livingconceptsheroace.png";
 import bannerImg from "@/assets/livingconceptsace1.png";
+import bannerImg2 from "@/assets/livingconceptsace2.png";
 
 export const Route = createFileRoute("/case-living-concepts")({
   head: () => ({
@@ -145,57 +146,58 @@ function LivingConceptsCaseStudyPage() {
       <SiteHeader />
 
       {/* HERO */}
-       <section className="border-b border-black/5 bg-[#fbfaf7]">
-      <div className="mx-auto max-w-[1540px] px-6 py-8 md:py-10 lg:py-12">
-        <div className="grid items-start gap-8 lg:grid-cols-12 lg:gap-12">
-          <div className="lg:col-span-6">
-            <div className="inline-flex items-center rounded-full border border-[#f2d9af] bg-[#fff8ef] px-3 py-1 text-[10px] uppercase tracking-[0.28em] text-[#e7a62a]">
-              Success Story
-            </div>
- 
-            <h1 className="mt-4 max-w-[70ch] text-balance font-sans text-[34px] font-semibold leading-[0.94] tracking-[-0.055em] text-[#1f1f1f] sm:text-[46px] md:text-[54px] lg:text-[60px]">
-              Designing a Premium Digital Experience for a Luxury Interior &
-              Furniture Brand
-            </h1>
- 
-            <p className="mt-5 max-w-[55ch] text-[14px] leading-[1.55] text-[#66615a] sm:text-[15px]">
-              How Ace360degree helped{" "}
-              <span className="font-medium text-[#222]">Living Concepts</span>{" "}
-              elevate its digital presence, strengthen brand perception and
-              create an online experience that reflects premium craftsmanship.
-            </p>
- 
-            <div className="mt-8 grid gap-3 sm:grid-cols-2 md:grid-cols-4">
-              {snapshot.map((s) => (
-                <div
-                  key={s.k}
-                  className="min-h-[84px] rounded-[10px] border border-[#ece7df] bg-white px-4 py-3.5 shadow-[0_1px_0_rgba(0,0,0,0.02)]"
-                >
-                  <div className="text-[9px] uppercase tracking-[0.28em] text-[#a8a29b]">
-                    {s.k}
+      <section className="border-b border-black/5 bg-[#fbfaf7]">
+        <div className="mx-auto max-w-[1540px] px-6 py-8 md:py-10 lg:py-12">
+          <div className="grid items-start gap-8 lg:grid-cols-12 lg:gap-12">
+            <div className="lg:col-span-6">
+              <div className="inline-flex items-center rounded-full border border-[#f2d9af] bg-[#fff8ef] px-3 py-1 text-[10px] uppercase tracking-[0.28em] text-[#e7a62a]">
+                Success Story
+              </div>
+
+              <h1 className="mt-4 max-w-[70ch] text-balance font-sans text-[34px] font-semibold leading-[0.94] tracking-[-0.055em] text-[#1f1f1f] sm:text-[46px] md:text-[54px] lg:text-[60px]">
+                Designing a Premium Digital Experience for a Luxury Interior &
+                Furniture Brand
+              </h1>
+
+              <p className="mt-5 max-w-[55ch] text-[14px] leading-[1.55] text-[#66615a] sm:text-[15px]">
+                How Ace360degree helped{" "}
+                <span className="font-medium text-[#222]">Living Concepts</span>{" "}
+                elevate its digital presence, strengthen brand perception and
+                create an online experience that reflects premium craftsmanship.
+              </p>
+
+              <div className="mt-8 grid gap-3 sm:grid-cols-2 md:grid-cols-4">
+                {snapshot.map((s) => (
+                  <div
+                    key={s.k}
+                    className="min-h-[84px] rounded-[10px] border border-[#ece7df] bg-white px-4 py-3.5 shadow-[0_1px_0_rgba(0,0,0,0.02)]"
+                  >
+                    <div className="text-[9px] uppercase tracking-[0.28em] text-[#a8a29b]">
+                      {s.k}
+                    </div>
+                    <div className="mt-1 text-[11px] leading-[1.35] text-[#1f1f1f]">
+                      {s.v}
+                    </div>
                   </div>
-                  <div className="mt-1 text-[11px] leading-[1.35] text-[#1f1f1f]">
-                    {s.v}
-                  </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
-          </div>
- 
-          <div className="lg:col-span-5 lg:pt-1">
-            <div className="ml-auto w-full max-w-[620px] overflow-hidden rounded-[8px] bg-[#efe8df] shadow-[0_16px_40px_rgba(0,0,0,0.08)]">
-              <img
-                src={heroImg}
-                alt="Living Concepts premium living room concept"
-                className="h-full w-full object-cover object-center"
-                width={1200}
-                height={900}
-              />
+
+            <div className="lg:col-span-5 lg:pt-1">
+              <div className="ml-auto w-full max-w-[620px] overflow-hidden rounded-[8px] bg-[#efe8df] shadow-[0_16px_40px_rgba(0,0,0,0.08)]">
+                <img
+                  src={heroImg}
+                  alt="Living Concepts premium living room concept"
+                  className="h-full w-full object-cover object-center"
+                  width={1200}
+                  height={900}
+                />
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+
       {/* CONTEXT */}
       <section className="container mx-auto px-6 py-20 md:py-28">
         <div className="grid lg:grid-cols-12 gap-12">
@@ -347,48 +349,63 @@ function LivingConceptsCaseStudyPage() {
       </section>
 
       {/* PARTNERSHIP TIMELINE */}
-      <section className="bg-[#fbfaf7] py-16 md:py-20 lg:py-24">
-        <div className="mx-auto max-w-[1200px] px-6">
-          <div className="grid gap-10 lg:grid-cols-12 lg:gap-14">
-            <div className="lg:col-span-6">
-              <div className="text-[10px] uppercase tracking-[0.34em] text-[#e7a62a]">
-                How the Partnership Unfolded
-              </div>
-              <h2 className="mt-3 max-w-[12ch] text-[36px] font-semibold leading-[0.98] tracking-[-0.045em] text-[#1f1f1f] sm:text-[44px] md:text-[50px]">
-                From Discovery to Long-Term Growth
-              </h2>
+<section className="bg-[#fbfaf7] py-20">
+  <div className="mx-auto max-w-[1600px] px-8">
+    <div className="grid items-start gap-24 lg:grid-cols-[1.1fr_0.9fr]">
+      
+      {/* LEFT */}
+      <div>
+        <p className="text-[12px] uppercase tracking-[0.38em] text-[#E5A324]">
+          HOW THE PARTNERSHIP UNFOLDED
+        </p>
 
-              <ol className="mt-10 space-y-6">
-                {unfolded.map((u, i) => (
-                  <li key={u} className="relative pl-9">
-                    <span className="absolute left-[2px] top-1.5 h-3.5 w-3.5 rounded-full bg-[#ffb22f]" />
-                    <span className="absolute left-[7px] top-7 bottom-[-22px] w-px bg-[#ece4d8]" />
-                    <div className="text-[9px] uppercase tracking-[0.34em] text-[#a8a29b]">
-                      Phase {i + 1}
-                    </div>
-                    <div className="mt-1 text-[17px] leading-[1.2] text-[#1f1f1f]">
-                      {u}
-                    </div>
-                  </li>
-                ))}
-              </ol>
-            </div>
+        <h2 className="mt-3 max-w-[40ch] text-[45px] font-semibold leading-[1.02] tracking-[-0.06em] text-[#222]">
+          From Discovery to Long-Term Growth
+        </h2>
 
-            <div className="lg:col-span-6 lg:pt-4">
-              <div className="ml-auto w-full max-w-[370px] overflow-hidden rounded-[8px] bg-[#efe8df] shadow-[0_16px_40px_rgba(0,0,0,0.08)]">
-                <img
-                  src={bannerImg}
-                  alt="Living Concepts luxury interior experience"
-                  className="h-full w-full object-cover object-center"
-                  width={1200}
-                  height={900}
-                  loading="lazy"
-                />
+        <div className="mt-12">
+          {unfolded.map((item, i) => (
+            <div
+              key={item}
+              className="relative flex gap-5 pb-10 last:pb-0"
+            >
+              {/* Timeline */}
+              <div className="relative flex w-4 justify-center">
+                <span className="z-10 mt-[6px] h-[15px] w-[15px] rounded-full bg-[#F2A400]" />
+
+                {i !== unfolded.length - 1 && (
+                  <span className="absolute top-[17px] bottom-[-34px] w-px bg-[#ffffff]" />
+                )}
+              </div>
+
+              {/* Content */}
+              <div>
+                <p className="text-[15px] uppercase tracking-[0.35em] text-[#A6A6A6]">
+                  PHASE {i + 1}
+                </p>
+
+                <h3 className="mt-1 text-[20px] font-semibold leading-[1.2] text-[#222]">
+                  {item}
+                </h3>
               </div>
             </div>
-          </div>
+          ))}
         </div>
-      </section>
+      </div>
+
+      {/* RIGHT */}
+      <div className="pt-25">
+        <div className="overflow-hidden rounded-[8px]">
+          <img
+            src={bannerImg}
+            alt="Luxury Interior"
+            className="h-[440px] w-full object-cover"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* BLUEPRINT */}
       <section className="border-y border-border/40 bg-muted/30">
@@ -414,21 +431,40 @@ function LivingConceptsCaseStudyPage() {
       </section>
 
       {/* INDUSTRY INSIGHT */}
-      <section className="container mx-auto px-6 py-20 md:py-28">
-        <div className="max-w-3xl">
-          <div className="text-xs uppercase tracking-[0.2em] text-primary">Industry Insight</div>
-          <h2 className="mt-3 text-3xl md:text-4xl font-semibold tracking-tight">
-            Luxury Buyers Choose Brands Before They Choose Products.
-          </h2>
-          <div className="mt-6 space-y-4 text-muted-foreground leading-relaxed">
-            <p>
-              Today's premium customers compare brands online long before requesting a consultation. They evaluate
-              design philosophy, project quality, customer experience and digital credibility.
-            </p>
-            <p>
-              Brands that combine exceptional design with exceptional digital experiences create stronger emotional
-              connections and convert more high-value enquiries.
-            </p>
+      <section className="border-b border-black/5 bg-white">
+        <div className="mx-auto max-w-[1540px] px-6 py-12 md:py-16 lg:py-20">
+          <div className="grid items-center gap-8 lg:grid-cols-12 lg:gap-12">
+            <div className="lg:col-span-7">
+              <div className="text-[10px] uppercase tracking-[0.34em] text-[#d9a23f]">
+                Industry Insight
+              </div>
+              <h2 className="mt-3 text-3xl md:text-4xl font-semibold tracking-tight">
+                Luxury Buyers Choose Brands Before They<br/> Choose Products.
+              </h2>
+              <div className="mt-5 max-w-[66ch] space-y-4 text-[14px] leading-[1.7] text-[#67615a] sm:text-[15px]">
+                <p>
+                  Today's premium customers compare brands online long before requesting a consultation. They evaluate
+                  design philosophy, project quality, customer experience and digital credibility.
+                </p>
+                <p>
+                  Brands that combine exceptional design with exceptional digital experiences create stronger emotional
+                  connections and convert more high-value enquiries.
+                </p>
+              </div>
+            </div>
+
+            <div className="lg:col-span-5">
+              <div className="overflow-hidden rounded-[10px] bg-[#efe8df] shadow-[0_18px_50px_rgba(0,0,0,0.12)]">
+                <img
+                  src={bannerImg2}
+                  alt="Living Concepts premium interior workspace with laptop"
+                  className="h-full w-full object-cover object-center"
+                  width={1200}
+                  height={800}
+                  loading="lazy"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -490,7 +526,7 @@ function LivingConceptsCaseStudyPage() {
                 See how Ace360degree supports luxury design brands across services and industries.
               </p>
               <Link
-                to="/industries_/architecture"
+                to="/industries/architecture"
                 className="mt-6 inline-flex items-center text-sm font-medium text-primary hover:underline"
               >
                 Architecture, Interior Design & Real Estate →
@@ -513,39 +549,51 @@ function LivingConceptsCaseStudyPage() {
 
       {/* FINAL CTA */}
       <section className="container mx-auto px-6 pb-24 md:pb-32">
-        <div className="relative overflow-hidden rounded-3xl border border-border/60 bg-gradient-to-br from-primary/10 via-card to-card p-10 md:p-16">
-          <div className="max-w-3xl">
-            <h2 className="text-3xl md:text-5xl font-semibold tracking-tight">
-              Design a Digital Experience That Reflects the Quality of Your Brand.
-            </h2>
-            <p className="mt-5 text-muted-foreground text-lg">
-              Whether you're an architecture firm, interior designer, luxury furniture brand or premium lifestyle
-              business, Ace360degree helps transform your expertise into digital experiences that inspire confidence
-              and generate high-value opportunities.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Link
-                to="/contact"
-                className="inline-flex items-center rounded-full bg-primary text-primary-foreground px-6 py-3 text-sm font-medium hover:opacity-90 transition"
-              >
-                Request Brand Experience Audit
-              </Link>
-              <Link
-                to="/contact"
-                className="inline-flex items-center rounded-full border border-border bg-background px-6 py-3 text-sm font-medium hover:bg-muted transition"
-              >
-                Book Discovery Call
-              </Link>
-              <Link
-                to="/industries_/architecture"
-                className="inline-flex items-center rounded-full px-6 py-3 text-sm font-medium hover:bg-muted transition"
-              >
-                Explore Architecture & Design Solutions →
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+  <div
+    className="
+      relative overflow-hidden rounded-3xl
+      border border-black/5
+      bg-[linear-gradient(163deg,rgba(255,179,48,0.25)_20%,rgba(255,179,48,0.08)_50%,#ffffff_65%,#ffffff_100%)]
+      p-10 md:p-16
+    "
+  >
+    <div className="max-w-3xl">
+      <h2 className="text-3xl font-semibold tracking-tight md:text-5xl">
+        Design a Digital Experience That Reflects the Quality of Your Brand.
+      </h2>
+
+      <p className="mt-5 text-lg text-muted-foreground">
+        Whether you're an architecture firm, interior designer, luxury
+        furniture brand or premium lifestyle business, Ace360degree helps
+        transform your expertise into digital experiences that inspire
+        confidence and generate high-value opportunities.
+      </p>
+
+      <div className="mt-8 flex flex-wrap gap-3">
+        <Link
+          to="/contact"
+          className="inline-flex items-center rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition hover:opacity-90"
+        >
+          Request Brand Experience Audit
+        </Link>
+
+        <Link
+          to="/contact"
+          className="inline-flex items-center rounded-full border border-border bg-background px-6 py-3 text-sm font-medium transition hover:bg-muted"
+        >
+          Book Discovery Call
+        </Link>
+
+        <Link
+          to="/industries/architecture"
+          className="inline-flex items-center rounded-full px-6 py-3 text-sm font-medium transition hover:bg-muted"
+        >
+          Explore Architecture &amp; Design Solutions →
+        </Link>
+      </div>
+    </div>
+  </div>
+</section>
 
       <SiteFooter />
     </div>

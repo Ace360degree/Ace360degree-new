@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import heroImg from "@/assets/case-amigo-academy-hero.jpg";
+import bannerImg from "@/assets/bannerAmingoAcademy.jpg";
 
 export const Route = createFileRoute("/case-amigo-academy")({
   head: () => ({
@@ -127,37 +128,42 @@ function AmigoCaseStudyPage() {
       <SiteHeader />
 
       {/* HERO */}
-      <section className="relative overflow-hidden border-b border-border/40">
-        <div className="absolute inset-0">
-          <img
-            src={heroImg}
-            alt="Amigo Academy — modern education ecosystem"
-            className="h-full w-full object-cover opacity-25"
-            width={1600}
-            height={912}
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/85 to-background" />
-        </div>
-        <div className="relative container mx-auto px-6 py-24 md:py-32">
-          <div className="max-w-4xl">
-            <div className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-3 py-1 text-xs uppercase tracking-[0.2em] text-primary">
-              Success Story
+      <section className="border-b border-border/40 bg-background">
+        <div className="container mx-auto px-6 py-12 md:py-16 lg:py-20">
+          <div className="grid items-start gap-10 lg:grid-cols-[1.25fr_0.75fr] lg:gap-14">
+            <div className="max-w-3xl pt-2 md:pt-6">
+              <div className="inline-flex items-center rounded-full border border-[#f0a22e]/35 px-3 py-1 text-[10px] uppercase tracking-[0.24em] text-[#f0a22e]">
+                Success Story
+              </div>
+              <h1 className="mt-5 text-4xl font-semibold leading-[0.98] tracking-tight text-foreground md:text-[3.4rem] md:leading-[0.95]">
+                Building a Future-Ready Education Brand Through Marketing, Technology & AI
+              </h1>
+              <p className="mt-5 max-w-2xl text-[15px] leading-relaxed text-muted-foreground md:text-lg">
+                Transforming admissions, student engagement, institutional branding and digital learning systems for{" "}
+                <span className="font-medium text-foreground">Amigo Academy Pvt. Ltd.</span>
+              </p>
+              <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+                {snapshot.map((s) => (
+                  <div key={s.k} className="rounded-xl border border-border/50 bg-white p-4 shadow-[0_1px_0_rgba(0,0,0,0.02)]">
+                    <div className="text-[10px] uppercase tracking-[0.22em] text-muted-foreground">{s.k}</div>
+                    <div className="mt-1 text-sm leading-snug font-medium">{s.v}</div>
+                  </div>
+                ))}
+              </div>
             </div>
-            <h1 className="mt-6 text-4xl md:text-6xl font-semibold leading-[1.05] tracking-tight">
-              Building a Future-Ready Education Brand Through Marketing, Technology & AI
-            </h1>
-            <p className="mt-6 text-lg md:text-xl text-muted-foreground max-w-3xl">
-              Transforming admissions, student engagement, institutional branding and digital learning systems for{" "}
-              <span className="text-foreground font-medium">Amigo Academy Pvt. Ltd.</span>
-            </p>
-            <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-              {snapshot.map((s) => (
-                <div key={s.k} className="rounded-xl border border-border/60 bg-card/60 p-4 backdrop-blur">
-                  <div className="text-[11px] uppercase tracking-[0.18em] text-muted-foreground">{s.k}</div>
-                  <div className="mt-1 text-sm font-medium">{s.v}</div>
-                </div>
-              ))}
-            </div>
+
+            <div className="lg:justify-self-end">
+  <div className="overflow-hidden rounded-[2px] bg-muted shadow-[0_18px_50px_rgba(0,0,0,0.08)]">
+    <img
+      src={heroImg}
+      alt="Amigo Academy team collaborating in a modern education setting"
+      className="h-[380px] w-full object-cover object-center sm:h-[450px] md:h-[520px] lg:h-[560px] lg:w-[460px]"
+      width={900}
+      height={1100}
+      loading="eager"
+    />
+  </div>
+</div>
           </div>
         </div>
       </section>
@@ -300,19 +306,34 @@ function AmigoCaseStudyPage() {
 
       {/* PARTNERSHIP TIMELINE */}
       <section className="container mx-auto px-6 py-20 md:py-28">
-        <div className="max-w-3xl">
-          <div className="text-xs uppercase tracking-[0.2em] text-primary">How the Partnership Unfolded</div>
-          <h2 className="mt-3 text-3xl md:text-4xl font-semibold tracking-tight">From Discovery to Long-Term Growth</h2>
+        <div className="grid items-start gap-10 lg:grid-cols-[1.05fr_0.85fr] lg:gap-16">
+          <div className="max-w-3xl">
+            <div className="text-xs uppercase tracking-[0.2em] text-primary">How the Partnership Unfolded</div>
+            <h2 className="mt-3 text-3xl md:text-4xl font-semibold tracking-tight">From Discovery to Long-Term Growth</h2>
+            <ol className="mt-12 relative border-l border-border/60 ml-3">
+              {unfolded.map((u, i) => (
+                <li key={u} className="pl-8 pb-8 relative last:pb-0">
+                  <span className="absolute -left-[9px] top-1 h-4 w-4 rounded-full bg-primary ring-4 ring-background" />
+                  <div className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Phase {i + 1}</div>
+                  <div className="mt-1 text-lg font-medium">{u}</div>
+                </li>
+              ))}
+            </ol>
+          </div>
+
+          <div className="lg:justify-self-end">
+            <div className="overflow-hidden rounded-[2px] bg-muted shadow-[0_18px_50px_rgba(0,0,0,0.08)]">
+              <img
+                src={bannerImg}
+                alt="Amigo Academy partners collaborating in a modern education setting"
+                className="block h-auto w-full max-w-[1660px] object-contain"
+                width={1100}
+                height={1400}
+                loading="lazy"
+              />
+            </div>
+          </div>
         </div>
-        <ol className="mt-12 relative border-l border-border/60 max-w-3xl ml-3">
-          {unfolded.map((u, i) => (
-            <li key={u} className="pl-8 pb-8 relative">
-              <span className="absolute -left-[9px] top-1 h-4 w-4 rounded-full bg-primary ring-4 ring-background" />
-              <div className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Phase {i + 1}</div>
-              <div className="mt-1 text-lg font-medium">{u}</div>
-            </li>
-          ))}
-        </ol>
       </section>
 
       {/* BLUEPRINT */}
@@ -383,7 +404,10 @@ function AmigoCaseStudyPage() {
 
       {/* FINAL CTA */}
       <section className="container mx-auto px-6 py-24 md:py-32">
-        <div className="relative overflow-hidden rounded-3xl border border-border/60 bg-gradient-to-br from-primary/10 via-card to-card p-10 md:p-16">
+        <div className="relative overflow-hidden rounded-3xl
+      border border-black/5
+      bg-[linear-gradient(163deg,rgba(255,179,48,0.25)_20%,rgba(255,179,48,0.08)_50%,#ffffff_65%,#ffffff_100%)]
+      p-10 md:p-16">
           <div className="max-w-3xl">
             <h2 className="text-3xl md:text-5xl font-semibold tracking-tight">
               Ready To Build The Future Of Education?
