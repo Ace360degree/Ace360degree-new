@@ -32,7 +32,6 @@ import { Route as IndustriesRouteImport } from './routes/industries'
 import { Route as GrowthMarketingRouteImport } from './routes/growth-marketing'
 import { Route as GrowthRouteImport } from './routes/growth'
 import { Route as EventMarketingBrandExperiencesRouteImport } from './routes/event-marketing-brand-experiences'
-import { Route as D2cRetailbrandRouteImport } from './routes/d2c-retailbrand'
 import { Route as CrmErpSolutionsRouteImport } from './routes/crm-erp-solutions'
 import { Route as CorporateFilmsVideoProductionRouteImport } from './routes/corporate-films-video-production'
 import { Route as CorporateCommunicationDesignRouteImport } from './routes/corporate-communication-design'
@@ -59,11 +58,14 @@ import { Route as AiContentMarketingSystemsRouteImport } from './routes/ai-conte
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as SuccessStoriesEnterpriseExperienceRouteImport } from './routes/success-stories.enterprise-experience'
+import { Route as IndustriesSaasTechnologyRouteImport } from './routes/industries_.saas-technology'
 import { Route as IndustriesRealEstateRouteImport } from './routes/industries_.real-estate'
 import { Route as IndustriesManufacturingRouteImport } from './routes/industries_.manufacturing'
 import { Route as IndustriesHealthcareRouteImport } from './routes/industries_.healthcare'
 import { Route as IndustriesFintechRouteImport } from './routes/industries_.fintech'
 import { Route as IndustriesEducationRouteImport } from './routes/industries_.education'
+import { Route as IndustriesD2cRetailbrandcopy2RouteImport } from './routes/industries_.d2c-retailbrand copy 2'
+import { Route as IndustriesD2cRetailbrandRouteImport } from './routes/industries_.d2c-retailbrand'
 import { Route as IndustriesArchitectureRouteImport } from './routes/industries_.architecture'
 import { Route as BlogWhyBusinessesNeedGrowthPartnerNotMarketingAgencyRouteImport } from './routes/blog.why-businesses-need-growth-partner-not-marketing-agency'
 
@@ -190,11 +192,6 @@ const EventMarketingBrandExperiencesRoute =
     path: '/event-marketing-brand-experiences',
     getParentRoute: () => rootRouteImport,
   } as any)
-const D2cRetailbrandRoute = D2cRetailbrandRouteImport.update({
-  id: '/d2c-retailbrand',
-  path: '/d2c-retailbrand',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const CrmErpSolutionsRoute = CrmErpSolutionsRouteImport.update({
   id: '/crm-erp-solutions',
   path: '/crm-erp-solutions',
@@ -333,6 +330,12 @@ const SuccessStoriesEnterpriseExperienceRoute =
     path: '/success-stories/enterprise-experience',
     getParentRoute: () => rootRouteImport,
   } as any)
+const IndustriesSaasTechnologyRoute =
+  IndustriesSaasTechnologyRouteImport.update({
+    id: '/industries_/saas-technology',
+    path: '/industries/saas-technology',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const IndustriesRealEstateRoute = IndustriesRealEstateRouteImport.update({
   id: '/industries_/real-estate',
   path: '/industries/real-estate',
@@ -358,6 +361,18 @@ const IndustriesEducationRoute = IndustriesEducationRouteImport.update({
   path: '/industries/education',
   getParentRoute: () => rootRouteImport,
 } as any)
+const IndustriesD2cRetailbrandcopy2Route =
+  IndustriesD2cRetailbrandcopy2RouteImport.update({
+    id: '/industries_/d2c-retailbrand copy 2',
+    path: '/industries/d2c-retailbrand copy 2',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const IndustriesD2cRetailbrandRoute =
+  IndustriesD2cRetailbrandRouteImport.update({
+    id: '/industries_/d2c-retailbrand',
+    path: '/industries/d2c-retailbrand',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const IndustriesArchitectureRoute = IndustriesArchitectureRouteImport.update({
   id: '/industries_/architecture',
   path: '/industries/architecture',
@@ -396,7 +411,6 @@ export interface FileRoutesByFullPath {
   '/corporate-communication-design': typeof CorporateCommunicationDesignRoute
   '/corporate-films-video-production': typeof CorporateFilmsVideoProductionRoute
   '/crm-erp-solutions': typeof CrmErpSolutionsRoute
-  '/d2c-retailbrand': typeof D2cRetailbrandRoute
   '/event-marketing-brand-experiences': typeof EventMarketingBrandExperiencesRoute
   '/growth': typeof GrowthRoute
   '/growth-marketing': typeof GrowthMarketingRoute
@@ -422,11 +436,14 @@ export interface FileRoutesByFullPath {
   '/youtube-growth-channel-strategy': typeof YoutubeGrowthChannelStrategyRoute
   '/blog/why-businesses-need-growth-partner-not-marketing-agency': typeof BlogWhyBusinessesNeedGrowthPartnerNotMarketingAgencyRoute
   '/industries/architecture': typeof IndustriesArchitectureRoute
+  '/industries/d2c-retailbrand': typeof IndustriesD2cRetailbrandRoute
+  '/industries/d2c-retailbrand copy 2': typeof IndustriesD2cRetailbrandcopy2Route
   '/industries/education': typeof IndustriesEducationRoute
   '/industries/fintech': typeof IndustriesFintechRoute
   '/industries/healthcare': typeof IndustriesHealthcareRoute
   '/industries/manufacturing': typeof IndustriesManufacturingRoute
   '/industries/real-estate': typeof IndustriesRealEstateRoute
+  '/industries/saas-technology': typeof IndustriesSaasTechnologyRoute
   '/success-stories/enterprise-experience': typeof SuccessStoriesEnterpriseExperienceRoute
 }
 export interface FileRoutesByTo {
@@ -455,7 +472,6 @@ export interface FileRoutesByTo {
   '/corporate-communication-design': typeof CorporateCommunicationDesignRoute
   '/corporate-films-video-production': typeof CorporateFilmsVideoProductionRoute
   '/crm-erp-solutions': typeof CrmErpSolutionsRoute
-  '/d2c-retailbrand': typeof D2cRetailbrandRoute
   '/event-marketing-brand-experiences': typeof EventMarketingBrandExperiencesRoute
   '/growth': typeof GrowthRoute
   '/growth-marketing': typeof GrowthMarketingRoute
@@ -481,11 +497,14 @@ export interface FileRoutesByTo {
   '/youtube-growth-channel-strategy': typeof YoutubeGrowthChannelStrategyRoute
   '/blog/why-businesses-need-growth-partner-not-marketing-agency': typeof BlogWhyBusinessesNeedGrowthPartnerNotMarketingAgencyRoute
   '/industries/architecture': typeof IndustriesArchitectureRoute
+  '/industries/d2c-retailbrand': typeof IndustriesD2cRetailbrandRoute
+  '/industries/d2c-retailbrand copy 2': typeof IndustriesD2cRetailbrandcopy2Route
   '/industries/education': typeof IndustriesEducationRoute
   '/industries/fintech': typeof IndustriesFintechRoute
   '/industries/healthcare': typeof IndustriesHealthcareRoute
   '/industries/manufacturing': typeof IndustriesManufacturingRoute
   '/industries/real-estate': typeof IndustriesRealEstateRoute
+  '/industries/saas-technology': typeof IndustriesSaasTechnologyRoute
   '/success-stories/enterprise-experience': typeof SuccessStoriesEnterpriseExperienceRoute
 }
 export interface FileRoutesById {
@@ -515,7 +534,6 @@ export interface FileRoutesById {
   '/corporate-communication-design': typeof CorporateCommunicationDesignRoute
   '/corporate-films-video-production': typeof CorporateFilmsVideoProductionRoute
   '/crm-erp-solutions': typeof CrmErpSolutionsRoute
-  '/d2c-retailbrand': typeof D2cRetailbrandRoute
   '/event-marketing-brand-experiences': typeof EventMarketingBrandExperiencesRoute
   '/growth': typeof GrowthRoute
   '/growth-marketing': typeof GrowthMarketingRoute
@@ -541,11 +559,14 @@ export interface FileRoutesById {
   '/youtube-growth-channel-strategy': typeof YoutubeGrowthChannelStrategyRoute
   '/blog/why-businesses-need-growth-partner-not-marketing-agency': typeof BlogWhyBusinessesNeedGrowthPartnerNotMarketingAgencyRoute
   '/industries_/architecture': typeof IndustriesArchitectureRoute
+  '/industries_/d2c-retailbrand': typeof IndustriesD2cRetailbrandRoute
+  '/industries_/d2c-retailbrand copy 2': typeof IndustriesD2cRetailbrandcopy2Route
   '/industries_/education': typeof IndustriesEducationRoute
   '/industries_/fintech': typeof IndustriesFintechRoute
   '/industries_/healthcare': typeof IndustriesHealthcareRoute
   '/industries_/manufacturing': typeof IndustriesManufacturingRoute
   '/industries_/real-estate': typeof IndustriesRealEstateRoute
+  '/industries_/saas-technology': typeof IndustriesSaasTechnologyRoute
   '/success-stories/enterprise-experience': typeof SuccessStoriesEnterpriseExperienceRoute
 }
 export interface FileRouteTypes {
@@ -576,7 +597,6 @@ export interface FileRouteTypes {
     | '/corporate-communication-design'
     | '/corporate-films-video-production'
     | '/crm-erp-solutions'
-    | '/d2c-retailbrand'
     | '/event-marketing-brand-experiences'
     | '/growth'
     | '/growth-marketing'
@@ -602,11 +622,14 @@ export interface FileRouteTypes {
     | '/youtube-growth-channel-strategy'
     | '/blog/why-businesses-need-growth-partner-not-marketing-agency'
     | '/industries/architecture'
+    | '/industries/d2c-retailbrand'
+    | '/industries/d2c-retailbrand copy 2'
     | '/industries/education'
     | '/industries/fintech'
     | '/industries/healthcare'
     | '/industries/manufacturing'
     | '/industries/real-estate'
+    | '/industries/saas-technology'
     | '/success-stories/enterprise-experience'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -635,7 +658,6 @@ export interface FileRouteTypes {
     | '/corporate-communication-design'
     | '/corporate-films-video-production'
     | '/crm-erp-solutions'
-    | '/d2c-retailbrand'
     | '/event-marketing-brand-experiences'
     | '/growth'
     | '/growth-marketing'
@@ -661,11 +683,14 @@ export interface FileRouteTypes {
     | '/youtube-growth-channel-strategy'
     | '/blog/why-businesses-need-growth-partner-not-marketing-agency'
     | '/industries/architecture'
+    | '/industries/d2c-retailbrand'
+    | '/industries/d2c-retailbrand copy 2'
     | '/industries/education'
     | '/industries/fintech'
     | '/industries/healthcare'
     | '/industries/manufacturing'
     | '/industries/real-estate'
+    | '/industries/saas-technology'
     | '/success-stories/enterprise-experience'
   id:
     | '__root__'
@@ -694,7 +719,6 @@ export interface FileRouteTypes {
     | '/corporate-communication-design'
     | '/corporate-films-video-production'
     | '/crm-erp-solutions'
-    | '/d2c-retailbrand'
     | '/event-marketing-brand-experiences'
     | '/growth'
     | '/growth-marketing'
@@ -720,11 +744,14 @@ export interface FileRouteTypes {
     | '/youtube-growth-channel-strategy'
     | '/blog/why-businesses-need-growth-partner-not-marketing-agency'
     | '/industries_/architecture'
+    | '/industries_/d2c-retailbrand'
+    | '/industries_/d2c-retailbrand copy 2'
     | '/industries_/education'
     | '/industries_/fintech'
     | '/industries_/healthcare'
     | '/industries_/manufacturing'
     | '/industries_/real-estate'
+    | '/industries_/saas-technology'
     | '/success-stories/enterprise-experience'
   fileRoutesById: FileRoutesById
 }
@@ -754,7 +781,6 @@ export interface RootRouteChildren {
   CorporateCommunicationDesignRoute: typeof CorporateCommunicationDesignRoute
   CorporateFilmsVideoProductionRoute: typeof CorporateFilmsVideoProductionRoute
   CrmErpSolutionsRoute: typeof CrmErpSolutionsRoute
-  D2cRetailbrandRoute: typeof D2cRetailbrandRoute
   EventMarketingBrandExperiencesRoute: typeof EventMarketingBrandExperiencesRoute
   GrowthRoute: typeof GrowthRoute
   GrowthMarketingRoute: typeof GrowthMarketingRoute
@@ -779,11 +805,14 @@ export interface RootRouteChildren {
   WebsiteDesignDevelopmentRoute: typeof WebsiteDesignDevelopmentRoute
   YoutubeGrowthChannelStrategyRoute: typeof YoutubeGrowthChannelStrategyRoute
   IndustriesArchitectureRoute: typeof IndustriesArchitectureRoute
+  IndustriesD2cRetailbrandRoute: typeof IndustriesD2cRetailbrandRoute
+  IndustriesD2cRetailbrandcopy2Route: typeof IndustriesD2cRetailbrandcopy2Route
   IndustriesEducationRoute: typeof IndustriesEducationRoute
   IndustriesFintechRoute: typeof IndustriesFintechRoute
   IndustriesHealthcareRoute: typeof IndustriesHealthcareRoute
   IndustriesManufacturingRoute: typeof IndustriesManufacturingRoute
   IndustriesRealEstateRoute: typeof IndustriesRealEstateRoute
+  IndustriesSaasTechnologyRoute: typeof IndustriesSaasTechnologyRoute
   SuccessStoriesEnterpriseExperienceRoute: typeof SuccessStoriesEnterpriseExperienceRoute
 }
 
@@ -948,13 +977,6 @@ declare module '@tanstack/react-router' {
       path: '/event-marketing-brand-experiences'
       fullPath: '/event-marketing-brand-experiences'
       preLoaderRoute: typeof EventMarketingBrandExperiencesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/d2c-retailbrand': {
-      id: '/d2c-retailbrand'
-      path: '/d2c-retailbrand'
-      fullPath: '/d2c-retailbrand'
-      preLoaderRoute: typeof D2cRetailbrandRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/crm-erp-solutions': {
@@ -1139,6 +1161,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SuccessStoriesEnterpriseExperienceRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/industries_/saas-technology': {
+      id: '/industries_/saas-technology'
+      path: '/industries/saas-technology'
+      fullPath: '/industries/saas-technology'
+      preLoaderRoute: typeof IndustriesSaasTechnologyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/industries_/real-estate': {
       id: '/industries_/real-estate'
       path: '/industries/real-estate'
@@ -1172,6 +1201,20 @@ declare module '@tanstack/react-router' {
       path: '/industries/education'
       fullPath: '/industries/education'
       preLoaderRoute: typeof IndustriesEducationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/industries_/d2c-retailbrand copy 2': {
+      id: '/industries_/d2c-retailbrand copy 2'
+      path: '/industries/d2c-retailbrand copy 2'
+      fullPath: '/industries/d2c-retailbrand copy 2'
+      preLoaderRoute: typeof IndustriesD2cRetailbrandcopy2RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/industries_/d2c-retailbrand': {
+      id: '/industries_/d2c-retailbrand'
+      path: '/industries/d2c-retailbrand'
+      fullPath: '/industries/d2c-retailbrand'
+      preLoaderRoute: typeof IndustriesD2cRetailbrandRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/industries_/architecture': {
@@ -1228,7 +1271,6 @@ const rootRouteChildren: RootRouteChildren = {
   CorporateCommunicationDesignRoute: CorporateCommunicationDesignRoute,
   CorporateFilmsVideoProductionRoute: CorporateFilmsVideoProductionRoute,
   CrmErpSolutionsRoute: CrmErpSolutionsRoute,
-  D2cRetailbrandRoute: D2cRetailbrandRoute,
   EventMarketingBrandExperiencesRoute: EventMarketingBrandExperiencesRoute,
   GrowthRoute: GrowthRoute,
   GrowthMarketingRoute: GrowthMarketingRoute,
@@ -1255,11 +1297,14 @@ const rootRouteChildren: RootRouteChildren = {
   WebsiteDesignDevelopmentRoute: WebsiteDesignDevelopmentRoute,
   YoutubeGrowthChannelStrategyRoute: YoutubeGrowthChannelStrategyRoute,
   IndustriesArchitectureRoute: IndustriesArchitectureRoute,
+  IndustriesD2cRetailbrandRoute: IndustriesD2cRetailbrandRoute,
+  IndustriesD2cRetailbrandcopy2Route: IndustriesD2cRetailbrandcopy2Route,
   IndustriesEducationRoute: IndustriesEducationRoute,
   IndustriesFintechRoute: IndustriesFintechRoute,
   IndustriesHealthcareRoute: IndustriesHealthcareRoute,
   IndustriesManufacturingRoute: IndustriesManufacturingRoute,
   IndustriesRealEstateRoute: IndustriesRealEstateRoute,
+  IndustriesSaasTechnologyRoute: IndustriesSaasTechnologyRoute,
   SuccessStoriesEnterpriseExperienceRoute:
     SuccessStoriesEnterpriseExperienceRoute,
 }
