@@ -31,17 +31,16 @@ import {
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 
-import heroImg from "@/assets/industry-manufacturing.jpg";
-import caseRexello from "@/assets/case-rexello.jpg";
-import caseCosmos from "@/assets/case-cosmos.jpg";
+import heroImg from "@/assets/industry-manufacturing.666.jpg";
+import caseRexello from "@/assets/case-rexello.777.jpg";
+import caseCosmos from "@/assets/case-cosmos.555.jpg";
 
 export const Route = createFileRoute("/industries_/manufacturing")({
   component: ManufacturingPage,
   head: () => ({
     meta: [
       {
-        title:
-          "Marketing, Technology & AI Solutions for Manufacturing Companies | Ace360degree",
+        title: "Marketing, Technology & AI Solutions for Manufacturing Companies | Ace360degree",
       },
       {
         name: "description",
@@ -133,54 +132,68 @@ const sectors = [
 const challenges = [
   {
     title: "Low Digital Visibility",
-    body:
-      "Strong product, weak digital presence. Buyers, distributors and exporters can't find you when they're evaluating suppliers.",
+    body: "Strong product, weak digital presence. Buyers, distributors and exporters can't find you when they're evaluating suppliers.",
     solution:
       "Industrial SEO, technical content, B2B PR and category authority building across India and export markets.",
   },
   {
     title: "Inconsistent Lead Pipeline",
-    body:
-      "Sales teams depend on referrals and trade shows. Inbound enquiries are unpredictable and unqualified.",
+    body: "Sales teams depend on referrals and trade shows. Inbound enquiries are unpredictable and unqualified.",
     solution:
       "Multi-channel demand generation engine — search, LinkedIn, programmatic, exporter directories and intent-based outreach.",
   },
   {
     title: "Outdated Brand & Catalogues",
-    body:
-      "Legacy identity, dated brochures and PDFs no longer command premium positioning with global buyers.",
+    body: "Legacy identity, dated brochures and PDFs no longer command premium positioning with global buyers.",
     solution:
       "Refreshed industrial brand system, product storytelling, technical catalogues, films and exhibition assets.",
   },
   {
     title: "Disconnected Tech Stack",
-    body:
-      "ERP, CRM, dealer systems and website operate in silos — slowing quotes, follow-ups and reporting.",
+    body: "ERP, CRM, dealer systems and website operate in silos — slowing quotes, follow-ups and reporting.",
     solution:
       "Unified web, CRM, dealer & distributor portals integrated with ERP for one source of operational truth.",
   },
   {
     title: "Export & Global Growth",
-    body:
-      "Ambitions are global, but the digital footprint, language readiness and lead infrastructure are local.",
+    body: "Ambitions are global, but the digital footprint, language readiness and lead infrastructure are local.",
     solution:
       "Export-ready websites, geo-targeted campaigns, RFQ funnels and global trade lead generation programs.",
   },
   {
     title: "AI Readiness Gap",
-    body:
-      "Leadership knows AI matters — but isn't sure where it actually moves the needle inside a manufacturing business.",
+    body: "Leadership knows AI matters — but isn't sure where it actually moves the needle inside a manufacturing business.",
     solution:
       "AI readiness assessment, use-case roadmap and pragmatic AI deployment across sales, ops and customer experience.",
   },
 ];
 
 const framework = [
-  { step: "01", title: "Diagnose", body: "Understand business, plant, products, channels and growth gaps." },
-  { step: "02", title: "Position", body: "Sharpen brand, story and category positioning for B2B buyers." },
-  { step: "03", title: "Build", body: "Modern website, dealer portals, CRM, content and technology backbone." },
-  { step: "04", title: "Generate", body: "Run search, LinkedIn, export and demand generation engines." },
-  { step: "05", title: "Scale", body: "Layer AI, automation and analytics for compounding growth." },
+  {
+    step: "01",
+    title: "Diagnose",
+    body: "Understand business, plant, products, channels and growth gaps.",
+  },
+  {
+    step: "02",
+    title: "Position",
+    body: "Sharpen brand, story and category positioning for B2B buyers.",
+  },
+  {
+    step: "03",
+    title: "Build",
+    body: "Modern website, dealer portals, CRM, content and technology backbone.",
+  },
+  {
+    step: "04",
+    title: "Generate",
+    body: "Run search, LinkedIn, export and demand generation engines.",
+  },
+  {
+    step: "05",
+    title: "Scale",
+    body: "Layer AI, automation and analytics for compounding growth.",
+  },
 ];
 
 const capabilities = [
@@ -231,10 +244,26 @@ const capabilities = [
 ];
 
 const reasons = [
-  { icon: Factory, title: "Deep Manufacturing DNA", body: "Years of working with industrial, engineering and process manufacturing brands across India and global markets." },
-  { icon: Workflow, title: "Marketing + Tech + AI Under One Roof", body: "One strategic partner across brand, growth, platforms and AI — no agency hopping." },
-  { icon: ShieldCheck, title: "Executive-Grade Governance", body: "Senior leadership embedded on every account. Built for MDs, CEOs and business owners." },
-  { icon: Globe2, title: "Built For India & Export Markets", body: "Programs designed for domestic distribution networks and global export pipelines alike." },
+  {
+    icon: Factory,
+    title: "Deep Manufacturing DNA",
+    body: "Years of working with industrial, engineering and process manufacturing brands across India and global markets.",
+  },
+  {
+    icon: Workflow,
+    title: "Marketing + Tech + AI Under One Roof",
+    body: "One strategic partner across brand, growth, platforms and AI — no agency hopping.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Executive-Grade Governance",
+    body: "Senior leadership embedded on every account. Built for MDs, CEOs and business owners.",
+  },
+  {
+    icon: Globe2,
+    title: "Built For India & Export Markets",
+    body: "Programs designed for domestic distribution networks and global export pipelines alike.",
+  },
 ];
 
 const faqs = [
@@ -291,9 +320,7 @@ function FaqItem({ q, a }: { q: string; a: string }) {
           <Plus className="h-5 w-5 shrink-0 text-primary" />
         )}
       </button>
-      {open && (
-        <p className="pb-6 pr-10 text-base leading-relaxed text-muted-foreground">{a}</p>
-      )}
+      {open && <p className="pb-6 pr-10 text-base leading-relaxed text-muted-foreground">{a}</p>}
     </div>
   );
 }
@@ -306,48 +333,59 @@ function ManufacturingPage() {
 
       {/* HERO */}
       <section className="relative overflow-hidden border-b border-border/60 bg-gradient-to-b from-background via-background to-muted/30">
-        <div className="absolute inset-0 -z-10 opacity-[0.08]">
-          <img src={heroImg} alt="" className="h-full w-full object-cover" />
-        </div>
         <div className="mx-auto max-w-7xl px-6 pb-20 pt-28 lg:pt-32">
-          <Reveal>
-            <div className="inline-flex items-center gap-2 rounded-full border border-border/70 bg-background/70 px-4 py-1.5 text-xs uppercase tracking-[0.18em] text-muted-foreground backdrop-blur">
-              <Factory className="h-3.5 w-3.5 text-primary" />
-              Industry Solutions · Manufacturing
+          <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-14">
+            <div className="lg:col-span-7">
+              <Reveal>
+                <div className="inline-flex items-center gap-2 rounded-full border border-border/70 bg-background/70 px-4 py-1.5 text-xs uppercase tracking-[0.18em] text-muted-foreground backdrop-blur">
+                  <Factory className="h-3.5 w-3.5 text-primary" />
+                  Industry Solutions · Manufacturing
+                </div>
+              </Reveal>
+
+              <Reveal delay={80}>
+                <h1 className="mt-8 max-w-5xl font-serif text-5xl leading-[1.05] tracking-tight text-foreground md:text-6xl lg:text-7xl">
+                  Marketing, Technology & AI Solutions for{" "}
+                  <span className="italic text-primary">Manufacturing</span> Companies
+                </h1>
+              </Reveal>
+
+              <Reveal delay={160}>
+                <p className="mt-7 max-w-3xl text-lg leading-relaxed text-muted-foreground md:text-xl">
+                  A strategic growth partner for industrial and manufacturing businesses — combining
+                  brand, demand generation, modern technology platforms and AI to build pipeline,
+                  productivity and global presence.
+                </p>
+              </Reveal>
+
+              <Reveal delay={240}>
+                <div className="mt-10 flex flex-wrap gap-3">
+                  <Link
+                    to="/contact"
+                    className="inline-flex items-center gap-2 rounded-full bg-foreground px-6 py-3 text-sm font-medium text-background transition hover:bg-foreground/90"
+                  >
+                    Book Discovery Call <ArrowRight className="h-4 w-4" />
+                  </Link>
+                  <Link
+                    to="/portfolio"
+                    className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-6 py-3 text-sm font-medium text-foreground transition hover:bg-muted"
+                  >
+                    View Manufacturing Work <ArrowUpRight className="h-4 w-4" />
+                  </Link>
+                </div>
+              </Reveal>
             </div>
-          </Reveal>
 
-          <Reveal delay={80}>
-            <h1 className="mt-8 max-w-5xl font-serif text-5xl leading-[1.05] tracking-tight text-foreground md:text-6xl lg:text-7xl">
-              Marketing, Technology & AI Solutions for{" "}
-              <span className="italic text-primary">Manufacturing</span> Companies
-            </h1>
-          </Reveal>
-
-          <Reveal delay={160}>
-            <p className="mt-7 max-w-3xl text-lg leading-relaxed text-muted-foreground md:text-xl">
-              A strategic growth partner for industrial and manufacturing businesses — combining
-              brand, demand generation, modern technology platforms and AI to build pipeline,
-              productivity and global presence.
-            </p>
-          </Reveal>
-
-          <Reveal delay={240}>
-            <div className="mt-10 flex flex-wrap gap-3">
-              <Link
-                to="/contact"
-                className="inline-flex items-center gap-2 rounded-full bg-foreground px-6 py-3 text-sm font-medium text-background transition hover:bg-foreground/90"
-              >
-                Book Discovery Call <ArrowRight className="h-4 w-4" />
-              </Link>
-              <Link
-                to="/portfolio"
-                className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-6 py-3 text-sm font-medium text-foreground transition hover:bg-muted"
-              >
-                View Manufacturing Work <ArrowUpRight className="h-4 w-4" />
-              </Link>
-            </div>
-          </Reveal>
+            <Reveal delay={160} className="lg:col-span-5">
+              <div className="overflow-hidden rounded-2xl border border-border/70 bg-muted shadow-xl">
+                <img
+                  src={heroImg}
+                  alt="Automated manufacturing facility with industrial machinery"
+                  className="aspect-[4/3] w-full object-cover"
+                />
+              </div>
+            </Reveal>
+          </div>
 
           <Reveal delay={320}>
             <div className="mt-16 grid grid-cols-2 gap-6 border-t border-border/60 pt-10 md:grid-cols-4">
@@ -374,9 +412,7 @@ function ManufacturingPage() {
         <div className="mx-auto max-w-7xl px-6 py-24">
           <div className="grid gap-14 lg:grid-cols-12">
             <Reveal className="lg:col-span-5">
-              <div className="text-xs uppercase tracking-[0.18em] text-primary">
-                The Shift
-              </div>
+              <div className="text-xs uppercase tracking-[0.18em] text-primary">The Shift</div>
               <h2 className="mt-4 font-serif text-4xl leading-tight text-foreground md:text-5xl">
                 Manufacturing has changed. Most manufacturers haven't.
               </h2>
@@ -549,8 +585,16 @@ function ManufacturingPage() {
             </div>
             <div className="mt-6 grid gap-6 md:grid-cols-2">
               {[
-                { name: "Rexello Castors", body: "Brand, digital & growth partner for India's leading castor & wheel manufacturer.", img: caseRexello },
-                { name: "Cosmos Seals India", body: "Industrial brand, digital infrastructure and B2B lead generation for precision sealing solutions.", img: caseCosmos },
+                {
+                  name: "Rexello Castors",
+                  body: "Brand, digital & growth partner for India's leading castor & wheel manufacturer.",
+                  img: caseRexello,
+                },
+                {
+                  name: "Cosmos Seals India",
+                  body: "Industrial brand, digital infrastructure and B2B lead generation for precision sealing solutions.",
+                  img: caseCosmos,
+                },
               ].map((p) => (
                 <div
                   key={p.name}
@@ -652,9 +696,7 @@ function ManufacturingPage() {
       <section className="border-b border-border/60 bg-muted/20">
         <div className="mx-auto max-w-7xl px-6 py-24">
           <Reveal>
-            <div className="text-xs uppercase tracking-[0.18em] text-primary">
-              Related Services
-            </div>
+            <div className="text-xs uppercase tracking-[0.18em] text-primary">Related Services</div>
             <h2 className="mt-4 max-w-3xl font-serif text-4xl leading-tight text-foreground md:text-5xl">
               Services manufacturing leaders engage us for.
             </h2>
@@ -721,7 +763,12 @@ function ManufacturingPage() {
       </section>
 
       {/* FINAL CTA */}
-      <section className="bg-gradient-to-br from-primary/10 via-background to-background">
+      <section
+        style={{
+          background:
+            "linear-gradient(135deg, rgb(255 179 48 / 10%) 0%, #FCFCFA 50%, #FCFCFA 100%)",
+        }}
+      >
         <div className="mx-auto max-w-5xl px-6 py-28 text-center">
           <Reveal>
             <div className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-4 py-1.5 text-xs uppercase tracking-[0.18em] text-primary">

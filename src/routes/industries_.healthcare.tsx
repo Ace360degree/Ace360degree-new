@@ -36,8 +36,8 @@ import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 
 import heroImg from "@/assets/industry-healthcare.jpg";
-import caseHealthus from "@/assets/case-healthus.jpg";
-import caseOpus from "@/assets/case-opus-dental.jpg";
+import caseHealthus from "@/assets/case-healthus.123.jpg";
+import caseOpus from "@/assets/case-opus-dental.123.jpg";
 import caseDoctor from "@/assets/case-doctor-branding.jpg";
 
 export const Route = createFileRoute("/industries_/healthcare")({
@@ -680,62 +680,61 @@ function HealthcarePage() {
 
       {/* SECTION 8 — Success Stories */}
       <section className="border-b border-foreground/10 py-20 sm:py-28">
-        <div className="container mx-auto px-4">
-          <Reveal>
-            <div className="text-xs uppercase tracking-[0.18em] text-foreground/60">
-              08 — Healthcare Marketing Experience
+  <div className="container mx-auto px-4">
+    <Reveal>
+      <div className="text-xs uppercase tracking-[0.18em] text-foreground/60">
+        08 — Healthcare Marketing Experience
+      </div>
+
+      <h2 className="mt-3 max-w-3xl font-serif text-3xl leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+        Success Stories
+      </h2>
+    </Reveal>
+
+    <div className="mx-auto mt-12 grid max-w-[1400px] grid-cols-1 gap-6 lg:grid-cols-2">
+      {[
+        {
+          img: caseHealthus,
+          tag: "HealthTech",
+          title: "Healthus.ai",
+          body: "Integrated healthcare growth strategy focused on patient acquisition and digital marketing.",
+        },
+        {
+          img: caseOpus,
+          tag: "Dental",
+          title: "OPUS Dental",
+          body: "Digital branding and marketing initiatives supporting visibility and patient engagement.",
+        },
+      ].map((c, i) => (
+        <Reveal key={c.title} delay={i * 80}>
+          <article className="group h-full overflow-hidden rounded-2xl border border-foreground/10 bg-background transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
+            <div className="relative aspect-[16/9] overflow-hidden">
+              <img
+                src={c.img}
+                alt={c.title}
+                className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+
+              <div className="absolute left-4 top-4 rounded-full bg-background/90 px-3 py-1 text-xs font-medium text-foreground backdrop-blur">
+                {c.tag}
+              </div>
             </div>
-            <h2 className="mt-3 max-w-3xl font-serif text-3xl leading-tight tracking-tight sm:text-4xl lg:text-5xl">
-              Success Stories
-            </h2>
-          </Reveal>
-          <div className="mt-12 grid gap-6 lg:grid-cols-3">
-            {[
-              {
-                img: caseHealthus,
-                tag: "HealthTech",
-                title: "Healthus.ai",
-                body: "Integrated healthcare growth strategy focused on patient acquisition and digital marketing.",
-              },
-              {
-                img: caseOpus,
-                tag: "Dental",
-                title: "OPUS Dental",
-                body: "Digital branding and marketing initiatives supporting visibility and patient engagement.",
-              },
-              {
-                img: caseDoctor,
-                tag: "Doctor Branding",
-                title: "Healthcare Professional Branding",
-                body: "Supporting doctors and healthcare professionals with digital presence and communication strategies.",
-              },
-            ].map((c, i) => (
-              <Reveal key={c.title} delay={i * 80}>
-                <div className="group h-full overflow-hidden rounded-2xl border border-foreground/10 bg-background transition-all hover:-translate-y-1 hover:shadow-2xl">
-                  <div className="relative aspect-[4/3] overflow-hidden">
-                    <img
-                      src={c.img}
-                      alt={c.title}
-                      className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                    />
-                    <div className="absolute left-4 top-4 rounded-full bg-background/90 px-3 py-1 text-xs font-medium text-foreground backdrop-blur">
-                      {c.tag}
-                    </div>
-                  </div>
-                  <div className="p-6">
-                    <h3 className="font-serif text-xl tracking-tight text-foreground">
-                      {c.title}
-                    </h3>
-                    <p className="mt-3 text-sm leading-relaxed text-foreground/70">
-                      {c.body}
-                    </p>
-                  </div>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
+
+            <div className="p-6">
+              <h3 className="font-serif text-xl tracking-tight text-foreground">
+                {c.title}
+              </h3>
+
+              <p className="mt-3 text-sm leading-relaxed text-foreground/70">
+                {c.body}
+              </p>
+            </div>
+          </article>
+        </Reveal>
+      ))}
+    </div>
+  </div>
+</section>
 
       {/* SECTION 9 — Why Choose */}
       <section className="border-b border-foreground/10 bg-foreground/[0.02] py-20 sm:py-28">
