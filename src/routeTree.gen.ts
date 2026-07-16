@@ -66,11 +66,13 @@ import { Route as AiContentMarketingSystemsRouteImport } from './routes/ai-conte
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as SuccessStoriesEnterpriseExperienceRouteImport } from './routes/success-stories.enterprise-experience'
+import { Route as IndustriesSaasTechnologyRouteImport } from './routes/industries_.saas-technology'
 import { Route as IndustriesRealEstateRouteImport } from './routes/industries_.real-estate'
 import { Route as IndustriesManufacturingRouteImport } from './routes/industries_.manufacturing'
 import { Route as IndustriesHealthcareRouteImport } from './routes/industries_.healthcare'
 import { Route as IndustriesFintechRouteImport } from './routes/industries_.fintech'
 import { Route as IndustriesEducationRouteImport } from './routes/industries_.education'
+import { Route as IndustriesD2cRetailbrandcopy2RouteImport } from './routes/industries_.d2c-retailbrand copy 2'
 import { Route as IndustriesD2cRetailbrandRouteImport } from './routes/industries_.d2c-retailbrand'
 import { Route as IndustriesArchitectureRouteImport } from './routes/industries_.architecture'
 import { Route as BlogWhyBusinessesNeedGrowthPartnerNotMarketingAgencyRouteImport } from './routes/blog.why-businesses-need-growth-partner-not-marketing-agency'
@@ -373,6 +375,12 @@ const SuccessStoriesEnterpriseExperienceRoute =
     path: '/success-stories/enterprise-experience',
     getParentRoute: () => rootRouteImport,
   } as any)
+const IndustriesSaasTechnologyRoute =
+  IndustriesSaasTechnologyRouteImport.update({
+    id: '/industries_/saas-technology',
+    path: '/industries/saas-technology',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const IndustriesRealEstateRoute = IndustriesRealEstateRouteImport.update({
   id: '/industries_/real-estate',
   path: '/industries/real-estate',
@@ -398,6 +406,12 @@ const IndustriesEducationRoute = IndustriesEducationRouteImport.update({
   path: '/industries/education',
   getParentRoute: () => rootRouteImport,
 } as any)
+const IndustriesD2cRetailbrandcopy2Route =
+  IndustriesD2cRetailbrandcopy2RouteImport.update({
+    id: '/industries_/d2c-retailbrand copy 2',
+    path: '/industries/d2c-retailbrand copy 2',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const IndustriesD2cRetailbrandRoute =
   IndustriesD2cRetailbrandRouteImport.update({
     id: '/industries_/d2c-retailbrand',
@@ -476,11 +490,13 @@ export interface FileRoutesByFullPath {
   '/blog/why-businesses-need-growth-partner-not-marketing-agency': typeof BlogWhyBusinessesNeedGrowthPartnerNotMarketingAgencyRoute
   '/industries/architecture': typeof IndustriesArchitectureRoute
   '/industries/d2c-retailbrand': typeof IndustriesD2cRetailbrandRoute
+  '/industries/d2c-retailbrand copy 2': typeof IndustriesD2cRetailbrandcopy2Route
   '/industries/education': typeof IndustriesEducationRoute
   '/industries/fintech': typeof IndustriesFintechRoute
   '/industries/healthcare': typeof IndustriesHealthcareRoute
   '/industries/manufacturing': typeof IndustriesManufacturingRoute
   '/industries/real-estate': typeof IndustriesRealEstateRoute
+  '/industries/saas-technology': typeof IndustriesSaasTechnologyRoute
   '/success-stories/enterprise-experience': typeof SuccessStoriesEnterpriseExperienceRoute
 }
 export interface FileRoutesByTo {
@@ -543,11 +559,13 @@ export interface FileRoutesByTo {
   '/blog/why-businesses-need-growth-partner-not-marketing-agency': typeof BlogWhyBusinessesNeedGrowthPartnerNotMarketingAgencyRoute
   '/industries/architecture': typeof IndustriesArchitectureRoute
   '/industries/d2c-retailbrand': typeof IndustriesD2cRetailbrandRoute
+  '/industries/d2c-retailbrand copy 2': typeof IndustriesD2cRetailbrandcopy2Route
   '/industries/education': typeof IndustriesEducationRoute
   '/industries/fintech': typeof IndustriesFintechRoute
   '/industries/healthcare': typeof IndustriesHealthcareRoute
   '/industries/manufacturing': typeof IndustriesManufacturingRoute
   '/industries/real-estate': typeof IndustriesRealEstateRoute
+  '/industries/saas-technology': typeof IndustriesSaasTechnologyRoute
   '/success-stories/enterprise-experience': typeof SuccessStoriesEnterpriseExperienceRoute
 }
 export interface FileRoutesById {
@@ -611,11 +629,13 @@ export interface FileRoutesById {
   '/blog/why-businesses-need-growth-partner-not-marketing-agency': typeof BlogWhyBusinessesNeedGrowthPartnerNotMarketingAgencyRoute
   '/industries_/architecture': typeof IndustriesArchitectureRoute
   '/industries_/d2c-retailbrand': typeof IndustriesD2cRetailbrandRoute
+  '/industries_/d2c-retailbrand copy 2': typeof IndustriesD2cRetailbrandcopy2Route
   '/industries_/education': typeof IndustriesEducationRoute
   '/industries_/fintech': typeof IndustriesFintechRoute
   '/industries_/healthcare': typeof IndustriesHealthcareRoute
   '/industries_/manufacturing': typeof IndustriesManufacturingRoute
   '/industries_/real-estate': typeof IndustriesRealEstateRoute
+  '/industries_/saas-technology': typeof IndustriesSaasTechnologyRoute
   '/success-stories/enterprise-experience': typeof SuccessStoriesEnterpriseExperienceRoute
 }
 export interface FileRouteTypes {
@@ -680,11 +700,13 @@ export interface FileRouteTypes {
     | '/blog/why-businesses-need-growth-partner-not-marketing-agency'
     | '/industries/architecture'
     | '/industries/d2c-retailbrand'
+    | '/industries/d2c-retailbrand copy 2'
     | '/industries/education'
     | '/industries/fintech'
     | '/industries/healthcare'
     | '/industries/manufacturing'
     | '/industries/real-estate'
+    | '/industries/saas-technology'
     | '/success-stories/enterprise-experience'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -747,11 +769,13 @@ export interface FileRouteTypes {
     | '/blog/why-businesses-need-growth-partner-not-marketing-agency'
     | '/industries/architecture'
     | '/industries/d2c-retailbrand'
+    | '/industries/d2c-retailbrand copy 2'
     | '/industries/education'
     | '/industries/fintech'
     | '/industries/healthcare'
     | '/industries/manufacturing'
     | '/industries/real-estate'
+    | '/industries/saas-technology'
     | '/success-stories/enterprise-experience'
   id:
     | '__root__'
@@ -814,11 +838,13 @@ export interface FileRouteTypes {
     | '/blog/why-businesses-need-growth-partner-not-marketing-agency'
     | '/industries_/architecture'
     | '/industries_/d2c-retailbrand'
+    | '/industries_/d2c-retailbrand copy 2'
     | '/industries_/education'
     | '/industries_/fintech'
     | '/industries_/healthcare'
     | '/industries_/manufacturing'
     | '/industries_/real-estate'
+    | '/industries_/saas-technology'
     | '/success-stories/enterprise-experience'
   fileRoutesById: FileRoutesById
 }
@@ -881,11 +907,13 @@ export interface RootRouteChildren {
   YoutubeGrowthChannelStrategyRoute: typeof YoutubeGrowthChannelStrategyRoute
   IndustriesArchitectureRoute: typeof IndustriesArchitectureRoute
   IndustriesD2cRetailbrandRoute: typeof IndustriesD2cRetailbrandRoute
+  IndustriesD2cRetailbrandcopy2Route: typeof IndustriesD2cRetailbrandcopy2Route
   IndustriesEducationRoute: typeof IndustriesEducationRoute
   IndustriesFintechRoute: typeof IndustriesFintechRoute
   IndustriesHealthcareRoute: typeof IndustriesHealthcareRoute
   IndustriesManufacturingRoute: typeof IndustriesManufacturingRoute
   IndustriesRealEstateRoute: typeof IndustriesRealEstateRoute
+  IndustriesSaasTechnologyRoute: typeof IndustriesSaasTechnologyRoute
   SuccessStoriesEnterpriseExperienceRoute: typeof SuccessStoriesEnterpriseExperienceRoute
 }
 
@@ -1286,6 +1314,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SuccessStoriesEnterpriseExperienceRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/industries_/saas-technology': {
+      id: '/industries_/saas-technology'
+      path: '/industries/saas-technology'
+      fullPath: '/industries/saas-technology'
+      preLoaderRoute: typeof IndustriesSaasTechnologyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/industries_/real-estate': {
       id: '/industries_/real-estate'
       path: '/industries/real-estate'
@@ -1319,6 +1354,13 @@ declare module '@tanstack/react-router' {
       path: '/industries/education'
       fullPath: '/industries/education'
       preLoaderRoute: typeof IndustriesEducationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/industries_/d2c-retailbrand copy 2': {
+      id: '/industries_/d2c-retailbrand copy 2'
+      path: '/industries/d2c-retailbrand copy 2'
+      fullPath: '/industries/d2c-retailbrand copy 2'
+      preLoaderRoute: typeof IndustriesD2cRetailbrandcopy2RouteImport
       parentRoute: typeof rootRouteImport
     }
     '/industries_/d2c-retailbrand': {
@@ -1417,11 +1459,13 @@ const rootRouteChildren: RootRouteChildren = {
   YoutubeGrowthChannelStrategyRoute: YoutubeGrowthChannelStrategyRoute,
   IndustriesArchitectureRoute: IndustriesArchitectureRoute,
   IndustriesD2cRetailbrandRoute: IndustriesD2cRetailbrandRoute,
+  IndustriesD2cRetailbrandcopy2Route: IndustriesD2cRetailbrandcopy2Route,
   IndustriesEducationRoute: IndustriesEducationRoute,
   IndustriesFintechRoute: IndustriesFintechRoute,
   IndustriesHealthcareRoute: IndustriesHealthcareRoute,
   IndustriesManufacturingRoute: IndustriesManufacturingRoute,
   IndustriesRealEstateRoute: IndustriesRealEstateRoute,
+  IndustriesSaasTechnologyRoute: IndustriesSaasTechnologyRoute,
   SuccessStoriesEnterpriseExperienceRoute:
     SuccessStoriesEnterpriseExperienceRoute,
 }
