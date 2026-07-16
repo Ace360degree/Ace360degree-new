@@ -1,3 +1,4 @@
+import { Link } from "@tanstack/react-router";
 import { MapPin, Mail, Phone, Linkedin, Instagram, Youtube, Facebook, Twitter } from "lucide-react";
 import footerLogo from "@/assets/footer-logo.png";
 
@@ -145,11 +146,11 @@ export function SiteFooter() {
             <div>
               <h4 className="text-white/80 text-sm font-semibold uppercase tracking-widest mb-6">Policies</h4>
               <ul className="space-y-3.5 text-sm text-white/50">
-                <li><a className="hover:text-white transition cursor-pointer">Terms & Condition</a></li>
-                <li><a className="hover:text-white transition cursor-pointer">Privacy</a></li>
-                <li><a className="hover:text-white transition cursor-pointer">Disclaimer</a></li>
-                <li><a className="hover:text-white transition cursor-pointer">Approvals</a></li>
-                <li><a className="hover:text-white transition cursor-pointer">Refunds</a></li>
+                <li><Link to="/terms-condition" className="hover:text-white transition">Terms & Condition</Link></li>
+                <li><Link to="/privacy" className="hover:text-white transition">Privacy</Link></li>
+                <li><Link to="/disclaimer" className="hover:text-white transition">Disclaimer</Link></li>
+                <li><Link to="/approvals" className="hover:text-white transition">Approvals</Link></li>
+                <li><Link to="/refunds" className="hover:text-white transition">Refunds</Link></li>
               </ul>
             </div>
           </div>

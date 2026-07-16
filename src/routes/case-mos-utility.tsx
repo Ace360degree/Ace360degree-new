@@ -1,8 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
-import caseMos from "@/assets/case-mos.jpg";
-import heroMesh from "@/assets/hero-mesh.jpg";
+import caseMos from "@/assets/MosHeroy1.jpg";
+import heroMesh from "@/assets/hero-meshy1.jpg";
+import bannerMos from "@/assets/bannerMos1.jpg";
 
 export const Route = createFileRoute("/case-mos-utility")({
   head: () => ({
@@ -410,30 +411,59 @@ function MosCaseStudyPage() {
       </section>
 
       {/* 7. TIMELINE */}
-      <section className="bg-light">
-        <div className="mx-auto max-w-7xl px-6 py-24">
-          <div className="max-w-2xl">
-            <span className="text-[11px] tracking-[0.3em] uppercase text-brand font-semibold">
-              Key Deliverables Timeline
-            </span>
-            <h2 className="mt-3 font-serif text-4xl md:text-5xl leading-tight">
-              How the partnership unfolded.
-            </h2>
-          </div>
-          <ol className="mt-12 border-l border-dark/15 ml-3">
-            {timeline.map((t) => (
-              <li key={t.phase} className="relative pl-8 pb-10 last:pb-0">
-                <span className="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-brand" />
-                <p className="text-[11px] uppercase tracking-[0.3em] text-brand font-semibold">
-                  {t.phase}
-                </p>
-                <h3 className="mt-2 font-serif text-2xl">{t.title}</h3>
-                <p className="mt-2 text-dark/70 text-sm max-w-2xl leading-relaxed">{t.body}</p>
-              </li>
-            ))}
-          </ol>
+      <section className="bg-[#fbfaf7]">
+  <div className="mx-auto max-w-[1540px] px-8 py-14 md:px-10 lg:px-12">
+    <div className="grid items-start gap-14 lg:grid-cols-[1fr_1fr] lg:gap-20">
+      {/* Left content */}
+      <div className="max-w-[760px]">
+        <span className="text-[11px] tracking-[0.3em] uppercase text-brand font-semibold">
+          Key Deliverables Timeline
+        </span>
+
+        <h2 className="mt-3 font-serif text-4xl md:text-5xl leading-tight">
+          How the partnership unfolded.
+        </h2>
+
+        <ol className="relative ml-3 mt-10 border-l border-[#dedbd5]">
+          {timeline.map((item, index) => (
+            <li
+              key={item.phase}
+              className="relative pb-8 pl-8 last:pb-0"
+            >
+              <span className="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-brand" />
+
+              <p className="text-[8px] font-semibold uppercase tracking-[0.34em] text-[#f2a400]">
+                {item.phase}
+              </p>
+
+              <h3 className="mt-2 font-serif text-2xl">
+                {item.title}
+              </h3>
+
+              <p className="mt-2 text-dark/70 text-sm max-w-2xl leading-relaxed">
+                {item.body}
+              </p>
+            </li>
+          ))}
+        </ol>
+      </div>
+
+      {/* Right image */}
+      <div className="flex justify-center lg:justify-end">
+        <div className="w-full max-w-[690px] overflow-hidden rounded-[24px] bg-white">
+          <img
+            src={bannerMos}
+            alt="MOS Utility business presentation and collaboration visual"
+            className="block h-[300px] w-full object-cover object-center sm:h-[360px] lg:h-[430px]"
+            width={1400}
+            height={860}
+            loading="lazy"
+          />
         </div>
-      </section>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* 8. WHY THIS PROJECT MATTERS */}
       <section className="bg-canvas">
