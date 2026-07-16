@@ -61,6 +61,7 @@ import { Route as IndustriesManufacturingRouteImport } from './routes/industries
 import { Route as IndustriesHealthcareRouteImport } from './routes/industries_.healthcare'
 import { Route as IndustriesFintechRouteImport } from './routes/industries_.fintech'
 import { Route as IndustriesEducationRouteImport } from './routes/industries_.education'
+import { Route as IndustriesD2cRetailbrandRouteImport } from './routes/industries_.d2c-retailbrand'
 import { Route as IndustriesArchitectureRouteImport } from './routes/industries_.architecture'
 import { Route as BlogWhyBusinessesNeedGrowthPartnerNotMarketingAgencyRouteImport } from './routes/blog.why-businesses-need-growth-partner-not-marketing-agency'
 
@@ -340,6 +341,12 @@ const IndustriesEducationRoute = IndustriesEducationRouteImport.update({
   path: '/industries/education',
   getParentRoute: () => rootRouteImport,
 } as any)
+const IndustriesD2cRetailbrandRoute =
+  IndustriesD2cRetailbrandRouteImport.update({
+    id: '/industries_/d2c-retailbrand',
+    path: '/industries/d2c-retailbrand',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const IndustriesArchitectureRoute = IndustriesArchitectureRouteImport.update({
   id: '/industries_/architecture',
   path: '/industries/architecture',
@@ -402,6 +409,7 @@ export interface FileRoutesByFullPath {
   '/youtube-growth-channel-strategy': typeof YoutubeGrowthChannelStrategyRoute
   '/blog/why-businesses-need-growth-partner-not-marketing-agency': typeof BlogWhyBusinessesNeedGrowthPartnerNotMarketingAgencyRoute
   '/industries/architecture': typeof IndustriesArchitectureRoute
+  '/industries/d2c-retailbrand': typeof IndustriesD2cRetailbrandRoute
   '/industries/education': typeof IndustriesEducationRoute
   '/industries/fintech': typeof IndustriesFintechRoute
   '/industries/healthcare': typeof IndustriesHealthcareRoute
@@ -458,6 +466,7 @@ export interface FileRoutesByTo {
   '/youtube-growth-channel-strategy': typeof YoutubeGrowthChannelStrategyRoute
   '/blog/why-businesses-need-growth-partner-not-marketing-agency': typeof BlogWhyBusinessesNeedGrowthPartnerNotMarketingAgencyRoute
   '/industries/architecture': typeof IndustriesArchitectureRoute
+  '/industries/d2c-retailbrand': typeof IndustriesD2cRetailbrandRoute
   '/industries/education': typeof IndustriesEducationRoute
   '/industries/fintech': typeof IndustriesFintechRoute
   '/industries/healthcare': typeof IndustriesHealthcareRoute
@@ -515,6 +524,7 @@ export interface FileRoutesById {
   '/youtube-growth-channel-strategy': typeof YoutubeGrowthChannelStrategyRoute
   '/blog/why-businesses-need-growth-partner-not-marketing-agency': typeof BlogWhyBusinessesNeedGrowthPartnerNotMarketingAgencyRoute
   '/industries_/architecture': typeof IndustriesArchitectureRoute
+  '/industries_/d2c-retailbrand': typeof IndustriesD2cRetailbrandRoute
   '/industries_/education': typeof IndustriesEducationRoute
   '/industries_/fintech': typeof IndustriesFintechRoute
   '/industries_/healthcare': typeof IndustriesHealthcareRoute
@@ -573,6 +583,7 @@ export interface FileRouteTypes {
     | '/youtube-growth-channel-strategy'
     | '/blog/why-businesses-need-growth-partner-not-marketing-agency'
     | '/industries/architecture'
+    | '/industries/d2c-retailbrand'
     | '/industries/education'
     | '/industries/fintech'
     | '/industries/healthcare'
@@ -629,6 +640,7 @@ export interface FileRouteTypes {
     | '/youtube-growth-channel-strategy'
     | '/blog/why-businesses-need-growth-partner-not-marketing-agency'
     | '/industries/architecture'
+    | '/industries/d2c-retailbrand'
     | '/industries/education'
     | '/industries/fintech'
     | '/industries/healthcare'
@@ -685,6 +697,7 @@ export interface FileRouteTypes {
     | '/youtube-growth-channel-strategy'
     | '/blog/why-businesses-need-growth-partner-not-marketing-agency'
     | '/industries_/architecture'
+    | '/industries_/d2c-retailbrand'
     | '/industries_/education'
     | '/industries_/fintech'
     | '/industries_/healthcare'
@@ -741,6 +754,7 @@ export interface RootRouteChildren {
   WebsiteDesignDevelopmentRoute: typeof WebsiteDesignDevelopmentRoute
   YoutubeGrowthChannelStrategyRoute: typeof YoutubeGrowthChannelStrategyRoute
   IndustriesArchitectureRoute: typeof IndustriesArchitectureRoute
+  IndustriesD2cRetailbrandRoute: typeof IndustriesD2cRetailbrandRoute
   IndustriesEducationRoute: typeof IndustriesEducationRoute
   IndustriesFintechRoute: typeof IndustriesFintechRoute
   IndustriesHealthcareRoute: typeof IndustriesHealthcareRoute
@@ -1114,6 +1128,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndustriesEducationRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/industries_/d2c-retailbrand': {
+      id: '/industries_/d2c-retailbrand'
+      path: '/industries/d2c-retailbrand'
+      fullPath: '/industries/d2c-retailbrand'
+      preLoaderRoute: typeof IndustriesD2cRetailbrandRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/industries_/architecture': {
       id: '/industries_/architecture'
       path: '/industries/architecture'
@@ -1193,6 +1214,7 @@ const rootRouteChildren: RootRouteChildren = {
   WebsiteDesignDevelopmentRoute: WebsiteDesignDevelopmentRoute,
   YoutubeGrowthChannelStrategyRoute: YoutubeGrowthChannelStrategyRoute,
   IndustriesArchitectureRoute: IndustriesArchitectureRoute,
+  IndustriesD2cRetailbrandRoute: IndustriesD2cRetailbrandRoute,
   IndustriesEducationRoute: IndustriesEducationRoute,
   IndustriesFintechRoute: IndustriesFintechRoute,
   IndustriesHealthcareRoute: IndustriesHealthcareRoute,
