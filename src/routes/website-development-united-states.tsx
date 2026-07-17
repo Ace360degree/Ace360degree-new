@@ -58,7 +58,7 @@ export const Route = createFileRoute("/website-development-united-states")({
      // { property: "og:image", content: heroImg },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/website-development-united-states" }],
+    links: [{ rel: "canonical", href: "/united-states/website-development-company" }],
   }),
 });
 const advantages = [
@@ -245,7 +245,7 @@ function HeroForm() {
   );
 }
 
-function WebsiteDevUSPage() {
+export function WebsiteDevUSPage() {
   return (
     <div className="min-h-screen bg-canvas text-dark">
       <SiteHeader />
