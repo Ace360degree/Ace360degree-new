@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 
-export const Route = createFileRoute("/united-stateHome")({
+export const Route = createFileRoute("/united-states")({
   component: UnitedStatesPage,
   head: () => ({
     meta: [
@@ -68,13 +68,13 @@ const cityLinks = [
 
 function UnitedStatesPage() {
   return (
-    <main className="min-h-screen bg-[#02150f] text-canvas">
+    <main className="min-h-screen bg-[#120f09] text-canvas">
       <SiteHeader />
 
       <section className="relative overflow-hidden py-10 md:py-16">
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,176,43,0.12)_0%,rgba(255,176,43,0.05)_18%,rgba(2,21,15,0)_55%),linear-gradient(180deg,rgba(255,255,255,0.02)_0%,rgba(255,255,255,0)_100%)]"
+          className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,176,43,0.18)_0%,rgba(255,176,43,0.06)_18%,rgba(18,15,9,0)_58%),linear-gradient(180deg,rgba(255,255,255,0.02)_0%,rgba(255,255,255,0)_100%)]"
         />
         <div className="relative mx-auto max-w-6xl px-6">
           <div className="text-center">
@@ -96,7 +96,7 @@ function UnitedStatesPage() {
                 <a
                   key={label}
                   href="#"
-                  className="group rounded-2xl border border-white/8 bg-[#062018] px-5 py-4 text-center text-[13px] font-medium leading-snug text-canvas/90 shadow-[0_0_0_1px_rgba(255,176,43,0.02),0_18px_40px_-26px_rgba(0,0,0,0.75)] transition hover:border-brand/30 hover:bg-[#08261d] hover:text-canvas"
+                  className="group rounded-2xl border border-[#3c3118] bg-[#1a150d] px-5 py-4 text-center text-[13px] font-medium leading-snug text-canvas/90 shadow-[0_0_0_1px_rgba(255,176,43,0.04),0_18px_40px_-26px_rgba(0,0,0,0.85)] transition hover:border-brand/55 hover:bg-[#231c10] hover:text-canvas hover:shadow-[0_0_0_1px_rgba(255,176,43,0.1),0_20px_50px_-28px_rgba(255,176,43,0.16)]"
                 >
                   {label}
                 </a>
@@ -109,7 +109,10 @@ function UnitedStatesPage() {
       <section className="pb-24 pt-2">
         <div className="mx-auto max-w-6xl px-6">
           <div className="text-center">
-            <h2 className="text-3xl font-medium tracking-tight md:text-4xl">
+            <p className="text-[10px] uppercase tracking-[0.3em] text-brand/70">
+              Locations
+            </p>
+            <h2 className="mt-3 text-3xl font-medium tracking-tight md:text-4xl">
               City In United States
             </h2>
           </div>
@@ -119,7 +122,7 @@ function UnitedStatesPage() {
               <a
                 key={city}
                 href="#"
-                className="rounded-2xl border border-white/8 bg-[#062018] px-5 py-4 text-center text-[13px] font-medium text-canvas/90 transition hover:border-brand/30 hover:bg-[#08261d]"
+                className="rounded-2xl border border-[#3c3118] bg-[#1a150d] px-5 py-4 text-center text-[13px] font-medium text-canvas/90 transition hover:border-brand/55 hover:bg-[#231c10]"
               >
                 {city}
               </a>
@@ -132,11 +135,3 @@ function UnitedStatesPage() {
     </main>
   );
 }
-
-
-
-
-
-
-
-

@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as YoutubeGrowthChannelStrategyRouteImport } from './routes/youtube-growth-channel-strategy'
 import { Route as WebsiteDevelopmentUnitedStatesRouteImport } from './routes/website-development-united-states'
 import { Route as WebsiteDesignDevelopmentRouteImport } from './routes/website-design-development'
+import { Route as UnitedStatesRouteImport } from './routes/united-states'
 import { Route as UnitedStateHomeRouteImport } from './routes/united-stateHome'
 import { Route as UiUxDesignProductEngineeringRouteImport } from './routes/ui-ux-design-product-engineering'
 import { Route as TermsConditionRouteImport } from './routes/terms-condition'
@@ -64,6 +65,8 @@ import { Route as AiCustomerExperienceSolutionsRouteImport } from './routes/ai-c
 import { Route as AiContentMarketingSystemsRouteImport } from './routes/ai-content-marketing-systems'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as UnitedStatesWebsiteDevelopmentUnitedStatesRouteImport } from './routes/united-states.website-development-united-states'
+import { Route as UnitedStatesWebsiteDevelopmentCompanyRouteImport } from './routes/united-states.website-development-company'
 import { Route as SuccessStoriesEnterpriseExperienceRouteImport } from './routes/success-stories.enterprise-experience'
 import { Route as IndustriesSaasTechnologyRouteImport } from './routes/industries_.saas-technology'
 import { Route as IndustriesRealEstateRouteImport } from './routes/industries_.real-estate'
@@ -94,6 +97,11 @@ const WebsiteDesignDevelopmentRoute =
     path: '/website-design-development',
     getParentRoute: () => rootRouteImport,
   } as any)
+const UnitedStatesRoute = UnitedStatesRouteImport.update({
+  id: '/united-states',
+  path: '/united-states',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const UnitedStateHomeRoute = UnitedStateHomeRouteImport.update({
   id: '/united-stateHome',
   path: '/united-stateHome',
@@ -228,6 +236,11 @@ const EventMarketingBrandExperiencesRoute =
 const DisclaimerRoute = DisclaimerRouteImport.update({
   id: '/disclaimer',
   path: '/disclaimer',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const D2cRetailbrandRoute = D2cRetailbrandRouteImport.update({
+  id: '/d2c-retailbrand',
+  path: '/d2c-retailbrand',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CrmErpSolutionsRoute = CrmErpSolutionsRouteImport.update({
@@ -367,6 +380,18 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const UnitedStatesWebsiteDevelopmentUnitedStatesRoute =
+  UnitedStatesWebsiteDevelopmentUnitedStatesRouteImport.update({
+    id: '/website-development-united-states',
+    path: '/website-development-united-states',
+    getParentRoute: () => UnitedStatesRoute,
+  } as any)
+const UnitedStatesWebsiteDevelopmentCompanyRoute =
+  UnitedStatesWebsiteDevelopmentCompanyRouteImport.update({
+    id: '/website-development-company',
+    path: '/website-development-company',
+    getParentRoute: () => UnitedStatesRoute,
+  } as any)
 const SuccessStoriesEnterpriseExperienceRoute =
   SuccessStoriesEnterpriseExperienceRouteImport.update({
     id: '/success-stories/enterprise-experience',
@@ -456,6 +481,7 @@ export interface FileRoutesByFullPath {
   '/corporate-films-video-production': typeof CorporateFilmsVideoProductionRoute
   '/crm-erp-solutions': typeof CrmErpSolutionsRoute
   '/disclaimer': typeof DisclaimerRoute
+  '/d2c-retailbrand': typeof D2cRetailbrandRoute
   '/event-marketing-brand-experiences': typeof EventMarketingBrandExperiencesRoute
   '/growth': typeof GrowthRoute
   '/growth-marketing': typeof GrowthMarketingRoute
@@ -481,6 +507,7 @@ export interface FileRoutesByFullPath {
   '/terms-condition': typeof TermsConditionRoute
   '/ui-ux-design-product-engineering': typeof UiUxDesignProductEngineeringRoute
   '/united-stateHome': typeof UnitedStateHomeRoute
+  '/united-states': typeof UnitedStatesRouteWithChildren
   '/website-design-development': typeof WebsiteDesignDevelopmentRoute
   '/website-development-united-states': typeof WebsiteDevelopmentUnitedStatesRoute
   '/youtube-growth-channel-strategy': typeof YoutubeGrowthChannelStrategyRoute
@@ -495,6 +522,8 @@ export interface FileRoutesByFullPath {
   '/industries/real-estate': typeof IndustriesRealEstateRoute
   '/industries/saas-technology': typeof IndustriesSaasTechnologyRoute
   '/success-stories/enterprise-experience': typeof SuccessStoriesEnterpriseExperienceRoute
+  '/united-states/website-development-company': typeof UnitedStatesWebsiteDevelopmentCompanyRoute
+  '/united-states/website-development-united-states': typeof UnitedStatesWebsiteDevelopmentUnitedStatesRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -524,6 +553,7 @@ export interface FileRoutesByTo {
   '/corporate-films-video-production': typeof CorporateFilmsVideoProductionRoute
   '/crm-erp-solutions': typeof CrmErpSolutionsRoute
   '/disclaimer': typeof DisclaimerRoute
+  '/d2c-retailbrand': typeof D2cRetailbrandRoute
   '/event-marketing-brand-experiences': typeof EventMarketingBrandExperiencesRoute
   '/growth': typeof GrowthRoute
   '/growth-marketing': typeof GrowthMarketingRoute
@@ -549,6 +579,7 @@ export interface FileRoutesByTo {
   '/terms-condition': typeof TermsConditionRoute
   '/ui-ux-design-product-engineering': typeof UiUxDesignProductEngineeringRoute
   '/united-stateHome': typeof UnitedStateHomeRoute
+  '/united-states': typeof UnitedStatesRouteWithChildren
   '/website-design-development': typeof WebsiteDesignDevelopmentRoute
   '/website-development-united-states': typeof WebsiteDevelopmentUnitedStatesRoute
   '/youtube-growth-channel-strategy': typeof YoutubeGrowthChannelStrategyRoute
@@ -563,6 +594,8 @@ export interface FileRoutesByTo {
   '/industries/real-estate': typeof IndustriesRealEstateRoute
   '/industries/saas-technology': typeof IndustriesSaasTechnologyRoute
   '/success-stories/enterprise-experience': typeof SuccessStoriesEnterpriseExperienceRoute
+  '/united-states/website-development-company': typeof UnitedStatesWebsiteDevelopmentCompanyRoute
+  '/united-states/website-development-united-states': typeof UnitedStatesWebsiteDevelopmentUnitedStatesRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -593,6 +626,7 @@ export interface FileRoutesById {
   '/corporate-films-video-production': typeof CorporateFilmsVideoProductionRoute
   '/crm-erp-solutions': typeof CrmErpSolutionsRoute
   '/disclaimer': typeof DisclaimerRoute
+  '/d2c-retailbrand': typeof D2cRetailbrandRoute
   '/event-marketing-brand-experiences': typeof EventMarketingBrandExperiencesRoute
   '/growth': typeof GrowthRoute
   '/growth-marketing': typeof GrowthMarketingRoute
@@ -618,6 +652,7 @@ export interface FileRoutesById {
   '/terms-condition': typeof TermsConditionRoute
   '/ui-ux-design-product-engineering': typeof UiUxDesignProductEngineeringRoute
   '/united-stateHome': typeof UnitedStateHomeRoute
+  '/united-states': typeof UnitedStatesRouteWithChildren
   '/website-design-development': typeof WebsiteDesignDevelopmentRoute
   '/website-development-united-states': typeof WebsiteDevelopmentUnitedStatesRoute
   '/youtube-growth-channel-strategy': typeof YoutubeGrowthChannelStrategyRoute
@@ -632,6 +667,8 @@ export interface FileRoutesById {
   '/industries_/real-estate': typeof IndustriesRealEstateRoute
   '/industries_/saas-technology': typeof IndustriesSaasTechnologyRoute
   '/success-stories/enterprise-experience': typeof SuccessStoriesEnterpriseExperienceRoute
+  '/united-states/website-development-company': typeof UnitedStatesWebsiteDevelopmentCompanyRoute
+  '/united-states/website-development-united-states': typeof UnitedStatesWebsiteDevelopmentUnitedStatesRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -663,6 +700,7 @@ export interface FileRouteTypes {
     | '/corporate-films-video-production'
     | '/crm-erp-solutions'
     | '/disclaimer'
+    | '/d2c-retailbrand'
     | '/event-marketing-brand-experiences'
     | '/growth'
     | '/growth-marketing'
@@ -688,6 +726,7 @@ export interface FileRouteTypes {
     | '/terms-condition'
     | '/ui-ux-design-product-engineering'
     | '/united-stateHome'
+    | '/united-states'
     | '/website-design-development'
     | '/website-development-united-states'
     | '/youtube-growth-channel-strategy'
@@ -702,6 +741,8 @@ export interface FileRouteTypes {
     | '/industries/real-estate'
     | '/industries/saas-technology'
     | '/success-stories/enterprise-experience'
+    | '/united-states/website-development-company'
+    | '/united-states/website-development-united-states'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -731,6 +772,7 @@ export interface FileRouteTypes {
     | '/corporate-films-video-production'
     | '/crm-erp-solutions'
     | '/disclaimer'
+    | '/d2c-retailbrand'
     | '/event-marketing-brand-experiences'
     | '/growth'
     | '/growth-marketing'
@@ -756,6 +798,7 @@ export interface FileRouteTypes {
     | '/terms-condition'
     | '/ui-ux-design-product-engineering'
     | '/united-stateHome'
+    | '/united-states'
     | '/website-design-development'
     | '/website-development-united-states'
     | '/youtube-growth-channel-strategy'
@@ -770,6 +813,8 @@ export interface FileRouteTypes {
     | '/industries/real-estate'
     | '/industries/saas-technology'
     | '/success-stories/enterprise-experience'
+    | '/united-states/website-development-company'
+    | '/united-states/website-development-united-states'
   id:
     | '__root__'
     | '/'
@@ -799,6 +844,7 @@ export interface FileRouteTypes {
     | '/corporate-films-video-production'
     | '/crm-erp-solutions'
     | '/disclaimer'
+    | '/d2c-retailbrand'
     | '/event-marketing-brand-experiences'
     | '/growth'
     | '/growth-marketing'
@@ -824,6 +870,7 @@ export interface FileRouteTypes {
     | '/terms-condition'
     | '/ui-ux-design-product-engineering'
     | '/united-stateHome'
+    | '/united-states'
     | '/website-design-development'
     | '/website-development-united-states'
     | '/youtube-growth-channel-strategy'
@@ -838,6 +885,8 @@ export interface FileRouteTypes {
     | '/industries_/real-estate'
     | '/industries_/saas-technology'
     | '/success-stories/enterprise-experience'
+    | '/united-states/website-development-company'
+    | '/united-states/website-development-united-states'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -868,6 +917,7 @@ export interface RootRouteChildren {
   CorporateFilmsVideoProductionRoute: typeof CorporateFilmsVideoProductionRoute
   CrmErpSolutionsRoute: typeof CrmErpSolutionsRoute
   DisclaimerRoute: typeof DisclaimerRoute
+  D2cRetailbrandRoute: typeof D2cRetailbrandRoute
   EventMarketingBrandExperiencesRoute: typeof EventMarketingBrandExperiencesRoute
   GrowthRoute: typeof GrowthRoute
   GrowthMarketingRoute: typeof GrowthMarketingRoute
@@ -893,6 +943,7 @@ export interface RootRouteChildren {
   TermsConditionRoute: typeof TermsConditionRoute
   UiUxDesignProductEngineeringRoute: typeof UiUxDesignProductEngineeringRoute
   UnitedStateHomeRoute: typeof UnitedStateHomeRoute
+  UnitedStatesRoute: typeof UnitedStatesRouteWithChildren
   WebsiteDesignDevelopmentRoute: typeof WebsiteDesignDevelopmentRoute
   WebsiteDevelopmentUnitedStatesRoute: typeof WebsiteDevelopmentUnitedStatesRoute
   YoutubeGrowthChannelStrategyRoute: typeof YoutubeGrowthChannelStrategyRoute
@@ -929,6 +980,13 @@ declare module '@tanstack/react-router' {
       path: '/website-design-development'
       fullPath: '/website-design-development'
       preLoaderRoute: typeof WebsiteDesignDevelopmentRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/united-states': {
+      id: '/united-states'
+      path: '/united-states'
+      fullPath: '/united-states'
+      preLoaderRoute: typeof UnitedStatesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/united-stateHome': {
@@ -1113,6 +1171,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DisclaimerRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/d2c-retailbrand': {
+      id: '/d2c-retailbrand'
+      path: '/d2c-retailbrand'
+      fullPath: '/d2c-retailbrand'
+      preLoaderRoute: typeof D2cRetailbrandRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/crm-erp-solutions': {
       id: '/crm-erp-solutions'
       path: '/crm-erp-solutions'
@@ -1295,6 +1360,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/united-states/website-development-united-states': {
+      id: '/united-states/website-development-united-states'
+      path: '/website-development-united-states'
+      fullPath: '/united-states/website-development-united-states'
+      preLoaderRoute: typeof UnitedStatesWebsiteDevelopmentUnitedStatesRouteImport
+      parentRoute: typeof UnitedStatesRoute
+    }
+    '/united-states/website-development-company': {
+      id: '/united-states/website-development-company'
+      path: '/website-development-company'
+      fullPath: '/united-states/website-development-company'
+      preLoaderRoute: typeof UnitedStatesWebsiteDevelopmentCompanyRouteImport
+      parentRoute: typeof UnitedStatesRoute
+    }
     '/success-stories/enterprise-experience': {
       id: '/success-stories/enterprise-experience'
       path: '/success-stories/enterprise-experience'
@@ -1386,6 +1465,22 @@ const BlogRouteChildren: BlogRouteChildren = {
 
 const BlogRouteWithChildren = BlogRoute._addFileChildren(BlogRouteChildren)
 
+interface UnitedStatesRouteChildren {
+  UnitedStatesWebsiteDevelopmentCompanyRoute: typeof UnitedStatesWebsiteDevelopmentCompanyRoute
+  UnitedStatesWebsiteDevelopmentUnitedStatesRoute: typeof UnitedStatesWebsiteDevelopmentUnitedStatesRoute
+}
+
+const UnitedStatesRouteChildren: UnitedStatesRouteChildren = {
+  UnitedStatesWebsiteDevelopmentCompanyRoute:
+    UnitedStatesWebsiteDevelopmentCompanyRoute,
+  UnitedStatesWebsiteDevelopmentUnitedStatesRoute:
+    UnitedStatesWebsiteDevelopmentUnitedStatesRoute,
+}
+
+const UnitedStatesRouteWithChildren = UnitedStatesRoute._addFileChildren(
+  UnitedStatesRouteChildren,
+)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
@@ -1414,6 +1509,7 @@ const rootRouteChildren: RootRouteChildren = {
   CorporateFilmsVideoProductionRoute: CorporateFilmsVideoProductionRoute,
   CrmErpSolutionsRoute: CrmErpSolutionsRoute,
   DisclaimerRoute: DisclaimerRoute,
+  D2cRetailbrandRoute: D2cRetailbrandRoute,
   EventMarketingBrandExperiencesRoute: EventMarketingBrandExperiencesRoute,
   GrowthRoute: GrowthRoute,
   GrowthMarketingRoute: GrowthMarketingRoute,
@@ -1441,6 +1537,7 @@ const rootRouteChildren: RootRouteChildren = {
   TermsConditionRoute: TermsConditionRoute,
   UiUxDesignProductEngineeringRoute: UiUxDesignProductEngineeringRoute,
   UnitedStateHomeRoute: UnitedStateHomeRoute,
+  UnitedStatesRoute: UnitedStatesRouteWithChildren,
   WebsiteDesignDevelopmentRoute: WebsiteDesignDevelopmentRoute,
   WebsiteDevelopmentUnitedStatesRoute: WebsiteDevelopmentUnitedStatesRoute,
   YoutubeGrowthChannelStrategyRoute: YoutubeGrowthChannelStrategyRoute,
