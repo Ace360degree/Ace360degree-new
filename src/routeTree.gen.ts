@@ -38,7 +38,6 @@ import { Route as GrowthMarketingRouteImport } from './routes/growth-marketing'
 import { Route as GrowthRouteImport } from './routes/growth'
 import { Route as EventMarketingBrandExperiencesRouteImport } from './routes/event-marketing-brand-experiences'
 import { Route as DisclaimerRouteImport } from './routes/disclaimer'
-import { Route as D2cRetailbrandRouteImport } from './routes/d2c-retailbrand'
 import { Route as CrmErpSolutionsRouteImport } from './routes/crm-erp-solutions'
 import { Route as CorporateFilmsVideoProductionRouteImport } from './routes/corporate-films-video-production'
 import { Route as CorporateCommunicationDesignRouteImport } from './routes/corporate-communication-design'
@@ -134,6 +133,8 @@ const SearchVisibilityRoute = SearchVisibilityRouteImport.update({
 const RefundsRoute = RefundsRouteImport.update({
   id: '/refunds',
   path: '/refunds',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const RealEstateRoute = RealEstateRouteImport.update({
   id: '/real-estate',
   path: '/real-estate',
@@ -227,9 +228,6 @@ const EventMarketingBrandExperiencesRoute =
 const DisclaimerRoute = DisclaimerRouteImport.update({
   id: '/disclaimer',
   path: '/disclaimer',
-const D2cRetailbrandRoute = D2cRetailbrandRouteImport.update({
-  id: '/d2c-retailbrand',
-  path: '/d2c-retailbrand',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CrmErpSolutionsRoute = CrmErpSolutionsRouteImport.update({
@@ -458,7 +456,6 @@ export interface FileRoutesByFullPath {
   '/corporate-films-video-production': typeof CorporateFilmsVideoProductionRoute
   '/crm-erp-solutions': typeof CrmErpSolutionsRoute
   '/disclaimer': typeof DisclaimerRoute
-  '/d2c-retailbrand': typeof D2cRetailbrandRoute
   '/event-marketing-brand-experiences': typeof EventMarketingBrandExperiencesRoute
   '/growth': typeof GrowthRoute
   '/growth-marketing': typeof GrowthMarketingRoute
@@ -475,8 +472,8 @@ export interface FileRoutesByFullPath {
   '/portfolio': typeof PortfolioRoute
   '/privacy': typeof PrivacyRoute
   '/public-relations-reputation-management': typeof PublicRelationsReputationManagementRoute
-  '/refunds': typeof RefundsRoute
   '/real-estate': typeof RealEstateRoute
+  '/refunds': typeof RefundsRoute
   '/search-visibility': typeof SearchVisibilityRoute
   '/services': typeof ServicesRoute
   '/social-media-marketing': typeof SocialMediaMarketingRoute
@@ -527,7 +524,6 @@ export interface FileRoutesByTo {
   '/corporate-films-video-production': typeof CorporateFilmsVideoProductionRoute
   '/crm-erp-solutions': typeof CrmErpSolutionsRoute
   '/disclaimer': typeof DisclaimerRoute
-  '/d2c-retailbrand': typeof D2cRetailbrandRoute
   '/event-marketing-brand-experiences': typeof EventMarketingBrandExperiencesRoute
   '/growth': typeof GrowthRoute
   '/growth-marketing': typeof GrowthMarketingRoute
@@ -544,8 +540,8 @@ export interface FileRoutesByTo {
   '/portfolio': typeof PortfolioRoute
   '/privacy': typeof PrivacyRoute
   '/public-relations-reputation-management': typeof PublicRelationsReputationManagementRoute
-  '/refunds': typeof RefundsRoute
   '/real-estate': typeof RealEstateRoute
+  '/refunds': typeof RefundsRoute
   '/search-visibility': typeof SearchVisibilityRoute
   '/services': typeof ServicesRoute
   '/social-media-marketing': typeof SocialMediaMarketingRoute
@@ -597,7 +593,6 @@ export interface FileRoutesById {
   '/corporate-films-video-production': typeof CorporateFilmsVideoProductionRoute
   '/crm-erp-solutions': typeof CrmErpSolutionsRoute
   '/disclaimer': typeof DisclaimerRoute
-  '/d2c-retailbrand': typeof D2cRetailbrandRoute
   '/event-marketing-brand-experiences': typeof EventMarketingBrandExperiencesRoute
   '/growth': typeof GrowthRoute
   '/growth-marketing': typeof GrowthMarketingRoute
@@ -614,8 +609,8 @@ export interface FileRoutesById {
   '/portfolio': typeof PortfolioRoute
   '/privacy': typeof PrivacyRoute
   '/public-relations-reputation-management': typeof PublicRelationsReputationManagementRoute
-  '/refunds': typeof RefundsRoute
   '/real-estate': typeof RealEstateRoute
+  '/refunds': typeof RefundsRoute
   '/search-visibility': typeof SearchVisibilityRoute
   '/services': typeof ServicesRoute
   '/social-media-marketing': typeof SocialMediaMarketingRoute
@@ -668,7 +663,6 @@ export interface FileRouteTypes {
     | '/corporate-films-video-production'
     | '/crm-erp-solutions'
     | '/disclaimer'
-    | '/d2c-retailbrand'
     | '/event-marketing-brand-experiences'
     | '/growth'
     | '/growth-marketing'
@@ -685,8 +679,8 @@ export interface FileRouteTypes {
     | '/portfolio'
     | '/privacy'
     | '/public-relations-reputation-management'
-    | '/refunds'
     | '/real-estate'
+    | '/refunds'
     | '/search-visibility'
     | '/services'
     | '/social-media-marketing'
@@ -737,7 +731,6 @@ export interface FileRouteTypes {
     | '/corporate-films-video-production'
     | '/crm-erp-solutions'
     | '/disclaimer'
-    | '/d2c-retailbrand'
     | '/event-marketing-brand-experiences'
     | '/growth'
     | '/growth-marketing'
@@ -754,8 +747,8 @@ export interface FileRouteTypes {
     | '/portfolio'
     | '/privacy'
     | '/public-relations-reputation-management'
-    | '/refunds'
     | '/real-estate'
+    | '/refunds'
     | '/search-visibility'
     | '/services'
     | '/social-media-marketing'
@@ -806,7 +799,6 @@ export interface FileRouteTypes {
     | '/corporate-films-video-production'
     | '/crm-erp-solutions'
     | '/disclaimer'
-    | '/d2c-retailbrand'
     | '/event-marketing-brand-experiences'
     | '/growth'
     | '/growth-marketing'
@@ -823,8 +815,8 @@ export interface FileRouteTypes {
     | '/portfolio'
     | '/privacy'
     | '/public-relations-reputation-management'
-    | '/refunds'
     | '/real-estate'
+    | '/refunds'
     | '/search-visibility'
     | '/services'
     | '/social-media-marketing'
@@ -876,7 +868,6 @@ export interface RootRouteChildren {
   CorporateFilmsVideoProductionRoute: typeof CorporateFilmsVideoProductionRoute
   CrmErpSolutionsRoute: typeof CrmErpSolutionsRoute
   DisclaimerRoute: typeof DisclaimerRoute
-  D2cRetailbrandRoute: typeof D2cRetailbrandRoute
   EventMarketingBrandExperiencesRoute: typeof EventMarketingBrandExperiencesRoute
   GrowthRoute: typeof GrowthRoute
   GrowthMarketingRoute: typeof GrowthMarketingRoute
@@ -893,8 +884,8 @@ export interface RootRouteChildren {
   PortfolioRoute: typeof PortfolioRoute
   PrivacyRoute: typeof PrivacyRoute
   PublicRelationsReputationManagementRoute: typeof PublicRelationsReputationManagementRoute
-  RefundsRoute: typeof RefundsRoute
   RealEstateRoute: typeof RealEstateRoute
+  RefundsRoute: typeof RefundsRoute
   SearchVisibilityRoute: typeof SearchVisibilityRoute
   ServicesRoute: typeof ServicesRoute
   SocialMediaMarketingRoute: typeof SocialMediaMarketingRoute
@@ -994,6 +985,8 @@ declare module '@tanstack/react-router' {
       path: '/refunds'
       fullPath: '/refunds'
       preLoaderRoute: typeof RefundsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/real-estate': {
       id: '/real-estate'
       path: '/real-estate'
@@ -1118,11 +1111,6 @@ declare module '@tanstack/react-router' {
       path: '/disclaimer'
       fullPath: '/disclaimer'
       preLoaderRoute: typeof DisclaimerRouteImport
-    '/d2c-retailbrand': {
-      id: '/d2c-retailbrand'
-      path: '/d2c-retailbrand'
-      fullPath: '/d2c-retailbrand'
-      preLoaderRoute: typeof D2cRetailbrandRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/crm-erp-solutions': {
@@ -1426,7 +1414,6 @@ const rootRouteChildren: RootRouteChildren = {
   CorporateFilmsVideoProductionRoute: CorporateFilmsVideoProductionRoute,
   CrmErpSolutionsRoute: CrmErpSolutionsRoute,
   DisclaimerRoute: DisclaimerRoute,
-  D2cRetailbrandRoute: D2cRetailbrandRoute,
   EventMarketingBrandExperiencesRoute: EventMarketingBrandExperiencesRoute,
   GrowthRoute: GrowthRoute,
   GrowthMarketingRoute: GrowthMarketingRoute,
@@ -1445,8 +1432,8 @@ const rootRouteChildren: RootRouteChildren = {
   PrivacyRoute: PrivacyRoute,
   PublicRelationsReputationManagementRoute:
     PublicRelationsReputationManagementRoute,
-  RefundsRoute: RefundsRoute,
   RealEstateRoute: RealEstateRoute,
+  RefundsRoute: RefundsRoute,
   SearchVisibilityRoute: SearchVisibilityRoute,
   ServicesRoute: ServicesRoute,
   SocialMediaMarketingRoute: SocialMediaMarketingRoute,

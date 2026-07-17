@@ -26,7 +26,6 @@ import {
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import heroImg from "@/assets/d2c-retail-hero1111.png";
-import heroImg from "@/assets/svc-branding.jpg";
 
 export const Route = createFileRoute("/industries_/d2c-retailbrand")({
   component: D2CPage,
@@ -100,15 +99,6 @@ const challenges = [
     s: "Analytics dashboards, customer insights, marketing automation and performance reporting that support smarter decision-making.",
     icon: BarChart3,
   },
-];
-
-const challenges = [
-  { n: "01", t: "High Customer Acquisition Costs", p: "Advertising costs continue to rise while returns become increasingly difficult to maintain.", s: "Performance marketing, SEO, landing pages and conversion optimization that improve ROAS and reduce acquisition costs.", icon: Target },
-  { n: "02", t: "Low Brand Differentiation", p: "Products compete in crowded markets with little perceived difference.", s: "Brand strategy, visual identity, packaging design and storytelling that build emotional connections and premium positioning.", icon: Sparkles },
-  { n: "03", t: "Poor eCommerce Conversion Rates", p: "Visitors browse products but fail to complete purchases.", s: "Conversion-focused websites, optimized product pages, checkout improvements and user experience optimization.", icon: ShoppingCart },
-  { n: "04", t: "Low Customer Retention", p: "Acquiring customers is easier than retaining them.", s: "Email marketing, WhatsApp automation, loyalty journeys and lifecycle marketing designed to increase repeat purchases.", icon: Heart },
-  { n: "05", t: "Inconsistent Brand Experience", p: "Customers experience different messaging across website, social media and marketplaces.", s: "Integrated branding, marketing communication and omnichannel creative systems.", icon: Layers },
-  { n: "06", t: "Limited Business Insights", p: "Without accurate analytics, growth decisions become guesswork.", s: "Analytics dashboards, customer insights, marketing automation and performance reporting that support smarter decision-making.", icon: BarChart3 },
 ];
 
 const segments = [
@@ -247,37 +237,6 @@ const faqs = [
   },
 ];
 
-const framework = [
-  { n: "01", t: "Discover", d: "Understand your products, customers, competitors and growth opportunities." },
-  { n: "02", t: "Position", d: "Develop a compelling brand identity and customer value proposition." },
-  { n: "03", t: "Build", d: "Create high-converting eCommerce websites, landing pages and digital shopping experiences." },
-  { n: "04", t: "Generate", d: "Drive traffic through SEO, Google Ads, Meta Ads, influencer campaigns and content marketing." },
-  { n: "05", t: "Scale", d: "Improve customer lifetime value through automation, retention marketing and data-driven optimization." },
-];
-
-const capabilities = [
-  { icon: Megaphone, t: "Growth Marketing", d: "Drive qualified traffic and increase online sales through measurable marketing strategies.", s: ["Performance Marketing", "Search Engine Optimization", "Content Marketing", "Social Media Marketing", "Conversion Optimization"] },
-  { icon: Sparkles, t: "Branding & Creative", d: "Build memorable brands that customers recognize, trust and recommend.", s: ["Brand Strategy", "Logo & Visual Identity", "Packaging Design", "Marketing Communication", "Corporate Films & Product Videos"] },
-  { icon: Smartphone, t: "Technology & Digital Platforms", d: "Build digital commerce experiences that convert visitors into loyal customers.", s: ["Shopify Development", "WooCommerce Development", "Custom eCommerce Websites", "Mobile Applications", "CRM Integration"] },
-  { icon: Workflow, t: "Business Automation", d: "Automate customer engagement, retention and operational workflows.", s: ["Marketing Automation", "CRM Solutions", "Email Automation", "WhatsApp Automation", "Customer Analytics"] },
-];
-
-const whys = [
-  { t: "Brand-Led Growth", d: "We combine branding and performance marketing to create businesses that customers remember—not just products they buy." },
-  { t: "Commerce-First Thinking", d: "Every digital experience is designed to increase conversions, customer satisfaction and repeat purchases." },
-  { t: "Growth + Brand + Technology", d: "One strategic partner managing your branding, digital marketing and commerce ecosystem." },
-  { t: "Leadership-Led Strategy", d: "Work directly with experienced strategists focused on sustainable business growth—not vanity metrics." },
-];
-
-const faqs = [
-  { q: "Can you build Shopify and eCommerce websites?", a: "Yes. We design and develop Shopify, WooCommerce and custom eCommerce websites engineered for conversion, speed and scale." },
-  { q: "How do you reduce customer acquisition costs?", a: "Through performance marketing optimization, better landing pages, audience refinement, creative testing, SEO and improved on-site conversion rates that lift ROAS." },
-  { q: "Do you manage Google Ads and Meta Ads for D2C brands?", a: "Yes. We run full-funnel Google, Meta, YouTube and influencer campaigns tied to product feeds, remarketing and CRM." },
-  { q: "Can you redesign our brand and packaging?", a: "Yes. Brand strategy, visual identity, packaging design and product storytelling are core capabilities." },
-  { q: "Do you help improve repeat purchases and customer retention?", a: "Yes. We build email, WhatsApp and lifecycle automation journeys to increase repeat purchases and customer lifetime value." },
-  { q: "Which consumer industries do you specialize in?", a: "Fashion, beauty, skincare, food & beverage, lifestyle, furniture, wellness, luxury, jewellery, footwear and modern eCommerce brands." },
-];
-
 function D2CPage() {
   return (
     <div className="min-h-screen bg-canvas text-dark">
@@ -334,37 +293,6 @@ function D2CPage() {
               <div key={s.l}>
                 <div className="font-serif text-4xl md:text-5xl text-brand">{s.v}</div>
                 <div className="mt-2 text-xs uppercase tracking-[0.18em] text-dark/55">{s.l}</div>
-
-      <section className="relative overflow-hidden bg-dark text-canvas">
-        <div className="absolute inset-0">
-          <img src={heroImg} alt="D2C and retail brands" className="w-full h-full object-cover opacity-40" width={1920} height={1080} />
-          <div className="absolute inset-0 bg-gradient-to-b from-dark/70 via-dark/60 to-dark" />
-        </div>
-        <div className="relative mx-auto max-w-7xl px-6 py-28 md:py-36">
-          <div className="text-[10px] uppercase tracking-[0.28em] text-brand font-semibold mb-6">Industry Solutions / D2C & Retail Brands</div>
-          <h1 className="font-serif text-5xl md:text-7xl leading-[1.02] tracking-tight max-w-4xl">
-            D2C & Retail <span className="italic text-brand">Industry Solutions</span>
-          </h1>
-          <p className="mt-6 text-xl md:text-2xl text-canvas/80 max-w-3xl">
-            Marketing, Branding & Commerce Solutions for D2C & Retail Brands.
-          </p>
-          <p className="mt-6 text-canvas/70 max-w-2xl leading-relaxed">
-            A strategic growth partner for direct-to-consumer, retail and eCommerce brands—combining branding, performance marketing, digital commerce and customer experience to accelerate sales, customer loyalty and sustainable business growth.
-          </p>
-          <div className="mt-10 flex flex-wrap gap-4">
-            <Link to="/contact" className="inline-flex items-center gap-2 bg-brand text-dark px-6 py-3 font-semibold hover:brightness-95">
-              Book Discovery Call <ArrowRight className="size-4" />
-            </Link>
-            <Link to="/portfolio" className="inline-flex items-center gap-2 border border-canvas/30 text-canvas px-6 py-3 font-semibold hover:bg-canvas hover:text-dark transition">
-              View Retail Success Stories <ArrowUpRight className="size-4" />
-            </Link>
-          </div>
-
-          <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 pt-10 border-t border-white/10">
-            {stats.map((s) => (
-              <div key={s.l}>
-                <div className="font-serif text-4xl md:text-5xl text-brand">{s.v}</div>
-                <div className="mt-2 text-xs uppercase tracking-[0.18em] text-canvas/60">{s.l}</div>
               </div>
             ))}
           </div>
@@ -376,9 +304,6 @@ function D2CPage() {
             The Shift
           </div>
 
-      <section className="py-24 md:py-32 bg-canvas">
-        <div className="mx-auto max-w-5xl px-6">
-          <div className="text-[10px] uppercase tracking-[0.28em] text-brand font-semibold mb-4">The Shift</div>
           <h2 className="font-serif text-4xl md:text-5xl leading-tight">
             Consumers don't just buy products.
             <br />
@@ -395,9 +320,6 @@ function D2CPage() {
               They build memorable identities, frictionless shopping experiences, data-driven
               acquisition systems and customer journeys that encourage repeat purchases.
             </p>
-            <p>Today's customers discover brands through Google, Instagram, YouTube and online marketplaces long before making a purchase. They compare products, read reviews, watch videos and expect seamless shopping experiences across every touchpoint.</p>
-            <p>Winning brands don't simply advertise more.</p>
-            <p>They build memorable identities, frictionless shopping experiences, data-driven acquisition systems and customer journeys that encourage repeat purchases.</p>
             <p className="text-dark font-medium">That's the partnership Ace360degree delivers.</p>
           </div>
         </div>
