@@ -55,7 +55,6 @@ import { Route as CaseAmigoAcademyRouteImport } from './routes/case-amigo-academ
 import { Route as CareersRouteImport } from './routes/careers'
 import { Route as BrandingCreativeRouteImport } from './routes/branding-creative'
 import { Route as BrandStrategyRouteImport } from './routes/brand-strategy'
-import { Route as BlogRouteImport } from './routes/blog'
 import { Route as ApprovalsRouteImport } from './routes/approvals'
 import { Route as AnalyticsGrowthIntelligenceRouteImport } from './routes/analytics-growth-intelligence'
 import { Route as AiWorkflowAutomationRouteImport } from './routes/ai-workflow-automation'
@@ -65,11 +64,11 @@ import { Route as AiCustomerExperienceSolutionsRouteImport } from './routes/ai-c
 import { Route as AiContentMarketingSystemsRouteImport } from './routes/ai-content-marketing-systems'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as BlogIndexRouteImport } from './routes/blog.index'
 import { Route as UnitedStatesWebsiteDevelopmentUnitedStatesRouteImport } from './routes/united-states.website-development-united-states'
 import { Route as UnitedStatesWebsiteDevelopmentCompanyRouteImport } from './routes/united-states.website-development-company'
 import { Route as SuccessStoriesEnterpriseExperienceRouteImport } from './routes/success-stories.enterprise-experience'
 import { Route as IndustriesSaasTechnologyRouteImport } from './routes/industries_.saas-technology'
-import { Route as IndustriesSaasRouteImport } from './routes/industries_.saas'
 import { Route as IndustriesRealEstateRouteImport } from './routes/industries_.real-estate'
 import { Route as IndustriesManufacturingRouteImport } from './routes/industries_.manufacturing'
 import { Route as IndustriesHealthcareRouteImport } from './routes/industries_.healthcare'
@@ -324,11 +323,6 @@ const BrandStrategyRoute = BrandStrategyRouteImport.update({
   path: '/brand-strategy',
   getParentRoute: () => rootRouteImport,
 } as any)
-const BlogRoute = BlogRouteImport.update({
-  id: '/blog',
-  path: '/blog',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const ApprovalsRoute = ApprovalsRouteImport.update({
   id: '/approvals',
   path: '/approvals',
@@ -378,6 +372,11 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BlogIndexRoute = BlogIndexRouteImport.update({
+  id: '/blog/',
+  path: '/blog/',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const UnitedStatesWebsiteDevelopmentUnitedStatesRoute =
   UnitedStatesWebsiteDevelopmentUnitedStatesRouteImport.update({
     id: '/website-development-united-states',
@@ -402,11 +401,6 @@ const IndustriesSaasTechnologyRoute =
     path: '/industries/saas-technology',
     getParentRoute: () => rootRouteImport,
   } as any)
-const IndustriesSaasRoute = IndustriesSaasRouteImport.update({
-  id: '/industries_/saas',
-  path: '/industries/saas',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const IndustriesRealEstateRoute = IndustriesRealEstateRouteImport.update({
   id: '/industries_/real-estate',
   path: '/industries/real-estate',
@@ -456,14 +450,14 @@ const ContentSlugRoute = ContentSlugRouteImport.update({
 } as any)
 const BlogWhyBusinessesNeedGrowthPartnerNotMarketingAgencyRoute =
   BlogWhyBusinessesNeedGrowthPartnerNotMarketingAgencyRouteImport.update({
-    id: '/why-businesses-need-growth-partner-not-marketing-agency',
-    path: '/why-businesses-need-growth-partner-not-marketing-agency',
-    getParentRoute: () => BlogRoute,
+    id: '/blog/why-businesses-need-growth-partner-not-marketing-agency',
+    path: '/blog/why-businesses-need-growth-partner-not-marketing-agency',
+    getParentRoute: () => rootRouteImport,
   } as any)
 const BlogSlugRoute = BlogSlugRouteImport.update({
-  id: '/$slug',
-  path: '/$slug',
-  getParentRoute: () => BlogRoute,
+  id: '/blog/$slug',
+  path: '/blog/$slug',
+  getParentRoute: () => rootRouteImport,
 } as any)
 
 export interface FileRoutesByFullPath {
@@ -476,7 +470,6 @@ export interface FileRoutesByFullPath {
   '/ai-workflow-automation': typeof AiWorkflowAutomationRoute
   '/analytics-growth-intelligence': typeof AnalyticsGrowthIntelligenceRoute
   '/approvals': typeof ApprovalsRoute
-  '/blog': typeof BlogRouteWithChildren
   '/brand-strategy': typeof BrandStrategyRoute
   '/branding-creative': typeof BrandingCreativeRoute
   '/careers': typeof CareersRoute
@@ -534,11 +527,11 @@ export interface FileRoutesByFullPath {
   '/industries/healthcare': typeof IndustriesHealthcareRoute
   '/industries/manufacturing': typeof IndustriesManufacturingRoute
   '/industries/real-estate': typeof IndustriesRealEstateRoute
-  '/industries/saas': typeof IndustriesSaasRoute
   '/industries/saas-technology': typeof IndustriesSaasTechnologyRoute
   '/success-stories/enterprise-experience': typeof SuccessStoriesEnterpriseExperienceRoute
   '/united-states/website-development-company': typeof UnitedStatesWebsiteDevelopmentCompanyRoute
   '/united-states/website-development-united-states': typeof UnitedStatesWebsiteDevelopmentUnitedStatesRoute
+  '/blog/': typeof BlogIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -550,7 +543,6 @@ export interface FileRoutesByTo {
   '/ai-workflow-automation': typeof AiWorkflowAutomationRoute
   '/analytics-growth-intelligence': typeof AnalyticsGrowthIntelligenceRoute
   '/approvals': typeof ApprovalsRoute
-  '/blog': typeof BlogRouteWithChildren
   '/brand-strategy': typeof BrandStrategyRoute
   '/branding-creative': typeof BrandingCreativeRoute
   '/careers': typeof CareersRoute
@@ -608,11 +600,11 @@ export interface FileRoutesByTo {
   '/industries/healthcare': typeof IndustriesHealthcareRoute
   '/industries/manufacturing': typeof IndustriesManufacturingRoute
   '/industries/real-estate': typeof IndustriesRealEstateRoute
-  '/industries/saas': typeof IndustriesSaasRoute
   '/industries/saas-technology': typeof IndustriesSaasTechnologyRoute
   '/success-stories/enterprise-experience': typeof SuccessStoriesEnterpriseExperienceRoute
   '/united-states/website-development-company': typeof UnitedStatesWebsiteDevelopmentCompanyRoute
   '/united-states/website-development-united-states': typeof UnitedStatesWebsiteDevelopmentUnitedStatesRoute
+  '/blog': typeof BlogIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -625,7 +617,6 @@ export interface FileRoutesById {
   '/ai-workflow-automation': typeof AiWorkflowAutomationRoute
   '/analytics-growth-intelligence': typeof AnalyticsGrowthIntelligenceRoute
   '/approvals': typeof ApprovalsRoute
-  '/blog': typeof BlogRouteWithChildren
   '/brand-strategy': typeof BrandStrategyRoute
   '/branding-creative': typeof BrandingCreativeRoute
   '/careers': typeof CareersRoute
@@ -683,11 +674,11 @@ export interface FileRoutesById {
   '/industries_/healthcare': typeof IndustriesHealthcareRoute
   '/industries_/manufacturing': typeof IndustriesManufacturingRoute
   '/industries_/real-estate': typeof IndustriesRealEstateRoute
-  '/industries_/saas': typeof IndustriesSaasRoute
   '/industries_/saas-technology': typeof IndustriesSaasTechnologyRoute
   '/success-stories/enterprise-experience': typeof SuccessStoriesEnterpriseExperienceRoute
   '/united-states/website-development-company': typeof UnitedStatesWebsiteDevelopmentCompanyRoute
   '/united-states/website-development-united-states': typeof UnitedStatesWebsiteDevelopmentUnitedStatesRoute
+  '/blog/': typeof BlogIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -701,7 +692,6 @@ export interface FileRouteTypes {
     | '/ai-workflow-automation'
     | '/analytics-growth-intelligence'
     | '/approvals'
-    | '/blog'
     | '/brand-strategy'
     | '/branding-creative'
     | '/careers'
@@ -759,11 +749,11 @@ export interface FileRouteTypes {
     | '/industries/healthcare'
     | '/industries/manufacturing'
     | '/industries/real-estate'
-    | '/industries/saas'
     | '/industries/saas-technology'
     | '/success-stories/enterprise-experience'
     | '/united-states/website-development-company'
     | '/united-states/website-development-united-states'
+    | '/blog/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -775,7 +765,6 @@ export interface FileRouteTypes {
     | '/ai-workflow-automation'
     | '/analytics-growth-intelligence'
     | '/approvals'
-    | '/blog'
     | '/brand-strategy'
     | '/branding-creative'
     | '/careers'
@@ -833,11 +822,11 @@ export interface FileRouteTypes {
     | '/industries/healthcare'
     | '/industries/manufacturing'
     | '/industries/real-estate'
-    | '/industries/saas'
     | '/industries/saas-technology'
     | '/success-stories/enterprise-experience'
     | '/united-states/website-development-company'
     | '/united-states/website-development-united-states'
+    | '/blog'
   id:
     | '__root__'
     | '/'
@@ -849,7 +838,6 @@ export interface FileRouteTypes {
     | '/ai-workflow-automation'
     | '/analytics-growth-intelligence'
     | '/approvals'
-    | '/blog'
     | '/brand-strategy'
     | '/branding-creative'
     | '/careers'
@@ -907,11 +895,11 @@ export interface FileRouteTypes {
     | '/industries_/healthcare'
     | '/industries_/manufacturing'
     | '/industries_/real-estate'
-    | '/industries_/saas'
     | '/industries_/saas-technology'
     | '/success-stories/enterprise-experience'
     | '/united-states/website-development-company'
     | '/united-states/website-development-united-states'
+    | '/blog/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -924,7 +912,6 @@ export interface RootRouteChildren {
   AiWorkflowAutomationRoute: typeof AiWorkflowAutomationRoute
   AnalyticsGrowthIntelligenceRoute: typeof AnalyticsGrowthIntelligenceRoute
   ApprovalsRoute: typeof ApprovalsRoute
-  BlogRoute: typeof BlogRouteWithChildren
   BrandStrategyRoute: typeof BrandStrategyRoute
   BrandingCreativeRoute: typeof BrandingCreativeRoute
   CareersRoute: typeof CareersRoute
@@ -971,6 +958,8 @@ export interface RootRouteChildren {
   WebsiteDesignDevelopmentRoute: typeof WebsiteDesignDevelopmentRoute
   WebsiteDevelopmentUnitedStatesRoute: typeof WebsiteDevelopmentUnitedStatesRoute
   YoutubeGrowthChannelStrategyRoute: typeof YoutubeGrowthChannelStrategyRoute
+  BlogSlugRoute: typeof BlogSlugRoute
+  BlogWhyBusinessesNeedGrowthPartnerNotMarketingAgencyRoute: typeof BlogWhyBusinessesNeedGrowthPartnerNotMarketingAgencyRoute
   ContentSlugRoute: typeof ContentSlugRoute
   IndustriesArchitectureRoute: typeof IndustriesArchitectureRoute
   IndustriesD2cRetailbrandRoute: typeof IndustriesD2cRetailbrandRoute
@@ -980,9 +969,9 @@ export interface RootRouteChildren {
   IndustriesHealthcareRoute: typeof IndustriesHealthcareRoute
   IndustriesManufacturingRoute: typeof IndustriesManufacturingRoute
   IndustriesRealEstateRoute: typeof IndustriesRealEstateRoute
-  IndustriesSaasRoute: typeof IndustriesSaasRoute
   IndustriesSaasTechnologyRoute: typeof IndustriesSaasTechnologyRoute
   SuccessStoriesEnterpriseExperienceRoute: typeof SuccessStoriesEnterpriseExperienceRoute
+  BlogIndexRoute: typeof BlogIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -1309,13 +1298,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BrandStrategyRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/blog': {
-      id: '/blog'
-      path: '/blog'
-      fullPath: '/blog'
-      preLoaderRoute: typeof BlogRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/approvals': {
       id: '/approvals'
       path: '/approvals'
@@ -1379,6 +1361,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blog/': {
+      id: '/blog/'
+      path: '/blog'
+      fullPath: '/blog/'
+      preLoaderRoute: typeof BlogIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/united-states/website-development-united-states': {
       id: '/united-states/website-development-united-states'
       path: '/website-development-united-states'
@@ -1405,13 +1394,6 @@ declare module '@tanstack/react-router' {
       path: '/industries/saas-technology'
       fullPath: '/industries/saas-technology'
       preLoaderRoute: typeof IndustriesSaasTechnologyRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/industries_/saas': {
-      id: '/industries_/saas'
-      path: '/industries/saas'
-      fullPath: '/industries/saas'
-      preLoaderRoute: typeof IndustriesSaasRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/industries_/real-estate': {
@@ -1479,33 +1461,20 @@ declare module '@tanstack/react-router' {
     }
     '/blog/why-businesses-need-growth-partner-not-marketing-agency': {
       id: '/blog/why-businesses-need-growth-partner-not-marketing-agency'
-      path: '/why-businesses-need-growth-partner-not-marketing-agency'
+      path: '/blog/why-businesses-need-growth-partner-not-marketing-agency'
       fullPath: '/blog/why-businesses-need-growth-partner-not-marketing-agency'
       preLoaderRoute: typeof BlogWhyBusinessesNeedGrowthPartnerNotMarketingAgencyRouteImport
-      parentRoute: typeof BlogRoute
+      parentRoute: typeof rootRouteImport
     }
     '/blog/$slug': {
       id: '/blog/$slug'
-      path: '/$slug'
+      path: '/blog/$slug'
       fullPath: '/blog/$slug'
       preLoaderRoute: typeof BlogSlugRouteImport
-      parentRoute: typeof BlogRoute
+      parentRoute: typeof rootRouteImport
     }
   }
 }
-
-interface BlogRouteChildren {
-  BlogSlugRoute: typeof BlogSlugRoute
-  BlogWhyBusinessesNeedGrowthPartnerNotMarketingAgencyRoute: typeof BlogWhyBusinessesNeedGrowthPartnerNotMarketingAgencyRoute
-}
-
-const BlogRouteChildren: BlogRouteChildren = {
-  BlogSlugRoute: BlogSlugRoute,
-  BlogWhyBusinessesNeedGrowthPartnerNotMarketingAgencyRoute:
-    BlogWhyBusinessesNeedGrowthPartnerNotMarketingAgencyRoute,
-}
-
-const BlogRouteWithChildren = BlogRoute._addFileChildren(BlogRouteChildren)
 
 interface UnitedStatesRouteChildren {
   UnitedStatesWebsiteDevelopmentCompanyRoute: typeof UnitedStatesWebsiteDevelopmentCompanyRoute
@@ -1533,7 +1502,6 @@ const rootRouteChildren: RootRouteChildren = {
   AiWorkflowAutomationRoute: AiWorkflowAutomationRoute,
   AnalyticsGrowthIntelligenceRoute: AnalyticsGrowthIntelligenceRoute,
   ApprovalsRoute: ApprovalsRoute,
-  BlogRoute: BlogRouteWithChildren,
   BrandStrategyRoute: BrandStrategyRoute,
   BrandingCreativeRoute: BrandingCreativeRoute,
   CareersRoute: CareersRoute,
@@ -1582,6 +1550,9 @@ const rootRouteChildren: RootRouteChildren = {
   WebsiteDesignDevelopmentRoute: WebsiteDesignDevelopmentRoute,
   WebsiteDevelopmentUnitedStatesRoute: WebsiteDevelopmentUnitedStatesRoute,
   YoutubeGrowthChannelStrategyRoute: YoutubeGrowthChannelStrategyRoute,
+  BlogSlugRoute: BlogSlugRoute,
+  BlogWhyBusinessesNeedGrowthPartnerNotMarketingAgencyRoute:
+    BlogWhyBusinessesNeedGrowthPartnerNotMarketingAgencyRoute,
   ContentSlugRoute: ContentSlugRoute,
   IndustriesArchitectureRoute: IndustriesArchitectureRoute,
   IndustriesD2cRetailbrandRoute: IndustriesD2cRetailbrandRoute,
@@ -1591,10 +1562,10 @@ const rootRouteChildren: RootRouteChildren = {
   IndustriesHealthcareRoute: IndustriesHealthcareRoute,
   IndustriesManufacturingRoute: IndustriesManufacturingRoute,
   IndustriesRealEstateRoute: IndustriesRealEstateRoute,
-  IndustriesSaasRoute: IndustriesSaasRoute,
   IndustriesSaasTechnologyRoute: IndustriesSaasTechnologyRoute,
   SuccessStoriesEnterpriseExperienceRoute:
     SuccessStoriesEnterpriseExperienceRoute,
+  BlogIndexRoute: BlogIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
