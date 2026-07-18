@@ -56,11 +56,10 @@ function BlogPage() {
             <span className="mx-2 opacity-40">/</span>
             <span className="text-dark">Insights</span>
           </nav>
-
           <div className="grid items-center gap-10 lg:grid-cols-12 lg:gap-16">
-            <div className="animate-fade-up lg:col-span-7">
-              <div className="mb-6 text-[11px] uppercase tracking-[0.28em] text-brand font-semibold">
-                - Ace360degree Blog
+            <div className="lg:col-span-7 animate-fade-up">
+              <div className="text-[11px] uppercase tracking-[0.28em] text-brand font-semibold mb-6">
+                — Ace360degree Blog
               </div>
               <h1 className="font-serif text-5xl leading-[0.95] tracking-tight text-balance md:text-6xl lg:text-7xl">
                 Ideas. <em className="not-italic text-brand">Insights.</em>{" "}
@@ -107,46 +106,8 @@ function BlogPage() {
         </div>
       </section>
 
-      {/* <section className="border-y border-dark/10 bg-white">
-        <div className="mx-auto max-w-7xl px-6 py-16 lg:py-20">
-          <div className="mb-10 flex items-end justify-between border-b border-dark/10 pb-6">
-            <div>
-              <div className="mb-2 text-[11px] uppercase tracking-[0.28em] text-brand font-semibold">
-                Featured by WordPress
-              </div>
-              <h2 className="font-serif text-3xl tracking-tight md:text-4xl">
-                Latest stories pulled from the CMS
-              </h2>
-            </div>
-            <a
-              href="#latest"
-              className="hidden cursor-pointer items-center gap-2 border-b border-dark pb-1 text-sm font-semibold transition hover:border-brand hover:text-brand md:inline-flex"
-            >
-              View All <span aria-hidden="true">&rarr;</span>
-            </a>
-          </div>
-
-          {featured ? (
-            <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr]">
-              <ArticleCard a={featured} large />
-              <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-1">
-                {articles.slice(1, 5).map((article) => (
-                  <ArticleCard key={article.slug} a={article} />
-                ))}
-              </div>
-            </div>
-          ) : (
-            <div className="rounded-2xl border border-dashed border-dark/20 px-6 py-12 text-center text-ink">
-              WordPress posts will appear here once the API is connected.
-            </div>
-          )}
-        </div>
-      </section> */}
-
-      {/* <section className="bg-white">
-        <div className="mx-auto max-w-7xl space-y-20 px-6 py-20 lg:py-28">
-          {shelfCategories.map((category) => {
-            const items = articles.filter((article) => article.category === category).concat(articles).slice(0, 4);
+      {/* FEATURED */}
+      
 
             return (
               <div key={category}>
@@ -180,6 +141,7 @@ function BlogPage() {
         </div>
       </section> */}
 
+      {/* LATEST INSIGHTS */}
       <section id="latest" className="bg-canvas">
         <div className="mx-auto max-w-7xl px-6 py-20 lg:py-28">
           <div className="mb-14 flex flex-wrap items-end justify-between gap-6">
@@ -219,32 +181,26 @@ function BlogPage() {
         </div>
       </section>
 
+      {/* THOUGHT LEADERSHIP */}
       <section className="bg-dark text-canvas">
-        <div className="mx-auto max-w-5xl px-6 py-24 text-center lg:py-32">
-          <div className="mb-8 text-[11px] uppercase tracking-[0.28em] text-brand font-semibold">
-            From the Ace360degree Desk
-          </div>
-          <blockquote className="font-serif text-3xl leading-[1.15] tracking-tight text-balance md:text-5xl">
-            "Marketing without creativity is noise. Technology without empathy is
-            cold.
-            <span className="mt-4 block text-brand italic">
-              The real magic happens when they meet.
-            </span>"
+        <div className="mx-auto max-w-5xl px-6 py-24 lg:py-32 text-center">
+          <div className="text-[11px] uppercase tracking-[0.28em] text-brand font-semibold mb-8">From the Ace360degree Desk</div>
+          <blockquote className="font-serif text-3xl md:text-5xl leading-[1.15] tracking-tight text-balance">
+            "Marketing without creativity is noise. Technology without empathy is cold.
+            <span className="block mt-4 text-brand italic">The real magic happens when they meet.</span>"
           </blockquote>
           <div className="mt-10 text-sm uppercase tracking-[0.22em] text-canvas/70">
-            - Altaf Shaikh, Founder - Ace360degree
+            — Altaf Shaikh, Founder · Ace360degree
           </div>
-          <Link
-            to="/about"
-            className="mt-10 inline-flex items-center gap-2 border border-canvas/20 px-6 py-3 text-sm font-semibold transition hover:border-brand hover:bg-brand hover:text-dark"
-          >
-            Discover Our Story <span aria-hidden="true">&rarr;</span>
+          <Link to="/about" className="mt-10 inline-flex items-center gap-2 border border-canvas/20 px-6 py-3 text-sm font-semibold hover:bg-brand hover:text-dark hover:border-brand transition">
+            Discover Our Story <span aria-hidden>→</span>
           </Link>
         </div>
       </section>
 
-      <section id="newsletter" className="border-y border-dark/10 bg-white">
-        <div className="mx-auto grid max-w-6xl gap-12 px-6 py-20 lg:grid-cols-2 lg:items-center lg:py-28">
+      {/* NEWSLETTER */}
+      <section id="newsletter" className="bg-white border-y border-dark/10">
+        <div className="mx-auto max-w-6xl px-6 py-20 lg:py-28 grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <div className="mb-4 text-[11px] uppercase tracking-[0.28em] text-brand font-semibold">
               The Insight Letter

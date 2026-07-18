@@ -69,6 +69,7 @@ import { Route as UnitedStatesWebsiteDevelopmentUnitedStatesRouteImport } from '
 import { Route as UnitedStatesWebsiteDevelopmentCompanyRouteImport } from './routes/united-states.website-development-company'
 import { Route as SuccessStoriesEnterpriseExperienceRouteImport } from './routes/success-stories.enterprise-experience'
 import { Route as IndustriesSaasTechnologyRouteImport } from './routes/industries_.saas-technology'
+import { Route as IndustriesSaasRouteImport } from './routes/industries_.saas'
 import { Route as IndustriesRealEstateRouteImport } from './routes/industries_.real-estate'
 import { Route as IndustriesManufacturingRouteImport } from './routes/industries_.manufacturing'
 import { Route as IndustriesHealthcareRouteImport } from './routes/industries_.healthcare'
@@ -401,6 +402,11 @@ const IndustriesSaasTechnologyRoute =
     path: '/industries/saas-technology',
     getParentRoute: () => rootRouteImport,
   } as any)
+const IndustriesSaasRoute = IndustriesSaasRouteImport.update({
+  id: '/industries_/saas',
+  path: '/industries/saas',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndustriesRealEstateRoute = IndustriesRealEstateRouteImport.update({
   id: '/industries_/real-estate',
   path: '/industries/real-estate',
@@ -528,6 +534,7 @@ export interface FileRoutesByFullPath {
   '/industries/healthcare': typeof IndustriesHealthcareRoute
   '/industries/manufacturing': typeof IndustriesManufacturingRoute
   '/industries/real-estate': typeof IndustriesRealEstateRoute
+  '/industries/saas': typeof IndustriesSaasRoute
   '/industries/saas-technology': typeof IndustriesSaasTechnologyRoute
   '/success-stories/enterprise-experience': typeof SuccessStoriesEnterpriseExperienceRoute
   '/united-states/website-development-company': typeof UnitedStatesWebsiteDevelopmentCompanyRoute
@@ -601,6 +608,7 @@ export interface FileRoutesByTo {
   '/industries/healthcare': typeof IndustriesHealthcareRoute
   '/industries/manufacturing': typeof IndustriesManufacturingRoute
   '/industries/real-estate': typeof IndustriesRealEstateRoute
+  '/industries/saas': typeof IndustriesSaasRoute
   '/industries/saas-technology': typeof IndustriesSaasTechnologyRoute
   '/success-stories/enterprise-experience': typeof SuccessStoriesEnterpriseExperienceRoute
   '/united-states/website-development-company': typeof UnitedStatesWebsiteDevelopmentCompanyRoute
@@ -675,6 +683,7 @@ export interface FileRoutesById {
   '/industries_/healthcare': typeof IndustriesHealthcareRoute
   '/industries_/manufacturing': typeof IndustriesManufacturingRoute
   '/industries_/real-estate': typeof IndustriesRealEstateRoute
+  '/industries_/saas': typeof IndustriesSaasRoute
   '/industries_/saas-technology': typeof IndustriesSaasTechnologyRoute
   '/success-stories/enterprise-experience': typeof SuccessStoriesEnterpriseExperienceRoute
   '/united-states/website-development-company': typeof UnitedStatesWebsiteDevelopmentCompanyRoute
@@ -750,6 +759,7 @@ export interface FileRouteTypes {
     | '/industries/healthcare'
     | '/industries/manufacturing'
     | '/industries/real-estate'
+    | '/industries/saas'
     | '/industries/saas-technology'
     | '/success-stories/enterprise-experience'
     | '/united-states/website-development-company'
@@ -823,6 +833,7 @@ export interface FileRouteTypes {
     | '/industries/healthcare'
     | '/industries/manufacturing'
     | '/industries/real-estate'
+    | '/industries/saas'
     | '/industries/saas-technology'
     | '/success-stories/enterprise-experience'
     | '/united-states/website-development-company'
@@ -896,6 +907,7 @@ export interface FileRouteTypes {
     | '/industries_/healthcare'
     | '/industries_/manufacturing'
     | '/industries_/real-estate'
+    | '/industries_/saas'
     | '/industries_/saas-technology'
     | '/success-stories/enterprise-experience'
     | '/united-states/website-development-company'
@@ -968,6 +980,7 @@ export interface RootRouteChildren {
   IndustriesHealthcareRoute: typeof IndustriesHealthcareRoute
   IndustriesManufacturingRoute: typeof IndustriesManufacturingRoute
   IndustriesRealEstateRoute: typeof IndustriesRealEstateRoute
+  IndustriesSaasRoute: typeof IndustriesSaasRoute
   IndustriesSaasTechnologyRoute: typeof IndustriesSaasTechnologyRoute
   SuccessStoriesEnterpriseExperienceRoute: typeof SuccessStoriesEnterpriseExperienceRoute
 }
@@ -1394,6 +1407,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndustriesSaasTechnologyRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/industries_/saas': {
+      id: '/industries_/saas'
+      path: '/industries/saas'
+      fullPath: '/industries/saas'
+      preLoaderRoute: typeof IndustriesSaasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/industries_/real-estate': {
       id: '/industries_/real-estate'
       path: '/industries/real-estate'
@@ -1571,6 +1591,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndustriesHealthcareRoute: IndustriesHealthcareRoute,
   IndustriesManufacturingRoute: IndustriesManufacturingRoute,
   IndustriesRealEstateRoute: IndustriesRealEstateRoute,
+  IndustriesSaasRoute: IndustriesSaasRoute,
   IndustriesSaasTechnologyRoute: IndustriesSaasTechnologyRoute,
   SuccessStoriesEnterpriseExperienceRoute:
     SuccessStoriesEnterpriseExperienceRoute,

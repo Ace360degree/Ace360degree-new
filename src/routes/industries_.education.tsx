@@ -376,14 +376,29 @@ function EducationPage() {
       {/* HERO */}
       <section className="relative overflow-hidden border-b border-foreground/10 bg-gradient-to-b from-background via-background to-primary/5">
         <div
-          aria-hidden
-          className="absolute inset-0 opacity-[0.04]"
-          style={{
-            backgroundImage:
-              "linear-gradient(to right, currentColor 1px, transparent 1px), linear-gradient(to bottom, currentColor 1px, transparent 1px)",
-            backgroundSize: "64px 64px",
-          }}
-        />
+    aria-hidden="true"
+    className="pointer-events-none absolute inset-0 z-0"
+     style={{
+      background: `
+        linear-gradient(
+          180deg,
+          rgb(252, 252, 249) 0%,
+          rgb(252, 252, 249) 48%,
+          rgb(253, 247, 239) 52%,
+          rgb(253, 243, 231) 56%,
+          rgb(253, 238, 216) 61%,
+          rgb(252, 233, 204) 66%,
+          rgb(252, 230, 195) 72%,
+          rgb(252, 229, 193) 77%,
+          rgb(252, 229, 194) 81%,
+          rgb(252, 232, 200) 86%,
+          rgb(253, 236, 210) 91%,
+          rgb(253, 241, 223) 96%,
+          rgb(252, 247, 237) 100%
+        )
+      `,
+    }}
+  />
         <div className="container relative mx-auto grid gap-12 px-4 py-20 sm:py-28 lg:grid-cols-12 lg:gap-10 lg:py-32">
           <div className="lg:col-span-7">
             <Reveal>
@@ -574,7 +589,25 @@ function EducationPage() {
       </section>
 
       {/* SECTION 5 — Student Journey Framework */}
-      <section className="relative border-b border-foreground/10 bg-gradient-to-b from-primary/5 via-background to-background py-20 sm:py-28">
+      <section
+  className="relative overflow-hidden border-b border-foreground/10 py-20 sm:py-28"
+  style={{
+    backgroundImage: `
+      linear-gradient(
+        180deg,
+        #FFF8EA 0%,
+        #FFF0D2 8%,
+        #FFE9BE 20%,
+        #FFE7B8 30%,
+        #FFEDCD 42%,
+        #FFF5E5 52%,
+        #FCFAF5 62%,
+        #FCFCFA 72%,
+        #FCFCFA 100%
+      )
+    `,
+  }}
+>
         <div className="container mx-auto px-4">
           <Reveal>
             <div className="text-xs uppercase tracking-[0.18em] text-foreground/60">
