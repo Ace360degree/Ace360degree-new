@@ -241,6 +241,7 @@ function D2CPage() {
   return (
     <div className="min-h-screen bg-canvas text-dark">
       <SiteHeader />
+
       <section className="border-b border-dark/10 bg-canvas">
         <div className="mx-auto max-w-7xl px-6 py-28 md:py-36">
           <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-16">

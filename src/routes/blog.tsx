@@ -115,7 +115,7 @@ function BlogPage() {
             <span className="mx-2 opacity-40">/</span>
             <span className="text-dark">Insights</span>
           </nav>
-          <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-end">
+          <div className="grid items-center gap-10 lg:grid-cols-12 lg:gap-16">
             <div className="lg:col-span-7 animate-fade-up">
               <div className="text-[11px] uppercase tracking-[0.28em] text-brand font-semibold mb-6">
                 — Ace360degree Blog
@@ -151,89 +151,7 @@ function BlogPage() {
       </section>
 
       {/* FEATURED */}
-      <section className="border-t border-dark/10">
-        <div className="mx-auto max-w-7xl px-6 py-20 lg:py-28">
-          <div className="flex flex-wrap items-end justify-between gap-6 mb-14">
-            <div>
-              <div className="text-[11px] uppercase tracking-[0.28em] text-ink mb-3">Featured</div>
-              <h2 className="font-serif text-4xl md:text-5xl tracking-tight">Featured Reads from Our Experts</h2>
-              <p className="mt-4 max-w-xl text-ink">Get inspired by what's working right now — in marketing, branding, and business growth.</p>
-            </div>
-          </div>
-
-          <div className="grid lg:grid-cols-12 gap-10">
-            {/* Hero card */}
-            <a href={FEATURED.href} target="_blank" rel="noopener" className="lg:col-span-7 group cursor-pointer block">
-              <article>
-              <div className="relative aspect-[16/10] overflow-hidden bg-muted mb-6">
-                <img src={FEATURED.image} alt={FEATURED.title} loading="lazy" width={1280} height={896}
-                  className="h-full w-full object-cover transition duration-700 group-hover:scale-105" />
-              </div>
-              <div className="flex items-center gap-3 text-[11px] uppercase tracking-[0.22em] text-ink mb-4">
-                <span className="text-brand font-semibold">{FEATURED.category}</span>
-                <span className="opacity-30">/</span>
-                <span>{FEATURED.date}</span>
-                <span className="opacity-30">/</span>
-                <span>{FEATURED.read}</span>
-              </div>
-              <h3 className="font-serif text-3xl md:text-4xl leading-tight tracking-tight group-hover:text-brand transition">
-                {FEATURED.title}
-              </h3>
-              <p className="mt-4 text-ink text-lg leading-relaxed max-w-2xl">{FEATURED.excerpt}</p>
-              <span className="mt-6 inline-flex items-center gap-2 text-sm font-semibold border-b border-dark pb-1 group-hover:border-brand group-hover:text-brand transition">
-                Read More <span aria-hidden>→</span>
-              </span>
-              </article>
-            </a>
-
-            {/* Trending */}
-            <aside className="lg:col-span-5">
-              <div className="text-[11px] uppercase tracking-[0.28em] text-ink mb-6 pb-4 border-b border-dark/10">Trending Now</div>
-              <ul className="divide-y divide-dark/10">
-                {TRENDING.map((a, i) => (
-                  <li key={i}>
-                    <a href={a.href} target="_blank" rel="noopener" className="group flex items-start gap-5 py-5 cursor-pointer">
-                      <div className="relative size-20 shrink-0 overflow-hidden bg-muted">
-                        <img src={a.image} alt={a.title} loading="lazy" width={1024} height={768} className="h-full w-full object-cover transition group-hover:scale-110" />
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <div className="text-[10px] uppercase tracking-[0.22em] text-brand font-semibold mb-1">{a.category}</div>
-                        <h4 className="font-medium leading-snug group-hover:text-brand transition line-clamp-2">{a.title}</h4>
-                        <div className="mt-1 text-xs text-ink">{a.date} · {a.read}</div>
-                      </div>
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </aside>
-          </div>
-        </div>
-      </section>
-
-      {/* CATEGORY FILTER (sticky) */}
-      <section id="categories" className="sticky top-20 z-30 bg-canvas/90 backdrop-blur border-y border-dark/10">
-        <div className="mx-auto max-w-7xl px-6 py-5 flex items-center gap-6 overflow-x-auto">
-          <span className="text-[11px] uppercase tracking-[0.28em] text-ink shrink-0">Explore</span>
-          <div className="flex items-center gap-1">
-            {CATEGORIES.map((c) => (
-              <button
-                key={c}
-                onClick={() => setActive(c)}
-                className={`relative px-4 py-2 text-sm whitespace-nowrap transition ${
-                  active === c ? "text-dark" : "text-ink hover:text-dark"
-                }`}
-              >
-                {c}
-                <span
-                  className={`absolute left-4 right-4 -bottom-px h-0.5 bg-brand transition-transform origin-left ${
-                    active === c ? "scale-x-100" : "scale-x-0"
-                  }`}
-                />
-              </button>
-            ))}
-          </div>
-        </div>
-      </section>
+      
 
       {/* CATEGORY SHELVES */}
       <section className="bg-white">
@@ -266,23 +184,6 @@ function BlogPage() {
         </div>
       </section>
 
-      {/* THOUGHT LEADERSHIP */}
-      <section className="bg-dark text-canvas">
-        <div className="mx-auto max-w-5xl px-6 py-24 lg:py-32 text-center">
-          <div className="text-[11px] uppercase tracking-[0.28em] text-brand font-semibold mb-8">From the Ace360degree Desk</div>
-          <blockquote className="font-serif text-3xl md:text-5xl leading-[1.15] tracking-tight text-balance">
-            "Marketing without creativity is noise. Technology without empathy is cold.
-            <span className="block mt-4 text-brand italic">The real magic happens when they meet.</span>"
-          </blockquote>
-          <div className="mt-10 text-sm uppercase tracking-[0.22em] text-canvas/70">
-            — Altaf Shaikh, Founder · Ace360degree
-          </div>
-          <Link to="/about" className="mt-10 inline-flex items-center gap-2 border border-canvas/20 px-6 py-3 text-sm font-semibold hover:bg-brand hover:text-dark hover:border-brand transition">
-            Discover Our Story <span aria-hidden>→</span>
-          </Link>
-        </div>
-      </section>
-
       {/* LATEST INSIGHTS */}
       <section id="latest" className="bg-canvas">
         <div className="mx-auto max-w-7xl px-6 py-20 lg:py-28">
@@ -310,6 +211,23 @@ function BlogPage() {
               Load More <span aria-hidden>↓</span>
             </button>
           </div>
+        </div>
+      </section>
+
+      {/* THOUGHT LEADERSHIP */}
+      <section className="bg-dark text-canvas">
+        <div className="mx-auto max-w-5xl px-6 py-24 lg:py-32 text-center">
+          <div className="text-[11px] uppercase tracking-[0.28em] text-brand font-semibold mb-8">From the Ace360degree Desk</div>
+          <blockquote className="font-serif text-3xl md:text-5xl leading-[1.15] tracking-tight text-balance">
+            "Marketing without creativity is noise. Technology without empathy is cold.
+            <span className="block mt-4 text-brand italic">The real magic happens when they meet.</span>"
+          </blockquote>
+          <div className="mt-10 text-sm uppercase tracking-[0.22em] text-canvas/70">
+            — Altaf Shaikh, Founder · Ace360degree
+          </div>
+          <Link to="/about" className="mt-10 inline-flex items-center gap-2 border border-canvas/20 px-6 py-3 text-sm font-semibold hover:bg-brand hover:text-dark hover:border-brand transition">
+            Discover Our Story <span aria-hidden>→</span>
+          </Link>
         </div>
       </section>
 

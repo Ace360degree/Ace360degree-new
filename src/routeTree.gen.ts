@@ -69,6 +69,7 @@ import { Route as UnitedStatesWebsiteDevelopmentUnitedStatesRouteImport } from '
 import { Route as UnitedStatesWebsiteDevelopmentCompanyRouteImport } from './routes/united-states.website-development-company'
 import { Route as SuccessStoriesEnterpriseExperienceRouteImport } from './routes/success-stories.enterprise-experience'
 import { Route as IndustriesSaasTechnologyRouteImport } from './routes/industries_.saas-technology'
+import { Route as IndustriesSaasRouteImport } from './routes/industries_.saas'
 import { Route as IndustriesRealEstateRouteImport } from './routes/industries_.real-estate'
 import { Route as IndustriesManufacturingRouteImport } from './routes/industries_.manufacturing'
 import { Route as IndustriesHealthcareRouteImport } from './routes/industries_.healthcare'
@@ -238,11 +239,6 @@ const DisclaimerRoute = DisclaimerRouteImport.update({
   path: '/disclaimer',
   getParentRoute: () => rootRouteImport,
 } as any)
-const D2cRetailbrandRoute = D2cRetailbrandRouteImport.update({
-  id: '/d2c-retailbrand',
-  path: '/d2c-retailbrand',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const CrmErpSolutionsRoute = CrmErpSolutionsRouteImport.update({
   id: '/crm-erp-solutions',
   path: '/crm-erp-solutions',
@@ -404,6 +400,11 @@ const IndustriesSaasTechnologyRoute =
     path: '/industries/saas-technology',
     getParentRoute: () => rootRouteImport,
   } as any)
+const IndustriesSaasRoute = IndustriesSaasRouteImport.update({
+  id: '/industries_/saas',
+  path: '/industries/saas',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndustriesRealEstateRoute = IndustriesRealEstateRouteImport.update({
   id: '/industries_/real-estate',
   path: '/industries/real-estate',
@@ -481,7 +482,6 @@ export interface FileRoutesByFullPath {
   '/corporate-films-video-production': typeof CorporateFilmsVideoProductionRoute
   '/crm-erp-solutions': typeof CrmErpSolutionsRoute
   '/disclaimer': typeof DisclaimerRoute
-  '/d2c-retailbrand': typeof D2cRetailbrandRoute
   '/event-marketing-brand-experiences': typeof EventMarketingBrandExperiencesRoute
   '/growth': typeof GrowthRoute
   '/growth-marketing': typeof GrowthMarketingRoute
@@ -520,6 +520,7 @@ export interface FileRoutesByFullPath {
   '/industries/healthcare': typeof IndustriesHealthcareRoute
   '/industries/manufacturing': typeof IndustriesManufacturingRoute
   '/industries/real-estate': typeof IndustriesRealEstateRoute
+  '/industries/saas': typeof IndustriesSaasRoute
   '/industries/saas-technology': typeof IndustriesSaasTechnologyRoute
   '/success-stories/enterprise-experience': typeof SuccessStoriesEnterpriseExperienceRoute
   '/united-states/website-development-company': typeof UnitedStatesWebsiteDevelopmentCompanyRoute
@@ -553,7 +554,6 @@ export interface FileRoutesByTo {
   '/corporate-films-video-production': typeof CorporateFilmsVideoProductionRoute
   '/crm-erp-solutions': typeof CrmErpSolutionsRoute
   '/disclaimer': typeof DisclaimerRoute
-  '/d2c-retailbrand': typeof D2cRetailbrandRoute
   '/event-marketing-brand-experiences': typeof EventMarketingBrandExperiencesRoute
   '/growth': typeof GrowthRoute
   '/growth-marketing': typeof GrowthMarketingRoute
@@ -592,6 +592,7 @@ export interface FileRoutesByTo {
   '/industries/healthcare': typeof IndustriesHealthcareRoute
   '/industries/manufacturing': typeof IndustriesManufacturingRoute
   '/industries/real-estate': typeof IndustriesRealEstateRoute
+  '/industries/saas': typeof IndustriesSaasRoute
   '/industries/saas-technology': typeof IndustriesSaasTechnologyRoute
   '/success-stories/enterprise-experience': typeof SuccessStoriesEnterpriseExperienceRoute
   '/united-states/website-development-company': typeof UnitedStatesWebsiteDevelopmentCompanyRoute
@@ -626,7 +627,6 @@ export interface FileRoutesById {
   '/corporate-films-video-production': typeof CorporateFilmsVideoProductionRoute
   '/crm-erp-solutions': typeof CrmErpSolutionsRoute
   '/disclaimer': typeof DisclaimerRoute
-  '/d2c-retailbrand': typeof D2cRetailbrandRoute
   '/event-marketing-brand-experiences': typeof EventMarketingBrandExperiencesRoute
   '/growth': typeof GrowthRoute
   '/growth-marketing': typeof GrowthMarketingRoute
@@ -665,6 +665,7 @@ export interface FileRoutesById {
   '/industries_/healthcare': typeof IndustriesHealthcareRoute
   '/industries_/manufacturing': typeof IndustriesManufacturingRoute
   '/industries_/real-estate': typeof IndustriesRealEstateRoute
+  '/industries_/saas': typeof IndustriesSaasRoute
   '/industries_/saas-technology': typeof IndustriesSaasTechnologyRoute
   '/success-stories/enterprise-experience': typeof SuccessStoriesEnterpriseExperienceRoute
   '/united-states/website-development-company': typeof UnitedStatesWebsiteDevelopmentCompanyRoute
@@ -700,7 +701,6 @@ export interface FileRouteTypes {
     | '/corporate-films-video-production'
     | '/crm-erp-solutions'
     | '/disclaimer'
-    | '/d2c-retailbrand'
     | '/event-marketing-brand-experiences'
     | '/growth'
     | '/growth-marketing'
@@ -739,6 +739,7 @@ export interface FileRouteTypes {
     | '/industries/healthcare'
     | '/industries/manufacturing'
     | '/industries/real-estate'
+    | '/industries/saas'
     | '/industries/saas-technology'
     | '/success-stories/enterprise-experience'
     | '/united-states/website-development-company'
@@ -772,7 +773,6 @@ export interface FileRouteTypes {
     | '/corporate-films-video-production'
     | '/crm-erp-solutions'
     | '/disclaimer'
-    | '/d2c-retailbrand'
     | '/event-marketing-brand-experiences'
     | '/growth'
     | '/growth-marketing'
@@ -811,6 +811,7 @@ export interface FileRouteTypes {
     | '/industries/healthcare'
     | '/industries/manufacturing'
     | '/industries/real-estate'
+    | '/industries/saas'
     | '/industries/saas-technology'
     | '/success-stories/enterprise-experience'
     | '/united-states/website-development-company'
@@ -844,7 +845,6 @@ export interface FileRouteTypes {
     | '/corporate-films-video-production'
     | '/crm-erp-solutions'
     | '/disclaimer'
-    | '/d2c-retailbrand'
     | '/event-marketing-brand-experiences'
     | '/growth'
     | '/growth-marketing'
@@ -883,6 +883,7 @@ export interface FileRouteTypes {
     | '/industries_/healthcare'
     | '/industries_/manufacturing'
     | '/industries_/real-estate'
+    | '/industries_/saas'
     | '/industries_/saas-technology'
     | '/success-stories/enterprise-experience'
     | '/united-states/website-development-company'
@@ -917,7 +918,6 @@ export interface RootRouteChildren {
   CorporateFilmsVideoProductionRoute: typeof CorporateFilmsVideoProductionRoute
   CrmErpSolutionsRoute: typeof CrmErpSolutionsRoute
   DisclaimerRoute: typeof DisclaimerRoute
-  D2cRetailbrandRoute: typeof D2cRetailbrandRoute
   EventMarketingBrandExperiencesRoute: typeof EventMarketingBrandExperiencesRoute
   GrowthRoute: typeof GrowthRoute
   GrowthMarketingRoute: typeof GrowthMarketingRoute
@@ -955,6 +955,7 @@ export interface RootRouteChildren {
   IndustriesHealthcareRoute: typeof IndustriesHealthcareRoute
   IndustriesManufacturingRoute: typeof IndustriesManufacturingRoute
   IndustriesRealEstateRoute: typeof IndustriesRealEstateRoute
+  IndustriesSaasRoute: typeof IndustriesSaasRoute
   IndustriesSaasTechnologyRoute: typeof IndustriesSaasTechnologyRoute
   SuccessStoriesEnterpriseExperienceRoute: typeof SuccessStoriesEnterpriseExperienceRoute
 }
@@ -1171,13 +1172,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DisclaimerRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/d2c-retailbrand': {
-      id: '/d2c-retailbrand'
-      path: '/d2c-retailbrand'
-      fullPath: '/d2c-retailbrand'
-      preLoaderRoute: typeof D2cRetailbrandRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/crm-erp-solutions': {
       id: '/crm-erp-solutions'
       path: '/crm-erp-solutions'
@@ -1388,6 +1382,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndustriesSaasTechnologyRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/industries_/saas': {
+      id: '/industries_/saas'
+      path: '/industries/saas'
+      fullPath: '/industries/saas'
+      preLoaderRoute: typeof IndustriesSaasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/industries_/real-estate': {
       id: '/industries_/real-estate'
       path: '/industries/real-estate'
@@ -1509,7 +1510,6 @@ const rootRouteChildren: RootRouteChildren = {
   CorporateFilmsVideoProductionRoute: CorporateFilmsVideoProductionRoute,
   CrmErpSolutionsRoute: CrmErpSolutionsRoute,
   DisclaimerRoute: DisclaimerRoute,
-  D2cRetailbrandRoute: D2cRetailbrandRoute,
   EventMarketingBrandExperiencesRoute: EventMarketingBrandExperiencesRoute,
   GrowthRoute: GrowthRoute,
   GrowthMarketingRoute: GrowthMarketingRoute,
@@ -1549,6 +1549,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndustriesHealthcareRoute: IndustriesHealthcareRoute,
   IndustriesManufacturingRoute: IndustriesManufacturingRoute,
   IndustriesRealEstateRoute: IndustriesRealEstateRoute,
+  IndustriesSaasRoute: IndustriesSaasRoute,
   IndustriesSaasTechnologyRoute: IndustriesSaasTechnologyRoute,
   SuccessStoriesEnterpriseExperienceRoute:
     SuccessStoriesEnterpriseExperienceRoute,
