@@ -35,7 +35,7 @@ function BlogPage() {
   const { posts } = Route.useLoaderData();
   const articles = posts.map((post) => ({
     ...toBlogCard(post, heroImg),
-    kind: post._embedded?.["wp:term"] ? "post" : "page",
+    kind: (post._embedded?.["wp:term"] ? "post" : "page") as "post" | "page",
   }));
   const featured = articles[0];
   const latestArticles = articles.slice(0, 20);

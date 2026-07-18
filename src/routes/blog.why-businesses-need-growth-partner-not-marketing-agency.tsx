@@ -139,7 +139,7 @@ function ArticlePage() {
             <ChevronRight className="h-3 w-3" />
             <Link to="/blog" className="hover:text-primary transition-colors">Blogs</Link>
             <ChevronRight className="h-3 w-3" />
-            <span className="text-foreground">{categoryName}</span>
+            <span className="text-foreground">Digital Marketing</span>
             <ChevronRight className="h-3 w-3" />
             <span className="truncate max-w-[200px] md:max-w-[500px]">
               Why Most Businesses Don't Need Another Marketing Agency
