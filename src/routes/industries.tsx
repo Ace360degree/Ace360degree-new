@@ -22,8 +22,7 @@ import {
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 
-import industriesHero from "@/assets/industry-manufacturing32.jpg";
-import indManufacturing from "@/assets/industry-manufacturing323.jpg";
+import indManufacturing from "@/assets/industry-manufacturing32.jpg";
 import indFinance from "@/assets/industry-finance.212.jpg";
 import indEducation from "@/assets/industry-education.333.jpg";
 import indHealthcare from "@/assets/industry-healthcare.444.jpg";
@@ -305,73 +304,59 @@ function IndustriesPage() {
       <SiteHeader />
 
       {/* HERO */}
-      <section
-        id="overview"
-        className="overflow-hidden border-b border-[#181818]/8 bg-[radial-gradient(circle_at_top_left,rgba(255,179,48,0.16),transparent_30%),linear-gradient(180deg,#fffdfa_0%,#fcfbf8_100%)] text-[#181818]"
-      >
-        <div className="mx-auto max-w-7xl px-6 pb-20 pt-28 lg:pt-32">
-          <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-16">
-            <div className="lg:col-span-7">
-              <Reveal>
-                <div className="inline-flex items-center gap-2 rounded-full border border-[#181818]/10 bg-white/80 px-4 py-1.5 text-[11px] uppercase tracking-[0.18em] text-[#181818]/60 backdrop-blur">
-                  <Layers className="h-3.5 w-3.5 text-[#ffb330]" />
-                  Industry Solutions
-                </div>
-              </Reveal>
-              <Reveal delay={80}>
-                <h1 className="mt-7 max-w-5xl font-serif text-5xl leading-[1.02] tracking-tight md:text-6xl lg:text-7xl">
-                  Industry Solutions That Drive{" "}
-                  <span className="italic text-[#ffb330]">Sustainable</span> Business Growth.
-                </h1>
-              </Reveal>
-              <Reveal delay={160}>
-                <p className="mt-6 max-w-3xl text-lg leading-relaxed text-[#181818]/68 md:text-xl">
-                  A strategic partnership across Growth, Brand, Technology and AI — tailored to how
-                  your industry actually grows. Built for boards, CEOs and growth-focused leaders.
-                </p>
-              </Reveal>
-              <Reveal delay={240}>
-                <div className="mt-8 flex flex-wrap gap-3">
-                  <a
-                    href="#industries"
-                    className="inline-flex items-center gap-2 rounded-full bg-[#ffb330] px-6 py-3 text-sm font-medium text-[#181818] transition hover:bg-[#f0a419]"
-                  >
-                    Explore Industry Solutions <ArrowRight className="size-4" />
-                  </a>
-                  <Link
-                    to="/contact"
-                    className="inline-flex items-center gap-2 rounded-full border border-[#181818]/10 bg-white px-6 py-3 text-sm font-medium text-[#181818] transition hover:bg-[#f8f5ee]"
-                  >
-                    Book Discovery Call <ArrowUpRight className="size-4" />
-                  </Link>
-                </div>
-              </Reveal>
-
-              <Reveal delay={320}>
-                <div className="mt-14 grid max-w-2xl grid-cols-2 gap-x-8 gap-y-6 border border-[#181818]/8 bg-white/80 p-6 backdrop-blur md:grid-cols-4">
-                  {TRUST.map((t) => (
-                    <div key={t.v}>
-                      <div className="font-serif text-3xl text-[#181818]">{t.k}</div>
-                      <div className="mt-1 text-[11px] uppercase tracking-[0.16em] text-[#181818]/50">
-                        {t.v}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </Reveal>
+      <section id="overview" className="relative overflow-hidden bg-dark text-canvas">
+        <div className="absolute inset-0 opacity-[0.18]">
+          <div className="grid grid-cols-5 h-full">
+            <img src={indFinance} alt="" className="object-cover w-full h-full" />
+            <img src={indManufacturing} alt="" className="object-cover w-full h-full" />
+            <img src={indArchitecture} alt="" className="object-cover w-full h-full" />
+            <img src={indHealthcare} alt="" className="object-cover w-full h-full" />
+            <img src={indEducation} alt="" className="object-cover w-full h-full" />
+          </div>
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-b from-dark/85 via-dark/70 to-dark" />
+        <div className="relative mx-auto max-w-7xl px-6 pt-28 pb-32">
+          <Reveal>
+            <div className="inline-flex items-center gap-2 text-[10px] uppercase tracking-[0.28em] text-brand">
+              <span className="size-1.5 rounded-full bg-brand" /> Industry Solutions
             </div>
+          </Reveal>
+          <Reveal delay={80}>
+            <h1 className="mt-6 max-w-5xl text-4xl md:text-6xl lg:text-7xl font-medium leading-[1.05] tracking-tight">
+              Industry Solutions That Drive{" "}
+              <span className="font-serif italic text-brand">Sustainable</span> Business Growth.
+            </h1>
+          </Reveal>
+          <Reveal delay={160}>
+            <p className="mt-8 max-w-2xl text-lg text-canvas/70 leading-relaxed">
+              A strategic partnership across Growth, Brand, Technology and AI — tailored to how
+              your industry actually grows. Built for boards, CEOs and growth-focused leaders.
+            </p>
+          </Reveal>
+          <Reveal delay={240}>
+            <div className="mt-10 flex flex-wrap gap-3">
+              <a
+                href="#industries"
+                className="inline-flex items-center gap-2 bg-brand text-dark px-5 py-3 text-sm font-semibold hover:brightness-95 transition"
+              >
+                Explore Industry Solutions <ArrowRight className="size-4" />
+              </a>
+              <Link
+                to="/contact"
+                className="inline-flex items-center gap-2 border border-canvas/25 text-canvas px-5 py-3 text-sm font-semibold hover:bg-canvas hover:text-dark transition"
+              >
+                Book Discovery Call <ArrowUpRight className="size-4" />
+              </Link>
+            </div>
+          </Reveal>
 
-            <Reveal delay={140} className="lg:col-span-5">
-              <div className="overflow-hidden border border-[#181818]/10 bg-white shadow-[0_24px_80px_rgba(24,24,24,0.08)]">
-                <img
-                  src={industriesHero}
-                  alt="Industry growth solutions"
-                  className="aspect-[4/3] w-full object-cover"
-                  width={1920}
-                  height={1080}
-                />
+          <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-px bg-canvas/10 border border-canvas/10">
+            {TRUST.map((t) => (
+              <div key={t.v} className="bg-dark px-6 py-6">
+                <div className="text-3xl font-medium text-brand">{t.k}</div>
+                <div className="mt-1 text-[11px] uppercase tracking-[0.2em] text-canvas/60">{t.v}</div>
               </div>
-            </Reveal>
+            ))}
           </div>
         </div>
       </section>
