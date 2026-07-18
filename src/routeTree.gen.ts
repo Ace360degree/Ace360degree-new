@@ -78,7 +78,9 @@ import { Route as IndustriesEducationRouteImport } from './routes/industries_.ed
 import { Route as IndustriesD2cRetailbrandcopy2RouteImport } from './routes/industries_.d2c-retailbrand copy 2'
 import { Route as IndustriesD2cRetailbrandRouteImport } from './routes/industries_.d2c-retailbrand'
 import { Route as IndustriesArchitectureRouteImport } from './routes/industries_.architecture'
+import { Route as ContentSlugRouteImport } from './routes/content.$slug'
 import { Route as BlogWhyBusinessesNeedGrowthPartnerNotMarketingAgencyRouteImport } from './routes/blog.why-businesses-need-growth-partner-not-marketing-agency'
+import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 
 const YoutubeGrowthChannelStrategyRoute =
   YoutubeGrowthChannelStrategyRouteImport.update({
@@ -447,12 +449,22 @@ const IndustriesArchitectureRoute = IndustriesArchitectureRouteImport.update({
   path: '/industries/architecture',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ContentSlugRoute = ContentSlugRouteImport.update({
+  id: '/content/$slug',
+  path: '/content/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const BlogWhyBusinessesNeedGrowthPartnerNotMarketingAgencyRoute =
   BlogWhyBusinessesNeedGrowthPartnerNotMarketingAgencyRouteImport.update({
     id: '/why-businesses-need-growth-partner-not-marketing-agency',
     path: '/why-businesses-need-growth-partner-not-marketing-agency',
     getParentRoute: () => BlogRoute,
   } as any)
+const BlogSlugRoute = BlogSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => BlogRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -511,7 +523,9 @@ export interface FileRoutesByFullPath {
   '/website-design-development': typeof WebsiteDesignDevelopmentRoute
   '/website-development-united-states': typeof WebsiteDevelopmentUnitedStatesRoute
   '/youtube-growth-channel-strategy': typeof YoutubeGrowthChannelStrategyRoute
+  '/blog/$slug': typeof BlogSlugRoute
   '/blog/why-businesses-need-growth-partner-not-marketing-agency': typeof BlogWhyBusinessesNeedGrowthPartnerNotMarketingAgencyRoute
+  '/content/$slug': typeof ContentSlugRoute
   '/industries/architecture': typeof IndustriesArchitectureRoute
   '/industries/d2c-retailbrand': typeof IndustriesD2cRetailbrandRoute
   '/industries/d2c-retailbrand copy 2': typeof IndustriesD2cRetailbrandcopy2Route
@@ -583,7 +597,9 @@ export interface FileRoutesByTo {
   '/website-design-development': typeof WebsiteDesignDevelopmentRoute
   '/website-development-united-states': typeof WebsiteDevelopmentUnitedStatesRoute
   '/youtube-growth-channel-strategy': typeof YoutubeGrowthChannelStrategyRoute
+  '/blog/$slug': typeof BlogSlugRoute
   '/blog/why-businesses-need-growth-partner-not-marketing-agency': typeof BlogWhyBusinessesNeedGrowthPartnerNotMarketingAgencyRoute
+  '/content/$slug': typeof ContentSlugRoute
   '/industries/architecture': typeof IndustriesArchitectureRoute
   '/industries/d2c-retailbrand': typeof IndustriesD2cRetailbrandRoute
   '/industries/d2c-retailbrand copy 2': typeof IndustriesD2cRetailbrandcopy2Route
@@ -656,7 +672,9 @@ export interface FileRoutesById {
   '/website-design-development': typeof WebsiteDesignDevelopmentRoute
   '/website-development-united-states': typeof WebsiteDevelopmentUnitedStatesRoute
   '/youtube-growth-channel-strategy': typeof YoutubeGrowthChannelStrategyRoute
+  '/blog/$slug': typeof BlogSlugRoute
   '/blog/why-businesses-need-growth-partner-not-marketing-agency': typeof BlogWhyBusinessesNeedGrowthPartnerNotMarketingAgencyRoute
+  '/content/$slug': typeof ContentSlugRoute
   '/industries_/architecture': typeof IndustriesArchitectureRoute
   '/industries_/d2c-retailbrand': typeof IndustriesD2cRetailbrandRoute
   '/industries_/d2c-retailbrand copy 2': typeof IndustriesD2cRetailbrandcopy2Route
@@ -730,7 +748,9 @@ export interface FileRouteTypes {
     | '/website-design-development'
     | '/website-development-united-states'
     | '/youtube-growth-channel-strategy'
+    | '/blog/$slug'
     | '/blog/why-businesses-need-growth-partner-not-marketing-agency'
+    | '/content/$slug'
     | '/industries/architecture'
     | '/industries/d2c-retailbrand'
     | '/industries/d2c-retailbrand copy 2'
@@ -802,7 +822,9 @@ export interface FileRouteTypes {
     | '/website-design-development'
     | '/website-development-united-states'
     | '/youtube-growth-channel-strategy'
+    | '/blog/$slug'
     | '/blog/why-businesses-need-growth-partner-not-marketing-agency'
+    | '/content/$slug'
     | '/industries/architecture'
     | '/industries/d2c-retailbrand'
     | '/industries/d2c-retailbrand copy 2'
@@ -874,7 +896,9 @@ export interface FileRouteTypes {
     | '/website-design-development'
     | '/website-development-united-states'
     | '/youtube-growth-channel-strategy'
+    | '/blog/$slug'
     | '/blog/why-businesses-need-growth-partner-not-marketing-agency'
+    | '/content/$slug'
     | '/industries_/architecture'
     | '/industries_/d2c-retailbrand'
     | '/industries_/d2c-retailbrand copy 2'
@@ -947,6 +971,7 @@ export interface RootRouteChildren {
   WebsiteDesignDevelopmentRoute: typeof WebsiteDesignDevelopmentRoute
   WebsiteDevelopmentUnitedStatesRoute: typeof WebsiteDevelopmentUnitedStatesRoute
   YoutubeGrowthChannelStrategyRoute: typeof YoutubeGrowthChannelStrategyRoute
+  ContentSlugRoute: typeof ContentSlugRoute
   IndustriesArchitectureRoute: typeof IndustriesArchitectureRoute
   IndustriesD2cRetailbrandRoute: typeof IndustriesD2cRetailbrandRoute
   IndustriesD2cRetailbrandcopy2Route: typeof IndustriesD2cRetailbrandcopy2Route
@@ -1445,6 +1470,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndustriesArchitectureRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/content/$slug': {
+      id: '/content/$slug'
+      path: '/content/$slug'
+      fullPath: '/content/$slug'
+      preLoaderRoute: typeof ContentSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/blog/why-businesses-need-growth-partner-not-marketing-agency': {
       id: '/blog/why-businesses-need-growth-partner-not-marketing-agency'
       path: '/why-businesses-need-growth-partner-not-marketing-agency'
@@ -1452,14 +1484,23 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BlogWhyBusinessesNeedGrowthPartnerNotMarketingAgencyRouteImport
       parentRoute: typeof BlogRoute
     }
+    '/blog/$slug': {
+      id: '/blog/$slug'
+      path: '/$slug'
+      fullPath: '/blog/$slug'
+      preLoaderRoute: typeof BlogSlugRouteImport
+      parentRoute: typeof BlogRoute
+    }
   }
 }
 
 interface BlogRouteChildren {
+  BlogSlugRoute: typeof BlogSlugRoute
   BlogWhyBusinessesNeedGrowthPartnerNotMarketingAgencyRoute: typeof BlogWhyBusinessesNeedGrowthPartnerNotMarketingAgencyRoute
 }
 
 const BlogRouteChildren: BlogRouteChildren = {
+  BlogSlugRoute: BlogSlugRoute,
   BlogWhyBusinessesNeedGrowthPartnerNotMarketingAgencyRoute:
     BlogWhyBusinessesNeedGrowthPartnerNotMarketingAgencyRoute,
 }
@@ -1541,6 +1582,7 @@ const rootRouteChildren: RootRouteChildren = {
   WebsiteDesignDevelopmentRoute: WebsiteDesignDevelopmentRoute,
   WebsiteDevelopmentUnitedStatesRoute: WebsiteDevelopmentUnitedStatesRoute,
   YoutubeGrowthChannelStrategyRoute: YoutubeGrowthChannelStrategyRoute,
+  ContentSlugRoute: ContentSlugRoute,
   IndustriesArchitectureRoute: IndustriesArchitectureRoute,
   IndustriesD2cRetailbrandRoute: IndustriesD2cRetailbrandRoute,
   IndustriesD2cRetailbrandcopy2Route: IndustriesD2cRetailbrandcopy2Route,
