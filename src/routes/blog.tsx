@@ -38,9 +38,6 @@ function BlogPage() {
     kind: post._embedded?.["wp:term"] ? "post" : "page",
   }));
   const featured = articles[0];
-  const shelfCategories = ["All", ...new Set(articles.map((article) => article.category))]
-    .filter((category) => category !== "All")
-    .slice(0, 3);
   const latestArticles = articles.slice(0, 20);
 
   return (
@@ -106,79 +103,6 @@ function BlogPage() {
           </div>
         </div>
       </section>
-
-      {/* <section className="border-y border-dark/10 bg-white">
-        <div className="mx-auto max-w-7xl px-6 py-16 lg:py-20">
-          <div className="mb-10 flex items-end justify-between border-b border-dark/10 pb-6">
-            <div>
-              <div className="mb-2 text-[11px] uppercase tracking-[0.28em] text-brand font-semibold">
-                Featured by WordPress
-              </div>
-              <h2 className="font-serif text-3xl tracking-tight md:text-4xl">
-                Latest stories pulled from the CMS
-              </h2>
-            </div>
-            <a
-              href="#latest"
-              className="hidden cursor-pointer items-center gap-2 border-b border-dark pb-1 text-sm font-semibold transition hover:border-brand hover:text-brand md:inline-flex"
-            >
-              View All <span aria-hidden="true">&rarr;</span>
-            </a>
-          </div>
-
-          {featured ? (
-            <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr]">
-              <ArticleCard a={featured} large />
-              <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-1">
-                {articles.slice(1, 5).map((article) => (
-                  <ArticleCard key={article.slug} a={article} />
-                ))}
-              </div>
-            </div>
-          ) : (
-            <div className="rounded-2xl border border-dashed border-dark/20 px-6 py-12 text-center text-ink">
-              WordPress posts will appear here once the API is connected.
-            </div>
-          )}
-        </div>
-      </section> */}
-
-      {/* <section className="bg-white">
-        <div className="mx-auto max-w-7xl space-y-20 px-6 py-20 lg:py-28">
-          {shelfCategories.map((category) => {
-            const items = articles.filter((article) => article.category === category).concat(articles).slice(0, 4);
-
-            return (
-              <div key={category}>
-                <div className="mb-10 flex items-end justify-between border-b border-dark/10 pb-6">
-                  <div>
-                    <div className="mb-2 text-[11px] uppercase tracking-[0.28em] text-brand font-semibold">
-                      {category}
-                    </div>
-                    <h3 className="font-serif text-3xl tracking-tight md:text-4xl">
-                      {category === "Digital Marketing" && "Strategies that drive measurable growth"}
-                      {category === "Branding & Design" && "Identity, story, and the craft behind it"}
-                      {category === "Technology" && "Web, apps, and AI that ship"}
-                      {category === "Case Studies" && "Real client outcomes and the work behind them"}
-                      {category === "Inside Ace360degree" && "How the team thinks, builds, and ships"}
-                      {category === "Industry Trends" && "What is changing across the market"}
-                    </h3>
-                  </div>
-                  <a className="hidden cursor-pointer items-center gap-2 border-b border-dark pb-1 text-sm font-semibold transition hover:border-brand hover:text-brand md:inline-flex">
-                    View All <span aria-hidden="true">&rarr;</span>
-                  </a>
-                </div>
-
-                <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-                  {items.map((article) => (
-                    <ArticleCard key={article.slug} a={article} />
-                  ))}
-                </div>
-              </div>
-            );
-          })}
-        </div>
-      </section> */}
 
       <section id="latest" className="bg-canvas">
         <div className="mx-auto max-w-7xl px-6 py-20 lg:py-28">
