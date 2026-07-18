@@ -15,8 +15,8 @@ import {
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 
-import heroImg from "@/assets/case-living-concepts.jpg";
-import caseLivingHero from "@/assets/case-living-concepts-hero.jpg";
+import heroImg from "@/assets/icase-living-concepts1.jpg";
+import caseLivingHero from "@/assets/case-living-concepts.jpg";
 import caseKuwal from "@/assets/case-kuwal-sanam.jpg";
 
 export const Route = createFileRoute("/industries_/real-estate")({

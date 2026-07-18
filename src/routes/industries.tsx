@@ -22,7 +22,7 @@ import {
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 
-import indManufacturing from "@/assets/industry-manufacturing323.jpg";
+import indManufacturing from "@/assets/industry-manufacturing32.jpg";
 import indFinance from "@/assets/industry-finance.212.jpg";
 import indEducation from "@/assets/industry-education.333.jpg";
 import indHealthcare from "@/assets/industry-healthcare.444.jpg";

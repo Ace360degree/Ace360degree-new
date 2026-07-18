@@ -35,7 +35,7 @@ import {
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 
-import heroImg from "@/assets/industry-healthcare.jpg";
+import heroImg from "@/assets/industry-healthcare311.jpg";
 import caseHealthus from "@/assets/case-healthus.123.jpg";
 import caseOpus from "@/assets/case-opus-dental.123.jpg";
 import caseDoctor from "@/assets/case-doctor-branding.jpg";
@@ -359,97 +359,142 @@ function HealthcarePage() {
       <SiteHeader />
 
       {/* HERO */}
-      <section className="relative overflow-hidden border-b border-foreground/10 bg-gradient-to-b from-background via-background to-primary/5">
-        <div
-          aria-hidden
-          className="absolute inset-0 opacity-[0.04]"
-          style={{
-            backgroundImage:
-              "linear-gradient(to right, currentColor 1px, transparent 1px), linear-gradient(to bottom, currentColor 1px, transparent 1px)",
-            backgroundSize: "64px 64px",
-          }}
-        />
-        <div className="container relative mx-auto grid gap-12 px-4 py-20 sm:py-28 lg:grid-cols-12 lg:gap-10 lg:py-32">
-          <div className="lg:col-span-7">
-            <Reveal>
-              <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-foreground/15 bg-background/60 px-3 py-1 text-xs uppercase tracking-[0.18em] text-foreground/70 backdrop-blur">
-                <HeartPulse className="h-3.5 w-3.5" />
-                <span>Industry Solutions / Healthcare</span>
-              </div>
-            </Reveal>
-            <Reveal delay={80}>
-              <h1 className="font-serif text-4xl leading-[1.05] tracking-tight text-foreground sm:text-5xl lg:text-6xl">
-                Helping Healthcare Organizations Build Trust,
-                <span className="block italic text-foreground/80">
-                  Attract More Patients & Deliver Better Digital Experiences.
-                </span>
-              </h1>
-            </Reveal>
-            <Reveal delay={160}>
-              <div className="mt-8 max-w-2xl space-y-4 text-base leading-relaxed text-foreground/75 sm:text-lg">
-                <p>
-                  Patients no longer choose healthcare providers based only on referrals.
-                </p>
-                <ul className="grid grid-cols-2 gap-x-6 gap-y-1 text-sm text-foreground/70 sm:text-base">
-                  <li>· They search online.</li>
-                  <li>· Compare doctors.</li>
-                  <li>· Read reviews.</li>
-                  <li>· Evaluate hospital websites.</li>
-                  <li>· Check treatment information.</li>
-                  <li>· Book appointments digitally.</li>
-                </ul>
-                <p>
-                  Whether you're a hospital, clinic, healthcare startup or specialist
-                  practice, your digital presence has become an extension of your patient
-                  experience.
-                </p>
-                <p>
-                  At Ace360degree, we help healthcare organizations strengthen patient
-                  acquisition, improve digital trust and implement technology and AI
-                  solutions that support long-term growth.
-                </p>
-              </div>
-            </Reveal>
-            <Reveal delay={220}>
-              <div className="mt-10 flex flex-wrap gap-3">
-                <Link
-                  to="/contact"
-                  className="group inline-flex items-center gap-2 rounded-full bg-foreground px-6 py-3 text-sm font-medium text-background transition-all hover:bg-foreground/90"
-                >
-                  Request Healthcare Growth Audit
-                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-                </Link>
-                <Link
-                  to="/contact"
-                  className="inline-flex items-center gap-2 rounded-full border border-foreground/20 px-6 py-3 text-sm font-medium text-foreground transition-all hover:bg-foreground/5"
-                >
-                  Book Discovery Call
-                </Link>
-              </div>
-            </Reveal>
-          </div>
+      <section className="relative isolate overflow-hidden border-b border-foreground/10 bg-[#FDFBF9]">
+  <div
+    aria-hidden="true"
+    className="pointer-events-none absolute inset-0 z-0"
+     style={{
+      background: `
+        linear-gradient(
+          180deg,
+          rgb(252, 252, 249) 0%,
+          rgb(252, 252, 249) 48%,
+          rgb(253, 247, 239) 52%,
+          rgb(253, 243, 231) 56%,
+          rgb(253, 238, 216) 61%,
+          rgb(252, 233, 204) 66%,
+          rgb(252, 230, 195) 72%,
+          rgb(252, 229, 193) 77%,
+          rgb(252, 229, 194) 81%,
+          rgb(252, 232, 200) 86%,
+          rgb(253, 236, 210) 91%,
+          rgb(253, 241, 223) 96%,
+          rgb(252, 247, 237) 100%
+        )
+      `,
+    }}
+  />
 
-          <div className="lg:col-span-5">
-            <Reveal delay={120}>
-              <div className="relative overflow-hidden rounded-2xl border border-foreground/10 shadow-2xl">
-                <img
-                  src={heroImg}
-                  alt="Healthcare digital experience"
-                  className="aspect-[4/5] w-full object-cover"
-                />
-                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-background/95 via-background/40 to-transparent p-6">
-                  <div className="flex items-center gap-3 text-foreground">
-                    <ShieldCheck className="h-5 w-5" />
-                    <span className="text-sm font-medium">
-                      Patient-first. Privacy-aware. Built for trust.
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </Reveal>
+  <div
+    aria-hidden="true"
+    className="pointer-events-none absolute inset-0 z-[1]"
+    style={{
+      backgroundImage: `
+        linear-gradient(
+          to right,
+          rgba(24, 24, 24, 0.04) 1px,
+          transparent 1px
+        ),
+        linear-gradient(
+          to bottom,
+          rgba(24, 24, 24, 0.04) 1px,
+          transparent 1px
+        )
+      `,
+      backgroundSize: "64px 64px",
+    }}
+  />
+
+  <div className="container relative z-10 mx-auto grid gap-12 px-4 py-20 sm:py-28 lg:grid-cols-12 lg:gap-10 lg:py-32">
+    <div className="lg:col-span-7">
+      <Reveal>
+        <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-foreground/15 bg-background/60 px-3 py-1 text-xs uppercase tracking-[0.18em] text-foreground/70 backdrop-blur">
+          <HeartPulse className="h-3.5 w-3.5" />
+          <span>Industry Solutions / Healthcare</span>
+        </div>
+      </Reveal>
+
+      <Reveal delay={80}>
+        <h1 className="font-serif text-4xl leading-[1.05] tracking-tight text-foreground sm:text-5xl lg:text-6xl">
+          Helping Healthcare Organizations Build Trust,
+          <span className="block italic text-foreground/80">
+            Attract More Patients & Deliver Better Digital Experiences.
+          </span>
+        </h1>
+      </Reveal>
+
+      <Reveal delay={160}>
+        <div className="mt-8 max-w-2xl space-y-4 text-base leading-relaxed text-foreground/75 sm:text-lg">
+          <p>
+            Patients no longer choose healthcare providers based only on
+            referrals.
+          </p>
+
+          <ul className="grid grid-cols-2 gap-x-6 gap-y-1 text-sm text-foreground/70 sm:text-base">
+            <li>· They search online.</li>
+            <li>· Compare doctors.</li>
+            <li>· Read reviews.</li>
+            <li>· Evaluate hospital websites.</li>
+            <li>· Check treatment information.</li>
+            <li>· Book appointments digitally.</li>
+          </ul>
+
+          <p>
+            Whether you're a hospital, clinic, healthcare startup or specialist
+            practice, your digital presence has become an extension of your
+            patient experience.
+          </p>
+
+          <p>
+            At Ace360degree, we help healthcare organizations strengthen
+            patient acquisition, improve digital trust and implement technology
+            and AI solutions that support long-term growth.
+          </p>
+        </div>
+      </Reveal>
+
+      <Reveal delay={220}>
+        <div className="mt-10 flex flex-wrap gap-3">
+          <Link
+            to="/contact"
+            className="group inline-flex items-center gap-2 rounded-full bg-foreground px-6 py-3 text-sm font-medium text-background transition-all hover:bg-foreground/90"
+          >
+            Request Healthcare Growth Audit
+            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+          </Link>
+
+          <Link
+            to="/contact"
+            className="inline-flex items-center gap-2 rounded-full border border-foreground/20 px-6 py-3 text-sm font-medium text-foreground transition-all hover:bg-foreground/5"
+          >
+            Book Discovery Call
+          </Link>
+        </div>
+      </Reveal>
+    </div>
+
+    <div className="lg:col-span-5">
+      <Reveal delay={120}>
+        <div className="relative overflow-hidden rounded-2xl border border-foreground/10 shadow-2xl">
+          <img
+            src={heroImg}
+            alt="Healthcare digital experience"
+            className="aspect-[4/5] w-full object-cover"
+          />
+
+          <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#FDFBF9]/95 via-[#FDFBF9]/40 to-transparent p-6">
+            <div className="flex items-center gap-3 text-foreground">
+              <ShieldCheck className="h-5 w-5" />
+              <span className="text-sm font-medium">
+                Patient-first. Privacy-aware. Built for trust.
+              </span>
+            </div>
           </div>
         </div>
-      </section>
+      </Reveal>
+    </div>
+  </div>
+</section>
 
       {/* SECTION 2 — Healthcare Has Changed */}
       <section className="border-b border-foreground/10 py-20 sm:py-28">
@@ -564,43 +609,64 @@ function HealthcarePage() {
       </section>
 
       {/* SECTION 5 — Patient Journey Framework */}
-      <section className="relative border-b border-foreground/10 bg-gradient-to-b from-primary/5 via-background to-background py-20 sm:py-28">
-        <div className="container mx-auto px-4">
-          <Reveal>
-            <div className="text-xs uppercase tracking-[0.18em] text-foreground/60">
-              05 — Framework
+      <section
+  className="relative overflow-hidden border-b border-foreground/10 py-20 sm:py-28"
+  style={{
+    backgroundImage: `
+      linear-gradient(
+        180deg,
+        #FFF8EA 0%,
+        #FFF0D2 8%,
+        #FFE9BE 20%,
+        #FFE7B8 30%,
+        #FFEDCD 42%,
+        #FFF5E5 52%,
+        #FCFAF5 62%,
+        #FCFCFA 72%,
+        #FCFCFA 100%
+      )
+    `,
+  }}
+>
+  <div className="container relative mx-auto px-4">
+    <Reveal>
+      <div className="text-xs uppercase tracking-[0.18em] text-foreground/60">
+        05 — Framework
+      </div>
+
+      <h2 className="mt-3 max-w-3xl font-serif text-3xl leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+        Patient Journey Framework
+      </h2>
+
+      <p className="mt-4 max-w-2xl text-base leading-relaxed text-foreground/70">
+        Every successful patient relationship moves through a predictable journey.
+        We design marketing, technology and AI systems for each step.
+      </p>
+    </Reveal>
+
+    <div className="mt-14 grid gap-3 lg:grid-cols-7">
+      {journey.map((step, i) => (
+        <Reveal key={step} delay={i * 80}>
+          <div className="group relative h-full">
+            <div className="flex min-h-[120px] h-full flex-col items-start justify-between rounded-2xl border border-[#181818]/10 bg-[#FCFCFA]/90 p-5 transition-all duration-300 hover:border-[#181818]/25 hover:bg-white hover:shadow-lg">
+              <div className="font-mono text-xs uppercase tracking-wider text-foreground/50">
+                Step {String(i + 1).padStart(2, "0")}
+              </div>
+
+              <div className="mt-4 text-base font-semibold leading-snug text-foreground">
+                {step}
+              </div>
             </div>
-            <h2 className="mt-3 max-w-3xl font-serif text-3xl leading-tight tracking-tight sm:text-4xl lg:text-5xl">
-              Patient Journey Framework
-            </h2>
-            <p className="mt-4 max-w-2xl text-base leading-relaxed text-foreground/70">
-              Every successful patient relationship moves through a predictable journey.
-              We design marketing, technology and AI systems for each step.
-            </p>
-          </Reveal>
 
-          <div className="mt-14 grid gap-3 lg:grid-cols-7">
-            {journey.map((step, i) => (
-              <Reveal key={step} delay={i * 80}>
-                <div className="group relative h-full">
-                  <div className="flex h-full flex-col items-start justify-between rounded-2xl border border-foreground/10 bg-background p-5 transition-all hover:border-foreground/30 hover:shadow-lg">
-                    <div className="text-xs font-mono uppercase tracking-wider text-foreground/50">
-                      Step {String(i + 1).padStart(2, "0")}
-                    </div>
-                    <div className="mt-4 text-base font-semibold leading-snug text-foreground">
-                      {step}
-                    </div>
-                  </div>
-                  {i < journey.length - 1 && (
-                    <ArrowRight className="absolute -right-4 top-1/2 hidden h-5 w-5 -translate-y-1/2 text-foreground/30 lg:block" />
-                  )}
-                </div>
-              </Reveal>
-            ))}
+            {i < journey.length - 1 && (
+              <ArrowRight className="absolute -right-4 top-1/2 z-10 hidden h-5 w-5 -translate-y-1/2 text-foreground/30 lg:block" />
+            )}
           </div>
-        </div>
-      </section>
-
+        </Reveal>
+      ))}
+    </div>
+  </div>
+</section>
       {/* SECTION 6 — How Ace360degree Helps */}
       <section className="border-b border-foreground/10 py-20 sm:py-28">
         <div className="container mx-auto px-4">

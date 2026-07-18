@@ -872,46 +872,77 @@ function FintechPage() {
       </section>
 
       {/* FINAL CTA */}
-      <section className="bg-gradient-to-br from-primary/10 via-background to-background">
-        <div className="mx-auto max-w-5xl px-6 py-28 text-center">
-          <Reveal>
-            <div className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-4 py-1.5 text-xs uppercase tracking-[0.18em] text-primary">
-              <Target className="h-3.5 w-3.5" />
-              Let's build your financial services growth roadmap
-            </div>
-          </Reveal>
-          <Reveal delay={100}>
-            <h2 className="mt-8 font-serif text-4xl leading-tight text-foreground md:text-6xl">
-              Ready to grow your financial business with{" "}
-              <span className="italic text-primary">brand, technology and AI</span>?
-            </h2>
-          </Reveal>
-          <Reveal delay={180}>
-            <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">
-              Talk to our team about a tailored growth, brand, technology and AI roadmap for your
-              bank, NBFC, fintech, broking, wealth or insurance business — across India and global
-              markets.
-            </p>
-          </Reveal>
-          <Reveal delay={240}>
-            <div className="mt-10 flex flex-wrap justify-center gap-3">
-              <Link
-                to="/contact"
-                className="inline-flex items-center gap-2 rounded-full bg-foreground px-7 py-3.5 text-sm font-medium text-background transition hover:bg-foreground/90"
-              >
-                Book Discovery Call <ArrowRight className="h-4 w-4" />
-              </Link>
-              <Link
-                to="/portfolio"
-                className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-7 py-3.5 text-sm font-medium text-foreground transition hover:bg-muted"
-              >
-                View Success Stories <ArrowUpRight className="h-4 w-4" />
-              </Link>
-            </div>
-          </Reveal>
-        </div>
-      </section>
+      <section
+  className="relative isolate overflow-hidden border-y border-foreground/[0.06]"
+  style={{
+    backgroundColor: "#ffffff",
+    backgroundImage: `
+      radial-gradient(
+        ellipse 95% 150% at 0% 0%,
+        rgba(242, 160, 0, 0.16) 0%,
+        rgba(242, 160, 0, 0.11) 22%,
+        rgba(242, 160, 0, 0.06) 42%,
+        rgba(242, 160, 0, 0.025) 58%,
+        rgba(242, 160, 0, 0) 76%
+      ),
+      linear-gradient(
+        110deg,
+        #fff8eb 0%,
+        #fffaf2 28%,
+        #fffdf9 52%,
+        #ffffff 75%,
+        #ffffff 100%
+      )
+    `,
+  }}
+>
+  <div className="relative z-10 mx-auto max-w-5xl px-6 py-28 text-center">
+    <Reveal>
+      <div className="inline-flex items-center gap-2 rounded-full border border-[#F2A400]/30 bg-[#F2A400]/[0.04] px-4 py-1.5 text-xs uppercase tracking-[0.18em] text-[#F2A400]">
+        <Target className="h-3.5 w-3.5" />
+        <span>Let's build your financial services growth roadmap</span>
+      </div>
+    </Reveal>
 
+    <Reveal delay={100}>
+      <h2 className="mx-auto mt-8 max-w-4xl font-serif text-4xl leading-[1.12] tracking-tight text-foreground md:text-6xl">
+        Ready to grow your financial business with{" "}
+        <span className="italic font-normal text-[#F2A400]">
+          brand, technology and AI
+        </span>
+        ?
+      </h2>
+    </Reveal>
+
+    <Reveal delay={180}>
+      <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
+        Talk to our team about a tailored growth, brand, technology and AI
+        roadmap for your bank, NBFC, fintech, broking, wealth or insurance
+        business — across India and global markets.
+      </p>
+    </Reveal>
+
+    <Reveal delay={240}>
+      <div className="mt-10 flex flex-wrap justify-center gap-3">
+        <Link
+          to="/contact"
+          className="inline-flex items-center gap-2 rounded-full bg-foreground px-7 py-3.5 text-sm font-medium text-background transition-all duration-300 hover:-translate-y-0.5 hover:bg-foreground/90"
+        >
+          Book Discovery Call
+          <ArrowRight className="h-4 w-4" />
+        </Link>
+
+        <Link
+          to="/portfolio"
+          className="inline-flex items-center gap-2 rounded-full border border-foreground/10 bg-white/70 px-7 py-3.5 text-sm font-medium text-foreground backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-foreground/20 hover:bg-white"
+        >
+          View Success Stories
+          <ArrowUpRight className="h-4 w-4" />
+        </Link>
+      </div>
+    </Reveal>
+  </div>
+</section>
       <SiteFooter />
     </div>
   );

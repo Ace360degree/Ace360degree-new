@@ -2,6 +2,46 @@ import { Link } from "@tanstack/react-router";
 import { MapPin, Mail, Phone, Linkedin, Instagram, Youtube, Facebook, Twitter } from "lucide-react";
 import footerLogo from "@/assets/footer-logo.png";
 
+const serviceLinks = [
+  { label: "Website Design & Development", to: "/website-design-development" },
+  { label: "Search Engine Optimization", to: "/search-visibility" },
+  { label: "Performance Marketing", to: "/performance-marketing" },
+  { label: "Mobile App Development", to: "/mobile-app-development" },
+  { label: "CRM & ERP Solutions", to: "/crm-erp-solutions" },
+  { label: "Brand Strategy", to: "/brand-strategy" },
+  { label: "Logo & Visual Identity", to: "/logo-visual-identity" },
+  { label: "UI / UX & Product Engineering", to: "/ui-ux-design-product-engineering" },
+  { label: "Content Marketing", to: "/content-marketing" },
+  { label: "Marketing Automation", to: "/marketing-automation" },
+  { label: "Conversion Optimization", to: "/conversion-optimization" },
+  { label: "Social Media Marketing", to: "/social-media-marketing" },
+  { label: "Marketing Communication", to: "/marketing-communication" },
+  { label: "Corporate Communication Design", to: "/corporate-communication-design" },
+  { label: "Packaging & Product", to: "/packaging-product-branding" },
+  { label: "Motion Graphics & Animation", to: "/motion-graphics-animation" },
+  { label: "Corporate Films & Videos", to: "/corporate-films-video-production" },
+];
+
+const industryLinks = [
+  { label: "Healthcare", to: "/industries/healthcare" },
+  { label: "Education", to: "/industries/education" },
+  { label: "Manufacturing", to: "/industries/manufacturing" },
+  { label: "Fintech & BFSI", to: "/industries/fintech" },
+  { label: "Real Estate", to: "/industries/real-estate" },
+  { label: "SaaS & Technology", to: "/industries/saas-technology" },
+  { label: "Architecture / Interior / Furniture", to: "/industries/architecture" },
+  { label: "D2C & Retail Brand", to: "/industries/d2c-retailbrand" },
+];
+
+const aboutLinks = [
+  { label: "Our Story", to: "/about" },
+  { label: "Case Studies", to: "/portfolio" },
+  { label: "Why Ace360degree", to: "/about" },
+  { label: "Insights", to: "/blog" },
+  { label: "Careers", to: "/careers" },
+  { label: "Contact", to: "/contact" },
+];
+
 export function SiteFooter() {
   return (
     <footer className="bg-[#181818] relative overflow-hidden pt-24 pb-12 font-sans">
@@ -80,23 +120,13 @@ export function SiteFooter() {
           <div className="lg:col-span-3">
             <h4 className="text-white/80 text-sm font-semibold uppercase tracking-widest mb-6">Services</h4>
             <ul className="space-y-3.5 text-sm text-white/50">
-              <li><a className="hover:text-white transition cursor-pointer">Website Design & Development</a></li>
-              <li><a className="hover:text-white transition cursor-pointer">Search Engine Optimization</a></li>
-              <li><a className="hover:text-white transition cursor-pointer">Performance Marketing</a></li>
-              <li><a className="hover:text-white transition cursor-pointer">Mobile App Development</a></li>
-              <li><a className="hover:text-white transition cursor-pointer">CRM & ERP Solutions</a></li>
-              <li><a className="hover:text-white transition cursor-pointer">Brand Strategy</a></li>
-              <li><a className="hover:text-white transition cursor-pointer">Logo & Visual Identity</a></li>
-              <li><a className="hover:text-white transition cursor-pointer">UI / UX & Product Engineering</a></li>
-              <li><a className="hover:text-white transition cursor-pointer">Content Marketing</a></li>
-              <li><a className="hover:text-white transition cursor-pointer">Marketing Automation</a></li>
-              <li><a className="hover:text-white transition cursor-pointer">Conversion Optimization</a></li>
-              <li><a className="hover:text-white transition cursor-pointer">Social Media Marketing</a></li>
-              <li><a className="hover:text-white transition cursor-pointer">Marketing Communication</a></li>
-              <li><a className="hover:text-white transition cursor-pointer">Corporate Communication Design</a></li>
-              <li><a className="hover:text-white transition cursor-pointer">Packaging & Product</a></li>
-              <li><a className="hover:text-white transition cursor-pointer">Motion Graphics & Animation</a></li>
-              <li><a className="hover:text-white transition cursor-pointer">Corporate Films & Videos</a></li>
+              {serviceLinks.map((service) => (
+                <li key={service.to}>
+                  <Link to={service.to} className="hover:text-white transition">
+                    {service.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -105,14 +135,13 @@ export function SiteFooter() {
             <div>
               <h4 className="text-white/80 text-sm font-semibold uppercase tracking-widest mb-6">Industries We Serve</h4>
               <ul className="space-y-3.5 text-sm text-white/50">
-                <li><a className="hover:text-white transition cursor-pointer">Healthcare</a></li>
-                <li><a className="hover:text-white transition cursor-pointer">Education</a></li>
-                <li><a className="hover:text-white transition cursor-pointer">Manufacturing</a></li>
-                <li><a className="hover:text-white transition cursor-pointer">Fintech & BFSI</a></li>
-                <li><a className="hover:text-white transition cursor-pointer">Real Estate</a></li>
-                <li><a className="hover:text-white transition cursor-pointer">SaaS & Technology</a></li>
-                <li><a className="hover:text-white transition cursor-pointer">Architecture / Interior / Furniture</a></li>
-                <li><a className="hover:text-white transition cursor-pointer">D2C & Retail Brand</a></li>
+                {industryLinks.map((industry) => (
+                  <li key={industry.to}>
+                    <Link to={industry.to} className="hover:text-white transition">
+                      {industry.label}
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </div>
 
@@ -134,12 +163,13 @@ export function SiteFooter() {
             <div>
               <h4 className="text-white/80 text-sm font-semibold uppercase tracking-widest mb-6">About Us</h4>
               <ul className="space-y-3.5 text-sm text-white/50">
-                <li><a className="hover:text-white transition cursor-pointer">Our Story</a></li>
-                <li><a className="hover:text-white transition cursor-pointer">Case Studies</a></li>
-                <li><a className="hover:text-white transition cursor-pointer">Why Ace360degree</a></li>
-                <li><a className="hover:text-white transition cursor-pointer">Insights</a></li>
-                <li><a className="hover:text-white transition cursor-pointer">Careers</a></li>
-                <li><a className="hover:text-white transition cursor-pointer">Contact</a></li>
+                {aboutLinks.map((item) => (
+                  <li key={item.label}>
+                    <Link to={item.to} className="hover:text-white transition">
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </div>
 
