@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { Button } from "@/components/ui/button";
+import { BlogFAQ } from "@/components/blog-faq";
 import {
   ArrowRight,
   Clock,
@@ -18,6 +19,9 @@ import {
   CheckCircle2,
   XCircle,
   Quote,
+  User,
+  Calendar,
+  ChevronRight,
 } from "lucide-react";
 
 export const Route = createFileRoute(
@@ -128,46 +132,37 @@ function ArticlePage() {
       <SiteHeader />
 
       {/* Hero */}
-      <section className="relative overflow-hidden border-b border-border bg-gradient-to-b from-muted/40 to-background">
-        <div className="absolute inset-0 -z-10 opacity-[0.04] [background-image:radial-gradient(circle_at_1px_1px,currentColor_1px,transparent_0)] [background-size:24px_24px]" />
-        <div className="container mx-auto px-6 pt-20 pb-16 md:pt-28 md:pb-24 max-w-5xl">
-          <div className="flex flex-wrap items-center gap-3 mb-6">
-            <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider bg-primary/10 text-primary">
-              Business Growth
+      <section className="relative overflow-hidden bg-background border-b border-border">
+        <div className="container mx-auto px-6 pt-24 pb-20 md:pt-32 md:pb-28 max-w-5xl text-center relative z-10">
+          <nav className="flex flex-wrap items-center justify-center gap-2 mb-8 text-[10px] md:text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
+            <Link to="/" className="hover:text-primary transition-colors">Home</Link>
+            <ChevronRight className="h-3 w-3" />
+            <Link to="/blog" className="hover:text-primary transition-colors">Blogs</Link>
+            <ChevronRight className="h-3 w-3" />
+            <span className="text-foreground">{categoryName}</span>
+            <ChevronRight className="h-3 w-3" />
+            <span className="truncate max-w-[200px] md:max-w-[500px]">
+              Why Most Businesses Don't Need Another Marketing Agency
             </span>
-            <span className="inline-flex items-center gap-1.5 text-xs text-muted-foreground">
-              <Clock className="h-3.5 w-3.5" /> 8–10 min read
-            </span>
-            <span className="text-xs text-muted-foreground">{publishDate}</span>
-          </div>
-          <h1 className="font-serif text-4xl md:text-6xl leading-[1.05] tracking-tight">
-            Why Most Businesses Don't Need Another Marketing Agency. They Need A
-            Growth Partner.
-          </h1>
-          <p className="mt-6 text-lg md:text-xl text-muted-foreground max-w-3xl leading-relaxed">
-            Marketing activities alone rarely create sustainable business
-            growth. Discover why successful businesses are moving beyond
-            traditional agency relationships and partnering with organizations
-            that combine growth marketing, branding, technology and AI.
-          </p>
+          </nav>
 
-          <div className="mt-10 flex flex-wrap items-center gap-6">
-            <div className="flex items-center gap-3">
-              <div className="h-12 w-12 rounded-full bg-primary/10 text-primary grid place-items-center font-semibold">
-                AS
-              </div>
-              <div>
-                <div className="font-semibold">Altaf Shaikh</div>
-                <div className="text-xs text-muted-foreground">
-                  Founder & CEO, Ace360degree
-                </div>
-              </div>
+          <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl leading-[1.15] tracking-tight text-foreground mb-10 mx-auto max-w-5xl">
+            Why Most Businesses Don't Need Another Marketing Agency. They Need A Growth Partner.
+          </h1>
+
+          <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground font-medium">
+            <div className="flex items-center gap-2">
+              <User className="h-4 w-4 text-primary" />
+              <span>Altaf Shaikh</span>
             </div>
-            <Link to="/contact">
-              <Button size="lg" className="gap-2">
-                Book Discovery Call <ArrowRight className="h-4 w-4" />
-              </Button>
-            </Link>
+            <div className="flex items-center gap-2">
+              <Calendar className="h-4 w-4 text-primary" />
+              <span>{publishDate}</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Clock className="h-4 w-4 text-primary" />
+              <span>8–10 min read</span>
+            </div>
           </div>
         </div>
       </section>
@@ -186,11 +181,19 @@ function ArticlePage() {
                   <a
                     key={t.id}
                     href={`#${t.id}`}
-                    className={`block pl-4 -ml-px border-l-2 text-sm transition-colors py-1 ${
-                      active === t.id
-                        ? "border-primary text-foreground font-medium"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      const el = document.getElementById(t.id);
+                      if (el) {
+                        const top = el.getBoundingClientRect().top + window.scrollY - 120;
+                        window.scrollTo({ top, behavior: 'smooth' });
+                      }
+                      window.history.pushState(null, '', `#${t.id}`);
+                    }}
+                    className={`block pl-4 -ml-px border-l-2 text-sm transition-colors py-1 ${active === t.id
+                        ? "border-primary text-foreground font-normal"
                         : "border-transparent text-muted-foreground hover:text-foreground"
-                    }`}
+                      }`}
                   >
                     {t.label}
                   </a>
@@ -200,7 +203,7 @@ function ArticlePage() {
           </aside>
 
           {/* Article */}
-          <article className="prose prose-lg max-w-none prose-headings:font-serif prose-headings:tracking-tight prose-p:text-foreground/80 prose-p:leading-relaxed prose-strong:text-foreground">
+          <article className="prose prose-lg max-w-none prose-headings:font-serif prose-headings:font-normal prose-headings:tracking-tight prose-p:text-foreground/80 prose-p:leading-relaxed prose-strong:text-foreground">
             <Section id="broken" eyebrow="01" title="The Traditional Agency Model Is Broken">
               <p>
                 Walk into most growing businesses today and you'll find a
@@ -438,6 +441,8 @@ function ArticlePage() {
               </p>
               <p>Growth requires strategy, systems and partnership.</p>
             </Section>
+
+            <BlogFAQ />
           </article>
 
           {/* Share rail */}
@@ -628,10 +633,10 @@ function Section({
 }) {
   return (
     <section id={id} className="scroll-mt-24 mt-16 first:mt-0">
-      <div className="text-xs font-semibold uppercase tracking-wider text-primary not-prose mb-3">
+      <div className="text-xs font-normal uppercase tracking-wider text-primary not-prose mb-3">
         Section {eyebrow}
       </div>
-      <h2 className="font-serif text-3xl md:text-4xl tracking-tight mt-0">
+      <h2 className="font-serif font-normal text-3xl md:text-4xl tracking-tight mt-0">
         {title}
       </h2>
       <div className="mt-6">{children}</div>

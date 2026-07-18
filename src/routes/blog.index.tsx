@@ -4,7 +4,7 @@ import { SiteFooter } from "@/components/site-footer";
 import heroImg from "@/assets/blog-heroy1.jpg";
 import { getBlogEntries, toBlogCard, type BlogCard } from "@/lib/wp";
 
-export const Route = createFileRoute("/blog")({
+export const Route = createFileRoute("/blog/")({
   loader: async () => {
     const posts = await getBlogEntries();
     return { posts };
