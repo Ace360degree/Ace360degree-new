@@ -8,6 +8,8 @@ import {
   GraduationCap,
   HeartPulse,
   Building2,
+  ShoppingBag,
+  Cloud,
   Target,
   Eye,
   Sparkles,
@@ -28,6 +30,9 @@ import indFinance from "@/assets/industry-finance.212.jpg";
 import indEducation from "@/assets/industry-education.333.jpg";
 import indHealthcare from "@/assets/industry-healthcare.444.jpg";
 import indArchitecture from "@/assets/industry-architecture.414.jpg";
+import indRealEstate from "@/assets/icase-living-concepts1.jpg";
+import indSaas from "@/assets/svc-technology1.jpg";
+import indD2c from "@/assets/d2c-retail-hero1111.png";
 import  caseMos from "@/assets/case-mos.999.jpg";
 import caseRexello from "@/assets/case-rexello.2222.jpg";
 import  caseCosmos from "@/assets/case-amigo.323.jpg";
@@ -43,7 +48,7 @@ export const Route = createFileRoute("/industries")({
       {
         name: "description",
         content:
-          "Industry Solutions by Ace360degree — strategic growth, branding, technology and AI partnerships for manufacturing, financial services, education, healthcare and real estate enterprises.",
+          "Industry Solutions by Ace360degree — strategic growth, branding, technology and AI partnerships for manufacturing, financial services, education, healthcare, real estate, SaaS and D2C enterprises.",
       },
       { property: "og:title", content: "Industry Solutions | Ace360degree" },
       {
@@ -221,7 +226,7 @@ const INDUSTRIES = [
     id: "architecture",
     href: "/industries/architecture",
     icon: Building2,
-    name: "Architecture, Interior & Real Estate",
+    name: "Architecture, Interior ",
     image: indArchitecture,
     overview:
       "Design and real estate brands sell vision. We translate craft, projects and portfolios into editorial brand experiences that command premium.",
@@ -239,6 +244,75 @@ const INDUSTRIES = [
     ],
     active: ["Living Concepts", "Kuwal Sanam Architects"],
     enterprise: [],
+  },
+  {
+    id: "real-estate",
+    href: "/industries/real-estate",
+    icon: Building2,
+    name: "Real Estate",
+    image: indRealEstate,
+    overview:
+      "Developers and real estate brands need premium positioning, high-intent enquiries and buyer journeys that move prospects from discovery to site visits.",
+    challenges: [
+      "Low-quality project enquiries",
+      "Slow sales velocity across launches",
+      "Weak project and portfolio visibility",
+      "Long buyer decision cycles",
+    ],
+    solutions: [
+      "Project Launch Strategy",
+      "Real Estate Performance Marketing",
+      "Project Websites & Landing Pages",
+      "CRM, Nurture & Sales Enablement",
+    ],
+    active: ["Living Concepts", "Kuwal Sanam Architects"],
+    enterprise: [],
+  },
+  {
+    id: "saas",
+    href: "/industries/saas",
+    icon: Cloud,
+    name: "Software, SaaS & Technology",
+    image: indSaas,
+    overview:
+      "Software and SaaS companies scale through sharper positioning, demand generation and digital platforms that turn complex products into qualified pipeline.",
+    challenges: [
+      "Low product visibility",
+      "Weak technical positioning",
+      "Low demo and trial conversion",
+      "Long enterprise buying cycles",
+    ],
+    solutions: [
+      "SaaS Positioning & Messaging",
+      "Technical SEO & Demand Generation",
+      "Product Websites & Landing Pages",
+      "CRM Automation & Lifecycle Journeys",
+    ],
+    active: [],
+    enterprise: ["Software + SaaS Experience"],
+  },
+  {
+    id: "d2c-retailbrand",
+    href: "/industries/d2c-retailbrand",
+    icon: ShoppingBag,
+    name: "D2C & Retail Brand",
+    image: indD2c,
+    overview:
+      "Consumer brands grow when brand, commerce and performance work together. We build integrated systems for acquisition, conversion and loyalty.",
+    challenges: [
+      "Rising customer acquisition costs",
+      "Low brand differentiation",
+      "Poor eCommerce conversion rates",
+      "Inconsistent omnichannel experience",
+    ],
+    solutions: [
+      "Brand-Led Growth Strategy",
+      "Performance Marketing & SEO",
+      "Shopify, WooCommerce & Commerce Builds",
+      "Retention, Loyalty & Marketing Automation",
+    ],
+    active: [],
+    enterprise: ["Commerce & Retail Experience"],
   },
 ] as const;
 
@@ -355,7 +429,7 @@ function IndustriesPage() {
                 <div className="mt-9 flex flex-wrap gap-3">
                   <a
                     href="#industries"
-                    className="inline-flex items-center gap-2 bg-brand text-dark px-5 py-3 text-sm font-semibold hover:brightness-95 transition"
+                    className="inline-flex items-center gap-2 bg-[#FFB330] hover:bg-[#E09010] text-[#181818] px-5 py-3 text-sm font-semibold rounded-2xl transition-all duration-200 shadow-sm hover:shadow-md"
                   >
                     Explore Industry Solutions <ArrowRight className="size-4" />
                   </a>
