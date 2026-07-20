@@ -22,6 +22,7 @@ import {
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 
+import industriesHero from "@/assets/industry-manufacturing332.jpg";
 import indManufacturing from "@/assets/industry-manufacturing32.jpg";
 import indFinance from "@/assets/industry-finance.212.jpg";
 import indEducation from "@/assets/industry-education.333.jpg";
@@ -126,6 +127,7 @@ const CHALLENGES = [
 const INDUSTRIES = [
   {
     id: "manufacturing",
+    href: "/industries/manufacturing",
     icon: Factory,
     name: "Manufacturing & Industrial",
     image: indManufacturing,
@@ -148,6 +150,7 @@ const INDUSTRIES = [
   },
   {
     id: "fintech",
+    href: "/industries/fintech",
     icon: Landmark,
     name: "Financial Services & Fintech",
     image: indFinance,
@@ -170,6 +173,7 @@ const INDUSTRIES = [
   },
   {
     id: "education",
+    href: "/industries/education",
     icon: GraduationCap,
     name: "Education & EdTech",
     image: indEducation,
@@ -192,6 +196,7 @@ const INDUSTRIES = [
   },
   {
     id: "healthcare",
+    href: "/industries/healthcare",
     icon: HeartPulse,
     name: "Healthcare",
     image: indHealthcare,
@@ -214,6 +219,7 @@ const INDUSTRIES = [
   },
   {
     id: "architecture",
+    href: "/industries/architecture",
     icon: Building2,
     name: "Architecture, Interior & Real Estate",
     image: indArchitecture,
@@ -257,12 +263,32 @@ const PROCESS = [
 
 const STORIES = {
   active: [
-    { name: "MOS Utility", tag: "Fintech", img: caseMos },
-    { name: "Rexello Castors", tag: "Manufacturing", img: caseRexello },
-    { name: "Cosmos Seals India", tag: "Manufacturing", img: caseCosmos },
-    { name: "Amigo Academy", tag: "Education", img: caseAmigo },
-    { name: "Living Concepts", tag: "Interior", img: caseLiving },
-    { name: "Kuwal Sanam Architects", tag: "Architecture", img: caseKsa },
+    { name: "MOS Utility", tag: "Fintech", img: caseMos, href: "/case-mos-utility" },
+    {
+      name: "Rexello Castors",
+      tag: "Manufacturing",
+      img: caseRexello,
+      href: "/case-rexello-castors",
+    },
+    {
+      name: "Cosmos Seals India",
+      tag: "Manufacturing",
+      img: caseCosmos,
+      href: "/case-cosmos-seals",
+    },
+    { name: "Amigo Academy", tag: "Education", img: caseAmigo, href: "/case-amigo-academy" },
+    {
+      name: "Living Concepts",
+      tag: "Interior",
+      img: caseLiving,
+      href: "/case-living-concepts",
+    },
+    {
+      name: "Kuwal Sanam Architects",
+      tag: "Architecture",
+      img: caseKsa,
+      href: "/case-kuwal-sanam",
+    },
   ],
   enterprise: ["Bayer", "Hafele", "Schott Kaisha", "ARCIL"],
   transformation: [
@@ -304,53 +330,57 @@ function IndustriesPage() {
       <SiteHeader />
 
       {/* HERO */}
-      <section id="overview" className="relative overflow-hidden bg-dark text-canvas">
-        <div className="absolute inset-0 opacity-[0.18]">
-          <div className="grid grid-cols-5 h-full">
-            <img src={indFinance} alt="" className="object-cover w-full h-full" />
-            <img src={indManufacturing} alt="" className="object-cover w-full h-full" />
-            <img src={indArchitecture} alt="" className="object-cover w-full h-full" />
-            <img src={indHealthcare} alt="" className="object-cover w-full h-full" />
-            <img src={indEducation} alt="" className="object-cover w-full h-full" />
-          </div>
-        </div>
-        <div className="absolute inset-0 bg-gradient-to-b from-dark/85 via-dark/70 to-dark" />
-        <div className="relative mx-auto max-w-7xl px-6 pt-28 pb-32">
-          <Reveal>
-            <div className="inline-flex items-center gap-2 text-[10px] uppercase tracking-[0.28em] text-brand">
-              <span className="size-1.5 rounded-full bg-brand" /> Industry Solutions
+      <section id="overview" className="bg-canvas text-dark">
+        <div className="mx-auto max-w-7xl px-6 pt-24 pb-28 md:pt-28 md:pb-32">
+          <div className="grid items-center gap-12 lg:grid-cols-[1.5fr_1fr]">
+            <div>
+              <Reveal>
+                <div className="inline-flex items-center gap-2 text-[10px] uppercase tracking-[0.28em] text-brand">
+                  <span className="size-1.5 rounded-full bg-brand" /> Industry Solutions
+                </div>
+              </Reveal>
+              <Reveal delay={80}>
+                <h1 className="mt-5 max-w-5xl text-4xl md:text-6xl lg:text-7xl font-medium leading-[1.05] tracking-tight">
+                  Industry Solutions That Drive{" "}
+                  <span className="font-serif italic text-brand">Sustainable</span> Business Growth.
+                </h1>
+              </Reveal>
+              <Reveal delay={160}>
+                <p className="mt-7 max-w-2xl text-base text-dark/75 leading-relaxed">
+                  A strategic partnership across Growth, Brand, Technology and AI — tailored to how
+                  your industry actually grows. Built for boards, CEOs and growth-focused leaders.
+                </p>
+              </Reveal>
+              <Reveal delay={240}>
+                <div className="mt-9 flex flex-wrap gap-3">
+                  <a
+                    href="#industries"
+                    className="inline-flex items-center gap-2 bg-brand text-dark px-5 py-3 text-sm font-semibold hover:brightness-95 transition"
+                  >
+                    Explore Industry Solutions <ArrowRight className="size-4" />
+                  </a>
+                  <Link
+                    to="/contact"
+                    className="inline-flex items-center gap-2 px-5 py-3 text-sm font-semibold text-dark hover:text-brand transition"
+                  >
+                    Book Discovery Call <ArrowUpRight className="size-4" />
+                  </Link>
+                </div>
+              </Reveal>
             </div>
-          </Reveal>
-          <Reveal delay={80}>
-            <h1 className="mt-6 max-w-5xl text-4xl md:text-6xl lg:text-7xl font-medium leading-[1.05] tracking-tight">
-              Industry Solutions That Drive{" "}
-              <span className="font-serif italic text-brand">Sustainable</span> Business Growth.
-            </h1>
-          </Reveal>
-          <Reveal delay={160}>
-            <p className="mt-8 max-w-2xl text-lg text-canvas/70 leading-relaxed">
-              A strategic partnership across Growth, Brand, Technology and AI — tailored to how
-              your industry actually grows. Built for boards, CEOs and growth-focused leaders.
-            </p>
-          </Reveal>
-          <Reveal delay={240}>
-            <div className="mt-10 flex flex-wrap gap-3">
-              <a
-                href="#industries"
-                className="inline-flex items-center gap-2 bg-brand text-dark px-5 py-3 text-sm font-semibold hover:brightness-95 transition"
-              >
-                Explore Industry Solutions <ArrowRight className="size-4" />
-              </a>
-              <Link
-                to="/contact"
-                className="inline-flex items-center gap-2 border border-canvas/25 text-canvas px-5 py-3 text-sm font-semibold hover:bg-canvas hover:text-dark transition"
-              >
-                Book Discovery Call <ArrowUpRight className="size-4" />
-              </Link>
-            </div>
-          </Reveal>
 
-          <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-px bg-canvas/10 border border-canvas/10">
+            <Reveal delay={180} className="lg:justify-self-end">
+              <img
+                src={industriesHero}
+                alt="Sustainable business growth strategy dashboard"
+                className="aspect-[1.5/1] w-full object-cover lg:max-w-[520px]"
+                width={494}
+                height={329}
+              />
+            </Reveal>
+          </div>
+
+          <div className="mt-14 grid grid-cols-2 md:grid-cols-4 gap-px bg-canvas border border-dark">
             {TRUST.map((t) => (
               <div key={t.v} className="bg-dark px-6 py-6">
                 <div className="text-3xl font-medium text-brand">{t.k}</div>
@@ -536,7 +566,7 @@ function IndustriesPage() {
 
                       <div className="mt-8">
                         <Link
-                          to="/contact"
+                          to={ind.href}
                           className="inline-flex items-center gap-2 text-sm font-semibold text-dark border-b border-dark/30 pb-1 hover:border-brand hover:text-brand transition"
                         >
                           Explore {ind.name.split(" ")[0]} Solutions <ArrowRight className="size-4" />
@@ -589,7 +619,10 @@ function IndustriesPage() {
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {STORIES.active.map((s, i) => (
                   <Reveal key={s.name} delay={i * 50}>
-                    <a className="group block border border-dark/10 overflow-hidden bg-canvas cursor-pointer">
+                    <Link
+                      to={s.href}
+                      className="group block border border-dark/10 overflow-hidden bg-canvas cursor-pointer"
+                    >
                       <div className="aspect-[4/3] overflow-hidden bg-dark/5">
                         <img
                           src={s.img}
@@ -606,7 +639,7 @@ function IndustriesPage() {
                         </div>
                         <ArrowUpRight className="size-4 text-dark/50 group-hover:text-brand transition" />
                       </div>
-                    </a>
+                    </Link>
                   </Reveal>
                 ))}
               </div>

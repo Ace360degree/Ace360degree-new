@@ -937,11 +937,24 @@ function HealthcarePage() {
           </Reveal>
           <div className="mt-10 grid gap-6 sm:grid-cols-2">
             {[
-              { img: caseHealthus, title: "Healthus.ai", tag: "HealthTech Growth" },
-              { img: caseOpus, title: "OPUS Dental", tag: "Dental Marketing" },
+              {
+                img: caseHealthus,
+                title: "Healthus.ai",
+                tag: "HealthTech Growth",
+                href: "/case-healthus-ai",
+              },
+              {
+                img: caseOpus,
+                title: "OPUS Dental",
+                tag: "Dental Marketing",
+                href: "/case-opus-dental",
+              },
             ].map((c, i) => (
               <Reveal key={c.title} delay={i * 80}>
-                <div className="group relative overflow-hidden rounded-2xl border border-foreground/10 bg-background">
+                <Link
+                  to={c.href}
+                  className="group relative block overflow-hidden rounded-2xl border border-foreground/10 bg-background"
+                >
                   <div className="aspect-[16/9] overflow-hidden">
                     <img
                       src={c.img}
@@ -960,7 +973,7 @@ function HealthcarePage() {
                     </div>
                     <ArrowUpRight className="h-5 w-5 text-foreground/60 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                   </div>
-                </div>
+                </Link>
               </Reveal>
             ))}
           </div>

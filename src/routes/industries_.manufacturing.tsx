@@ -732,8 +732,18 @@ function ManufacturingPage() {
 
           <div className="mt-12 grid gap-6 md:grid-cols-2">
             {[
-              { name: "Rexello Castors", tag: "Industrial Components", img: caseRexello },
-              { name: "Cosmos Seals India", tag: "Precision Sealing", img: caseCosmos },
+              {
+                name: "Rexello Castors",
+                tag: "Industrial Components",
+                img: caseRexello,
+                href: "/case-rexello-castors",
+              },
+              {
+                name: "Cosmos Seals India",
+                tag: "Precision Sealing",
+                img: caseCosmos,
+                href: "/case-cosmos-seals",
+              },
             ].map((c) => (
               <div
                 key={c.name}
@@ -750,7 +760,7 @@ function ManufacturingPage() {
                     <div className="mt-1 font-serif text-2xl text-foreground">{c.name}</div>
                   </div>
                   <Link
-                    to="/portfolio"
+                    to={c.href}
                     className="inline-flex items-center gap-1.5 text-sm font-medium text-primary"
                   >
                     View <ArrowUpRight className="h-4 w-4" />
