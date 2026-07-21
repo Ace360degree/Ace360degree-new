@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
-import { MapPin, Mail, Phone, Linkedin, Instagram, Youtube, Facebook, Twitter } from "lucide-react";
+import { ArrowUp, MapPin, Mail, Phone, Linkedin, Instagram, Youtube, Facebook } from "lucide-react";
+import { useEffect, useState } from "react";
 import footerLogo from "@/assets/footer-logo.png";
 
 const serviceLinks = [
@@ -43,12 +44,37 @@ const aboutLinks = [
 ];
 
 export function SiteFooter() {
+  const [showScrollTop, setShowScrollTop] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setShowScrollTop(window.scrollY > 520);
+
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <footer className="bg-[#181818] relative overflow-hidden pt-24 pb-12 font-sans">
-      {/* Yellow Ring */}
-      <div className="absolute top-1/2 right-0 translate-x-[55%] -translate-y-[50%] opacity-90 pointer-events-none z-0">
-        <div className="w-[400px] h-[400px] sm:w-[400px] sm:h-[400px] md:w-[600px] md:h-[600px] border-[120px] md:border-[200px] border-[#FFA20B] rounded-full shadow-[0_0_80px_rgba(255,162,11,0.6)]"></div>
-      </div>
+    <>
+      <button
+        type="button"
+        aria-label="Scroll to top"
+        className={`fixed bottom-6 right-6 z-50 grid size-12 place-items-center rounded-full border border-[#FFA20B] bg-[#FFA20B] text-[#181818] shadow-[0_12px_32px_rgba(0,0,0,0.25)] transition-all duration-300 hover:bg-white hover:border-white ${
+          showScrollTop
+            ? "translate-y-0 opacity-100 pointer-events-auto"
+            : "translate-y-4 opacity-0 pointer-events-none"
+        }`}
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+      >
+        <ArrowUp className="size-5" />
+      </button>
+
+      <footer className="bg-[#181818] relative overflow-hidden pt-24 pb-12 font-sans">
+        {/* Yellow Ring */}
+        <div className="absolute top-1/2 right-0 translate-x-[55%] -translate-y-[50%] opacity-90 pointer-events-none z-0">
+          <div className="w-[400px] h-[400px] sm:w-[400px] sm:h-[400px] md:w-[600px] md:h-[600px] border-[120px] md:border-[200px] border-[#FFA20B] rounded-full shadow-[0_0_80px_rgba(255,162,11,0.6)]"></div>
+        </div>
 
       <div className="mx-auto max-w-[1400px] px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 pb-16">
@@ -189,21 +215,33 @@ export function SiteFooter() {
         {/* Footer Bottom */}
         <div className="relative z-10 flex flex-col md:flex-row items-center justify-between pb-8 pt-4 border-b border-white/10 mt-4 text-xs uppercase tracking-widest text-white/40">
           <p>© 2026 ACE360DEGREE. ALL RIGHTS RESERVED.</p>
-          <div className="flex gap-3 mt-6 md:mt-0">
-            <a className="size-10 rounded-full border border-white/20 grid place-items-center text-white/60 hover:bg-[#FFA20B] hover:text-[#181818] hover:border-[#FFA20B] transition cursor-pointer">
+          <div className="flex flex-wrap items-center justify-center gap-3 mt-6 md:mt-0">
+            <a aria-label="LinkedIn" className="size-10 rounded-full border border-white/20 grid place-items-center text-white/60 hover:bg-[#FFA20B] hover:text-[#181818] hover:border-[#FFA20B] transition cursor-pointer">
               <Linkedin className="size-4" />
             </a>
-            <a className="size-10 rounded-full border border-white/20 grid place-items-center text-white/60 hover:bg-[#FFA20B] hover:text-[#181818] hover:border-[#FFA20B] transition cursor-pointer">
+            <a aria-label="Instagram" className="size-10 rounded-full border border-white/20 grid place-items-center text-white/60 hover:bg-[#FFA20B] hover:text-[#181818] hover:border-[#FFA20B] transition cursor-pointer">
               <Instagram className="size-4" />
             </a>
-            <a className="size-10 rounded-full border border-white/20 grid place-items-center text-white/60 hover:bg-[#FFA20B] hover:text-[#181818] hover:border-[#FFA20B] transition cursor-pointer">
+            <a aria-label="YouTube" className="size-10 rounded-full border border-white/20 grid place-items-center text-white/60 hover:bg-[#FFA20B] hover:text-[#181818] hover:border-[#FFA20B] transition cursor-pointer">
               <Youtube className="size-4" />
             </a>
-            <a className="size-10 rounded-full border border-white/20 grid place-items-center text-white/60 hover:bg-[#FFA20B] hover:text-[#181818] hover:border-[#FFA20B] transition cursor-pointer">
+            <a aria-label="Facebook" className="size-10 rounded-full border border-white/20 grid place-items-center text-white/60 hover:bg-[#FFA20B] hover:text-[#181818] hover:border-[#FFA20B] transition cursor-pointer">
               <Facebook className="size-4" />
             </a>
-            <a className="size-10 rounded-full border border-white/20 grid place-items-center text-white/60 hover:bg-[#FFA20B] hover:text-[#181818] hover:border-[#FFA20B] transition cursor-pointer">
-              <Twitter className="size-4" />
+            <a aria-label="X" className="size-10 rounded-full border border-white/20 grid place-items-center text-white/60 hover:bg-[#FFA20B] hover:text-[#181818] hover:border-[#FFA20B] transition cursor-pointer">
+              <svg
+                className="size-4"
+                viewBox="0 0 24 24"
+                fill="none"
+                aria-hidden="true"
+              >
+                <path
+                  d="M3 3L10.4 13.2M10.4 13.2L16.1 21H21L13.2 10.3M10.4 13.2L3.8 21H6.2L11.5 14.7M13.2 10.3L19.3 3H16.9L12.1 8.7M13.2 10.3L7.9 3H3Z"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinejoin="round"
+                />
+              </svg>
             </a>
           </div>
         </div>
@@ -214,6 +252,7 @@ export function SiteFooter() {
           </p>
         </div>
       </div>
-    </footer>
+      </footer>
+    </>
   );
 }

@@ -35,3 +35,5 @@ live-pages.json
 pages.json
 wp-pages.json
 reference/
+
+.env

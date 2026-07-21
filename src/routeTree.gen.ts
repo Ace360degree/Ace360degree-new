@@ -44,9 +44,11 @@ import { Route as ConversionOptimizationRouteImport } from './routes/conversion-
 import { Route as ContentMarketingRouteImport } from './routes/content-marketing'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CaseRexelloCastorsRouteImport } from './routes/case-rexello-castors'
+import { Route as CaseOpusDentalRouteImport } from './routes/case-opus-dental'
 import { Route as CaseMosUtilityRouteImport } from './routes/case-mos-utility'
 import { Route as CaseLivingConceptsRouteImport } from './routes/case-living-concepts'
 import { Route as CaseKuwalSanamRouteImport } from './routes/case-kuwal-sanam'
+import { Route as CaseHealthusAiRouteImport } from './routes/case-healthus-ai'
 import { Route as CaseCosmosSealsRouteImport } from './routes/case-cosmos-seals'
 import { Route as CaseAmigoAcademyRouteImport } from './routes/case-amigo-academy'
 import { Route as CareersRouteImport } from './routes/careers'
@@ -264,6 +266,11 @@ const CaseRexelloCastorsRoute = CaseRexelloCastorsRouteImport.update({
   path: '/case-rexello-castors',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CaseOpusDentalRoute = CaseOpusDentalRouteImport.update({
+  id: '/case-opus-dental',
+  path: '/case-opus-dental',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const CaseMosUtilityRoute = CaseMosUtilityRouteImport.update({
   id: '/case-mos-utility',
   path: '/case-mos-utility',
@@ -277,6 +284,11 @@ const CaseLivingConceptsRoute = CaseLivingConceptsRouteImport.update({
 const CaseKuwalSanamRoute = CaseKuwalSanamRouteImport.update({
   id: '/case-kuwal-sanam',
   path: '/case-kuwal-sanam',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CaseHealthusAiRoute = CaseHealthusAiRouteImport.update({
+  id: '/case-healthus-ai',
+  path: '/case-healthus-ai',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CaseCosmosSealsRoute = CaseCosmosSealsRouteImport.update({
@@ -455,9 +467,11 @@ export interface FileRoutesByFullPath {
   '/careers': typeof CareersRoute
   '/case-amigo-academy': typeof CaseAmigoAcademyRoute
   '/case-cosmos-seals': typeof CaseCosmosSealsRoute
+  '/case-healthus-ai': typeof CaseHealthusAiRoute
   '/case-kuwal-sanam': typeof CaseKuwalSanamRoute
   '/case-living-concepts': typeof CaseLivingConceptsRoute
   '/case-mos-utility': typeof CaseMosUtilityRoute
+  '/case-opus-dental': typeof CaseOpusDentalRoute
   '/case-rexello-castors': typeof CaseRexelloCastorsRoute
   '/contact': typeof ContactRoute
   '/content-marketing': typeof ContentMarketingRoute
@@ -525,9 +539,11 @@ export interface FileRoutesByTo {
   '/careers': typeof CareersRoute
   '/case-amigo-academy': typeof CaseAmigoAcademyRoute
   '/case-cosmos-seals': typeof CaseCosmosSealsRoute
+  '/case-healthus-ai': typeof CaseHealthusAiRoute
   '/case-kuwal-sanam': typeof CaseKuwalSanamRoute
   '/case-living-concepts': typeof CaseLivingConceptsRoute
   '/case-mos-utility': typeof CaseMosUtilityRoute
+  '/case-opus-dental': typeof CaseOpusDentalRoute
   '/case-rexello-castors': typeof CaseRexelloCastorsRoute
   '/contact': typeof ContactRoute
   '/content-marketing': typeof ContentMarketingRoute
@@ -596,9 +612,11 @@ export interface FileRoutesById {
   '/careers': typeof CareersRoute
   '/case-amigo-academy': typeof CaseAmigoAcademyRoute
   '/case-cosmos-seals': typeof CaseCosmosSealsRoute
+  '/case-healthus-ai': typeof CaseHealthusAiRoute
   '/case-kuwal-sanam': typeof CaseKuwalSanamRoute
   '/case-living-concepts': typeof CaseLivingConceptsRoute
   '/case-mos-utility': typeof CaseMosUtilityRoute
+  '/case-opus-dental': typeof CaseOpusDentalRoute
   '/case-rexello-castors': typeof CaseRexelloCastorsRoute
   '/contact': typeof ContactRoute
   '/content-marketing': typeof ContentMarketingRoute
@@ -668,9 +686,11 @@ export interface FileRouteTypes {
     | '/careers'
     | '/case-amigo-academy'
     | '/case-cosmos-seals'
+    | '/case-healthus-ai'
     | '/case-kuwal-sanam'
     | '/case-living-concepts'
     | '/case-mos-utility'
+    | '/case-opus-dental'
     | '/case-rexello-castors'
     | '/contact'
     | '/content-marketing'
@@ -738,9 +758,11 @@ export interface FileRouteTypes {
     | '/careers'
     | '/case-amigo-academy'
     | '/case-cosmos-seals'
+    | '/case-healthus-ai'
     | '/case-kuwal-sanam'
     | '/case-living-concepts'
     | '/case-mos-utility'
+    | '/case-opus-dental'
     | '/case-rexello-castors'
     | '/contact'
     | '/content-marketing'
@@ -808,9 +830,11 @@ export interface FileRouteTypes {
     | '/careers'
     | '/case-amigo-academy'
     | '/case-cosmos-seals'
+    | '/case-healthus-ai'
     | '/case-kuwal-sanam'
     | '/case-living-concepts'
     | '/case-mos-utility'
+    | '/case-opus-dental'
     | '/case-rexello-castors'
     | '/contact'
     | '/content-marketing'
@@ -879,9 +903,11 @@ export interface RootRouteChildren {
   CareersRoute: typeof CareersRoute
   CaseAmigoAcademyRoute: typeof CaseAmigoAcademyRoute
   CaseCosmosSealsRoute: typeof CaseCosmosSealsRoute
+  CaseHealthusAiRoute: typeof CaseHealthusAiRoute
   CaseKuwalSanamRoute: typeof CaseKuwalSanamRoute
   CaseLivingConceptsRoute: typeof CaseLivingConceptsRoute
   CaseMosUtilityRoute: typeof CaseMosUtilityRoute
+  CaseOpusDentalRoute: typeof CaseOpusDentalRoute
   CaseRexelloCastorsRoute: typeof CaseRexelloCastorsRoute
   ContactRoute: typeof ContactRoute
   ContentMarketingRoute: typeof ContentMarketingRoute
@@ -1181,6 +1207,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CaseRexelloCastorsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/case-opus-dental': {
+      id: '/case-opus-dental'
+      path: '/case-opus-dental'
+      fullPath: '/case-opus-dental'
+      preLoaderRoute: typeof CaseOpusDentalRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/case-mos-utility': {
       id: '/case-mos-utility'
       path: '/case-mos-utility'
@@ -1200,6 +1233,13 @@ declare module '@tanstack/react-router' {
       path: '/case-kuwal-sanam'
       fullPath: '/case-kuwal-sanam'
       preLoaderRoute: typeof CaseKuwalSanamRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/case-healthus-ai': {
+      id: '/case-healthus-ai'
+      path: '/case-healthus-ai'
+      fullPath: '/case-healthus-ai'
+      preLoaderRoute: typeof CaseHealthusAiRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/case-cosmos-seals': {
@@ -1431,9 +1471,11 @@ const rootRouteChildren: RootRouteChildren = {
   CareersRoute: CareersRoute,
   CaseAmigoAcademyRoute: CaseAmigoAcademyRoute,
   CaseCosmosSealsRoute: CaseCosmosSealsRoute,
+  CaseHealthusAiRoute: CaseHealthusAiRoute,
   CaseKuwalSanamRoute: CaseKuwalSanamRoute,
   CaseLivingConceptsRoute: CaseLivingConceptsRoute,
   CaseMosUtilityRoute: CaseMosUtilityRoute,
+  CaseOpusDentalRoute: CaseOpusDentalRoute,
   CaseRexelloCastorsRoute: CaseRexelloCastorsRoute,
   ContactRoute: ContactRoute,
   ContentMarketingRoute: ContentMarketingRoute,
