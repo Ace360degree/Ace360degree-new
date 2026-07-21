@@ -65,6 +65,7 @@ import { Route as AiStrategyReadinessAssessmentRouteImport } from './routes/ai-s
 import { Route as AiCustomerExperienceSolutionsRouteImport } from './routes/ai-customer-experience-solutions'
 import { Route as AiContentMarketingSystemsRouteImport } from './routes/ai-content-marketing-systems'
 import { Route as AboutRouteImport } from './routes/about'
+import { Route as SlugRouteImport } from './routes/$slug'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
 import { Route as UnitedStatesWebsiteDevelopmentUnitedStatesRouteImport } from './routes/united-states.website-development-united-states'
@@ -380,6 +381,11 @@ const AboutRoute = AboutRouteImport.update({
   path: '/about',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SlugRoute = SlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -480,6 +486,7 @@ const BlogSlugRoute = BlogSlugRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/$slug': typeof SlugRoute
   '/about': typeof AboutRoute
   '/ai-content-marketing-systems': typeof AiContentMarketingSystemsRoute
   '/ai-customer-experience-solutions': typeof AiCustomerExperienceSolutionsRoute
@@ -556,6 +563,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/$slug': typeof SlugRoute
   '/about': typeof AboutRoute
   '/ai-content-marketing-systems': typeof AiContentMarketingSystemsRoute
   '/ai-customer-experience-solutions': typeof AiCustomerExperienceSolutionsRoute
@@ -633,6 +641,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/$slug': typeof SlugRoute
   '/about': typeof AboutRoute
   '/ai-content-marketing-systems': typeof AiContentMarketingSystemsRoute
   '/ai-customer-experience-solutions': typeof AiCustomerExperienceSolutionsRoute
@@ -711,6 +720,7 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/$slug'
     | '/about'
     | '/ai-content-marketing-systems'
     | '/ai-customer-experience-solutions'
@@ -787,6 +797,7 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/$slug'
     | '/about'
     | '/ai-content-marketing-systems'
     | '/ai-customer-experience-solutions'
@@ -863,6 +874,7 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/$slug'
     | '/about'
     | '/ai-content-marketing-systems'
     | '/ai-customer-experience-solutions'
@@ -940,6 +952,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  SlugRoute: typeof SlugRoute
   AboutRoute: typeof AboutRoute
   AiContentMarketingSystemsRoute: typeof AiContentMarketingSystemsRoute
   AiCustomerExperienceSolutionsRoute: typeof AiCustomerExperienceSolutionsRoute
@@ -1407,6 +1420,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AboutRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/$slug': {
+      id: '/$slug'
+      path: '/$slug'
+      fullPath: '/$slug'
+      preLoaderRoute: typeof SlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -1554,6 +1574,7 @@ const UnitedStatesRouteWithChildren = UnitedStatesRoute._addFileChildren(
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  SlugRoute: SlugRoute,
   AboutRoute: AboutRoute,
   AiContentMarketingSystemsRoute: AiContentMarketingSystemsRoute,
   AiCustomerExperienceSolutionsRoute: AiCustomerExperienceSolutionsRoute,
