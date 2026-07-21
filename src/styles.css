@@ -86,6 +86,12 @@
   animation: marquee 90s linear infinite;
 }
 
+.animate-marquee-fast {
+  display: flex;
+  width: max-content;
+  animation: marquee 20s linear infinite;
+}
+
 /* Pause marquee when hovering anywhere in the logo strip */
 .logo-row:hover .animate-marquee {
   animation-play-state: paused;
