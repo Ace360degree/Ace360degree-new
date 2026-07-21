@@ -43,6 +43,10 @@ const getApiUrl = () => {
   return import.meta.env.VITE_WP_API_URL || DEFAULT_API_URL;
 };
 
+const getLocationsApiUrl = () => {
+  return import.meta.env.VITE_WP_LOCATIONS_API_URL || DEFAULT_API_URL;
+};
+
 export function decodeHtmlEntities(value: string) {
   const namedEntities: Record<string, string> = {
     amp: "&",
@@ -202,4 +206,52 @@ export async function getBlogEntryBySlug(slug: string): Promise<WPPost | null> {
   }
 
   return getPageBySlug(slug);
+}
+
+export async function getLocationPageBySlug(slug: string): Promise<WPPost | null> {
+  try {
+    const url = `${getLocationsApiUrl()}/pages?slug=${slug}&_embed`;
+    const res = await fetch(url);
+    if (!res.ok) {
+      console.error("Failed to fetch location page from WP");
+      return null;
+    }
+    const data = await res.json();
+    return data.length > 0 ? data[0] : null;
+  } catch (error) {
+    console.error("Error fetching location page:", error);
+    return null;
+  }
+}
+
+export async function getLocationChildPages(parentId: number): Promise<WPPost[]> {
+  try {
+    const url = `${getLocationsApiUrl()}/pages?parent=${parentId}&per_page=100&_embed`;
+    const res = await fetch(url);
+    if (!res.ok) {
+      console.error("Failed to fetch location child pages from WP");
+      return [];
+    }
+    const data = await res.json();
+    return data;
+  } catch (error) {
+    console.error("Error fetching location child pages:", error);
+    return [];
+  }
+}
+
+export async function getChildPages(parentId: number): Promise<WPPost[]> {
+  try {
+    const url = `${getApiUrl()}/pages?parent=${parentId}&per_page=100&_embed`;
+    const res = await fetch(url);
+    if (!res.ok) {
+      console.error("Failed to fetch child pages from WP");
+      return [];
+    }
+    const data = await res.json();
+    return data;
+  } catch (error) {
+    console.error("Error fetching child pages:", error);
+    return [];
+  }
 }
