@@ -177,7 +177,7 @@ export function SiteHeader() {
           <div className="flex items-center gap-3 shrink-0">
             <button
               type="button"
-              className="hidden sm:inline-flex items-center bg-[#FFB330] hover:bg-[#E09010] text-[#181818] text-sm font-semibold px-5 py-2.5 rounded-2xl transition-all duration-200 shadow-sm hover:shadow-md whitespace-nowrap"
+              className="hidden sm:inline-flex items-center bg-[#FFB330] hover:bg-[#E09010] text-[#181818] text-sm font-semibold px-5 py-2.5 rounded-2xl transition-all duration-300 shadow-sm hover:shadow-[0_12px_28px_rgba(0,0,0,0.22)] whitespace-nowrap"
               onClick={openStrategyForm}
             >
               Book a Strategy Call
@@ -370,7 +370,7 @@ export function SiteHeader() {
               })}
               <button
                 type="button"
-                className="flex w-full justify-center items-center bg-[#FFB330] hover:bg-[#E09010] text-[#181818] text-sm font-semibold px-5 py-3 rounded-2xl transition-all duration-200"
+                className="flex w-full justify-center items-center bg-[#FFB330] hover:bg-[#E09010] text-[#181818] text-sm font-semibold px-5 py-3 rounded-2xl transition-all duration-300 shadow-sm hover:shadow-[0_12px_28px_rgba(0,0,0,0.22)]"
                 onClick={() => {
                   closeMobileMenu();
                   openStrategyForm();
@@ -393,7 +393,22 @@ export function SiteHeader() {
             if (event.target === event.currentTarget) setStrategyOpen(false);
           }}
         >
-          <div className="relative w-full max-w-3xl overflow-hidden rounded-[2rem] border border-white/60 bg-canvas p-6 text-dark shadow-2xl sm:p-9">
+          <style>{`
+            @keyframes slide-up-fade {
+              from {
+                opacity: 0;
+                transform: translateY(40px) scale(0.95);
+              }
+              to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+              }
+            }
+            .animate-slide-up-fade {
+              animation: slide-up-fade 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            }
+          `}</style>
+          <div className="animate-slide-up-fade relative w-full max-w-3xl overflow-hidden rounded-[2rem] border border-white/60 bg-canvas p-6 text-dark shadow-2xl sm:p-9">
             <div className="pointer-events-none absolute inset-x-0 top-0 h-2 bg-gradient-to-r from-[#FFB330] via-[#E09010] to-[#FFB330]" />
             <button
               type="button"
@@ -498,6 +513,28 @@ export function SiteHeader() {
                     ))}
                   </select>
 
+                  <label className="block text-sm font-medium" htmlFor="strategy-country">
+                    Select Country*
+                  </label>
+                  <select
+                    id="strategy-country"
+                    name="country"
+                    required
+                    defaultValue=""
+                    className="w-full rounded-2xl border border-dark/10 bg-white px-4 py-3 text-[#181818] shadow-sm outline-none transition focus:border-[#FFB330] focus:ring-2 focus:ring-[#FFB330]/30"
+                  >
+                    <option value="" disabled>
+                      Select a country
+                    </option>
+                    <option value="India">India</option>
+                    <option value="United States">United States</option>
+                    <option value="United Kingdom">United Kingdom</option>
+                    <option value="Australia">Australia</option>
+                    <option value="Canada">Canada</option>
+                    <option value="United Arab Emirates">United Arab Emirates</option>
+                    <option value="Other">Other</option>
+                  </select>
+
                   <label className="block text-sm font-medium" htmlFor="strategy-message">
                     Send us a Message
                   </label>
@@ -512,7 +549,7 @@ export function SiteHeader() {
 
                 <button
                   type="submit"
-                  className="mt-5 inline-flex items-center gap-3 rounded-2xl bg-[#FFB330] px-6 py-3 text-base font-bold text-[#181818] shadow-sm transition hover:bg-[#E09010] hover:shadow-md"
+                  className="mt-5 inline-flex items-center gap-3 rounded-2xl bg-[#FFB330] px-6 py-3 text-base font-bold text-[#181818] transition-all duration-300 shadow-sm hover:shadow-[0_12px_28px_rgba(0,0,0,0.22)]"
                 >
                   Send Enquiry <ArrowRight className="size-4" />
                 </button>

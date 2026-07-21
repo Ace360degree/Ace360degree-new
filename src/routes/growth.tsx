@@ -127,7 +127,7 @@ function Ticker() {
   );
   return (
     <div className="overflow-hidden bg-dark py-6 border-y border-white/5">
-      <div className="animate-marquee">
+      <div className="animate-marquee-fast">
         <Strip />
         <Strip />
       </div>
@@ -655,7 +655,7 @@ function Portfolio() {
                   width={800}
                   height={1000}
                   loading="lazy"
-                  className="w-full aspect-[4/5] object-cover group-hover:scale-[1.03] transition-transform duration-700"
+                  className="w-full aspect-[4/5] object-cover object-top group-hover:scale-[1.03] transition-transform duration-700"
                 />
               </div>
               <div className="mt-5 flex items-start justify-between gap-4">

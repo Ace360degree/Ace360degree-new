@@ -19,6 +19,13 @@ import viIcon from "@/assets/index/VI.png";
 import appIcon from "@/assets/index/App.png";
 import crmIcon from "@/assets/index/CRM.png";
 
+import svcDigital from "@/assets/svc-digital.jpg";
+import svcBranding from "@/assets/svc-branding.jpg";
+import svcTechnology from "@/assets/svc-technology.jpg";
+import servicesHero4 from "@/assets/services-hero4.jpg";
+import servicesHero1 from "@/assets/services-hero1.jpg";
+import servicesHero2 from "@/assets/services-hero2.jpg";
+
 // Industry icons
 import healthcareIcon from "@/assets/index/industry/healthcare.png";
 import educationIcon from "@/assets/index/industry/education.png";
@@ -118,7 +125,7 @@ function Hero() {
           <div className="mt-10 flex flex-wrap gap-4">
             <a
               href="#cta"
-              className="group relative inline-flex items-center gap-2 bg-brand rounded-2xl py-3 px-6 text-sm font-semibold text-dark ring-1 ring-brand hover:brightness-95 transition overflow-hidden"
+              className="group relative inline-flex items-center gap-2 bg-brand rounded-2xl py-3 px-6 text-sm font-semibold text-dark ring-1 ring-brand hover:brightness-95 transition-all duration-300 shadow-sm hover:shadow-[0_12px_28px_rgba(0,0,0,0.22)] overflow-hidden"
             >
               <span className="absolute left-2.5 grid place-items-center size-6 rounded-full bg-dark/10 transition-all duration-500 ease-out group-hover:left-[calc(100%-2rem)]">
                 <span className="size-1.5 rounded-full bg-dark" />
@@ -184,7 +191,7 @@ function Ticker() {
   );
   return (
     <div className="overflow-hidden bg-dark py-6 border-y border-white/5">
-      <div className="animate-marquee">
+      <div className="animate-marquee-fast">
         <Strip />
         <Strip />
       </div>
@@ -229,13 +236,13 @@ function Showreel() {
             build is engineered for performance and built to scale.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
-            <a href="#cta" className="inline-flex items-center gap-2 bg-dark text-canvas rounded-2xl py-3 pr-5 pl-2.5 text-sm font-semibold hover:bg-dark/90 transition">
-              <span className="grid place-items-center size-6 rounded-full bg-canvas/10">
+            <a href="#cta" className="group relative inline-flex items-center gap-2 bg-dark text-canvas rounded-2xl py-3 px-6 text-sm font-semibold hover:bg-dark/90 transition-all duration-300 shadow-sm hover:shadow-[0_12px_28px_rgba(0,0,0,0.22)] overflow-hidden">
+              <span className="absolute left-2.5 grid place-items-center size-6 rounded-full bg-canvas/10 transition-all duration-500 ease-out group-hover:left-[calc(100%-2rem)]">
                 <span className="size-1.5 rounded-full bg-canvas" />
               </span>
-              Start a Project
+              <span className="pl-6 group-hover:-translate-x-2 transition-transform duration-500">Start a Project</span>
             </a>
-            <a href="#cta" className="inline-flex items-center px-6 py-3 rounded-2xl text-sm font-semibold border border-dark/15 hover:bg-dark hover:text-canvas transition">
+            <a href="#cta" className="inline-flex items-center px-6 py-3 rounded-2xl text-sm font-semibold border border-dark/15 transition-all duration-300 shadow-sm hover:shadow-[0_12px_28px_rgba(0,0,0,0.22)]">
               Book Consultation
             </a>
           </div>
@@ -254,6 +261,7 @@ function Services() {
       line: "Fast. Scalable. Future-Ready.",
       desc: "Create fast, scalable and conversion-focused websites engineered for exceptional user experience, search visibility and sustainable business growth.",
       icon: webIcon,
+      image: svcDigital,
     },
     {
       cat: "Organic Growth",
@@ -261,6 +269,7 @@ function Services() {
       line: "Rank Higher. Get Found.",
       desc: "Improve your visibility on Google and AI-powered search with SEO, GEO and AEO strategies that attract qualified traffic, increase authority.",
       icon: seoIcon,
+      image: svcBranding,
     },
     {
       cat: "Paid Acquisition",
@@ -268,6 +277,7 @@ function Services() {
       line: "Clicks That Convert.",
       desc: "Google Ads & Meta Ads campaigns engineered for maximum ROI, qualified lead generation and scalable business growth.",
       icon: pmIcon,
+      image: svcTechnology,
     },
     {
       cat: "Brand Systems",
@@ -275,6 +285,7 @@ function Services() {
       line: "Iconic Brand Presence.",
       desc: "Develop distinctive visual systems—including logos, typography, colors and brand guidelines—that communicate credibility & consistency.",
       icon: viIcon,
+      image: servicesHero4,
     },
     {
       cat: "Digital Experiences",
@@ -282,6 +293,7 @@ function Services() {
       line: "iOS · Android",
       desc: "Build intuitive, scalable mobile applications that enhance customer engagement, streamline operations and accelerate business growth.",
       icon: appIcon,
+      image: servicesHero1,
     },
     {
       cat: "Business Automation",
@@ -289,6 +301,7 @@ function Services() {
       line: "Automate. Manage. Scale.",
       desc: "Centralise your business operations with custom CRM and ERP solutions that automate workflows, improve team collaboration & provide real-time business insights.",
       icon: crmIcon,
+      image: servicesHero2,
     },
   ];
 
@@ -314,29 +327,34 @@ function Services() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-dark/5 border border-dark/5">
           {services.map((s, i) => (
-            <div
+            <FadeIn
               key={s.title}
-              className="bg-background p-10 group hover:bg-canvas transition-colors relative flex flex-col"
+              delay={i * 100}
+              className="bg-background group hover:bg-canvas transition-colors relative flex flex-col h-full overflow-hidden"
             >
-              {/* Top row: icon + number */}
-              <div className="flex items-start justify-between mb-6">
-                <img
-                  src={s.icon}
-                  alt={s.title}
-                  className="h-14 w-14 object-contain"
-                />
-                <span className="text-[11px] font-mono text-dark/30 tracking-widest">
-                  0{i + 1}
-                </span>
+              <div className="aspect-[16/10] overflow-hidden bg-dark/5 shrink-0">
+                 <img src={s.image} alt={s.title} loading="lazy" className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
               </div>
-              <p className="text-[10px] uppercase tracking-[0.2em] text-brand font-semibold mb-2">
-                {s.cat}
-              </p>
-              <h3 className="text-2xl font-medium tracking-tight">{s.title}</h3>
-              <p className="mt-2 text-sm font-medium text-dark/60">{s.line}</p>
-              <p className="mt-4 text-sm text-ink leading-relaxed">{s.desc}</p>
-              <div className="mt-8 h-px w-12 bg-brand transition-all duration-500 group-hover:w-full" />
-            </div>
+              <div className="p-10 flex-1 flex flex-col">
+                <div className="flex items-start justify-between mb-6">
+                  <img
+                    src={s.icon}
+                    alt={s.title}
+                    className="h-14 w-14 object-contain"
+                  />
+                  <span className="text-[11px] font-mono text-dark/30 tracking-widest">
+                    0{i + 1}
+                  </span>
+                </div>
+                <p className="text-[10px] uppercase tracking-[0.2em] text-brand font-semibold mb-2">
+                  {s.cat}
+                </p>
+                <h3 className="text-2xl font-medium tracking-tight">{s.title}</h3>
+                <p className="mt-2 text-sm font-medium text-dark/60">{s.line}</p>
+                <p className="mt-4 text-sm text-ink leading-relaxed flex-1">{s.desc}</p>
+                <div className="mt-8 h-px w-12 bg-brand transition-all duration-500 group-hover:w-full" />
+              </div>
+            </FadeIn>
           ))}
         </div>
 
@@ -449,15 +467,15 @@ function Process() {
           </h2>
         </div>
         <div className="grid md:grid-cols-4 gap-px bg-white/10 border border-white/10">
-          {steps.map((s) => (
-            <div key={s.n} className="bg-dark p-10 group hover:bg-white/[0.02] transition-colors">
+          {steps.map((s, i) => (
+            <FadeIn key={s.n} delay={i * 100} className="bg-dark p-10 group hover:bg-white/[0.02] transition-colors h-full">
               <div className="flex items-baseline gap-3 mb-6">
                 <span className="text-canvas/30 text-xs font-mono">{s.n}</span>
                 <span className="h-px flex-1 bg-white/10" />
               </div>
               <h3 className="text-3xl font-serif italic text-brand mb-4">{s.title}.</h3>
               <p className="text-sm text-canvas/55 leading-relaxed">{s.desc}</p>
-            </div>
+            </FadeIn>
           ))}
         </div>
       </div>
@@ -630,8 +648,8 @@ function Portfolio() {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((p) => (
-            <article key={p.name} className="group cursor-pointer">
+          {projects.map((p, i) => (
+            <FadeIn key={p.name} delay={i * 100} className="group cursor-pointer">
               <div className="overflow-hidden">
                 <img
                   src={p.img}
@@ -639,7 +657,7 @@ function Portfolio() {
                   width={800}
                   height={1000}
                   loading="lazy"
-                  className="w-full aspect-[4/5] object-cover group-hover:scale-[1.03] transition-transform duration-700"
+                  className="w-full aspect-[4/5] object-cover object-top group-hover:scale-[1.03] transition-transform duration-700"
                 />
               </div>
               <div className="mt-5 flex items-start justify-between gap-4">
@@ -651,7 +669,7 @@ function Portfolio() {
                   Case Study
                 </span>
               </div>
-            </article>
+            </FadeIn>
           ))}
         </div>
       </div>
@@ -716,7 +734,7 @@ function Blog() {
   const cats = ["All", "Marketing", "Branding", "SEO", "Technology"];
   const [active, setActive] = useState("All");
   const posts = [
-    { cat: "SEO", title: "How AI is Rewriting the Rules of Search Optimization", date: "May 2026", read: "6 min" },
+    { cat: "SEO", title: "", date: "May 2026", read: "6 min" },
     { cat: "Branding", title: "Why Visual Identity Still Wins in a Performance-First Era", date: "Apr 2026", read: "5 min" },
     { cat: "Technology", title: "Building Web Architectures That Scale Past 10M Users", date: "Apr 2026", read: "8 min" },
     { cat: "Marketing", title: "The 2026 Performance Marketing Playbook for D2C Brands", date: "Mar 2026", read: "7 min" },
@@ -752,7 +770,7 @@ function Blog() {
         </div>
 
         <div className="grid lg:grid-cols-12 gap-10">
-          <article className="lg:col-span-7 group cursor-pointer">
+          <FadeIn className="lg:col-span-7 group cursor-pointer">
             <div className="overflow-hidden">
               <img
                 src={blogFeatured}
@@ -773,11 +791,11 @@ function Blog() {
               How predictive bidding, generative creative and first-party data are reshaping how
               modern brands acquire customers — and what that means for your roadmap.
             </p>
-          </article>
+          </FadeIn>
 
           <div className="lg:col-span-5 space-y-8">
-            {filtered.slice(0, 4).map((p) => (
-              <article key={p.title} className="group cursor-pointer border-b border-dark/10 pb-6 last:border-0">
+            {filtered.slice(0, 4).map((p, i) => (
+              <FadeIn key={p.title} delay={i * 100} className="group cursor-pointer border-b border-dark/10 pb-6 last:border-0">
                 <p className="text-[10px] uppercase tracking-[0.22em] text-brand font-semibold">
                   {p.cat}
                 </p>
@@ -787,7 +805,7 @@ function Blog() {
                 <p className="mt-2 text-xs text-dark/50 uppercase tracking-[0.18em]">
                   {p.date} · {p.read} read
                 </p>
-              </article>
+              </FadeIn>
             ))}
           </div>
         </div>
@@ -817,9 +835,10 @@ function Industries() {
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-dark/10 border border-dark/10">
-          {items.map((it) => (
-            <div
+          {items.map((it, i) => (
+            <FadeIn
               key={it.t}
+              delay={i * 50}
               className="bg-white p-8 text-left group hover:bg-canvas transition-colors flex flex-col justify-between min-h-[220px]"
             >
               <div className="h-20 flex justify-start mb-6">
@@ -829,7 +848,7 @@ function Industries() {
                 <h3 className="text-xl font-semibold text-dark tracking-tight">{it.t}</h3>
                 <p className="text-sm text-dark/60 mt-2 leading-relaxed">{it.d}</p>
               </div>
-            </div>
+            </FadeIn>
           ))}
         </div>
       </div>
@@ -853,13 +872,13 @@ function FinalCta() {
           Mumbai's AI-powered, ROI-driven agency partner — ready to build your next chapter.
         </p>
         <div className="mt-10 flex flex-wrap justify-center gap-4">
-          <a className="inline-flex items-center gap-2 bg-brand py-3 pr-5 pl-2.5 text-sm rounded-2xl font-semibold text-dark ring-1 ring-brand hover:brightness-95 transition cursor-pointer">
-            <span className="grid place-items-center size-6 rounded-full bg-dark/10">
+          <a className="group relative inline-flex items-center gap-2 bg-brand rounded-2xl py-3 px-6 text-sm font-semibold text-dark ring-1 ring-brand hover:brightness-95 transition-all duration-300 shadow-sm hover:shadow-[0_12px_28px_rgba(0,0,0,0.22)] overflow-hidden cursor-pointer">
+            <span className="absolute left-2.5 grid place-items-center size-6 rounded-full bg-dark/10 transition-all duration-500 ease-out group-hover:left-[calc(100%-2rem)]">
               <span className="size-1.5 rounded-full bg-dark" />
             </span>
-            Let's Collaborate
+            <span className="pl-6 group-hover:-translate-x-2 transition-transform duration-500">Let's Collaborate</span>
           </a>
-          <a className="inline-flex items-center px-6 py-3 text-sm font-semibold border border-dark/15 rounded-2xl hover:bg-dark hover:text-canvas transition cursor-pointer">
+          <a className="inline-flex items-center px-6 py-3 text-sm font-semibold border border-dark/15 rounded-2xl transition-all duration-300 shadow-sm hover:shadow-[0_12px_28px_rgba(0,0,0,0.22)] cursor-pointer">
             Schedule Call
           </a>
         </div>
