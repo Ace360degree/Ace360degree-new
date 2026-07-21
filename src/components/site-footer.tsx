@@ -148,12 +148,12 @@ export function SiteFooter() {
             <div>
               <h4 className="text-white/80 text-sm font-semibold uppercase tracking-widest mb-6">Location</h4>
               <ul className="space-y-3.5 text-sm text-white/50">
-                <li><a className="hover:text-white transition cursor-pointer">India</a></li>
-                <li><a className="hover:text-white transition cursor-pointer">UAE</a></li>
-                <li><a className="hover:text-white transition cursor-pointer">UK</a></li>
-                <li><a className="hover:text-white transition cursor-pointer">USA</a></li>
-                <li><a className="hover:text-white transition cursor-pointer">Canada</a></li>
-                <li><a className="hover:text-white transition cursor-pointer">Australia</a></li>
+                <li><Link to="/india" className="hover:text-white transition">India</Link></li>
+                <li><Link to="/uae" className="hover:text-white transition">UAE</Link></li>
+                <li><Link to="/uk" className="hover:text-white transition">UK</Link></li>
+                <li><Link to="/united-states" className="hover:text-white transition">USA</Link></li>
+                <li><Link to="/canada" className="hover:text-white transition">Canada</Link></li>
+                <li><Link to="/australia" className="hover:text-white transition">Australia</Link></li>
               </ul>
             </div>
           </div>
