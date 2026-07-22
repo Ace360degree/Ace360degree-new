@@ -375,9 +375,36 @@ function ContactPage() {
               ) : (
                 <form
                   className="mt-10 space-y-7"
-                  onSubmit={(event) => {
+                  onSubmit={async (event) => {
                     event.preventDefault();
-                    setSubmitted(true);
+                    
+                    const formData = new FormData(event.currentTarget);
+                    const data = Object.fromEntries(formData.entries());
+                    
+                    // Add current page URL
+                    data.page_submitted_from = window.location.href;
+
+                    try {
+                      // Adjust URL to point to where the PHP file is hosted, e.g., '/api/contact.php'
+                      const response = await fetch('/api/contact.php', {
+                        method: 'POST',
+                        headers: {
+                          'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify(data),
+                      });
+
+                      if (response.ok) {
+                        setSubmitted(true);
+                      } else {
+                        console.error('Failed to submit form');
+                        // You can handle error state here
+                        alert('Something went wrong. Please try again.');
+                      }
+                    } catch (error) {
+                      console.error('Error submitting form:', error);
+                      alert('Something went wrong. Please try again.');
+                    }
                   }}
                 >
                   <div className="grid gap-7 md:grid-cols-2">
