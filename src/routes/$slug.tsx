@@ -107,12 +107,12 @@ const countryCities: Record<string, string[]> = {
 
 export const Route = createFileRoute("/$slug")({
   loader: async ({ params: { slug } }) => {
-    if (!isValidCountrySlug(slug)) {
-      throw notFound();
-    }
-
     let page = await getLocationPageBySlug(slug);
+    
     if (!page) {
+      if (!isValidCountrySlug(slug)) {
+        throw notFound();
+      }
       let fallbackTitle = slug.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
       if (countryDisplayNames[slug]) {
         fallbackTitle = countryDisplayNames[slug];
