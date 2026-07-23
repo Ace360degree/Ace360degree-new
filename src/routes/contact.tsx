@@ -386,7 +386,7 @@ function ContactPage() {
 
                     try {
                       // Adjust URL to point to where the PHP file is hosted, e.g., '/api/contact.php'
-                      const response = await fetch('/api/contact.php', {
+                      const response = await fetch('https://ace360degree.com/api/contact.php', {
                         method: 'POST',
                         headers: {
                           'Content-Type': 'application/json',
