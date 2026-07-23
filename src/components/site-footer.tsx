@@ -80,7 +80,7 @@ export function SiteFooter() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 pb-16">
 
           {/* Contact Info Column */}
-          <div className="lg:col-span-4 lg:pr-8">
+          <div className="lg:col-span-4 lg:pr-8 lg:pl-6 xl:pl-10">
             <img src={footerLogo} alt="Ace 360" className="h-16 w-auto mb-12" />
 
             <div className="space-y-6 text-sm">
