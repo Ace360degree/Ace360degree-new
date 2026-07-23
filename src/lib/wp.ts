@@ -37,7 +37,7 @@ export interface BlogCard {
   slug: string;
 }
 
-const DEFAULT_API_URL = "http://localhost/NewAcesite/content/wp-json/wp/v2";
+const DEFAULT_API_URL = "https://ace360degree.com/content/wp-json/wp/v2";
 
 const getApiUrl = () => {
   return import.meta.env.VITE_WP_API_URL || DEFAULT_API_URL;
