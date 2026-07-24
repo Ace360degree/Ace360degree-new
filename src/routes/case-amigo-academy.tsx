@@ -420,19 +420,19 @@ function AmigoCaseStudyPage() {
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
                 to="/contact"
-                className="inline-flex items-center rounded-full bg-primary text-primary-foreground px-6 py-3 text-sm font-medium hover:opacity-90 transition"
+                className="inline-flex items-center rounded-2xl bg-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:opacity-90 hover:shadow-[0_18px_35px_-18px_rgba(0,0,0,0.28)]"
               >
                 Request Education Growth Audit
               </Link>
               <Link
                 to="/contact"
-                className="inline-flex items-center rounded-full border border-border bg-background px-6 py-3 text-sm font-medium hover:bg-muted transition"
+                className="inline-flex items-center rounded-2xl border border-border bg-background px-6 py-3 text-sm font-medium text-foreground shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-muted hover:shadow-[0_18px_35px_-18px_rgba(0,0,0,0.18)]"
               >
                 Book Discovery Call
               </Link>
               <Link
                 to="/industries/education"
-                className="inline-flex items-center rounded-full px-6 py-3 text-sm font-medium hover:bg-muted transition"
+                className="inline-flex items-center rounded-2xl px-6 py-3 text-sm font-medium shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-muted hover:shadow-[0_18px_35px_-18px_rgba(0,0,0,0.14)]"
               >
                 Explore Education Solutions →
               </Link>

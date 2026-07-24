@@ -538,9 +538,54 @@ function Testimonials() {
               className={`transition-opacity duration-700 ${idx === i ? "opacity-100" : "opacity-0 pointer-events-none absolute inset-0"
                 }`}
             >
-              <div className="bg-white border border-dark/8 shadow-sm rounded-md mx-auto max-w-2xl px-10 py-12 md:px-16 md:py-14 text-left">
+              <div className="bg-white border border-dark/8 shadow-sm rounded-[1.5rem] mx-auto max-w-4xl px-6 py-6 md:px-8 md:py-8 text-left">
+                <div className="grid gap-5 md:grid-cols-2">
+                  <figure className="overflow-hidden rounded-[1.25rem] border border-dark/8 bg-dark/5">
+                    <img
+                      src={caseKsa}
+                      alt="Client review image"
+                      className="aspect-[4/3] w-full object-cover"
+                    />
+                    <figcaption className="border-t border-dark/8 px-4 py-3 text-[11px] uppercase tracking-[0.22em] text-dark/50 font-semibold">
+                      Client Image
+                    </figcaption>
+                  </figure>
+
+                  <div className="overflow-hidden rounded-[1.25rem] border border-dark/8 bg-dark relative">
+                    <img
+                      src={caseKsa}
+                      alt="Client video testimonial poster"
+                      className="aspect-[4/3] w-full object-cover opacity-75"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/10 to-transparent" />
+                    <button
+                      type="button"
+                      aria-label="Play testimonial video"
+                      className="absolute inset-0 grid place-items-center"
+                    >
+                      <span className="grid size-16 place-items-center rounded-full bg-white/90 text-dark shadow-[0_14px_30px_rgba(0,0,0,0.25)] transition-transform duration-300 hover:scale-105">
+                        ▶
+                      </span>
+                    </button>
+                    <div className="absolute left-4 right-4 bottom-4 flex items-center justify-between text-[11px] uppercase tracking-[0.22em] text-white/85 font-semibold">
+                      <span>Video Testimonial</span>
+                      <span>0:42</span>
+                    </div>
+                  </div>
+                </div>
+
                 {/* Opening quote mark */}
-                <div className="text-brand text-5xl font-serif leading-none mb-4 select-none">"</div>
+                <div className="text-brand text-5xl font-serif leading-none mb-4 mt-6 select-none">"</div>
+
+                <div className="mb-5 flex items-center gap-2">
+                  <div className="flex items-center gap-1 text-[#F5A623]" aria-label="5 out of 5 stars" role="img">
+                    <span className="text-xl leading-none drop-shadow-sm">★</span>
+                    <span className="text-xl leading-none drop-shadow-sm">★</span>
+                    <span className="text-xl leading-none drop-shadow-sm">★</span>
+                    <span className="text-xl leading-none drop-shadow-sm">★</span>
+                    <span className="text-xl leading-none drop-shadow-sm">★</span>
+                  </div>
+                </div>
 
                 {/* Quote */}
                 <p className="text-xl md:text-2xl font-medium leading-snug text-dark text-balance">
@@ -886,7 +931,6 @@ function FinalCta() {
     </section>
   );
 }
-
 
 /* ---------------- Page ---------------- */
 function Index() {

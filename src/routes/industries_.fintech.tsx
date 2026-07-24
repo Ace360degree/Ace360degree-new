@@ -395,13 +395,13 @@ function FintechPage() {
                 <div className="mt-10 flex flex-wrap gap-3">
                   <Link
                     to="/contact"
-                    className="inline-flex items-center gap-2 rounded-full bg-foreground px-6 py-3 text-sm font-medium text-background transition hover:bg-foreground/90"
+                    className="inline-flex items-center gap-2 rounded-2xl bg-foreground px-6 py-3 text-sm font-medium text-background shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-foreground/90 hover:shadow-[0_18px_35px_-18px_rgba(0,0,0,0.35)]"
                   >
                     Book Discovery Call <ArrowRight className="h-4 w-4" />
                   </Link>
                   <Link
                     to="/portfolio"
-                    className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-6 py-3 text-sm font-medium text-foreground transition hover:bg-muted"
+                    className="inline-flex items-center gap-2 rounded-2xl border border-border bg-background px-6 py-3 text-sm font-medium text-foreground shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-foreground/20 hover:bg-muted hover:shadow-[0_18px_35px_-18px_rgba(0,0,0,0.22)]"
                   >
                     View Financial Services Work <ArrowUpRight className="h-4 w-4" />
                   </Link>
@@ -926,7 +926,7 @@ function FintechPage() {
       <div className="mt-10 flex flex-wrap justify-center gap-3">
         <Link
           to="/contact"
-          className="inline-flex items-center gap-2 rounded-full bg-foreground px-7 py-3.5 text-sm font-medium text-background transition-all duration-300 hover:-translate-y-0.5 hover:bg-foreground/90"
+          className="inline-flex items-center gap-2 rounded-2xl bg-foreground px-7 py-3.5 text-sm font-medium text-background shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-foreground/90 hover:shadow-[0_18px_35px_-18px_rgba(0,0,0,0.35)]"
         >
           Book Discovery Call
           <ArrowRight className="h-4 w-4" />
@@ -934,7 +934,7 @@ function FintechPage() {
 
         <Link
           to="/portfolio"
-          className="inline-flex items-center gap-2 rounded-full border border-foreground/10 bg-white/70 px-7 py-3.5 text-sm font-medium text-foreground backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-foreground/20 hover:bg-white"
+          className="inline-flex items-center gap-2 rounded-2xl border border-foreground/10 bg-white/70 px-7 py-3.5 text-sm font-medium text-foreground shadow-sm backdrop-blur-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-foreground/20 hover:bg-white hover:shadow-[0_18px_35px_-18px_rgba(0,0,0,0.22)]"
         >
           View Success Stories
           <ArrowUpRight className="h-4 w-4" />

@@ -177,7 +177,7 @@ export function SiteHeader() {
           <div className="flex items-center gap-3 shrink-0">
             <button
               type="button"
-              className="hidden sm:inline-flex items-center bg-[#FFB330] hover:bg-[#E09010] text-[#181818] text-sm font-semibold px-5 py-2.5 rounded-2xl transition-all duration-300 shadow-sm hover:shadow-[0_12px_28px_rgba(0,0,0,0.22)] whitespace-nowrap"
+              className="inline-flex items-center bg-[#FFB330] hover:bg-[#E09010] text-[#181818] text-xs sm:text-sm font-semibold px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-2xl transition-all duration-300 shadow-sm hover:shadow-[0_12px_28px_rgba(0,0,0,0.22)] whitespace-nowrap"
               onClick={openStrategyForm}
             >
               Book a Strategy Call
@@ -234,7 +234,7 @@ export function SiteHeader() {
                         <div className="mt-4 rounded-2xl border border-gray-100 bg-gray-50 p-4">
                           <a
                             href="/services"
-                            className="mb-3 block text-[11px] font-semibold uppercase tracking-[0.18em] text-[#FFA20B]"
+                            className="mb-3 inline-flex rounded-2xl border border-[#FFA20B]/20 bg-white px-3 py-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#FFA20B] shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-[#FFA20B]/35 hover:shadow-[0_10px_24px_rgba(0,0,0,0.08)]"
                             onClick={closeMobileMenu}
                           >
                             View All Services
@@ -244,7 +244,7 @@ export function SiteHeader() {
                               <li key={service.to}>
                                 <a
                                   href={service.to}
-                                  className="block rounded-xl px-3 py-2 text-sm text-gray-600 transition-colors hover:bg-white hover:text-gray-900"
+                                  className="block rounded-2xl border border-transparent bg-white px-3 py-2.5 text-sm text-gray-700 shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-[#FFA20B]/15 hover:text-gray-900 hover:shadow-[0_12px_28px_rgba(0,0,0,0.10)]"
                                   onClick={closeMobileMenu}
                                 >
                                   {service.label}
@@ -283,7 +283,7 @@ export function SiteHeader() {
                         <div className="mt-4 rounded-2xl border border-gray-100 bg-gray-50 p-4">
                           <a
                             href="/industries"
-                            className="mb-3 block text-[11px] font-semibold uppercase tracking-[0.18em] text-[#FFA20B]"
+                            className="mb-3 inline-flex rounded-2xl border border-[#FFA20B]/20 bg-white px-3 py-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#FFA20B] shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-[#FFA20B]/35 hover:shadow-[0_10px_24px_rgba(0,0,0,0.08)]"
                             onClick={closeMobileMenu}
                           >
                             View All Industries
@@ -293,7 +293,7 @@ export function SiteHeader() {
                               <li key={industry.to}>
                                 <a
                                   href={industry.to}
-                                  className="block rounded-xl px-3 py-2 text-sm text-gray-600 transition-colors hover:bg-white hover:text-gray-900"
+                                  className="block rounded-2xl border border-transparent bg-white px-3 py-2.5 text-sm text-gray-700 shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-[#FFA20B]/15 hover:text-gray-900 hover:shadow-[0_12px_28px_rgba(0,0,0,0.10)]"
                                   onClick={closeMobileMenu}
                                 >
                                   {industry.label}
@@ -332,7 +332,7 @@ export function SiteHeader() {
                         <div className="mt-4 rounded-2xl border border-gray-100 bg-gray-50 p-4">
                           <a
                             href="/portfolio"
-                            className="mb-3 block text-[11px] font-semibold uppercase tracking-[0.18em] text-[#FFA20B]"
+                            className="mb-3 inline-flex rounded-2xl border border-[#FFA20B]/20 bg-white px-3 py-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#FFA20B] shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-[#FFA20B]/35 hover:shadow-[0_10px_24px_rgba(0,0,0,0.08)]"
                             onClick={closeMobileMenu}
                           >
                             View All Case Studies
@@ -342,7 +342,7 @@ export function SiteHeader() {
                               <li key={study.to}>
                                 <a
                                   href={study.to}
-                                  className="block rounded-xl px-3 py-2 text-sm text-gray-600 transition-colors hover:bg-white hover:text-gray-900"
+                                  className="block rounded-2xl border border-transparent bg-white px-3 py-2.5 text-sm text-gray-700 shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-[#FFA20B]/15 hover:text-gray-900 hover:shadow-[0_12px_28px_rgba(0,0,0,0.10)]"
                                   onClick={closeMobileMenu}
                                 >
                                   {study.label}

@@ -289,14 +289,14 @@ function RealEstatePage() {
                 <div className="mt-9 flex flex-wrap gap-3">
                   <Link
                     to="/contact"
-                    className="inline-flex items-center gap-2 rounded-full bg-[#ffb330] px-6 py-3 text-sm font-medium text-[#181818] transition hover:bg-[#f0a419]"
+                    className="inline-flex items-center gap-2 rounded-2xl bg-[#ffb330] px-6 py-3 text-sm font-medium text-[#181818] shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-[#f0a419] hover:shadow-[0_18px_35px_-18px_rgba(24,24,24,0.35)]"
                   >
                     Book Discovery Call
                     <ArrowRight className="h-4 w-4" />
                   </Link>
                   <Link
                     to="/portfolio"
-                    className="inline-flex items-center gap-2 rounded-full border border-[#181818]/10 bg-white px-6 py-3 text-sm font-medium text-[#181818] transition hover:bg-[#f8f5ee]"
+                    className="inline-flex items-center gap-2 rounded-2xl border border-[#181818]/10 bg-white px-6 py-3 text-sm font-medium text-[#181818] shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-[#f8f5ee] hover:shadow-[0_18px_35px_-18px_rgba(24,24,24,0.22)]"
                   >
                     View Real Estate Projects
                     <ArrowUpRight className="h-4 w-4" />
@@ -674,14 +674,14 @@ function RealEstatePage() {
             <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
               <Link
                 to="/contact"
-                className="inline-flex items-center gap-2 bg-[#ffb330] px-5 py-3 text-sm font-medium text-[#181818] transition hover:bg-[#f0a419]"
+                className="inline-flex items-center gap-2 rounded-2xl bg-[#ffb330] px-5 py-3 text-sm font-medium text-[#181818] shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-[#f0a419] hover:shadow-[0_18px_35px_-18px_rgba(24,24,24,0.35)]"
               >
                 Book Discovery Call
                 <ArrowRight className="h-4 w-4" />
               </Link>
               <Link
                 to="/portfolio"
-                className="inline-flex items-center gap-2 border border-white/16 bg-white/5 px-5 py-3 text-sm font-medium text-white transition hover:bg-white/10"
+                className="inline-flex items-center gap-2 rounded-2xl border border-white/16 bg-white/5 px-5 py-3 text-sm font-medium text-white shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-white/10 hover:shadow-[0_18px_35px_-18px_rgba(0,0,0,0.22)]"
               >
                 View Case Studies
                 <ArrowUpRight className="h-4 w-4" />

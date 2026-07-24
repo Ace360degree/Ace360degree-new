@@ -263,13 +263,13 @@ function D2CPage() {
               <div className="mt-10 flex flex-wrap gap-4">
                 <Link
                   to="/contact"
-                  className="inline-flex items-center gap-2 bg-brand text-dark px-6 py-3 font-semibold hover:brightness-95"
+                className="inline-flex items-center gap-2 rounded-2xl bg-brand px-6 py-3 font-semibold text-dark shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:brightness-95 hover:shadow-[0_18px_35px_-18px_rgba(0,0,0,0.35)]"
                 >
                   Book Discovery Call <ArrowRight className="size-4" />
                 </Link>
                 <Link
                   to="/portfolio"
-                  className="inline-flex items-center gap-2 border border-dark/15 text-dark px-6 py-3 font-semibold hover:border-brand hover:text-brand transition"
+                className="inline-flex items-center gap-2 rounded-2xl border border-dark/15 px-6 py-3 font-semibold text-dark shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-brand hover:text-brand hover:shadow-[0_18px_35px_-18px_rgba(0,0,0,0.22)]"
                 >
                   View Retail Success Stories <ArrowUpRight className="size-4" />
                 </Link>
@@ -524,10 +524,10 @@ function D2CPage() {
             Let's create a growth strategy that combines branding, digital commerce and performance marketing to increase sales, strengthen customer loyalty and accelerate long-term business growth.
           </p>
           <div className="mt-10 flex flex-wrap gap-4 justify-center">
-            <Link to="/contact" className="inline-flex items-center gap-2 bg-brand text-dark px-6 py-3 font-semibold hover:brightness-95">
+            <Link to="/contact" className="inline-flex items-center gap-2 rounded-2xl bg-brand px-6 py-3 font-semibold text-dark shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:brightness-95 hover:shadow-[0_18px_35px_-18px_rgba(0,0,0,0.35)]">
               Book Discovery Call <ArrowRight className="size-4" />
             </Link>
-            <Link to="/portfolio" className="inline-flex items-center gap-2 border border-canvas/30 text-canvas px-6 py-3 font-semibold hover:bg-canvas hover:text-dark transition">
+            <Link to="/portfolio" className="inline-flex items-center gap-2 rounded-2xl border border-canvas/30 px-6 py-3 font-semibold text-canvas shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-canvas hover:text-dark hover:shadow-[0_18px_35px_-18px_rgba(0,0,0,0.22)]">
               View Success Stories <ArrowUpRight className="size-4" />
             </Link>
           </div>

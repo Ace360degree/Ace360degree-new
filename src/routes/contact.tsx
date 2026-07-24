@@ -195,7 +195,7 @@ function ContactPage() {
             <div className="mt-8 flex flex-wrap gap-3">
               <a
                 href="#form"
-                className="inline-flex items-center gap-2 bg-dark px-5 py-3 text-sm font-semibold text-canvas transition hover:bg-dark/90"
+                className="inline-flex items-center gap-2 rounded-2xl bg-dark px-5 py-3 text-sm font-semibold text-canvas shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-dark/90 hover:shadow-[0_18px_35px_-18px_rgba(0,0,0,0.35)]"
               >
                 Schedule a Call
                 <span aria-hidden="true">→</span>
@@ -203,7 +203,7 @@ function ContactPage() {
 
               <a
                 href="#form"
-                className="inline-flex items-center gap-2 border border-dark/20 px-5 py-3 text-sm font-semibold transition hover:border-dark"
+                className="inline-flex items-center gap-2 rounded-2xl border border-dark/20 bg-white px-5 py-3 text-sm font-semibold text-dark shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-dark hover:shadow-[0_18px_35px_-18px_rgba(0,0,0,0.18)]"
               >
                 Send a Message
                 <span aria-hidden="true">→</span>
@@ -213,7 +213,7 @@ function ContactPage() {
                 href="https://wa.me/919820165488"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex size-11 items-center justify-center rounded-full bg-brand text-dark transition hover:brightness-95"
+                className="inline-flex size-11 items-center justify-center rounded-full bg-brand text-dark shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:brightness-95 hover:shadow-[0_12px_28px_rgba(0,0,0,0.22)]"
                 aria-label="Contact Ace360degree on WhatsApp"
               >
                 <span aria-hidden="true">💬</span>
@@ -482,7 +482,7 @@ function ContactPage() {
 
                   <button
                     type="submit"
-                    className="group inline-flex items-center gap-3 bg-dark px-6 py-3.5 text-sm font-semibold text-canvas transition hover:bg-dark/90"
+                    className="group inline-flex items-center gap-3 rounded-2xl bg-dark px-6 py-3.5 text-sm font-semibold text-canvas shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-dark/90 hover:shadow-[0_18px_35px_-18px_rgba(0,0,0,0.35)]"
                   >
                     Send Inquiry
 
@@ -533,7 +533,7 @@ function ContactPage() {
                     ? "noopener noreferrer"
                     : undefined
                 }
-                className="group block border border-dark/10 bg-light p-6 transition-all duration-300 hover:bg-yellow-500 hover:text-canvas"
+                className="group block rounded-2xl border border-dark/10 bg-light p-6 shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-yellow-500 hover:text-canvas hover:shadow-[0_18px_35px_-18px_rgba(0,0,0,0.18)]"
               >
                 <span className="grid size-12 place-items-center rounded-full bg-canvas/90 p-2 shadow-sm transition-colors group-hover:bg-white">
                   <img
@@ -591,7 +591,7 @@ function ContactPage() {
               href="https://maps.google.com/?q=Evershine+Mall+Malad+West+Mumbai"
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 border border-dark/20 px-5 py-3 text-sm font-semibold transition hover:border-dark"
+              className="inline-flex items-center gap-2 rounded-2xl border border-dark/20 bg-white px-5 py-3 text-sm font-semibold text-dark shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-dark hover:shadow-[0_18px_35px_-18px_rgba(0,0,0,0.18)]"
             >
               Get Directions
               <span aria-hidden="true">→</span>
@@ -630,7 +630,7 @@ function ContactPage() {
           <div className="mt-10 flex flex-wrap justify-center gap-3">
             <a
               href="#form"
-              className="inline-flex items-center gap-2 bg-brand px-6 py-3.5 text-sm font-semibold text-dark transition hover:brightness-95"
+              className="inline-flex items-center gap-2 rounded-2xl bg-brand px-6 py-3.5 text-sm font-semibold text-dark shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:brightness-95 hover:shadow-[0_18px_35px_-18px_rgba(0,0,0,0.28)]"
             >
               Schedule a Call
               <span aria-hidden="true">→</span>
@@ -638,7 +638,7 @@ function ContactPage() {
 
             <a
               href="#form"
-              className="inline-flex items-center gap-2 border border-canvas/30 px-6 py-3.5 text-sm font-semibold transition hover:border-canvas"
+              className="inline-flex items-center gap-2 rounded-2xl border border-canvas/30 px-6 py-3.5 text-sm font-semibold text-canvas shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-canvas hover:shadow-[0_18px_35px_-18px_rgba(0,0,0,0.18)]"
             >
               Send Your Brief
               <span aria-hidden="true">→</span>
@@ -668,8 +668,20 @@ function ContactPage() {
               (social) => (
                 <a
                   key={social}
-                  href="#"
-                  className="border border-dark/15 px-5 py-2.5 text-sm transition hover:bg-dark hover:text-canvas"
+                  href={
+                    social === "LinkedIn"
+                      ? "https://www.linkedin.com/company/ace360degree---business-growth-digital-transformation-agency/posts/?feedView=all"
+                      : social === "Instagram"
+                        ? "https://www.instagram.com/ace360degree/"
+                      : social === "YouTube"
+                        ? "https://www.youtube.com/@ace360degree"
+                      : social === "Facebook"
+                        ? "https://www.facebook.com/ace360degree/"
+                      : "#"
+                  }
+                  target={social === "LinkedIn" || social === "Instagram" || social === "YouTube" || social === "Facebook" ? "_blank" : undefined}
+                  rel={social === "LinkedIn" || social === "Instagram" || social === "YouTube" || social === "Facebook" ? "noreferrer" : undefined}
+                  className="rounded-2xl border border-dark/15 bg-white px-5 py-2.5 text-sm shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-dark hover:text-canvas hover:shadow-[0_12px_28px_rgba(0,0,0,0.18)]"
                 >
                   {social}
                 </a>
@@ -685,7 +697,7 @@ function ContactPage() {
       <div className="fixed bottom-4 left-1/2 z-40 hidden -translate-x-1/2 items-center gap-1 rounded-full bg-dark px-2 py-2 text-canvas shadow-2xl backdrop-blur md:flex">
         <a
           href="tel:+919820165488"
-          className="px-4 py-2 text-xs uppercase tracking-wider hover:text-brand"
+          className="rounded-full px-4 py-2 text-xs uppercase tracking-wider transition-all duration-300 ease-out hover:-translate-y-0.5 hover:text-brand"
         >
           <span aria-hidden="true">📞</span> Call
         </a>
@@ -699,7 +711,7 @@ function ContactPage() {
           href="https://wa.me/919820165488"
           target="_blank"
           rel="noopener noreferrer"
-          className="px-4 py-2 text-xs uppercase tracking-wider hover:text-brand"
+          className="rounded-full px-4 py-2 text-xs uppercase tracking-wider transition-all duration-300 ease-out hover:-translate-y-0.5 hover:text-brand"
         >
           <span aria-hidden="true">💬</span> WhatsApp
         </a>
@@ -711,7 +723,7 @@ function ContactPage() {
 
         <a
           href="mailto:info@ace360degree.com"
-          className="px-4 py-2 text-xs uppercase tracking-wider hover:text-brand"
+          className="rounded-full px-4 py-2 text-xs uppercase tracking-wider transition-all duration-300 ease-out hover:-translate-y-0.5 hover:text-brand"
         >
           <span aria-hidden="true">✉</span> Email
         </a>

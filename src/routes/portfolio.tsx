@@ -263,13 +263,13 @@ function Hero() {
             <div className="mt-10 flex flex-wrap items-center gap-3">
               <a
                 href="#cases"
-                className="inline-flex items-center gap-2 bg-dark text-canvas py-3 px-5 text-sm font-semibold hover:bg-dark/90 transition"
+                className="inline-flex items-center gap-2 rounded-2xl bg-dark py-3 px-5 text-sm font-semibold text-canvas shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-dark/90 hover:shadow-[0_18px_35px_-18px_rgba(0,0,0,0.35)]"
               >
                 Explore Success Stories →
               </a>
               <Link
                 to="/contact"
-                className="inline-flex items-center gap-2 border border-dark/15 py-3 px-5 text-sm font-semibold hover:border-dark/40 transition"
+                className="inline-flex items-center gap-2 rounded-2xl border border-dark/15 bg-white py-3 px-5 text-sm font-semibold text-dark shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-dark/40 hover:shadow-[0_18px_35px_-18px_rgba(0,0,0,0.22)]"
               >
                 Book Discovery Call →
               </Link>
@@ -475,13 +475,13 @@ function MoreStories() {
         <div className="mt-10 flex flex-wrap justify-center gap-3">
           <a
             href="#cases"
-            className="inline-flex items-center gap-2 bg-dark text-canvas py-3 px-5 text-sm font-semibold hover:bg-dark/90 transition"
+            className="inline-flex items-center gap-2 rounded-2xl bg-dark py-3 px-5 text-sm font-semibold text-canvas shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-dark/90 hover:shadow-[0_18px_35px_-18px_rgba(0,0,0,0.35)]"
           >
             See All Stories →
           </a>
           <Link
             to="/contact"
-            className="inline-flex items-center gap-2 border border-dark/15 py-3 px-5 text-sm font-semibold hover:border-dark/40 transition"
+            className="inline-flex items-center gap-2 rounded-2xl border border-dark/15 bg-white py-3 px-5 text-sm font-semibold text-dark shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-dark/40 hover:shadow-[0_18px_35px_-18px_rgba(0,0,0,0.22)]"
           >
             Book Discovery Call →
           </Link>
@@ -614,13 +614,13 @@ function FinalCTA() {
         <div className="mt-10 flex flex-wrap justify-center gap-3">
           <Link
             to="/contact"
-            className="inline-flex items-center gap-2 bg-dark text-canvas py-3 px-5 text-sm font-semibold hover:bg-dark/90 transition"
+            className="inline-flex items-center gap-2 rounded-2xl bg-dark py-3 px-5 text-sm font-semibold text-canvas shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-dark/90 hover:shadow-[0_18px_35px_-18px_rgba(0,0,0,0.35)]"
           >
             Book Discovery Call →
           </Link>
           <Link
             to="/services"
-            className="inline-flex items-center gap-2 bg-brand text-dark py-3 px-5 text-sm font-semibold hover:brightness-95 transition"
+            className="inline-flex items-center gap-2 rounded-2xl bg-brand py-3 px-5 text-sm font-semibold text-dark shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:brightness-95 hover:shadow-[0_18px_35px_-18px_rgba(0,0,0,0.28)]"
           >
             View Service Capabilities →
           </Link>

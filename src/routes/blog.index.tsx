@@ -72,13 +72,13 @@ function BlogPage() {
               <div className="mt-10 flex flex-wrap gap-3">
                 <a
                   href="#latest"
-                  className="inline-flex items-center gap-2 bg-dark px-6 py-3 text-sm font-semibold text-canvas transition hover:bg-brand hover:text-dark"
+                  className="inline-flex items-center gap-2 rounded-2xl bg-dark px-6 py-3 text-sm font-semibold text-canvas shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-brand hover:text-dark hover:shadow-[0_18px_35px_-18px_rgba(0,0,0,0.35)]"
                 >
                   Explore Insights <span aria-hidden="true">&rarr;</span>
                 </a>
                 <a
                   href="#newsletter"
-                  className="inline-flex items-center gap-2 border border-dark/15 px-6 py-3 text-sm font-semibold transition hover:border-dark"
+                  className="inline-flex items-center gap-2 rounded-2xl border border-dark/15 px-6 py-3 text-sm font-semibold shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-dark hover:shadow-[0_18px_35px_-18px_rgba(0,0,0,0.2)]"
                 >
                   Subscribe <span aria-hidden="true">&rarr;</span>
                 </a>
@@ -118,7 +118,7 @@ function BlogPage() {
                 Practical tips to help your brand grow.
               </p>
             </div>
-            <a className="inline-flex cursor-pointer items-center gap-2 border-b border-dark pb-1 text-sm font-semibold transition hover:border-brand hover:text-brand">
+            <a className="inline-flex cursor-pointer items-center gap-2 rounded-2xl border border-dark/15 px-5 py-3 text-sm font-semibold shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-brand hover:text-brand hover:shadow-[0_18px_35px_-18px_rgba(0,0,0,0.2)]">
               Read All Articles <span aria-hidden="true">&rarr;</span>
             </a>
           </div>
@@ -136,7 +136,7 @@ function BlogPage() {
           )}
 
           <div className="mt-16 text-center">
-            <button className="inline-flex items-center gap-2 border border-dark/20 px-7 py-3 text-sm font-semibold transition hover:bg-dark hover:text-canvas">
+            <button className="inline-flex items-center gap-2 rounded-2xl border border-dark/20 px-7 py-3 text-sm font-semibold shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-dark hover:text-canvas hover:shadow-[0_18px_35px_-18px_rgba(0,0,0,0.35)]">
               Load More
             </button>
           </div>
@@ -160,7 +160,7 @@ function BlogPage() {
           </div>
           <Link
             to="/about"
-            className="mt-10 inline-flex items-center gap-2 border border-canvas/20 px-6 py-3 text-sm font-semibold transition hover:border-brand hover:bg-brand hover:text-dark"
+            className="mt-10 inline-flex items-center gap-2 rounded-2xl border border-canvas/20 px-6 py-3 text-sm font-semibold shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-brand hover:bg-brand hover:text-dark hover:shadow-[0_18px_35px_-18px_rgba(255,255,255,0.35)]"
           >
             Discover Our Story <span aria-hidden="true">&rarr;</span>
           </Link>
@@ -196,7 +196,7 @@ function BlogPage() {
                 className="border-b border-dark/20 bg-transparent py-3 text-sm focus:border-brand focus:outline-none"
               />
             </div>
-            <button className="mt-4 w-full bg-brand py-3.5 text-sm font-semibold text-dark transition hover:bg-dark hover:text-canvas">
+            <button className="mt-4 w-full rounded-2xl bg-brand py-3.5 text-sm font-semibold text-dark shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-dark hover:text-canvas hover:shadow-[0_18px_35px_-18px_rgba(0,0,0,0.35)]">
               Subscribe Now &rarr;
             </button>
             <p className="mt-4 text-xs text-ink">
@@ -253,13 +253,13 @@ function BlogPage() {
 
       <SiteFooter />
 
-      <div className="fixed bottom-6 right-6 z-40 hidden flex-col gap-2 md:flex">
-        <a className="group inline-flex cursor-pointer items-center gap-2 bg-dark px-4 py-3 text-xs font-semibold text-canvas shadow-lg transition hover:bg-brand hover:text-dark">
+      <div className="fixed bottom-24 right-6 z-40 hidden flex-col items-end gap-3 md:flex">
+        <a className="group inline-flex w-fit shrink-0 cursor-pointer whitespace-nowrap items-center gap-2 rounded-2xl bg-dark px-4 py-3 text-xs font-semibold text-canvas shadow-lg transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-brand hover:text-dark hover:shadow-[0_18px_35px_-18px_rgba(0,0,0,0.35)]">
           Talk to a Marketing Expert
         </a>
         <a
           href="#newsletter"
-          className="inline-flex items-center gap-2 bg-brand px-4 py-3 text-xs font-semibold text-dark shadow-lg transition hover:bg-dark hover:text-canvas"
+          className="inline-flex w-fit shrink-0 whitespace-nowrap items-center gap-2 rounded-2xl bg-brand px-4 py-3 text-xs font-semibold text-dark shadow-lg transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-dark hover:text-canvas hover:shadow-[0_18px_35px_-18px_rgba(0,0,0,0.35)]"
         >
           Subscribe to Insights
         </a>

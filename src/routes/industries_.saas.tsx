@@ -135,10 +135,10 @@ function SaasPage() {
             A strategic growth partner for software companies, SaaS platforms, AI startups and technology businesses—combining product positioning, demand generation, digital platforms and growth systems to accelerate qualified pipeline, product adoption and recurring revenue.
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
-            <Link to="/contact" className="inline-flex items-center gap-2 bg-brand text-dark px-6 py-3 font-semibold hover:brightness-95">
+            <Link to="/contact" className="inline-flex items-center gap-2 rounded-2xl bg-brand px-6 py-3 font-semibold text-dark shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:brightness-95 hover:shadow-[0_18px_35px_-18px_rgba(0,0,0,0.35)]">
               Book Discovery Call <ArrowRight className="size-4" />
             </Link>
-            <Link to="/portfolio" className="inline-flex items-center gap-2 border border-canvas/30 text-canvas px-6 py-3 font-semibold hover:bg-canvas hover:text-dark transition">
+            <Link to="/portfolio" className="inline-flex items-center gap-2 rounded-2xl border border-canvas/30 px-6 py-3 font-semibold text-canvas shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-canvas hover:text-dark hover:shadow-[0_18px_35px_-18px_rgba(0,0,0,0.22)]">
               View Technology Projects <ArrowUpRight className="size-4" />
             </Link>
           </div>
@@ -367,10 +367,10 @@ function SaasPage() {
             Let's build a growth strategy that combines branding, digital platforms and demand generation to increase product visibility, qualified pipeline and long-term recurring revenue.
           </p>
           <div className="mt-10 flex flex-wrap gap-4 justify-center">
-            <Link to="/contact" className="inline-flex items-center gap-2 bg-brand text-dark px-6 py-3 font-semibold hover:brightness-95">
+            <Link to="/contact" className="inline-flex items-center gap-2 rounded-2xl bg-brand px-6 py-3 font-semibold text-dark shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:brightness-95 hover:shadow-[0_18px_35px_-18px_rgba(0,0,0,0.35)]">
               Book Discovery Call <ArrowRight className="size-4" />
             </Link>
-            <Link to="/portfolio" className="inline-flex items-center gap-2 border border-canvas/30 text-canvas px-6 py-3 font-semibold hover:bg-canvas hover:text-dark transition">
+            <Link to="/portfolio" className="inline-flex items-center gap-2 rounded-2xl border border-canvas/30 px-6 py-3 font-semibold text-canvas shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-canvas hover:text-dark hover:shadow-[0_18px_35px_-18px_rgba(0,0,0,0.22)]">
               View Technology Projects <ArrowUpRight className="size-4" />
             </Link>
           </div>
