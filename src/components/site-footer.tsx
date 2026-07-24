@@ -115,6 +115,13 @@ export function SiteFooter() {
                   <Mail className="size-5 shrink-0 text-white" />
                   <a href="mailto:ClientSuccess@ace360pl.com" className="text-white/50 hover:text-white transition">ClientSuccess@ace360pl.com</a>
                 </div>
+                <div className="flex gap-4 items-center">
+                  <Mail className="size-5 shrink-0 text-white" />
+                  <div className="flex flex-col">
+                    <span className="text-[10px] uppercase tracking-widest text-white/60">HR Email</span>
+                    <a href="mailto:career@a360pl.com" className="text-white/50 hover:text-white transition">career@a360pl.com</a>
+                  </div>
+                </div>
               </div>
 
               <div className="pt-2 space-y-4">
@@ -129,6 +136,13 @@ export function SiteFooter() {
                 <div className="flex gap-4 items-center">
                   <Phone className="size-5 shrink-0 text-white" />
                   <a href="tel:+02246020360" className="text-white/50 hover:text-white transition">+022-46 020 360</a>
+                </div>
+                <div className="flex gap-4 items-center">
+                  <Phone className="size-5 shrink-0 text-white" />
+                  <div className="flex flex-col">
+                    <span className="text-[10px] uppercase tracking-widest text-white/60">HR Number</span>
+                    <a href="tel:+919136426360" className="text-white/50 hover:text-white transition">9136426360</a>
+                  </div>
                 </div>
               </div>
 
