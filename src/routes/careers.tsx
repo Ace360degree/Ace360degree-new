@@ -104,14 +104,14 @@ function Hero() {
             <div className="mt-10 flex flex-wrap gap-4">
               <a
                 href="#openings"
-                className="group inline-flex items-center gap-2 bg-dark px-5 py-3 text-sm font-semibold text-canvas hover:bg-brand hover:text-dark transition"
+                className="group inline-flex items-center gap-2 rounded-xl bg-dark px-5 py-3 text-sm font-semibold text-canvas shadow-sm transition-all duration-300 hover:bg-brand hover:text-dark hover:shadow-[0_12px_28px_rgba(0,0,0,0.22)]"
               >
                 View Open Positions
                 <span className="transition-transform group-hover:translate-x-1">→</span>
               </a>
               <a
                 href="#open-application"
-                className="inline-flex items-center gap-2 border border-dark/15 px-5 py-3 text-sm font-semibold text-dark hover:border-dark transition"
+                className="inline-flex items-center gap-2 rounded-xl border border-dark/15 px-5 py-3 text-sm font-semibold text-dark shadow-sm transition-all duration-300 hover:border-dark hover:shadow-[0_12px_28px_rgba(0,0,0,0.16)]"
               >
                 Send Your CV →
               </a>
@@ -293,7 +293,17 @@ const DEPTS: Dept[] = [
   },
 ];
 
-function JobCard({ job, index }: { job: Job; index: number }) {
+function JobCard({
+  job,
+  index,
+  onApply,
+  onRefer,
+}: {
+  job: Job;
+  index: number;
+  onApply: (job: string) => void;
+  onRefer: (job: string) => void;
+}) {
   const [open, setOpen] = useState(false);
   return (
     <Reveal delay={index * 50}>
@@ -328,18 +338,20 @@ function JobCard({ job, index }: { job: Job; index: number }) {
             <div className="px-6 pb-6 pt-0 border-t border-dark/10">
               <p className="text-[15px] text-dark/70 leading-relaxed mt-5 max-w-2xl">{job.summary}</p>
               <div className="mt-6 flex flex-wrap gap-3">
-                <a
-                  href={`mailto:careers@ace360degree.com?subject=Application — ${encodeURIComponent(job.title)}`}
-                  className="inline-flex items-center gap-2 bg-dark px-5 py-2.5 text-sm font-semibold text-canvas hover:bg-brand hover:text-dark transition"
+                <button
+                  type="button"
+                  onClick={() => onApply(job.title)}
+                  className="inline-flex items-center gap-2 rounded-xl bg-dark px-5 py-2.5 text-sm font-semibold text-canvas shadow-sm transition-all duration-300 hover:bg-brand hover:text-dark hover:shadow-[0_12px_28px_rgba(0,0,0,0.22)]"
                 >
                   Apply Now →
-                </a>
-                <a
-                  href="#open-application"
-                  className="inline-flex items-center gap-2 border border-dark/15 px-5 py-2.5 text-sm font-semibold text-dark hover:border-dark transition"
+                </button>
+                <button
+                  type="button"
+                  onClick={() => onRefer(job.title)}
+                  className="inline-flex items-center gap-2 rounded-xl border border-dark/15 px-5 py-2.5 text-sm font-semibold text-dark shadow-sm transition-all duration-300 hover:border-dark hover:shadow-[0_12px_28px_rgba(0,0,0,0.16)]"
                 >
                   Refer a Friend
-                </a>
+                </button>
               </div>
             </div>
           </div>
@@ -349,7 +361,13 @@ function JobCard({ job, index }: { job: Job; index: number }) {
   );
 }
 
-function Openings() {
+function Openings({
+  onApply,
+  onRefer,
+}: {
+  onApply: (job: string) => void;
+  onRefer: (job: string) => void;
+}) {
   const [active, setActive] = useState(DEPTS[0].id);
   const dept = DEPTS.find((d) => d.id === active)!;
   return (
@@ -385,7 +403,7 @@ function Openings() {
 
         <div className="mt-10 grid gap-4">
           {dept.jobs.map((j, i) => (
-            <JobCard key={j.title} job={j} index={i} />
+            <JobCard key={j.title} job={j} index={i} onApply={onApply} onRefer={onRefer} />
           ))}
         </div>
       </div>
@@ -394,9 +412,31 @@ function Openings() {
 }
 
 /* ---------- Open Application ---------- */
-function OpenApplication() {
+function OpenApplication({
+  resumeOpen,
+  setResumeOpen,
+  applicationJob,
+  onOpenApplication,
+}: {
+  resumeOpen: boolean;
+  setResumeOpen: (open: boolean) => void;
+  applicationJob: string;
+  onOpenApplication: (job: string) => void;
+}) {
+  const [resumeName, setResumeName] = useState("");
+
+  useEffect(() => {
+    if (!resumeOpen) return;
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setResumeOpen(false);
+    };
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [resumeOpen]);
+
   return (
-    <section id="open-application" className="bg-canvas py-24">
+    <>
+      <section id="open-application" className="bg-canvas py-24">
       <div className="mx-auto max-w-5xl px-6">
         <Reveal>
           <div className="relative bg-white border border-dark/10 p-10 md:p-14">
@@ -412,21 +452,22 @@ function OpenApplication() {
                 </p>
                 <p className="mt-4 text-sm text-dark/55">
                   <span className="text-dark/80 font-medium">Email:</span>{" "}
-                  <a href="mailto:careers@ace360degree.com" className="text-brand hover:underline underline-offset-4">
-                    careers@ace360degree.com
+                  <a href="mailto:career@360pl.com" className="text-brand hover:underline underline-offset-4">
+                    career@360pl.com
                   </a>
                 </p>
               </div>
               <div className="md:col-span-5 flex flex-col gap-3">
-                <a
-                  href="mailto:careers@ace360degree.com?subject=Open Application"
-                  className="inline-flex items-center justify-between gap-2 bg-dark px-5 py-3.5 text-sm font-semibold text-canvas hover:bg-brand hover:text-dark transition"
+                <button
+                  type="button"
+                  onClick={() => onOpenApplication("Open Application")}
+                  className="inline-flex items-center justify-between gap-2 rounded-xl bg-dark px-5 py-3.5 text-sm font-semibold text-canvas shadow-sm transition-all duration-300 hover:bg-brand hover:text-dark hover:shadow-[0_12px_28px_rgba(0,0,0,0.22)]"
                 >
                   Submit Resume <span>→</span>
-                </a>
+                </button>
                 <a
-                  href="mailto:careers@ace360degree.com?subject=Talk to HR"
-                  className="inline-flex items-center justify-between gap-2 border border-dark/15 px-5 py-3.5 text-sm font-semibold text-dark hover:border-dark transition"
+                  href="tel:+918452833606"
+                  className="inline-flex items-center justify-between gap-2 rounded-xl border border-dark/15 px-5 py-3.5 text-sm font-semibold text-dark shadow-sm transition-all duration-300 hover:border-dark hover:shadow-[0_12px_28px_rgba(0,0,0,0.16)]"
                 >
                   Talk to HR <span>→</span>
                 </a>
@@ -435,7 +476,155 @@ function OpenApplication() {
           </div>
         </Reveal>
       </div>
-    </section>
+      </section>
+
+      {resumeOpen && (
+        <div
+          className="fixed inset-0 z-[100] grid place-items-center bg-black/55 px-5 backdrop-blur-sm"
+          onMouseDown={(event) => {
+            if (event.target === event.currentTarget) setResumeOpen(false);
+          }}
+        >
+          <div
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="resume-upload-title"
+            className="relative max-h-[90vh] w-full max-w-lg overflow-y-auto rounded-2xl bg-white p-7 shadow-[0_28px_80px_rgba(0,0,0,0.3)] sm:p-9"
+          >
+            <button
+              type="button"
+              onClick={() => setResumeOpen(false)}
+              aria-label="Close resume upload"
+              className="absolute right-5 top-5 grid size-9 place-items-center rounded-full border border-dark/10 text-xl text-dark/60 transition-all duration-300 hover:border-dark/25 hover:text-dark hover:shadow-md"
+            >
+              &times;
+            </button>
+
+            <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-brand">
+              Join Ace360degree
+            </p>
+            <h2 id="resume-upload-title" className="mt-3 pr-10 font-serif text-3xl text-dark">
+              Upload your resume
+            </h2>
+            <p className="mt-2 text-sm font-medium text-brand">Position: {applicationJob}</p>
+
+            <form
+              className="mt-6 space-y-4"
+              onSubmit={(event) => {
+                event.preventDefault();
+                const data = new FormData(event.currentTarget);
+                const body = [
+                  `Name: ${data.get("name")}`,
+                  `Email: ${data.get("email")}`,
+                  `Phone: ${data.get("phone") || "Not provided"}`,
+                  `Position: ${applicationJob}`,
+                  `Resume selected: ${resumeName}`,
+                  "",
+                  "Please attach the selected resume before sending this email.",
+                ].join("\n");
+                window.location.href = `mailto:career@360pl.com?subject=${encodeURIComponent(`Application — ${applicationJob}`)}&body=${encodeURIComponent(body)}`;
+                setResumeOpen(false);
+              }}
+            >
+              <div className="grid gap-4 sm:grid-cols-2">
+                <label className="text-sm font-medium text-dark">
+                  Full name
+                  <input name="name" required autoFocus className="mt-2 w-full rounded-xl border border-dark/15 px-4 py-3 font-normal outline-none transition focus:border-brand" />
+                </label>
+                <label className="text-sm font-medium text-dark">
+                  Email
+                  <input name="email" type="email" required className="mt-2 w-full rounded-xl border border-dark/15 px-4 py-3 font-normal outline-none transition focus:border-brand" />
+                </label>
+              </div>
+              <label className="block text-sm font-medium text-dark">
+                Phone <span className="font-normal text-dark/45">(optional)</span>
+                <input name="phone" type="tel" className="mt-2 w-full rounded-xl border border-dark/15 px-4 py-3 font-normal outline-none transition focus:border-brand" />
+              </label>
+
+              <label className="flex cursor-pointer flex-col items-center justify-center rounded-xl border-2 border-dashed border-dark/15 px-6 py-7 text-center transition-all duration-300 hover:border-brand hover:bg-brand/5 hover:shadow-[0_12px_28px_rgba(0,0,0,0.1)]">
+                <span className="text-sm font-semibold text-dark">{resumeName || "Browse resume file"}</span>
+                <span className="mt-2 text-xs text-dark/45">{resumeName ? "Click to choose a different file" : "PDF, DOC or DOCX"}</span>
+                <input required name="resume" type="file" accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" className="sr-only" onChange={(event) => setResumeName(event.target.files?.[0]?.name ?? "")} />
+              </label>
+              <p className="text-xs leading-relaxed text-dark/50">Submitting opens your email app. Attach the selected résumé before sending.</p>
+              <button type="submit" className="w-full rounded-xl bg-dark px-6 py-3 text-sm font-semibold text-canvas shadow-sm transition-all duration-300 hover:bg-brand hover:text-dark hover:shadow-[0_12px_28px_rgba(0,0,0,0.22)]">
+                Submit Application →
+              </button>
+            </form>
+          </div>
+        </div>
+      )}
+    </>
+  );
+}
+
+function ReferralModal({ job, onClose }: { job: string | null; onClose: () => void }) {
+  const [resumeName, setResumeName] = useState("");
+
+  useEffect(() => {
+    if (!job) return;
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") onClose();
+    };
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [job, onClose]);
+
+  if (!job) return null;
+
+  return (
+    <div
+      className="fixed inset-0 z-[100] grid place-items-center bg-black/55 px-5 backdrop-blur-sm"
+      onMouseDown={(event) => {
+        if (event.target === event.currentTarget) onClose();
+      }}
+    >
+      <div role="dialog" aria-modal="true" aria-labelledby="referral-title" className="relative max-h-[90vh] w-full max-w-2xl overflow-y-auto rounded-2xl bg-white p-7 shadow-[0_28px_80px_rgba(0,0,0,0.3)] sm:p-9">
+        <button type="button" onClick={onClose} aria-label="Close referral form" className="absolute right-5 top-5 grid size-9 place-items-center rounded-full border border-dark/10 text-xl text-dark/60 transition-all duration-300 hover:border-dark/25 hover:text-dark hover:shadow-md">&times;</button>
+        <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-brand">Talent referral</p>
+        <h2 id="referral-title" className="mt-3 pr-10 font-serif text-3xl text-dark">Refer a friend</h2>
+        <p className="mt-2 text-sm font-medium text-brand">Position: {job}</p>
+
+        <form
+          className="mt-6 space-y-4"
+          onSubmit={(event) => {
+            event.preventDefault();
+            const data = new FormData(event.currentTarget);
+            const body = [
+              `Referrer name: ${data.get("referrerName")}`,
+              `Referrer email: ${data.get("referrerEmail")}`,
+              `Candidate name: ${data.get("friendName")}`,
+              `Candidate email: ${data.get("friendEmail")}`,
+              `Candidate phone: ${data.get("friendPhone") || "Not provided"}`,
+              `Position: ${job}`,
+              `Resume selected: ${resumeName}`,
+              `Recommendation: ${data.get("message") || "Not provided"}`,
+              "",
+              "Please attach the selected resume before sending this email.",
+            ].join("\n");
+            window.location.href = `mailto:career@360pl.com?subject=${encodeURIComponent(`Candidate Referral — ${job}`)}&body=${encodeURIComponent(body)}`;
+            onClose();
+          }}
+        >
+          <div className="grid gap-4 sm:grid-cols-2">
+            <label className="text-sm font-medium text-dark">Your name<input name="referrerName" required autoFocus className="mt-2 w-full rounded-xl border border-dark/15 px-4 py-3 font-normal outline-none transition focus:border-brand" /></label>
+            <label className="text-sm font-medium text-dark">Your email<input name="referrerEmail" type="email" required className="mt-2 w-full rounded-xl border border-dark/15 px-4 py-3 font-normal outline-none transition focus:border-brand" /></label>
+            <label className="text-sm font-medium text-dark">Friend's name<input name="friendName" required className="mt-2 w-full rounded-xl border border-dark/15 px-4 py-3 font-normal outline-none transition focus:border-brand" /></label>
+            <label className="text-sm font-medium text-dark">Friend's email<input name="friendEmail" type="email" required className="mt-2 w-full rounded-xl border border-dark/15 px-4 py-3 font-normal outline-none transition focus:border-brand" /></label>
+          </div>
+          <label className="block text-sm font-medium text-dark">Friend's phone <span className="font-normal text-dark/45">(optional)</span><input name="friendPhone" type="tel" className="mt-2 w-full rounded-xl border border-dark/15 px-4 py-3 font-normal outline-none transition focus:border-brand" /></label>
+          <label className="block text-sm font-medium text-dark">Recommendation <span className="font-normal text-dark/45">(optional)</span><textarea name="message" rows={3} className="mt-2 w-full resize-none rounded-xl border border-dark/15 px-4 py-3 font-normal outline-none transition focus:border-brand" /></label>
+          <label className="flex cursor-pointer flex-col items-center justify-center rounded-xl border-2 border-dashed border-dark/15 px-6 py-7 text-center transition-all duration-300 hover:border-brand hover:bg-brand/5 hover:shadow-[0_12px_28px_rgba(0,0,0,0.1)]">
+            <span className="text-sm font-semibold text-dark">{resumeName || "Browse friend's resume"}</span>
+            <span className="mt-2 text-xs text-dark/45">{resumeName ? "Click to choose a different file" : "PDF, DOC or DOCX"}</span>
+            <input required name="resume" type="file" accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" className="sr-only" onChange={(event) => setResumeName(event.target.files?.[0]?.name ?? "")} />
+          </label>
+          <label className="flex items-start gap-3 text-xs leading-relaxed text-dark/60"><input required name="consent" type="checkbox" className="mt-0.5 size-4 accent-black" /><span>I confirm that I have permission to share this candidate's details and résumé.</span></label>
+          <p className="text-xs leading-relaxed text-dark/50">Submitting opens your email app. Attach the selected résumé before sending.</p>
+          <button type="submit" className="w-full rounded-xl bg-dark px-6 py-3 text-sm font-semibold text-canvas shadow-sm transition-all duration-300 hover:bg-brand hover:text-dark hover:shadow-[0_12px_28px_rgba(0,0,0,0.22)]">Submit Referral →</button>
+        </form>
+      </div>
+    </div>
   );
 }
 
@@ -498,7 +687,7 @@ function WhyJoin() {
 }
 
 /* ---------- Final CTA ---------- */
-function FinalCTA() {
+function FinalCTA({ onUploadResume }: { onUploadResume: () => void }) {
   return (
     <section className="bg-canvas py-32">
       <div className="mx-auto max-w-5xl px-6 text-center">
@@ -513,16 +702,17 @@ function FinalCTA() {
           <div className="mt-10 flex flex-wrap justify-center gap-4">
             <a
               href="#openings"
-              className="inline-flex items-center gap-2 bg-dark px-6 py-3.5 text-sm font-semibold text-canvas hover:bg-brand hover:text-dark transition"
+              className="inline-flex items-center gap-2 rounded-xl bg-dark px-6 py-3.5 text-sm font-semibold text-canvas shadow-sm transition-all duration-300 hover:bg-brand hover:text-dark hover:shadow-[0_12px_28px_rgba(0,0,0,0.22)]"
             >
               View Open Positions →
             </a>
-            <a
-              href="mailto:careers@ace360degree.com?subject=Send Your CV"
-              className="inline-flex items-center gap-2 border border-dark/15 px-6 py-3.5 text-sm font-semibold text-dark hover:border-dark transition"
+            <button
+              type="button"
+              onClick={onUploadResume}
+              className="inline-flex items-center gap-2 rounded-xl border border-dark/15 px-6 py-3.5 text-sm font-semibold text-dark shadow-sm transition-all duration-300 hover:border-dark hover:shadow-[0_12px_28px_rgba(0,0,0,0.16)]"
             >
               Send Your CV →
-            </a>
+            </button>
           </div>
         </Reveal>
       </div>
@@ -531,7 +721,7 @@ function FinalCTA() {
 }
 
 /* ---------- Sticky Apply ---------- */
-function StickyApply() {
+function StickyApply({ onUploadResume }: { onUploadResume: () => void }) {
   const [show, setShow] = useState(false);
   useEffect(() => {
     const onScroll = () => setShow(window.scrollY > 800);
@@ -540,20 +730,29 @@ function StickyApply() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
   return (
-    <a
-      href="#openings"
-      className={`fixed bottom-6 right-6 z-40 inline-flex items-center gap-2 bg-brand text-dark px-5 py-3 text-sm font-semibold shadow-lg shadow-dark/20 transition-all ${
+    <button
+      type="button"
+      onClick={onUploadResume}
+      className={`fixed bottom-24 right-6 z-40 inline-flex items-center gap-2 rounded-xl bg-brand px-5 py-3 text-sm font-semibold text-dark shadow-lg shadow-dark/20 transition-all duration-300 hover:shadow-[0_14px_32px_rgba(0,0,0,0.3)] ${
         show ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0 pointer-events-none"
       }`}
     >
       <span className="size-2 rounded-full bg-dark animate-pulse" />
       Apply Now
-    </a>
+    </button>
   );
 }
 
 /* ---------- Page ---------- */
 function CareersPage() {
+  const [resumeOpen, setResumeOpen] = useState(false);
+  const [applicationJob, setApplicationJob] = useState("Open Application");
+  const [referralJob, setReferralJob] = useState<string | null>(null);
+  const openApplication = (job: string) => {
+    setApplicationJob(job);
+    setResumeOpen(true);
+  };
+
   return (
     <div className="min-h-screen bg-canvas text-dark">
       <SiteHeader />
@@ -561,14 +760,20 @@ function CareersPage() {
         <Hero />
         <Culture />
         <LifeAtAce />
-        <Openings />
-        <OpenApplication />
+        <Openings onApply={openApplication} onRefer={setReferralJob} />
+        <OpenApplication
+          resumeOpen={resumeOpen}
+          setResumeOpen={setResumeOpen}
+          applicationJob={applicationJob}
+          onOpenApplication={openApplication}
+        />
         <Growth />
         <WhyJoin />
-        <FinalCTA />
+        <FinalCTA onUploadResume={() => openApplication("Open Application")} />
       </main>
       <SiteFooter />
-      <StickyApply />
+      <StickyApply onUploadResume={() => openApplication("Open Application")} />
+      <ReferralModal job={referralJob} onClose={() => setReferralJob(null)} />
     </div>
   );
 }

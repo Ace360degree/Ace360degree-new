@@ -216,16 +216,40 @@ export function SiteFooter() {
         <div className="relative z-10 flex flex-col md:flex-row items-center justify-between pb-8 pt-4 border-b border-white/10 mt-4 text-xs uppercase tracking-widest text-white/40">
           <p>© 2026 ACE360DEGREE. ALL RIGHTS RESERVED.</p>
           <div className="flex flex-wrap items-center justify-center gap-3 mt-6 md:mt-0">
-            <a aria-label="LinkedIn" className="size-10 rounded-full border border-white/20 grid place-items-center text-white/60 hover:bg-[#FFA20B] hover:text-[#181818] hover:border-[#FFA20B] transition cursor-pointer">
+            <a
+              aria-label="LinkedIn"
+              href="https://www.linkedin.com/company/ace360degree---business-growth-digital-transformation-agency/posts/?feedView=all"
+              target="_blank"
+              rel="noreferrer"
+              className="size-10 rounded-full border border-white/20 grid place-items-center text-white/60 hover:bg-[#FFA20B] hover:text-[#181818] hover:border-[#FFA20B] transition cursor-pointer"
+            >
               <Linkedin className="size-4" />
             </a>
-            <a aria-label="Instagram" className="size-10 rounded-full border border-white/20 grid place-items-center text-white/60 hover:bg-[#FFA20B] hover:text-[#181818] hover:border-[#FFA20B] transition cursor-pointer">
+            <a
+              aria-label="Instagram"
+              href="https://www.instagram.com/ace360degree/"
+              target="_blank"
+              rel="noreferrer"
+              className="size-10 rounded-full border border-white/20 grid place-items-center text-white/60 hover:bg-[#FFA20B] hover:text-[#181818] hover:border-[#FFA20B] transition cursor-pointer"
+            >
               <Instagram className="size-4" />
             </a>
-            <a aria-label="YouTube" className="size-10 rounded-full border border-white/20 grid place-items-center text-white/60 hover:bg-[#FFA20B] hover:text-[#181818] hover:border-[#FFA20B] transition cursor-pointer">
+            <a
+              aria-label="YouTube"
+              href="https://www.youtube.com/@ace360degree"
+              target="_blank"
+              rel="noreferrer"
+              className="size-10 rounded-full border border-white/20 grid place-items-center text-white/60 hover:bg-[#FFA20B] hover:text-[#181818] hover:border-[#FFA20B] transition cursor-pointer"
+            >
               <Youtube className="size-4" />
             </a>
-            <a aria-label="Facebook" className="size-10 rounded-full border border-white/20 grid place-items-center text-white/60 hover:bg-[#FFA20B] hover:text-[#181818] hover:border-[#FFA20B] transition cursor-pointer">
+            <a
+              aria-label="Facebook"
+              href="https://www.facebook.com/ace360degree/"
+              target="_blank"
+              rel="noreferrer"
+              className="size-10 rounded-full border border-white/20 grid place-items-center text-white/60 hover:bg-[#FFA20B] hover:text-[#181818] hover:border-[#FFA20B] transition cursor-pointer"
+            >
               <Facebook className="size-4" />
             </a>
             <a aria-label="X" className="size-10 rounded-full border border-white/20 grid place-items-center text-white/60 hover:bg-[#FFA20B] hover:text-[#181818] hover:border-[#FFA20B] transition cursor-pointer">

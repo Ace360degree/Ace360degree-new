@@ -318,13 +318,13 @@ function BrandStrategyPage() {
             <div className="mt-9 flex flex-wrap gap-3">
               <Link
                 to="/contact"
-                className="inline-flex items-center gap-2 bg-dark text-canvas px-5 py-3 text-sm font-semibold hover:bg-dark/90 transition"
+                className="inline-flex items-center gap-2 rounded-2xl bg-dark px-5 py-3 text-sm font-semibold text-canvas shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-dark/90 hover:shadow-[0_18px_35px_-18px_rgba(0,0,0,0.35)]"
               >
                 Define My Brand Strategy <span aria-hidden>→</span>
               </Link>
               <Link
                 to="/contact"
-                className="inline-flex items-center gap-2 border border-dark/20 px-5 py-3 text-sm font-semibold hover:border-dark transition"
+                className="inline-flex items-center gap-2 rounded-2xl border border-dark/20 bg-white px-5 py-3 text-sm font-semibold text-dark shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-dark hover:shadow-[0_18px_35px_-18px_rgba(0,0,0,0.18)]"
               >
                 Book Brand Consultation <span aria-hidden>→</span>
               </Link>
@@ -661,13 +661,13 @@ function BrandStrategyPage() {
           <div className="mt-10 flex flex-wrap gap-3 justify-center">
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 bg-brand text-dark px-6 py-3.5 text-sm font-semibold hover:brightness-95 transition"
+              className="inline-flex items-center gap-2 rounded-2xl bg-brand px-6 py-3.5 text-sm font-semibold text-dark shadow-[0_10px_24px_rgba(0,0,0,0.22)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:brightness-95 hover:shadow-[0_20px_42px_-18px_rgba(0,0,0,0.45)]"
             >
               Book Brand Consultation <span aria-hidden>→</span>
             </Link>
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 border border-canvas/30 px-6 py-3.5 text-sm font-semibold hover:border-canvas transition"
+              className="inline-flex items-center gap-2 rounded-2xl border border-canvas/30 px-6 py-3.5 text-sm font-semibold text-canvas shadow-[0_10px_24px_rgba(0,0,0,0.18)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-canvas hover:shadow-[0_20px_42px_-18px_rgba(0,0,0,0.4)]"
             >
               Request Brand Strategy Proposal <span aria-hidden>→</span>
             </Link>

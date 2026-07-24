@@ -429,13 +429,13 @@ function IndustriesPage() {
                 <div className="mt-9 flex flex-wrap gap-3">
                   <a
                     href="#industries"
-                    className="inline-flex items-center gap-2 bg-[#FFB330] hover:bg-[#E09010] text-[#181818] px-5 py-3 text-sm font-semibold rounded-2xl transition-all duration-200 shadow-sm hover:shadow-md"
+                    className="inline-flex items-center gap-2 rounded-2xl bg-[#FFB330] px-5 py-3 text-sm font-semibold text-[#181818] shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-[#E09010] hover:shadow-[0_18px_35px_-18px_rgba(0,0,0,0.45)]"
                   >
                     Explore Industry Solutions <ArrowRight className="size-4" />
                   </a>
                   <Link
                     to="/contact"
-                    className="inline-flex items-center gap-2 px-5 py-3 text-sm font-semibold text-dark hover:text-brand transition"
+                    className="inline-flex items-center gap-2 rounded-2xl border border-dark/15 bg-white px-5 py-3 text-sm font-semibold text-dark shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-dark/25 hover:text-brand hover:shadow-[0_18px_35px_-18px_rgba(0,0,0,0.35)]"
                   >
                     Book Discovery Call <ArrowUpRight className="size-4" />
                   </Link>
@@ -835,13 +835,13 @@ function IndustriesPage() {
             <div className="mt-10 flex flex-wrap justify-center gap-3">
               <Link
                 to="/contact"
-                className="inline-flex items-center gap-2 bg-brand text-dark px-6 py-3 text-sm font-semibold hover:brightness-95 transition"
+                className="inline-flex items-center gap-2 rounded-2xl bg-brand px-6 py-3 text-sm font-semibold text-dark shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:brightness-95 hover:shadow-[0_18px_35px_-18px_rgba(0,0,0,0.35)]"
               >
                 Book Discovery Call <ArrowRight className="size-4" />
               </Link>
               <Link
                 to="/portfolio"
-                className="inline-flex items-center gap-2 border border-canvas/25 text-canvas px-6 py-3 text-sm font-semibold hover:bg-canvas hover:text-dark transition"
+                className="inline-flex items-center gap-2 rounded-2xl border border-canvas/25 px-6 py-3 text-sm font-semibold text-canvas shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-canvas hover:text-dark hover:shadow-[0_18px_35px_-18px_rgba(255,255,255,0.25)]"
               >
                 View Success Stories <ArrowUpRight className="size-4" />
               </Link>

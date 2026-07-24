@@ -127,7 +127,7 @@ function OpusDentalCaseStudyPage() {
           </h2>
           <Link
             to="/contact"
-            className="mt-8 inline-flex items-center gap-2 bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition hover:brightness-95"
+            className="mt-8 inline-flex items-center gap-2 rounded-2xl bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:brightness-95 hover:shadow-[0_18px_35px_-18px_rgba(0,0,0,0.28)]"
           >
             Book Discovery Call <ArrowRight className="h-4 w-4" />
           </Link>

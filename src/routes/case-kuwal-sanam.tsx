@@ -381,13 +381,13 @@ function KSACaseStudyPage() {
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
                 to="/contact"
-                className="inline-flex items-center gap-2 rounded-full bg-primary text-primary-foreground px-6 py-3 text-sm font-medium hover:opacity-90 transition"
+                className="inline-flex items-center gap-2 rounded-2xl bg-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:opacity-90 hover:shadow-[0_18px_35px_-18px_rgba(0,0,0,0.28)]"
               >
                 Start Your Project <ArrowRight className="h-4 w-4" />
               </Link>
               <Link
                 to="/portfolio"
-                className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-6 py-3 text-sm font-medium hover:bg-muted transition"
+                className="inline-flex items-center gap-2 rounded-2xl border border-border bg-background px-6 py-3 text-sm font-medium text-foreground shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-muted hover:shadow-[0_18px_35px_-18px_rgba(0,0,0,0.18)]"
               >
                 View More Case Studies <ArrowRight className="h-4 w-4" />
               </Link>

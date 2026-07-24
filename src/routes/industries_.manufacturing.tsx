@@ -362,13 +362,13 @@ function ManufacturingPage() {
                 <div className="mt-10 flex flex-wrap gap-3">
                   <Link
                     to="/contact"
-                    className="inline-flex items-center gap-2 rounded-full bg-foreground px-6 py-3 text-sm font-medium text-background transition hover:bg-foreground/90"
+                  className="inline-flex items-center gap-2 rounded-full bg-foreground px-6 py-3 text-sm font-medium text-background shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-foreground/90 hover:shadow-[0_18px_35px_-18px_rgba(0,0,0,0.35)]"
                   >
                     Book Discovery Call <ArrowRight className="h-4 w-4" />
                   </Link>
                   <Link
                     to="/portfolio"
-                    className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-6 py-3 text-sm font-medium text-foreground transition hover:bg-muted"
+                  className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-6 py-3 text-sm font-medium text-foreground shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-muted hover:shadow-[0_18px_35px_-18px_rgba(0,0,0,0.22)]"
                   >
                     View Manufacturing Work <ArrowUpRight className="h-4 w-4" />
                   </Link>
@@ -833,7 +833,7 @@ function ManufacturingPage() {
       <div className="mt-10 flex flex-wrap justify-center gap-3">
         <Link
           to="/contact"
-          className="inline-flex items-center gap-2 rounded-full bg-foreground px-7 py-3.5 text-sm font-medium text-background transition-all duration-300 hover:-translate-y-0.5 hover:bg-foreground/90"
+          className="inline-flex items-center gap-2 rounded-full bg-foreground px-7 py-3.5 text-sm font-medium text-background shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-foreground/90 hover:shadow-[0_18px_35px_-18px_rgba(0,0,0,0.35)]"
         >
           Book Discovery Call
           <ArrowRight className="h-4 w-4" />
@@ -841,7 +841,7 @@ function ManufacturingPage() {
 
         <Link
           to="/portfolio"
-          className="inline-flex items-center gap-2 rounded-full border border-foreground/10 bg-[#FCFCFA]/80 px-7 py-3.5 text-sm font-medium text-foreground transition-all duration-300 hover:-translate-y-0.5 hover:border-foreground/20 hover:bg-white"
+          className="inline-flex items-center gap-2 rounded-full border border-foreground/10 bg-[#FCFCFA]/80 px-7 py-3.5 text-sm font-medium text-foreground shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-foreground/20 hover:bg-white hover:shadow-[0_18px_35px_-18px_rgba(0,0,0,0.22)]"
         >
           View Success Stories
           <ArrowUpRight className="h-4 w-4" />

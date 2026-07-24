@@ -129,7 +129,7 @@ function Hero() {
             </p>
             <a
               href="/contact"
-              className="mt-10 inline-flex items-center gap-3 bg-dark text-canvas px-6 py-3.5 text-sm font-semibold hover:bg-brand hover:text-dark transition"
+              className="mt-10 inline-flex items-center gap-3 rounded-xl bg-dark text-canvas px-6 py-3.5 text-sm font-semibold shadow-sm transition-all duration-300 hover:bg-brand hover:text-dark hover:shadow-[0_12px_28px_rgba(0,0,0,0.22)]"
             >
               Schedule Discovery Call
               <span aria-hidden>→</span>
@@ -243,15 +243,15 @@ function Founder() {
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <a
               href="/contact"
-              className="inline-flex items-center gap-3 bg-dark text-canvas px-6 py-3.5 text-sm font-semibold hover:bg-brand hover:text-dark transition"
+              className="inline-flex items-center gap-3 rounded-xl bg-dark text-canvas px-6 py-3.5 text-sm font-semibold shadow-sm transition-all duration-300 hover:bg-brand hover:text-dark hover:shadow-[0_12px_28px_rgba(0,0,0,0.22)]"
             >
               Book Discovery Call <span aria-hidden>→</span>
             </a>
             <a
-              href="https://www.linkedin.com/"
+              href="https://www.linkedin.com/company/ace360degree---business-growth-digital-transformation-agency/posts/?feedView=all"
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-3 border border-dark/15 px-6 py-3.5 text-sm font-semibold hover:border-brand hover:text-brand transition"
+              className="inline-flex items-center gap-3 rounded-xl border border-dark/15 px-6 py-3.5 text-sm font-semibold shadow-sm transition-all duration-300 hover:border-brand hover:text-brand hover:shadow-[0_12px_28px_rgba(0,0,0,0.16)]"
             >
               Connect on LinkedIn
             </a>
@@ -663,7 +663,7 @@ function Team() {
             </p>
             <a
               href="/careers"
-              className="mt-6 inline-flex items-center gap-3 border-b border-dark pb-1 text-sm font-semibold hover:text-brand hover:border-brand transition"
+              className="mt-6 inline-flex items-center gap-3 rounded-xl border border-dark/15 px-6 py-3.5 text-sm font-semibold shadow-sm transition-all duration-300 hover:border-brand hover:text-brand hover:shadow-[0_12px_28px_rgba(0,0,0,0.16)]"
             >
               Join Our Team <span aria-hidden>→</span>
             </a>
@@ -716,13 +716,13 @@ function FinalCta() {
               <div className="mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row">
                 <a
                   href="/contact"
-                  className="inline-flex h-12 items-center justify-center rounded-[10px] bg-[#ffbe2e] px-7 text-[13px] font-semibold text-[#1a1207] shadow-[0_10px_24px_rgba(0,0,0,0.26)] transition hover:brightness-95"
+                  className="inline-flex h-12 items-center justify-center rounded-xl bg-[#ffbe2e] px-7 text-[13px] font-semibold text-[#1a1207] shadow-[0_10px_24px_rgba(0,0,0,0.26)] transition-all duration-300 hover:brightness-95 hover:shadow-[0_16px_34px_rgba(0,0,0,0.38)]"
                 >
                   Book Discovery Call <span aria-hidden className="ml-2">&rarr;</span>
                 </a>
                 <a
                   href="/contact"
-                  className="inline-flex h-12 items-center justify-center rounded-[10px] bg-white px-6 text-[13px] font-semibold text-[#101010] shadow-[0_10px_24px_rgba(0,0,0,0.18)] transition hover:bg-white/95"
+                  className="inline-flex h-12 items-center justify-center rounded-xl bg-white px-6 text-[13px] font-semibold text-[#101010] shadow-[0_10px_24px_rgba(0,0,0,0.18)] transition-all duration-300 hover:bg-white/95 hover:shadow-[0_16px_34px_rgba(0,0,0,0.32)]"
                 >
                   Start A Project
                 </a>
