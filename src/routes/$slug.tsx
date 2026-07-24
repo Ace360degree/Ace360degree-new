@@ -30,6 +30,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { getLocationPageBySlug, getLocationChildPages, stripHtml, getFeaturedImage } from "@/lib/wp";
+import { BlogFAQ } from "@/components/blog-faq";
 
 import designImg from "@/assets/svc-website-us-design.jpg";
 import processImg from "@/assets/svc-website-us-processy1.jpg";
@@ -473,10 +474,48 @@ function ServiceInnerLayout({ page }: { page: any }) {
     formattedTitle = formattedTitle.replace(regex, `<span class="text-brand italic block font-normal mt-2">$1</span>`);
   }
 
+  let rawContent = page.content.rendered || "";
+  const parsedFaqs: { question: string; answerHtml: string }[] = [];
+  
+  // Extract FAQ section dynamically
+  const faqSplitRegex = /<(h[234])[^>]*>.*?FAQ.*?<\/\1>/i;
+  const splitMatch = rawContent.match(faqSplitRegex);
+  
+  if (splitMatch && splitMatch.index !== undefined) {
+    const faqStartIndex = splitMatch.index;
+    const faqSectionHtml = rawContent.substring(faqStartIndex);
+    rawContent = rawContent.substring(0, faqStartIndex);
+    
+    const faqContent = faqSectionHtml.replace(faqSplitRegex, '');
+    const tokenRegex = /(?:>|\b|;|\s|^)(Q|A)\d*\s*[:.]/gi;
+    const matches = [...faqContent.matchAll(tokenRegex)];
+    
+    if (matches.length > 0) {
+      for (let m = 0; m < matches.length; m++) {
+         const type = matches[m][1].toUpperCase();
+         if (type === 'Q') {
+            const startQ = matches[m].index + matches[m][0].length;
+            let endQ = faqContent.length;
+            if (m + 1 < matches.length) endQ = matches[m+1].index;
+            let qText = faqContent.substring(startQ, endQ).replace(/<[^>]*$/g, '').replace(/<[^>]+>/g, '').trim();
+            if (m + 1 < matches.length && matches[m+1][1].toUpperCase() === 'A') {
+               const startA = matches[m+1].index + matches[m+1][0].length;
+               let endA = faqContent.length;
+               if (m + 2 < matches.length) endA = matches[m+2].index;
+               const aHtml = faqContent.substring(startA, endA).trim();
+               if (qText && aHtml) {
+                  parsedFaqs.push({ question: qText, answerHtml: aHtml });
+               }
+            }
+         }
+      }
+    }
+  }
+
   // Split the entire content by separators to support inline CTAs anywhere on the page
   // Even indexes (0, 2, 4) will be standard content (Hero + Images).
   // Odd indexes (1, 3, 5) will be rendered as Dark CTA sections.
-  const contentChunks = (page.content.rendered || "").split(/(?:<hr[^>]*>|<p[^>]*>\s*section\s*<\/p>)/i);
+  const contentChunks = rawContent.split(/(?:<hr[^>]*>|<p[^>]*>\s*section\s*<\/p>)/i);
 
   // Parse the very first chunk to extract the Hero and SEO text
   const firstChunkParts = contentChunks[0].split(/(<figure[^>]*>[\s\S]*?<\/figure>|<img[^>]*>)/i);
@@ -1066,6 +1105,14 @@ function ServiceInnerLayout({ page }: { page: any }) {
 
 
       {/* FINAL CTA REMOVED (now handled dynamically via WordPress content chunks) */}
+      
+      {parsedFaqs.length > 0 && (
+        <section className="py-24 bg-canvas text-dark border-t border-dark/5">
+          <div className="mx-auto max-w-5xl px-6">
+            <BlogFAQ faqs={parsedFaqs} />
+          </div>
+        </section>
+      )}
       <SiteFooter />
     </div>
   );
