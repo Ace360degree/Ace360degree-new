@@ -14,8 +14,6 @@ type PolicyPageProps = {
   updatedLabel?: string;
   updatedValue?: string;
   sections: PolicySection[];
-  calloutTitle?: string;
-  calloutText?: string;
 };
 
 export function PolicyPage({
@@ -24,8 +22,6 @@ export function PolicyPage({
   updatedLabel = "Last updated",
   updatedValue = "July 16, 2026",
   sections,
-  calloutTitle = "Need a tailored version?",
-  calloutText = "Share the final policy copy and we will drop it into this page structure without changing the shared header and footer layout.",
 }: PolicyPageProps) {
   return (
     <main className="bg-canvas font-sans text-dark">
@@ -82,19 +78,6 @@ export function PolicyPage({
                 ) : null}
               </article>
             ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="pb-20">
-        <div className="mx-auto max-w-6xl px-6">
-          <div className="rounded-3xl bg-dark px-8 py-10 text-canvas md:px-12 md:py-12">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-brand">
-              {calloutTitle}
-            </p>
-            <p className="mt-4 max-w-3xl text-lg leading-relaxed text-canvas/75">
-              {calloutText}
-            </p>
           </div>
         </div>
       </section>
