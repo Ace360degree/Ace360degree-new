@@ -362,21 +362,13 @@ function ManufacturingPage() {
                 <div className="mt-10 flex flex-wrap gap-3">
                   <Link
                     to="/contact"
-<<<<<<< Updated upstream
-                  className="inline-flex items-center gap-2 rounded-full bg-foreground px-6 py-3 text-sm font-medium text-background shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-foreground/90 hover:shadow-[0_18px_35px_-18px_rgba(0,0,0,0.35)]"
-=======
                     className="inline-flex items-center gap-2 rounded-full bg-foreground px-6 py-3 text-sm font-medium text-background shadow-sm transition-all duration-300 ease-out hover:bg-foreground/90 hover:shadow-[0_12px_28px_rgba(0,0,0,0.22)]"
->>>>>>> Stashed changes
                   >
                     Book Discovery Call <ArrowRight className="h-4 w-4" />
                   </Link>
                   <Link
                     to="/portfolio"
-<<<<<<< Updated upstream
-                  className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-6 py-3 text-sm font-medium text-foreground shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-muted hover:shadow-[0_18px_35px_-18px_rgba(0,0,0,0.22)]"
-=======
                     className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-6 py-3 text-sm font-medium text-foreground shadow-sm transition-all duration-300 ease-out hover:bg-muted hover:shadow-[0_12px_28px_rgba(0,0,0,0.16)]"
->>>>>>> Stashed changes
                   >
                     View Manufacturing Work <ArrowUpRight className="h-4 w-4" />
                   </Link>
@@ -841,11 +833,7 @@ function ManufacturingPage() {
       <div className="mt-10 flex flex-wrap justify-center gap-3">
         <Link
           to="/contact"
-<<<<<<< Updated upstream
-          className="inline-flex items-center gap-2 rounded-full bg-foreground px-7 py-3.5 text-sm font-medium text-background shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-foreground/90 hover:shadow-[0_18px_35px_-18px_rgba(0,0,0,0.35)]"
-=======
           className="inline-flex items-center gap-2 rounded-full bg-foreground px-7 py-3.5 text-sm font-medium text-background shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-foreground/90 hover:shadow-[0_14px_34px_rgba(242,164,0,0.32)]"
->>>>>>> Stashed changes
         >
           Book Discovery Call
           <ArrowRight className="h-4 w-4" />
@@ -853,11 +841,7 @@ function ManufacturingPage() {
 
         <Link
           to="/portfolio"
-<<<<<<< Updated upstream
-          className="inline-flex items-center gap-2 rounded-full border border-foreground/10 bg-[#FCFCFA]/80 px-7 py-3.5 text-sm font-medium text-foreground shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-foreground/20 hover:bg-white hover:shadow-[0_18px_35px_-18px_rgba(0,0,0,0.22)]"
-=======
           className="inline-flex items-center gap-2 rounded-full border border-foreground/10 bg-[#FCFCFA]/80 px-7 py-3.5 text-sm font-medium text-foreground shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-foreground/20 hover:bg-white hover:shadow-[0_14px_34px_rgba(255,255,255,0.18)]"
->>>>>>> Stashed changes
         >
           View Success Stories
           <ArrowUpRight className="h-4 w-4" />

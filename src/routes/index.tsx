@@ -770,26 +770,16 @@ function Portfolio() {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-<<<<<<< Updated upstream
-          {projects.map((p, i) => (
-            <FadeIn key={p.name} delay={i * 100} className="group cursor-pointer">
-              <div className="overflow-hidden">
-=======
           {projects.map((p) => (
             <article key={p.name} className="group cursor-pointer">
               <div className="overflow-hidden bg-white p-3 shadow-sm">
->>>>>>> Stashed changes
                 <img
                   src={p.img}
                   alt={p.name}
                   width={800}
                   height={1000}
                   loading="lazy"
-<<<<<<< Updated upstream
-                  className="w-full aspect-[4/5] object-cover object-top group-hover:scale-[1.03] transition-transform duration-700"
-=======
                   className="w-full aspect-[4/5] object-contain group-hover:scale-[1.03] transition-transform duration-700"
->>>>>>> Stashed changes
                 />
               </div>
               <div className="mt-5 flex items-start justify-between gap-4">
@@ -801,7 +791,7 @@ function Portfolio() {
                   Case Study
                 </span>
               </div>
-            </FadeIn>
+            </article>
           ))}
         </div>
       </div>

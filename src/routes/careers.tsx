@@ -733,11 +733,7 @@ function StickyApply({ onUploadResume }: { onUploadResume: () => void }) {
     <button
       type="button"
       onClick={onUploadResume}
-<<<<<<< Updated upstream
-      className={`fixed bottom-24 right-6 z-40 inline-flex items-center gap-2 rounded-xl bg-brand px-5 py-3 text-sm font-semibold text-dark shadow-lg shadow-dark/20 transition-all duration-300 hover:shadow-[0_14px_32px_rgba(0,0,0,0.3)] ${
-=======
       className={`fixed bottom-6 right-6 z-40 inline-flex items-center gap-2 rounded-xl bg-brand text-dark px-5 py-3 text-sm font-semibold shadow-lg shadow-dark/20 transition-all duration-300 hover:shadow-[0_14px_32px_rgba(0,0,0,0.3)] ${
->>>>>>> Stashed changes
         show ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0 pointer-events-none"
       }`}
     >
