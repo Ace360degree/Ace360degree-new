@@ -29,7 +29,13 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { getLocationPageBySlug, getLocationChildPages, stripHtml, getFeaturedImage } from "@/lib/wp";
+import {
+  getLocationPageBySlug,
+  getLocationChildPages,
+  getLocationPages,
+  stripHtml,
+  getFeaturedImage,
+} from "@/lib/wp";
 
 import designImg from "@/assets/svc-website-us-design.jpg";
 import processImg from "@/assets/svc-website-us-processy1.jpg";
@@ -92,14 +98,24 @@ const countryDisplayNames: Record<string, string> = {
   australia: "Australia",
 };
 
-const countryCities: Record<string, string[]> = {
-  india: ["Mumbai", "Delhi", "Bangalore", "Hyderabad", "Chennai", "Pune"],
-  uae: ["Dubai", "Abu Dhabi", "Sharjah", "Ajman", "Ras Al Khaimah"],
-  uk: ["London", "Manchester", "Birmingham", "Edinburgh", "Glasgow"],
-  "united-states": ["New York", "Los Angeles", "Chicago", "Houston", "Washington, D.C."],
-  canada: ["Toronto", "Vancouver", "Montreal", "Calgary", "Ottawa"],
-  australia: ["Sydney", "Melbourne", "Brisbane", "Perth", "Adelaide"],
-};
+function getCityParentCandidates(countrySlug: string) {
+  const countryName = countryDisplayNames[countrySlug] || countrySlug;
+  return [
+    `${countrySlug}-cities`,
+    `${countrySlug}-city`,
+    `${countryName} Cities`,
+    `${countryName} City`,
+  ].map((value) => value.toLowerCase());
+}
+
+function findCityParentPage(countrySlug: string, locationPages: any[]) {
+  const candidates = getCityParentCandidates(countrySlug);
+  return locationPages.find((entry) => {
+    const slug = String(entry.slug || "").toLowerCase();
+    const title = stripHtml(entry.title?.rendered || "").toLowerCase();
+    return candidates.includes(slug) || candidates.includes(title);
+  }) || null;
+}
 
 
 
@@ -107,7 +123,12 @@ const countryCities: Record<string, string[]> = {
 
 export const Route = createFileRoute("/$slug")({
   loader: async ({ params: { slug } }) => {
-    let page = await getLocationPageBySlug(slug);
+    const [pageResult, locationPages] = await Promise.all([
+      getLocationPageBySlug(slug),
+      getLocationPages(),
+    ]);
+
+    let page = pageResult;
     
     if (!page) {
       if (!isValidCountrySlug(slug)) {
@@ -130,13 +151,23 @@ export const Route = createFileRoute("/$slug")({
     }
 
     let childPages: any[] = [];
+    let cityPages: any[] = [];
+    let cityParentTitle = "";
     if (page.id !== 0 && allowedCountries.includes(slug)) {
       childPages = await getLocationChildPages(page.id);
+
+      const cityParentPage = findCityParentPage(slug, locationPages);
+      if (cityParentPage) {
+        cityParentTitle = stripHtml(cityParentPage.title.rendered);
+        cityPages = await getLocationChildPages(cityParentPage.id);
+      }
     }
 
     return {
       page,
       childPages,
+      cityPages,
+      cityParentTitle,
       imageUrl: getFeaturedImage(page, ""),
     };
   },
@@ -353,19 +384,40 @@ function HeroForm() {
 }
 
 export function DynamicCountryPage() {
-  const { page, childPages } = Route.useLoaderData();
+  const { page, childPages, cityPages, cityParentTitle } = Route.useLoaderData();
   const slug = page.slug;
 
   if (allowedCountries.includes(slug)) {
-    return <CountryIndexLayout page={page} countrySlug={slug} childPages={childPages} />;
+    return (
+      <CountryIndexLayout
+        page={page}
+        countrySlug={slug}
+        childPages={childPages}
+        cityPages={cityPages}
+        cityParentTitle={cityParentTitle}
+      />
+    );
   }
 
   return <ServiceInnerLayout page={page} />;
 }
 
-function CountryIndexLayout({ page, countrySlug, childPages }: { page: any; countrySlug: string; childPages: any[] }) {
+function CountryIndexLayout({
+  page,
+  countrySlug,
+  childPages,
+  cityPages,
+  cityParentTitle,
+}: {
+  page: any;
+  countrySlug: string;
+  childPages: any[];
+  cityPages: any[];
+  cityParentTitle: string;
+}) {
   const countryName = countryDisplayNames[countrySlug] || "Country";
-  const cities = countryCities[countrySlug] || [];
+  const cities = cityPages;
+  const citySectionTitle = cityParentTitle || `City In ${countryName}`;
 
   return (
     <div className="min-h-screen bg-[#101010] text-canvas font-sans">
@@ -425,15 +477,21 @@ function CountryIndexLayout({ page, countrySlug, childPages }: { page: any; coun
       {cities.length > 0 && (
         <section className="py-24 bg-dark">
           <div className="mx-auto max-w-6xl px-6">
-            <h2 className="text-center font-serif text-3xl md:text-4xl mb-12 text-white">City In {countryName}</h2>
+            <h2 className="text-center font-serif text-3xl md:text-4xl mb-12 text-white">
+              {citySectionTitle}
+            </h2>
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 justify-center">
               {cities.map((city) => (
-                <div
-                  key={city}
+                <Link
+                  key={city.slug}
+                  to={`/${city.slug}`}
+                  aria-label={`Open ${stripHtml(city.title.rendered)}`}
                   className="rounded-[20px] border border-white/10 bg-[#161616] px-6 py-6 text-center transition hover:bg-white/10"
                 >
-                  <span className="font-medium text-[15px] text-white/90">{city}</span>
-                </div>
+                  <span className="font-medium text-[15px] text-white/90">
+                    {stripHtml(city.title.rendered)}
+                  </span>
+                </Link>
               ))}
             </div>
           </div>
