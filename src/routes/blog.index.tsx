@@ -72,13 +72,21 @@ function BlogPage() {
               <div className="mt-10 flex flex-wrap gap-3">
                 <a
                   href="#latest"
+<<<<<<< Updated upstream
                   className="inline-flex items-center gap-2 rounded-2xl bg-dark px-6 py-3 text-sm font-semibold text-canvas shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-brand hover:text-dark hover:shadow-[0_18px_35px_-18px_rgba(0,0,0,0.35)]"
+=======
+                  className="inline-flex items-center gap-2 rounded-2xl bg-dark px-6 py-3 text-sm font-semibold text-canvas shadow-sm transition-all duration-300 ease-out hover:bg-brand hover:text-dark hover:shadow-[0_12px_28px_rgba(0,0,0,0.22)]"
+>>>>>>> Stashed changes
                 >
                   Explore Insights <span aria-hidden="true">&rarr;</span>
                 </a>
                 <a
                   href="#newsletter"
+<<<<<<< Updated upstream
                   className="inline-flex items-center gap-2 rounded-2xl border border-dark/15 px-6 py-3 text-sm font-semibold shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-dark hover:shadow-[0_18px_35px_-18px_rgba(0,0,0,0.2)]"
+=======
+                  className="inline-flex items-center gap-2 rounded-2xl border border-dark/15 px-6 py-3 text-sm font-semibold shadow-sm transition-all duration-300 ease-out hover:border-dark hover:shadow-[0_12px_28px_rgba(0,0,0,0.16)]"
+>>>>>>> Stashed changes
                 >
                   Subscribe <span aria-hidden="true">&rarr;</span>
                 </a>
@@ -253,13 +261,22 @@ function BlogPage() {
 
       <SiteFooter />
 
+<<<<<<< Updated upstream
       <div className="fixed bottom-24 right-6 z-40 hidden flex-col items-end gap-3 md:flex">
         <a className="group inline-flex w-fit shrink-0 cursor-pointer whitespace-nowrap items-center gap-2 rounded-2xl bg-dark px-4 py-3 text-xs font-semibold text-canvas shadow-lg transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-brand hover:text-dark hover:shadow-[0_18px_35px_-18px_rgba(0,0,0,0.35)]">
+=======
+      <div className="fixed bottom-24 right-6 z-40 hidden flex-col gap-2 md:flex">
+        <a className="group inline-flex min-w-[190px] cursor-pointer items-center justify-center gap-2 whitespace-nowrap rounded-2xl bg-dark px-4 py-3 text-xs font-semibold text-canvas shadow-lg transition-all duration-300 ease-out hover:bg-brand hover:text-dark hover:shadow-[0_12px_28px_rgba(0,0,0,0.22)]">
+>>>>>>> Stashed changes
           Talk to a Marketing Expert
         </a>
         <a
           href="#newsletter"
+<<<<<<< Updated upstream
           className="inline-flex w-fit shrink-0 whitespace-nowrap items-center gap-2 rounded-2xl bg-brand px-4 py-3 text-xs font-semibold text-dark shadow-lg transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-dark hover:text-canvas hover:shadow-[0_18px_35px_-18px_rgba(0,0,0,0.35)]"
+=======
+          className="inline-flex min-w-[190px] items-center justify-center gap-2 whitespace-nowrap rounded-2xl bg-brand px-4 py-3 text-xs font-semibold text-dark shadow-lg transition-all duration-300 ease-out hover:bg-dark hover:text-canvas hover:shadow-[0_14px_34px_rgba(255,179,48,0.32)]"
+>>>>>>> Stashed changes
         >
           Subscribe to Insights
         </a>

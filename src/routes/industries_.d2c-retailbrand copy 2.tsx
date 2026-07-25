@@ -124,10 +124,10 @@ function D2CPage() {
             A strategic growth partner for direct-to-consumer, retail and eCommerce brands—combining branding, performance marketing, digital commerce and customer experience to accelerate sales, customer loyalty and sustainable business growth.
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
-            <Link to="/contact" className="inline-flex items-center gap-2 bg-brand text-dark px-6 py-3 font-semibold hover:brightness-95">
+            <Link to="/contact" className="inline-flex items-center gap-2 rounded-2xl bg-brand text-dark px-6 py-3 font-semibold shadow-sm transition-all duration-300 ease-out hover:brightness-95 hover:shadow-[0_14px_34px_rgba(255,179,48,0.32)]">
               Book Discovery Call <ArrowRight className="size-4" />
             </Link>
-            <Link to="/portfolio" className="inline-flex items-center gap-2 border border-canvas/30 text-canvas px-6 py-3 font-semibold hover:bg-canvas hover:text-dark transition">
+            <Link to="/portfolio" className="inline-flex items-center gap-2 rounded-2xl border border-canvas/30 text-canvas px-6 py-3 font-semibold shadow-sm transition-all duration-300 ease-out hover:bg-canvas hover:text-dark hover:shadow-[0_14px_34px_rgba(255,255,255,0.18)]">
               View Retail Success Stories <ArrowUpRight className="size-4" />
             </Link>
           </div>
@@ -347,10 +347,10 @@ function D2CPage() {
             Let's create a growth strategy that combines branding, digital commerce and performance marketing to increase sales, strengthen customer loyalty and accelerate long-term business growth.
           </p>
           <div className="mt-10 flex flex-wrap gap-4 justify-center">
-            <Link to="/contact" className="inline-flex items-center gap-2 bg-brand text-dark px-6 py-3 font-semibold hover:brightness-95">
+            <Link to="/contact" className="inline-flex items-center gap-2 rounded-2xl bg-brand text-dark px-6 py-3 font-semibold shadow-sm transition-all duration-300 ease-out hover:brightness-95 hover:shadow-[0_12px_28px_rgba(0,0,0,0.22)]">
               Book Discovery Call <ArrowRight className="size-4" />
             </Link>
-            <Link to="/portfolio" className="inline-flex items-center gap-2 border border-canvas/30 text-canvas px-6 py-3 font-semibold hover:bg-canvas hover:text-dark transition">
+            <Link to="/portfolio" className="inline-flex items-center gap-2 rounded-2xl border border-canvas/30 text-canvas px-6 py-3 font-semibold shadow-sm transition-all duration-300 ease-out hover:bg-canvas hover:text-dark hover:shadow-[0_12px_28px_rgba(0,0,0,0.18)]">
               View Success Stories <ArrowUpRight className="size-4" />
             </Link>
           </div>

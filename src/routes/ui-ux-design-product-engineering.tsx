@@ -403,13 +403,21 @@ function UxProductPage() {
             <div className="mt-9 flex flex-wrap gap-3">
               <Link
                 to="/contact"
+<<<<<<< Updated upstream
                 className="inline-flex items-center gap-2 rounded-2xl bg-dark px-5 py-3 text-sm font-semibold text-canvas shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-dark/90 hover:shadow-[0_18px_35px_-18px_rgba(0,0,0,0.35)]"
+=======
+                className="inline-flex items-center gap-2 rounded-2xl bg-dark text-canvas px-5 py-3 text-sm font-semibold shadow-sm transition-all duration-300 ease-out hover:bg-dark/90 hover:shadow-[0_12px_28px_rgba(0,0,0,0.22)]"
+>>>>>>> Stashed changes
               >
                 Book Product Strategy Session <span aria-hidden>→</span>
               </Link>
               <Link
                 to="/contact"
+<<<<<<< Updated upstream
                 className="inline-flex items-center gap-2 rounded-2xl border border-dark/20 bg-white px-5 py-3 text-sm font-semibold text-dark shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-dark hover:shadow-[0_18px_35px_-18px_rgba(0,0,0,0.18)]"
+=======
+                className="inline-flex items-center gap-2 rounded-2xl border border-dark/20 px-5 py-3 text-sm font-semibold shadow-sm transition-all duration-300 ease-out hover:border-dark hover:shadow-[0_12px_28px_rgba(0,0,0,0.16)]"
+>>>>>>> Stashed changes
               >
                 Request Product Design Proposal <span aria-hidden>→</span>
               </Link>
@@ -689,7 +697,11 @@ function UxProductPage() {
             <div className="mt-10 text-center">
               <Link
                 to="/portfolio"
+<<<<<<< Updated upstream
                 className="inline-flex items-center gap-2 rounded-2xl border border-dark/20 bg-white px-5 py-3 text-sm font-semibold text-dark shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-dark hover:shadow-[0_18px_35px_-18px_rgba(0,0,0,0.18)]"
+=======
+                className="inline-flex items-center gap-2 rounded-2xl border border-dark/20 px-5 py-3 text-sm font-semibold shadow-sm transition-all duration-300 ease-out hover:border-dark hover:shadow-[0_12px_28px_rgba(0,0,0,0.16)]"
+>>>>>>> Stashed changes
               >
                 View Product Case Studies <span aria-hidden>→</span>
               </Link>
@@ -783,13 +795,21 @@ function UxProductPage() {
             <div className="mt-10 flex flex-wrap justify-center gap-3">
               <Link
                 to="/contact"
+<<<<<<< Updated upstream
                 className="inline-flex items-center gap-2 rounded-2xl bg-dark px-5 py-3 text-sm font-semibold text-canvas shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-dark/90 hover:shadow-[0_18px_35px_-18px_rgba(0,0,0,0.35)]"
+=======
+                className="inline-flex items-center gap-2 rounded-2xl bg-dark text-canvas px-5 py-3 text-sm font-semibold shadow-sm transition-all duration-300 ease-out hover:bg-dark/90 hover:shadow-[0_12px_28px_rgba(0,0,0,0.22)]"
+>>>>>>> Stashed changes
               >
                 Book Product Strategy Session <span aria-hidden>→</span>
               </Link>
               <Link
                 to="/contact"
+<<<<<<< Updated upstream
                 className="inline-flex items-center gap-2 rounded-2xl border border-dark/20 bg-white px-5 py-3 text-sm font-semibold text-dark shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-dark hover:shadow-[0_18px_35px_-18px_rgba(0,0,0,0.18)]"
+=======
+                className="inline-flex items-center gap-2 rounded-2xl border border-dark/20 px-5 py-3 text-sm font-semibold shadow-sm transition-all duration-300 ease-out hover:border-dark hover:shadow-[0_12px_28px_rgba(0,0,0,0.16)]"
+>>>>>>> Stashed changes
               >
                 Request Product Design Proposal <span aria-hidden>→</span>
               </Link>

@@ -2,11 +2,11 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
-import aboutHero from "@/assets/about-heroy1.jpg";
+import aboutHero from "@/assets/about-heroy221.jpg";
 import aboutStory from "@/assets/about-storyy1.jpg";
 import aboutCtaImg from "@/assets/aboutctaimg.png";
-import founderAsset from "@/assets/founder-altaf.jpg.asset.png";
-import aboutTeam from "@/assets/about-team.png";
+import founderAsset from "@/assets/founderaltaf.png";
+import aboutTeam from "@/assets/about-team222.png";
 
 export const Route = createFileRoute("/about")({
   component: AboutPage,

@@ -2,8 +2,8 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
-import careersHero from "@/assets/careers-heroy1.jpg";
-import life1 from "@/assets/careers-life-1.jpg";
+import careersHero from "@/assets/careers-hero1.jpg";
+import life1 from "@/assets/careers-life-131.jpg";
 import life2 from "@/assets/careers-life-2.jpg";
 import life3 from "@/assets/careers-life-3.jpg";
 import life4 from "@/assets/careers-life-4.jpg";
@@ -139,7 +139,7 @@ function Hero() {
 const HIGHLIGHTS = [
   { icon: "✦", title: "Flexible & Creative Environment", body: "Space to think, experiment, and make work you're proud of." },
   { icon: "◇", title: "Cross-Functional Collaboration", body: "Marketers, designers and engineers building together — not in silos." },
-  { icon: "↗", title: "Real Projects. Real Impact.", body: "Ship campaigns and platforms that move metrics for real brands." },
+  { icon: "↗️", title: "Real Projects. Real Impact.", body: "Ship campaigns and platforms that move metrics for real brands." },
   { icon: "○", title: "Continuous Learning", body: "Workshops, mentorship and budget for tools that sharpen your craft." },
   { icon: "★", title: "Recognition & Growth", body: "Visible career paths, fair rewards, and credit where it's due." },
 ];
@@ -733,7 +733,11 @@ function StickyApply({ onUploadResume }: { onUploadResume: () => void }) {
     <button
       type="button"
       onClick={onUploadResume}
+<<<<<<< Updated upstream
       className={`fixed bottom-24 right-6 z-40 inline-flex items-center gap-2 rounded-xl bg-brand px-5 py-3 text-sm font-semibold text-dark shadow-lg shadow-dark/20 transition-all duration-300 hover:shadow-[0_14px_32px_rgba(0,0,0,0.3)] ${
+=======
+      className={`fixed bottom-6 right-6 z-40 inline-flex items-center gap-2 rounded-xl bg-brand text-dark px-5 py-3 text-sm font-semibold shadow-lg shadow-dark/20 transition-all duration-300 hover:shadow-[0_14px_32px_rgba(0,0,0,0.3)] ${
+>>>>>>> Stashed changes
         show ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0 pointer-events-none"
       }`}
     >

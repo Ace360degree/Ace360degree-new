@@ -501,19 +501,31 @@ function CosmosSealsCaseStudyPage() {
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
                 to="/contact"
+<<<<<<< Updated upstream
                 className="inline-flex items-center rounded-2xl bg-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:opacity-90 hover:shadow-[0_18px_35px_-18px_rgba(0,0,0,0.28)]"
+=======
+                className="inline-flex items-center rounded-full bg-primary text-primary-foreground px-6 py-3 text-sm font-medium shadow-sm transition-all duration-300 ease-out hover:opacity-90 hover:shadow-[0_14px_34px_rgba(255,179,48,0.32)]"
+>>>>>>> Stashed changes
               >
                 Request Manufacturing Growth Audit
               </Link>
               <Link
                 to="/contact"
+<<<<<<< Updated upstream
                 className="inline-flex items-center rounded-2xl border border-border bg-background px-6 py-3 text-sm font-medium text-foreground shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-muted hover:shadow-[0_18px_35px_-18px_rgba(0,0,0,0.18)]"
+=======
+                className="inline-flex items-center rounded-full border border-border bg-background px-6 py-3 text-sm font-medium shadow-sm transition-all duration-300 ease-out hover:bg-muted hover:shadow-[0_12px_28px_rgba(0,0,0,0.16)]"
+>>>>>>> Stashed changes
               >
                 Book Discovery Call
               </Link>
               <Link
                 to="/industries/manufacturing"
+<<<<<<< Updated upstream
                 className="inline-flex items-center rounded-2xl px-6 py-3 text-sm font-medium shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-muted hover:shadow-[0_18px_35px_-18px_rgba(0,0,0,0.14)]"
+=======
+                className="inline-flex items-center rounded-full px-6 py-3 text-sm font-medium shadow-sm transition-all duration-300 ease-out hover:bg-muted hover:shadow-[0_12px_28px_rgba(0,0,0,0.14)]"
+>>>>>>> Stashed changes
               >
                 Explore Manufacturing Solutions →
               </Link>

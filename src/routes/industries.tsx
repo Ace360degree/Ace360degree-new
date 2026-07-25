@@ -429,13 +429,21 @@ function IndustriesPage() {
                 <div className="mt-9 flex flex-wrap gap-3">
                   <a
                     href="#industries"
+<<<<<<< Updated upstream
                     className="inline-flex items-center gap-2 rounded-2xl bg-[#FFB330] px-5 py-3 text-sm font-semibold text-[#181818] shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-[#E09010] hover:shadow-[0_18px_35px_-18px_rgba(0,0,0,0.45)]"
+=======
+                    className="inline-flex items-center gap-2 bg-[#FFB330] hover:bg-[#E09010] text-[#181818] px-5 py-3 text-sm font-semibold rounded-2xl shadow-sm transition-all duration-300 ease-out hover:shadow-[0_12px_28px_rgba(0,0,0,0.22)]"
+>>>>>>> Stashed changes
                   >
                     Explore Industry Solutions <ArrowRight className="size-4" />
                   </a>
                   <Link
                     to="/contact"
+<<<<<<< Updated upstream
                     className="inline-flex items-center gap-2 rounded-2xl border border-dark/15 bg-white px-5 py-3 text-sm font-semibold text-dark shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-dark/25 hover:text-brand hover:shadow-[0_18px_35px_-18px_rgba(0,0,0,0.35)]"
+=======
+                    className="inline-flex items-center gap-2 rounded-2xl px-5 py-3 text-sm font-semibold text-dark shadow-sm transition-all duration-300 ease-out hover:text-brand hover:shadow-[0_12px_28px_rgba(0,0,0,0.16)]"
+>>>>>>> Stashed changes
                   >
                     Book Discovery Call <ArrowUpRight className="size-4" />
                   </Link>
@@ -641,7 +649,7 @@ function IndustriesPage() {
                       <div className="mt-8">
                         <Link
                           to={ind.href}
-                          className="inline-flex items-center gap-2 text-sm font-semibold text-dark border-b border-dark/30 pb-1 hover:border-brand hover:text-brand transition"
+                          className="inline-flex items-center gap-2 text-sm font-semibold text-dark border-b border-dark/30 pb-1 shadow-sm transition-all duration-300 ease-out hover:border-brand hover:text-brand hover:shadow-[0_10px_24px_rgba(0,0,0,0.14)]"
                         >
                           Explore {ind.name.split(" ")[0]} Solutions <ArrowRight className="size-4" />
                         </Link>
@@ -835,13 +843,21 @@ function IndustriesPage() {
             <div className="mt-10 flex flex-wrap justify-center gap-3">
               <Link
                 to="/contact"
+<<<<<<< Updated upstream
                 className="inline-flex items-center gap-2 rounded-2xl bg-brand px-6 py-3 text-sm font-semibold text-dark shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:brightness-95 hover:shadow-[0_18px_35px_-18px_rgba(0,0,0,0.35)]"
+=======
+                className="inline-flex items-center gap-2 rounded-2xl bg-brand text-dark px-6 py-3 text-sm font-semibold shadow-sm transition-all duration-300 ease-out hover:brightness-95 hover:shadow-[0_14px_34px_rgba(255,179,48,0.32)]"
+>>>>>>> Stashed changes
               >
                 Book Discovery Call <ArrowRight className="size-4" />
               </Link>
               <Link
                 to="/portfolio"
+<<<<<<< Updated upstream
                 className="inline-flex items-center gap-2 rounded-2xl border border-canvas/25 px-6 py-3 text-sm font-semibold text-canvas shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-canvas hover:text-dark hover:shadow-[0_18px_35px_-18px_rgba(255,255,255,0.25)]"
+=======
+                className="inline-flex items-center gap-2 rounded-2xl border border-canvas/25 text-canvas px-6 py-3 text-sm font-semibold shadow-sm transition-all duration-300 ease-out hover:bg-canvas hover:text-dark hover:shadow-[0_14px_34px_rgba(255,255,255,0.18)]"
+>>>>>>> Stashed changes
               >
                 View Success Stories <ArrowUpRight className="size-4" />
               </Link>

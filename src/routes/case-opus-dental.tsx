@@ -60,13 +60,13 @@ function OpusDentalCaseStudyPage() {
             <div className="mt-9 flex flex-wrap gap-3">
               <Link
                 to="/industries/healthcare"
-                className="inline-flex items-center gap-2 bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground transition hover:brightness-95"
+                className="inline-flex items-center gap-2 rounded-2xl bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground shadow-sm transition-all duration-300 ease-out hover:brightness-95 hover:shadow-[0_14px_34px_rgba(255,179,48,0.32)]"
               >
                 Healthcare Solutions <ArrowRight className="h-4 w-4" />
               </Link>
               <Link
                 to="/portfolio"
-                className="inline-flex items-center gap-2 border border-foreground/15 px-5 py-3 text-sm font-semibold transition hover:border-primary hover:text-primary"
+                className="inline-flex items-center gap-2 rounded-2xl border border-foreground/15 px-5 py-3 text-sm font-semibold shadow-sm transition-all duration-300 ease-out hover:border-primary hover:text-primary hover:shadow-[0_12px_28px_rgba(0,0,0,0.16)]"
               >
                 View Portfolio <ArrowUpRight className="h-4 w-4" />
               </Link>
@@ -127,7 +127,11 @@ function OpusDentalCaseStudyPage() {
           </h2>
           <Link
             to="/contact"
+<<<<<<< Updated upstream
             className="mt-8 inline-flex items-center gap-2 rounded-2xl bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:brightness-95 hover:shadow-[0_18px_35px_-18px_rgba(0,0,0,0.28)]"
+=======
+            className="mt-8 inline-flex items-center gap-2 rounded-2xl bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-sm transition-all duration-300 ease-out hover:brightness-95 hover:shadow-[0_14px_34px_rgba(255,179,48,0.32)]"
+>>>>>>> Stashed changes
           >
             Book Discovery Call <ArrowRight className="h-4 w-4" />
           </Link>
