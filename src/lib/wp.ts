@@ -89,6 +89,18 @@ function resolveWpUrl(value: string) {
     return value;
   }
 
+  if (trimmed.startsWith("http://")) {
+    try {
+      const parsed = new URL(trimmed);
+      if (parsed.hostname.endsWith("ace360degree.com")) {
+        parsed.protocol = "https:";
+        return parsed.toString();
+      }
+    } catch {
+      return value;
+    }
+  }
+
   if (!isRewritableWpPath(trimmed)) {
     return value;
   }
@@ -118,6 +130,37 @@ function resolveSrcset(value: string) {
     .join(", ");
 }
 
+function bytesToBase64(bytes: Uint8Array) {
+  if (typeof Buffer !== "undefined") {
+    return Buffer.from(bytes).toString("base64");
+  }
+
+  let binary = "";
+  const chunkSize = 0x8000;
+  for (let index = 0; index < bytes.length; index += chunkSize) {
+    binary += String.fromCharCode(...bytes.subarray(index, index + chunkSize));
+  }
+
+  return btoa(binary);
+}
+
+type FetchImageInput = {
+  url: string;
+};
+
+const fetchImageAsDataUrl = createServerFn({ method: "GET" })
+  .validator((input: FetchImageInput) => input)
+  .handler(async ({ data }) => {
+    const res = await fetch(data.url);
+    if (!res.ok) {
+      return null;
+    }
+
+    const contentType = res.headers.get("content-type") || "application/octet-stream";
+    const bytes = new Uint8Array(await res.arrayBuffer());
+    return `data:${contentType};base64,${bytesToBase64(bytes)}`;
+  });
+
 export function normalizeWpContentHtml(html: string) {
   return html
     .replace(/\b(?:src|data-src|data-lazy-src|poster)=["']([^"']+)["']/gi, (match, value) => {
@@ -128,6 +171,55 @@ export function normalizeWpContentHtml(html: string) {
       const resolved = resolveSrcset(value);
       return match.replace(value, resolved);
     });
+}
+
+export async function inlineWpContentImages(html: string) {
+  const imageRegex = /<img\b[^>]*>/gi;
+  const imageTags = html.match(imageRegex) || [];
+  if (imageTags.length === 0) {
+    return html;
+  }
+
+  const sourceMap = new Map<string, string>();
+  const urls = new Set<string>();
+
+  for (const tag of imageTags) {
+    const srcMatch = tag.match(/\b(?:src|data-src|data-lazy-src)=["']([^"']+)["']/i);
+    if (!srcMatch) continue;
+
+    const resolved = resolveWpUrl(srcMatch[1]);
+    if (resolved) {
+      urls.add(resolved);
+    }
+  }
+
+  await Promise.all(
+    [...urls].map(async (url) => {
+      const dataUrl = await fetchImageAsDataUrl({ data: { url } });
+      if (dataUrl) {
+        sourceMap.set(url, dataUrl);
+      }
+    }),
+  );
+
+  return html.replace(imageRegex, (tag) => {
+    const srcMatch = tag.match(/\b(?:src|data-src|data-lazy-src)=["']([^"']+)["']/i);
+    if (!srcMatch) {
+      return tag;
+    }
+
+    const resolved = resolveWpUrl(srcMatch[1]);
+    const inlineSrc = sourceMap.get(resolved);
+    if (!inlineSrc) {
+      return normalizeWpContentHtml(tag);
+    }
+
+    let nextTag = tag.replace(/\b(?:src|data-src|data-lazy-src)=["'][^"']+["']/i, `src="${inlineSrc}"`);
+    nextTag = nextTag.replace(/\sdata-src=["'][^"']+["']/i, "");
+    nextTag = nextTag.replace(/\sdata-lazy-src=["'][^"']+["']/i, "");
+    nextTag = nextTag.replace(/\ssrcset=["'][^"']+["']/i, "");
+    return nextTag;
+  });
 }
 
 type FetchWpJsonInput = {

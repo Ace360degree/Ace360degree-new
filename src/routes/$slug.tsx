@@ -33,6 +33,8 @@ import {
   getLocationPageBySlug as fetchLocationPageBySlug,
   getLocationChildPages as fetchLocationChildPages,
   getLocationPages as fetchLocationPages,
+  inlineWpContentImages,
+  normalizeWpContentHtml,
   stripHtml,
   getFeaturedImage,
 } from "@/lib/wp";
@@ -151,6 +153,11 @@ export const Route = createFileRoute("/$slug")({
       };
     }
 
+    const normalizedContent = normalizeWpContentHtml(page.content.rendered || "");
+    const renderedContent = normalizedContent
+      ? await inlineWpContentImages(normalizedContent)
+      : "";
+
     let childPages: any[] = [];
     let cityPages: any[] = [];
     let cityParentTitle = "";
@@ -166,6 +173,7 @@ export const Route = createFileRoute("/$slug")({
 
     return {
       page,
+      renderedContent,
       childPages,
       cityPages,
       cityParentTitle,
@@ -385,13 +393,15 @@ function HeroForm() {
 }
 
 export function DynamicCountryPage() {
-  const { page, childPages, cityPages, cityParentTitle } = Route.useLoaderData();
+  const { page, renderedContent, childPages, cityPages, cityParentTitle } =
+    Route.useLoaderData();
   const slug = page.slug;
 
   if (allowedCountries.includes(slug)) {
     return (
       <CountryIndexLayout
         page={page}
+        renderedContent={renderedContent}
         countrySlug={slug}
         childPages={childPages}
         cityPages={cityPages}
@@ -405,12 +415,14 @@ export function DynamicCountryPage() {
 
 function CountryIndexLayout({
   page,
+  renderedContent,
   countrySlug,
   childPages,
   cityPages,
   cityParentTitle,
 }: {
   page: any;
+  renderedContent: string;
   countrySlug: string;
   childPages: any[];
   cityPages: any[];
@@ -444,12 +456,12 @@ function CountryIndexLayout({
       </section>
 
       {/* WordPress Content (Above Grids) */}
-      {page.content.rendered && (
+      {renderedContent && (
         <section className="py-8 bg-[#101010]">
           <div className="mx-auto max-w-4xl px-6">
             <article
               className="prose prose-invert prose-lg max-w-none prose-headings:font-serif prose-headings:tracking-tight prose-a:text-brand"
-              dangerouslySetInnerHTML={{ __html: page.content.rendered }}
+              dangerouslySetInnerHTML={{ __html: renderedContent }}
             />
           </div>
         </section>
@@ -532,7 +544,7 @@ function ServiceInnerLayout({ page }: { page: any }) {
     formattedTitle = formattedTitle.replace(regex, `<span class="text-brand italic block font-normal mt-2">$1</span>`);
   }
 
-  let rawContent = page.content.rendered || "";
+  let rawContent = normalizeWpContentHtml(page.content.rendered || "");
   const parsedFaqs: { question: string; answerHtml: string }[] = [];
   
   // Extract FAQ section dynamically
