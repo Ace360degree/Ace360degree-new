@@ -49,6 +49,87 @@ const getLocationsApiUrl = () => {
   return import.meta.env.VITE_WP_LOCATIONS_API_URL || DEFAULT_API_URL;
 };
 
+export function getWordPressSiteUrl() {
+  const apiUrl = getApiUrl();
+  const marker = "/wp-json/wp/v2";
+  const markerIndex = apiUrl.indexOf(marker);
+
+  if (markerIndex !== -1) {
+    return apiUrl.slice(0, markerIndex).replace(/\/+$/, "");
+  }
+
+  try {
+    const parsed = new URL(apiUrl);
+    return parsed.origin;
+  } catch {
+    return "";
+  }
+}
+
+function isRewritableWpPath(value: string) {
+  return (
+    value.startsWith("/") ||
+    value.startsWith("wp-content/") ||
+    value.startsWith("wp-includes/") ||
+    value.startsWith("./") ||
+    value.startsWith("../")
+  );
+}
+
+function resolveWpUrl(value: string) {
+  const trimmed = value.trim();
+  if (
+    !trimmed ||
+    trimmed.startsWith("data:") ||
+    trimmed.startsWith("mailto:") ||
+    trimmed.startsWith("tel:") ||
+    trimmed.startsWith("#") ||
+    /^[a-zA-Z][a-zA-Z\d+\-.]*:/.test(trimmed)
+  ) {
+    return value;
+  }
+
+  if (!isRewritableWpPath(trimmed)) {
+    return value;
+  }
+
+  const baseUrl = getWordPressSiteUrl();
+  if (!baseUrl) {
+    return value;
+  }
+
+  try {
+    return new URL(trimmed, `${baseUrl}/`).toString();
+  } catch {
+    return value;
+  }
+}
+
+function resolveSrcset(value: string) {
+  return value
+    .split(",")
+    .map((candidate) => {
+      const trimmed = candidate.trim();
+      if (!trimmed) return trimmed;
+
+      const [url, ...rest] = trimmed.split(/\s+/);
+      return [resolveWpUrl(url), ...rest].join(" ");
+    })
+    .join(", ");
+}
+
+export function normalizeWpContentHtml(html: string) {
+  return html
+    .replace(/\b(?:src|data-src|data-lazy-src|poster)=["']([^"']+)["']/gi, (match, value) => {
+      const resolved = resolveWpUrl(value);
+      return match.replace(value, resolved);
+    })
+    .replace(/\bsrcset=["']([^"']+)["']/gi, (match, value) => {
+      const resolved = resolveSrcset(value);
+      return match.replace(value, resolved);
+    });
+}
+
 type FetchWpJsonInput = {
   url: string;
 };
