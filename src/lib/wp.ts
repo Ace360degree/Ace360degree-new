@@ -1,3 +1,5 @@
+import { createServerFn } from "@tanstack/react-start";
+
 export interface WPPost {
   id: number;
   date: string;
@@ -46,6 +48,30 @@ const getApiUrl = () => {
 const getLocationsApiUrl = () => {
   return import.meta.env.VITE_WP_LOCATIONS_API_URL || DEFAULT_API_URL;
 };
+
+type FetchWpJsonInput = {
+  url: string;
+};
+
+const fetchWpJson = createServerFn({ method: "GET" })
+  .validator((input: FetchWpJsonInput) => input)
+  .handler(async ({ data }) => {
+    const res = await fetch(data.url);
+    if (!res.ok) {
+      throw new Error(`Failed to fetch WordPress data from ${data.url}`);
+    }
+
+    return res.json();
+  });
+
+async function fetchWpArray(url: string): Promise<WPPost[]> {
+  return (await fetchWpJson({ data: { url } })) as WPPost[];
+}
+
+async function fetchWpSingle(url: string): Promise<WPPost | null> {
+  const data = (await fetchWpJson({ data: { url } })) as WPPost[];
+  return data.length > 0 ? data[0] : null;
+}
 
 export function decodeHtmlEntities(value: string) {
   const namedEntities: Record<string, string> = {
@@ -131,13 +157,7 @@ export function toBlogCard(post: WPPost, fallbackImage = ""): BlogCard {
 export async function getPosts(): Promise<WPPost[]> {
   try {
     const url = `${getApiUrl()}/posts?_embed`;
-    const res = await fetch(url);
-    if (!res.ok) {
-      console.error("Failed to fetch posts from WP");
-      return [];
-    }
-    const data = await res.json();
-    return data;
+    return await fetchWpArray(url);
   } catch (error) {
     console.error("Error fetching posts:", error);
     return [];
@@ -147,13 +167,7 @@ export async function getPosts(): Promise<WPPost[]> {
 export async function getPages(): Promise<WPPost[]> {
   try {
     const url = `${getApiUrl()}/pages?_embed`;
-    const res = await fetch(url);
-    if (!res.ok) {
-      console.error("Failed to fetch pages from WP");
-      return [];
-    }
-    const data = await res.json();
-    return data;
+    return await fetchWpArray(url);
   } catch (error) {
     console.error("Error fetching pages:", error);
     return [];
@@ -163,13 +177,7 @@ export async function getPages(): Promise<WPPost[]> {
 export async function getPostBySlug(slug: string): Promise<WPPost | null> {
   try {
     const url = `${getApiUrl()}/posts?slug=${slug}&_embed`;
-    const res = await fetch(url);
-    if (!res.ok) {
-      console.error("Failed to fetch post from WP");
-      return null;
-    }
-    const data = await res.json();
-    return data.length > 0 ? data[0] : null;
+    return await fetchWpSingle(url);
   } catch (error) {
     console.error("Error fetching post:", error);
     return null;
@@ -179,13 +187,7 @@ export async function getPostBySlug(slug: string): Promise<WPPost | null> {
 export async function getPageBySlug(slug: string): Promise<WPPost | null> {
   try {
     const url = `${getApiUrl()}/pages?slug=${slug}&_embed`;
-    const res = await fetch(url);
-    if (!res.ok) {
-      console.error("Failed to fetch page from WP");
-      return null;
-    }
-    const data = await res.json();
-    return data.length > 0 ? data[0] : null;
+    return await fetchWpSingle(url);
   } catch (error) {
     console.error("Error fetching page:", error);
     return null;
@@ -211,13 +213,7 @@ export async function getBlogEntryBySlug(slug: string): Promise<WPPost | null> {
 export async function getLocationPageBySlug(slug: string): Promise<WPPost | null> {
   try {
     const url = `${getLocationsApiUrl()}/pages?slug=${slug}&_embed`;
-    const res = await fetch(url);
-    if (!res.ok) {
-      console.error("Failed to fetch location page from WP");
-      return null;
-    }
-    const data = await res.json();
-    return data.length > 0 ? data[0] : null;
+    return await fetchWpSingle(url);
   } catch (error) {
     console.error("Error fetching location page:", error);
     return null;
@@ -227,13 +223,7 @@ export async function getLocationPageBySlug(slug: string): Promise<WPPost | null
 export async function getLocationChildPages(parentId: number): Promise<WPPost[]> {
   try {
     const url = `${getLocationsApiUrl()}/pages?parent=${parentId}&per_page=100&_embed`;
-    const res = await fetch(url);
-    if (!res.ok) {
-      console.error("Failed to fetch location child pages from WP");
-      return [];
-    }
-    const data = await res.json();
-    return data;
+    return await fetchWpArray(url);
   } catch (error) {
     console.error("Error fetching location child pages:", error);
     return [];
@@ -243,13 +233,7 @@ export async function getLocationChildPages(parentId: number): Promise<WPPost[]>
 export async function getLocationPages(): Promise<WPPost[]> {
   try {
     const url = `${getLocationsApiUrl()}/pages?per_page=100&_embed`;
-    const res = await fetch(url);
-    if (!res.ok) {
-      console.error("Failed to fetch location pages from WP");
-      return [];
-    }
-    const data = await res.json();
-    return data;
+    return await fetchWpArray(url);
   } catch (error) {
     console.error("Error fetching location pages:", error);
     return [];
@@ -259,13 +243,7 @@ export async function getLocationPages(): Promise<WPPost[]> {
 export async function getChildPages(parentId: number): Promise<WPPost[]> {
   try {
     const url = `${getApiUrl()}/pages?parent=${parentId}&per_page=100&_embed`;
-    const res = await fetch(url);
-    if (!res.ok) {
-      console.error("Failed to fetch child pages from WP");
-      return [];
-    }
-    const data = await res.json();
-    return data;
+    return await fetchWpArray(url);
   } catch (error) {
     console.error("Error fetching child pages:", error);
     return [];
