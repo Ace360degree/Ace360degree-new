@@ -16,6 +16,7 @@ import {
   formatWpDate,
   getFeaturedImage,
   getPageBySlug,
+  inlineWpContentImages,
   normalizeWpContentHtml,
   stripHtml,
 } from "@/lib/wp";
@@ -107,7 +108,8 @@ export const Route = createFileRoute("/content/$slug")({
     }
 
     const normalizedContent = normalizeWpContentHtml(page.content.rendered);
-    const { contentHtml, toc, dynamicFaqs } = buildArticleContent(normalizedContent);
+    const inlinedContent = await inlineWpContentImages(normalizedContent);
+    const { contentHtml, toc, dynamicFaqs } = buildArticleContent(inlinedContent);
 
     return {
       page,
@@ -115,7 +117,7 @@ export const Route = createFileRoute("/content/$slug")({
       contentHtml,
       dynamicFaqs,
       publishDate: formatWpDate(page.date),
-      readTime: getReadTimeFromHtml(normalizedContent),
+      readTime: getReadTimeFromHtml(inlinedContent),
       imageUrl: getFeaturedImage(page),
     };
   },
