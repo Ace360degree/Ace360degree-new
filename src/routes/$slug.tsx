@@ -36,7 +36,6 @@ import {
   stripHtml,
   getFeaturedImage,
 } from "@/lib/wp";
-import { getLocationPageBySlug, getLocationChildPages, stripHtml, getFeaturedImage } from "@/lib/wp";
 import { BlogFAQ } from "@/components/blog-faq";
 
 import designImg from "@/assets/svc-website-us-design.jpg";
