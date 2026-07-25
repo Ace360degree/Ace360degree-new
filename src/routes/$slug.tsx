@@ -30,9 +30,9 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import {
-  getLocationPageBySlug,
-  getLocationChildPages,
-  getLocationPages,
+  getLocationPageBySlug as fetchLocationPageBySlug,
+  getLocationChildPages as fetchLocationChildPages,
+  getLocationPages as fetchLocationPages,
   stripHtml,
   getFeaturedImage,
 } from "@/lib/wp";
@@ -124,8 +124,8 @@ function findCityParentPage(countrySlug: string, locationPages: any[]) {
 export const Route = createFileRoute("/$slug")({
   loader: async ({ params: { slug } }) => {
     const [pageResult, locationPages] = await Promise.all([
-      getLocationPageBySlug(slug),
-      getLocationPages(),
+      fetchLocationPageBySlug(slug),
+      fetchLocationPages(),
     ]);
 
     let page = pageResult;
@@ -154,12 +154,12 @@ export const Route = createFileRoute("/$slug")({
     let cityPages: any[] = [];
     let cityParentTitle = "";
     if (page.id !== 0 && allowedCountries.includes(slug)) {
-      childPages = await getLocationChildPages(page.id);
+      childPages = await fetchLocationChildPages(page.id);
 
       const cityParentPage = findCityParentPage(slug, locationPages);
       if (cityParentPage) {
         cityParentTitle = stripHtml(cityParentPage.title.rendered);
-        cityPages = await getLocationChildPages(cityParentPage.id);
+        cityPages = await fetchLocationChildPages(cityParentPage.id);
       }
     }
 
