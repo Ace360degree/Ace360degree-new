@@ -13,6 +13,7 @@ import {
   Quote,
 } from "lucide-react";
 import { formatWpDate, getFeaturedImage, getPageBySlug, stripHtml } from "@/lib/wp";
+import { BlogFAQ } from "@/components/blog-faq";
 
 type TocItem = {
   id: string;
@@ -35,6 +36,45 @@ function getReadTimeFromHtml(html: string) {
 function buildArticleContent(html: string) {
   const toc: TocItem[] = [];
   let headingIndex = 0;
+  const parsedFaqs: { question: string; answerHtml: string }[] = [];
+
+  // 1. Extract FAQ section dynamically
+  const faqSplitRegex = /<(h[234])[^>]*>.*?FAQ.*?<\/\1>/i;
+  const splitMatch = html.match(faqSplitRegex);
+  
+  if (splitMatch && splitMatch.index !== undefined) {
+    const faqStartIndex = splitMatch.index;
+    const faqSectionHtml = html.substring(faqStartIndex);
+    html = html.substring(0, faqStartIndex); // Remove from main article
+    
+    const faqContent = faqSectionHtml.replace(faqSplitRegex, '');
+    
+    const tokenRegex = /(?:>|\b|;|\s|^)(Q|A)\d*\s*[:.]/gi;
+    const matches = [...faqContent.matchAll(tokenRegex)];
+    
+    if (matches.length > 0) {
+      for (let m = 0; m < matches.length; m++) {
+         const type = matches[m][1].toUpperCase();
+         if (type === 'Q') {
+            const startQ = matches[m].index + matches[m][0].length;
+            let endQ = faqContent.length;
+            if (m + 1 < matches.length) endQ = matches[m+1].index;
+            
+            let qText = faqContent.substring(startQ, endQ).replace(/<[^>]*$/g, '').replace(/<[^>]+>/g, '').trim();
+            
+            if (m + 1 < matches.length && matches[m+1][1].toUpperCase() === 'A') {
+               const startA = matches[m+1].index + matches[m+1][0].length;
+               let endA = faqContent.length;
+               if (m + 2 < matches.length) endA = matches[m+2].index;
+               const aHtml = faqContent.substring(startA, endA).trim();
+               if (qText && aHtml) {
+                  parsedFaqs.push({ question: qText, answerHtml: aHtml });
+               }
+            }
+         }
+      }
+    }
+  }
 
   const contentHtml = html.replace(
     /<h2([^>]*)>([\s\S]*?)<\/h2>/gi,
@@ -50,7 +90,7 @@ function buildArticleContent(html: string) {
     },
   );
 
-  return { contentHtml, toc };
+  return { contentHtml, toc, dynamicFaqs: parsedFaqs };
 }
 
 export const Route = createFileRoute("/content/$slug")({
@@ -60,12 +100,13 @@ export const Route = createFileRoute("/content/$slug")({
       throw notFound();
     }
 
-    const { contentHtml, toc } = buildArticleContent(page.content.rendered);
+    const { contentHtml, toc, dynamicFaqs } = buildArticleContent(page.content.rendered);
 
     return {
       page,
       toc,
       contentHtml,
+      dynamicFaqs,
       publishDate: formatWpDate(page.date),
       readTime: getReadTimeFromHtml(page.content.rendered),
       imageUrl: getFeaturedImage(page),
@@ -96,7 +137,7 @@ export const Route = createFileRoute("/content/$slug")({
 });
 
 function ContentPage() {
-  const { page, toc, contentHtml, publishDate, readTime } = Route.useLoaderData();
+  const { page, toc, contentHtml, publishDate, readTime, dynamicFaqs } = Route.useLoaderData();
   const [progress, setProgress] = useState(0);
   const [active, setActive] = useState<string>(toc[0]?.id ?? "");
 
@@ -230,6 +271,11 @@ function ContentPage() {
               className="rounded-3xl border border-border bg-card p-6 md:p-10"
               dangerouslySetInnerHTML={{ __html: contentHtml }}
             />
+            {dynamicFaqs && dynamicFaqs.length > 0 && (
+              <div className="mt-12">
+                <BlogFAQ faqs={dynamicFaqs} />
+              </div>
+            )}
           </article>
 
           <aside className="hidden lg:block">
