@@ -372,16 +372,16 @@ function ServicesPage() {
                 Ace360degree helps businesses solve these challenges through integrated marketing, branding, technology and automation solutions.
               </p>
               <div className="mt-10 flex flex-wrap gap-3">
-                  <a
-                    href="#spectrum"
-                    className="inline-flex items-center gap-2 rounded-2xl bg-dark px-6 py-3.5 text-sm font-semibold text-canvas shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-brand hover:text-dark hover:shadow-[0_18px_35px_-18px_rgba(0,0,0,0.35)]"
-                  >
+                <a
+                  href="#spectrum"
+                  className="inline-flex items-center gap-2 rounded-2xl bg-dark text-canvas px-6 py-3.5 text-sm font-semibold shadow-sm transition-all duration-300 ease-out hover:bg-brand hover:text-dark hover:shadow-[0_12px_28px_rgba(0,0,0,0.22)]"
+                >
                   Explore Solutions
                   <span aria-hidden>→</span>
                 </a>
                 <a
                   href="#cta"
-                  className="inline-flex items-center gap-2 rounded-2xl border border-dark/15 bg-white px-6 py-3.5 text-sm font-semibold text-dark shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-dark hover:shadow-[0_18px_35px_-18px_rgba(0,0,0,0.22)]"
+                  className="inline-flex items-center gap-2 rounded-2xl border border-dark/15 px-6 py-3.5 text-sm font-semibold text-dark shadow-sm transition-all duration-300 ease-out hover:border-dark hover:shadow-[0_12px_28px_rgba(0,0,0,0.16)]"
                 >
                   Book Discovery Call
                 </a>
@@ -489,7 +489,7 @@ function ServicesPage() {
             </p>
             <a
               href="#cta"
-              className="mt-7 inline-flex items-center gap-2 rounded-2xl bg-brand px-6 py-3.5 text-sm font-semibold text-dark shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:brightness-95 hover:shadow-[0_18px_35px_-18px_rgba(0,0,0,0.28)]"
+              className="mt-7 inline-flex items-center gap-2 rounded-2xl bg-brand text-dark px-6 py-3.5 text-sm font-semibold shadow-sm transition-all duration-300 ease-out hover:brightness-95 hover:shadow-[0_14px_34px_rgba(255,179,48,0.32)]"
             >
               Book Discovery Call <span aria-hidden>→</span>
             </a>
@@ -581,10 +581,10 @@ function ServicesPage() {
               Every business is different. Our discovery process helps uncover growth opportunities across customer acquisition, branding, technology, automation and AI.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <a href="#contact-form" className="rounded-2xl bg-dark px-6 py-3.5 text-sm font-semibold text-canvas shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-dark/90 hover:shadow-[0_18px_35px_-18px_rgba(0,0,0,0.35)]">
+              <a href="#contact-form" className="inline-flex items-center gap-2 rounded-2xl bg-dark text-canvas px-6 py-3.5 text-sm font-semibold shadow-sm transition-all duration-300 ease-out hover:bg-dark/90 hover:shadow-[0_12px_28px_rgba(0,0,0,0.22)]">
                 Book Discovery Call
               </a>
-              <a href="#contact-form" className="rounded-2xl border border-dark bg-white px-6 py-3.5 text-sm font-semibold text-dark shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-dark hover:text-canvas hover:shadow-[0_18px_35px_-18px_rgba(0,0,0,0.22)]">
+              <a href="#contact-form" className="inline-flex items-center gap-2 rounded-2xl border border-dark px-6 py-3.5 text-sm font-semibold shadow-sm transition-all duration-300 ease-out hover:bg-dark hover:text-canvas hover:shadow-[0_12px_28px_rgba(0,0,0,0.18)]">
                 Download Company Profile
               </a>
             </div>
@@ -651,10 +651,10 @@ function ServicesPage() {
             Whether you're looking to generate more leads, strengthen your brand, modernize operations or explore AI opportunities, our team is ready to help.
           </p>
           <div className="mt-10 flex flex-wrap gap-3 justify-center">
-            <a href="#cta" className="rounded-2xl bg-brand px-7 py-4 text-sm font-semibold text-dark shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:brightness-95 hover:shadow-[0_18px_35px_-18px_rgba(0,0,0,0.28)]">
+            <a href="#cta" className="rounded-2xl bg-brand text-dark px-7 py-4 text-sm font-semibold shadow-sm transition-all duration-300 ease-out hover:brightness-95 hover:shadow-[0_14px_34px_rgba(255,179,48,0.32)]">
               Schedule Discovery Call
             </a>
-            <a href="/portfolio" className="rounded-2xl border border-canvas/30 px-7 py-4 text-sm font-semibold text-canvas shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-canvas hover:text-dark hover:shadow-[0_18px_35px_-18px_rgba(0,0,0,0.22)]">
+            <a href="/portfolio" className="rounded-2xl border border-canvas/30 px-7 py-4 text-sm font-semibold shadow-sm transition-all duration-300 ease-out hover:bg-canvas hover:text-dark hover:shadow-[0_14px_34px_rgba(255,255,255,0.18)]">
               View Portfolio
             </a>
           </div>

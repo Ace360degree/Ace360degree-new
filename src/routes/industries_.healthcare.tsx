@@ -457,7 +457,7 @@ function HealthcarePage() {
         <div className="mt-10 flex flex-wrap gap-3">
           <Link
             to="/contact"
-                  className="group inline-flex items-center gap-2 rounded-full bg-foreground px-6 py-3 text-sm font-medium text-background shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-foreground/90 hover:shadow-[0_18px_35px_-18px_rgba(0,0,0,0.35)]"
+            className="group inline-flex items-center gap-2 rounded-full bg-foreground px-6 py-3 text-sm font-medium text-background shadow-sm transition-all duration-300 ease-out hover:bg-foreground/90 hover:shadow-[0_14px_32px_rgba(0,0,0,0.24)]"
           >
             Request Healthcare Growth Audit
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
@@ -465,7 +465,7 @@ function HealthcarePage() {
 
           <Link
             to="/contact"
-                  className="inline-flex items-center gap-2 rounded-full border border-foreground/20 px-6 py-3 text-sm font-medium text-foreground shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-foreground/5 hover:shadow-[0_18px_35px_-18px_rgba(0,0,0,0.22)]"
+            className="inline-flex items-center gap-2 rounded-full border border-foreground/20 px-6 py-3 text-sm font-medium text-foreground shadow-sm transition-all duration-300 ease-out hover:bg-foreground/5 hover:shadow-[0_14px_32px_rgba(0,0,0,0.18)]"
           >
             Book Discovery Call
           </Link>
@@ -1008,14 +1008,14 @@ function HealthcarePage() {
             <div className="mt-10 flex flex-wrap justify-center gap-3">
               <Link
                 to="/contact"
-                className="group inline-flex items-center gap-2 rounded-full bg-background px-7 py-3.5 text-sm font-medium text-foreground shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-background/90 hover:shadow-[0_18px_35px_-18px_rgba(0,0,0,0.22)]"
+                className="group inline-flex items-center gap-2 rounded-full bg-background px-7 py-3.5 text-sm font-medium text-foreground shadow-sm transition-all duration-300 ease-out hover:bg-background/90 hover:shadow-[0_14px_34px_rgba(255,255,255,0.18)]"
               >
                 Request Healthcare Growth Audit
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
               </Link>
               <Link
                 to="/contact"
-                className="inline-flex items-center gap-2 rounded-full border border-background/30 px-7 py-3.5 text-sm font-medium text-background shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-background/10 hover:shadow-[0_18px_35px_-18px_rgba(0,0,0,0.22)]"
+                className="inline-flex items-center gap-2 rounded-full border border-background/30 px-7 py-3.5 text-sm font-medium text-background shadow-sm transition-all duration-300 ease-out hover:bg-background/10 hover:shadow-[0_14px_34px_rgba(255,255,255,0.14)]"
               >
                 Book Discovery Call
               </Link>

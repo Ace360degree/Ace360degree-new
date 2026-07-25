@@ -530,13 +530,13 @@ function FinalCTA() {
         <div className="mt-12 flex flex-wrap gap-4 justify-center">
           <Link
             to="/portfolio"
-            className="inline-flex items-center gap-2 bg-brand text-dark px-6 py-3 text-sm font-semibold hover:brightness-95 transition"
+            className="inline-flex items-center gap-2 rounded-2xl bg-brand text-dark px-6 py-3 text-sm font-semibold shadow-sm transition-all duration-300 ease-out hover:brightness-95 hover:shadow-[0_14px_34px_rgba(255,179,48,0.32)]"
           >
             Explore Success Stories
           </Link>
           <Link
             to="/contact"
-            className="inline-flex items-center gap-2 border border-canvas/30 text-canvas px-6 py-3 text-sm font-semibold hover:bg-canvas/5 transition"
+            className="inline-flex items-center gap-2 rounded-2xl border border-canvas/30 text-canvas px-6 py-3 text-sm font-semibold shadow-sm transition-all duration-300 ease-out hover:bg-canvas/5 hover:shadow-[0_14px_34px_rgba(255,255,255,0.18)]"
           >
             Book Discovery Call
           </Link>

@@ -3,7 +3,7 @@ import { useEffect, useState, useRef, ReactNode } from "react";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import heroMesh from "@/assets/index/AI growth visualization.png";
-import showreel from "@/assets/index/teamwork.png";
+import showreel from "@/assets/teamwork222.png";
 import caseMos from "@/assets/index/story/MOS Utility.png";
 import caseCosmos from "@/assets/index/story/Cosmos.png";
 import caseRexello from "@/assets/index/story/Rexello Castors.png";
@@ -11,7 +11,7 @@ import caseAmigo from "@/assets/index/story/Amigo Academy.png";
 import caseKsa from "@/assets/index/story/KSA Group.png";
 import caseLiving from "@/assets/index/story/Living Concepts.png";
 import blogFeatured from "@/assets/blog-featured.jpg";
-import whyTeam from "@/assets/why-team.jpg";
+import whyTeam from "@/assets/why-team656.jpg";
 import webIcon from "@/assets/index/web.png";
 import seoIcon from "@/assets/index/seo.png";
 import pmIcon from "@/assets/index/PM.png";
@@ -35,6 +35,46 @@ import estateIcon from "@/assets/index/industry/estate.png";
 import lifestyleIcon from "@/assets/index/industry/lifestyle.png";
 
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      {
+        title:
+          "Best Digital Marketing Agency in Mumbai | SEO & Growth Experts in Malad",
+      },
+      {
+        name: "description",
+        content:
+          "Grow your business with a leading digital marketing agency in Mumbai, Malad. We offer SEO, Google Ads, social media marketing, website development and branding services to increase traffic, leads, and conversions.",
+      },
+      {
+        name: "keywords",
+        content:
+          "digital marketing agency, SEO agency in Mumbai, digital marketing company Mumbai, best SEO company in Mumbai, SEO services Mumbai, digital marketing agency in Malad",
+      },
+      {
+        property: "og:title",
+        content:
+          "Best Digital Marketing Agency in Mumbai | SEO & Growth Experts in Malad",
+      },
+      {
+        property: "og:description",
+        content:
+          "Grow your business with AI-powered digital marketing, SEO, branding and technology solutions.",
+      },
+      {
+        property: "og:type",
+        content: "website",
+      },
+    ],
+
+    links: [
+      {
+        rel: "canonical",
+        href: "https://ace360degree.com/",
+      },
+    ],
+  }),
+
   component: Index,
 });
 
@@ -201,10 +241,17 @@ function Ticker() {
 
 /* ---------------- Showreel ---------------- */
 function Showreel() {
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
+
   return (
     <section className="py-28 bg-canvas">
       <div className="mx-auto max-w-7xl px-6 grid lg:grid-cols-2 gap-14 items-center">
-        <div className="relative group cursor-pointer">
+        <button
+          type="button"
+          onClick={() => setIsVideoOpen(true)}
+          className="relative group block cursor-pointer text-left"
+          aria-label="Play Ace360degree showreel video"
+        >
           <img
             src={showreel}
             alt="Ace360 team at work"
@@ -218,10 +265,7 @@ function Showreel() {
               <div className="size-0 border-y-[10px] border-y-transparent border-l-[16px] border-l-dark ml-1" />
             </div>
           </div>
-          <span className="absolute bottom-4 right-4 text-[10px] uppercase tracking-[0.2em] text-canvas/80 bg-dark/60 px-2 py-1">
-            Identity Showreel
-          </span>
-        </div>
+        </button>
         <div>
           <span className="text-brand font-semibold text-xs tracking-[0.22em] uppercase">
             The Ace360 Story
@@ -248,6 +292,39 @@ function Showreel() {
           </div>
         </div>
       </div>
+
+      {isVideoOpen && (
+        <div
+          className="fixed inset-0 z-[80] grid place-items-center bg-dark/85 px-4 py-8 backdrop-blur-sm"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Ace360degree showreel video"
+          onClick={() => setIsVideoOpen(false)}
+        >
+          <div
+            className="relative w-full max-w-5xl overflow-hidden rounded-2xl bg-dark shadow-[0_28px_80px_rgba(0,0,0,0.45)]"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <button
+              type="button"
+              onClick={() => setIsVideoOpen(false)}
+              className="absolute right-3 top-3 z-10 grid size-10 place-items-center rounded-full bg-canvas text-xl leading-none text-dark shadow-lg transition-all duration-300 hover:bg-brand hover:shadow-[0_12px_28px_rgba(0,0,0,0.22)]"
+              aria-label="Close video"
+            >
+              &times;
+            </button>
+            <div className="aspect-video w-full bg-black">
+              <iframe
+                className="h-full w-full"
+                src="https://www.youtube-nocookie.com/embed/cfdt2FduiLc?autoplay=1&rel=0&modestbranding=1"
+                title="Ace360degree showreel"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              />
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 }
@@ -693,16 +770,16 @@ function Portfolio() {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((p, i) => (
-            <FadeIn key={p.name} delay={i * 100} className="group cursor-pointer">
-              <div className="overflow-hidden">
+          {projects.map((p) => (
+            <article key={p.name} className="group cursor-pointer">
+              <div className="overflow-hidden bg-white p-3 shadow-sm">
                 <img
                   src={p.img}
                   alt={p.name}
                   width={800}
                   height={1000}
                   loading="lazy"
-                  className="w-full aspect-[4/5] object-cover object-top group-hover:scale-[1.03] transition-transform duration-700"
+                  className="w-full aspect-[4/5] object-contain group-hover:scale-[1.03] transition-transform duration-700"
                 />
               </div>
               <div className="mt-5 flex items-start justify-between gap-4">
@@ -714,7 +791,7 @@ function Portfolio() {
                   Case Study
                 </span>
               </div>
-            </FadeIn>
+            </article>
           ))}
         </div>
       </div>
