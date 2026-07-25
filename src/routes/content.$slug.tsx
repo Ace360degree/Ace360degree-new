@@ -12,7 +12,13 @@ import {
   Link as LinkIcon,
   Quote,
 } from "lucide-react";
-import { formatWpDate, getFeaturedImage, getPageBySlug, stripHtml } from "@/lib/wp";
+import {
+  formatWpDate,
+  getFeaturedImage,
+  getPageBySlug,
+  normalizeWpContentHtml,
+  stripHtml,
+} from "@/lib/wp";
 import { BlogFAQ } from "@/components/blog-faq";
 
 type TocItem = {
@@ -100,7 +106,8 @@ export const Route = createFileRoute("/content/$slug")({
       throw notFound();
     }
 
-    const { contentHtml, toc, dynamicFaqs } = buildArticleContent(page.content.rendered);
+    const normalizedContent = normalizeWpContentHtml(page.content.rendered);
+    const { contentHtml, toc, dynamicFaqs } = buildArticleContent(normalizedContent);
 
     return {
       page,
@@ -108,7 +115,7 @@ export const Route = createFileRoute("/content/$slug")({
       contentHtml,
       dynamicFaqs,
       publishDate: formatWpDate(page.date),
-      readTime: getReadTimeFromHtml(page.content.rendered),
+      readTime: getReadTimeFromHtml(normalizedContent),
       imageUrl: getFeaturedImage(page),
     };
   },
