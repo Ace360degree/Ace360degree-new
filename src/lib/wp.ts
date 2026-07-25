@@ -240,6 +240,22 @@ export async function getLocationChildPages(parentId: number): Promise<WPPost[]>
   }
 }
 
+export async function getLocationPages(): Promise<WPPost[]> {
+  try {
+    const url = `${getLocationsApiUrl()}/pages?per_page=100&_embed`;
+    const res = await fetch(url);
+    if (!res.ok) {
+      console.error("Failed to fetch location pages from WP");
+      return [];
+    }
+    const data = await res.json();
+    return data;
+  } catch (error) {
+    console.error("Error fetching location pages:", error);
+    return [];
+  }
+}
+
 export async function getChildPages(parentId: number): Promise<WPPost[]> {
   try {
     const url = `${getApiUrl()}/pages?parent=${parentId}&per_page=100&_embed`;
