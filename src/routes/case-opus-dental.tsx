@@ -7,13 +7,13 @@ import heroImg from "@/assets/case-opus-dental.123.jpg";
 export const Route = createFileRoute("/case-opus-dental")({
   head: () => ({
     meta: [
-      { title: "OPUS Dental Case Study | Dental Marketing — Ace360degree" },
+      { title: "Dentist Dental Case Study | Dental Marketing — Ace360degree" },
       {
         name: "description",
         content:
-          "How Ace360degree supported OPUS Dental with digital branding, healthcare marketing and patient engagement strategy.",
+          "How Ace360degree supported Dentist Dental with digital branding, healthcare marketing and patient engagement strategy.",
       },
-      { property: "og:title", content: "OPUS Dental Marketing Case Study" },
+      { property: "og:title", content: "Dentist Dental Marketing Case Study" },
       {
         property: "og:description",
         content:
@@ -51,7 +51,7 @@ function OpusDentalCaseStudyPage() {
               Success Story / Dental Marketing
             </div>
             <h1 className="mt-5 max-w-4xl font-serif text-4xl leading-tight tracking-tight md:text-6xl">
-              Strengthening digital visibility and patient engagement for OPUS Dental.
+              Strengthening digital visibility and patient engagement for Dentist Dental.
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
               A dental marketing and branding engagement focused on improving practice visibility,
