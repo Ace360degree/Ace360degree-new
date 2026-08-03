@@ -762,7 +762,7 @@ function HealthcarePage() {
         {
           img: caseHealthus,
           tag: "HealthTech",
-          title: "Healthus.ai",
+          title: "Pain Cure Physiotherapy",
           body: "Integrated healthcare growth strategy focused on patient acquisition and digital marketing.",
         },
         {
@@ -939,7 +939,7 @@ function HealthcarePage() {
             {[
               {
                 img: caseHealthus,
-                title: "Healthus.ai",
+                title: "paincurephysio",
                 tag: "HealthTech Growth",
                 href: "/case-healthus-ai",
               },

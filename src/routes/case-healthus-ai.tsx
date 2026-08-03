@@ -7,13 +7,13 @@ import heroImg from "@/assets/case-healthus.123.jpg";
 export const Route = createFileRoute("/case-healthus-ai")({
   head: () => ({
     meta: [
-      { title: "Healthus.ai Case Study | Healthcare Growth — Ace360degree" },
+      { title: "paincurephysio Case Study | Healthcare Growth — Ace360degree" },
       {
         name: "description",
         content:
-          "How Ace360degree supported Healthus.ai with healthcare growth strategy, digital marketing and patient acquisition systems.",
+          "How Ace360degree supported paincurephysio with healthcare growth strategy, digital marketing and patient acquisition systems.",
       },
-      { property: "og:title", content: "Healthus.ai Healthcare Growth Case Study" },
+      { property: "og:title", content: "paincurephysio Healthcare Growth Case Study" },
       {
         property: "og:description",
         content:
@@ -51,7 +51,7 @@ function HealthusCaseStudyPage() {
               Success Story / HealthTech
             </div>
             <h1 className="mt-5 max-w-4xl font-serif text-4xl leading-tight tracking-tight md:text-6xl">
-              Building a focused healthcare growth foundation for Healthus.ai.
+              Building a focused healthcare growth foundation for paincurephysio.
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
               A strategic healthcare marketing engagement designed to strengthen digital trust,
@@ -75,7 +75,7 @@ function HealthusCaseStudyPage() {
           <div className="lg:col-span-5">
             <img
               src={heroImg}
-              alt="Healthus.ai healthcare growth case study"
+              alt="paincurephysio healthcare growth case study"
               className="aspect-[4/3] w-full rounded-2xl object-cover"
               width={1200}
               height={900}

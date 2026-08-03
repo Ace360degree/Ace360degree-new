@@ -167,14 +167,14 @@ function Hero() {
               href="#cta"
               className="group relative inline-flex items-center gap-2 bg-brand rounded-2xl py-3 px-6 text-sm font-semibold text-dark ring-1 ring-brand hover:brightness-95 transition-all duration-300 shadow-sm hover:shadow-[0_12px_28px_rgba(0,0,0,0.22)] overflow-hidden"
             >
-              <span className="absolute left-2.5 grid place-items-center size-6 rounded-full bg-dark/10 transition-all duration-500 ease-out group-hover:left-[calc(100%-2rem)]">
-                <span className="size-1.5 rounded-full bg-dark" />
+              <span className="absolute left-2.5 grid size-6 place-items-center rounded-full bg-dark/10">
+                <span className="size-1.5 rounded-full bg-dark animate-pop-bob shadow-[0_0_0_0_rgba(19,18,18,0.35)] group-hover:shadow-[0_0_0_8px_rgba(19,18,18,0)]" />
               </span>
-              <span className="pl-6 group-hover:-translate-x-2 transition-transform duration-500">Get Free Digital Audit</span>
+              <span className="pl-6">Get Free Digital Audit</span>
             </a>
             <a
               href="#cta"
-              className="inline-flex items-center px-6 py-3 rounded-2xl text-sm font-semibold text-dark border border-dark/15 hover:bg-dark hover:text-canvas transition"
+              className="inline-flex items-center px-6 py-3 rounded-2xl text-sm font-semibold text-dark border border-dark/15  transition-shadow duration-300 hover:shadow-[0_14px_30px_rgba(19,18,18,0.18)]"
             >
               Schedule Consultation
             </a>
@@ -230,7 +230,7 @@ function Ticker() {
     </div>
   );
   return (
-    <div className="overflow-hidden bg-dark py-6 border-y border-white/5">
+    <div className="logo-row overflow-hidden bg-dark py-6 border-y border-white/5">
       <div className="animate-marquee-fast">
         <Strip />
         <Strip />
@@ -268,7 +268,7 @@ function Showreel() {
         </button>
         <div>
           <span className="text-brand font-semibold text-xs tracking-[0.22em] uppercase">
-            The Ace360 Story
+            The Ace360degree Story
           </span>
           <h2 className="mt-4 text-4xl md:text-5xl font-medium leading-tight text-balance">
             Stories That <span className="font-serif italic">Inspire</span>. Results That{" "}
@@ -281,10 +281,10 @@ function Showreel() {
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
             <a href="#cta" className="group relative inline-flex items-center gap-2 bg-dark text-canvas rounded-2xl py-3 px-6 text-sm font-semibold hover:bg-dark/90 transition-all duration-300 shadow-sm hover:shadow-[0_12px_28px_rgba(0,0,0,0.22)] overflow-hidden">
-              <span className="absolute left-2.5 grid place-items-center size-6 rounded-full bg-canvas/10 transition-all duration-500 ease-out group-hover:left-[calc(100%-2rem)]">
-                <span className="size-1.5 rounded-full bg-canvas" />
+              <span className="absolute left-2.5 grid size-6 place-items-center rounded-full bg-canvas/10">
+                <span className="size-1.5 rounded-full bg-canvas animate-pop-bob shadow-[0_0_0_0_rgba(255,255,255,0.35)] group-hover:scale-110 group-hover:shadow-[0_0_0_8px_rgba(255,255,255,0)] transition-transform duration-300" />
               </span>
-              <span className="pl-6 group-hover:-translate-x-2 transition-transform duration-500">Start a Project</span>
+              <span className=" pl-6 group-hover:-translate-x-2 transition-transform duration-500">Start a Project</span>
             </a>
             <a href="#cta" className="inline-flex items-center px-6 py-3 rounded-2xl text-sm font-semibold border border-dark/15 transition-all duration-300 shadow-sm hover:shadow-[0_12px_28px_rgba(0,0,0,0.22)]">
               Book Consultation
@@ -413,16 +413,7 @@ function Services() {
                  <img src={s.image} alt={s.title} loading="lazy" className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
               </div>
               <div className="p-10 flex-1 flex flex-col">
-                <div className="flex items-start justify-between mb-6">
-                  <img
-                    src={s.icon}
-                    alt={s.title}
-                    className="h-14 w-14 object-contain"
-                  />
-                  <span className="text-[11px] font-mono text-dark/30 tracking-widest">
-                    0{i + 1}
-                  </span>
-                </div>
+
                 <p className="text-[10px] uppercase tracking-[0.2em] text-brand font-semibold mb-2">
                   {s.cat}
                 </p>
