@@ -39,7 +39,7 @@ export const Route = createFileRoute("/")({
     meta: [
       {
         title:
-          "Best Digital Marketing Agency in Mumbai | SEO & Growth Experts in Malad",
+          "AI First Digital Marketing Agency in Mumbai | SEO & Growth Experts in Malad",
       },
       {
         name: "description",
@@ -149,7 +149,7 @@ function Hero() {
       <div className="mx-auto max-w-7xl px-6 grid lg:grid-cols-12 gap-12 items-center">
         <div className="lg:col-span-7">
           <span className="mb-6 inline-block text-[11px] font-semibold tracking-[0.22em] uppercase text-dark/50">
-            Digital Marketing Agency in Mumbai, India
+           AI,First Digital Marketing Agency in Mumbai, India
           </span>
           <h1 className="text-balance text-5xl md:text-6xl lg:text-7xl font-medium leading-[1.05] tracking-tight">
             Where Strategy Meets{" "}

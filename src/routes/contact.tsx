@@ -49,8 +49,8 @@ const services = [
 const quickActions = [
   {
     label: "WhatsApp",
-    value: "+91 98201 65488",
-    href: "https://wa.me/919820165488",
+    value: "+91 70453 60360",
+    href: "https://wa.me/917045360360",
     icon: whatappIcon,
   },
   {
@@ -61,14 +61,14 @@ const quickActions = [
   },
   {
     label: "Partnerships",
-    value: "connect@ace360degree.com",
-    href: "mailto:connect@ace360degree.com",
+    value: "Growth@a360pl.com",
+    href: "mailto:Growth@a360pl.com",
     icon: handIcon,
   },
   {
     label: "Careers",
-    value: "careers@ace360degree.com",
-    href: "mailto:careers@ace360degree.com",
+    value: "career@a360pl.com",
+    href: "mailto:career@a360pl.com",
     icon: starIcon,
   },
 ];
@@ -210,7 +210,7 @@ function ContactPage() {
               </a>
 
               <a
-                href="https://wa.me/919820165488"
+                href="https://wa.me/917045360360"
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex size-11 items-center justify-center rounded-full bg-brand text-dark shadow-sm transition-all duration-300 hover:brightness-95 hover:shadow-[0_12px_28px_rgba(0,0,0,0.22)]"
@@ -280,10 +280,10 @@ function ContactPage() {
                 <span className="text-dark/60">Phone</span>
 
                 <a
-                  href="tel:+919820165488"
+                  href="tel:+917045360360"
                   className="font-medium hover:text-brand"
                 >
-                  +91 98201 65488
+                  +91 70453 60360
                 </a>
               </div>
 
@@ -291,10 +291,10 @@ function ContactPage() {
                 <span className="text-dark/60">Email</span>
 
                 <a
-                  href="mailto:info@ace360degree.com"
+                  href="mailto:Growth@a360pl.com"
                   className="font-medium hover:text-brand"
                 >
-                  info@ace360degree.com
+                  Growth@a360pl.com
                 </a>
               </div>
 
@@ -664,58 +664,43 @@ function ContactPage() {
           </p>
 
           <div className="mt-8 flex flex-wrap justify-center gap-3">
-            {["LinkedIn", "Instagram", "YouTube", "Facebook", "X"].map(
-              (social) => (
-                <a
-                  key={social}
-                  href="#"
-                  className="rounded-xl border border-dark/15 px-5 py-2.5 text-sm shadow-sm transition-all duration-300 hover:bg-dark hover:text-canvas hover:shadow-[0_12px_28px_rgba(0,0,0,0.18)]"
-                >
-                  {social}
-                </a>
-              ),
-            )}
+            {[
+              {
+                label: "LinkedIn",
+                href: "https://www.linkedin.com/company/ace360degree---business-growth-digital-transformation-agency/posts/?feedView=all",
+              },
+              {
+                label: "Instagram",
+                href: "https://www.instagram.com/ace360degree/",
+              },
+              {
+                label: "YouTube",
+                href: "https://www.youtube.com/@ace360degree",
+              },
+              {
+                label: "Facebook",
+                href: "https://www.facebook.com/ace360degree/",
+              },
+              {
+                label: "X",
+                href: "https://x.com/Ace360pl",
+              },
+            ].map((social) => (
+              <a
+                key={social.label}
+                href={social.href}
+                target="_blank"
+                rel="noreferrer"
+                className="rounded-xl border border-dark/15 px-5 py-2.5 text-sm shadow-sm transition-all duration-300 hover:bg-dark hover:text-canvas hover:shadow-[0_12px_28px_rgba(0,0,0,0.18)]"
+              >
+                {social.label}
+              </a>
+            ))}
           </div>
         </div>
       </section>
 
       <SiteFooter />
-
-      {/* STICKY UTILITY BAR */}
-      <div className="fixed bottom-4 left-1/2 z-40 hidden -translate-x-1/2 items-center gap-1 rounded-full bg-dark px-2 py-2 text-canvas shadow-2xl backdrop-blur md:flex">
-        <a
-          href="tel:+919820165488"
-          className="rounded-full px-4 py-2 text-xs uppercase tracking-wider transition-all duration-300 hover:text-brand hover:shadow-[0_8px_20px_rgba(0,0,0,0.35)]"
-        >
-          <span aria-hidden="true">📞</span> Call
-        </a>
-
-        <span
-          className="h-4 w-px bg-canvas/20"
-          aria-hidden="true"
-        />
-
-        <a
-          href="https://wa.me/919820165488"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="rounded-full px-4 py-2 text-xs uppercase tracking-wider transition-all duration-300 hover:text-brand hover:shadow-[0_8px_20px_rgba(0,0,0,0.35)]"
-        >
-          <span aria-hidden="true">💬</span> WhatsApp
-        </a>
-
-        <span
-          className="h-4 w-px bg-canvas/20"
-          aria-hidden="true"
-        />
-
-        <a
-          href="mailto:info@ace360degree.com"
-          className="rounded-full px-4 py-2 text-xs uppercase tracking-wider transition-all duration-300 hover:text-brand hover:shadow-[0_8px_20px_rgba(0,0,0,0.35)]"
-        >
-          <span aria-hidden="true">✉</span> Email
-        </a>
-      </div>
     </div>
   );
 }

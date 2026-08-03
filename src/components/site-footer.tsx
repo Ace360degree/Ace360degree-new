@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { ArrowUp, MapPin, Mail, Phone, Linkedin, Instagram, Youtube, Facebook } from "lucide-react";
+import { ArrowUp, MapPin, Mail, Phone, MessageSquare, Linkedin, Instagram, Youtube, Facebook } from "lucide-react";
 import { useEffect, useState } from "react";
 import footerLogo from "@/assets/footer-logo.png";
 
@@ -60,15 +60,47 @@ export function SiteFooter() {
       <button
         type="button"
         aria-label="Scroll to top"
-        className={`fixed bottom-6 right-6 z-50 grid size-12 place-items-center rounded-full border border-[#FFA20B] bg-[#FFA20B] text-[#181818] shadow-[0_12px_32px_rgba(0,0,0,0.25)] transition-all duration-300 hover:bg-white hover:border-white ${
+        className={`fixed bottom-24 right-4 z-50 grid size-12 place-items-center rounded-full border border-[#FFA20B] bg-[#FFA20B] text-[#181818] shadow-[0_12px_32px_rgba(0,0,0,0.25)] transition-all duration-300 hover:bg-white hover:border-white md:bottom-6 md:right-6 ${
           showScrollTop
             ? "translate-y-0 opacity-100 pointer-events-auto"
             : "translate-y-4 opacity-0 pointer-events-none"
         }`}
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-      >
+        >
         <ArrowUp className="size-5" />
       </button>
+
+      <div className="fixed bottom-4 left-1/2 z-40 flex w-[calc(100%-1rem)] max-w-[360px] -translate-x-1/2 items-center rounded-full bg-[#181818] px-2 py-2 text-canvas shadow-2xl backdrop-blur md:hidden">
+        <a
+          href="tel:+917045360360"
+          className="flex flex-1 items-center justify-center gap-2 rounded-full px-2 py-2 text-[11px] font-semibold uppercase tracking-[0.18em] transition-colors hover:text-[#FFA20B]"
+        >
+          <Phone className="size-3.5" />
+          <span>Call</span>
+        </a>
+
+        <span className="h-5 w-px bg-white/15" aria-hidden="true" />
+
+        <a
+          href="https://wa.me/917045360360"
+          target="_blank"
+          rel="noreferrer"
+          className="flex flex-1 items-center justify-center gap-2 rounded-full px-2 py-2 text-[11px] font-semibold uppercase tracking-[0.18em] transition-colors hover:text-[#FFA20B]"
+        >
+          <MessageSquare className="size-3.5" />
+          <span>WhatsApp</span>
+        </a>
+
+        <span className="h-5 w-px bg-white/15" aria-hidden="true" />
+
+        <a
+          href="mailto:Growth@a360pl.com"
+          className="flex flex-1 items-center justify-center gap-2 rounded-full px-2 py-2 text-[11px] font-semibold uppercase tracking-[0.18em] transition-colors hover:text-[#FFA20B]"
+        >
+          <Mail className="size-3.5" />
+          <span>Email</span>
+        </a>
+      </div>
 
       <footer className="bg-[#181818] relative overflow-hidden pt-24 pb-12 font-sans">
         {/* Yellow Ring */}
@@ -109,11 +141,11 @@ export function SiteFooter() {
               <div className="pt-2 space-y-4">
                 <div className="flex gap-4 items-center">
                   <Mail className="size-5 shrink-0 text-white" />
-                  <a href="mailto:Growth@ace360pl.com" className="text-white/50 hover:text-white transition">Growth@ace360pl.com</a>
+                  <a href="mailto:Growth@a360pl.com" className="text-white/50 hover:text-white transition">Growth@a360pl.com</a>
                 </div>
                 <div className="flex gap-4 items-center">
                   <Mail className="size-5 shrink-0 text-white" />
-                  <a href="mailto:ClientSuccess@ace360pl.com" className="text-white/50 hover:text-white transition">ClientSuccess@ace360pl.com</a>
+                  <a href="mailto:clientSuccess@a360pl.com" className="text-white/50 hover:text-white transition">ClientSuccess@a360pl.com</a>
                 </div>
                 <div className="flex gap-4 items-center">
                   <Mail className="size-5 shrink-0 text-white" />
@@ -131,11 +163,11 @@ export function SiteFooter() {
                 </div>
                 <div className="flex gap-4 items-center">
                   <Phone className="size-5 shrink-0 text-white" />
-                  <a href="tel:+971562161563" className="text-white/50 hover:text-white transition">+971 56 216 1563</a>
+                  <a href="tel:+971562161563" className="text-white/50 hover:text-white transition">+971 5621 61563</a>
                 </div>
                 <div className="flex gap-4 items-center">
                   <Phone className="size-5 shrink-0 text-white" />
-                  <a href="tel:+02246020360" className="text-white/50 hover:text-white transition">+022-46 020 360</a>
+                  <a href="tel:+022   " className="text-white/50 hover:text-white transition">+022-46 020 360</a>
                 </div>
                 <div className="flex gap-4 items-center">
                   <Phone className="size-5 shrink-0 text-white" />
@@ -266,7 +298,13 @@ export function SiteFooter() {
             >
               <Facebook className="size-4" />
             </a>
-            <a aria-label="X" className="size-10 rounded-full border border-white/20 grid place-items-center text-white/60 hover:bg-[#FFA20B] hover:text-[#181818] hover:border-[#FFA20B] transition cursor-pointer">
+            <a
+              aria-label="X"
+              href="https://x.com/Ace360pl"
+              target="_blank"
+              rel="noreferrer"
+              className="size-10 rounded-full border border-white/20 grid place-items-center text-white/60 hover:bg-[#FFA20B] hover:text-[#181818] hover:border-[#FFA20B] transition cursor-pointer"
+            >
               <svg
                 className="size-4"
                 viewBox="0 0 24 24"

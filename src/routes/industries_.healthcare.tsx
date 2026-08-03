@@ -768,7 +768,7 @@ function HealthcarePage() {
         {
           img: caseOpus,
           tag: "Dental",
-          title: "Dentist Dental",
+          title: "Mehta Dental Clinic",
           body: "Digital branding and marketing initiatives supporting visibility and patient engagement.",
         },
       ].map((c, i) => (
