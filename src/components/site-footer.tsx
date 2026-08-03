@@ -141,7 +141,7 @@ export function SiteFooter() {
                   <Phone className="size-5 shrink-0 text-white" />
                   <div className="flex flex-col">
                     <span className="text-[10px] uppercase tracking-widest text-white/60">HR Number</span>
-                    <a href="tel:+919136426360" className="text-white/50 hover:text-white transition">9136426360</a>
+                    <a href="tel:+919136426360" className="text-white/50 hover:text-white transition">+91-9136426360</a>
                   </div>
                 </div>
               </div>

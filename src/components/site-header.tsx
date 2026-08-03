@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowRight, ChevronDown, X } from "lucide-react";
 import { useEffect, useState } from "react";
+import { useLocation } from "@tanstack/react-router";
 import logo from "@/assets/ace360-logo.png";
 
 type NavItem = {
@@ -81,6 +82,7 @@ const CASE_STUDY_LINKS = [
 ];
 
 export function SiteHeader() {
+  const { pathname } = useLocation();
   const [scrolled, setScrolled] = useState(false);
   const [openMenu, setOpenMenu] = useState<string | null>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -127,30 +129,43 @@ export function SiteHeader() {
     setMobileCaseStudiesOpen(false);
   };
 
+  const isNavItemActive = (to?: string) => {
+    if (!to) return false;
+    return pathname === to || pathname.startsWith(`${to}/`);
+  };
+
   return (
     <>
       <header
-        className={`sticky top-0 z-50 w-full transition-all duration-300 ${scrolled || openMenu
-          ? "bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100"
-          : "bg-white border-b border-gray-100"
-          }`}
+        className={`sticky top-0 z-50 w-full transition-all duration-300 ${
+          scrolled || openMenu
+            ? "bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100"
+            : "bg-white border-b border-gray-100"
+        }`}
       >
         <div className="mx-auto flex h-24 max-w-[1400px] items-center justify-between px-8">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2 shrink-0">
-            <img src={logo} alt="Ace360degree" className="h-16 w-auto" />
+          <Link to="/" className="flex items-center gap-2 shrink-0 lg:pl-6 xl:pl-10">
+            <img src={logo} alt="Ace360degree" className="h-20 w-auto" />
           </Link>
 
           <nav className="hidden lg:flex items-center gap-0.5">
             {NAV.map((item) => {
               const hasMenu = !!item.groups?.length;
+              const active = isNavItemActive(item.to);
+              const navClassName = `px-4 py-2 text-sm font-medium rounded-md transition-all duration-300 ${
+                active
+                  ? "text-[#FFA20B] bg-[#FFA20B]/10 shadow-[0_8px_22px_rgba(255,162,11,0.14)]"
+                  : "text-gray-700 hover:text-[#FFA20B] hover:bg-[#FFA20B]/10 hover:shadow-[0_8px_22px_rgba(255,162,11,0.12)]"
+              }`;
 
               if (!hasMenu) {
                 return (
                   <a
                     key={item.label}
                     href={item.to}
-                    className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-[#FFA20B] transition-colors rounded-md"
+                    aria-current={active ? "page" : undefined}
+                    className={navClassName}
                   >
                     {item.label}
                   </a>
@@ -158,13 +173,11 @@ export function SiteHeader() {
               }
 
               return (
-                <div
-                  key={item.label}
-                  className="relative"
-                >
+                <div key={item.label} className="relative">
                   <a
                     href={item.to}
-                    className="inline-flex items-center gap-1 px-4 py-2 text-sm font-medium text-gray-700 hover:text-[#FFA20B] transition-colors rounded-md"
+                    aria-current={active ? "page" : undefined}
+                    className={`inline-flex items-center gap-1 ${navClassName}`}
                   >
                     {item.label}
                   </a>
@@ -177,7 +190,7 @@ export function SiteHeader() {
           <div className="flex items-center gap-3 shrink-0">
             <button
               type="button"
-              className="inline-flex items-center bg-[#FFB330] hover:bg-[#E09010] text-[#181818] text-xs sm:text-sm font-semibold px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-2xl transition-all duration-300 shadow-sm hover:shadow-[0_12px_28px_rgba(0,0,0,0.22)] whitespace-nowrap"
+              className="inline-flex items-center bg-[#FFB330] text-[#181818] text-xs sm:text-sm font-semibold px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-2xl transition-all duration-300 shadow-sm hover:shadow-[0_16px_34px_rgba(0,0,0,0.22)] whitespace-nowrap"
               onClick={openStrategyForm}
             >
               Book a Strategy Call
@@ -193,7 +206,14 @@ export function SiteHeader() {
                 setMobileCaseStudiesOpen(false);
               }}
             >
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
+              <svg
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.8"
+              >
                 {mobileOpen ? (
                   <path d="M6 6l12 12M18 6L6 18" strokeLinecap="round" />
                 ) : (
@@ -370,7 +390,7 @@ export function SiteHeader() {
               })}
               <button
                 type="button"
-                className="flex w-full justify-center items-center bg-[#FFB330] hover:bg-[#E09010] text-[#181818] text-sm font-semibold px-5 py-3 rounded-2xl transition-all duration-300 shadow-sm hover:shadow-[0_12px_28px_rgba(0,0,0,0.22)]"
+                className="flex w-full justify-center items-center bg-[#FFB330] text-[#181818] text-sm font-semibold px-5 py-3 rounded-2xl transition-all duration-300 shadow-sm hover:shadow-[0_16px_34px_rgba(0,0,0,0.22)]"
                 onClick={() => {
                   closeMobileMenu();
                   openStrategyForm();

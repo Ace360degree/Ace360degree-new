@@ -92,8 +92,10 @@
   animation: marquee 20s linear infinite;
 }
 
-/* Pause marquee when hovering anywhere in the logo strip */
-.logo-row:hover .animate-marquee {
+/* Pause marquee when hovering anywhere in the strip */
+.logo-row:hover .animate-marquee,
+.logo-row:hover .animate-marquee-fast,
+.logo-row:hover .animate-marquee-reverse {
   animation-play-state: paused;
 }
 
@@ -140,6 +142,28 @@
 
   50% {
     transform: translateY(-10px);
+  }
+}
+
+.animate-pop-bob {
+  animation: pop-bob 1.4s ease-in-out infinite;
+}
+
+@keyframes pop-bob {
+  0%,
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(19, 18, 18, 0.35);
+  }
+
+  45% {
+    transform: scale(1.12) translateY(-1px);
+    box-shadow: 0 0 0 8px rgba(19, 18, 18, 0);
+  }
+
+  60% {
+    transform: scale(0.98) translateY(0);
+    box-shadow: 0 0 0 0 rgba(19, 18, 18, 0);
   }
 }
 
