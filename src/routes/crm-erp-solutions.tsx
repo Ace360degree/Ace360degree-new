@@ -10,33 +10,74 @@ import futurescope from "@/assets/futuresope.png";
 
 export const Route = createFileRoute("/crm-erp-solutions")({
   component: CrmErpPage,
+
   head: () => ({
+    // title: "CRM & ERP Solutions Company in Mumbai | Ace360degree",
+
     meta: [
       {
-        title:
-          "CRM & ERP Solutions Mumbai | Business Systems & Process Transformation | Ace360degree",
-      },
-      {
+        title: "CRM & ERP Solutions Company in Mumbai | Ace360degree",
         name: "description",
         content:
-          "Ace360degree is a Business Systems & Process Transformation Partner helping organizations improve visibility, automate operations and create scalable foundations for growth through custom CRM and ERP solutions.",
+          "Ace360degree is a CRM & ERP solutions company in Mumbai delivering custom CRM software, ERP systems and business automation solutions to improve efficiency and growth.",
+      },
+      {
+        name: "keywords",
+        content:
+          "Business Management Software, Custom ERP Development, CRM Software Development Company, ERP Software Development Company, Enterprise Software Development, Custom CRM Development, ERP Software Company in Mumbai, Workflow Automation Solutions, Business Automation Solutions",
       },
       {
         property: "og:title",
-        content: "CRM & ERP Solutions Partner | Ace360degree",
+        content: "CRM & ERP Solutions Company in Mumbai | Ace360degree",
       },
       {
         property: "og:description",
         content:
-          "Transform Operations. Improve Visibility. Scale Efficiently. Business systems designed to improve control, efficiency and sustainable growth.",
+          "Ace360degree is a CRM & ERP solutions company in Mumbai delivering custom CRM software, ERP systems and business automation solutions to improve efficiency and growth.",
       },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: "/crm-erp-solutions" },
+      {
+        property: "og:type",
+        content: "website",
+      },
+      {
+        property: "og:url",
+        content: "https://www.ace360degree.com/crm-erp-solutions",
+      },
+      {
+        property: "og:site_name",
+        content: "Ace360degree",
+      },
+      {
+        name: "robots",
+        content: "index, follow",
+      },
+      {
+        name: "author",
+        content: "Ace360degree",
+      },
+      {
+        name: "twitter:card",
+        content: "summary_large_image",
+      },
+      {
+        name: "twitter:title",
+        content: "CRM & ERP Solutions Company in Mumbai | Ace360degree",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "Ace360degree is a CRM & ERP solutions company in Mumbai delivering custom CRM software, ERP systems and business automation solutions to improve efficiency and growth.",
+      },
     ],
-    links: [{ rel: "canonical", href: "/crm-erp-solutions" }],
+
+    links: [
+      {
+        rel: "canonical",
+        href: "https://www.ace360degree.com/crm-erp-solutions",
+      },
+    ],
   }),
 });
-
 /* ---------- helpers ---------- */
 function useReveal<T extends HTMLElement>() {
   const ref = useRef<T | null>(null);

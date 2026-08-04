@@ -9,33 +9,74 @@ import caseLiving from "@/assets/case-living.a4.jpg";
 
 export const Route = createFileRoute("/brand-strategy")({
   component: BrandStrategyPage,
+
   head: () => ({
+    // title: "Brand Strategy Agency in Mumbai | Ace360degree",
+
     meta: [
       {
-        title:
-          "Brand Strategy & Positioning Services Mumbai | Brand Consulting | Ace360degree",
-      },
-      {
+        title: "Brand Strategy Agency in Mumbai | Ace360degree",
         name: "description",
         content:
-          "Ace360degree is a Brand Strategy & Positioning Partner helping businesses define who they are, how they are perceived and why customers choose them. Build trust, create differentiation and drive preference.",
+          "Ace360degree is a brand strategy agency in Mumbai helping businesses build strong brand identities through positioning, messaging, visual identity and brand consulting.",
+      },
+      {
+        name: "keywords",
+        content:
+          "Brand Identity Design, Brand Identity Agency, Brand Building Company, Brand Consulting Company, Brand Strategy Services, Brand Development Agency, Strategic Branding Company, Brand Positioning Services, Brand Strategy Agency in Mumbai",
       },
       {
         property: "og:title",
-        content: "Brand Strategy & Positioning Partner | Ace360degree",
+        content: "Brand Strategy Agency in Mumbai | Ace360degree",
       },
       {
         property: "og:description",
         content:
-          "Build Trust. Create Differentiation. Drive Preference. Strategic brand positioning, messaging and architecture for ambitious businesses.",
+          "Ace360degree is a brand strategy agency in Mumbai helping businesses build strong brand identities through positioning, messaging, visual identity and brand consulting.",
       },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: "/brand-strategy" },
+      {
+        property: "og:type",
+        content: "website",
+      },
+      {
+        property: "og:url",
+        content: "https://www.ace360degree.com/brand-strategy",
+      },
+      {
+        property: "og:site_name",
+        content: "Ace360degree",
+      },
+      {
+        name: "robots",
+        content: "index, follow",
+      },
+      {
+        name: "author",
+        content: "Ace360degree",
+      },
+      {
+        name: "twitter:card",
+        content: "summary_large_image",
+      },
+      {
+        name: "twitter:title",
+        content: "Brand Strategy Agency in Mumbai | Ace360degree",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "Ace360degree is a brand strategy agency in Mumbai helping businesses build strong brand identities through positioning, messaging, visual identity and brand consulting.",
+      },
     ],
-    links: [{ rel: "canonical", href: "/brand-strategy" }],
+
+    links: [
+      {
+        rel: "canonical",
+        href: "https://www.ace360degree.com/brand-strategy",
+      },
+    ],
   }),
 });
-
 /* ---------- helpers ---------- */
 function useReveal<T extends HTMLElement>() {
   const ref = useRef<T | null>(null);

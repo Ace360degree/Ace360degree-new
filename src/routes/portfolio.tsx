@@ -12,28 +12,78 @@ import caseLiving from "@/assets/case-mossy5.jpg";
 
 export const Route = createFileRoute("/portfolio")({
   component: PortfolioPage,
+
   head: () => ({
+    // title:
+    //   "Digital Marketing, Branding & Technology Portfolio | Ace360degree",
+
     meta: [
-      { title: "Business Growth Stories & Digital Transformation Case Studies — Ace360degree" },
       {
+        title:
+        "Digital Marketing, Branding & Technology Portfolio | Ace360degree",
         name: "description",
         content:
-          "Explore how Ace360degree partners with businesses across manufacturing, healthcare, education, fintech, architecture and retail to solve growth challenges through marketing, technology and AI.",
+          "Explore Ace360degree's portfolio featuring successful digital marketing, branding, website development, AI and technology projects across diverse industries.",
       },
-      { property: "og:title", content: "Business Growth Stories — Ace360degree" },
+      {
+        name: "keywords",
+        content:
+          "Website Design Portfolio, Digital Marketing Portfolio, Branding Portfolio, Digital Marketing Case Studies, Marketing Agency Portfolio, Agency Case Studies, Technology Project Portfolio, Client Success Stories",
+      },
+      {
+        property: "og:title",
+        content:
+          "Digital Marketing, Branding & Technology Portfolio | Ace360degree",
+      },
       {
         property: "og:description",
         content:
-          "Real partnerships. Real transformation. Real outcomes. Discover how Ace360degree powers business growth since 2009.",
+          "Explore Ace360degree's portfolio featuring successful digital marketing, branding, website development, AI and technology projects across diverse industries.",
       },
-      { property: "og:image", content: "/src/assets/portfolio-hero.jpg" },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: "/portfolio" },
+      {
+        property: "og:type",
+        content: "website",
+      },
+      {
+        property: "og:url",
+        content: "https://www.ace360degree.com/portfolio",
+      },
+      {
+        property: "og:site_name",
+        content: "Ace360degree",
+      },
+      {
+        name: "robots",
+        content: "index, follow",
+      },
+      {
+        name: "author",
+        content: "Ace360degree",
+      },
+      {
+        name: "twitter:card",
+        content: "summary_large_image",
+      },
+      {
+        name: "twitter:title",
+        content:
+          "Digital Marketing, Branding & Technology Portfolio | Ace360degree",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "Explore Ace360degree's portfolio featuring successful digital marketing, branding, website development, AI and technology projects across diverse industries.",
+      },
     ],
-    links: [{ rel: "canonical", href: "/portfolio" }],
+
+    links: [
+      {
+        rel: "canonical",
+        href: "https://www.ace360degree.com/portfolio",
+      },
+    ],
   }),
 });
-
 function useReveal<T extends HTMLElement>() {
   const ref = useRef<T | null>(null);
   const [seen, setSeen] = useState(false);

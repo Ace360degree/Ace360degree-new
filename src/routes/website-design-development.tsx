@@ -10,30 +10,79 @@ import caseKuwal from "@/assets/case-kuwaly1.png";
 
 export const Route = createFileRoute("/website-design-development")({
   component: WebsiteDesignPage,
+
   head: () => ({
+    // title:
+    //   "Website Design & Development Company in Mumbai | Ace360degree",
+
     meta: [
       {
         title:
-          "Website Design & Development Services Mumbai | Ace360degree",
-      },
-      {
+        "Website Design & Development Company in Mumbai | Ace360degree",
+  
         name: "description",
         content:
-          "Ace360degree is a Digital Experience & Growth Platform Partner helping businesses create websites that strengthen credibility, generate opportunities and support long-term growth through strategic design and technology.",
+          "Ace360degree is a website design and development company in Mumbai creating responsive, SEO-friendly, fast and custom websites that drive business growth.",
+      },
+      {
+        name: "keywords",
+        content:
+          "Website Design Company in Mumbai, Website Development Company in Mumbai, Web Development Company in Mumbai, Corporate Website Development, Website Development Agency, Custom Website Development, Business Website Development, Professional Website Design Services, Custom Web Design Company",
       },
       {
         property: "og:title",
-        content: "Website Design & Development Partner | Ace360degree",
+        content:
+          "Website Design & Development Company in Mumbai | Ace360degree",
       },
       {
         property: "og:description",
         content:
-          "Build Digital Experiences That Drive Business Growth. Websites designed to inspire trust, generate opportunities and support sustainable business growth.",
+          "Ace360degree is a website design and development company in Mumbai creating responsive, SEO-friendly, fast and custom websites that drive business growth.",
       },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: "/website-design-development" },
+      {
+        property: "og:type",
+        content: "website",
+      },
+      {
+        property: "og:url",
+        content:
+          "https://www.ace360degree.com/website-design-development",
+      },
+      {
+        property: "og:site_name",
+        content: "Ace360degree",
+      },
+      {
+        name: "robots",
+        content: "index, follow",
+      },
+      {
+        name: "author",
+        content: "Ace360degree",
+      },
+      {
+        name: "twitter:card",
+        content: "summary_large_image",
+      },
+      {
+        name: "twitter:title",
+        content:
+          "Website Design & Development Company in Mumbai | Ace360degree",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "Ace360degree is a website design and development company in Mumbai creating responsive, SEO-friendly, fast and custom websites that drive business growth.",
+      },
     ],
-    links: [{ rel: "canonical", href: "/website-design-development" }],
+
+    links: [
+      {
+        rel: "canonical",
+        href:
+          "https://www.ace360degree.com/website-design-development",
+      },
+    ],
   }),
 });
 

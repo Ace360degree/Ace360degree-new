@@ -29,23 +29,73 @@ import heroImg from "@/assets/d2c-retail-hero1111.png";
 
 export const Route = createFileRoute("/industries_/d2c-retailbrand")({
   component: D2CPage,
+
   head: () => ({
+    // title: "D2C & Retail Marketing Solutions | Ace360degree",
+
     meta: [
-      { title: "Marketing, Branding & Commerce Solutions for D2C & Retail Brands | Ace360degree" },
       {
+        title: "D2C & Retail Marketing Solutions | Ace360degree",
         name: "description",
         content:
-          "Ace360degree is a strategic growth partner for D2C, retail and eCommerce brands—combining branding, performance marketing, digital commerce and CX to accelerate sales, loyalty and growth.",
+          "Grow your D2C or retail brand with performance marketing, eCommerce development, branding, SEO, automation and customer retention solutions.",
       },
-      { property: "og:title", content: "D2C & Retail Industry Solutions — Ace360degree" },
+      {
+        name: "keywords",
+        content:
+          "eCommerce website development, Shopify development agency, eCommerce marketing agency, conversion optimization for eCommerce, eCommerce SEO agency, customer retention marketing, retail branding services, retail digital marketing, retail marketing agency",
+      },
+      {
+        property: "og:title",
+        content: "D2C & Retail Marketing Solutions | Ace360degree",
+      },
       {
         property: "og:description",
         content:
-          "Brand-led growth, digital commerce and performance marketing for modern consumer brands.",
+          "Grow your D2C or retail brand with performance marketing, eCommerce development, branding, SEO, automation and customer retention solutions.",
       },
-      { property: "og:type", content: "website" },
-      { property: "og:image", content: heroImg },
-      { name: "twitter:card", content: "summary_large_image" },
+      {
+        property: "og:type",
+        content: "website",
+      },
+      {
+        property: "og:url",
+        content:
+          "https://www.ace360degree.com/industries/d2c-retailbrand",
+      },
+      {
+        property: "og:site_name",
+        content: "Ace360degree",
+      },
+      {
+        name: "robots",
+        content: "index, follow",
+      },
+      {
+        name: "author",
+        content: "Ace360degree",
+      },
+      {
+        name: "twitter:card",
+        content: "summary_large_image",
+      },
+      {
+        name: "twitter:title",
+        content: "D2C & Retail Marketing Solutions | Ace360degree",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "Grow your D2C or retail brand with performance marketing, eCommerce development, branding, SEO, automation and customer retention solutions.",
+      },
+    ],
+
+    links: [
+      {
+        rel: "canonical",
+        href:
+          "https://www.ace360degree.com/industries/d2c-retailbrand",
+      },
     ],
   }),
 });
@@ -304,7 +354,7 @@ function D2CPage() {
           <div className="text-[10px] uppercase tracking-[0.28em] text-brand font-semibold mb-4">
             The Shift
           </div>
-
+ 
           <h2 className="font-serif text-4xl md:text-5xl leading-tight">
             Consumers don't just buy products.
             <br />

@@ -29,32 +29,74 @@ import { SiteFooter } from "@/components/site-footer";
 import heroImg from "@/assets/svc-technology1.jpg";
 export const Route = createFileRoute("/industries_/saas-technology")({
   component: SaasPage,
+
   head: () => ({
+    // title: "SaaS Marketing & Technology Solutions | Ace360degree",
+
     meta: [
       {
-        title:
-          "Marketing, Branding & Technology Solutions for Software, SaaS & Technology Companies | Ace360degree",
-      },
-      {
+        title: "SaaS Marketing & Technology Solutions | Ace360degree",
         name: "description",
         content:
-          "Ace360degree is a strategic growth partner for software, SaaS, AI and technology businessesâ€”combining product positioning, demand generation and digital platforms to accelerate qualified pipeline and recurring revenue.",
+          "Grow your SaaS or technology business with SEO, demand generation, product branding, website development, CRM automation and digital growth solutions.",
+      },
+      {
+        name: "keywords",
+        content:
+          "SaaS marketing agency, B2B SaaS marketing, SaaS SEO services, SaaS content marketing, SaaS digital marketing agency, technology marketing agency, SaaS lead generation, SaaS branding agency, software marketing agency",
       },
       {
         property: "og:title",
-        content: "Software, SaaS & Technology Industry Solutions â€” Ace360degree",
+        content: "SaaS Marketing & Technology Solutions | Ace360degree",
       },
       {
         property: "og:description",
         content:
-          "Positioning, demand generation and digital platforms built for software, SaaS and technology companies.",
+          "Grow your SaaS or technology business with SEO, demand generation, product branding, website development, CRM automation and digital growth solutions.",
       },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: "/industries/saas-technology" },
-      { property: "og:image", content: heroImg },
-      { name: "twitter:card", content: "summary_large_image" },
+      {
+        property: "og:type",
+        content: "website",
+      },
+      {
+        property: "og:url",
+        content:
+          "https://www.ace360degree.com/industries/saas-technology",
+      },
+      {
+        property: "og:site_name",
+        content: "Ace360degree",
+      },
+      {
+        name: "robots",
+        content: "index, follow",
+      },
+      {
+        name: "author",
+        content: "Ace360degree",
+      },
+      {
+        name: "twitter:card",
+        content: "summary_large_image",
+      },
+      {
+        name: "twitter:title",
+        content: "SaaS Marketing & Technology Solutions | Ace360degree",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "Grow your SaaS or technology business with SEO, demand generation, product branding, website development, CRM automation and digital growth solutions.",
+      },
     ],
-    links: [{ rel: "canonical", href: "/industries/saas-technology" }],
+
+    links: [
+      {
+        rel: "canonical",
+        href:
+          "https://www.ace360degree.com/industries/saas-technology",
+      },
+    ],
   }),
 });
 const stats = [

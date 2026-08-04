@@ -3,9 +3,10 @@ import { PolicyPage } from "@/components/policy-page";
 
 export const Route = createFileRoute("/privacy")({
   head: () => ({
+    // title: "Privacy Policy - Ace360degree",
     meta: [
-      { title: "Privacy Policy - Ace360degree" },
       {
+        title: "Privacy Policy - Ace360degree",
         name: "description",
         content:
           "Learn how Ace360degree collects, uses and protects personal information.",

@@ -9,33 +9,80 @@ import caseRexello from "@/assets/case-rexello.121.jpg";
 
 export const Route = createFileRoute("/motion-graphics-animation")({
   component: MotionGraphicsAnimationPage,
+
   head: () => ({
+    // title:
+    //   "Motion Graphics & Animation Services in Mumbai | Ace360degree",
+
     meta: [
       {
         title:
-          "Motion Graphics & Animation Services Mumbai | 2D, 3D & Explainer Videos | Ace360degree",
-      },
-      {
+      "Motion Graphics & Animation Services in Mumbai | Ace360degree",
         name: "description",
         content:
-          "Ace360degree is a Motion Graphics & Visual Storytelling Partner helping businesses communicate complex ideas, strengthen brand recall and create memorable audience experiences through 2D, 3D and explainer animation.",
+          "Ace360degree is a motion graphics and animation company in Mumbai creating 2D animation, 3D animation, explainer videos, corporate films and engaging visual storytelling for brands.",
+      },
+      {
+        name: "keywords",
+        content:
+          "Motion Graphics Company Mumbai, Motion Graphics Services, 2D Animation Services, 3D Animation Company, Explainer Video Production, Corporate Animation Services, Motion Design Agency, Product Animation Services, Animated Marketing Videos, Visual Storytelling Agency",
       },
       {
         property: "og:title",
-        content: "Motion Graphics & Animation Partner | Ace360degree",
+        content:
+          "Motion Graphics & Animation Services in Mumbai | Ace360degree",
       },
       {
         property: "og:description",
         content:
-          "Transform Ideas Into Visual Experiences. Motion graphics, 2D & 3D animation, explainer videos and corporate storytelling engineered for attention, understanding and recall.",
+          "Ace360degree is a motion graphics and animation company in Mumbai creating 2D animation, 3D animation, explainer videos, corporate films and engaging visual storytelling for brands.",
       },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: "/motion-graphics-animation" },
+      {
+        property: "og:type",
+        content: "website",
+      },
+      {
+        property: "og:url",
+        content:
+          "https://www.ace360degree.com/motion-graphics-animation",
+      },
+      {
+        property: "og:site_name",
+        content: "Ace360degree",
+      },
+      {
+        name: "robots",
+        content: "index, follow",
+      },
+      {
+        name: "author",
+        content: "Ace360degree",
+      },
+      {
+        name: "twitter:card",
+        content: "summary_large_image",
+      },
+      {
+        name: "twitter:title",
+        content:
+          "Motion Graphics & Animation Services in Mumbai | Ace360degree",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "Ace360degree is a motion graphics and animation company in Mumbai creating 2D animation, 3D animation, explainer videos, corporate films and engaging visual storytelling for brands.",
+      },
     ],
-    links: [{ rel: "canonical", href: "/motion-graphics-animation" }],
+
+    links: [
+      {
+        rel: "canonical",
+        href:
+          "https://www.ace360degree.com/motion-graphics-animation",
+      },
+    ],
   }),
 });
-
 /* ---------- helpers ---------- */
 function useReveal<T extends HTMLElement>() {
   const ref = useRef<T | null>(null);

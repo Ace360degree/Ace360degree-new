@@ -6,33 +6,75 @@ import heroImg from "@/assets/services-hero.a3.jpg";
 
 export const Route = createFileRoute("/performance-marketing")({
   component: PerformanceMarketingPage,
+
   head: () => ({
+    // title: "Performance Marketing Agency in Mumbai | Ace360degree",
+
     meta: [
       {
-        title:
-          "Performance Marketing & Customer Acquisition Services in Mumbai | Ace360degree",
-      },
-      {
+        title: "Performance Marketing Agency in Mumbai | Ace360degree",
+
         name: "description",
         content:
-          "Ace360degree helps businesses acquire customers profitably through data-driven performance marketing across Google, Meta, LinkedIn and emerging platforms. Lead generation, conversion optimization and scalable revenue growth.",
+          "Ace360degree is a performance marketing agency in Mumbai offering Google Ads, Meta Ads, LinkedIn Ads and conversion-focused customer acquisition campaigns.",
+      },
+      {
+        name: "keywords",
+        content:
+          "Online Advertising Company, Digital Performance Marketing Agency, Customer Acquisition Agency, Performance Marketing Agency in Mumbai, Performance Marketing Services in Mumbai, Performance Marketing Company in Mumbai, Paid Advertising Agency in Mumbai, ROI-Focused Digital Marketing, Paid Media Agency in Mumbai",
       },
       {
         property: "og:title",
-        content: "Customer Acquisition Partner — Performance Marketing | Ace360degree",
+        content: "Performance Marketing Agency in Mumbai | Ace360degree",
       },
       {
         property: "og:description",
         content:
-          "Turn marketing spend into business growth with data-driven advertising, conversion optimization and full-funnel customer acquisition systems.",
+          "Ace360degree is a performance marketing agency in Mumbai offering Google Ads, Meta Ads, LinkedIn Ads and conversion-focused customer acquisition campaigns.",
       },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: "/performance-marketing" },
+      {
+        property: "og:type",
+        content: "website",
+      },
+      {
+        property: "og:url",
+        content: "https://www.ace360degree.com/performance-marketing",
+      },
+      {
+        property: "og:site_name",
+        content: "Ace360degree",
+      },
+      {
+        name: "robots",
+        content: "index, follow",
+      },
+      {
+        name: "author",
+        content: "Ace360degree",
+      },
+      {
+        name: "twitter:card",
+        content: "summary_large_image",
+      },
+      {
+        name: "twitter:title",
+        content: "Performance Marketing Agency in Mumbai | Ace360degree",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "Ace360degree is a performance marketing agency in Mumbai offering Google Ads, Meta Ads, LinkedIn Ads and conversion-focused customer acquisition campaigns.",
+      },
     ],
-    links: [{ rel: "canonical", href: "/performance-marketing" }],
+
+    links: [
+      {
+        rel: "canonical",
+        href: "https://www.ace360degree.com/performance-marketing",
+      },
+    ],
   }),
 });
-
 /* ---------- helpers ---------- */
 function useReveal<T extends HTMLElement>() {
   const ref = useRef<T | null>(null);

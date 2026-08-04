@@ -6,9 +6,10 @@ import heroImg from "@/assets/case-healthus.123.jpg";
 
 export const Route = createFileRoute("/case-healthus-ai")({
   head: () => ({
+  
     meta: [
-      { title: "paincurephysio Case Study | Healthcare Growth — Ace360degree" },
       {
+        title: "paincurephysio Case Study | Healthcare Growth — Ace360degree",
         name: "description",
         content:
           "How Ace360degree supported paincurephysio with healthcare growth strategy, digital marketing and patient acquisition systems.",

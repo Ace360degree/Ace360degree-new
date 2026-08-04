@@ -9,30 +9,74 @@ import caseCosmos from "@/assets/case-cosmos.111.jpg";
 
 export const Route = createFileRoute("/packaging-product-branding")({
   component: PackagingProductBrandingPage,
+
   head: () => ({
+    // title: "Packaging Design Company in Mumbai | Ace360degree",
+
     meta: [
       {
-        title:
-          "Packaging Design & Product Branding Services Mumbai | Retail & Luxury Packaging | Ace360degree",
-      },
-      {
+        title: "Packaging Design Company in Mumbai | Ace360degree",
         name: "description",
         content:
-          "Ace360degree is a Packaging & Product Branding Partner helping businesses improve product perception, strengthen shelf presence and create memorable customer experiences across retail, e-commerce and B2B.",
+          "Ace360degree is a packaging design company in Mumbai creating product packaging, labels, retail packaging and brand identity solutions that enhance shelf appeal and customer engagement.",
+      },
+      {
+        name: "keywords",
+        content:
+          "Packaging Design Agency in Mumbai, Product Packaging Design, Packaging Design Services, Packaging Design Agency, Brand Packaging Design, Creative Packaging Design, Packaging Design Company in Mumbai, FMCG Packaging Design, Label Design Services",
       },
       {
         property: "og:title",
-        content: "Packaging & Product Branding Partner | Ace360degree",
+        content: "Packaging Design Company in Mumbai | Ace360degree",
       },
       {
         property: "og:description",
         content:
-          "Create Preference Before Purchase. Packaging and product branding systems that strengthen recognition, improve shelf impact and influence buying decisions.",
+          "Ace360degree is a packaging design company in Mumbai creating product packaging, labels, retail packaging and brand identity solutions that enhance shelf appeal and customer engagement.",
       },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: "/packaging-product-branding" },
+      {
+        property: "og:type",
+        content: "website",
+      },
+      {
+        property: "og:url",
+        content:
+          "https://www.ace360degree.com/packaging-product-branding",
+      },
+      {
+        property: "og:site_name",
+        content: "Ace360degree",
+      },
+      {
+        name: "robots",
+        content: "index, follow",
+      },
+      {
+        name: "author",
+        content: "Ace360degree",
+      },
+      {
+        name: "twitter:card",
+        content: "summary_large_image",
+      },
+      {
+        name: "twitter:title",
+        content: "Packaging Design Company in Mumbai | Ace360degree",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "Ace360degree is a packaging design company in Mumbai creating product packaging, labels, retail packaging and brand identity solutions that enhance shelf appeal and customer engagement.",
+      },
     ],
-    links: [{ rel: "canonical", href: "/packaging-product-branding" }],
+
+    links: [
+      {
+        rel: "canonical",
+        href:
+          "https://www.ace360degree.com/packaging-product-branding",
+      },
+    ],
   }),
 });
 

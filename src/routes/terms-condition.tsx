@@ -3,9 +3,10 @@ import { PolicyPage } from "@/components/policy-page";
 
 export const Route = createFileRoute("/terms-condition")({
   head: () => ({
+    // title: "Terms & Condition - Ace360degree",
     meta: [
-      { title: "Terms & Condition - Ace360degree" },
       {
+        title: "Terms & Condition - Ace360degree",
         name: "description",
         content:
           "Review the terms and conditions for using the Ace360degree website and services.",

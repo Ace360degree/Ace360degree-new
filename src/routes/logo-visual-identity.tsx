@@ -9,30 +9,74 @@ import caseAmigo from "@/assets/case-amigoy5.jpg";
 
 export const Route = createFileRoute("/logo-visual-identity")({
   component: VisualIdentityPage,
+
   head: () => ({
+    // title: "Logo Design & Visual Identity Agency in Mumbai | Ace360degree",
+
     meta: [
       {
-        title:
-          "Logo Design & Visual Identity Services Mumbai | Brand Identity | Ace360degree",
-      },
-      {
+        title: "Logo Design & Visual Identity Agency in Mumbai | Ace360degree",
         name: "description",
         content:
-          "Ace360degree is a Visual Identity Partner helping businesses create recognizable, consistent and memorable brand experiences. From logos and color systems to complete brand guidelines.",
+          "Ace360degree is a logo design and visual identity agency in Mumbai creating memorable logos, brand identity systems, typography, color palettes and brand guidelines.",
+      },
+      {
+        name: "keywords",
+        content:
+          "Logo Design Company, Logo Design Services, Creative Logo Design, Business Logo Design, Brand Identity Design, Professional Logo Design, Brand Identity Agency, Visual Identity Design, Corporate Logo Design",
       },
       {
         property: "og:title",
-        content: "Visual Identity Partner | Logo & Brand Identity Design | Ace360degree",
+        content:
+          "Logo Design & Visual Identity Agency in Mumbai | Ace360degree",
       },
       {
         property: "og:description",
         content:
-          "Design Recognition. Build Trust. Create Consistency. Complete visual identity systems that strengthen brand recall and support long-term growth.",
+          "Ace360degree is a logo design and visual identity agency in Mumbai creating memorable logos, brand identity systems, typography, color palettes and brand guidelines.",
       },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: "/logo-visual-identity" },
+      {
+        property: "og:type",
+        content: "website",
+      },
+      {
+        property: "og:url",
+        content: "https://www.ace360degree.com/logo-visual-identity",
+      },
+      {
+        property: "og:site_name",
+        content: "Ace360degree",
+      },
+      {
+        name: "robots",
+        content: "index, follow",
+      },
+      {
+        name: "author",
+        content: "Ace360degree",
+      },
+      {
+        name: "twitter:card",
+        content: "summary_large_image",
+      },
+      {
+        name: "twitter:title",
+        content:
+          "Logo Design & Visual Identity Agency in Mumbai | Ace360degree",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "Ace360degree is a logo design and visual identity agency in Mumbai creating memorable logos, brand identity systems, typography, color palettes and brand guidelines.",
+      },
     ],
-    links: [{ rel: "canonical", href: "/logo-visual-identity" }],
+
+    links: [
+      {
+        rel: "canonical",
+        href: "https://www.ace360degree.com/logo-visual-identity",
+      },
+    ],
   }),
 });
 

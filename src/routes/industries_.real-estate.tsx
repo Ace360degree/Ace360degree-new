@@ -21,34 +21,78 @@ import caseKuwal from "@/assets/case-kuwal-sanam.jpg";
 
 export const Route = createFileRoute("/industries_/real-estate")({
   component: RealEstatePage,
+
   head: () => ({
+    // title: "Real Estate Marketing & Technology Solutions | Ace360degree",
+
     meta: [
       {
-        title:
-          "Real Estate Industry Solutions | Marketing, Technology & AI for Developers | Ace360degree",
-      },
-      {
+        title: "Real Estate Marketing & Technology Solutions | Ace360degree",
         name: "description",
         content:
-          "Marketing, technology and AI growth solutions for real estate developers and builders. Premium branding, digital launch systems, qualified lead generation and buyer journey optimization.",
+          "Generate qualified property leads with real estate SEO, performance marketing, branding, project websites, CRM automation and digital growth solutions.",
+      },
+      {
+        name: "keywords",
+        content:
+          "Real estate marketing agency, real estate digital marketing agency, real estate SEO services, real estate Google Ads, real estate advertising agency, real estate branding agency, real estate lead generation agency, marketing for real estate developers, property marketing company, real estate technology solutions",
       },
       {
         property: "og:title",
-        content: "Real Estate Industry Solutions | Ace360degree",
+        content:
+          "Real Estate Marketing & Technology Solutions | Ace360degree",
       },
       {
         property: "og:description",
         content:
-          "Strategic growth partner for developers and real estate brands building project visibility, qualified enquiries and stronger buyer journeys.",
+          "Generate qualified property leads with real estate SEO, performance marketing, branding, project websites, CRM automation and digital growth solutions.",
       },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: "/industries/real-estate" },
-      { property: "og:image", content: heroImg },
+      {
+        property: "og:type",
+        content: "website",
+      },
+      {
+        property: "og:url",
+        content:
+          "https://www.ace360degree.com/industries/real-estate",
+      },
+      {
+        property: "og:site_name",
+        content: "Ace360degree",
+      },
+      {
+        name: "robots",
+        content: "index, follow",
+      },
+      {
+        name: "author",
+        content: "Ace360degree",
+      },
+      {
+        name: "twitter:card",
+        content: "summary_large_image",
+      },
+      {
+        name: "twitter:title",
+        content:
+          "Real Estate Marketing & Technology Solutions | Ace360degree",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "Generate qualified property leads with real estate SEO, performance marketing, branding, project websites, CRM automation and digital growth solutions.",
+      },
     ],
-    links: [{ rel: "canonical", href: "/industries/real-estate" }],
+
+    links: [
+      {
+        rel: "canonical",
+        href:
+          "https://www.ace360degree.com/industries/real-estate",
+      },
+    ],
   }),
 });
-
 function useReveal<T extends HTMLElement>() {
   const ref = useRef<T | null>(null);
   const [seen, setSeen] = useState(false);

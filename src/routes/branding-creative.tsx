@@ -10,12 +10,10 @@ import caseLiving from "@/assets/case-living.jpg";
 export const Route = createFileRoute("/branding-creative")({
   component: BrandingCreativePage,
   head: () => ({
+   
     meta: [
       {
-        title:
-          "Strategic Branding & Creative Services — Ace360degree",
-      },
-      {
+        title: "Strategic Branding & Creative Services — Ace360degree",
         name: "description",
         content:
           "Ace360degree is a strategic branding partner helping businesses build trust, create differentiation, improve market perception and strengthen brand value through brand strategy, identity, design and creative systems.",

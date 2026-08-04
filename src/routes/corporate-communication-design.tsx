@@ -9,30 +9,80 @@ import caseAmigo from "@/assets/case-amigoy7.jpg";
 
 export const Route = createFileRoute("/corporate-communication-design")({
   component: CorporateCommunicationPage,
+
   head: () => ({
+    // title:
+    //   "Corporate Communication Design Services in Mumbai | Ace360degree",
+
     meta: [
       {
+
         title:
-          "Company Profile & Corporate Communication Design Mumbai | Business Presentations | Ace360degree",
-      },
-      {
+        "Corporate Communication Design Services in Mumbai | Ace360degree",
+  
         name: "description",
         content:
-          "Ace360degree is a Corporate Communication Design Partner helping businesses communicate professionally, present effectively and strengthen stakeholder confidence through strategic communication assets.",
+          "Ace360degree offers corporate communication design services in Mumbai, including company profiles, brochures, pitch decks, annual reports and business presentations.",
+      },
+      {
+        name: "keywords",
+        content:
+          "Integrated Marketing Communication, Brand Messaging Services, Corporate Communication Services, Brand Communication Services, Business Communication Solutions, Business Presentation Design, Marketing Collateral Design, Marketing Communication Agency",
       },
       {
         property: "og:title",
-        content: "Corporate Communication Design Partner | Ace360degree",
+        content:
+          "Corporate Communication Design Services in Mumbai | Ace360degree",
       },
       {
         property: "og:description",
         content:
-          "Communicate Clearly. Present Professionally. Influence Effectively. Corporate communication assets that build credibility and drive business growth.",
+          "Ace360degree offers corporate communication design services in Mumbai, including company profiles, brochures, pitch decks, annual reports and business presentations.",
       },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: "/corporate-communication-design" },
+      {
+        property: "og:type",
+        content: "website",
+      },
+      {
+        property: "og:url",
+        content:
+          "https://www.ace360degree.com/corporate-communication-design",
+      },
+      {
+        property: "og:site_name",
+        content: "Ace360degree",
+      },
+      {
+        name: "robots",
+        content: "index, follow",
+      },
+      {
+        name: "author",
+        content: "Ace360degree",
+      },
+      {
+        name: "twitter:card",
+        content: "summary_large_image",
+      },
+      {
+        name: "twitter:title",
+        content:
+          "Corporate Communication Design Services in Mumbai | Ace360degree",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "Ace360degree offers corporate communication design services in Mumbai, including company profiles, brochures, pitch decks, annual reports and business presentations.",
+      },
     ],
-    links: [{ rel: "canonical", href: "/corporate-communication-design" }],
+
+    links: [
+      {
+        rel: "canonical",
+        href:
+          "https://www.ace360degree.com/corporate-communication-design",
+      },
+    ],
   }),
 });
 

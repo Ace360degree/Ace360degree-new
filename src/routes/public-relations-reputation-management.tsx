@@ -10,12 +10,10 @@ import caseCosmos from "@/assets/case-cosmos.jpg";
 export const Route = createFileRoute("/public-relations-reputation-management")({
   component: PublicRelationsPage,
   head: () => ({
+    // title: "Public Relations & Reputation Management Services Mumbai | Ace360degree",
     meta: [
       {
-        title:
-          "Public Relations & Reputation Management Services Mumbai | Ace360degree",
-      },
-      {
+        title: "Public Relations & Reputation Management Services Mumbai | Ace360degree",
         name: "description",
         content:
           "Ace360degree is a Reputation, Visibility & Influence Partner helping businesses, founders and brands build credibility, strengthen public perception and create long-term trust through strategic public relations and thought leadership.",

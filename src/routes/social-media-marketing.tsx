@@ -6,33 +6,75 @@ import heroImg from "@/assets/services-hero.a23.jpg";
 
 export const Route = createFileRoute("/social-media-marketing")({
   component: SocialMediaMarketingPage,
+
   head: () => ({
+    // title: "Social Media Marketing Agency in Mumbai | Ace360degree",
+
     meta: [
       {
-        title:
-          "Social Media Marketing & Growth Services in Mumbai | Ace360degree",
-      },
-      {
+        title: "Social Media Marketing Agency in Mumbai | Ace360degree",
+
         name: "description",
         content:
-          "Ace360degree helps businesses build visibility, trust and influence through strategic social media marketing. LinkedIn, Instagram, Facebook, YouTube and emerging platforms — built for business growth.",
+          "Ace360degree is a social media marketing agency in Mumbai offering content creation, platform management, founder branding and social media growth services.",
+      },
+      {
+        name: "keywords",
+        content:
+          "Digital Social Media Marketing, Social Media Marketing Agency in Mumbai, Social Media Agency in Mumbai, Social Media Management Company, Social Media Management Services, Social Media Marketing Services in Mumbai, Organic Social Media Marketing, Social Media Advertising Agency, Online Brand Promotion Services, Social Media Content Agency",
       },
       {
         property: "og:title",
-        content: "Social Media Growth & Authority Partner — Ace360degree",
+        content: "Social Media Marketing Agency in Mumbai | Ace360degree",
       },
       {
         property: "og:description",
         content:
-          "Turn social presence into business influence with strategic content, community building and founder branding.",
+          "Ace360degree is a social media marketing agency in Mumbai offering content creation, platform management, founder branding and social media growth services.",
       },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: "/social-media-marketing" },
+      {
+        property: "og:type",
+        content: "website",
+      },
+      {
+        property: "og:url",
+        content: "https://www.ace360degree.com/social-media-marketing",
+      },
+      {
+        property: "og:site_name",
+        content: "Ace360degree",
+      },
+      {
+        name: "robots",
+        content: "index, follow",
+      },
+      {
+        name: "author",
+        content: "Ace360degree",
+      },
+      {
+        name: "twitter:card",
+        content: "summary_large_image",
+      },
+      {
+        name: "twitter:title",
+        content: "Social Media Marketing Agency in Mumbai | Ace360degree",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "Ace360degree is a social media marketing agency in Mumbai offering content creation, platform management, founder branding and social media growth services.",
+      },
     ],
-    links: [{ rel: "canonical", href: "/social-media-marketing" }],
+
+    links: [
+      {
+        rel: "canonical",
+        href: "https://www.ace360degree.com/social-media-marketing",
+      },
+    ],
   }),
 });
-
 /* ---------- helpers ---------- */
 function useReveal<T extends HTMLElement>() {
   const ref = useRef<T | null>(null);

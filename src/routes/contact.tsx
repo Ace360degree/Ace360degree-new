@@ -9,33 +9,72 @@ import handIcon from "@/assets/handiconcontant.png";
 import starIcon from "@/assets/stariconcontant.png";
 
 export const Route = createFileRoute("/contact")({
+  component: ContactPage,
+
   head: () => ({
+    
+
+    // title: "Contact Ace360degree | Digital Marketing Agency in Mumbai",
     meta: [
       {
-        title:
-          "Contact Ace360degree | Get in Touch with Mumbai's Leading Digital Agency",
-      },
-      {
-        name: "description",
+        title: "Contact Ace360degree | Digital Marketing Agency in Mumbai",
+        name: "keywords",
         content:
-          "Get in touch with Ace360degree — India's full-service digital marketing and technology agency. We respond within 24 hours.",
+          "Digital Marketing Agency in Mumbai, Digital Marketing Company Mumbai, Website Development Company Mumbai, Branding Agency Mumbai, Creative Agency Mumbai, Business Growth Consulting, Contact Ace360degree",
       },
       {
         property: "og:title",
-        content: "Contact Ace360degree",
+        content:
+          "Contact Ace360degree | Digital Marketing Agency in Mumbai",
       },
       {
         property: "og:description",
         content:
-          "Let's talk about your next big idea — branding, digital marketing, web, AI automation.",
+          "Contact Ace360degree in Mumbai for digital marketing, branding, website development, AI and business growth solutions. Call, email or schedule a consultation today.",
       },
       {
-        property: "og:image",
-        content: contactHero,
+        property: "og:type",
+        content: "website",
+      },
+      {
+        property: "og:url",
+        content: "https://www.ace360degree.com/contact",
+      },
+      {
+        property: "og:site_name",
+        content: "Ace360degree",
+      },
+      {
+        name: "robots",
+        content: "index, follow",
+      },
+      {
+        name: "author",
+        content: "Ace360degree",
+      },
+      {
+        name: "twitter:card",
+        content: "summary_large_image",
+      },
+      {
+        name: "twitter:title",
+        content:
+          "Contact Ace360degree | Digital Marketing Agency in Mumbai",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "Contact Ace360degree in Mumbai for digital marketing, branding, website development, AI and business growth solutions. Call, email or schedule a consultation today.",
+      },
+    ],
+
+    links: [
+      {
+        rel: "canonical",
+        href: "https://www.ace360degree.com/contact",
       },
     ],
   }),
-  component: ContactPage,
 });
 
 const services = [

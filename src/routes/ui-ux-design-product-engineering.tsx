@@ -10,33 +10,80 @@ import  caseCosmos from "@/assets/case-rexello.a15.jpg";
 
 export const Route = createFileRoute("/ui-ux-design-product-engineering")({
   component: UxProductPage,
+
   head: () => ({
+    // title:
+    //   "UI/UX Design & Product Engineering Company in Mumbai | Ace360degree",
+
     meta: [
       {
         title:
-          "UI/UX Design & Product Engineering Mumbai | Digital Product Consultancy | Ace360degree",
-      },
-      {
+      "UI/UX Design & Product Engineering Company in Mumbai | Ace360degree",
         name: "description",
         content:
-          "Ace360degree is a Product Design & Engineering Partner helping businesses create intuitive digital experiences, scalable SaaS, CRM, ERP and mobile platforms designed for performance and growth.",
+          "Ace360degree is a UI/UX design and product engineering company in Mumbai creating intuitive SaaS platforms, mobile apps, CRM, ERP and scalable digital products.",
+      },
+      {
+        name: "keywords",
+        content:
+          "Product Design and Development, UI/UX Design Services, UX Design Agency, Product Engineering Company, UI Design Company, Enterprise UX Design, Digital Product Design Company, Digital Product Consultancy, UX Research Services, User Experience Design Services, Product Design Agency in Mumbai",
       },
       {
         property: "og:title",
-        content: "UI/UX Design & Product Engineering Partner | Ace360degree",
+        content:
+          "UI/UX Design & Product Engineering Company in Mumbai | Ace360degree",
       },
       {
         property: "og:description",
         content:
-          "Design Better Experiences. Build Better Products. Strategic product design and engineering for SaaS, CRM, ERP and mobile platforms.",
+          "Ace360degree is a UI/UX design and product engineering company in Mumbai creating intuitive SaaS platforms, mobile apps, CRM, ERP and scalable digital products.",
       },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: "/ui-ux-design-product-engineering" },
+      {
+        property: "og:type",
+        content: "website",
+      },
+      {
+        property: "og:url",
+        content:
+          "https://www.ace360degree.com/ui-ux-design-product-engineering",
+      },
+      {
+        property: "og:site_name",
+        content: "Ace360degree",
+      },
+      {
+        name: "robots",
+        content: "index, follow",
+      },
+      {
+        name: "author",
+        content: "Ace360degree",
+      },
+      {
+        name: "twitter:card",
+        content: "summary_large_image",
+      },
+      {
+        name: "twitter:title",
+        content:
+          "UI/UX Design & Product Engineering Company in Mumbai | Ace360degree",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "Ace360degree is a UI/UX design and product engineering company in Mumbai creating intuitive SaaS platforms, mobile apps, CRM, ERP and scalable digital products.",
+      },
     ],
-    links: [{ rel: "canonical", href: "/ui-ux-design-product-engineering" }],
+
+    links: [
+      {
+        rel: "canonical",
+        href:
+          "https://www.ace360degree.com/ui-ux-design-product-engineering",
+      },
+    ],
   }),
 });
-
 /* ---------- helpers ---------- */
 function useReveal<T extends HTMLElement>() {
   const ref = useRef<T | null>(null);

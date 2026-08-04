@@ -7,12 +7,10 @@ import heroImg from "@/assets/services-hero.jpg";
 export const Route = createFileRoute("/ai-workflow-automation")({
   component: AIWorkflowAutomationPage,
   head: () => ({
+   
     meta: [
       {
-        title:
-          "AI Workflow Automation & Business Efficiency Partner — Ace360degree",
-      },
-      {
+        title: "AI Workflow Automation & Business Efficiency Partner — Ace360degree",
         name: "description",
         content:
           "Ace360degree helps organizations reduce manual work, improve productivity and create intelligent business operations through AI-powered workflow automation across sales, marketing, HR, finance and operations.",

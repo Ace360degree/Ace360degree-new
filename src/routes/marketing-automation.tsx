@@ -9,33 +9,75 @@ import caseRexello from "@/assets/case-rexelloy6.jpg";
 
 export const Route = createFileRoute("/marketing-automation")({
   component: MarketingAutomationPage,
+
   head: () => ({
+    // title: "Marketing Automation Services in Mumbai | Ace360degree",
+
     meta: [
       {
-        title:
-          "Marketing Automation Services Mumbai | Lead Nurturing & Customer Journeys | Ace360degree",
-      },
-      {
+         
+        title: "Marketing Automation Services in Mumbai | Ace360degree",
         name: "description",
         content:
-          "Ace360degree is a Marketing Automation & Customer Journey Partner helping businesses automate communication, nurture leads, integrate CRM systems and strengthen customer relationships across email, WhatsApp and digital touchpoints.",
+          "Automate lead nurturing, email, WhatsApp and CRM workflows with Ace360degree’s marketing automation services in Mumbai to improve conversions and retention.",
+      },
+      {
+        name: "keywords",
+        content:
+          "Business Automation Services, Email Marketing Automation, WhatsApp Marketing Automation, Marketing Automation Company, CRM Automation Services, Customer Journey Automation, Lead Nurturing Automation, Marketing Workflow Automation, Sales and Marketing Automation, Lead Management Automation",
       },
       {
         property: "og:title",
-        content: "Marketing Automation & Customer Journey Partner | Ace360degree",
+        content: "Marketing Automation Services in Mumbai | Ace360degree",
       },
       {
         property: "og:description",
         content:
-          "Automate smarter. Convert faster. Build customer journeys that nurture leads, improve conversions and strengthen relationships.",
+          "Automate lead nurturing, email, WhatsApp and CRM workflows with Ace360degree’s marketing automation services in Mumbai to improve conversions and retention.",
       },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: "/marketing-automation" },
+      {
+        property: "og:type",
+        content: "website",
+      },
+      {
+        property: "og:url",
+        content: "https://www.ace360degree.com/marketing-automation",
+      },
+      {
+        property: "og:site_name",
+        content: "Ace360degree",
+      },
+      {
+        name: "robots",
+        content: "index, follow",
+      },
+      {
+        name: "author",
+        content: "Ace360degree",
+      },
+      {
+        name: "twitter:card",
+        content: "summary_large_image",
+      },
+      {
+        name: "twitter:title",
+        content: "Marketing Automation Services in Mumbai | Ace360degree",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "Automate lead nurturing, email, WhatsApp and CRM workflows with Ace360degree’s marketing automation services in Mumbai to improve conversions and retention.",
+      },
     ],
-    links: [{ rel: "canonical", href: "/marketing-automation" }],
+
+    links: [
+      {
+        rel: "canonical",
+        href: "https://www.ace360degree.com/marketing-automation",
+      },
+    ],
   }),
 });
-
 /* ---------- helpers ---------- */
 function useReveal<T extends HTMLElement>() {
   const ref = useRef<T | null>(null);

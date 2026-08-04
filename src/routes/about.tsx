@@ -10,27 +10,77 @@ import aboutTeam from "@/assets/about-team222.png";
 
 export const Route = createFileRoute("/about")({
   component: AboutPage,
+
   head: () => ({
+   
+
     meta: [
-      { title: "About — Ace360degree | Growth, Technology & AI Partner" },
       {
+        title:
+        "About Ace360degree | Business Growth & Digital Transformation Partner",
         name: "description",
         content:
-          "Since 2009, Ace360degree has helped businesses grow through marketing, technology, automation and AI — a trusted growth partner across healthcare, education, manufacturing, hospitality and fintech.",
+          "Learn about Ace360degree, a Mumbai-based Business Growth & Digital Transformation Partner delivering strategy, branding, marketing, technology and AI solutions worldwide.",
       },
-      { property: "og:title", content: "About — Ace360degree" },
+      {
+        name: "keywords",
+        content:
+          "Digital Marketing Company Mumbai, Branding Agency Mumbai, Digital Transformation Company, Integrated Marketing Agency, Business Strategy Consulting, Growth Marketing Agency, Creative Digital Agency, Business Growth Company",
+      },
+      {
+        property: "og:title",
+        content:
+          "About Ace360degree | Business Growth & Digital Transformation Partner",
+      },
       {
         property: "og:description",
         content:
-          "Growth, Technology & AI Partner since 2009. 300+ projects, 45+ clients, across multiple industries.",
+          "Learn about Ace360degree, a Mumbai-based Business Growth & Digital Transformation Partner delivering strategy, branding, marketing, technology and AI solutions worldwide.",
       },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: "/about" },
+      {
+        property: "og:type",
+        content: "website",
+      },
+      {
+        property: "og:url",
+        content: "https://www.ace360degree.com/about",
+      },
+      {
+        property: "og:site_name",
+        content: "Ace360degree",
+      },
+      {
+        name: "robots",
+        content: "index, follow",
+      },
+      {
+        name: "author",
+        content: "Ace360degree",
+      },
+      {
+        name: "twitter:card",
+        content: "summary_large_image",
+      },
+      {
+        name: "twitter:title",
+        content:
+          "About Ace360degree | Business Growth & Digital Transformation Partner",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "Learn about Ace360degree, a Mumbai-based Business Growth & Digital Transformation Partner delivering strategy, branding, marketing, technology and AI solutions worldwide.",
+      },
     ],
-    links: [{ rel: "canonical", href: "/about" }],
+
+    links: [
+      {
+        rel: "canonical",
+        href: "https://www.ace360degree.com/about",
+      },
+    ],
   }),
 });
-
 /* ---------- helpers ---------- */
 function useReveal<T extends HTMLElement>() {
   const ref = useRef<T | null>(null);

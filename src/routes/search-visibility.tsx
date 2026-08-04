@@ -6,34 +6,79 @@ import heroImg from "@/assets/services-hero.a1.jpg";
 
 export const Route = createFileRoute("/search-visibility")({
   component: SearchVisibilityPage,
+
   head: () => ({
+    // title:
+    //   "Search Engine Optimization Services in Mumbai | SEO, AEO & GEO | Ace360degree",
+
     meta: [
       {
         title:
-          "SEO, AEO & GEO Services in Mumbai | Search Visibility Experts | Ace360degree",
-      },
-      {
+        "Search Engine Optimization Services in Mumbai | SEO, AEO & GEO | Ace360degree",
+  
         name: "description",
         content:
-          "Improve visibility across Google, AI search engines and answer platforms with Ace360degree's SEO, AEO and GEO services. Build discoverability, authority and sustainable business growth.",
+          "Improve rankings, organic traffic and online visibility with SEO services from Ace360degree, including technical SEO, local SEO, AEO and GEO solutions.",
+      },
+      {
+        name: "keywords",
+        content:
+          "SEO Company in Mumbai, Local SEO Services, AI SEO Services, SEO Services in Mumbai, On-Page SEO Services, Professional SEO Services, Technical SEO Services, Off-Page SEO Services, AEO Services, Organic SEO Services, GEO Services, Search Engine Optimization Services in Mumbai",
       },
       {
         property: "og:title",
         content:
-          "Search Visibility Partner — SEO + AEO + GEO | Ace360degree",
+          "Search Engine Optimization Services in Mumbai | SEO, AEO & GEO | Ace360degree",
       },
       {
         property: "og:description",
         content:
-          "Be found everywhere your customers search — Google, ChatGPT, Gemini, Perplexity, AI Overviews and Voice. Integrated SEO, AEO and GEO strategies engineered for business growth.",
+          "Improve rankings, organic traffic and online visibility with SEO services from Ace360degree, including technical SEO, local SEO, AEO and GEO solutions.",
       },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: "/search-visibility" },
+      {
+        property: "og:type",
+        content: "website",
+      },
+      {
+        property: "og:url",
+        content: "https://www.ace360degree.com/search-visibility",
+      },
+      {
+        property: "og:site_name",
+        content: "Ace360degree",
+      },
+      {
+        name: "robots",
+        content: "index, follow",
+      },
+      {
+        name: "author",
+        content: "Ace360degree",
+      },
+      {
+        name: "twitter:card",
+        content: "summary_large_image",
+      },
+      {
+        name: "twitter:title",
+        content:
+          "Search Engine Optimization Services in Mumbai | SEO, AEO & GEO | Ace360degree",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "Improve rankings, organic traffic and online visibility with SEO services from Ace360degree, including technical SEO, local SEO, AEO and GEO solutions.",
+      },
     ],
-    links: [{ rel: "canonical", href: "/search-visibility" }],
+
+    links: [
+      {
+        rel: "canonical",
+        href: "https://www.ace360degree.com/search-visibility",
+      },
+    ],
   }),
 });
-
 /* ---------- helpers ---------- */
 function useReveal<T extends HTMLElement>() {
   const ref = useRef<T | null>(null);

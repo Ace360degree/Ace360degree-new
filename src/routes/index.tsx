@@ -35,49 +35,76 @@ import estateIcon from "@/assets/index/industry/estate.png";
 import lifestyleIcon from "@/assets/index/industry/lifestyle.png";
 
 export const Route = createFileRoute("/")({
+  component: Index,
+
   head: () => ({
+    // title: "Digital Marketing Agency in Mumbai | Ace360degree",
+
+    // title: "AI First Digital Marketing Agency in Mumbai | SEO & Growth Experts in Malad",
     meta: [
       {
-        title:
-          "AI First Digital Marketing Agency in Mumbai | SEO & Growth Experts in Malad",
-      },
-      {
+        title: "AI First Digital Marketing Agency in Mumbai | SEO & Growth Experts in Malad",
         name: "description",
         content:
-          "Grow your business with a leading digital marketing agency in Mumbai, Malad. We offer SEO, Google Ads, social media marketing, website development and branding services to increase traffic, leads, and conversions.",
+          "Ace360degree is a digital marketing agency in Mumbai offering SEO, performance marketing, web development, branding and AI-powered growth solutions.",
       },
       {
         name: "keywords",
         content:
-          "digital marketing agency, SEO agency in Mumbai, digital marketing company Mumbai, best SEO company in Mumbai, SEO services Mumbai, digital marketing agency in Malad",
+          "Digital Marketing Agency in Mumbai, SEO Agency in Mumbai, Digital Marketing Company in Mumbai, Website Development Company in Mumbai, Best Digital Marketing Agency in Mumbai, Branding Agency in Mumbai, Social Media Marketing Agency in Mumbai, Digital Marketing Agency in Malad, AI Digital Marketing Agency",
       },
       {
         property: "og:title",
-        content:
-          "Best Digital Marketing Agency in Mumbai | SEO & Growth Experts in Malad",
+        content: "Digital Marketing Agency in Mumbai | Ace360degree",
       },
       {
         property: "og:description",
         content:
-          "Grow your business with AI-powered digital marketing, SEO, branding and technology solutions.",
+          "Ace360degree is a digital marketing agency in Mumbai offering SEO, performance marketing, web development, branding and AI-powered growth solutions.",
       },
       {
         property: "og:type",
         content: "website",
+      },
+      {
+        property: "og:url",
+        content: "https://www.ace360degree.com/",
+      },
+      {
+        property: "og:site_name",
+        content: "Ace360degree",
+      },
+      {
+        name: "robots",
+        content: "index, follow",
+      },
+      {
+        name: "author",
+        content: "Ace360degree",
+      },
+      {
+        name: "twitter:card",
+        content: "summary_large_image",
+      },
+      {
+        name: "twitter:title",
+        content: "Digital Marketing Agency in Mumbai | Ace360degree",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "Ace360degree is a digital marketing agency in Mumbai offering SEO, performance marketing, web development, branding and AI-powered growth solutions.",
       },
     ],
 
     links: [
       {
         rel: "canonical",
-        href: "https://ace360degree.com/",
+        href: "https://www.ace360degree.com/",
       },
     ],
   }),
-
-  component: Index,
 });
-
 /* ---------------- Animations & Utilities ---------------- */
 function FadeIn({ children, delay = 0, className = "" }: { children: ReactNode; delay?: number; className?: string }) {
   const [isVisible, setIsVisible] = useState(false);
