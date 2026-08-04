@@ -42,34 +42,78 @@ import caseDoctor from "@/assets/case-doctor-branding.jpg";
 
 export const Route = createFileRoute("/industries_/healthcare")({
   component: HealthcarePage,
+
   head: () => ({
+    // title: "Healthcare Digital Marketing Agency in Mumbai | Ace360degree",
+
     meta: [
       {
-        title:
-          "Digital Growth, Marketing & AI Solutions for Healthcare Organizations | Ace360degree",
-      },
-      {
+        // title: "Contact Ace360degree | Digital Marketing Agency in Mumbai",
+        title: "Healthcare Digital Marketing Agency in Mumbai | Ace360degree",
+
         name: "description",
         content:
-          "Ace360degree helps hospitals, clinics, healthcare startups and specialist doctors build trust, attract more patients and deliver better digital experiences through marketing, technology and AI.",
+          "Ace360degree helps hospitals, clinics and healthcare brands grow with healthcare digital marketing, branding, website development, AI and patient acquisition solutions.",
+      },
+      {
+        name: "keywords",
+        content:
+          "Healthcare Marketing Agency, Hospital Digital Marketing, Healthcare SEO Services, Healthcare Digital Marketing, Hospital Marketing Agency, Medical Marketing Agency, Healthcare Branding Agency, Healthcare Website Development, Medical Practice Marketing, Clinic Marketing Services",
       },
       {
         property: "og:title",
         content:
-          "Healthcare Marketing, Technology & AI Solutions — Ace360degree",
+          "Healthcare Digital Marketing Agency in Mumbai | Ace360degree",
       },
       {
         property: "og:description",
         content:
-          "Strategic growth partner for hospitals, clinics, IVF centres, diagnostic chains, HealthTech startups and specialist doctors.",
+          "Ace360degree helps hospitals, clinics and healthcare brands grow with healthcare digital marketing, branding, website development, AI and patient acquisition solutions.",
       },
-      { property: "og:type", content: "website" },
-      { property: "og:image", content: heroImg },
-      { name: "twitter:card", content: "summary_large_image" },
+      {
+        property: "og:type",
+        content: "website",
+      },
+      {
+        property: "og:url",
+        content: "https://www.ace360degree.com/industries/healthcare",
+      },
+      {
+        property: "og:site_name",
+        content: "Ace360degree",
+      },
+      {
+        name: "robots",
+        content: "index, follow",
+      },
+      {
+        name: "author",
+        content: "Ace360degree",
+      },
+      {
+        name: "twitter:card",
+        content: "summary_large_image",
+      },
+      {
+        name: "twitter:title",
+        content:
+          "Healthcare Digital Marketing Agency in Mumbai | Ace360degree",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "Ace360degree helps hospitals, clinics and healthcare brands grow with healthcare digital marketing, branding, website development, AI and patient acquisition solutions.",
+      },
+    ],
+
+    links: [
+      {
+        rel: "canonical",
+        href: "https://www.ace360degree.com/industries/healthcare",
+      },
     ],
   }),
 });
-
 function Reveal({
   children,
   delay = 0,

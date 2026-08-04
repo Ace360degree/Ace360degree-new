@@ -42,27 +42,71 @@ import caseKsa from "@/assets/case-ksa.323.jpg";
 
 export const Route = createFileRoute("/industries")({
   component: IndustriesPage,
+
   head: () => ({
+    // title: "Industry Solutions for Business Growth | Ace360degree Mumbai",
+
     meta: [
-      { title: "Industry Solutions | Strategic Growth Partner | Ace360degree" },
       {
+        title: "Industry Solutions for Business Growth | Ace360degree Mumbai",
         name: "description",
         content:
           "Industry Solutions by Ace360degree — strategic growth, branding, technology and AI partnerships for manufacturing, financial services, education, healthcare, real estate, SaaS and D2C enterprises.",
       },
-      { property: "og:title", content: "Industry Solutions | Ace360degree" },
+      {
+        property: "og:title",
+        content:
+          "Industry Solutions for Business Growth | Ace360degree Mumbai",
+      },
       {
         property: "og:description",
         content:
-          "Industry Solutions That Drive Sustainable Business Growth. A consulting-led partnership across Growth, Brand, Technology and AI.",
+          "Discover industry-focused digital marketing, branding, AI and technology solutions from Ace360degree for healthcare, education, manufacturing, fintech, retail and more.",
       },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: "/industries" },
+      {
+        property: "og:type",
+        content: "website",
+      },
+      {
+        property: "og:url",
+        content: "https://www.ace360degree.com/industries",
+      },
+      {
+        property: "og:site_name",
+        content: "Ace360degree",
+      },
+      {
+        name: "robots",
+        content: "index, follow",
+      },
+      {
+        name: "author",
+        content: "Ace360degree",
+      },
+      {
+        name: "twitter:card",
+        content: "summary_large_image",
+      },
+      {
+        name: "twitter:title",
+        content:
+          "Industry Solutions for Business Growth | Ace360degree Mumbai",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "Discover industry-focused digital marketing, branding, AI and technology solutions from Ace360degree for healthcare, education, manufacturing, fintech, retail and more.",
+      },
     ],
-    links: [{ rel: "canonical", href: "/industries" }],
+
+    links: [
+      {
+        rel: "canonical",
+        href: "https://www.ace360degree.com/industries",
+      },
+    ],
   }),
 });
-
 /* ---------- helpers ---------- */
 function useReveal<T extends HTMLElement>() {
   const ref = useRef<T | null>(null);

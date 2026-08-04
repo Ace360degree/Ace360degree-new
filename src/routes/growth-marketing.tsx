@@ -9,9 +9,10 @@ import caseAmigo from "@/assets/case-amigo.jpg";
 
 export const Route = createFileRoute("/growth-marketing")({
   head: () => ({
+    // title: "Growth Marketing Agency | Lead Generation, SEO & Performance — Ace360degree",
     meta: [
-      { title: "Growth Marketing Agency | Lead Generation, SEO & Performance — Ace360degree" },
       {
+        title: "Growth Marketing Agency | Lead Generation, SEO & Performance — Ace360degree",
         name: "description",
         content:
           "Ace360degree is a growth marketing partner helping businesses solve customer acquisition, visibility, conversion and revenue challenges through SEO, performance marketing, automation and analytics.",

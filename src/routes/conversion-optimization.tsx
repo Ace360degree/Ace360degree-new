@@ -9,33 +9,80 @@ import caseRexello from "@/assets/case-rexelloy6.jpg";
 
 export const Route = createFileRoute("/conversion-optimization")({
   component: ConversionOptimizationPage,
+
   head: () => ({
+    // title:
+    //   "Conversion Rate Optimization (CRO) Services in Mumbai | Ace360degree",
+
     meta: [
       {
         title:
-          "Conversion Rate Optimization Services Mumbai | CRO Agency | Ace360degree",
-      },
-      {
+        "Conversion Rate Optimization (CRO) Services in Mumbai | Ace360degree",
         name: "description",
         content:
-          "Ace360degree is a Conversion Optimization Partner helping businesses generate more leads, enquiries, appointments and sales from their existing traffic through data-driven CRO, UX optimisation and A/B testing.",
+          "Ace360degree offers Conversion Rate Optimization (CRO) services in Mumbai to improve website conversions through landing page optimization, A/B testing, UX improvements and analytics.",
+      },
+      {
+        name: "keywords",
+        content:
+          "Conversion Rate Optimization, Customer Journey Optimization, Conversion Optimization Services, Landing Page Optimization, Website Performance Optimization, CRO Services, Lead Conversion Optimization, Conversion Funnel Optimization, Website Conversion Optimization, Conversion Optimization Company",
       },
       {
         property: "og:title",
-        content: "Conversion Rate Optimization Partner | Ace360degree",
+        content:
+          "Conversion Rate Optimization (CRO) Services in Mumbai | Ace360degree",
       },
       {
         property: "og:description",
         content:
-          "Turn more visitors into customers. Improve conversion rates, reduce friction and grow revenue from the traffic you already have.",
+          "Ace360degree offers Conversion Rate Optimization (CRO) services in Mumbai to improve website conversions through landing page optimization, A/B testing, UX improvements and analytics.",
       },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: "/conversion-optimization" },
+      {
+        property: "og:type",
+        content: "website",
+      },
+      {
+        property: "og:url",
+        content:
+          "https://www.ace360degree.com/conversion-optimization",
+      },
+      {
+        property: "og:site_name",
+        content: "Ace360degree",
+      },
+      {
+        name: "robots",
+        content: "index, follow",
+      },
+      {
+        name: "author",
+        content: "Ace360degree",
+      },
+      {
+        name: "twitter:card",
+        content: "summary_large_image",
+      },
+      {
+        name: "twitter:title",
+        content:
+          "Conversion Rate Optimization (CRO) Services in Mumbai | Ace360degree",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "Ace360degree offers Conversion Rate Optimization (CRO) services in Mumbai to improve website conversions through landing page optimization, A/B testing, UX improvements and analytics.",
+      },
     ],
-    links: [{ rel: "canonical", href: "/conversion-optimization" }],
+
+    links: [
+      {
+        rel: "canonical",
+        href:
+          "https://www.ace360degree.com/conversion-optimization",
+      },
+    ],
   }),
 });
-
 /* ---------- helpers ---------- */
 function useReveal<T extends HTMLElement>() {
   const ref = useRef<T | null>(null);

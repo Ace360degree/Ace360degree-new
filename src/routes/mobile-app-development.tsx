@@ -9,33 +9,74 @@ import caseRexello from "@/assets/case-rexelloy1.jpg";
 
 export const Route = createFileRoute("/mobile-app-development")({
   component: MobileAppPage,
+
   head: () => ({
+    // title: "Mobile App Development Company in Mumbai | Ace360degree",
+
     meta: [
       {
-        title:
-          "Mobile App Development Services Mumbai | Ace360degree",
-      },
-      {
+        title: "Mobile App Development Company in Mumbai | Ace360degree",
         name: "description",
         content:
-          "Ace360degree is a Mobile Experience & Digital Platform Partner helping businesses create engaging, scalable and high-performance mobile solutions that support growth, efficiency and customer engagement.",
+          "Ace360degree is a mobile app development company in Mumbai building custom Android, iOS and cross-platform applications with intuitive UI/UX and scalable technology.",
+      },
+      {
+        name: "keywords",
+        content:
+          "Mobile App Development Services, React Native App Development, Android App Development Company, Flutter App Development Company, App Development Company in Mumbai, Cross-Platform App Development, Mobile App Development Company in Mumbai, iOS App Development Company, Custom Mobile App Development, Mobile Application Development Services, Enterprise Mobile App Development",
       },
       {
         property: "og:title",
-        content: "Mobile App Development Partner | Ace360degree",
+        content: "Mobile App Development Company in Mumbai | Ace360degree",
       },
       {
         property: "og:description",
         content:
-          "Build Mobile Experiences That Drive Business Growth. Mobile apps designed to engage users, simplify operations and accelerate long-term business growth.",
+          "Ace360degree is a mobile app development company in Mumbai building custom Android, iOS and cross-platform applications with intuitive UI/UX and scalable technology.",
       },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: "/mobile-app-development" },
+      {
+        property: "og:type",
+        content: "website",
+      },
+      {
+        property: "og:url",
+        content: "https://www.ace360degree.com/mobile-app-development",
+      },
+      {
+        property: "og:site_name",
+        content: "Ace360degree",
+      },
+      {
+        name: "robots",
+        content: "index, follow",
+      },
+      {
+        name: "author",
+        content: "Ace360degree",
+      },
+      {
+        name: "twitter:card",
+        content: "summary_large_image",
+      },
+      {
+        name: "twitter:title",
+        content: "Mobile App Development Company in Mumbai | Ace360degree",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "Ace360degree is a mobile app development company in Mumbai building custom Android, iOS and cross-platform applications with intuitive UI/UX and scalable technology.",
+      },
     ],
-    links: [{ rel: "canonical", href: "/mobile-app-development" }],
+
+    links: [
+      {
+        rel: "canonical",
+        href: "https://www.ace360degree.com/mobile-app-development",
+      },
+    ],
   }),
 });
-
 /* ---------- helpers ---------- */
 function useReveal<T extends HTMLElement>() {
   const ref = useRef<T | null>(null);

@@ -7,9 +7,10 @@ import bannerImg from "@/assets/bannerRexelloy2.jpg";
 
 export const Route = createFileRoute("/case-rexello-castors")({
   head: () => ({
+    // title: "Rexello Castors Case Study | Manufacturing Branding, Website & SEO — Ace360degree",
     meta: [
-      { title: "Rexello Castors Case Study | Manufacturing Branding, Website & SEO — Ace360degree" },
       {
+        title: "Rexello Castors Case Study | Manufacturing Branding, Website & SEO — Ace360degree",
         name: "description",
         content:
           "How Ace360degree partnered with Rexello Castors to transform a traditional industrial manufacturer into a modern digital-first brand through branding, technology, SEO and growth marketing.",

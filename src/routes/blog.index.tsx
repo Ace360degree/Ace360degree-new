@@ -10,9 +10,10 @@ export const Route = createFileRoute("/blog/")({
     return { posts };
   },
   head: () => ({
+    // title: "Ace360degree Blog & Insights | Digital Marketing, Branding & Tech Trends",
     meta: [
-      { title: "Ace360degree Blog & Insights | Digital Marketing, Branding & Tech Trends" },
       {
+        title: "Ace360degree Blog & Insights | Digital Marketing, Branding & Tech Trends",
         name: "description",
         content:
           "Read the latest insights from Ace360degree - expert articles on digital marketing, branding, web technology, and business growth strategies that work.",

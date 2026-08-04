@@ -10,34 +10,76 @@ import caseMos from "@/assets/case-mos.a21.jpg";
 
 export const Route = createFileRoute("/content-marketing")({
   component: ContentMarketingPage,
+
   head: () => ({
+    // title: "Content Marketing Agency in Mumbai | Ace360degree",
+
     meta: [
       {
-        title:
-          "Content Marketing Services Mumbai | Content Strategy & Thought Leadership | Ace360degree",
-      },
-      {
+        title: "Content Marketing Agency in Mumbai | Ace360degree",
+  
+  
         name: "description",
         content:
-          "Ace360degree is a Content Strategy & Thought Leadership Partner helping businesses build authority, improve search visibility, strengthen trust and create long-term growth through strategic content — SEO, AEO, GEO, thought leadership and multimedia storytelling.",
+          "Ace360degree is a content marketing agency in Mumbai offering content strategy, SEO content writing, blogs, website copy, AI-powered content and lead generation solutions.",
+      },
+      {
+        name: "keywords",
+        content:
+          "Content Strategy Services, Digital Content Marketing, SEO Content Writing, Website Content Writing, Content Marketing Services, Content Writing Services, Content Marketing Agency, AI Content Marketing, Content Marketing Company, Blog Writing Services, Content Creation Services",
       },
       {
         property: "og:title",
-        content:
-          "Content Strategy & Thought Leadership Partner | Ace360degree",
+        content: "Content Marketing Agency in Mumbai | Ace360degree",
       },
       {
         property: "og:description",
         content:
-          "Build authority, earn trust and drive growth through strategic content ecosystems — SEO content, thought leadership, founder branding, digital PR and multimedia storytelling.",
+          "Ace360degree is a content marketing agency in Mumbai offering content strategy, SEO content writing, blogs, website copy, AI-powered content and lead generation solutions.",
       },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: "/content-marketing" },
+      {
+        property: "og:type",
+        content: "website",
+      },
+      {
+        property: "og:url",
+        content: "https://www.ace360degree.com/content-marketing",
+      },
+      {
+        property: "og:site_name",
+        content: "Ace360degree",
+      },
+      {
+        name: "robots",
+        content: "index, follow",
+      },
+      {
+        name: "author",
+        content: "Ace360degree",
+      },
+      {
+        name: "twitter:card",
+        content: "summary_large_image",
+      },
+      {
+        name: "twitter:title",
+        content: "Content Marketing Agency in Mumbai | Ace360degree",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "Ace360degree is a content marketing agency in Mumbai offering content strategy, SEO content writing, blogs, website copy, AI-powered content and lead generation solutions.",
+      },
     ],
-    links: [{ rel: "canonical", href: "/content-marketing" }],
+
+    links: [
+      {
+        rel: "canonical",
+        href: "https://www.ace360degree.com/content-marketing",
+      },
+    ],
   }),
 });
-
 /* ---------- helpers ---------- */
 function useReveal<T extends HTMLElement>() {
   const ref = useRef<T | null>(null);

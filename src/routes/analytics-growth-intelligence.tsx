@@ -11,12 +11,10 @@ import caseCosmos from "@/assets/case-cosmos.jpg";
 export const Route = createFileRoute("/analytics-growth-intelligence")({
   component: AnalyticsGrowthIntelligencePage,
   head: () => ({
+    // title: "Analytics & Growth Intelligence Services Mumbai | Business Intelligence | Ace360degree",
     meta: [
       {
-        title:
-          "Analytics & Growth Intelligence Services Mumbai | Business Intelligence | Ace360degree",
-      },
-      {
+        title: "Analytics & Growth Intelligence Services Mumbai | Business Intelligence | Ace360degree",
         name: "description",
         content:
           "Ace360degree is a Growth Intelligence Partner helping businesses transform data into insights, measure marketing ROI, build executive dashboards and accelerate growth through analytics and business intelligence.",

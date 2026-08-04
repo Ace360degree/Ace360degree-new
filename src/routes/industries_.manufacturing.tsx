@@ -37,36 +37,80 @@ import caseCosmos from "@/assets/case-cosmos.555.jpg";
 
 export const Route = createFileRoute("/industries_/manufacturing")({
   component: ManufacturingPage,
+
   head: () => ({
+    // title:
+    //   "Manufacturing Digital Marketing Agency in Mumbai | Ace360degree",
+
     meta: [
       {
-        title: "Marketing, Technology & AI Solutions for Manufacturing Companies | Ace360degree",
-      },
-      {
+        title:
+        "Manufacturing Digital Marketing Agency in Mumbai | Ace360degree",
         name: "description",
         content:
-          "Strategic growth partner for manufacturers — industrial digital marketing, B2B lead generation, manufacturing website development, dealer portals, CRM and AI for manufacturing. Mumbai • UAE • UK • USA.",
+          "Ace360degree helps manufacturers grow with digital marketing, branding, websites, AI, automation and technology solutions designed for industrial businesses.",
       },
       {
         name: "keywords",
         content:
-          "manufacturing digital marketing, industrial SEO, B2B lead generation for manufacturers, manufacturing website development, AI for manufacturing, dealer portal, CRM for manufacturers, export lead generation, industrial marketing agency India",
+          "Manufacturing Digital Marketing, Industrial Digital Marketing, Engineering Marketing Agency, Industrial Marketing Agency, Manufacturing Marketing Agency, Manufacturing Technology Solutions",
       },
       {
         property: "og:title",
-        content: "Manufacturing Growth, Technology & AI Partner | Ace360degree",
+        content:
+          "Manufacturing Digital Marketing Agency in Mumbai | Ace360degree",
       },
       {
         property: "og:description",
         content:
-          "Helping industrial and manufacturing companies build pipeline, modernize digital infrastructure and adopt AI — the consulting way.",
+          "Ace360degree helps manufacturers grow with digital marketing, branding, websites, AI, automation and technology solutions designed for industrial businesses.",
       },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: "/industries/manufacturing" },
-      { property: "og:image", content: heroImg },
+      {
+        property: "og:type",
+        content: "website",
+      },
+      {
+        property: "og:url",
+        content:
+          "https://www.ace360degree.com/industries/manufacturing",
+      },
+      {
+        property: "og:site_name",
+        content: "Ace360degree",
+      },
+      {
+        name: "robots",
+        content: "index, follow",
+      },
+      {
+        name: "author",
+        content: "Ace360degree",
+      },
+      {
+        name: "twitter:card",
+        content: "summary_large_image",
+      },
+      {
+        name: "twitter:title",
+        content:
+          "Manufacturing Digital Marketing Agency in Mumbai | Ace360degree",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "Ace360degree helps manufacturers grow with digital marketing, branding, websites, AI, automation and technology solutions designed for industrial businesses.",
+      },
     ],
-    links: [{ rel: "canonical", href: "/industries/manufacturing" }],
+
+    links: [
+      {
+        rel: "canonical",
+        href:
+          "https://www.ace360degree.com/industries/manufacturing",
+      },
+    ],
   }),
+
 });
 
 /* ---------- reveal hook ---------- */

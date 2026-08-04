@@ -40,30 +40,74 @@ import caseKuwal from "@/assets/case-kuwal-sanam.jpg";
 
 export const Route = createFileRoute("/industries_/architecture")({
   component: ArchitecturePage,
+
   head: () => ({
+    // title: "Architecture Marketing & Digital Solutions | Ace360degree",
+
     meta: [
       {
-        title:
-          "Growth, Branding, Technology & AI Solutions for Architecture, Interior Design & Real Estate Businesses | Ace360degree",
-      },
-      {
+        title: "Architecture Marketing & Digital Solutions | Ace360degree",
+
         name: "description",
         content:
-          "Ace360degree helps architecture firms, interior designers, real estate developers and luxury design brands generate high-value enquiries through premium branding, websites, marketing and AI.",
+          "Grow your architecture or interior design business with premium branding, SEO, portfolio websites, lead generation, CRM automation and AI solutions.",
+      },
+      {
+        name: "keywords",
+        content:
+          "architecture website design, digital marketing for interior designers, SEO for architects, real estate developer marketing, architecture marketing agency, architecture branding agency, interior design marketing agency, marketing for architects, social media marketing for architects",
       },
       {
         property: "og:title",
         content:
-          "Architecture, Interior Design & Real Estate Marketing, Technology & AI — Ace360degree",
+          "Architecture Marketing & Digital Solutions | Ace360degree",
       },
       {
         property: "og:description",
         content:
-          "Strategic growth partner for architects, interior designers, developers and luxury design brands. Premium branding, websites, SEO and AI systems built for design-led businesses.",
+          "Grow your architecture or interior design business with premium branding, SEO, portfolio websites, lead generation, CRM automation and AI solutions.",
       },
-      { property: "og:type", content: "website" },
-      { property: "og:image", content: heroImg },
-      { name: "twitter:card", content: "summary_large_image" },
+      {
+        property: "og:type",
+        content: "website",
+      },
+      {
+        property: "og:url",
+        content: "https://www.ace360degree.com/industries/architecture",
+      },
+      {
+        property: "og:site_name",
+        content: "Ace360degree",
+      },
+      {
+        name: "robots",
+        content: "index, follow",
+      },
+      {
+        name: "author",
+        content: "Ace360degree",
+      },
+      {
+        name: "twitter:card",
+        content: "summary_large_image",
+      },
+      {
+        name: "twitter:title",
+        content:
+          "Architecture Marketing & Digital Solutions | Ace360degree",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "Grow your architecture or interior design business with premium branding, SEO, portfolio websites, lead generation, CRM automation and AI solutions.",
+      },
+    ],
+
+    links: [
+      {
+        rel: "canonical",
+        href: "https://www.ace360degree.com/industries/architecture",
+      },
     ],
   }),
 });

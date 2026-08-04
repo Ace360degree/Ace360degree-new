@@ -10,12 +10,10 @@ import caseAmigo from "@/assets/case-amigo.jpg";
 export const Route = createFileRoute("/event-marketing-brand-experiences")({
   component: EventMarketingPage,
   head: () => ({
+    // title: "Event Marketing & Brand Experiences Services Mumbai | Ace360degree",
     meta: [
       {
-        title:
-          "Event Marketing & Brand Experiences Services Mumbai | Ace360degree",
-      },
-      {
+        title: "Event Marketing & Brand Experiences Services Mumbai | Ace360degree",
         name: "description",
         content:
           "Ace360degree is an Event Marketing & Brand Experience Partner helping businesses create memorable experiences, strengthen relationships and amplify brand impact through strategic event marketing, experiential campaigns and brand activations.",

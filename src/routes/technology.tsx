@@ -9,9 +9,10 @@ import caseRexello from "@/assets/case-rexello.jpg";
 
 export const Route = createFileRoute("/technology")({
   head: () => ({
+    // title: "Technology & Digital Transformation Partner | Systems, Platforms & AI — Ace360degree",
     meta: [
-      { title: "Technology & Digital Transformation Partner | Systems, Platforms & AI — Ace360degree" },
       {
+        title: "Technology & Digital Transformation Partner | Systems, Platforms & AI — Ace360degree",
         name: "description",
         content:
           "Ace360degree builds business systems, digital platforms and cloud infrastructure that streamline operations, improve customer experiences and scale efficiently — for SMEs, enterprises and institutions.",

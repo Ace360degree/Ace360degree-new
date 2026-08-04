@@ -27,27 +27,76 @@ import servicesHero15 from "@/assets/services-hero15.jpg";
 
 export const Route = createFileRoute("/services")({
   component: ServicesPage,
+
   head: () => ({
+    // title: "Digital Marketing & Technology Services | Ace360degree",
+
     meta: [
-      { title: "Growth Solutions — Marketing, Technology & AI | Ace360degree" },
       {
+        title: "Digital Marketing & Technology Services | Ace360degree",
         name: "description",
         content:
-          "Ace360degree is a Growth, Technology & AI partner helping businesses solve customer acquisition, brand visibility, digital transformation, operational efficiency and AI adoption challenges.",
+          "Explore digital marketing, SEO, performance marketing, web development, branding, CRM, ERP, automation and AI solutions from Ace360degree.",
       },
-      { property: "og:title", content: "Growth Solutions — Ace360degree" },
+      {
+        name: "keywords",
+        content:
+          "Digital Marketing Services, Digital Marketing Services in Mumbai, Digital Transformation Services, Digital Marketing Agency Services, Online Marketing Services, Marketing Automation Services, Growth Marketing Services, Business Growth Solutions, AI Marketing Solutions",
+      },
+      {
+        property: "og:title",
+        content:
+          "Digital Marketing & Technology Services | Ace360degree",
+      },
       {
         property: "og:description",
         content:
-          "Integrated growth marketing, branding, technology and AI solutions — engineered to solve real business challenges and accelerate measurable outcomes.",
+          "Explore digital marketing, SEO, performance marketing, web development, branding, CRM, ERP, automation and AI solutions from Ace360degree.",
       },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: "/services" },
+      {
+        property: "og:type",
+        content: "website",
+      },
+      {
+        property: "og:url",
+        content: "https://www.ace360degree.com/services",
+      },
+      {
+        property: "og:site_name",
+        content: "Ace360degree",
+      },
+      {
+        name: "robots",
+        content: "index, follow",
+      },
+      {
+        name: "author",
+        content: "Ace360degree",
+      },
+      {
+        name: "twitter:card",
+        content: "summary_large_image",
+      },
+      {
+        name: "twitter:title",
+        content:
+          "Digital Marketing & Technology Services | Ace360degree",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "Explore digital marketing, SEO, performance marketing, web development, branding, CRM, ERP, automation and AI solutions from Ace360degree.",
+      },
     ],
-    links: [{ rel: "canonical", href: "/services" }],
+
+    links: [
+      {
+        rel: "canonical",
+        href: "https://www.ace360degree.com/services",
+      },
+    ],
   }),
 });
-
 /* ---------- helpers ---------- */
 function useReveal<T extends HTMLElement>() {
   const ref = useRef<T | null>(null);

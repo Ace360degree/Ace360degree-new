@@ -10,33 +10,78 @@ import casePain from "@/assets/case-living.212.jpg";
 
 export const Route = createFileRoute("/corporate-films-video-production")({
   component: CorporateFilmsPage,
+
   head: () => ({
+    // title: "Corporate Film Production Company in Mumbai | Ace360degree",
+
     meta: [
       {
-        title:
-          "Corporate Film Production Mumbai | Brand Films & Corporate Storytelling | Ace360degree",
-      },
-      {
+        title: "Corporate Film Production Company in Mumbai | Ace360degree",
         name: "description",
         content:
-          "Ace360degree is a Corporate Storytelling & Brand Film Partner helping businesses build trust, credibility and connection through corporate films, founder stories, employer branding videos and customer testimonials.",
+          "Ace360degree is a corporate film production company in Mumbai creating brand films, company profiles, founder stories, testimonials and manufacturing videos.",
+      },
+      {
+        name: "keywords",
+        content:
+          "Corporate Video Production Company, Corporate Video Production Services, Professional Video Production Services, Business Video Production Company, Company Profile Video Production, Corporate Film Production Services, Corporate Video Agency",
       },
       {
         property: "og:title",
-        content: "Corporate Films & Brand Storytelling Partner | Ace360degree",
+        content:
+          "Corporate Film Production Company in Mumbai | Ace360degree",
       },
       {
         property: "og:description",
         content:
-          "Tell The Story Behind The Brand. Corporate films, founder stories, employer branding and testimonial videos that strengthen trust, credibility and stakeholder confidence.",
+          "Ace360degree is a corporate film production company in Mumbai creating brand films, company profiles, founder stories, testimonials and manufacturing videos.",
       },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: "/corporate-films-video-production" },
+      {
+        property: "og:type",
+        content: "website",
+      },
+      {
+        property: "og:url",
+        content:
+          "https://www.ace360degree.com/corporate-films-video-production",
+      },
+      {
+        property: "og:site_name",
+        content: "Ace360degree",
+      },
+      {
+        name: "robots",
+        content: "index, follow",
+      },
+      {
+        name: "author",
+        content: "Ace360degree",
+      },
+      {
+        name: "twitter:card",
+        content: "summary_large_image",
+      },
+      {
+        name: "twitter:title",
+        content:
+          "Corporate Film Production Company in Mumbai | Ace360degree",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "Ace360degree is a corporate film production company in Mumbai creating brand films, company profiles, founder stories, testimonials and manufacturing videos.",
+      },
     ],
-    links: [{ rel: "canonical", href: "/corporate-films-video-production" }],
+
+    links: [
+      {
+        rel: "canonical",
+        href:
+          "https://www.ace360degree.com/corporate-films-video-production",
+      },
+    ],
   }),
 });
-
 /* ---------- helpers ---------- */
 function useReveal<T extends HTMLElement>() {
   const ref = useRef<T | null>(null);

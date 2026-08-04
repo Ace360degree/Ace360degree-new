@@ -7,12 +7,10 @@ import heroImg from "@/assets/services-hero.jpg";
 export const Route = createFileRoute("/ai-strategy-readiness-assessment")({
   component: AIStrategyPage,
   head: () => ({
+  
     meta: [
       {
-        title:
-          "AI Strategy & Readiness Assessment | AI Transformation Consulting — Ace360degree",
-      },
-      {
+        title: "AI Strategy & Readiness Assessment | AI Transformation Consulting — Ace360degree",
         name: "description",
         content:
           "Ace360degree helps organizations evaluate AI opportunities, assess readiness and build practical AI adoption roadmaps aligned with business goals. Strategy before investment.",

@@ -10,34 +10,76 @@ import caseAmigo from "@/assets/case-amigo.5.jpg";
 
 export const Route = createFileRoute("/marketing-communication")({
   component: MarketingCommunicationPage,
+
   head: () => ({
+    // title: "Marketing Communication Services in Mumbai | Ace360degree",
+
     meta: [
       {
-        title:
-          "Specialized Marketing & Communication Services — Ace360degree",
-      },
-      {
+        title: "Marketing Communication Services in Mumbai | Ace360degree",
         name: "description",
         content:
-          "Ace360degree is a strategic communication and influence partner helping businesses build authority, strengthen relationships, shape perception and improve stakeholder engagement through corporate marketing, PR, video, employer branding and community marketing.",
+          "Ace360degree offers marketing communication services in Mumbai, creating brochures, presentations, sales collateral, corporate communication and integrated brand messaging.",
+      },
+      {
+        name: "keywords",
+        content:
+          "Integrated Marketing Communication, Brand Messaging Services, Corporate Communication Services, Brand Communication Services, Business Communication Solutions, Business Presentation Design, Marketing Collateral Design, Marketing Communication Agency",
       },
       {
         property: "og:title",
-        content: "Influence Markets. Build Authority. Drive Engagement.",
+        content:
+          "Marketing Communication Services in Mumbai | Ace360degree",
       },
       {
         property: "og:description",
         content:
-          "Strategic communication and influence programs that help businesses shape perception, build authority and deepen stakeholder relationships — not just run campaigns.",
+          "Ace360degree offers marketing communication services in Mumbai, creating brochures, presentations, sales collateral, corporate communication and integrated brand messaging.",
       },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: "/marketing-communication" },
+      {
+        property: "og:type",
+        content: "website",
+      },
+      {
+        property: "og:url",
+        content: "https://www.ace360degree.com/marketing-communication",
+      },
+      {
+        property: "og:site_name",
+        content: "Ace360degree",
+      },
+      {
+        name: "robots",
+        content: "index, follow",
+      },
+      {
+        name: "author",
+        content: "Ace360degree",
+      },
+      {
+        name: "twitter:card",
+        content: "summary_large_image",
+      },
+      {
+        name: "twitter:title",
+        content:
+          "Marketing Communication Services in Mumbai | Ace360degree",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "Ace360degree offers marketing communication services in Mumbai, creating brochures, presentations, sales collateral, corporate communication and integrated brand messaging.",
+      },
     ],
-    links: [{ rel: "canonical", href: "/marketing-communication" }],
-  }),
-});
 
-/* ---------- helpers ---------- */
+    links: [
+      {
+        rel: "canonical",
+        href: "https://www.ace360degree.com/marketing-communication",
+      },
+    ],
+  }),
+});/* ---------- helpers ---------- */
 function useReveal<T extends HTMLElement>() {
   const ref = useRef<T | null>(null);
   const [seen, setSeen] = useState(false);

@@ -10,12 +10,10 @@ import caseRexello from "@/assets/case-rexello.jpg";
 export const Route = createFileRoute("/influencer-advocacy-community-marketing")({
   component: InfluencerAdvocacyPage,
   head: () => ({
+    // title: "Influencer, Advocacy & Community Marketing Services Mumbai | Ace360degree",
     meta: [
       {
-        title:
-          "Influencer, Advocacy & Community Marketing Services Mumbai | Ace360degree",
-      },
-      {
+        title: "Influencer, Advocacy & Community Marketing Services Mumbai | Ace360degree",
         name: "description",
         content:
           "Ace360degree is an Influence & Community Building Partner helping businesses create trust, strengthen relationships and build long-term advocacy through creators, customers, employees and communities.",

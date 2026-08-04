@@ -6,27 +6,78 @@ import heroImg from "@/assets/services-hero.jpg";
 
 export const Route = createFileRoute("/ai-content-marketing-systems")({
   component: AIContentMarketingSystemsPage,
+
   head: () => ({
+    // title:
+    //   "AI Content Marketing Agency in Mumbai | Smart Digital Growth Solutions",
+
     meta: [
-      { title: "AI Content & Marketing Systems Partner — Ace360degree" },
       {
+        title:
+      "AI Content Marketing Agency in Mumbai | Smart Digital Growth Solutions",
         name: "description",
         content:
-          "Ace360degree helps businesses scale visibility, authority and marketing performance through intelligent content operations, multi-channel amplification and AI-powered marketing systems.",
+          "Transform your business with AI content marketing systems in Mumbai. We help brands automate content creation, SEO, social media, and lead generation using advanced AI-driven marketing strategies designed for growth, engagement, and conversions.",
+      },
+      {
+        name: "keywords",
+        content:
+          "AI content marketing systems Mumbai, AI marketing agency Mumbai, AI digital marketing services Mumbai, AI marketing services near me Mumbai, AI SEO agency Mumbai Malad, AI automation for content marketing services Mumbai",
       },
       {
         property: "og:title",
-        content: "Create Once. Amplify Everywhere. Scale Intelligently. — Ace360degree",
+        content:
+          "AI Content Marketing Agency in Mumbai | Smart Digital Growth Solutions",
       },
       {
         property: "og:description",
         content:
-          "AI-powered content operations and marketing systems: thought leadership, SEO/AEO/GEO, repurposing, automation and intelligence — engineered for growth.",
+          "Transform your business with AI content marketing systems in Mumbai. We help brands automate content creation, SEO, social media, and lead generation using advanced AI-driven marketing strategies designed for growth, engagement, and conversions.",
       },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: "/ai-content-marketing-systems" },
+      {
+        property: "og:type",
+        content: "website",
+      },
+      {
+        property: "og:url",
+        content:
+          "https://ace360degree.com/ai-content-marketing-systems",
+      },
+      {
+        property: "og:site_name",
+        content: "Ace360degree",
+      },
+      {
+        name: "robots",
+        content: "index, follow",
+      },
+      {
+        name: "author",
+        content: "Ace360degree",
+      },
+      {
+        name: "twitter:card",
+        content: "summary_large_image",
+      },
+      {
+        name: "twitter:title",
+        content:
+          "AI Content Marketing Agency in Mumbai | Smart Digital Growth Solutions",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "Transform your business with AI content marketing systems in Mumbai. We help brands automate content creation, SEO, social media, and lead generation using advanced AI-driven marketing strategies designed for growth, engagement, and conversions.",
+      },
     ],
-    links: [{ rel: "canonical", href: "/ai-content-marketing-systems" }],
+
+    links: [
+      {
+        rel: "canonical",
+        href:
+          "https://ace360degree.com/ai-content-marketing-systems",
+      },
+    ],
   }),
 });
 

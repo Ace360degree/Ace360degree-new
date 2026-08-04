@@ -37,34 +37,76 @@ import caseAmigo from "@/assets/case-amigo-academy.117.jpg";
 
 export const Route = createFileRoute("/industries_/education")({
   component: EducationPage,
+
   head: () => ({
+    // title: "Education Digital Marketing Agency in Mumbai | Ace360degree",
+
     meta: [
       {
-        title:
-          "Marketing, Technology & AI Solutions for Educational Institutions & EdTech Companies | Ace360degree",
-      },
-      {
+        title: "Education Digital Marketing Agency in Mumbai | Ace360degree",
         name: "description",
         content:
-          "Ace360degree helps schools, colleges, universities, coaching institutes and EdTech companies increase admissions, strengthen institutional branding and modernize operations through Growth Marketing, Technology and AI.",
+          "Ace360degree helps schools, colleges, universities and edtech companies grow with education digital marketing, branding, websites, AI and student admission solutions.",
+      },
+      {
+        name: "keywords",
+        content:
+          "Education Marketing Agency, Education Digital Marketing, Education Branding Agency, EdTech Marketing Agency, Education Website Development, School Marketing Agency, University Marketing Agency, College Marketing Agency",
       },
       {
         property: "og:title",
         content:
-          "Education Marketing, Technology & AI Solutions — Ace360degree",
+          "Education Digital Marketing Agency in Mumbai | Ace360degree",
       },
       {
         property: "og:description",
         content:
-          "Strategic growth partner for schools, colleges, universities, coaching institutes, skill development institutes and EdTech companies.",
+          "Ace360degree helps schools, colleges, universities and edtech companies grow with education digital marketing, branding, websites, AI and student admission solutions.",
       },
-      { property: "og:type", content: "website" },
-      { property: "og:image", content: heroImg },
-      { name: "twitter:card", content: "summary_large_image" },
+      {
+        property: "og:type",
+        content: "website",
+      },
+      {
+        property: "og:url",
+        content: "https://www.ace360degree.com/industries/education",
+      },
+      {
+        property: "og:site_name",
+        content: "Ace360degree",
+      },
+      {
+        name: "robots",
+        content: "index, follow",
+      },
+      {
+        name: "author",
+        content: "Ace360degree",
+      },
+      {
+        name: "twitter:card",
+        content: "summary_large_image",
+      },
+      {
+        name: "twitter:title",
+        content:
+          "Education Digital Marketing Agency in Mumbai | Ace360degree",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "Ace360degree helps schools, colleges, universities and edtech companies grow with education digital marketing, branding, websites, AI and student admission solutions.",
+      },
+    ],
+
+    links: [
+      {
+        rel: "canonical",
+        href: "https://www.ace360degree.com/industries/education",
+      },
     ],
   }),
 });
-
 function Reveal({
   children,
   delay = 0,

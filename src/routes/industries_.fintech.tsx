@@ -37,38 +37,76 @@ import caseArcil from "@/assets/case-arcil.jpg";
 
 export const Route = createFileRoute("/industries_/fintech")({
   component: FintechPage,
+
   head: () => ({
+    // title: "Fintech Marketing & Technology Solutions | Ace360degree",
+
     meta: [
       {
-        title:
-          "Growth, Marketing, Technology & AI Solutions for Financial Services & Fintech Companies | Ace360degree",
-      },
-      {
+        title: "Fintech Marketing & Technology Solutions | Ace360degree",
+
         name: "description",
         content:
-          "Strategic growth partner for banks, NBFCs, fintech startups, investment firms, stock brokers, wealth managers and insurers — financial services marketing, SEO, AI and digital transformation. Mumbai • UAE • UK • USA.",
+          "Grow your fintech or BFSI business with SEO, performance marketing, branding, website development, CRM automation and AI-powered solutions.",
       },
       {
         name: "keywords",
         content:
-          "financial services marketing agency, fintech marketing agency, financial SEO company, NBFC digital marketing, investment marketing agency, stock broker marketing, wealth management marketing, AI for financial services, digital transformation for financial institutions, insurance marketing agency",
+          "Fintech marketing agency, financial services digital transformation, Fintech digital marketing agency, financial services marketing agency, fintech branding agency, fintech lead generation, insurance digital marketing",
       },
       {
         property: "og:title",
-        content: "Financial Services & Fintech Growth, Technology & AI Partner | Ace360degree",
+        content: "Fintech Marketing & Technology Solutions | Ace360degree",
       },
       {
         property: "og:description",
         content:
-          "Helping banks, NBFCs, fintechs, brokers, wealth managers and insurers build trust, scale acquisition and lead AI-led transformation.",
+          "Grow your fintech or BFSI business with SEO, performance marketing, branding, website development, CRM automation and AI-powered solutions.",
       },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: "/industries/fintech" },
-      { property: "og:image", content: heroImg },
+      {
+        property: "og:type",
+        content: "website",
+      },
+      {
+        property: "og:url",
+        content: "https://www.ace360degree.com/industries/fintech",
+      },
+      {
+        property: "og:site_name",
+        content: "Ace360degree",
+      },
+      {
+        name: "robots",
+        content: "index, follow",
+      },
+      {
+        name: "author",
+        content: "Ace360degree",
+      },
+      {
+        name: "twitter:card",
+        content: "summary_large_image",
+      },
+      {
+        name: "twitter:title",
+        content: "Fintech Marketing & Technology Solutions | Ace360degree",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "Grow your fintech or BFSI business with SEO, performance marketing, branding, website development, CRM automation and AI-powered solutions.",
+      },
     ],
-    links: [{ rel: "canonical", href: "/industries/fintech" }],
+
+    links: [
+      {
+        rel: "canonical",
+        href: "https://www.ace360degree.com/industries/fintech",
+      },
+    ],
   }),
-});
+}); 
+
 
 /* ---------- reveal ---------- */
 function useReveal<T extends HTMLElement>() {
