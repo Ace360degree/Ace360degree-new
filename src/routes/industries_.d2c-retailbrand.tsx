@@ -293,63 +293,127 @@ function D2CPage() {
     <div className="min-h-screen bg-canvas text-dark">
       <SiteHeader />
 
-      <section className="border-b border-dark/10 bg-canvas">
-        <div className="mx-auto max-w-7xl px-6 py-28 md:py-36">
-          <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-16">
-            <div className="lg:col-span-7">
-              <div className="text-[10px] uppercase tracking-[0.28em] text-brand font-semibold mb-6">
-                Industry Solutions / D2C & Retail Brands
-              </div>
-              <h1 className="font-serif text-5xl md:text-7xl leading-[1.02] tracking-tight max-w-4xl">
-                D2C & Retail <span className="italic text-brand">Industry Solutions</span>
-              </h1>
-              <p className="mt-6 text-xl md:text-2xl text-dark/80 max-w-3xl">
-                Marketing, Branding & Commerce Solutions for D2C & Retail Brands.
-              </p>
-              <p className="mt-6 text-dark/70 max-w-2xl leading-relaxed">
-                A strategic growth partner for direct-to-consumer, retail and eCommerce
-                brands—combining branding, performance marketing, digital commerce and customer
-                experience to accelerate sales, customer loyalty and sustainable business growth.
-              </p>
-              <div className="mt-10 flex flex-wrap gap-4">
-                <Link
-                  to="/contact"
-                  className="inline-flex items-center gap-2 rounded-2xl bg-brand text-dark px-6 py-3 font-semibold shadow-sm transition-all duration-300 ease-out hover:brightness-95 hover:shadow-[0_12px_28px_rgba(0,0,0,0.22)]"
-                >
-                  Book Discovery Call <ArrowRight className="size-4" />
-                </Link>
-                <Link
-                  to="/portfolio"
-                  className="inline-flex items-center gap-2 rounded-2xl border border-dark/15 text-dark px-6 py-3 font-semibold shadow-sm transition-all duration-300 ease-out hover:border-brand hover:text-brand hover:shadow-[0_12px_28px_rgba(0,0,0,0.16)]"
-                >
-                  View Retail Success Stories <ArrowUpRight className="size-4" />
-                </Link>
-              </div>
-            </div>
+     {/* HERO */}
+<section className="relative isolate overflow-hidden border-b border-dark/10 bg-[#FDFBF9]">
+  {/* Cream gradient background */}
+  <div
+    aria-hidden="true"
+    className="pointer-events-none absolute inset-0 z-0"
+    style={{
+      background: `
+        linear-gradient(
+          180deg,
+          rgb(252, 252, 249) 0%,
+          rgb(252, 252, 249) 48%,
+          rgb(253, 247, 239) 52%,
+          rgb(253, 243, 231) 56%,
+          rgb(253, 238, 216) 61%,
+          rgb(252, 233, 204) 66%,
+          rgb(252, 230, 195) 72%,
+          rgb(252, 229, 193) 77%,
+          rgb(252, 229, 194) 81%,
+          rgb(252, 232, 200) 86%,
+          rgb(253, 236, 210) 91%,
+          rgb(253, 241, 223) 96%,
+          rgb(252, 247, 237) 100%
+        )
+      `,
+    }}
+  />
 
-            <div className="lg:col-span-5">
-              <div className="overflow-hidden border border-dark/10 bg-white shadow-[0_24px_80px_rgba(24,24,24,0.08)]">
-                <img
-                  src={heroImg}
-                  alt="D2C and retail brands"
-                  className="aspect-[4/3] w-full object-cover"
-                  width={1920}
-                  height={1080}
-                />
-              </div>
-            </div>
-          </div>
+  {/* Subtle grid */}
+  <div
+    aria-hidden="true"
+    className="pointer-events-none absolute inset-0 z-[1] opacity-[0.035]"
+    style={{
+      backgroundImage:
+        "linear-gradient(to right, #181818 1px, transparent 1px), linear-gradient(to bottom, #181818 1px, transparent 1px)",
+      backgroundSize: "64px 64px",
+    }}
+  />
 
-          <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 pt-10 border-t border-dark/10">
-            {stats.map((s) => (
-              <div key={s.l}>
-                <div className="font-serif text-4xl md:text-5xl text-brand">{s.v}</div>
-                <div className="mt-2 text-xs uppercase tracking-[0.18em] text-dark/55">{s.l}</div>
-              </div>
-            ))}
+  {/* Soft glow */}
+  <div
+    aria-hidden="true"
+    className="pointer-events-none absolute right-[4%] top-[12%] z-[1] h-[420px] w-[420px] rounded-full bg-brand/10 blur-[110px]"
+  />
+
+  <div className="relative z-10 mx-auto max-w-7xl px-6 py-28 md:py-36">
+    <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-16">
+      {/* Left content */}
+      <div className="lg:col-span-7">
+        <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-dark/15 bg-white/55 px-4 py-1.5 text-[10px] font-semibold uppercase tracking-[0.28em] text-dark/65 shadow-sm backdrop-blur-md">
+          <ShoppingBag className="size-3.5 text-brand" />
+          Industry Solutions / D2C & Retail Brands
+        </div>
+
+        <h1 className="max-w-4xl font-serif text-5xl leading-[1.02] tracking-tight md:text-7xl">
+          D2C & Retail{" "}
+          <span className="italic text-brand">Industry Solutions</span>
+        </h1>
+
+        <p className="mt-6 max-w-3xl text-xl text-dark/80 md:text-2xl">
+          Marketing, Branding & Commerce Solutions for D2C & Retail Brands.
+        </p>
+
+        <p className="mt-6 max-w-2xl leading-relaxed text-dark/70">
+          A strategic growth partner for direct-to-consumer, retail and
+          eCommerce brands—combining branding, performance marketing, digital
+          commerce and customer experience to accelerate sales, customer
+          loyalty and sustainable business growth.
+        </p>
+
+        <div className="mt-10 flex flex-wrap gap-4">
+          <Link
+            to="/contact"
+            className="inline-flex items-center gap-2 rounded-2xl bg-brand px-6 py-3 font-semibold text-dark shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:brightness-95 hover:shadow-[0_12px_28px_rgba(0,0,0,0.22)]"
+          >
+            Book Discovery Call
+            <ArrowRight className="size-4" />
+          </Link>
+
+          <Link
+            to="/portfolio"
+            className="inline-flex items-center gap-2 rounded-2xl border border-dark/15 bg-white/45 px-6 py-3 font-semibold text-dark shadow-sm backdrop-blur-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-brand hover:bg-white/70 hover:text-brand hover:shadow-[0_12px_28px_rgba(0,0,0,0.16)]"
+          >
+            View Retail Success Stories
+            <ArrowUpRight className="size-4" />
+          </Link>
+        </div>
+      </div>
+
+      {/* Right image */}
+      <div className="lg:col-span-5">
+        <div className="relative">
+          <div className="overflow-hidden rounded-2xl">
+            <img
+              src={heroImg}
+              alt="D2C and retail brands"
+              className="aspect-[4/5] w-full rounded-xl object-cover lg:w-[460px]"
+              width={1920}
+              height={1080}
+            />
           </div>
         </div>
-      </section>
+      </div>
+    </div>
+
+    {/* Statistics */}
+    <div className="mt-20 grid grid-cols-2 gap-8 border-t border-dark/10 pt-10 md:grid-cols-4">
+      {stats.map((s) => (
+        <div key={s.l}>
+          <div className="font-serif text-4xl text-brand md:text-5xl">
+            {s.v}
+          </div>
+
+          <div className="mt-2 text-xs uppercase tracking-[0.18em] text-dark/55">
+            {s.l}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
       <section className="py-24 md:py-32 bg-canvas">
         <div className="mx-auto max-w-5xl px-6">
           <div className="text-[10px] uppercase tracking-[0.28em] text-brand font-semibold mb-4">
@@ -495,7 +559,23 @@ function D2CPage() {
         </div>
       </section>
 
-      <section className="py-24 md:py-32">
+      <section className="py-24 md:py-32"
+      style={{
+    backgroundImage: `
+      linear-gradient(
+        180deg,
+        #FFF8EA 0%,
+        #FFF0D2 8%,
+        #FFE9BE 20%,
+        #FFE7B8 30%,
+        #FFEDCD 42%,
+        #FFF5E5 52%,
+        #FCFAF5 62%,
+        #FCFCFA 72%,
+        #FCFCFA 100%
+      )
+    `,
+  }}>
         <div className="mx-auto max-w-7xl px-6">
           <div className="text-[10px] uppercase tracking-[0.28em] text-brand font-semibold mb-4">Why Ace360degree</div>
           <h2 className="font-serif text-4xl md:text-5xl max-w-3xl">Built for ambitious consumer brands.</h2>

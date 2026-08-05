@@ -444,90 +444,144 @@ function ArchitecturePage() {
       <SiteHeader />
 
       {/* HERO */}
-      <section className="relative overflow-hidden border-b border-foreground/10 bg-gradient-to-b from-background via-background to-primary/5">
-        <div
-          aria-hidden
-          className="absolute inset-0 opacity-[0.04]"
-          style={{
-            backgroundImage:
-              "linear-gradient(to right, currentColor 1px, transparent 1px), linear-gradient(to bottom, currentColor 1px, transparent 1px)",
-            backgroundSize: "64px 64px",
-          }}
-        />
-        <div className="container relative mx-auto grid gap-12 px-4 py-20 sm:py-28 lg:grid-cols-12 lg:gap-10 lg:py-32">
-          <div className="lg:col-span-7">
-            <Reveal>
-              <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-foreground/15 bg-background/60 px-3 py-1 text-xs uppercase tracking-[0.18em] text-foreground/70 backdrop-blur">
-                <Ruler className="h-3.5 w-3.5" />
-                <span>Industry Solutions / Architecture, Interiors & Real Estate</span>
-              </div>
-            </Reveal>
-            <Reveal delay={80}>
-              <h1 className="font-serif text-4xl leading-[1.05] tracking-tight text-foreground sm:text-5xl lg:text-6xl">
-                Growth, Branding, Technology & AI Solutions
-                <span className="block italic text-foreground/80">
-                  for Architecture, Interior Design & Real Estate Businesses.
-                </span>
-              </h1>
-            </Reveal>
-            <Reveal delay={160}>
-              <div className="mt-8 max-w-2xl space-y-4 text-base leading-relaxed text-foreground/75 sm:text-lg">
-                <p>
-                  Modern clients research online before selecting architects or
-                  designers. They compare portfolios, evaluate credibility, review
-                  completed projects, explore design philosophy and read testimonials
-                  — and only then schedule consultations.
-                </p>
-                <p>
-                  Ace360degree helps design-led businesses build premium brands, create
-                  exceptional digital experiences and generate high-value enquiries
-                  through Growth Marketing, Branding, Technology and AI.
-                </p>
-              </div>
-            </Reveal>
-            <Reveal delay={220}>
-              <div className="mt-10 flex flex-wrap gap-3">
-                <Link
-                  to="/contact"
-                  className="group inline-flex items-center gap-2 rounded-full bg-foreground px-6 py-3 text-sm font-medium text-background shadow-sm transition-all duration-300 ease-out hover:bg-foreground/90 hover:shadow-[0_14px_32px_rgba(0,0,0,0.24)]"
-                >
-                  Request Growth Audit
-                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-                </Link>
-                <Link
-                  to="/contact"
-                  className="inline-flex items-center gap-2 rounded-full border border-foreground/20 px-6 py-3 text-sm font-medium text-foreground shadow-sm transition-all duration-300 ease-out hover:bg-foreground/5 hover:shadow-[0_14px_32px_rgba(0,0,0,0.18)]"
-                >
-                  Book Discovery Call
-                </Link>
-              </div>
-            </Reveal>
-          </div>
+      {/* HERO */}
+<section
+  className="relative isolate overflow-hidden border-b border-foreground/10 py-20 sm:py-28"
+  style={{
+    backgroundImage: `
+      linear-gradient(
+        180deg,
+        #FCFCFA 0%,
+        #FCFCFA 48%,
+        #FCFAF5 56%,
+        #FFF5E5 64%,
+        #FFEDCD 72%,
+        #FFE7B8 82%,
+        #FFE9BE 90%,
+        #FFF0D2 96%,
+        #FFF8EA 100%
+      )
+    `,
+  }}
+>
+  {/* Subtle grid background */}
+  <div
+    aria-hidden="true"
+    className="pointer-events-none absolute inset-0 z-0 opacity-[0.04]"
+    style={{
+      backgroundImage:
+        "linear-gradient(to right, currentColor 1px, transparent 1px), linear-gradient(to bottom, currentColor 1px, transparent 1px)",
+      backgroundSize: "64px 64px",
+    }}
+  />
 
-          <div className="lg:col-span-5">
-            <Reveal delay={120}>
-              <div className="relative overflow-hidden rounded-2xl border border-foreground/10 shadow-2xl">
-                <img
-                  src={heroImg}
-                  alt="Premium architecture and interior design experience"
-                  className="aspect-[4/5] w-full object-cover"
-                  width={1024}
-                  height={1280}
-                />
-                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-background/95 via-background/40 to-transparent p-6">
-                  <div className="flex items-center gap-3 text-foreground">
-                    <ShieldCheck className="h-5 w-5" />
-                    <span className="text-sm font-medium">
-                      Built for design. Crafted for trust. Powered by AI.
-                    </span>
+  {/* Soft decorative glow */}
+  <div
+    aria-hidden="true"
+    className="pointer-events-none absolute right-[4%] top-[10%] z-0 h-[440px] w-[440px] rounded-full bg-white/35 blur-[110px]"
+  />
+
+  {/* Hero content */}
+  <div className="container relative z-10 mx-auto grid gap-12 px-4 lg:grid-cols-12 lg:items-center lg:gap-10">
+    {/* Left side */}
+    <div className="lg:col-span-7">
+      <Reveal>
+        <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-foreground/15 bg-background/55 px-3 py-1.5 text-xs uppercase tracking-[0.18em] text-foreground/70 shadow-sm backdrop-blur-md">
+          <Ruler className="h-3.5 w-3.5 text-[#F2A400]" />
+
+          <span>
+            Industry Solutions / Architecture, Interiors & Real Estate
+          </span>
+        </div>
+      </Reveal>
+
+      <Reveal delay={80}>
+        <h1 className="font-serif text-4xl leading-[1.05] tracking-tight text-foreground sm:text-5xl lg:text-6xl">
+          Growth, Branding, Technology & AI Solutions
+
+          <span className="mt-2 block italic text-foreground/75">
+            for Architecture, Interior Design & Real Estate Businesses.
+          </span>
+        </h1>
+      </Reveal>
+
+      <Reveal delay={160}>
+        <div className="mt-8 max-w-2xl space-y-4 text-base leading-relaxed text-foreground/75 sm:text-lg">
+          <p>
+            Modern clients research online before selecting architects or
+            designers. They compare portfolios, evaluate credibility, review
+            completed projects, explore design philosophy and read testimonials
+            — and only then schedule consultations.
+          </p>
+
+          <p>
+            Ace360degree helps design-led businesses build premium brands,
+            create exceptional digital experiences and generate high-value
+            enquiries through Growth Marketing, Branding, Technology and AI.
+          </p>
+        </div>
+      </Reveal>
+
+      <Reveal delay={220}>
+        <div className="mt-10 flex flex-wrap gap-3">
+          <Link
+            to="/contact"
+            className="group inline-flex items-center gap-2 rounded-full bg-foreground px-6 py-3 text-sm font-medium text-background shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-foreground/90 hover:shadow-[0_14px_32px_rgba(0,0,0,0.24)]"
+          >
+            Request Growth Audit
+
+            <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" />
+          </Link>
+
+          <Link
+            to="/contact"
+            className="inline-flex items-center gap-2 rounded-full border border-foreground/20 bg-background/40 px-6 py-3 text-sm font-medium text-foreground shadow-sm backdrop-blur-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-background/70 hover:shadow-[0_14px_32px_rgba(0,0,0,0.14)]"
+          >
+            Book Discovery Call
+
+            <ArrowUpRight className="h-4 w-4" />
+          </Link>
+        </div>
+      </Reveal>
+    </div>
+
+    {/* Right side */}
+    <div className="lg:col-span-5">
+      <Reveal delay={120}>
+        <div className="relative">
+          <div
+            aria-hidden="true"
+            className="absolute -inset-5 -z-10 rounded-[32px] bg-[#F2A400]/15 blur-3xl"
+          />
+
+          <div className="relative overflow-hidden rounded-2xl border border-white/60 bg-white/25 p-2 shadow-[0_28px_80px_rgba(73,54,28,0.2)] backdrop-blur-sm">
+            <div className="relative overflow-hidden rounded-xl">
+              <img
+                src={heroImg}
+                alt="Premium architecture and interior design experience"
+                className="aspect-[4/5] w-full object-cover"
+                width={1024}
+                height={1280}
+              />
+
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-background/95 via-background/50 to-transparent px-5 pb-5 pt-20 sm:p-6 sm:pt-24">
+                <div className="flex items-center gap-3 text-foreground">
+                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-foreground/10 bg-background/75 backdrop-blur-sm">
+                    <ShieldCheck className="h-4 w-4 text-[#F2A400]" />
                   </div>
+
+                  <span className="text-sm font-medium">
+                    Built for design. Crafted for trust. Powered by AI.
+                  </span>
                 </div>
               </div>
-            </Reveal>
+            </div>
           </div>
         </div>
-      </section>
-
+      </Reveal>
+    </div>
+  </div>
+</section>
       {/* SECTION 2 — Design Industry Has Changed */}
       <section className="border-b border-foreground/10 py-20 sm:py-28">
         <div className="container mx-auto px-4">

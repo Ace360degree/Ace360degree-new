@@ -3,7 +3,7 @@ import { useEffect, useState, useRef, ReactNode } from "react";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import heroMesh from "@/assets/index/AI growth visualization.png";
-import showreel from "@/assets/teamwork222.png";
+import showreel from "@/assets/teamwork22222.png";
 import caseMos from "@/assets/index/story/MOS Utility.png";
 import caseCosmos from "@/assets/index/story/Cosmos.png";
 import caseRexello from "@/assets/index/story/Rexello Castors.png";
