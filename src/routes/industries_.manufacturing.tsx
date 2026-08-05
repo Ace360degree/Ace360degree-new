@@ -31,7 +31,7 @@ import {
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 
-import heroImg from "@/assets/industry-manufacturing.666.jpg";
+import heroImg from "@/assets/industry-manufacturing.6666.jpg";
 import caseRexello from "@/assets/case-rexello.777.jpg";
 import caseCosmos from "@/assets/case-cosmos.555.jpg";
 
@@ -376,81 +376,129 @@ function ManufacturingPage() {
       <SiteHeader />
 
       {/* HERO */}
-      <section className="relative overflow-hidden border-b border-border/60 bg-gradient-to-b from-background via-background to-muted/30">
-        <div className="mx-auto max-w-7xl px-6 pb-20 pt-28 lg:pt-32">
-          <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-14">
-            <div className="lg:col-span-7">
-              <Reveal>
-                <div className="inline-flex items-center gap-2 rounded-full border border-border/70 bg-background/70 px-4 py-1.5 text-xs uppercase tracking-[0.18em] text-muted-foreground backdrop-blur">
-                  <Factory className="h-3.5 w-3.5 text-primary" />
-                  Industry Solutions · Manufacturing
-                </div>
-              </Reveal>
+      {/* HERO */}
+<section className="relative isolate overflow-hidden border-b border-foreground/10 bg-[#FDFBF9]">
+  {/* Cream gradient background */}
+  <div
+    aria-hidden="true"
+    className="pointer-events-none absolute inset-0 z-0"
+    style={{
+      background: `
+        linear-gradient(
+          180deg,
+          rgb(252, 252, 249) 0%,
+          rgb(252, 252, 249) 58%,
+          rgb(253, 247, 239) 62%,
+          rgb(253, 243, 231) 66%,
+          rgb(253, 238, 216) 70%,
+          rgb(252, 233, 204) 75%,
+          rgb(252, 230, 195) 80%,
+          rgb(252, 229, 193) 85%,
+          rgb(252, 229, 194) 90%,
+          rgb(252, 232, 200) 94%,
+          rgb(253, 236, 210) 97%,
+          rgb(253, 241, 223) 99%,
+          rgb(252, 247, 237) 100%
+        )
+      `,
+    }}
+  />
 
-              <Reveal delay={80}>
-                <h1 className="mt-8 max-w-5xl font-serif text-5xl leading-[1.05] tracking-tight text-foreground md:text-6xl lg:text-7xl">
-                  Marketing, Technology & AI Solutions for{" "}
-                  <span className="italic text-primary">Manufacturing</span> Companies
-                </h1>
-              </Reveal>
+  {/* Optional subtle grid */}
+  <div
+    aria-hidden="true"
+    className="pointer-events-none absolute inset-0 z-[1] opacity-[0.04]"
+    style={{
+      backgroundImage: `
+        linear-gradient(to right, #181818 1px, transparent 1px),
+        linear-gradient(to bottom, #181818 1px, transparent 1px)
+      `,
+      backgroundSize: "56px 56px",
+    }}
+  />
 
-              <Reveal delay={160}>
-                <p className="mt-7 max-w-3xl text-lg leading-relaxed text-muted-foreground md:text-xl">
-                  A strategic growth partner for industrial and manufacturing businesses — combining
-                  brand, demand generation, modern technology platforms and AI to build pipeline,
-                  productivity and global presence.
-                </p>
-              </Reveal>
-
-              <Reveal delay={240}>
-                <div className="mt-10 flex flex-wrap gap-3">
-                  <Link
-                    to="/contact"
-                    className="inline-flex items-center gap-2 rounded-full bg-foreground px-6 py-3 text-sm font-medium text-background shadow-sm transition-all duration-300 ease-out hover:bg-foreground/90 hover:shadow-[0_12px_28px_rgba(0,0,0,0.22)]"
-                  >
-                    Book Discovery Call <ArrowRight className="h-4 w-4" />
-                  </Link>
-                  <Link
-                    to="/portfolio"
-                    className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-6 py-3 text-sm font-medium text-foreground shadow-sm transition-all duration-300 ease-out hover:bg-muted hover:shadow-[0_12px_28px_rgba(0,0,0,0.16)]"
-                  >
-                    View Manufacturing Work <ArrowUpRight className="h-4 w-4" />
-                  </Link>
-                </div>
-              </Reveal>
-            </div>
-
-            <Reveal delay={160} className="lg:col-span-5">
-              <div className="overflow-hidden rounded-2xl border border-border/70 bg-muted shadow-xl">
-                <img
-                  src={heroImg}
-                  alt="Automated manufacturing facility with industrial machinery"
-                  className="aspect-[4/3] w-full object-cover"
-                />
-              </div>
-            </Reveal>
+  {/* Existing hero content */}
+  <div className="relative z-10 mx-auto max-w-7xl px-6 pb-20 pt-28 lg:pt-32">
+    <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-14">
+      <div className="lg:col-span-7">
+        <Reveal>
+          <div className="inline-flex items-center gap-2 rounded-full border border-border/70 bg-background/70 px-4 py-1.5 text-xs uppercase tracking-[0.18em] text-muted-foreground backdrop-blur">
+            <Factory className="h-3.5 w-3.5 text-primary" />
+            Industry Solutions · Manufacturing
           </div>
+        </Reveal>
 
-          <Reveal delay={320}>
-            <div className="mt-16 grid grid-cols-2 gap-6 border-t border-border/60 pt-10 md:grid-cols-4">
-              {[
-                { k: "15+", v: "Years in B2B & Industrial" },
-                { k: "300+", v: "Projects Delivered" },
-                { k: "11", v: "Manufacturing Sub-Sectors" },
-                { k: "4-in-1", v: "Brand · Growth · Tech · AI" },
-              ].map((s) => (
-                <div key={s.v}>
-                  <div className="font-serif text-3xl text-foreground md:text-4xl">{s.k}</div>
-                  <div className="mt-1 text-xs uppercase tracking-wider text-muted-foreground">
-                    {s.v}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </Reveal>
+        <Reveal delay={80}>
+          <h1 className="mt-8 max-w-5xl font-serif text-5xl leading-[1.05] tracking-tight text-foreground md:text-6xl lg:text-7xl">
+            Marketing, Technology & AI Solutions for{" "}
+            <span className="italic text-primary">Manufacturing</span>{" "}
+            Companies
+          </h1>
+        </Reveal>
+
+        <Reveal delay={160}>
+          <p className="mt-7 max-w-3xl text-lg leading-relaxed text-muted-foreground md:text-xl">
+            A strategic growth partner for industrial and manufacturing
+            businesses — combining brand, demand generation, modern technology
+            platforms and AI to build pipeline, productivity and global
+            presence.
+          </p>
+        </Reveal>
+
+        <Reveal delay={240}>
+          <div className="mt-10 flex flex-wrap gap-3">
+            <Link
+              to="/contact"
+              className="inline-flex items-center gap-2 rounded-full bg-foreground px-6 py-3 text-sm font-medium text-background shadow-sm transition-all duration-300 ease-out hover:bg-foreground/90 hover:shadow-[0_12px_28px_rgba(0,0,0,0.22)]"
+            >
+              Book Discovery Call
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+
+            <Link
+              to="/portfolio"
+              className="inline-flex items-center gap-2 rounded-full border border-border bg-background/70 px-6 py-3 text-sm font-medium text-foreground shadow-sm backdrop-blur-sm transition-all duration-300 ease-out hover:bg-background hover:shadow-[0_12px_28px_rgba(0,0,0,0.16)]"
+            >
+              View Manufacturing Work
+              <ArrowUpRight className="h-4 w-4" />
+            </Link>
+          </div>
+        </Reveal>
+      </div>
+
+      <Reveal delay={160} className="lg:col-span-5">
+        <div className="overflow-hidden rounded-2xl">
+          <img
+            src={heroImg}
+            alt="Automated manufacturing facility with industrial machinery"
+            className="aspect-[4/5] w-full rounded-xl object-cover lg:w-[460px]"
+          />
         </div>
-      </section>
+      </Reveal>
+    </div>
 
+    <Reveal delay={320}>
+      <div className="mt-16 grid grid-cols-2 gap-6 border-t border-foreground/10 pt-10 md:grid-cols-4">
+        {[
+          { k: "15+", v: "Years in B2B & Industrial" },
+          { k: "300+", v: "Projects Delivered" },
+          { k: "11", v: "Manufacturing Sub-Sectors" },
+          { k: "4-in-1", v: "Brand · Growth · Tech · AI" },
+        ].map((s) => (
+          <div key={s.v}>
+            <div className="font-serif text-3xl text-foreground md:text-4xl">
+              {s.k}
+            </div>
+
+            <div className="mt-1 text-xs uppercase tracking-wider text-muted-foreground">
+              {s.v}
+            </div>
+          </div>
+        ))}
+      </div>
+    </Reveal>
+  </div>
+</section>
       {/* MANUFACTURING HAS CHANGED */}
       <section className="border-b border-border/60 bg-muted/20">
         <div className="mx-auto max-w-7xl px-6 py-24">
@@ -545,7 +593,26 @@ function ManufacturingPage() {
       </section>
 
       {/* GROWTH FRAMEWORK */}
-      <section className="border-b border-border/60">
+      <section className="relative overflow-hidden border-b border-foreground/10 py-20 sm:py-28"
+  style={{
+    backgroundImage: `
+      linear-gradient(
+        180deg,
+        #FFF8EA 0%,
+        #FFF0D2 8%,
+        #FFE9BE 20%,
+        #FFE7B8 30%,
+        #FFEDCD 42%,
+        #FFF5E5 52%,
+        #FCFAF5 62%,
+        #FCFCFA 72%,
+        #FCFCFA 100%
+      )
+    `,
+  }}
+>
+
+      
         <div className="mx-auto max-w-7xl px-6 py-24">
           <Reveal>
             <div className="text-xs uppercase tracking-[0.18em] text-primary">

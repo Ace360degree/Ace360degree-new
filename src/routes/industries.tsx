@@ -24,7 +24,7 @@ import {
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 
-import industriesHero from "@/assets/industry-manufacturing332.jpg";
+import industriesHero from "@/assets/industry-manufacturing3322.jpg";
 import indManufacturing from "@/assets/industry-manufacturing32.jpg";
 import indFinance from "@/assets/industry-finance.212.jpg";
 import indEducation from "@/assets/industry-education.333.jpg";
@@ -455,66 +455,134 @@ function IndustriesPage() {
       <SiteHeader />
 
       {/* HERO */}
-      <section id="overview" className="bg-canvas text-dark">
-        <div className="mx-auto max-w-7xl px-6 pt-24 pb-28 md:pt-28 md:pb-32">
-          <div className="grid items-center gap-12 lg:grid-cols-[1.5fr_1fr]">
-            <div>
-              <Reveal>
-                <div className="inline-flex items-center gap-2 text-[10px] uppercase tracking-[0.28em] text-brand">
-                  <span className="size-1.5 rounded-full bg-brand" /> Industry Solutions
-                </div>
-              </Reveal>
-              <Reveal delay={80}>
-                <h1 className="mt-5 max-w-5xl text-4xl md:text-6xl lg:text-7xl font-medium leading-[1.05] tracking-tight">
-                  Industry Solutions That Drive{" "}
-                  <span className="font-serif italic text-brand">Sustainable</span> Business Growth.
-                </h1>
-              </Reveal>
-              <Reveal delay={160}>
-                <p className="mt-7 max-w-2xl text-base text-dark/75 leading-relaxed">
-                  A strategic partnership across Growth, Brand, Technology and AI — tailored to how
-                  your industry actually grows. Built for boards, CEOs and growth-focused leaders.
-                </p>
-              </Reveal>
-              <Reveal delay={240}>
-                <div className="mt-9 flex flex-wrap gap-3">
-                  <a
-                    href="#industries"
-                    className="inline-flex items-center gap-2 bg-[#FFB330] hover:bg-[#E09010] text-[#181818] px-5 py-3 text-sm font-semibold rounded-2xl shadow-sm transition-all duration-300 ease-out hover:shadow-[0_12px_28px_rgba(0,0,0,0.22)]"
-                  >
-                    Explore Industry Solutions <ArrowRight className="size-4" />
-                  </a>
-                  <Link
-                    to="/contact"
-                    className="inline-flex items-center gap-2 rounded-2xl px-5 py-3 text-sm font-semibold text-dark shadow-sm transition-all duration-300 ease-out hover:text-brand hover:shadow-[0_12px_28px_rgba(0,0,0,0.16)]"
-                  >
-                    Book Discovery Call <ArrowUpRight className="size-4" />
-                  </Link>
-                </div>
-              </Reveal>
-            </div>
+      {/* HERO */}
+<section
+  id="overview"
+  className="relative isolate overflow-hidden border-b border-dark/10 text-dark"
+>
+  {/* Background gradient */}
+  <div
+    aria-hidden="true"
+    className="pointer-events-none absolute inset-0 z-0"
+    style={{
+      background: `
+        linear-gradient(
+          180deg,
+          rgb(252, 252, 249) 0%,
+          rgb(252, 252, 249) 48%,
+          rgb(253, 247, 239) 52%,
+          rgb(253, 243, 231) 56%,
+          rgb(253, 238, 216) 61%,
+          rgb(252, 233, 204) 66%,
+          rgb(252, 230, 195) 72%,
+          rgb(252, 229, 193) 77%,
+          rgb(252, 229, 194) 81%,
+          rgb(252, 232, 200) 86%,
+          rgb(253, 236, 210) 91%,
+          rgb(253, 241, 223) 96%,
+          rgb(252, 247, 237) 100%
+        )
+      `,
+    }}
+  />
 
-            <Reveal delay={180} className="lg:justify-self-end">
-              <img
-                src={industriesHero}
-                alt="Sustainable business growth strategy dashboard"
-                className="aspect-[1.5/1] w-full object-cover lg:max-w-[520px]"
-                width={494}
-                height={329}
-              />
-            </Reveal>
+  {/* Optional grid pattern */}
+  <div
+    aria-hidden="true"
+    className="pointer-events-none absolute inset-0 z-[1] opacity-[0.045]"
+    style={{
+      backgroundImage: `
+        linear-gradient(to right, #181818 1px, transparent 1px),
+        linear-gradient(to bottom, #181818 1px, transparent 1px)
+      `,
+      backgroundSize: "56px 56px",
+    }}
+  />
+
+  {/* Hero content */}
+  <div className="relative z-10 mx-auto max-w-7xl px-6 pt-24 pb-28 md:pt-28 md:pb-32">
+    <div className="grid items-center gap-12 lg:grid-cols-[1.5fr_1fr]">
+      <div>
+        <Reveal>
+          <div className="inline-flex items-center gap-2 rounded-full border border-dark/15 bg-white/50 px-4 py-2 text-[10px] uppercase tracking-[0.28em] text-dark/60 backdrop-blur-sm">
+            <span className="size-1.5 rounded-full bg-brand" />
+            Industry Solutions
           </div>
+        </Reveal>
 
-          <div className="mt-14 grid grid-cols-2 md:grid-cols-4 gap-px bg-canvas border border-dark">
-            {TRUST.map((t) => (
-              <div key={t.v} className="bg-dark px-6 py-6">
-                <div className="text-3xl font-medium text-brand">{t.k}</div>
-                <div className="mt-1 text-[11px] uppercase tracking-[0.2em] text-canvas/60">{t.v}</div>
-              </div>
-            ))}
+        <Reveal delay={80}>
+          <h1 className="mt-6 max-w-5xl text-4xl font-medium leading-[1.05] tracking-tight md:text-6xl lg:text-7xl">
+            Industry Solutions That Drive{" "}
+            <span className="font-serif italic text-dark/65">
+              Sustainable
+            </span>{" "}
+            Business Growth.
+          </h1>
+        </Reveal>
+
+        <Reveal delay={160}>
+          <p className="mt-7 max-w-2xl text-base leading-relaxed text-dark/70">
+            A strategic partnership across Growth, Brand, Technology and AI —
+            tailored to how your industry actually grows. Built for boards,
+            CEOs and growth-focused leaders.
+          </p>
+        </Reveal>
+
+        <Reveal delay={240}>
+          <div className="mt-9 flex flex-wrap gap-3">
+            <a
+              href="#industries"
+              className="inline-flex items-center gap-2 rounded-2xl bg-dark px-5 py-3 text-sm font-semibold text-white shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_12px_28px_rgba(0,0,0,0.22)]"
+            >
+              Explore Industry Solutions
+              <ArrowRight className="size-4" />
+            </a>
+
+            <Link
+              to="/contact"
+              className="inline-flex items-center gap-2 rounded-2xl border border-dark/15 bg-white/25 px-5 py-3 text-sm font-semibold text-dark shadow-sm backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/60 hover:shadow-[0_12px_28px_rgba(0,0,0,0.12)]"
+            >
+              Book Discovery Call
+              <ArrowUpRight className="size-4" />
+            </Link>
+          </div>
+        </Reveal>
+      </div>
+
+      <Reveal delay={180} className="lg:justify-self-end">
+        <div className="relative">
+          <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[22px] lg:w-[460px]">
+            <img
+              src={industriesHero}
+              alt="Industry-focused sustainable business growth strategy"
+              className="absolute inset-0 h-full w-full rounded-[16px] object-cover"
+              width={460}
+              height={575}
+            />
           </div>
         </div>
-      </section>
+      </Reveal>
+    </div>
+
+    <div className="mt-16 grid grid-cols-2 overflow-hidden rounded-2xl border border-dark/10 bg-white/35 shadow-sm backdrop-blur-sm md:grid-cols-4">
+      {TRUST.map((t, index) => (
+        <div
+          key={t.v}
+          className={`px-6 py-6 ${
+            index !== TRUST.length - 1
+              ? "border-r border-dark/10"
+              : ""
+          }`}
+        >
+          <div className="text-3xl font-medium text-dark">{t.k}</div>
+          <div className="mt-1 text-[10px] uppercase tracking-[0.18em] text-dark/50">
+            {t.v}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
 
       {/* BODY with sticky side nav */}
       <div className="mx-auto max-w-7xl px-6 py-24 grid lg:grid-cols-[220px_1fr] gap-12">

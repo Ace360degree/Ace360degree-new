@@ -302,84 +302,141 @@ function RealEstatePage() {
     <div className="min-h-screen bg-[#fcfbf8] text-[#181818]">
       <SiteHeader />
 
-      <section className="border-b border-[#181818]/8 bg-[radial-gradient(circle_at_top_left,rgba(255,179,48,0.16),transparent_30%),linear-gradient(180deg,#fffdfa_0%,#fcfbf8_100%)]">
-        <div className="mx-auto max-w-7xl px-6 pb-20 pt-28 lg:pt-32">
-          <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-16">
-            <div className="lg:col-span-7">
-              <Reveal>
-                <div className="inline-flex items-center gap-2 rounded-full border border-[#181818]/10 bg-white/80 px-4 py-1.5 text-[11px] uppercase tracking-[0.18em] text-[#181818]/60 backdrop-blur">
-                  <Landmark className="h-3.5 w-3.5 text-[#ffb330]" />
-                  Real Estate Industry Solutions
+      {/* HERO */}
+<section className="relative isolate overflow-hidden border-b border-[#181818]/10 bg-[#FDFBF9]">
+  {/* Cream gradient background */}
+  <div
+    aria-hidden="true"
+    className="pointer-events-none absolute inset-0 z-0"
+    style={{
+      background: `
+        linear-gradient(
+          180deg,
+          rgb(252, 252, 249) 0%,
+          rgb(252, 252, 249) 48%,
+          rgb(253, 247, 239) 52%,
+          rgb(253, 243, 231) 56%,
+          rgb(253, 238, 216) 61%,
+          rgb(252, 233, 204) 66%,
+          rgb(252, 230, 195) 72%,
+          rgb(252, 229, 193) 77%,
+          rgb(252, 229, 194) 81%,
+          rgb(252, 232, 200) 86%,
+          rgb(253, 236, 210) 91%,
+          rgb(253, 241, 223) 96%,
+          rgb(252, 247, 237) 100%
+        )
+      `,
+    }}
+  />
+
+  {/* Optional subtle grid */}
+  <div
+    aria-hidden="true"
+    className="pointer-events-none absolute inset-0 z-[1] opacity-[0.035]"
+    style={{
+      backgroundImage:
+        "linear-gradient(to right, #181818 1px, transparent 1px), linear-gradient(to bottom, #181818 1px, transparent 1px)",
+      backgroundSize: "64px 64px",
+    }}
+  />
+
+  {/* Soft image-side glow */}
+  <div
+    aria-hidden="true"
+    className="pointer-events-none absolute right-[4%] top-[12%] z-[1] h-[420px] w-[420px] rounded-full bg-[#ffb330]/10 blur-[110px]"
+  />
+
+  <div className="relative z-10 mx-auto max-w-7xl px-6 pb-20 pt-28 lg:pt-32">
+    <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-16">
+      {/* Left content */}
+      <div className="lg:col-span-7">
+        <Reveal>
+          <div className="inline-flex items-center gap-2 rounded-full border border-[#181818]/10 bg-white/60 px-4 py-1.5 text-[11px] uppercase tracking-[0.18em] text-[#181818]/60 shadow-sm backdrop-blur-md">
+            <Landmark className="h-3.5 w-3.5 text-[#ffb330]" />
+            Real Estate Industry Solutions
+          </div>
+        </Reveal>
+
+        <Reveal delay={80}>
+          <h1 className="mt-7 max-w-5xl font-serif text-5xl leading-[1.02] tracking-tight md:text-6xl lg:text-7xl">
+            Real Estate{" "}
+            <span className="italic text-[#ffb330]">
+              Industry Solutions
+            </span>
+          </h1>
+        </Reveal>
+
+        <Reveal delay={160}>
+          <p className="mt-6 max-w-3xl text-lg leading-relaxed text-[#181818]/68 md:text-xl">
+            Marketing, Technology & Growth Solutions for Real Estate
+            Developers & Builders.
+          </p>
+
+          <p className="mt-4 max-w-3xl text-base leading-relaxed text-[#181818]/62">
+            A strategic growth partner for premium and mid-market real estate
+            developers building project visibility, qualified buyer pipelines
+            and smarter digital experiences across every launch cycle.
+          </p>
+        </Reveal>
+
+        <Reveal delay={240}>
+          <div className="mt-9 flex flex-wrap gap-3">
+            <Link
+              to="/contact"
+              className="inline-flex items-center gap-2 rounded-full bg-[#ffb330] px-6 py-3 text-sm font-medium text-[#181818] shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-[#f0a419] hover:shadow-[0_12px_28px_rgba(24,24,24,0.22)]"
+            >
+              Book Discovery Call
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+
+            <Link
+              to="/portfolio"
+              className="inline-flex items-center gap-2 rounded-full border border-[#181818]/10 bg-white/55 px-6 py-3 text-sm font-medium text-[#181818] shadow-sm backdrop-blur-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-white hover:shadow-[0_12px_28px_rgba(24,24,24,0.16)]"
+            >
+              View Real Estate Projects
+              <ArrowUpRight className="h-4 w-4" />
+            </Link>
+          </div>
+        </Reveal>
+
+        <Reveal delay={320}>
+          <div className="mt-14 grid max-w-2xl grid-cols-2 gap-x-8 gap-y-6 rounded-2xl border border-[#181818]/8 bg-white/45 p-6 shadow-sm backdrop-blur-md md:grid-cols-4">
+            {[
+              { value: "15+", label: "Years in Digital Growth" },
+              { value: "300+", label: "Projects Delivered" },
+              { value: "100%", label: "Data-Led Reporting" },
+              { value: "4-in-1", label: "Brand / Tech / Media / AI" },
+            ].map((item) => (
+              <div key={item.label}>
+                <div className="font-serif text-3xl text-[#181818]">
+                  {item.value}
                 </div>
-              </Reveal>
 
-              <Reveal delay={80}>
-                <h1 className="mt-7 max-w-5xl font-serif text-5xl leading-[1.02] tracking-tight md:text-6xl lg:text-7xl">
-                  Real Estate <span className="italic text-[#ffb330]">Industry Solutions</span>
-                </h1>
-              </Reveal>
-
-              <Reveal delay={160}>
-                <p className="mt-6 max-w-3xl text-lg leading-relaxed text-[#181818]/68 md:text-xl">
-                  Marketing, Technology & Growth Solutions for Real Estate Developers & Builders.
-                </p>
-                <p className="mt-4 max-w-3xl text-base leading-relaxed text-[#181818]/62">
-                  A strategic growth partner for premium and mid-market real estate developers
-                  building project visibility, qualified buyer pipelines and smarter digital
-                  experiences across every launch cycle.
-                </p>
-              </Reveal>
-
-              <Reveal delay={240}>
-                <div className="mt-9 flex flex-wrap gap-3">
-                  <Link
-                    to="/contact"
-                    className="inline-flex items-center gap-2 rounded-full bg-[#ffb330] px-6 py-3 text-sm font-medium text-[#181818] shadow-sm transition-all duration-300 ease-out hover:bg-[#f0a419] hover:shadow-[0_12px_28px_rgba(24,24,24,0.22)]"
-                  >
-                    Book Discovery Call
-                    <ArrowRight className="h-4 w-4" />
-                  </Link>
-                  <Link
-                    to="/portfolio"
-                    className="inline-flex items-center gap-2 rounded-full border border-[#181818]/10 bg-white px-6 py-3 text-sm font-medium text-[#181818] shadow-sm transition-all duration-300 ease-out hover:bg-[#f8f5ee] hover:shadow-[0_12px_28px_rgba(24,24,24,0.16)]"
-                  >
-                    View Real Estate Projects
-                    <ArrowUpRight className="h-4 w-4" />
-                  </Link>
+                <div className="mt-1 text-[11px] uppercase tracking-[0.16em] text-[#181818]/50">
+                  {item.label}
                 </div>
-              </Reveal>
-
-              <Reveal delay={320}>
-                <div className="mt-14 grid max-w-2xl grid-cols-2 gap-x-8 gap-y-6 border border-[#181818]/8 bg-white/80 p-6 backdrop-blur md:grid-cols-4">
-                  {[
-                    { value: "15+", label: "Years in Digital Growth" },
-                    { value: "300+", label: "Projects Delivered" },
-                    { value: "100%", label: "Data-Led Reporting" },
-                    { value: "4-in-1", label: "Brand / Tech / Media / AI" },
-                  ].map((item) => (
-                    <div key={item.label}>
-                      <div className="font-serif text-3xl text-[#181818]">{item.value}</div>
-                      <div className="mt-1 text-[11px] uppercase tracking-[0.16em] text-[#181818]/50">
-                        {item.label}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </Reveal>
-            </div>
-
-            <Reveal delay={140} className="lg:col-span-5">
-              <div className="overflow-hidden border border-[#181818]/10 bg-white shadow-[0_24px_80px_rgba(24,24,24,0.08)]">
-                <img
-                  src={heroImg}
-                  alt="Real estate professionals reviewing a project model"
-                  className="aspect-[4/3] w-full object-cover"
-                />
               </div>
-            </Reveal>
+            ))}
+          </div>
+        </Reveal>
+      </div>
+
+      {/* Right image */}
+      <Reveal delay={140} className="lg:col-span-5">
+        <div className="relative">
+          <div className="overflow-hidden rounded-2xl">
+            <img
+              src={heroImg}
+              alt="Real estate professionals reviewing a project model"
+              className="aspect-[4/5] w-full rounded-xl object-cover lg:w-[460px]"
+            />
           </div>
         </div>
-      </section>
+      </Reveal>
+    </div>
+  </div>
+</section>
 
       <section className="border-b border-[#181818]/8 bg-[#f7f4ee]">
         <div className="mx-auto max-w-7xl px-6 py-20 lg:py-24">
@@ -598,7 +655,23 @@ function RealEstatePage() {
         </div>
       </section>
 
-      <section className="border-t border-[#181818]/8 bg-[#fcfbf8]">
+      <section className="border-t border-[#181818]/8 bg-[#fcfbf8]"
+       style={{
+    backgroundImage: `
+      linear-gradient(
+        180deg,
+        #FFF8EA 0%,
+        #FFF0D2 8%,
+        #FFE9BE 20%,
+        #FFE7B8 30%,
+        #FFEDCD 42%,
+        #FFF5E5 52%,
+        #FCFAF5 62%,
+        #FCFCFA 72%,
+        #FCFCFA 100%
+      )
+    `,
+  }}>
         <div className="mx-auto max-w-7xl px-6 py-18 lg:py-20">
           <Reveal>
             <div className="text-[11px] uppercase tracking-[0.18em] text-[#ffb330]">
