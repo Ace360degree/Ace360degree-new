@@ -27,9 +27,10 @@ import blueprintImg1 from "@/assets/case-ksa-blueprinty2.jpg";
 export const Route = createFileRoute("/case-kuwal-sanam")({
   head: () => ({
   
+    
     meta: [
+      { title: "Kuwal Sanam Architects Case Study | Premium React Website by Ace360degree" },
       {
-        title: "Kuwal Sanam Architects Case Study | Premium React Website by Ace360degree",
         name: "description",
         content:
           "Discover how Ace360degree turned KSA's vision into a world-class architecture website — built on React, Next.js, and Laravel CMS, reflecting the firm's design excellence and philosophy.",

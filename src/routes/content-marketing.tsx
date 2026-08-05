@@ -14,11 +14,10 @@ export const Route = createFileRoute("/content-marketing")({
   head: () => ({
     // title: "Content Marketing Agency in Mumbai | Ace360degree",
 
+    
     meta: [
+      { title: "Content Marketing Agency in Mumbai | Ace360degree" },
       {
-        title: "Content Marketing Agency in Mumbai | Ace360degree",
-  
-  
         name: "description",
         content:
           "Ace360degree is a content marketing agency in Mumbai offering content strategy, SEO content writing, blogs, website copy, AI-powered content and lead generation solutions.",

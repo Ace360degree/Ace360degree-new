@@ -4,9 +4,10 @@ import { PolicyPage } from "@/components/policy-page";
 export const Route = createFileRoute("/approvals")({
   head: () => ({
     // title: "Approvals Policy - Ace360degree",
+    
     meta: [
+      { title: "Approvals Policy - Ace360degree" },
       {
-        title: "Approvals Policy - Ace360degree",
         name: "description",
         content:
           "Read the approvals policy for Ace360degree projects and deliverables.",

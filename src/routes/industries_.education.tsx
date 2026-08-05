@@ -41,9 +41,10 @@ export const Route = createFileRoute("/industries_/education")({
   head: () => ({
     // title: "Education Digital Marketing Agency in Mumbai | Ace360degree",
 
+    
     meta: [
+      { title: "Education Digital Marketing Agency in Mumbai | Ace360degree" },
       {
-        title: "Education Digital Marketing Agency in Mumbai | Ace360degree",
         name: "description",
         content:
           "Ace360degree helps schools, colleges, universities and edtech companies grow with education digital marketing, branding, websites, AI and student admission solutions.",

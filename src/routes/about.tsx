@@ -14,10 +14,10 @@ export const Route = createFileRoute("/about")({
   head: () => ({
    
 
+    
     meta: [
+      { title: "About Ace360degree | Business Growth & Digital Transformation Partner" },
       {
-        title:
-        "About Ace360degree | Business Growth & Digital Transformation Partner",
         name: "description",
         content:
           "Learn about Ace360degree, a Mumbai-based Business Growth & Digital Transformation Partner delivering strategy, branding, marketing, technology and AI solutions worldwide.",

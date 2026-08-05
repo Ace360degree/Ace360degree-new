@@ -10,10 +10,10 @@ export const Route = createFileRoute("/performance-marketing")({
   head: () => ({
     // title: "Performance Marketing Agency in Mumbai | Ace360degree",
 
+    
     meta: [
+      { title: "Performance Marketing Agency in Mumbai | Ace360degree" },
       {
-        title: "Performance Marketing Agency in Mumbai | Ace360degree",
-
         name: "description",
         content:
           "Ace360degree is a performance marketing agency in Mumbai offering Google Ads, Meta Ads, LinkedIn Ads and conversion-focused customer acquisition campaigns.",

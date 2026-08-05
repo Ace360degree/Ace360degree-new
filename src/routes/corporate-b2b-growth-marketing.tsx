@@ -11,9 +11,10 @@ export const Route = createFileRoute("/corporate-b2b-growth-marketing")({
   component: CorporateB2BGrowthPage,
   head: () => ({
     // title: "Corporate & B2B Growth Marketing Services Mumbai | Ace360degree",
+    
     meta: [
+      { title: "Corporate & B2B Growth Marketing Services Mumbai | Ace360degree" },
       {
-        title: "Corporate & B2B Growth Marketing Services Mumbai | Ace360degree",
         name: "description",
         content:
           "Ace360degree is a Corporate & B2B Growth Partner helping organizations build relationships, influence decision-makers, generate qualified opportunities and accelerate business growth through strategic B2B marketing.",

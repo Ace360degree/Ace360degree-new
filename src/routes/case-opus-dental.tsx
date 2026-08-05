@@ -7,9 +7,10 @@ import heroImg from "@/assets/case-opus-dental.123.jpg";
 export const Route = createFileRoute("/case-opus-dental")({
   head: () => ({
     
+    
     meta: [
+      { title: "Dentist Dental Case Study | Dental Marketing — Ace360degree" },
       {
-        title: "Dentist Dental Case Study | Dental Marketing — Ace360degree",
         name: "description",
         content:
           "How Ace360degree supported Dentist Dental with digital branding, healthcare marketing and patient engagement strategy.",

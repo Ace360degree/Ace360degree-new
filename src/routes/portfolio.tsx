@@ -17,10 +17,10 @@ export const Route = createFileRoute("/portfolio")({
     // title:
     //   "Digital Marketing, Branding & Technology Portfolio | Ace360degree",
 
+    
     meta: [
+      { title: "Digital Marketing, Branding & Technology Portfolio | Ace360degree" },
       {
-        title:
-        "Digital Marketing, Branding & Technology Portfolio | Ace360degree",
         name: "description",
         content:
           "Explore Ace360degree's portfolio featuring successful digital marketing, branding, website development, AI and technology projects across diverse industries.",

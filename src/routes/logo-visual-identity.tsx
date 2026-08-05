@@ -13,9 +13,10 @@ export const Route = createFileRoute("/logo-visual-identity")({
   head: () => ({
     // title: "Logo Design & Visual Identity Agency in Mumbai | Ace360degree",
 
+    
     meta: [
+      { title: "Logo Design & Visual Identity Agency in Mumbai | Ace360degree" },
       {
-        title: "Logo Design & Visual Identity Agency in Mumbai | Ace360degree",
         name: "description",
         content:
           "Ace360degree is a logo design and visual identity agency in Mumbai creating memorable logos, brand identity systems, typography, color palettes and brand guidelines.",

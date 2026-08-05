@@ -189,6 +189,7 @@ export const Route = createFileRoute("/$slug")({
     const imageUrl = loaderData?.imageUrl;
 
     return {
+      
       meta: [
         { title: `${title} | Ace360degree` },
         { name: "description", content: description },

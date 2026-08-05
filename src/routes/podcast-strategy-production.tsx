@@ -8,9 +8,10 @@ export const Route = createFileRoute("/podcast-strategy-production")({
   component: PodcastStrategyPage,
   head: () => ({
     // title: "Podcast Strategy & Production Services Mumbai | Business & Founder Podcasts | Ace360degree",
+    
     meta: [
+      { title: "Podcast Strategy & Production Services Mumbai | Business & Founder Podcasts | Ace360degree" },
       {
-        title: "Podcast Strategy & Production Services Mumbai | Business & Founder Podcasts | Ace360degree",
         name: "description",
         content:
           "Ace360degree is a Podcast Strategy & Thought Leadership Partner helping businesses, founders and industry experts build authority, create influence and strengthen relationships through meaningful podcast conversations and content ecosystems.",

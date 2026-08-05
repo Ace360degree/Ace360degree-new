@@ -7,9 +7,10 @@ import bannerImg from "@/assets/bannerAmingoAcademy.jpg";
 export const Route = createFileRoute("/case-amigo-academy")({
   head: () => ({
   
+    
     meta: [
+      { title: "Amigo Academy Case Study | Education Marketing, Technology & AI — Ace360degree" },
       {
-        title: "Amigo Academy Case Study | Education Marketing, Technology & AI — Ace360degree",
         name: "description",
         content:
           "How Ace360degree partnered with Amigo Academy to build a future-ready education brand combining Growth Marketing, Branding, Technology and AI into one integrated growth strategy.",

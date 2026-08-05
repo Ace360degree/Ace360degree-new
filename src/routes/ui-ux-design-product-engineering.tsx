@@ -15,10 +15,10 @@ export const Route = createFileRoute("/ui-ux-design-product-engineering")({
     // title:
     //   "UI/UX Design & Product Engineering Company in Mumbai | Ace360degree",
 
+    
     meta: [
+      { title: "UI/UX Design & Product Engineering Company in Mumbai | Ace360degree" },
       {
-        title:
-      "UI/UX Design & Product Engineering Company in Mumbai | Ace360degree",
         name: "description",
         content:
           "Ace360degree is a UI/UX design and product engineering company in Mumbai creating intuitive SaaS platforms, mobile apps, CRM, ERP and scalable digital products.",

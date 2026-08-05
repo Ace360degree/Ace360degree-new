@@ -11,9 +11,10 @@ export const Route = createFileRoute("/youtube-growth-channel-strategy")({
   component: YouTubeGrowthPage,
   head: () => ({
     // title: "YouTube Growth & Channel Strategy Services Mumbai | Ace360degree",
+    
     meta: [
+      { title: "YouTube Growth & Channel Strategy Services Mumbai | Ace360degree" },
       {
-        title: "YouTube Growth & Channel Strategy Services Mumbai | Ace360degree",
         name: "description",
         content:
           "Ace360degree is a YouTube Growth & Audience Development Partner helping businesses, founders and brands build visibility, authority and communities through strategic video ecosystems, YouTube SEO and content strategy.",

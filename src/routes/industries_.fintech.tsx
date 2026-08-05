@@ -41,10 +41,10 @@ export const Route = createFileRoute("/industries_/fintech")({
   head: () => ({
     // title: "Fintech Marketing & Technology Solutions | Ace360degree",
 
+    
     meta: [
+      { title: "Fintech Marketing & Technology Solutions | Ace360degree" },
       {
-        title: "Fintech Marketing & Technology Solutions | Ace360degree",
-
         name: "description",
         content:
           "Grow your fintech or BFSI business with SEO, performance marketing, branding, website development, CRM automation and AI-powered solutions.",

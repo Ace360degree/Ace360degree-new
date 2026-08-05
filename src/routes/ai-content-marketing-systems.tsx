@@ -11,10 +11,10 @@ export const Route = createFileRoute("/ai-content-marketing-systems")({
     // title:
     //   "AI Content Marketing Agency in Mumbai | Smart Digital Growth Solutions",
 
+    
     meta: [
+      { title: "AI Content Marketing Agency in Mumbai | Smart Digital Growth Solutions" },
       {
-        title:
-      "AI Content Marketing Agency in Mumbai | Smart Digital Growth Solutions",
         name: "description",
         content:
           "Transform your business with AI content marketing systems in Mumbai. We help brands automate content creation, SEO, social media, and lead generation using advanced AI-driven marketing strategies designed for growth, engagement, and conversions.",

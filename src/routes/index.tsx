@@ -41,9 +41,10 @@ export const Route = createFileRoute("/")({
     // title: "Digital Marketing Agency in Mumbai | Ace360degree",
 
     // title: "AI First Digital Marketing Agency in Mumbai | SEO & Growth Experts in Malad",
+    
     meta: [
+      { title: "AI First Digital Marketing Agency in Mumbai | SEO & Growth Experts in Malad" },
       {
-        title: "AI First Digital Marketing Agency in Mumbai | SEO & Growth Experts in Malad",
         name: "description",
         content:
           "Ace360degree is a digital marketing agency in Mumbai offering SEO, performance marketing, web development, branding and AI-powered growth solutions.",

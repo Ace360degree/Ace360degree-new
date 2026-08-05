@@ -15,11 +15,10 @@ export const Route = createFileRoute("/website-design-development")({
     // title:
     //   "Website Design & Development Company in Mumbai | Ace360degree",
 
+    
     meta: [
+      { title: "Website Design & Development Company in Mumbai | Ace360degree" },
       {
-        title:
-        "Website Design & Development Company in Mumbai | Ace360degree",
-  
         name: "description",
         content:
           "Ace360degree is a website design and development company in Mumbai creating responsive, SEO-friendly, fast and custom websites that drive business growth.",

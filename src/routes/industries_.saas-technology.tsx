@@ -33,9 +33,10 @@ export const Route = createFileRoute("/industries_/saas-technology")({
   head: () => ({
     // title: "SaaS Marketing & Technology Solutions | Ace360degree",
 
+    
     meta: [
+      { title: "SaaS Marketing & Technology Solutions | Ace360degree" },
       {
-        title: "SaaS Marketing & Technology Solutions | Ace360degree",
         name: "description",
         content:
           "Grow your SaaS or technology business with SEO, demand generation, product branding, website development, CRM automation and digital growth solutions.",

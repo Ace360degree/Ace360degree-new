@@ -4,9 +4,10 @@ import { PolicyPage } from "@/components/policy-page";
 export const Route = createFileRoute("/refunds")({
   head: () => ({
     // title: "Refund Policy - Ace360degree",
+    
     meta: [
+      { title: "Refund Policy - Ace360degree" },
       {
-        title: "Refund Policy - Ace360degree",
         name: "description",
         content:
           "Review the refund policy structure for Ace360degree services and engagements.",

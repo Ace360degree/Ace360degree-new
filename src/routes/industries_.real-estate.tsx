@@ -25,9 +25,10 @@ export const Route = createFileRoute("/industries_/real-estate")({
   head: () => ({
     // title: "Real Estate Marketing & Technology Solutions | Ace360degree",
 
+    
     meta: [
+      { title: "Real Estate Marketing & Technology Solutions | Ace360degree" },
       {
-        title: "Real Estate Marketing & Technology Solutions | Ace360degree",
         name: "description",
         content:
           "Generate qualified property leads with real estate SEO, performance marketing, branding, project websites, CRM automation and digital growth solutions.",

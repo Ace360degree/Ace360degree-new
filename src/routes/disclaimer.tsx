@@ -4,9 +4,10 @@ import { PolicyPage } from "@/components/policy-page";
 export const Route = createFileRoute("/disclaimer")({
   head: () => ({
     // title: "Disclaimer - Ace360degree",
+    
     meta: [
+      { title: "Disclaimer - Ace360degree" },
       {
-        title: "Disclaimer - Ace360degree",
         name: "description",
         content:
           "Read the disclaimer for content published on the Ace360degree website.",
