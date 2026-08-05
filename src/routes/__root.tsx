@@ -69,14 +69,11 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
   head: () => ({
-    title: "Ace360degree — AI-Powered Digital Marketing, Branding & Technology Agency in Mumbai",
+    
     meta: [
+      { title: "Ace360degree — AI-Powered Digital Marketing, Branding & Technology Agency in Mumbai" },
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { name: "description", content: "Ace360degree helps ambitious brands grow through AI-powered, data-driven digital marketing, impactful branding, and scalable technology. Mumbai • UAE • UK • USA." },
-      { property: "og:title", content: "Ace360degree — Where Strategy Meets Creativity" },
-      { property: "og:description", content: "AI-powered digital marketing, branding and technology agency engineered for measurable business growth." },
-      { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [

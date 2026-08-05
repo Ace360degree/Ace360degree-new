@@ -8,9 +8,10 @@ export const Route = createFileRoute("/ai-transformation")({
   component: AITransformationPage,
   head: () => ({
     // title: "AI & Business Transformation Partner | Workflow Automation & Decision Intelligence — Ace360degree",
+    
     meta: [
+      { title: "AI & Business Transformation Partner | Workflow Automation & Decision Intelligence — Ace360degree" },
       {
-        title: "AI & Business Transformation Partner | Workflow Automation & Decision Intelligence — Ace360degree",
         name: "description",
         content:
           "Ace360degree helps organizations identify practical AI opportunities, automate workflows, improve decision-making and create future-ready business systems that deliver measurable outcomes.",

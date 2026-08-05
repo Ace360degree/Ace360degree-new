@@ -19,9 +19,10 @@ export const Route = createFileRoute("/growth")({
   component: GrowthHome,
   head: () => ({
     // title: "Ace360degree — Business Growth, Technology & AI Partner Since 2009",
+    
     meta: [
+      { title: "Ace360degree — Business Growth, Technology & AI Partner Since 2009" },
       {
-        title: "Ace360degree — Business Growth, Technology & AI Partner Since 2009",
         name: "description",
         content:
           "Ace360degree partners with businesses to grow through Marketing, Branding, Technology and AI. Trusted across healthcare, education, manufacturing, hospitality, BFSI and services since 2009.",

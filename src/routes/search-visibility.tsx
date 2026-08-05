@@ -11,11 +11,10 @@ export const Route = createFileRoute("/search-visibility")({
     // title:
     //   "Search Engine Optimization Services in Mumbai | SEO, AEO & GEO | Ace360degree",
 
+    
     meta: [
+      { title: "Search Engine Optimization Services in Mumbai | SEO, AEO & GEO | Ace360degree" },
       {
-        title:
-        "Search Engine Optimization Services in Mumbai | SEO, AEO & GEO | Ace360degree",
-  
         name: "description",
         content:
           "Improve rankings, organic traffic and online visibility with SEO services from Ace360degree, including technical SEO, local SEO, AEO and GEO solutions.",

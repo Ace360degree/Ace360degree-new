@@ -44,9 +44,10 @@ export const Route = createFileRoute("/industries_/healthcare")({
   component: HealthcarePage,
 
   head: () => ({
-    // title: "Healthcare Digital Marketing Agency in Mumbai | Ace360degree",
+    // 
 
     meta: [
+      { title: "Healthcare Digital Marketing Agency in Mumbai | Ace360degree" },
       {
         // title: "Contact Ace360degree | Digital Marketing Agency in Mumbai",
         title: "Healthcare Digital Marketing Agency in Mumbai | Ace360degree",

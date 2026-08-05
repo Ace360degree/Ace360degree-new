@@ -12,9 +12,10 @@ export const Route = createFileRoute("/careers")({
   component: CareersPage,
   head: () => ({
     // title: "Careers at Ace360degree | Join Mumbai's Leading Digital Agency",
+    
     meta: [
+      { title: "Careers at Ace360degree | Join Mumbai's Leading Digital Agency" },
       {
-        title: "Careers at Ace360degree | Join Mumbai's Leading Digital Agency",
         name: "description",
         content:
           "Explore career opportunities at Ace360degree — work with creative, tech, and marketing experts driving digital transformation.",

@@ -14,12 +14,11 @@ export const Route = createFileRoute("/corporate-communication-design")({
     // title:
     //   "Corporate Communication Design Services in Mumbai | Ace360degree",
 
+    
     meta: [
+      { title: "Corporate Communication Design Services in Mumbai | Ace360degree" },
       {
 
-        title:
-        "Corporate Communication Design Services in Mumbai | Ace360degree",
-  
         name: "description",
         content:
           "Ace360degree offers corporate communication design services in Mumbai, including company profiles, brochures, pitch decks, annual reports and business presentations.",

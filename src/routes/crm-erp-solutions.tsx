@@ -14,9 +14,10 @@ export const Route = createFileRoute("/crm-erp-solutions")({
   head: () => ({
     // title: "CRM & ERP Solutions Company in Mumbai | Ace360degree",
 
+    
     meta: [
+      { title: "CRM & ERP Solutions Company in Mumbai | Ace360degree" },
       {
-        title: "CRM & ERP Solutions Company in Mumbai | Ace360degree",
         name: "description",
         content:
           "Ace360degree is a CRM & ERP solutions company in Mumbai delivering custom CRM software, ERP systems and business automation solutions to improve efficiency and growth.",

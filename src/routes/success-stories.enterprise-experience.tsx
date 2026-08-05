@@ -7,9 +7,10 @@ import lessonsBanner from "@/assets/legaacyy2banner.png";
 export const Route = createFileRoute("/success-stories/enterprise-experience")({
   head: () => ({
     // title: "Enterprise Experience That Built Our Foundation — Ace360degree",
+    
     meta: [
+      { title: "Enterprise Experience That Built Our Foundation — Ace360degree" },
       {
-        title: "Enterprise Experience That Built Our Foundation — Ace360degree",
         name: "description",
         content:
           "Bayer, Häfele, Schott Kaisha, ARCIL and Al-Nuaim — the enterprise engagements that shaped Ace360degree into the Growth, Branding, Technology and AI partner it is today.",

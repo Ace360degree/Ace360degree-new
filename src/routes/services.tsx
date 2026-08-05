@@ -31,9 +31,10 @@ export const Route = createFileRoute("/services")({
   head: () => ({
     // title: "Digital Marketing & Technology Services | Ace360degree",
 
+    
     meta: [
+      { title: "Digital Marketing & Technology Services | Ace360degree" },
       {
-        title: "Digital Marketing & Technology Services | Ace360degree",
         name: "description",
         content:
           "Explore digital marketing, SEO, performance marketing, web development, branding, CRM, ERP, automation and AI solutions from Ace360degree.",

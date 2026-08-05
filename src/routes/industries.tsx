@@ -46,13 +46,20 @@ export const Route = createFileRoute("/industries")({
   head: () => ({
     // title: "Industry Solutions for Business Growth | Ace360degree Mumbai",
 
+    
     meta: [
+      { title: "Industry Solutions for Business Growth | Ace360degree Mumbai" },
       {
-        title: "Industry Solutions for Business Growth | Ace360degree Mumbai",
         name: "description",
         content:
           "Industry Solutions by Ace360degree — strategic growth, branding, technology and AI partnerships for manufacturing, financial services, education, healthcare, real estate, SaaS and D2C enterprises.",
       },
+      { 
+        name: "keywords",
+        content:
+          "Industries We Serve AI Business Solutions Business Consulting Agency Business Growth Solutions Industry Digital Transformation Industry Marketing Agency Industry Technology Solutions Industry Technology Solutions Business Transformation Company "                         
+      },
+
       {
         property: "og:title",
         content:

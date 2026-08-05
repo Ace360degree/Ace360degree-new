@@ -42,10 +42,10 @@ export const Route = createFileRoute("/industries_/manufacturing")({
     // title:
     //   "Manufacturing Digital Marketing Agency in Mumbai | Ace360degree",
 
+    
     meta: [
+      { title: "Manufacturing Digital Marketing Agency in Mumbai | Ace360degree" },
       {
-        title:
-        "Manufacturing Digital Marketing Agency in Mumbai | Ace360degree",
         name: "description",
         content:
           "Ace360degree helps manufacturers grow with digital marketing, branding, websites, AI, automation and technology solutions designed for industrial businesses.",

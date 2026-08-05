@@ -13,10 +13,11 @@ export const Route = createFileRoute("/marketing-automation")({
   head: () => ({
     // title: "Marketing Automation Services in Mumbai | Ace360degree",
 
+    
     meta: [
+      { title: "Marketing Automation Services in Mumbai | Ace360degree" },
       {
          
-        title: "Marketing Automation Services in Mumbai | Ace360degree",
         name: "description",
         content:
           "Automate lead nurturing, email, WhatsApp and CRM workflows with Ace360degree’s marketing automation services in Mumbai to improve conversions and retention.",

@@ -44,10 +44,10 @@ export const Route = createFileRoute("/industries_/architecture")({
   head: () => ({
     // title: "Architecture Marketing & Digital Solutions | Ace360degree",
 
+    
     meta: [
+      { title: "Architecture Marketing & Digital Solutions | Ace360degree" },
       {
-        title: "Architecture Marketing & Digital Solutions | Ace360degree",
-
         name: "description",
         content:
           "Grow your architecture or interior design business with premium branding, SEO, portfolio websites, lead generation, CRM automation and AI solutions.",

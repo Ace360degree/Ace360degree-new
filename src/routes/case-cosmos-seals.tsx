@@ -6,9 +6,10 @@ import bannerImg from "@/assets/Cosmosbannery2.png";
 export const Route = createFileRoute("/case-cosmos-seals")({
   head: () => ({
    
+    
     meta: [
+      { title: "Cosmos Seals India Case Study | Industrial Branding, Website & SEO — Ace360degree" },
       {
-        title: "Cosmos Seals India Case Study | Industrial Branding, Website & SEO — Ace360degree",
         name: "description",
         content:
           "How Ace360degree partnered with Cosmos Seals India to build a digitally competitive industrial brand through strategy, technology, SEO and growth marketing.",

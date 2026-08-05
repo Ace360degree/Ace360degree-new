@@ -14,10 +14,10 @@ export const Route = createFileRoute("/motion-graphics-animation")({
     // title:
     //   "Motion Graphics & Animation Services in Mumbai | Ace360degree",
 
+    
     meta: [
+      { title: "Motion Graphics & Animation Services in Mumbai | Ace360degree" },
       {
-        title:
-      "Motion Graphics & Animation Services in Mumbai | Ace360degree",
         name: "description",
         content:
           "Ace360degree is a motion graphics and animation company in Mumbai creating 2D animation, 3D animation, explainer videos, corporate films and engaging visual storytelling for brands.",

@@ -11,11 +11,12 @@ export const Route = createFileRoute("/packaging-product-branding")({
   component: PackagingProductBrandingPage,
 
   head: () => ({
-    // title: "Packaging Design Company in Mumbai | Ace360degree",
+    
 
+    
     meta: [
+      { title: "Packaging Design Company in Mumbai | Ace360degree" },
       {
-        title: "Packaging Design Company in Mumbai | Ace360degree",
         name: "description",
         content:
           "Ace360degree is a packaging design company in Mumbai creating product packaging, labels, retail packaging and brand identity solutions that enhance shelf appeal and customer engagement.",

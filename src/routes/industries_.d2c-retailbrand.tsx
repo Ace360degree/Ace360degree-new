@@ -33,9 +33,10 @@ export const Route = createFileRoute("/industries_/d2c-retailbrand")({
   head: () => ({
     // title: "D2C & Retail Marketing Solutions | Ace360degree",
 
+    
     meta: [
+      { title: "D2C & Retail Marketing Solutions | Ace360degree" },
       {
-        title: "D2C & Retail Marketing Solutions | Ace360degree",
         name: "description",
         content:
           "Grow your D2C or retail brand with performance marketing, eCommerce development, branding, SEO, automation and customer retention solutions.",

@@ -11,13 +11,20 @@ export const Route = createFileRoute("/blog/")({
   },
   head: () => ({
     // title: "Ace360degree Blog & Insights | Digital Marketing, Branding & Tech Trends",
+    
     meta: [
+      { title: "Ace360degree Blog & Insights | Digital Marketing, Branding & Tech Trends" },
       {
-        title: "Ace360degree Blog & Insights | Digital Marketing, Branding & Tech Trends",
         name: "description",
         content:
           "Read the latest insights from Ace360degree - expert articles on digital marketing, branding, web technology, and business growth strategies that work.",
       },
+      {
+        name: "keywords",
+        content:
+          "Digital Marketing Blog, SEO Blog, Digital Marketing Articles, Website Development Blog, Marketing Insights, Business Growth Blog, Digital Transformation Blog, Growth Marketing Blog, Marketing Resources",
+      },
+
       { property: "og:title", content: "Ace360degree Blog & Insights" },
       {
         property: "og:description",
@@ -113,7 +120,7 @@ function BlogPage() {
                 Latest Insights
               </div>
               <h2 className="font-serif text-4xl tracking-tight md:text-5xl">
-                Fresh ideas. Field-tested results.
+                Fresh ideas. Fields.
               </h2>
               <p className="mt-4 max-w-xl text-ink">
                 Practical tips to help your brand grow.

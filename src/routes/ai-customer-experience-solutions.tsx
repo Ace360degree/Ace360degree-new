@@ -8,9 +8,10 @@ export const Route = createFileRoute("/ai-customer-experience-solutions")({
   component: AICustomerExperienceSolutionsPage,
   head: () => ({
     // title: "AI Customer Experience Solutions — Ace360degree",
+    
     meta: [
+      { title: "AI Customer Experience Solutions — Ace360degree" },
       {
-        title: "AI Customer Experience Solutions — Ace360degree",
         name: "description",
         content:
           "Ace360degree helps organizations deliver smarter, faster and more personalized customer experiences — combining strategy, engagement design and AI to transform customer journeys, support and growth.",

@@ -8,9 +8,10 @@ import bannerImg2 from "@/assets/livingconceptsace2.png";
 export const Route = createFileRoute("/case-living-concepts")({
   head: () => ({
   
+    
     meta: [
+      { title: "Living Concepts Case Study | Luxury Interior Branding, Website & Digital Experience — Ace360degree" },
       {
-        title: "Living Concepts Case Study | Luxury Interior Branding, Website & Digital Experience — Ace360degree",
         name: "description",
         content:
           "How Ace360degree helped Living Concepts elevate its digital presence, strengthen brand perception and create an online experience that reflects premium craftsmanship.",

@@ -11,13 +11,11 @@ export const Route = createFileRoute("/conversion-optimization")({
   component: ConversionOptimizationPage,
 
   head: () => ({
-    // title:
-    //   "Conversion Rate Optimization (CRO) Services in Mumbai | Ace360degree",
-
+    
+    
     meta: [
+      { title: "Conversion Rate Optimization (CRO) Services in Mumbai | Ace360degree" },
       {
-        title:
-        "Conversion Rate Optimization (CRO) Services in Mumbai | Ace360degree",
         name: "description",
         content:
           "Ace360degree offers Conversion Rate Optimization (CRO) services in Mumbai to improve website conversions through landing page optimization, A/B testing, UX improvements and analytics.",

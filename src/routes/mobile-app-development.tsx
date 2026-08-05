@@ -13,9 +13,10 @@ export const Route = createFileRoute("/mobile-app-development")({
   head: () => ({
     // title: "Mobile App Development Company in Mumbai | Ace360degree",
 
+    
     meta: [
+      { title: "Mobile App Development Company in Mumbai | Ace360degree" },
       {
-        title: "Mobile App Development Company in Mumbai | Ace360degree",
         name: "description",
         content:
           "Ace360degree is a mobile app development company in Mumbai building custom Android, iOS and cross-platform applications with intuitive UI/UX and scalable technology.",

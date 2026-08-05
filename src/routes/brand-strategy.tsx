@@ -13,9 +13,10 @@ export const Route = createFileRoute("/brand-strategy")({
   head: () => ({
     // title: "Brand Strategy Agency in Mumbai | Ace360degree",
 
+    
     meta: [
+      { title: "Brand Strategy Agency in Mumbai | Ace360degree" },
       {
-        title: "Brand Strategy Agency in Mumbai | Ace360degree",
         name: "description",
         content:
           "Ace360degree is a brand strategy agency in Mumbai helping businesses build strong brand identities through positioning, messaging, visual identity and brand consulting.",

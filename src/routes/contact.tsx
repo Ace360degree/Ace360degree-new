@@ -14,10 +14,20 @@ export const Route = createFileRoute("/contact")({
   head: () => ({
     
 
-    // title: "Contact Ace360degree | Digital Marketing Agency in Mumbai",
+    // 
     meta: [
+      { title: "Contact Ace360degree | Digital Marketing Agency in Mumbai" },
       {
-        title: "Contact Ace360degree | Digital Marketing Agency in Mumbai",
+        name: "title",
+        content:
+          "Contact Ace360degree | Digital Marketing Agency in Mumbai",
+      },
+      {
+        name: "description",
+        content:
+          "Contact Ace360degree in Mumbai for digital marketing, branding, website development, AI and business growth solutions. Call, email or schedule a consultation today.",
+      },
+      {
         name: "keywords",
         content:
           "Digital Marketing Agency in Mumbai, Digital Marketing Company Mumbai, Website Development Company Mumbai, Branding Agency Mumbai, Creative Agency Mumbai, Business Growth Consulting, Contact Ace360degree",

@@ -24,6 +24,7 @@ export const Route = createFileRoute("/blog/$slug")({
     const plainTitle = stripHtml(post.title.rendered);
 
     return {
+      
       meta: [
         { title: `${plainTitle} | Ace360degree Blog` },
         { name: "description", content: plainExcerpt },

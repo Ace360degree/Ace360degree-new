@@ -10,10 +10,10 @@ export const Route = createFileRoute("/social-media-marketing")({
   head: () => ({
     // title: "Social Media Marketing Agency in Mumbai | Ace360degree",
 
+    
     meta: [
+      { title: "Social Media Marketing Agency in Mumbai | Ace360degree" },
       {
-        title: "Social Media Marketing Agency in Mumbai | Ace360degree",
-
         name: "description",
         content:
           "Ace360degree is a social media marketing agency in Mumbai offering content creation, platform management, founder branding and social media growth services.",

@@ -8,9 +8,10 @@ import bannerMos from "@/assets/bannerMos1.jpg";
 export const Route = createFileRoute("/case-mos-utility")({
   head: () => ({
     
+    
     meta: [
+      { title: "MOS Utility Case Study | Branding, Communication & Growth — Ace360degree" },
       {
-        title: "MOS Utility Case Study | Branding, Communication & Growth — Ace360degree",
         name: "description",
         content:
           "How Ace360degree partnered with MOS Utility Limited — one of India's leading assisted e-governance platforms — to transform brand, communication, technology and growth systems.",

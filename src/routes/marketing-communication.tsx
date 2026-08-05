@@ -14,9 +14,10 @@ export const Route = createFileRoute("/marketing-communication")({
   head: () => ({
     // title: "Marketing Communication Services in Mumbai | Ace360degree",
 
+    
     meta: [
+      { title: "Marketing Communication Services in Mumbai | Ace360degree" },
       {
-        title: "Marketing Communication Services in Mumbai | Ace360degree",
         name: "description",
         content:
           "Ace360degree offers marketing communication services in Mumbai, creating brochures, presentations, sales collateral, corporate communication and integrated brand messaging.",
