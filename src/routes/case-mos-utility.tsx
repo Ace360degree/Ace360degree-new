@@ -6,28 +6,80 @@ import heroMesh from "@/assets/hero-meshy1.jpg";
 import bannerMos from "@/assets/bannerMos1.jpg";
 
 export const Route = createFileRoute("/case-mos-utility")({
+  component: MosCaseStudyPage,
+
   head: () => ({
-    
-    
     meta: [
-      { title: "MOS Utility Case Study | Branding, Communication & Growth — Ace360degree" },
+      {
+        title:
+          "MOS Utility Case Study | Ace360degree Digital Solutions",
+      },
       {
         name: "description",
         content:
-          "How Ace360degree partnered with MOS Utility Limited — one of India's leading assisted e-governance platforms — to transform brand, communication, technology and growth systems.",
+          "Explore MOS Utility's case study showcasing Ace360degree's website development, SEO, and digital solutions that improved online growth and visibility.",
       },
-      { property: "og:title", content: "MOS Utility — A Business Transformation Case Study" },
+      {
+        name: "keywords",
+        content:
+          "Business growth solutions, Website development case study, Digital marketing case study India, SEO success story, MOS Utility Case Study, MOS Utility digital transformation",
+      },
+      {
+        property: "og:title",
+        content:
+          "MOS Utility Case Study | Ace360degree Digital Solutions",
+      },
       {
         property: "og:description",
         content:
-          "A long-term strategic partnership across branding, communication, marketing and technology — built to scale one of India's largest assisted e-governance platforms.",
+          "Explore MOS Utility's case study showcasing Ace360degree's website development, SEO, and digital solutions that improved online growth and visibility.",
       },
-      { property: "og:image", content: caseMos },
+      {
+        property: "og:type",
+        content: "website",
+      },
+      {
+        property: "og:url",
+        content:
+          "https://www.ace360degree.com/case-mos-utility",
+      },
+      {
+        property: "og:site_name",
+        content: "Ace360degree",
+      },
+      {
+        name: "robots",
+        content: "index, follow",
+      },
+      {
+        name: "author",
+        content: "Ace360degree",
+      },
+      {
+        name: "twitter:card",
+        content: "summary_large_image",
+      },
+      {
+        name: "twitter:title",
+        content:
+          "MOS Utility Case Study | Ace360degree Digital Solutions",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "Explore MOS Utility's case study showcasing Ace360degree's website development, SEO, and digital solutions that improved online growth and visibility.",
+      },
+    ],
+
+    links: [
+      {
+        rel: "canonical",
+        href:
+          "https://www.ace360degree.com/case-mos-utility",
+      },
     ],
   }),
-  component: MosCaseStudyPage,
 });
-
 /* ---------------- Data ---------------- */
 
 const overviewFacts = [
@@ -201,69 +253,105 @@ function MosCaseStudyPage() {
 
       {/* 1. HERO */}
       <section className="relative overflow-hidden">
-        <div className="mx-auto max-w-7xl px-6 pt-10 pb-6">
-          <nav className="text-xs text-dark/50 tracking-wide">
-            <a href="/" className="hover:text-brand">Home</a>
-            <span className="mx-1">/</span>
-            <a href="/portfolio" className="hover:text-brand">Case Studies</a>
-            <span className="mx-1">/</span>
-            <span className="text-dark">MOS Utility Limited</span>
-          </nav>
+  <div className="mx-auto max-w-7xl px-6 pt-10 pb-6">
+    <nav className="text-xs tracking-wide text-dark/50">
+      <a href="/" className="transition-colors hover:text-brand">
+        Home
+      </a>
+
+      <span className="mx-1">/</span>
+
+      <a href="/portfolio" className="transition-colors hover:text-brand">
+        Case Studies
+      </a>
+
+      <span className="mx-1">/</span>
+
+      <span className="text-dark">MOS Utility Limited</span>
+    </nav>
+  </div>
+
+  <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 pb-24 lg:grid-cols-12">
+    <div className="lg:col-span-7">
+      <span className="text-[11px] font-semibold uppercase tracking-[0.3em] text-brand">
+        Case Study · Strategic Partnership
+      </span>
+
+      <h1 className="mt-5 font-serif text-4xl leading-[1.05] tracking-tight md:text-6xl">
+        Transforming digital presence, corporate communication & growth systems
+        for{" "}
+        <em className="not-italic text-brand">MOS Utility Limited.</em>
+      </h1>
+
+      <p className="mt-6 max-w-2xl text-lg leading-relaxed text-dark/70">
+        How Ace360degree partnered with one of India&apos;s leading assisted
+        e-governance platforms to build a unified brand, listed-grade
+        communication and a scalable growth engine across business units.
+      </p>
+
+      <div className="mt-9 flex flex-wrap gap-3">
+        <Link
+          to="/contact"
+          className="inline-flex items-center gap-2 rounded-full bg-dark px-6 py-3 text-sm font-semibold text-canvas shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-dark/90 hover:shadow-[0_12px_28px_rgba(0,0,0,0.22)]"
+        >
+          Discuss A Similar Engagement
+          <span aria-hidden>→</span>
+        </Link>
+
+        <Link
+          to="/portfolio"
+          className="inline-flex items-center gap-2 rounded-full border border-dark/20 bg-white/70 px-6 py-3 text-sm font-semibold shadow-sm backdrop-blur-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-dark hover:shadow-[0_12px_28px_rgba(0,0,0,0.16)]"
+        >
+          Explore More Case Studies
+          <span aria-hidden>→</span>
+        </Link>
+      </div>
+
+      <div className="mt-10 grid max-w-lg grid-cols-3 gap-6">
+        <div>
+          <p className="text-xs uppercase tracking-[0.25em] text-dark/55">
+            Sector
+          </p>
+          <p className="mt-2 font-serif text-xl">Fintech</p>
         </div>
-        <div className="mx-auto max-w-7xl px-6 grid lg:grid-cols-12 gap-12 items-center pb-24">
-          <div className="lg:col-span-7">
-            <span className="text-[11px] tracking-[0.3em] uppercase text-brand font-semibold">
-              Case Study · Strategic Partnership
-            </span>
-            <h1 className="mt-5 font-serif text-4xl md:text-6xl leading-[1.05] tracking-tight">
-              Transforming digital presence, corporate communication & growth systems for{" "}
-              <em className="text-brand not-italic">MOS Utility Limited.</em>
-            </h1>
-            <p className="mt-6 text-lg text-dark/70 max-w-2xl">
-              How Ace360degree partnered with one of India's leading assisted e-governance
-              platforms to build a unified brand, listed-grade communication and a scalable
-              growth engine across business units.
-            </p>
-            <div className="mt-9 flex flex-wrap gap-3">
-              <Link
-                to="/contact"
-                className="inline-flex items-center gap-2 rounded-2xl bg-dark text-canvas px-5 py-3 text-sm font-semibold shadow-sm transition-all duration-300 ease-out hover:bg-dark/90 hover:shadow-[0_12px_28px_rgba(0,0,0,0.22)]"
-              >
-                Discuss A Similar Engagement <span aria-hidden>→</span>
-              </Link>
-              <Link
-                to="/portfolio"
-                className="inline-flex items-center gap-2 rounded-2xl border border-dark/20 px-5 py-3 text-sm font-semibold shadow-sm transition-all duration-300 ease-out hover:border-dark hover:shadow-[0_12px_28px_rgba(0,0,0,0.16)]"
-              >
-                Explore More Case Studies <span aria-hidden>→</span>
-              </Link>
-            </div>
-            <div className="mt-10 grid grid-cols-3 gap-6 max-w-lg">
-              <div>
-                <p className="text-xs uppercase tracking-[0.25em] text-dark/55">Sector</p>
-                <p className="mt-2 font-serif text-xl">Fintech</p>
-              </div>
-              <div>
-                <p className="text-xs uppercase tracking-[0.25em] text-dark/55">Engagement</p>
-                <p className="mt-2 font-serif text-xl">Multi-Year</p>
-              </div>
-              <div>
-                <p className="text-xs uppercase tracking-[0.25em] text-dark/55">Scope</p>
-                <p className="mt-2 font-serif text-xl">Full-Stack</p>
-              </div>
-            </div>
-          </div>
-          <div className="lg:col-span-5">
-            <div className="relative aspect-[4/5] overflow-hidden rounded-sm">
-              <img src={caseMos} alt="MOS Utility case study" className="h-full w-full object-cover" />
-              <div className="absolute bottom-4 left-4 right-4 bg-canvas/90 backdrop-blur p-4">
-                <p className="text-xs uppercase tracking-[0.25em] text-dark/60">Engagement Posture</p>
-                <p className="font-serif text-xl mt-1">Long-term partner. Not a project vendor.</p>
-              </div>
-            </div>
-          </div>
+
+        <div>
+          <p className="text-xs uppercase tracking-[0.25em] text-dark/55">
+            Engagement
+          </p>
+          <p className="mt-2 font-serif text-xl">Multi-Year</p>
         </div>
-      </section>
+
+        <div>
+          <p className="text-xs uppercase tracking-[0.25em] text-dark/55">
+            Scope
+          </p>
+          <p className="mt-2 font-serif text-xl">Full-Stack</p>
+        </div>
+      </div>
+    </div>
+
+    <div className="lg:col-span-5">
+      <div className="relative aspect-[4/5] overflow-hidden rounded-[28px] bg-muted shadow-[0_24px_70px_rgba(0,0,0,0.14)]">
+        <img
+          src={caseMos}
+          alt="MOS Utility case study"
+          className="h-full w-full object-cover"
+        />
+
+        <div className="absolute bottom-5 left-5 right-5 rounded-2xl border border-white/40 bg-canvas/90 p-5 shadow-[0_12px_30px_rgba(0,0,0,0.12)] backdrop-blur-md">
+          <p className="text-xs uppercase tracking-[0.25em] text-dark/60">
+            Engagement Posture
+          </p>
+
+          <p className="mt-1 font-serif text-xl">
+            Long-term partner. Not a project vendor.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* 2. CLIENT OVERVIEW */}
       <section className="bg-light">
@@ -414,59 +502,127 @@ function MosCaseStudyPage() {
 
       {/* 7. TIMELINE */}
       <section className="bg-[#fbfaf7]">
-  <div className="mx-auto max-w-[1540px] px-8 py-14 md:px-10 lg:px-12">
-    <div className="grid items-start gap-14 lg:grid-cols-[1fr_1fr] lg:gap-20">
-      {/* Left content */}
-      <div className="max-w-[760px]">
-        <span className="text-[11px] tracking-[0.3em] uppercase text-brand font-semibold">
+  <div className="mx-auto max-w-7xl px-6 py-14 md:px-8 lg:px-10">
+
+    <div className="grid items-center gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
+
+      {/* Left Content */}
+      <div className="max-w-3xl">
+
+        <span className="text-[11px] font-semibold uppercase tracking-[0.3em] text-brand">
           Key Deliverables Timeline
         </span>
 
-        <h2 className="mt-3 font-serif text-4xl md:text-5xl leading-tight">
+
+        <h2 className="mt-3 font-serif text-4xl leading-tight tracking-tight md:text-5xl">
           How the partnership unfolded.
         </h2>
 
+
         <ol className="relative ml-3 mt-10 border-l border-[#dedbd5]">
-          {timeline.map((item, index) => (
+
+          {timeline.map((item) => (
+
             <li
               key={item.phase}
               className="relative pb-8 pl-8 last:pb-0"
             >
-              <span className="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-brand" />
 
-              <p className="text-[8px] font-semibold uppercase tracking-[0.34em] text-[#f2a400]">
+              <span
+                className="
+                absolute
+                -left-[7px]
+                top-1.5
+                h-3
+                w-3
+                rounded-full
+                bg-brand
+                "
+              />
+
+
+              <p className="
+                text-[8px]
+                font-semibold
+                uppercase
+                tracking-[0.34em]
+                text-[#f2a400]
+              ">
                 {item.phase}
               </p>
 
-              <h3 className="mt-2 font-serif text-2xl">
+
+              <h3 className="
+                mt-2
+                font-serif
+                text-xl
+                md:text-2xl
+              ">
                 {item.title}
               </h3>
 
-              <p className="mt-2 text-dark/70 text-sm max-w-2xl leading-relaxed">
+
+              <p className="
+                mt-2
+                max-w-xl
+                text-sm
+                leading-relaxed
+                text-dark/70
+              ">
                 {item.body}
               </p>
+
+
             </li>
+
           ))}
+
         </ol>
+
       </div>
 
-      {/* Right image */}
-      <div className="flex justify-center lg:justify-end">
-        <div className="w-full max-w-[690px] overflow-hidden rounded-[24px] bg-white">
+
+
+      {/* Right Image */}
+      <div className="flex items-center justify-center lg:justify-end">
+
+        <div
+          className="
+          w-full
+          max-w-[560px]
+          overflow-hidden
+          rounded-[24px]
+          bg-white
+          shadow-[0_20px_60px_rgba(0,0,0,0.08)]
+          "
+        >
+
           <img
             src={bannerMos}
             alt="MOS Utility business presentation and collaboration visual"
-            className="block h-[300px] w-full object-cover object-center sm:h-[360px] lg:h-[430px]"
+            className="
+              block
+              h-[300px]
+              w-full
+              object-cover
+              object-center
+              sm:h-[360px]
+              lg:h-[390px]
+            "
             width={1400}
             height={860}
             loading="lazy"
           />
+
         </div>
+
       </div>
+
+
     </div>
+
   </div>
 </section>
-
       {/* 8. WHY THIS PROJECT MATTERS */}
       <section className="bg-canvas">
         <div className="mx-auto max-w-7xl px-6 py-24 grid lg:grid-cols-12 gap-12">
@@ -497,7 +653,7 @@ function MosCaseStudyPage() {
       <section className="bg-light">
         <div className="mx-auto max-w-7xl px-6 py-24 grid lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-6">
-            <div className="aspect-[4/3] overflow-hidden">
+            <div className="aspect-[4/3] rounded-[28px] overflow-hidden">
               <img src={heroMesh} alt="MOS Utility snapshot" className="h-full w-full object-cover" />
             </div>
           </div>
@@ -571,35 +727,113 @@ function MosCaseStudyPage() {
 
       {/* 12. FINAL CTA */}
       <section className="bg-dark text-canvas">
-        <div className="mx-auto max-w-7xl px-6 py-28 text-center">
-          <span className="text-[11px] tracking-[0.3em] uppercase text-brand font-semibold">
-            Build Your Own Transformation Story
-          </span>
-          <h2 className="mt-5 font-serif text-5xl md:text-6xl leading-[1.05] tracking-tight">
-            Looking for a partner who can{" "}
-            <em className="text-brand not-italic">scale every dimension</em> of your business?
-          </h2>
-          <p className="mt-6 max-w-2xl mx-auto text-canvas/70 text-lg">
-            From brand to communication, technology to growth — Ace360degree partners with
-            leadership teams to turn ambition into a measurable operating system.
-          </p>
-          <div className="mt-10 flex flex-wrap gap-3 justify-center">
-            <Link
-              to="/contact"
-              className="inline-flex items-center gap-2 rounded-2xl bg-brand text-dark px-6 py-3.5 text-sm font-semibold shadow-sm transition-all duration-300 ease-out hover:brightness-95 hover:shadow-[0_14px_34px_rgba(255,179,48,0.32)]"
-            >
-              Book A Strategic Consultation <span aria-hidden>→</span>
-            </Link>
-            <Link
-              to="/portfolio"
-              className="inline-flex items-center gap-2 rounded-2xl border border-canvas/30 px-6 py-3.5 text-sm font-semibold shadow-sm transition-all duration-300 ease-out hover:border-canvas hover:shadow-[0_14px_34px_rgba(255,255,255,0.18)]"
-            >
-              View More Case Studies <span aria-hidden>→</span>
-            </Link>
-          </div>
-        </div>
-      </section>
+  <div className="mx-auto max-w-7xl px-6 py-20 text-center md:py-28">
 
+    <span className="text-[11px] font-semibold uppercase tracking-[0.3em] text-brand">
+      Build Your Own Transformation Story
+    </span>
+
+    <h2 className="mx-auto mt-5 max-w-5xl font-serif text-4xl leading-[1.05] tracking-tight md:text-6xl">
+      Looking for a partner who can{" "}
+      <em className="not-italic text-brand">
+        scale every dimension
+      </em>{" "}
+      of your business?
+    </h2>
+
+    <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-canvas/70 md:text-lg">
+      From brand to communication, technology to growth — Ace360degree
+      partners with leadership teams to turn ambition into a measurable
+      operating system.
+    </p>
+
+    <div className="mt-10 flex justify-center gap-3">
+      
+      <Link
+        to="/contact"
+        className="
+        group
+        inline-flex
+        h-[48px]
+        items-center
+        justify-center
+        gap-2
+        rounded-full
+        bg-brand
+        px-7
+        text-sm
+        font-semibold
+        text-dark
+        shadow-none
+        transition-all
+        duration-300
+        ease-out
+
+        hover:-translate-y-1
+        hover:bg-[#ffbf45]
+        hover:shadow-[0_14px_35px_rgba(255,179,48,0.45)]
+
+        active:translate-y-0
+        "
+      >
+        <span>
+          Book A Strategic Consultation
+        </span>
+
+        <span
+          className="transition-transform duration-300 group-hover:translate-x-1"
+        >
+          →
+        </span>
+      </Link>
+
+
+      <Link
+        to="/portfolio"
+        className="
+        group
+        inline-flex
+        h-[48px]
+        items-center
+        justify-center
+        gap-2
+        rounded-full
+        border
+        border-white/40
+        bg-transparent
+        px-7
+        text-sm
+        font-semibold
+        text-white
+        shadow-none
+        transition-all
+        duration-300
+        ease-out
+
+        hover:-translate-y-1
+        hover:border-white
+        hover:bg-white
+        hover:text-dark
+        hover:shadow-[0_14px_35px_rgba(255,255,255,0.22)]
+
+        active:translate-y-0
+        "
+      >
+        <span>
+          View More Case Studies
+        </span>
+
+        <span
+          className="transition-transform duration-300 group-hover:translate-x-1"
+        >
+          →
+        </span>
+      </Link>
+
+    </div>
+
+  </div>
+</section>
       <SiteFooter />
     </div>
   );

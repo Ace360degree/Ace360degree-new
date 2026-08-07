@@ -6,26 +6,79 @@ import aboutImg from "@/assets/bannerRexelloy1.jpg";
 import bannerImg from "@/assets/bannerRexelloy2.jpg";
 
 export const Route = createFileRoute("/case-rexello-castors")({
+  component: RexelloCaseStudyPage,
+
   head: () => ({
-    // title: "Rexello Castors Case Study | Manufacturing Branding, Website & SEO — Ace360degree",
-    
     meta: [
-      { title: "Rexello Castors Case Study | Manufacturing Branding, Website & SEO — Ace360degree" },
+      {
+        title:
+          "Rexello Castors Case Study | Digital Growth Solutions",
+      },
       {
         name: "description",
         content:
-          "How Ace360degree partnered with Rexello Castors to transform a traditional industrial manufacturer into a modern digital-first brand through branding, technology, SEO and growth marketing.",
+          "Explore Rexello Castors case study showcasing Ace360degree's website development, SEO, and digital solutions that helped improve business growth.",
       },
-      { property: "og:title", content: "Rexello Castors — A Manufacturing Growth Blueprint" },
+      {
+        name: "keywords",
+        content:
+          "B2B digital marketing case study, Rexello Castors Case Study, Rexello Castors digital transformation, Manufacturing website development case study, Industrial website development India, Manufacturing SEO services, Industrial digital solutions",
+      },
+      {
+        property: "og:title",
+        content:
+          "Rexello Castors Case Study | Digital Growth Solutions",
+      },
       {
         property: "og:description",
         content:
-          "A long-term strategic partnership modernizing digital presence, product communication and lead generation for a legacy industrial manufacturer.",
+          "Explore Rexello Castors case study showcasing Ace360degree's website development, SEO, and digital solutions that helped improve business growth.",
       },
-      { property: "og:image", content: heroImg },
+      {
+        property: "og:type",
+        content: "website",
+      },
+      {
+        property: "og:url",
+        content:
+          "https://www.ace360degree.com/case-rexello-castors",
+      },
+      {
+        property: "og:site_name",
+        content: "Ace360degree",
+      },
+      {
+        name: "robots",
+        content: "index, follow",
+      },
+      {
+        name: "author",
+        content: "Ace360degree",
+      },
+      {
+        name: "twitter:card",
+        content: "summary_large_image",
+      },
+      {
+        name: "twitter:title",
+        content:
+          "Rexello Castors Case Study | Digital Growth Solutions",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "Explore Rexello Castors case study showcasing Ace360degree's website development, SEO, and digital solutions that helped improve business growth.",
+      },
+    ],
+
+    links: [
+      {
+        rel: "canonical",
+        href:
+          "https://www.ace360degree.com/case-rexello-castors",
+      },
     ],
   }),
-  component: RexelloCaseStudyPage,
 });
 
 /* ---------------- Data ---------------- */
@@ -150,7 +203,7 @@ function RexelloCaseStudyPage() {
       {/* HERO */}
       <section className="relative overflow-hidden border-b border-black/5 bg-white">
         
-        <div className="relative container mx-auto px-6 py-24 md:py-32">
+        <div className="relative mx-auto max-w-7xl px-6 py-24 md:py-32">
           <div className="max-w-4xl lg:max-w-[58%]">
             <div className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-3 py-1 text-xs uppercase tracking-[0.2em] text-primary">
               Success Story
@@ -188,7 +241,7 @@ function RexelloCaseStudyPage() {
       </section>
 
       {/* CONTEXT */}
-      <section className="container mx-auto px-6 py-20 md:py-28">
+      <section className="mx-auto max-w-7xl px-6 py-20 md:py-28">
         <div className="grid lg:grid-cols-12 gap-12">
           <div className="lg:col-span-5">
             <div className="text-xs uppercase tracking-[0.2em] text-primary">The Context</div>
@@ -216,7 +269,7 @@ function RexelloCaseStudyPage() {
 
       {/* ABOUT */}
 <section className="border-b border-black/5 bg-[#fbfaf7]">
-  <div className="mx-auto max-w-[1460px] px-7 py-10 md:px-8 md:py-12 lg:py-14">
+  <div className="mx-auto max-w-7xl px-6 py-10 md:py-12 lg:py-14">
     <div className="grid items-start gap-10 lg:grid-cols-[1.55fr_0.65fr] lg:gap-16">
       {/* Left Content */}
       <div className="pt-10 lg:pt-11">
@@ -247,7 +300,7 @@ function RexelloCaseStudyPage() {
 
       {/* Right Image */}
       <div className="flex justify-start lg:justify-center">
-        <div className="h-[300px] w-full max-w-[310px] overflow-hidden bg-[#eee9e1]">
+        <div className="h-[300px] w-full max-w-[310px] rounded-[25px] overflow-hidden bg-[#eee9e1]">
           <img
             src={aboutImg}
             alt="Rexello Castors industrial logistics visual"
@@ -283,7 +336,7 @@ function RexelloCaseStudyPage() {
 </section>
 
       {/* CHALLENGES */}
-      <section className="container mx-auto px-6 py-20 md:py-28">
+      <section className="mx-auto max-w-7xl px-6 py-20 md:py-28">
         <div className="max-w-3xl">
           <div className="text-xs uppercase tracking-[0.2em] text-primary">Strategic Challenges</div>
           <h2 className="mt-3 text-3xl md:text-4xl font-semibold tracking-tight">
@@ -307,7 +360,7 @@ function RexelloCaseStudyPage() {
 
       {/* GROWTH MODEL */}
       <section className="border-y border-border/40 bg-muted/30">
-        <div className="container mx-auto px-6 py-20 md:py-28">
+        <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="max-w-3xl">
             <div className="text-xs uppercase tracking-[0.2em] text-primary">Our Growth Model</div>
             <h2 className="mt-3 text-3xl md:text-4xl font-semibold tracking-tight">
@@ -327,7 +380,7 @@ function RexelloCaseStudyPage() {
       </section>
 
       {/* DISCIPLINES */}
-      <section className="container mx-auto px-6 py-20 md:py-28">
+      <section className="mx-auto max-w-7xl px-6 py-20 md:py-28">
         <div className="max-w-3xl">
           <div className="text-xs uppercase tracking-[0.2em] text-primary">One Partner · Multiple Disciplines</div>
           <h2 className="mt-3 text-3xl md:text-4xl font-semibold tracking-tight">One Outcome.</h2>
@@ -351,7 +404,7 @@ function RexelloCaseStudyPage() {
 
       {/* OUTCOMES */}
       <section className="border-y border-border/40 bg-muted/30">
-        <div className="container mx-auto px-6 py-20 md:py-28">
+        <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="max-w-3xl">
             <div className="text-xs uppercase tracking-[0.2em] text-primary">Outcomes</div>
             <h2 className="mt-3 text-3xl md:text-4xl font-semibold tracking-tight">
@@ -374,7 +427,7 @@ function RexelloCaseStudyPage() {
       </section>
 
       {/* PARTNERSHIP TIMELINE */}
-      <section className="container mx-auto px-6 py-20 md:py-28">
+      <section className="mx-auto max-w-7xl px-6 py-20 md:py-28">
         <div className="grid items-center gap-12 lg:grid-cols-[0.95fr_1.05fr]">
           <div className="max-w-3xl">
             <div className="text-xs uppercase tracking-[0.2em] text-primary">How the Partnership Unfolded</div>
@@ -407,7 +460,7 @@ function RexelloCaseStudyPage() {
 
       {/* BLUEPRINT */}
       <section className="border-y border-border/40 bg-muted/30">
-        <div className="container mx-auto px-6 py-20 md:py-28">
+        <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="max-w-3xl">
             <div className="text-xs uppercase tracking-[0.2em] text-primary">More Than A Success Story</div>
             <h2 className="mt-3 text-3xl md:text-4xl font-semibold tracking-tight">A Manufacturing Growth Blueprint</h2>
@@ -429,7 +482,7 @@ function RexelloCaseStudyPage() {
       </section>
 
       {/* STACK */}
-      <section className="container mx-auto px-6 py-20 md:py-28">
+      <section className="mx-auto max-w-7xl px-6 py-20 md:py-28">
         <div className="max-w-3xl">
           <div className="text-xs uppercase tracking-[0.2em] text-primary">At a Glance</div>
           <h2 className="mt-3 text-3xl md:text-4xl font-semibold tracking-tight">
@@ -454,7 +507,7 @@ function RexelloCaseStudyPage() {
 
       {/* PROOFS */}
       <section className="border-y border-border/40 bg-muted/30">
-        <div className="container mx-auto px-6 py-20 md:py-28">
+        <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="max-w-3xl">
             <div className="text-xs uppercase tracking-[0.2em] text-primary">How We Work</div>
             <h2 className="mt-3 text-3xl md:text-4xl font-semibold tracking-tight">
@@ -473,7 +526,7 @@ function RexelloCaseStudyPage() {
       </section>
 
       {/* RELATED */}
-      <section className="container mx-auto px-6 py-20 md:py-28">
+      <section className="mx-auto max-w-7xl px-6 py-20 md:py-28">
         <div className="grid lg:grid-cols-12 gap-12">
           <div className="lg:col-span-4">
             <div className="text-xs uppercase tracking-[0.2em] text-primary">Related</div>
@@ -505,44 +558,49 @@ function RexelloCaseStudyPage() {
       </section>
 
       {/* FINAL CTA */}
-      <section className="container mx-auto px-6 pb-24 md:pb-32">
-        <div className="relative overflow-hidden rounded-3xl
-      border border-black/5
-      bg-[linear-gradient(163deg,rgba(255,179,48,0.25)_20%,rgba(255,179,48,0.08)_50%,#ffffff_65%,#ffffff_100%)]
-      p-10 md:p-16">
-          <div className="max-w-3xl">
-            <h2 className="text-3xl md:text-5xl font-semibold tracking-tight">
-              Building Industrial Brands That Engineers Trust and Buyers Choose.
-            </h2>
-            <p className="mt-5 text-muted-foreground text-lg">
-              Whether you're a manufacturer, OEM, engineering company or industrial supplier, Ace360degree helps you
-              combine branding, marketing, technology and AI into a scalable growth ecosystem that drives long-term
-              business success.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Link
-                to="/contact"
-                className="inline-flex items-center rounded-full bg-primary text-primary-foreground px-6 py-3 text-sm font-medium shadow-sm transition-all duration-300 ease-out hover:opacity-90 hover:shadow-[0_14px_34px_rgba(255,179,48,0.32)]"
-              >
-                Request Manufacturing Growth Audit
-              </Link>
-              <Link
-                to="/contact"
-                className="inline-flex items-center rounded-full border border-border bg-background px-6 py-3 text-sm font-medium shadow-sm transition-all duration-300 ease-out hover:bg-muted hover:shadow-[0_12px_28px_rgba(0,0,0,0.16)]"
-              >
-                Book Discovery Call
-              </Link>
-              <Link
-                to="/industries/manufacturing"
-                className="inline-flex items-center rounded-full px-6 py-3 text-sm font-medium shadow-sm transition-all duration-300 ease-out hover:bg-muted hover:shadow-[0_12px_28px_rgba(0,0,0,0.14)]"
-              >
-                Explore Manufacturing Solutions →
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+     {/* FINAL CTA */}
+<section className="bg-background px-6 py-24 md:py-32">
+  <div className="mx-auto max-w-7xl">
+    <div className="relative overflow-hidden rounded-[28px] border border-black/5 bg-[linear-gradient(163deg,rgba(255,179,48,0.25)_20%,rgba(255,179,48,0.08)_50%,#ffffff_65%,#ffffff_100%)] px-8 py-12 md:px-16 md:py-16">
+      <div className="max-w-3xl">
+        <h2 className="text-3xl font-semibold leading-tight tracking-tight md:text-5xl">
+          Building Industrial Brands That Engineers Trust and Buyers Choose.
+        </h2>
 
+        <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
+          Whether you&apos;re a manufacturer, OEM, engineering company or
+          industrial supplier, Ace360degree helps you combine branding,
+          marketing, technology and AI into a scalable growth ecosystem that
+          drives long-term business success.
+        </p>
+
+        <div className="mt-8 flex flex-wrap items-center gap-3">
+          <button
+            type="button"
+            onClick={() => window.dispatchEvent(new Event("ace360:open-strategy-call"))}
+            className="inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:opacity-90 hover:shadow-[0_14px_34px_rgba(255,179,48,0.32)]"
+          >
+            Book Discovery Call
+          </button>
+{/* 
+          <Link
+            to="/contact"
+            className="inline-flex items-center justify-center rounded-full border border-border bg-background px-6 py-3 text-sm font-medium text-foreground shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-muted hover:shadow-[0_12px_28px_rgba(0,0,0,0.16)]"
+          >
+            Book Discovery Call
+          </Link> */}
+
+          <Link
+            to="/industries/manufacturing"
+            className="inline-flex items-center justify-center rounded-full border border-border/60 bg-white/40 px-6 py-3 text-sm font-medium text-foreground shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-white/70 hover:shadow-[0_12px_28px_rgba(0,0,0,0.14)]"
+          >
+            Explore Manufacturing Solutions →
+          </Link>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
       <SiteFooter />
     </div>
   );

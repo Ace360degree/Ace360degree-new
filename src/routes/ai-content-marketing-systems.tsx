@@ -270,7 +270,7 @@ function AIContentMarketingSystemsPage() {
             </div>
           </div>
           <div className="lg:col-span-5">
-            <div className="relative aspect-[4/5] overflow-hidden rounded-sm">
+            <div className="relative aspect-[4/5] overflow-hidden rounded-[28px]">
               <img src={heroImg} alt="AI-powered content and marketing systems" className="h-full w-full object-cover" />
               <div className="absolute bottom-4 left-4 right-4 bg-canvas/90 backdrop-blur p-4">
                 <p className="text-xs uppercase tracking-[0.25em] text-dark/60">Operating Principle</p>

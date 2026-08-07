@@ -312,13 +312,17 @@ function SaasPage() {
               <div className="mt-10 flex flex-wrap gap-4">
                 <Link
                   to="/contact"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    window.dispatchEvent(new Event("ace360:open-strategy-call"));
+                  }}
                   className="inline-flex items-center gap-2 rounded-2xl bg-brand text-dark px-6 py-3 font-semibold shadow-sm transition-all duration-300 ease-out hover:brightness-95 hover:shadow-[0_12px_28px_rgba(0,0,0,0.22)]"
                 >
                   Book Discovery Call <ArrowRight className="size-4" />
                 </Link>
                 <Link
                   to="/portfolio"
-                  className="inline-flex items-center gap-2 rounded-2xl border border-dark/15 text-dark px-6 py-3 font-semibold shadow-sm transition-all duration-300 ease-out hover:border-brand hover:text-brand hover:shadow-[0_12px_28px_rgba(0,0,0,0.16)]"
+                  className="inline-flex items-center gap-2 rounded-2xl text-dark px-6 py-3 font-semibold shadow-sm transition-all duration-300 ease-out hover:border-brand hover:text-brand hover:shadow-[0_12px_28px_rgba(0,0,0,0.16)]"
                 >
                   View Technology Projects <ArrowUpRight className="size-4" />
                 </Link>
@@ -631,13 +635,17 @@ function SaasPage() {
           <div className="mt-10 flex flex-wrap gap-4 justify-center">
             <Link
               to="/contact"
+              onClick={(e) => {
+                e.preventDefault();
+                window.dispatchEvent(new Event("ace360:open-strategy-call"));
+              }}
               className="inline-flex items-center gap-2 rounded-2xl bg-brand text-dark px-6 py-3 font-semibold shadow-sm transition-all duration-300 ease-out hover:brightness-95 hover:shadow-[0_14px_34px_rgba(255,179,48,0.32)]"
             >
               Book Discovery Call <ArrowRight className="size-4" />
             </Link>
             <Link
               to="/portfolio"
-              className="inline-flex items-center gap-2 rounded-2xl border border-canvas/30 text-canvas px-6 py-3 font-semibold shadow-sm transition-all duration-300 ease-out hover:bg-canvas hover:text-dark hover:shadow-[0_14px_34px_rgba(255,255,255,0.18)]"
+              className="inline-flex items-center gap-2 rounded-2xl text-canvas px-6 py-3 font-semibold shadow-sm transition-all duration-300 ease-out hover:bg-canvas hover:text-dark hover:shadow-[0_14px_34px_rgba(255,255,255,0.18)]"
             >
               View Technology Projects <ArrowUpRight className="size-4" />
             </Link>

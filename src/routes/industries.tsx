@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import {
   ArrowRight,
   ArrowUpRight,
+  Headset,
   Factory,
   Landmark,
   GraduationCap,
@@ -20,12 +21,15 @@ import {
   Layers,
   Workflow,
   CheckCircle2,
+  Mail,
+  MessageCircleMore,
+  PhoneCall,
 } from "lucide-react";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 
 import industriesHero from "@/assets/industry-manufacturing3322.jpg";
-import indManufacturing from "@/assets/industry-manufacturing32.jpg";
+import indManufacturing from "@/assets/industry-manufacturing3222.jpg";
 import indFinance from "@/assets/industry-finance.212.jpg";
 import indEducation from "@/assets/industry-education.333.jpg";
 import indHealthcare from "@/assets/industry-healthcare.444.jpg";
@@ -431,9 +435,13 @@ const TRUST = [
   { k: "C-Suite", v: "Boardroom-Ready Engagements" },
 ];
 
+// Temporary test toggle. Set this to false to undo the floating rail quickly.
+const SHOW_INDUSTRY_FLOATING_RAIL = true;
+
 /* ---------- page ---------- */
 function IndustriesPage() {
   const [active, setActive] = useState("overview");
+  const [showContactRail, setShowContactRail] = useState(false);
 
   useEffect(() => {
     const els = SECTIONS.map((s) => document.getElementById(s.id)).filter(Boolean) as HTMLElement[];
@@ -540,7 +548,11 @@ function IndustriesPage() {
 
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 rounded-2xl border border-dark/15 bg-white/25 px-5 py-3 text-sm font-semibold text-dark shadow-sm backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/60 hover:shadow-[0_12px_28px_rgba(0,0,0,0.12)]"
+              onClick={(e) => {
+                e.preventDefault();
+                window.dispatchEvent(new Event("ace360:open-strategy-call"));
+              }}
+              className="inline-flex items-center gap-2 rounded-2xl bg-white/25 px-5 py-3 text-sm font-semibold text-dark shadow-sm backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/60 hover:shadow-[0_12px_28px_rgba(0,0,0,0.12)]"
             >
               Book Discovery Call
               <ArrowUpRight className="size-4" />
@@ -679,7 +691,12 @@ function IndustriesPage() {
             <div className="mt-12 space-y-8">
               {INDUSTRIES.map((ind, i) => (
                 <Reveal key={ind.id} delay={i * 80}>
-                  <article className="group grid md:grid-cols-12 gap-0 border border-dark/10 bg-canvas overflow-hidden hover:border-dark transition-colors">
+                  <Link
+                    to={ind.href}
+                    aria-label={`Open ${ind.name} industry page`}
+                    className="group block border border-dark/10 bg-canvas overflow-hidden transition-colors hover:border-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/60"
+                  >
+                    <article className="grid md:grid-cols-12 gap-0">
                     <div className="md:col-span-5 relative overflow-hidden">
                       <img
                         src={ind.image}
@@ -757,16 +774,12 @@ function IndustriesPage() {
                         </div>
                       )}
 
-                      <div className="mt-8">
-                        <Link
-                          to={ind.href}
-                          className="inline-flex items-center gap-2 text-sm font-semibold text-dark border-b border-dark/30 pb-1 shadow-sm transition-all duration-300 ease-out hover:border-brand hover:text-brand hover:shadow-[0_10px_24px_rgba(0,0,0,0.14)]"
-                        >
-                          Explore {ind.name.split(" ")[0]} Solutions <ArrowRight className="size-4" />
-                        </Link>
+                      <div className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-dark border-b border-dark/30 pb-1 shadow-sm transition-all duration-300 ease-out group-hover:border-brand group-hover:text-brand group-hover:shadow-[0_10px_24px_rgba(0,0,0,0.14)]">
+                        Explore {ind.name.split(" ")[0]} Solutions <ArrowRight className="size-4" />
                       </div>
                     </div>
-                  </article>
+                    </article>
+                  </Link>
                 </Reveal>
               ))}
             </div>
@@ -954,6 +967,10 @@ function IndustriesPage() {
             <div className="mt-10 flex flex-wrap justify-center gap-3">
               <Link
                 to="/contact"
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.dispatchEvent(new Event("ace360:open-strategy-call"));
+                }}
                 className="inline-flex items-center gap-2 rounded-2xl bg-brand text-dark px-6 py-3 text-sm font-semibold shadow-sm transition-all duration-300 ease-out hover:brightness-95 hover:shadow-[0_14px_34px_rgba(255,179,48,0.32)]"
               >
                 Book Discovery Call <ArrowRight className="size-4" />
@@ -968,6 +985,77 @@ function IndustriesPage() {
           </Reveal>
         </div>
       </section>
+
+      {SHOW_INDUSTRY_FLOATING_RAIL ? (
+        <div className="fixed right-4 bottom-28 z-40 hidden md:block lg:right-6 lg:bottom-32">
+          <div className="flex items-end gap-2">
+            <div
+              className={`flex flex-col items-center gap-3 overflow-hidden origin-bottom transform-gpu transition-all duration-500 ease-out ${
+                showContactRail
+                  ? "max-h-80 scale-y-100 opacity-100"
+                  : "pointer-events-none max-h-0 scale-y-75 opacity-0"
+              }`}
+            >
+              {[
+                {
+                  href: "https://wa.me/917045360360",
+                  label: "Chat on WhatsApp",
+                  bg: "bg-[#25D366]",
+                  icon: MessageCircleMore,
+                },
+                {
+                  href: "tel:+917045360360",
+                  label: "Call us",
+                  bg: "bg-[#f4a800]",
+                  icon: PhoneCall,
+                },
+                {
+                  href: "mailto:Growth@a360pl.com",
+                  label: "Email us",
+                  bg: "bg-[#0e9aa7]",
+                  icon: Mail,
+                },
+              ].map((item, index) => {
+                const Icon = item.icon;
+                return (
+                  <a
+                    key={item.label}
+                    href={item.href}
+                    target={item.href.startsWith("http") ? "_blank" : undefined}
+                    rel={item.href.startsWith("http") ? "noreferrer" : undefined}
+                    aria-label={item.label}
+                    style={{ transitionDelay: showContactRail ? `${index * 70}ms` : "0ms" }}
+                    className={`flex size-14 items-center justify-center rounded-full text-white shadow-[0_14px_30px_rgba(0,0,0,0.18)] transition-all duration-500 ease-out hover:-translate-y-0.5 hover:scale-105 ${
+                      item.bg
+                    } ${showContactRail ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
+                  >
+                    <Icon className="size-7" />
+                  </a>
+                );
+              })}
+            </div>
+            <button
+              type="button"
+              onClick={() => setShowContactRail((current) => !current)}
+              aria-label={showContactRail ? "Collapse contact rail" : "Talk to experts"}
+              className={`flex items-center justify-center overflow-hidden rounded-full bg-[#505050] text-white shadow-[0_14px_30px_rgba(0,0,0,0.18)] transition-all duration-500 ease-out hover:-translate-y-0.5 hover:scale-105 ${
+                showContactRail ? "size-14 px-0" : "px-4 py-4"
+              }`}
+            >
+              <Headset className="size-7 shrink-0" />
+              <span
+                className={`whitespace-nowrap text-sm font-medium leading-none transition-all duration-500 ease-out ${
+                  showContactRail
+                    ? "max-w-0 overflow-hidden opacity-0 -translate-x-2"
+                    : "max-w-32 opacity-100 translate-x-0"
+                }`}
+              >
+                Talk to Experts
+              </span>
+            </button>
+          </div>
+        </div>
+      ) : null}
 
       <SiteFooter />
     </div>

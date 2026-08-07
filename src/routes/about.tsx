@@ -177,13 +177,14 @@ function Hero() {
               hospitality, fintech and service industries to create measurable business
               outcomes through integrated digital solutions.
             </p>
-            <a
-              href="/contact"
+            <button
+              type="button"
+              onClick={() => window.dispatchEvent(new Event("ace360:open-strategy-call"))}
               className="mt-10 inline-flex items-center gap-3 rounded-xl bg-dark text-canvas px-6 py-3.5 text-sm font-semibold shadow-sm transition-all duration-300 hover:bg-brand hover:text-dark hover:shadow-[0_12px_28px_rgba(0,0,0,0.22)]"
             >
               Schedule Discovery Call
               <span aria-hidden>→</span>
-            </a>
+            </button>
           </div>
 <div className="lg:col-span-5">
   <div className="relative">
@@ -291,12 +292,13 @@ function Founder() {
             </p>
           </div>
           <div className="mt-10 flex flex-wrap items-center gap-4">
-            <a
-              href="/contact"
+            <button
+              type="button"
+              onClick={() => window.dispatchEvent(new Event("ace360:open-strategy-call"))}
               className="inline-flex items-center gap-3 rounded-xl bg-dark text-canvas px-6 py-3.5 text-sm font-semibold shadow-sm transition-all duration-300 hover:bg-brand hover:text-dark hover:shadow-[0_12px_28px_rgba(0,0,0,0.22)]"
             >
               Book Discovery Call <span aria-hidden>→</span>
-            </a>
+            </button>
             <a
               href="https://www.linkedin.com/company/ace360degree---business-growth-digital-transformation-agency/posts/?feedView=all"
               target="_blank"
@@ -764,12 +766,13 @@ function FinalCta() {
                 Whether you're looking to attract customers, strengthen your brand, modernize operations or explore AI opportunities - our team is ready to help.
               </p>
               <div className="mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row">
-                <a
-                  href="/contact"
+                <button
+                  type="button"
+                  onClick={() => window.dispatchEvent(new Event("ace360:open-strategy-call"))}
                   className="inline-flex h-12 items-center justify-center rounded-xl bg-[#ffbe2e] px-7 text-[13px] font-semibold text-[#1a1207] shadow-[0_10px_24px_rgba(0,0,0,0.26)] transition-all duration-300 hover:brightness-95 hover:shadow-[0_16px_34px_rgba(0,0,0,0.38)]"
                 >
                   Book Discovery Call <span aria-hidden className="ml-2">&rarr;</span>
-                </a>
+                </button>
                 <a
                   href="/contact"
                   className="inline-flex h-12 items-center justify-center rounded-xl bg-white px-6 text-[13px] font-semibold text-[#101010] shadow-[0_10px_24px_rgba(0,0,0,0.18)] transition-all duration-300 hover:bg-white/95 hover:shadow-[0_16px_34px_rgba(0,0,0,0.32)]"

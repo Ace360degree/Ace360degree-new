@@ -369,7 +369,7 @@ function SearchVisibilityPage() {
           </div>
 
           <div className="lg:col-span-5">
-            <div className="relative aspect-[4/5] overflow-hidden rounded-sm border border-dark/10 bg-light">
+            <div className="relative aspect-[4/5] overflow-hidden rounded-[28px] border border-dark/10 bg-light">
               <img
                 src={heroImg}
                 alt="Search visibility across Google, AI search engines and voice assistants"

@@ -26,24 +26,77 @@ import blueprintImg1 from "@/assets/case-ksa-blueprinty2.jpg";
 
 export const Route = createFileRoute("/case-kuwal-sanam")({
   head: () => ({
-  
-    
     meta: [
-      { title: "Kuwal Sanam Architects Case Study | Premium React Website by Ace360degree" },
+      {
+        title:
+          "Kuwal Sanam Case Study | Digital Solutions",
+      },
       {
         name: "description",
         content:
-          "Discover how Ace360degree turned KSA's vision into a world-class architecture website — built on React, Next.js, and Laravel CMS, reflecting the firm's design excellence and philosophy.",
+          "Explore Kuwal Sanam case study showcasing Ace360degree's website development, branding, and digital solutions for architecture businesses.",
       },
-      { property: "og:title", content: "Kuwal Sanam Architects — A Digital Masterpiece" },
+      {
+        name: "keywords",
+        content:
+          "Digital marketing for architects, Architecture portfolio website, Digital branding agency India, Architecture firm website design, Creative industry case study, Kuwal Sanam Case Study, Kuwal Sanam digital transformation",
+      },
+      {
+        property: "og:title",
+        content:
+          "Kuwal Sanam Case Study | Digital Solutions",
+      },
       {
         property: "og:description",
         content:
-          "A collaboration of vision and precision — where an architect's imagination met Ace360degree's engineering.",
+          "Explore Kuwal Sanam case study showcasing Ace360degree's website development, branding, and digital solutions for architecture businesses.",
       },
-      { property: "og:image", content: heroImg },
+      {
+        property: "og:type",
+        content: "website",
+      },
+      {
+        property: "og:url",
+        content:
+          "https://www.ace360degree.com/case-kuwal-sanam",
+      },
+      {
+        property: "og:site_name",
+        content: "Ace360degree",
+      },
+      {
+        name: "robots",
+        content: "index, follow",
+      },
+      {
+        name: "author",
+        content: "Ace360degree",
+      },
+      {
+        name: "twitter:card",
+        content: "summary_large_image",
+      },
+      {
+        name: "twitter:title",
+        content:
+          "Kuwal Sanam Case Study | Digital Solutions",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "Explore Kuwal Sanam case study showcasing Ace360degree's website development, branding, and digital solutions for architecture businesses.",
+      },
+    ],
+
+    links: [
+      {
+        rel: "canonical",
+        href:
+          "https://www.ace360degree.com/case-kuwal-sanam",
+      },
     ],
   }),
+
   component: KSACaseStudyPage,
 });
 
@@ -99,25 +152,32 @@ function KSACaseStudyPage() {
       <SiteHeader />
 
       {/* HERO */}
-<section className="border-b border-black/5 bg-[#fbfaf7]">
-  <div className="mx-auto max-w-[1480px]  md:py-16 lg:py-20">
-    <div className="grid items-start gap-9 lg:grid-cols-12 lg:gap-14">
+      <section className="border-b border-black/5 bg-[#fbfaf7]">
+  <div className="mx-auto max-w-7xl px-6 py-12 md:py-16 lg:py-20">
+    <div className="grid items-center gap-9 lg:grid-cols-12 lg:gap-14">
       <div className="lg:col-span-7">
         <div className="inline-flex items-center gap-1.5 rounded-full border border-[#f2d9af] bg-[#fff8ef] px-3 py-1.5 text-[10px] font-medium uppercase tracking-[0.22em] text-[#e7a62a]">
           <span className="flex h-4 w-4 items-center justify-center rounded-full bg-[#f7dfa8] text-[#c8850f]">
             <Building2 className="h-2.5 w-2.5" />
           </span>
-          Success Story <span className="text-[#e7a62a]/50">|</span> Architecture
+
+          Success Story
+          <span className="text-[#e7a62a]/50">|</span>
+          Architecture
         </div>
 
         <h1 className="mt-6 max-w-[24ch] font-sans text-[34px] font-bold leading-[1.12] tracking-[-0.02em] text-[#1a1a1a] sm:text-[42px] md:text-[48px] lg:text-[52px]">
-          A Masterpiece of Design and Technology for One of India&apos;s Most Refined Architecture Firms.
+          A Masterpiece of Design and Technology for One of India&apos;s Most
+          Refined Architecture Firms.
         </h1>
 
         <p className="mt-6 max-w-[54ch] text-[15px] leading-[1.65] text-[#7a756c]">
-          A collaboration of vision and precision — where an architect&apos;s imagination met{" "}
-          <span className="font-semibold text-[#4a453d]">Ace360degree&apos;s</span> engineering to create a
-          digital masterpiece.
+          A collaboration of vision and precision — where an architect&apos;s
+          imagination met{" "}
+          <span className="font-semibold text-[#4a453d]">
+            Ace360degree&apos;s
+          </span>{" "}
+          engineering to create a digital masterpiece.
         </p>
 
         <div className="mt-10 grid grid-cols-2 gap-4 md:grid-cols-4">
@@ -127,9 +187,11 @@ function KSACaseStudyPage() {
               className="rounded-[10px] border border-[#ece7df] bg-white px-4 py-4"
             >
               <Icon className="h-4 w-4 text-[#e29d1a]" />
+
               <div className="mt-3 text-[9px] font-medium uppercase tracking-[0.22em] text-[#a8a29b]">
                 {k}
               </div>
+
               <div className="mt-1.5 text-[12px] font-medium leading-[1.35] text-[#1f1f1f]">
                 {v}
               </div>
@@ -138,12 +200,12 @@ function KSACaseStudyPage() {
         </div>
       </div>
 
-      <div className="lg:col-span-5">
-        <div className="ml-5 w-full max-w-[680px] overflow-hidden rounded-[10px]">
+      <div className="flex items-center lg:col-span-5">
+        <div className="ml-auto w-full max-w-[680px] overflow-hidden rounded-[28px] shadow-[0_20px_60px_rgba(0,0,0,0.12)]">
           <img
             src={heroImg}
             alt="Kuwal Sanam Architects architectural concept board"
-            className="h-full w-full object-cover object-center"
+            className="block h-full w-full rounded-[28px] object-cover object-center"
             width={1400}
             height={1000}
           />
@@ -154,7 +216,7 @@ function KSACaseStudyPage() {
 </section>
 
       {/* SHOWCASE STRIP */}
-      <section className="container mx-auto px-6 py-16">
+      <section className="mx-auto max-w-7xl px-6 py-16">
         <div className="grid md:grid-cols-3 gap-4">
           <img src={interiorImg} alt="Luxury interior architecture" width={1600} height={1000} loading="lazy" className="w-full h-64 md:h-72 object-cover rounded-2xl border border-border/60" />
           <img src={facadeImg} alt="Modern architectural facade" width={1200} height={1500} loading="lazy" className="w-full h-64 md:h-72 object-cover rounded-2xl border border-border/60" />
@@ -163,7 +225,7 @@ function KSACaseStudyPage() {
       </section>
 
       {/* SERVICES + RESULTS */}
-      <section className="container mx-auto px-6 py-20 md:py-24">
+      <section className="mx-auto max-w-7xl px-6 py-20 md:py-24">
         <div className="grid lg:grid-cols-12 gap-12">
           <div className="lg:col-span-5">
             <div className="text-xs uppercase tracking-[0.2em] text-primary">Services Delivered</div>
@@ -193,7 +255,7 @@ function KSACaseStudyPage() {
 
       {/* ABOUT */}
       <section className="border-y border-border/40 bg-muted/30">
-        <div className="container mx-auto px-6 py-20 md:py-24">
+        <div className="mx-auto max-w-7xl px-6 py-20 md:py-24">
           <div className="grid lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-7">
               <div className="text-xs uppercase tracking-[0.2em] text-primary">About the Client</div>
@@ -223,7 +285,7 @@ function KSACaseStudyPage() {
       </section>
 
       {/* CHALLENGE */}
-      <section className="container mx-auto px-6 py-20 md:py-28">
+      <section className="mx-auto max-w-7xl px-6 py-20 md:py-28">
         <div className="max-w-3xl">
           <div className="text-xs uppercase tracking-[0.2em] text-primary">The Challenge</div>
           <h2 className="mt-3 text-3xl md:text-4xl font-semibold tracking-tight">
@@ -252,7 +314,7 @@ function KSACaseStudyPage() {
 
       {/* SOLUTION — 4D */}
       <section className="border-y border-border/40 bg-muted/30">
-        <div className="container mx-auto px-6 py-20 md:py-28">
+        <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="max-w-3xl">
             <div className="text-xs uppercase tracking-[0.2em] text-primary">Our Solution</div>
             <h2 className="mt-3 text-3xl md:text-4xl font-semibold tracking-tight">
@@ -281,7 +343,7 @@ function KSACaseStudyPage() {
       </section>
 
       {/* PULL QUOTE */}
-      <section className="container mx-auto px-6 py-20 md:py-28">
+      <section className="mx-auto max-w-7xl px-6 py-20 md:py-28">
         <figure className="max-w-4xl mx-auto text-center">
           <Quote className="h-10 w-10 text-primary mx-auto mb-6" />
           <blockquote className="text-2xl md:text-4xl font-serif italic leading-snug tracking-tight">
@@ -296,7 +358,7 @@ function KSACaseStudyPage() {
 
       {/* IMPACT */}
       <section className="border-y border-border/40 bg-muted/30">
-        <div className="container mx-auto px-6 py-20 md:py-28">
+        <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="max-w-3xl">
             <div className="text-xs uppercase tracking-[0.2em] text-primary">The Impact</div>
             <h2 className="mt-3 text-3xl md:text-4xl font-semibold tracking-tight">
@@ -316,7 +378,7 @@ function KSACaseStudyPage() {
       </section>
 
       {/* OUTCOME TABLE */}
-      <section className="container mx-auto px-6 py-20 md:py-28">
+      <section className="mx-auto max-w-7xl px-6 py-20 md:py-28">
         <div className="max-w-3xl">
           <div className="text-xs uppercase tracking-[0.2em] text-primary">At a Glance</div>
           <h2 className="mt-3 text-3xl md:text-4xl font-semibold tracking-tight">
@@ -350,7 +412,7 @@ function KSACaseStudyPage() {
 
       {/* ROAD AHEAD */}
       <section className="border-y border-border/40 bg-muted/30">
-        <div className="container mx-auto px-6 py-20 md:py-28">
+        <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="grid lg:grid-cols-12 gap-10 items-center">
             <div className="lg:col-span-7">
               <div className="text-xs uppercase tracking-[0.2em] text-primary">The Road Ahead</div>
@@ -371,35 +433,41 @@ function KSACaseStudyPage() {
       </section>
 
       {/* FINAL CTA */}
-      <section className="container mx-auto px-6 py-24 md:py-32">
-        <div className="relative overflow-hidden rounded-3xl border border-border/60 bg-gradient-to-br from-primary/10 via-card to-card p-10 md:p-16">
-          <div className="max-w-3xl">
-            <h2 className="text-3xl md:text-5xl font-semibold tracking-tight">
-              Your Vision Deserves a Digital Masterpiece.
-            </h2>
-            <p className="mt-5 text-muted-foreground text-lg">
-              Let's craft something timeless — where design meets performance.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Link
-                to="/contact"
-                className="inline-flex items-center gap-2 rounded-full bg-primary text-primary-foreground px-6 py-3 text-sm font-medium shadow-sm transition-all duration-300 ease-out hover:opacity-90 hover:shadow-[0_14px_34px_rgba(255,179,48,0.32)]"
-              >
-                Start Your Project <ArrowRight className="h-4 w-4" />
-              </Link>
-              <Link
-                to="/portfolio"
-                className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-6 py-3 text-sm font-medium shadow-sm transition-all duration-300 ease-out hover:bg-muted hover:shadow-[0_12px_28px_rgba(0,0,0,0.16)]"
-              >
-                View More Case Studies <ArrowRight className="h-4 w-4" />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+     {/* FINAL CTA */}
+<section className="bg-background px-6 py-24 md:py-32">
+  <div className="mx-auto max-w-7xl">
+    <div className="relative overflow-hidden rounded-[28px] border border-border/60 bg-gradient-to-br from-primary/10 via-card to-card px-8 py-12 md:px-16 md:py-16">
+      <div className="max-w-3xl">
+        <h2 className="text-3xl font-semibold leading-tight tracking-tight md:text-5xl">
+          Your Vision Deserves a Digital Masterpiece.
+        </h2>
 
+        <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
+          Let&apos;s craft something timeless — where design meets performance.
+        </p>
+
+        <div className="mt-8 flex flex-wrap gap-3">
+          <Link
+            to="/contact"
+            className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:opacity-90 hover:shadow-[0_14px_34px_rgba(255,179,48,0.32)]"
+          >
+            Start Your Project
+            <ArrowRight className="h-4 w-4" />
+          </Link>
+
+          <Link
+            to="/portfolio"
+            className="inline-flex items-center justify-center gap-2 rounded-full border border-border bg-background px-6 py-3 text-sm font-medium text-foreground shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-muted hover:shadow-[0_12px_28px_rgba(0,0,0,0.16)]"
+          >
+            View More Case Studies
+            <ArrowRight className="h-4 w-4" />
+          </Link>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
       <SiteFooter />
     </div>
   );
 }
-

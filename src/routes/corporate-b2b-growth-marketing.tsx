@@ -345,7 +345,7 @@ function CorporateB2BGrowthPage() {
             </div>
           </div>
           <div className="lg:col-span-5">
-            <div className="relative aspect-[4/5] overflow-hidden rounded-sm">
+            <div className="relative aspect-[4/5] overflow-hidden rounded-[28px]">
               <img
                 src={heroImg}
                 alt="Corporate and B2B growth marketing partner for enterprise sales and channel expansion"

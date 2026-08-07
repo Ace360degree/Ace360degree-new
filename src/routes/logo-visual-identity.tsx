@@ -393,7 +393,7 @@ function VisualIdentityPage() {
             </div>
           </div>
           <div className="lg:col-span-5">
-            <div className="relative aspect-[4/5] overflow-hidden rounded-sm">
+            <div className="relative aspect-[4/5] overflow-hidden rounded-[28px]">
               <img
                 src={heroImg}
                 alt="Visual identity design, logo systems and brand guidelines"
@@ -581,7 +581,7 @@ function VisualIdentityPage() {
                   key={s.client}
                   className="border border-dark/10 bg-canvas overflow-hidden hover:border-dark transition-colors"
                 >
-                  <div className="aspect-video overflow-hidden">
+                  <div className="aspect-video overflow-hidden rounded-2xl">
                     <img
                       src={s.img}
                       alt={`${s.client} visual identity and logo design case study`}

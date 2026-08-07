@@ -116,6 +116,17 @@ export function SiteHeader() {
     };
   }, [strategyOpen]);
 
+  useEffect(() => {
+    const onOpenStrategyCall = () => {
+      setSubmitted(false);
+      setOtpSent(false);
+      setStrategyOpen(true);
+    };
+
+    window.addEventListener("ace360:open-strategy-call", onOpenStrategyCall);
+    return () => window.removeEventListener("ace360:open-strategy-call", onOpenStrategyCall);
+  }, []);
+
   const openStrategyForm = () => {
     setSubmitted(false);
     setOtpSent(false);

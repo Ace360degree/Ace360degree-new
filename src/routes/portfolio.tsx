@@ -317,16 +317,17 @@ function Hero() {
               >
                 Explore Success Stories →
               </a>
-              <Link
-                to="/contact"
+              <button
+                type="button"
+                onClick={() => window.dispatchEvent(new Event("ace360:open-strategy-call"))}
                 className="inline-flex items-center gap-2 rounded-2xl border border-dark/15 py-3 px-5 text-sm font-semibold shadow-sm transition-all duration-300 ease-out hover:border-dark/40 hover:shadow-[0_12px_28px_rgba(0,0,0,0.16)]"
               >
                 Book Discovery Call →
-              </Link>
+              </button>
             </div>
           </div>
 
-          <div className="lg:col-span-5 animate-fade-up [animation-delay:120ms]">
+          <div className="lg:col-span-5 animate-fade-up  [animation-delay:120ms]">
             <div className="relative">
               <div className="absolute -inset-6 bg-brand/15 blur-2xl rounded-full" aria-hidden />
               <img
@@ -334,7 +335,7 @@ function Hero() {
                 alt="Editorial montage of Ace360degree business growth stories"
                 width={1280}
                 height={1280}
-                className="relative w-full aspect-square object-cover shadow-[0_30px_80px_-30px_rgba(0,0,0,0.25)]"
+                className="relative w-full aspect-square object-cover rounded-[28px] shadow-[0_30px_80px_-30px_rgba(0,0,0,0.25)]"
               />
             </div>
           </div>
@@ -374,65 +375,189 @@ function FeaturedCases() {
 
 function CaseCard({ item, index }: { item: CaseStudy; index: number }) {
   const { ref, seen } = useReveal<HTMLDivElement>();
+
   return (
-    <article
-      ref={ref}
-      className={`group relative bg-white border border-dark/5 transition-all duration-700 ${
-        seen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-      } hover:shadow-[0_30px_80px_-30px_rgba(0,0,0,0.18)]`}
-      style={{ transitionDelay: `${(index % 2) * 80}ms` }}
-    >
-      <div className="aspect-[16/10] overflow-hidden bg-dark/5">
-        <img
-          src={item.image}
-          alt={item.client}
-          loading="lazy"
-          width={1280}
-          height={800}
-          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
-        />
-      </div>
-      <div className="p-7 lg:p-9">
-        <div className="flex items-center justify-between text-[11px] uppercase tracking-[0.18em] text-dark/55">
-          <span>{item.category}</span>
-          <span className="text-dark/40">{item.positioning}</span>
+    <Link to={item.href} className="block h-full">
+      <article
+        ref={ref}
+        className={`group relative flex h-full cursor-pointer flex-col overflow-hidden rounded-[24px] bg-white border border-dark/5 transition-all duration-700 ${
+          seen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+        } hover:-translate-y-2 hover:shadow-[0_30px_80px_-30px_rgba(0,0,0,0.22)]`}
+        style={{ transitionDelay: `${(index % 2) * 80}ms` }}
+      >
+
+        {/* Image */}
+        <div className="aspect-[16/10] overflow-hidden rounded-t-[24px] bg-dark/5">
+          <img
+            src={item.image}
+            alt={item.client}
+            loading="lazy"
+            width={1280}
+            height={800}
+            className="
+              h-full
+              w-full
+              rounded-[inherit]
+              object-cover
+              transition-transform
+              duration-700
+              ease-out
+              group-hover:scale-[1.05]
+            "
+          />
         </div>
-        <h3 className="mt-4 font-serif text-2xl md:text-[28px] leading-snug tracking-tight">
-          {item.headline}
-        </h3>
 
-        <dl className="mt-5 space-y-3 text-dark/75 leading-relaxed">
-          <div>
-            <dt className="text-[10px] uppercase tracking-[0.22em] text-dark/50">Challenge</dt>
-            <dd className="mt-1 text-pretty">{item.challenge}</dd>
-          </div>
-          <div>
-            <dt className="text-[10px] uppercase tracking-[0.22em] text-dark/50">Solution</dt>
-            <dd className="mt-1 text-pretty">{item.solution}</dd>
-          </div>
-          <div>
-            <dt className="text-[10px] uppercase tracking-[0.22em] text-brand">Outcome</dt>
-            <dd className="mt-1 text-pretty font-medium text-dark">{item.outcome}</dd>
-          </div>
-        </dl>
 
-        {item.quote && (
-          <blockquote className="mt-6 border-l-2 border-brand pl-4 italic text-dark/75">
-            “{item.quote}”
-          </blockquote>
-        )}
+        {/* Content */}
+        <div className="flex flex-1 flex-col p-7 lg:p-9">
 
-        <div className="mt-7 flex items-center justify-between gap-4 pt-6 border-t border-dark/5">
-          <div className="text-xs uppercase tracking-[0.22em] text-dark/40">{item.client}</div>
-          <Link
-            to={item.href}
-            className="shrink-0 inline-flex items-center gap-1 text-sm font-semibold text-dark hover:text-brand transition"
+
+          <div className="flex items-start justify-between gap-4 text-[11px] uppercase tracking-[0.18em] text-dark/55">
+            <span>
+              {item.category}
+            </span>
+
+            <span className="text-right text-dark/40">
+              {item.positioning}
+            </span>
+          </div>
+
+
+          <h3 className="
+            mt-4
+            min-h-[72px]
+            font-serif
+            text-2xl
+            leading-snug
+            tracking-tight
+            md:text-[28px]
+          ">
+            {item.headline}
+          </h3>
+
+
+
+          <dl className="mt-5 flex-1 space-y-4 text-dark/75 leading-relaxed">
+
+
+            <div>
+              <dt className="text-[10px] uppercase tracking-[0.22em] text-dark/50">
+                Challenge
+              </dt>
+
+              <dd className="mt-1">
+                {item.challenge}
+              </dd>
+            </div>
+
+
+
+            <div>
+              <dt className="text-[10px] uppercase tracking-[0.22em] text-dark/50">
+                Solution
+              </dt>
+
+              <dd className="mt-1">
+                {item.solution}
+              </dd>
+            </div>
+
+
+
+            <div>
+              <dt className="text-[10px] uppercase tracking-[0.22em] text-brand">
+                Outcome
+              </dt>
+
+              <dd className="mt-1 font-medium text-dark">
+                {item.outcome}
+              </dd>
+            </div>
+
+
+          </dl>
+
+
+
+          {item.quote && (
+            <blockquote
+              className="
+              mt-6
+              min-h-[48px]
+              border-l-2
+              border-brand
+              pl-4
+              italic
+              text-dark/75
+            "
+            >
+              “{item.quote}”
+            </blockquote>
+          )}
+
+
+          {!item.quote && (
+            <div className="mt-6 min-h-[48px]" />
+          )}
+
+
+
+          {/* Footer */}
+          <div
+            className="
+            mt-7
+            flex
+            items-center
+            justify-between
+            gap-4
+            border-t
+            border-dark/5
+            pt-6
+          "
           >
-            Discuss a Similar Story <span aria-hidden>→</span>
-          </Link>
+
+            <div
+              className="
+              text-xs
+              uppercase
+              tracking-[0.22em]
+              text-dark/40
+            "
+            >
+              {item.client}
+            </div>
+
+
+            <span
+              className="
+              inline-flex
+              items-center
+              gap-1
+              text-sm
+              font-semibold
+              text-dark
+              transition-all
+              duration-300
+              group-hover:text-brand
+            "
+            >
+              Discuss a Similar Story
+
+              <span className="transition-transform duration-300 group-hover:translate-x-1">
+                →
+              </span>
+
+            </span>
+
+
+          </div>
+
+
         </div>
-      </div>
-    </article>
+
+
+      </article>
+    </Link>
   );
 }
 
@@ -529,12 +654,13 @@ function MoreStories() {
           >
             See All Stories →
           </a>
-          <Link
-            to="/contact"
+          <button
+            type="button"
+            onClick={() => window.dispatchEvent(new Event("ace360:open-strategy-call"))}
             className="inline-flex items-center gap-2 rounded-2xl border border-dark/15 py-3 px-5 text-sm font-semibold shadow-sm transition-all duration-300 ease-out hover:border-dark/40 hover:shadow-[0_12px_28px_rgba(0,0,0,0.16)]"
           >
             Book Discovery Call →
-          </Link>
+          </button>
         </div>
       </div>
     </section>
@@ -662,12 +788,13 @@ function FinalCTA() {
           build digital products or explore AI opportunities, we're ready to help.
         </p>
         <div className="mt-10 flex flex-wrap justify-center gap-3">
-          <Link
-            to="/contact"
+          <button
+            type="button"
+            onClick={() => window.dispatchEvent(new Event("ace360:open-strategy-call"))}
             className="inline-flex items-center gap-2 rounded-2xl bg-dark text-canvas py-3 px-5 text-sm font-semibold shadow-sm transition-all duration-300 ease-out hover:bg-dark/90 hover:shadow-[0_12px_28px_rgba(0,0,0,0.22)]"
           >
             Book Discovery Call →
-          </Link>
+          </button>
           <Link
             to="/services"
             className="inline-flex items-center gap-2 rounded-2xl bg-brand text-dark py-3 px-5 text-sm font-semibold shadow-sm transition-all duration-300 ease-out hover:brightness-95 hover:shadow-[0_14px_34px_rgba(255,179,48,0.32)]"

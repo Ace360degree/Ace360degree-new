@@ -450,7 +450,7 @@ function HealthcarePage() {
     }}
   />
 
-  <div className="container relative z-10 mx-auto grid gap-12 px-4 py-20 sm:py-28 lg:grid-cols-12 lg:gap-10 lg:py-32">
+  <div className="relative z-10 mx-auto grid max-w-7xl gap-12 px-6 py-20 sm:py-28 lg:grid-cols-12 lg:gap-10 lg:py-32">
     <div className="lg:col-span-7">
       <Reveal>
         <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-foreground/15 bg-background/60 px-3 py-1 text-xs uppercase tracking-[0.18em] text-foreground/70 backdrop-blur">
@@ -508,10 +508,14 @@ function HealthcarePage() {
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
           </Link>
 
-          <Link
-            to="/contact"
-            className="inline-flex items-center gap-2 rounded-full border border-foreground/20 px-6 py-3 text-sm font-medium text-foreground shadow-sm transition-all duration-300 ease-out hover:bg-foreground/5 hover:shadow-[0_14px_32px_rgba(0,0,0,0.18)]"
-          >
+            <Link
+              to="/contact"
+              onClick={(e) => {
+                e.preventDefault();
+                window.dispatchEvent(new Event("ace360:open-strategy-call"));
+              }}
+              className="inline-flex items-center gap-2 rounded-full border border-foreground/20 px-6 py-3 text-sm font-medium text-foreground shadow-sm transition-all duration-300 ease-out hover:bg-foreground/5 hover:shadow-[0_14px_32px_rgba(0,0,0,0.18)]"
+            >
             Book Discovery Call
           </Link>
         </div>
@@ -543,7 +547,7 @@ function HealthcarePage() {
 
       {/* SECTION 2 — Healthcare Has Changed */}
       <section className="border-b border-foreground/10 py-20 sm:py-28">
-        <div className="container mx-auto px-4">
+        <div className="mx-auto max-w-7xl px-6">
           <div className="grid gap-12 lg:grid-cols-12">
             <div className="lg:col-span-5">
               <Reveal>
@@ -597,7 +601,7 @@ function HealthcarePage() {
 
       {/* SECTION 3 — Challenges */}
       <section className="border-b border-foreground/10 bg-foreground/[0.02] py-20 sm:py-28">
-        <div className="container mx-auto px-4">
+        <div className="mx-auto max-w-7xl px-6">
           <Reveal>
             <div className="text-xs uppercase tracking-[0.18em] text-foreground/60">
               03 — Challenges We Solve
@@ -626,7 +630,7 @@ function HealthcarePage() {
 
       {/* SECTION 4 — Segments */}
       <section className="border-b border-foreground/10 py-20 sm:py-28">
-        <div className="container mx-auto px-4">
+        <div className="mx-auto max-w-7xl px-6">
           <Reveal>
             <div className="text-xs uppercase tracking-[0.18em] text-foreground/60">
               04 — Segments We Serve
@@ -714,7 +718,7 @@ function HealthcarePage() {
 </section>
       {/* SECTION 6 — How Ace360degree Helps */}
       <section className="border-b border-foreground/10 py-20 sm:py-28">
-        <div className="container mx-auto px-4">
+        <div className="mx-auto max-w-7xl px-6">
           <Reveal>
             <div className="text-xs uppercase tracking-[0.18em] text-foreground/60">
               06 — Our Capabilities
@@ -755,7 +759,7 @@ function HealthcarePage() {
 
       {/* SECTION 7 — AI for Healthcare */}
       <section className="border-b border-foreground/10 bg-foreground py-20 text-background sm:py-28">
-        <div className="container mx-auto px-4">
+        <div className="mx-auto max-w-7xl px-6">
           <div className="grid gap-12 lg:grid-cols-12">
             <div className="lg:col-span-5">
               <Reveal>
@@ -791,7 +795,7 @@ function HealthcarePage() {
 
       {/* SECTION 8 — Success Stories */}
       <section className="border-b border-foreground/10 py-20 sm:py-28">
-  <div className="container mx-auto px-4">
+  <div className="mx-auto max-w-7xl px-6">
     <Reveal>
       <div className="text-xs uppercase tracking-[0.18em] text-foreground/60">
         08 — Healthcare Marketing Experience
@@ -802,7 +806,7 @@ function HealthcarePage() {
       </h2>
     </Reveal>
 
-    <div className="mx-auto mt-12 grid max-w-[1400px] grid-cols-1 gap-6 lg:grid-cols-2">
+    <div className="mx-auto mt-12 grid max-w-7xl grid-cols-1 gap-6 lg:grid-cols-2">
       {[
         {
           img: caseHealthus,
@@ -849,7 +853,7 @@ function HealthcarePage() {
 
       {/* SECTION 9 — Why Choose */}
       <section className="border-b border-foreground/10 bg-foreground/[0.02] py-20 sm:py-28">
-        <div className="container mx-auto px-4">
+        <div className="mx-auto max-w-7xl px-6">
           <div className="grid gap-12 lg:grid-cols-12">
             <div className="lg:col-span-5">
               <Reveal>
@@ -881,7 +885,7 @@ function HealthcarePage() {
 
       {/* SECTION 10 — Future of Healthcare */}
       <section className="border-b border-foreground/10 py-20 sm:py-28">
-        <div className="container mx-auto px-4">
+        <div className="mx-auto max-w-7xl px-6">
           <Reveal>
             <div className="text-xs uppercase tracking-[0.18em] text-foreground/60">
               10 — Outlook
@@ -911,7 +915,7 @@ function HealthcarePage() {
 
       {/* SECTION 11 — FAQ */}
       <section className="border-b border-foreground/10 bg-foreground/[0.02] py-20 sm:py-28">
-        <div className="container mx-auto px-4">
+        <div className="mx-auto max-w-7xl px-6">
           <div className="grid gap-12 lg:grid-cols-12">
             <div className="lg:col-span-4">
               <Reveal>
@@ -942,7 +946,7 @@ function HealthcarePage() {
 
       {/* SECTION 12 — Related Services */}
       <section className="border-b border-foreground/10 py-20 sm:py-28">
-        <div className="container mx-auto px-4">
+        <div className="mx-auto max-w-7xl px-6">
           <Reveal>
             <div className="text-xs uppercase tracking-[0.18em] text-foreground/60">
               12 — Related Services
@@ -962,62 +966,6 @@ function HealthcarePage() {
                     {s.label}
                   </span>
                   <ArrowUpRight className="h-4 w-4 text-foreground/50 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                </Link>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 13 — Related Success Stories */}
-      <section className="border-b border-foreground/10 bg-foreground/[0.02] py-20 sm:py-28">
-        <div className="container mx-auto px-4">
-          <Reveal>
-            <div className="text-xs uppercase tracking-[0.18em] text-foreground/60">
-              13 — Related Success Stories
-            </div>
-            <h2 className="mt-3 max-w-3xl font-serif text-3xl leading-tight tracking-tight sm:text-4xl">
-              Proof in Practice
-            </h2>
-          </Reveal>
-          <div className="mt-10 grid gap-6 sm:grid-cols-2">
-            {[
-              {
-                img: caseHealthus,
-                title: "paincurephysio",
-                tag: "HealthTech Growth",
-                href: "/case-healthus-ai",
-              },
-              {
-                img: caseOpus,
-                title: "OPUS Dental",
-                tag: "Dental Marketing",
-                href: "/case-opus-dental",
-              },
-            ].map((c, i) => (
-              <Reveal key={c.title} delay={i * 80}>
-                <Link
-                  to={c.href}
-                  className="group relative block overflow-hidden rounded-2xl border border-foreground/10 bg-background"
-                >
-                  <div className="aspect-[16/9] overflow-hidden">
-                    <img
-                      src={c.img}
-                      alt={c.title}
-                      className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                    />
-                  </div>
-                  <div className="flex items-center justify-between p-6">
-                    <div>
-                      <div className="text-xs uppercase tracking-wider text-foreground/55">
-                        {c.tag}
-                      </div>
-                      <div className="mt-1 font-serif text-xl tracking-tight">
-                        {c.title}
-                      </div>
-                    </div>
-                    <ArrowUpRight className="h-5 w-5 text-foreground/60 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                  </div>
                 </Link>
               </Reveal>
             ))}
@@ -1060,6 +1008,10 @@ function HealthcarePage() {
               </Link>
               <Link
                 to="/contact"
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.dispatchEvent(new Event("ace360:open-strategy-call"));
+                }}
                 className="inline-flex items-center gap-2 rounded-full border border-background/30 px-7 py-3.5 text-sm font-medium text-background shadow-sm transition-all duration-300 ease-out hover:bg-background/10 hover:shadow-[0_14px_34px_rgba(255,255,255,0.14)]"
               >
                 Book Discovery Call

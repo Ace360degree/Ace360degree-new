@@ -6,28 +6,80 @@ import bannerImg from "@/assets/livingconceptsace1.png";
 import bannerImg2 from "@/assets/livingconceptsace2.png";
 
 export const Route = createFileRoute("/case-living-concepts")({
+  component: LivingConceptsCaseStudyPage,
+
   head: () => ({
-  
-    
     meta: [
-      { title: "Living Concepts Case Study | Luxury Interior Branding, Website & Digital Experience — Ace360degree" },
+      {
+        title:
+          "Living Concepts Case Study | Digital Solutions",
+      },
       {
         name: "description",
         content:
-          "How Ace360degree helped Living Concepts elevate its digital presence, strengthen brand perception and create an online experience that reflects premium craftsmanship.",
+          "Explore Living Concepts case study showcasing Ace360degree's website development, branding, and digital marketing solutions for business growth.",
       },
-      { property: "og:title", content: "Living Concepts — A Luxury Digital Experience Blueprint" },
+      {
+        name: "keywords",
+        content:
+          "Digital marketing case study, Business growth solutions, Creative digital solutions, Branding case study India, Living Concepts Case Study, Living Concepts digital transformation",
+      },
+      {
+        property: "og:title",
+        content:
+          "Living Concepts Case Study | Digital Solutions",
+      },
       {
         property: "og:description",
         content:
-          "A strategic partnership transforming a premium interior design brand into an elegant, high-performance digital experience.",
+          "Explore Living Concepts case study showcasing Ace360degree's website development, branding, and digital marketing solutions for business growth.",
       },
-      { property: "og:image", content: heroImg },
+      {
+        property: "og:type",
+        content: "website",
+      },
+      {
+        property: "og:url",
+        content:
+          "https://www.ace360degree.com/case-living-concepts",
+      },
+      {
+        property: "og:site_name",
+        content: "Ace360degree",
+      },
+      {
+        name: "robots",
+        content: "index, follow",
+      },
+      {
+        name: "author",
+        content: "Ace360degree",
+      },
+      {
+        name: "twitter:card",
+        content: "summary_large_image",
+      },
+      {
+        name: "twitter:title",
+        content:
+          "Living Concepts Case Study | Digital Solutions",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "Explore Living Concepts case study showcasing Ace360degree's website development, branding, and digital marketing solutions for business growth.",
+      },
+    ],
+
+    links: [
+      {
+        rel: "canonical",
+        href:
+          "https://www.ace360degree.com/case-living-concepts",
+      },
     ],
   }),
-  component: LivingConceptsCaseStudyPage,
 });
-
 /* ---------------- Data ---------------- */
 
 const snapshot = [
@@ -149,59 +201,60 @@ function LivingConceptsCaseStudyPage() {
 
       {/* HERO */}
       <section className="border-b border-black/5 bg-[#fbfaf7]">
-        <div className="mx-auto max-w-[1540px] px-6 py-8 md:py-10 lg:py-12">
-          <div className="grid items-start gap-8 lg:grid-cols-12 lg:gap-12">
-            <div className="lg:col-span-6">
-              <div className="inline-flex items-center rounded-full border border-[#f2d9af] bg-[#fff8ef] px-3 py-1 text-[10px] uppercase tracking-[0.28em] text-[#e7a62a]">
-                Success Story
-              </div>
-
-              <h1 className="mt-4 max-w-[70ch] text-balance font-sans text-[34px] font-semibold leading-[0.94] tracking-[-0.055em] text-[#1f1f1f] sm:text-[46px] md:text-[54px] lg:text-[60px]">
-                Designing a Premium Digital Experience for a Luxury Interior &
-                Furniture Brand
-              </h1>
-
-              <p className="mt-5 max-w-[55ch] text-[14px] leading-[1.55] text-[#66615a] sm:text-[15px]">
-                How Ace360degree helped{" "}
-                <span className="font-medium text-[#222]">Living Concepts</span>{" "}
-                elevate its digital presence, strengthen brand perception and
-                create an online experience that reflects premium craftsmanship.
-              </p>
-
-              <div className="mt-8 grid gap-3 sm:grid-cols-2 md:grid-cols-4">
-                {snapshot.map((s) => (
-                  <div
-                    key={s.k}
-                    className="min-h-[84px] rounded-[10px] border border-[#ece7df] bg-white px-4 py-3.5 shadow-[0_1px_0_rgba(0,0,0,0.02)]"
-                  >
-                    <div className="text-[9px] uppercase tracking-[0.28em] text-[#a8a29b]">
-                      {s.k}
-                    </div>
-                    <div className="mt-1 text-[11px] leading-[1.35] text-[#1f1f1f]">
-                      {s.v}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="lg:col-span-5 lg:pt-1">
-              <div className="ml-auto w-full max-w-[620px] overflow-hidden rounded-[8px] bg-[#efe8df] shadow-[0_16px_40px_rgba(0,0,0,0.08)]">
-                <img
-                  src={heroImg}
-                  alt="Living Concepts premium living room concept"
-                  className="h-full w-full object-cover object-center"
-                  width={1200}
-                  height={900}
-                />
-              </div>
-            </div>
-          </div>
+  <div className="mx-auto max-w-7xl px-6 py-8 md:py-10 lg:py-12">
+    <div className="grid items-center gap-8 lg:grid-cols-12 lg:gap-12">
+      <div className="lg:col-span-6">
+        <div className="inline-flex items-center rounded-full border border-[#f2d9af] bg-[#fff8ef] px-3 py-1 text-[10px] uppercase tracking-[0.28em] text-[#e7a62a]">
+          Success Story
         </div>
-      </section>
+
+        <h1 className="mt-4 max-w-[70ch] text-balance font-sans text-[34px] font-semibold leading-[0.94] tracking-[-0.055em] text-[#1f1f1f] sm:text-[46px] md:text-[54px] lg:text-[60px]">
+          Designing a Premium Digital Experience for a Luxury Interior &
+          Furniture Brand
+        </h1>
+
+        <p className="mt-5 max-w-[55ch] text-[14px] leading-[1.55] text-[#66615a] sm:text-[15px]">
+          How Ace360degree helped{" "}
+          <span className="font-medium text-[#222]">Living Concepts</span>{" "}
+          elevate its digital presence, strengthen brand perception and create
+          an online experience that reflects premium craftsmanship.
+        </p>
+
+        <div className="mt-8 grid gap-3 sm:grid-cols-2 md:grid-cols-4">
+          {snapshot.map((s) => (
+            <div
+              key={s.k}
+              className="min-h-[84px] rounded-[10px] border border-[#ece7df] bg-white px-4 py-3.5 shadow-[0_1px_0_rgba(0,0,0,0.02)]"
+            >
+              <div className="text-[9px] uppercase tracking-[0.28em] text-[#a8a29b]">
+                {s.k}
+              </div>
+
+              <div className="mt-1 text-[11px] leading-[1.35] text-[#1f1f1f]">
+                {s.v}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="flex items-center lg:col-span-5">
+        <div className="relative isolate ml-auto w-full max-w-[620px] overflow-hidden rounded-[28px] bg-[#efe8df] shadow-[0_20px_60px_rgba(0,0,0,0.12)]">
+          <img
+            src={heroImg}
+            alt="Living Concepts premium living room concept"
+            className="block h-full w-full rounded-[28px] object-cover object-center"
+            width={1200}
+            height={900}
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* CONTEXT */}
-      <section className="container mx-auto px-6 py-20 md:py-28">
+      <section className="mx-auto max-w-7xl px-6 py-20 md:py-28">
         <div className="grid lg:grid-cols-12 gap-12">
           <div className="lg:col-span-5">
             <div className="text-xs uppercase tracking-[0.2em] text-primary">The Context</div>
@@ -230,7 +283,7 @@ function LivingConceptsCaseStudyPage() {
 
       {/* ABOUT */}
       <section className="border-y border-border/40 bg-muted/30">
-        <div className="container mx-auto px-6 py-20 md:py-24">
+        <div className="mx-auto max-w-7xl px-6 py-20 md:py-24">
           <div className="text-xs uppercase tracking-[0.2em] text-primary">About the Client</div>
           <h2 className="mt-3 text-3xl md:text-4xl font-semibold tracking-tight max-w-3xl">
             Creating Timeless Spaces Through Exceptional Design.
@@ -260,7 +313,7 @@ function LivingConceptsCaseStudyPage() {
       </section>
 
       {/* CHALLENGES */}
-      <section className="container mx-auto px-6 py-20 md:py-28">
+      <section className="mx-auto max-w-7xl px-6 py-20 md:py-28">
         <div className="max-w-3xl">
           <div className="text-xs uppercase tracking-[0.2em] text-primary">Strategic Challenges</div>
           <h2 className="mt-3 text-3xl md:text-4xl font-semibold tracking-tight">
@@ -284,7 +337,7 @@ function LivingConceptsCaseStudyPage() {
 
       {/* GROWTH MODEL */}
       <section className="border-y border-border/40 bg-muted/30">
-        <div className="container mx-auto px-6 py-20 md:py-28">
+        <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="max-w-3xl">
             <div className="text-xs uppercase tracking-[0.2em] text-primary">Our Growth Model</div>
             <h2 className="mt-3 text-3xl md:text-4xl font-semibold tracking-tight">
@@ -304,7 +357,7 @@ function LivingConceptsCaseStudyPage() {
       </section>
 
       {/* DISCIPLINES */}
-      <section className="container mx-auto px-6 py-20 md:py-28">
+      <section className="mx-auto max-w-7xl px-6 py-20 md:py-28">
         <div className="max-w-3xl">
           <div className="text-xs uppercase tracking-[0.2em] text-primary">One Partner · Multiple Disciplines</div>
           <h2 className="mt-3 text-3xl md:text-4xl font-semibold tracking-tight">One Outcome.</h2>
@@ -328,7 +381,7 @@ function LivingConceptsCaseStudyPage() {
 
       {/* OUTCOMES */}
       <section className="border-y border-border/40 bg-muted/30">
-        <div className="container mx-auto px-6 py-20 md:py-28">
+        <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="max-w-3xl">
             <div className="text-xs uppercase tracking-[0.2em] text-primary">Outcomes</div>
             <h2 className="mt-3 text-3xl md:text-4xl font-semibold tracking-tight">
@@ -352,7 +405,7 @@ function LivingConceptsCaseStudyPage() {
 
       {/* PARTNERSHIP TIMELINE */}
 <section className="bg-[#fbfaf7] py-20">
-  <div className="mx-auto max-w-[1600px] px-8">
+  <div className="mx-auto max-w-7xl px-6">
     <div className="grid items-start gap-24 lg:grid-cols-[1.1fr_0.9fr]">
       
       {/* LEFT */}
@@ -397,11 +450,11 @@ function LivingConceptsCaseStudyPage() {
 
       {/* RIGHT */}
       <div className="pt-25">
-        <div className="overflow-hidden rounded-[8px]">
+        <div className="relative isolate overflow-hidden rounded-[28px] shadow-[0_20px_60px_rgba(0,0,0,0.12)]">
           <img
             src={bannerImg}
             alt="Luxury Interior"
-            className="h-[440px] w-full object-cover"
+            className="block h-[440px] w-full rounded-[28px] object-cover"
           />
         </div>
       </div>
@@ -411,7 +464,7 @@ function LivingConceptsCaseStudyPage() {
 
       {/* BLUEPRINT */}
       <section className="border-y border-border/40 bg-muted/30">
-        <div className="container mx-auto px-6 py-20 md:py-28">
+        <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="max-w-3xl">
             <div className="text-xs uppercase tracking-[0.2em] text-primary">More Than A Success Story</div>
             <h2 className="mt-3 text-3xl md:text-4xl font-semibold tracking-tight">A Blueprint for Luxury Digital Experiences</h2>
@@ -434,7 +487,7 @@ function LivingConceptsCaseStudyPage() {
 
       {/* INDUSTRY INSIGHT */}
       <section className="border-b border-black/5 bg-white">
-        <div className="mx-auto max-w-[1540px] px-6 py-12 md:py-16 lg:py-20">
+        <div className="mx-auto max-w-7xl px-6 py-12 md:py-16 lg:py-20">
           <div className="grid items-center gap-8 lg:grid-cols-12 lg:gap-12">
             <div className="lg:col-span-7">
               <div className="text-[10px] uppercase tracking-[0.34em] text-[#d9a23f]">
@@ -456,7 +509,7 @@ function LivingConceptsCaseStudyPage() {
             </div>
 
             <div className="lg:col-span-5">
-              <div className="overflow-hidden rounded-[10px] bg-[#efe8df] shadow-[0_18px_50px_rgba(0,0,0,0.12)]">
+              <div className="relative isolate overflow-hidden rounded-[28px] bg-[#efe8df] shadow-[0_20px_60px_rgba(0,0,0,0.12)]">
                 <img
                   src={bannerImg2}
                   alt="Living Concepts premium interior workspace with laptop"
@@ -473,7 +526,7 @@ function LivingConceptsCaseStudyPage() {
 
       {/* STACK */}
       <section className="border-y border-border/40 bg-muted/30">
-        <div className="container mx-auto px-6 py-20 md:py-28">
+        <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="max-w-3xl">
             <div className="text-xs uppercase tracking-[0.2em] text-primary">At a Glance</div>
             <h2 className="mt-3 text-3xl md:text-4xl font-semibold tracking-tight">
@@ -498,7 +551,7 @@ function LivingConceptsCaseStudyPage() {
       </section>
 
       {/* PROOFS */}
-      <section className="container mx-auto px-6 py-20 md:py-28">
+      <section className="mx-auto max-w-7xl px-6 py-20 md:py-28">
         <div className="max-w-3xl">
           <div className="text-xs uppercase tracking-[0.2em] text-primary">How We Work</div>
           <h2 className="mt-3 text-3xl md:text-4xl font-semibold tracking-tight">
@@ -517,7 +570,7 @@ function LivingConceptsCaseStudyPage() {
 
       {/* RELATED */}
       <section className="border-y border-border/40 bg-muted/30">
-        <div className="container mx-auto px-6 py-20 md:py-28">
+        <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="grid lg:grid-cols-12 gap-12">
             <div className="lg:col-span-4">
               <div className="text-xs uppercase tracking-[0.2em] text-primary">Related</div>
@@ -550,55 +603,51 @@ function LivingConceptsCaseStudyPage() {
       </section>
 
       {/* FINAL CTA */}
-      <section className="container mx-auto px-6 pb-24 md:pb-32">
-  <div
-    className="
-      relative overflow-hidden rounded-3xl
-      border border-black/5
-      bg-[linear-gradient(163deg,rgba(255,179,48,0.25)_20%,rgba(255,179,48,0.08)_50%,#ffffff_65%,#ffffff_100%)]
-      p-10 md:p-16
-    "
+     {/* FINAL CTA */}
+<section className="bg-background px-6 py-24 md:py-32">
+  <div className="mx-auto max-w-7xl">
+    <div className="relative overflow-hidden rounded-[28px] border border-black/5 bg-[linear-gradient(163deg,rgba(255,179,48,0.25)_20%,rgba(255,179,48,0.08)_50%,#ffffff_65%,#ffffff_100%)] px-8 py-12 md:px-16 md:py-16">
+      <div className="max-w-3xl">
+        <h2 className="text-3xl font-semibold leading-tight tracking-tight md:text-5xl">
+          Design a Digital Experience That Reflects the Quality of Your Brand.
+        </h2>
+
+        <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
+          Whether you&apos;re an architecture firm, interior designer, luxury
+          furniture brand or premium lifestyle business, Ace360degree helps
+          transform your expertise into digital experiences that inspire
+          confidence and generate high-value opportunities.
+        </p>
+
+        <div className="mt-8 flex flex-nowrap items-center gap-3 overflow-x-auto pb-1 lg:overflow-visible">
+  <button
+    type="button"
+    onClick={() => window.dispatchEvent(new Event("ace360:open-strategy-call"))}
+    className="inline-flex shrink-0 items-center justify-center whitespace-nowrap rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:opacity-90 hover:shadow-[0_14px_34px_rgba(255,179,48,0.32)]"
   >
-    <div className="max-w-3xl">
-      <h2 className="text-3xl font-semibold tracking-tight md:text-5xl">
-        Design a Digital Experience That Reflects the Quality of Your Brand.
-      </h2>
+     Book Discovery Call
+  </button>
 
-      <p className="mt-5 text-lg text-muted-foreground">
-        Whether you're an architecture firm, interior designer, luxury
-        furniture brand or premium lifestyle business, Ace360degree helps
-        transform your expertise into digital experiences that inspire
-        confidence and generate high-value opportunities.
-      </p>
+  {/* <Link
+    to="/contact"
+    className="inline-flex shrink-0 items-center justify-center whitespace-nowrap rounded-full border border-border bg-background px-6 py-3 text-sm font-medium text-foreground shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-muted hover:shadow-[0_12px_28px_rgba(0,0,0,0.16)]"
+  >
+    Book Discovery Call
+  </Link> */}
 
-      <div className="mt-8 flex flex-wrap gap-3">
-        <Link
-          to="/contact"
-          className="inline-flex items-center rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow-sm transition-all duration-300 ease-out hover:opacity-90 hover:shadow-[0_14px_34px_rgba(255,179,48,0.32)]"
-        >
-          Request Brand Experience Audit
-        </Link>
-
-        <Link
-          to="/contact"
-          className="inline-flex items-center rounded-full border border-border bg-background px-6 py-3 text-sm font-medium shadow-sm transition-all duration-300 ease-out hover:bg-muted hover:shadow-[0_12px_28px_rgba(0,0,0,0.16)]"
-        >
-          Book Discovery Call
-        </Link>
-
-        <Link
-          to="/industries/architecture"
-          className="inline-flex items-center rounded-full px-6 py-3 text-sm font-medium shadow-sm transition-all duration-300 ease-out hover:bg-muted hover:shadow-[0_12px_28px_rgba(0,0,0,0.14)]"
-        >
-          Explore Architecture &amp; Design Solutions →
-        </Link>
+  <Link
+    to="/industries/architecture"
+    className="inline-flex shrink-0 items-center justify-center gap-2 whitespace-nowrap rounded-full border border-border/60 bg-white/40 px-6 py-3 text-sm font-medium text-foreground shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-white/70 hover:shadow-[0_12px_28px_rgba(0,0,0,0.14)]"
+  >
+    <span>Explore Architecture &amp; Design Solutions</span>
+    <span aria-hidden="true">→</span>
+  </Link>
+</div>
       </div>
     </div>
   </div>
 </section>
-
       <SiteFooter />
     </div>
   );
 }
-
