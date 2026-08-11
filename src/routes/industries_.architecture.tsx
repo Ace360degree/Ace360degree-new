@@ -482,7 +482,8 @@ function ArchitecturePage() {
   />
 
   {/* Hero content */}
-  <div className="container relative z-10 mx-auto grid gap-12 px-4 lg:grid-cols-12 lg:items-center lg:gap-10">
+  <div className="relative z-10 mx-auto max-w-7xl px-6">
+    <div className="grid gap-12 lg:grid-cols-12 lg:items-center lg:gap-10">
     {/* Left side */}
     <div className="lg:col-span-7">
       <Reveal>
@@ -535,6 +536,10 @@ function ArchitecturePage() {
 
           <Link
             to="/contact"
+            onClick={(e) => {
+              e.preventDefault();
+              window.dispatchEvent(new Event("ace360:open-strategy-call"));
+            }}
             className="inline-flex items-center gap-2 rounded-full border border-foreground/20 bg-background/40 px-6 py-3 text-sm font-medium text-foreground shadow-sm backdrop-blur-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-background/70 hover:shadow-[0_14px_32px_rgba(0,0,0,0.14)]"
           >
             Book Discovery Call
@@ -554,7 +559,7 @@ function ArchitecturePage() {
             className="absolute -inset-5 -z-10 rounded-[32px] bg-[#F2A400]/15 blur-3xl"
           />
 
-          <div className="relative overflow-hidden rounded-2xl border border-white/60 bg-white/25 p-2 shadow-[0_28px_80px_rgba(73,54,28,0.2)] backdrop-blur-sm">
+          <div className="relative overflow-hidden rounded-2xl shadow-[0_28px_80px_rgba(73,54,28,0.2)]">
             <div className="relative overflow-hidden rounded-xl">
               <img
                 src={heroImg}
@@ -580,11 +585,12 @@ function ArchitecturePage() {
         </div>
       </Reveal>
     </div>
+    </div>
   </div>
 </section>
       {/* SECTION 2 — Design Industry Has Changed */}
       <section className="border-b border-foreground/10 py-20 sm:py-28">
-        <div className="container mx-auto px-4">
+        <div className="mx-auto max-w-7xl px-6">
           <div className="grid gap-12 lg:grid-cols-12">
             <div className="lg:col-span-5">
               <Reveal>
@@ -641,7 +647,7 @@ function ArchitecturePage() {
 
       {/* SECTION 3 — Challenges */}
       <section className="border-b border-foreground/10 bg-foreground/[0.02] py-20 sm:py-28">
-        <div className="container mx-auto px-4">
+        <div className="mx-auto max-w-7xl px-6">
           <Reveal>
             <div className="text-xs uppercase tracking-[0.18em] text-foreground/60">
               03 — Challenges We Solve
@@ -670,7 +676,7 @@ function ArchitecturePage() {
 
       {/* SECTION 4 — Segments */}
       <section className="border-b border-foreground/10 py-20 sm:py-28">
-        <div className="container mx-auto px-4">
+        <div className="mx-auto max-w-7xl px-6">
           <Reveal>
             <div className="text-xs uppercase tracking-[0.18em] text-foreground/60">
               04 — Industries We Support
@@ -699,7 +705,7 @@ function ArchitecturePage() {
 
       {/* SECTION 5 — Decision Journey */}
       <section className="relative border-b border-foreground/10 bg-gradient-to-b from-primary/5 via-background to-background py-20 sm:py-28">
-        <div className="container mx-auto px-4">
+        <div className="mx-auto max-w-7xl px-6">
           <Reveal>
             <div className="text-xs uppercase tracking-[0.18em] text-foreground/60">
               05 — Framework
@@ -738,7 +744,7 @@ function ArchitecturePage() {
 
       {/* SECTION 6 — How Ace360degree Helps */}
       <section className="border-b border-foreground/10 py-20 sm:py-28">
-        <div className="container mx-auto px-4">
+        <div className="mx-auto max-w-7xl px-6">
           <Reveal>
             <div className="text-xs uppercase tracking-[0.18em] text-foreground/60">
               06 — Our Capabilities
@@ -779,7 +785,7 @@ function ArchitecturePage() {
 
       {/* SECTION 7 — AI for Architecture & Interior Businesses */}
       <section className="border-b border-foreground/10 bg-foreground py-20 text-background sm:py-28">
-        <div className="container mx-auto px-4">
+        <div className="mx-auto max-w-7xl px-6">
           <div className="grid gap-12 lg:grid-cols-12">
             <div className="lg:col-span-5">
               <Reveal>
@@ -817,7 +823,7 @@ function ArchitecturePage() {
 
       {/* SECTION 8 — Success Stories */}
       <section className="border-b border-foreground/10 py-20 sm:py-28">
-        <div className="container mx-auto px-4">
+        <div className="mx-auto max-w-7xl px-6">
           <Reveal>
             <div className="text-xs uppercase tracking-[0.18em] text-foreground/60">
               08 — Design Industry Experience
@@ -888,7 +894,7 @@ function ArchitecturePage() {
 
       {/* SECTION 9 — Why Choose */}
       <section className="border-b border-foreground/10 bg-foreground/[0.02] py-20 sm:py-28">
-        <div className="container mx-auto px-4">
+        <div className="mx-auto max-w-7xl px-6">
           <div className="grid gap-12 lg:grid-cols-12">
             <div className="lg:col-span-5">
               <Reveal>
@@ -920,7 +926,7 @@ function ArchitecturePage() {
 
       {/* SECTION 10 — Future */}
       <section className="border-b border-foreground/10 py-20 sm:py-28">
-        <div className="container mx-auto px-4">
+        <div className="mx-auto max-w-7xl px-6">
           <Reveal>
             <div className="text-xs uppercase tracking-[0.18em] text-foreground/60">
               10 — Outlook
@@ -953,7 +959,7 @@ function ArchitecturePage() {
 
       {/* SECTION 11 — FAQ */}
       <section className="border-b border-foreground/10 bg-foreground/[0.02] py-20 sm:py-28">
-        <div className="container mx-auto px-4">
+        <div className="mx-auto max-w-7xl px-6">
           <div className="grid gap-12 lg:grid-cols-12">
             <div className="lg:col-span-4">
               <Reveal>
@@ -985,7 +991,7 @@ function ArchitecturePage() {
 
       {/* SECTION 12 — Related Services */}
       <section className="border-b border-foreground/10 py-20 sm:py-28">
-        <div className="container mx-auto px-4">
+        <div className="mx-auto max-w-7xl px-6">
           <Reveal>
             <div className="text-xs uppercase tracking-[0.18em] text-foreground/60">
               12 — Related Services
@@ -1023,7 +1029,7 @@ function ArchitecturePage() {
             backgroundSize: "64px 64px",
           }}
         />
-        <div className="container relative mx-auto px-4 text-center">
+        <div className="relative mx-auto max-w-7xl px-6 text-center">
           <Reveal>
             <Target className="mx-auto h-10 w-10 text-background/80" />
             <h2 className="mx-auto mt-8 max-w-4xl font-serif text-4xl leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
@@ -1047,6 +1053,10 @@ function ArchitecturePage() {
               </Link>
               <Link
                 to="/contact"
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.dispatchEvent(new Event("ace360:open-strategy-call"));
+                }}
                 className="inline-flex items-center gap-2 rounded-full border border-background/30 px-7 py-3.5 text-sm font-medium text-background shadow-sm transition-all duration-300 ease-out hover:bg-background/10 hover:shadow-[0_14px_34px_rgba(255,255,255,0.14)]"
               >
                 Book Discovery Call

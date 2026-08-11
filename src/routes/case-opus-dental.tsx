@@ -127,12 +127,13 @@ function OpusDentalCaseStudyPage() {
           <h2 className="mx-auto max-w-3xl font-serif text-3xl leading-tight md:text-5xl">
             Ready to improve patient acquisition?
           </h2>
-          <Link
-            to="/contact"
+          <button
+            type="button"
+            onClick={() => window.dispatchEvent(new Event("ace360:open-strategy-call"))}
             className="mt-8 inline-flex items-center gap-2 rounded-2xl bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-sm transition-all duration-300 ease-out hover:brightness-95 hover:shadow-[0_14px_34px_rgba(255,179,48,0.32)]"
           >
             Book Discovery Call <ArrowRight className="h-4 w-4" />
-          </Link>
+          </button>
         </div>
       </section>
 

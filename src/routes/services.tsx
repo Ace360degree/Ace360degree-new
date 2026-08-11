@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { Link, createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
@@ -439,7 +439,7 @@ function ServicesPage() {
             </div>
 
             <div className="lg:col-span-5">
-              <div className="relative aspect-[4/5] overflow-hidden bg-muted">
+              <div className="relative aspect-[4/5] rounded-[28px] overflow-hidden bg-muted">
                 <img
                   src={servicesHero}
                   alt="Ace360degree growth solutions — marketing, technology and AI"
@@ -481,8 +481,9 @@ function ServicesPage() {
         <div className="mx-auto max-w-7xl px-6 grid md:grid-cols-2 gap-6 lg:gap-8">
           {solutions.map((s, i) => (
             <Reveal key={s.n} delay={i * 80}>
-              <article className="group relative bg-card overflow-hidden border border-dark/5 hover:border-dark/15 transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_30px_60px_-30px_rgba(0,0,0,0.25)] h-full">
-                <div className="aspect-[16/10] overflow-hidden bg-muted">
+              <Link to={s.href} className="group block h-full">
+              <article className="group relative rounded-[28px] bg-card overflow-hidden border border-dark/5 hover:border-dark/15 transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_30px_60px_-30px_rgba(0,0,0,0.25)] h-full">
+                <div className="aspect-[16/10] overflow-hidden rounded-t-[28px] bg-muted">
                   <img
                     src={s.image}
                     alt={s.tag}
@@ -508,17 +509,15 @@ function ServicesPage() {
                       </li>
                     ))}
                   </ul>
-                  <a
-                    href={s.href}
-                    className="mt-7 inline-flex items-center gap-2 text-sm font-semibold text-dark group/link"
-                  >
+                  <div className="mt-7 inline-flex items-center gap-2 text-sm font-semibold text-dark group/link">
                     <span className="border-b border-dark/20 group-hover/link:border-brand pb-0.5 transition-colors">
                       {s.cta}
                     </span>
                     <span className="transition-transform group-hover/link:translate-x-1" aria-hidden>→</span>
-                  </a>
+                  </div>
                 </div>
               </article>
+              </Link>
             </Reveal>
           ))}
         </div>

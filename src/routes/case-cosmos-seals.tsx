@@ -4,28 +4,80 @@ import { SiteFooter } from "@/components/site-footer";
 import heroImg from "@/assets/Cosmoshero1.png";
 import bannerImg from "@/assets/Cosmosbannery2.png";
 export const Route = createFileRoute("/case-cosmos-seals")({
+  component: CosmosSealsCaseStudyPage,
+
   head: () => ({
-   
-    
     meta: [
-      { title: "Cosmos Seals India Case Study | Industrial Branding, Website & SEO — Ace360degree" },
+      {
+        title:
+          "Cosmos Seals Case Study | Digital Growth Solutions",
+      },
       {
         name: "description",
         content:
-          "How Ace360degree partnered with Cosmos Seals India to build a digitally competitive industrial brand through strategy, technology, SEO and growth marketing.",
+          "Explore Cosmos Seals case study showcasing Ace360degree's SEO, website development, and digital solutions that improved industrial business growth.",
       },
-      { property: "og:title", content: "Cosmos Seals India — An Industrial Digital Transformation Blueprint" },
+      {
+        name: "keywords",
+        content:
+          "SEO for manufacturing companies, Manufacturing website development, B2B digital marketing case study, Cosmos Seals Case Study, Cosmos Seals digital transformation, Industrial SEO case study, Industrial digital solutions",
+      },
+      {
+        property: "og:title",
+        content:
+          "Cosmos Seals Case Study | Digital Growth Solutions",
+      },
       {
         property: "og:description",
         content:
-          "A strategic partnership strengthening digital presence, technical product communication and long-term B2B growth for a legacy sealing solutions manufacturer.",
+          "Explore Cosmos Seals case study showcasing Ace360degree's SEO, website development, and digital solutions that improved industrial business growth.",
       },
-      { property: "og:image", content: heroImg },
+      {
+        property: "og:type",
+        content: "website",
+      },
+      {
+        property: "og:url",
+        content:
+          "https://www.ace360degree.com/case-cosmos-seals",
+      },
+      {
+        property: "og:site_name",
+        content: "Ace360degree",
+      },
+      {
+        name: "robots",
+        content: "index, follow",
+      },
+      {
+        name: "author",
+        content: "Ace360degree",
+      },
+      {
+        name: "twitter:card",
+        content: "summary_large_image",
+      },
+      {
+        name: "twitter:title",
+        content:
+          "Cosmos Seals Case Study | Digital Growth Solutions",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "Explore Cosmos Seals case study showcasing Ace360degree's SEO, website development, and digital solutions that improved industrial business growth.",
+      },
+    ],
+
+    links: [
+      {
+        rel: "canonical",
+        href:
+          "https://www.ace360degree.com/case-cosmos-seals",
+      },
     ],
   }),
-  component: CosmosSealsCaseStudyPage,
 });
-
 /* ---------------- Data ---------------- */
 
 const snapshot = [
@@ -148,7 +200,7 @@ function CosmosSealsCaseStudyPage() {
       {/* HERO */}
       <section className="relative overflow-hidden border-b border-black/5 bg-[#fbfaf7]">
       
-        <div className="relative container mx-auto px-6 py-24 md:py-32">
+        <div className="relative mx-auto max-w-7xl px-6 py-24 md:py-32">
           <div className="max-w-4xl lg:max-w-[58%]">
             <div className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-3 py-1 text-xs uppercase tracking-[0.2em] text-primary">
               Success Story
@@ -185,7 +237,7 @@ function CosmosSealsCaseStudyPage() {
       </section>
 
       {/* CONTEXT */}
-      <section className="container mx-auto px-6 py-20 md:py-28">
+      <section className="mx-auto max-w-7xl px-6 py-20 md:py-28">
         <div className="grid lg:grid-cols-12 gap-12">
           <div className="lg:col-span-5">
             <div className="text-xs uppercase tracking-[0.2em] text-primary">The Context</div>
@@ -209,7 +261,7 @@ function CosmosSealsCaseStudyPage() {
 
       {/* ABOUT */}
       <section className="border-y border-border/40 bg-muted/30">
-        <div className="container mx-auto px-6 py-20 md:py-24">
+        <div className="mx-auto max-w-7xl px-6 py-20 md:py-24">
           <div className="text-xs uppercase tracking-[0.2em] text-primary">About the Client</div>
           <h2 className="mt-3 text-3xl md:text-4xl font-semibold tracking-tight max-w-3xl">
             Engineering High-Performance Sealing Solutions for Critical Industries.
@@ -236,7 +288,7 @@ function CosmosSealsCaseStudyPage() {
       </section>
 
       {/* CHALLENGES */}
-      <section className="container mx-auto px-6 py-20 md:py-28">
+      <section className="mx-auto max-w-7xl px-6 py-20 md:py-28">
         <div className="max-w-3xl">
           <div className="text-xs uppercase tracking-[0.2em] text-primary">Strategic Challenges</div>
           <h2 className="mt-3 text-3xl md:text-4xl font-semibold tracking-tight">
@@ -259,7 +311,7 @@ function CosmosSealsCaseStudyPage() {
 
       {/* GROWTH MODEL */}
       <section className="border-y border-border/40 bg-muted/30">
-        <div className="container mx-auto px-6 py-20 md:py-28">
+        <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="max-w-3xl">
             <div className="text-xs uppercase tracking-[0.2em] text-primary">Our Growth Model</div>
             <h2 className="mt-3 text-3xl md:text-4xl font-semibold tracking-tight">
@@ -279,7 +331,7 @@ function CosmosSealsCaseStudyPage() {
       </section>
 
       {/* DISCIPLINES */}
-      <section className="container mx-auto px-6 py-20 md:py-28">
+      <section className="mx-auto max-w-7xl px-6 py-20 md:py-28">
         <div className="max-w-3xl">
           <div className="text-xs uppercase tracking-[0.2em] text-primary">One Partner · Multiple Disciplines</div>
           <h2 className="mt-3 text-3xl md:text-4xl font-semibold tracking-tight">One Outcome.</h2>
@@ -303,7 +355,7 @@ function CosmosSealsCaseStudyPage() {
 
       {/* OUTCOMES */}
       <section className="border-y border-border/40 bg-muted/30">
-        <div className="container mx-auto px-6 py-20 md:py-28">
+        <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="max-w-3xl">
             <div className="text-xs uppercase tracking-[0.2em] text-primary">Outcomes</div>
             <h2 className="mt-3 text-3xl md:text-4xl font-semibold tracking-tight">
@@ -325,7 +377,7 @@ function CosmosSealsCaseStudyPage() {
       </section>
 
       {/* PARTNERSHIP TIMELINE */}
-      <section className="container mx-auto px-6 py-20 md:py-28">
+      <section className="mx-auto max-w-7xl px-6 py-20 md:py-28">
         <div className="grid items-start gap-12 lg:grid-cols-12 lg:gap-14">
           <div className="lg:col-span-5">
             <div className="text-xs uppercase tracking-[0.28em] text-[#e7a62a]">How the Partnership Unfolded</div>
@@ -364,7 +416,7 @@ function CosmosSealsCaseStudyPage() {
 
       {/* BLUEPRINT */}
       <section className="border-y border-border/40 bg-muted/30">
-        <div className="container mx-auto px-6 py-20 md:py-28">
+        <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="max-w-3xl">
             <div className="text-xs uppercase tracking-[0.2em] text-primary">More Than A Success Story</div>
             <h2 className="mt-3 text-3xl md:text-4xl font-semibold tracking-tight">A Blueprint for Industrial Digital Transformation</h2>
@@ -386,7 +438,7 @@ function CosmosSealsCaseStudyPage() {
       </section>
 
       {/* AT A GLANCE / STACK */}
-      <section className="container mx-auto px-6 py-20 md:py-28">
+      <section className="mx-auto max-w-7xl px-6 py-20 md:py-28">
         <div className="max-w-3xl">
           <div className="text-xs uppercase tracking-[0.2em] text-primary">At a Glance</div>
           <h2 className="mt-3 text-3xl md:text-4xl font-semibold tracking-tight">
@@ -411,7 +463,7 @@ function CosmosSealsCaseStudyPage() {
 
       {/* INDUSTRY INSIGHT */}
       <section className="border-y border-border/40 bg-muted/30">
-        <div className="container mx-auto px-6 py-20 md:py-28">
+        <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="grid lg:grid-cols-12 gap-12">
             <div className="lg:col-span-4">
               <div className="text-xs uppercase tracking-[0.2em] text-primary">Industry Insight</div>
@@ -435,7 +487,7 @@ function CosmosSealsCaseStudyPage() {
       </section>
 
       {/* PROOFS */}
-      <section className="container mx-auto px-6 py-20 md:py-28">
+      <section className="mx-auto max-w-7xl px-6 py-20 md:py-28">
         <div className="max-w-3xl">
           <div className="text-xs uppercase tracking-[0.2em] text-primary">How We Work</div>
           <h2 className="mt-3 text-3xl md:text-4xl font-semibold tracking-tight">
@@ -454,7 +506,7 @@ function CosmosSealsCaseStudyPage() {
 
       {/* RELATED */}
       <section className="border-y border-border/40 bg-muted/30">
-        <div className="container mx-auto px-6 py-20 md:py-28">
+        <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="grid lg:grid-cols-12 gap-12">
             <div className="lg:col-span-4">
               <div className="text-xs uppercase tracking-[0.2em] text-primary">Related</div>
@@ -487,42 +539,92 @@ function CosmosSealsCaseStudyPage() {
       </section>
 
       {/* FINAL CTA */}
-      <section className="container mx-auto px-6 pb-24 md:pb-32">
-        
-        <div className=" relative overflow-hidden rounded-3xl
-      border border-black/5
-      bg-[linear-gradient(163deg,rgba(255,179,48,0.25)_20%,rgba(255,179,48,0.08)_50%,#ffffff_65%,#ffffff_100%)]
-      p-10 md:p-16">
-          <div className="max-w-3xl">
-            <h2 className="text-3xl md:text-5xl font-semibold tracking-tight">
-              Engineering Stronger Digital Foundations for Manufacturing Growth.
-            </h2>
-            <p className="mt-5 text-muted-foreground text-lg">
-              Whether you're a manufacturer, OEM, engineering company or industrial supplier, Ace360degree helps transform technical expertise into digital experiences that build trust, generate enquiries and support long-term business success.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Link
-                to="/contact"
-                className="inline-flex items-center rounded-full bg-primary text-primary-foreground px-6 py-3 text-sm font-medium shadow-sm transition-all duration-300 ease-out hover:opacity-90 hover:shadow-[0_14px_34px_rgba(255,179,48,0.32)]"
-              >
-                Request Manufacturing Growth Audit
-              </Link>
-              <Link
-                to="/contact"
-                className="inline-flex items-center rounded-full border border-border bg-background px-6 py-3 text-sm font-medium shadow-sm transition-all duration-300 ease-out hover:bg-muted hover:shadow-[0_12px_28px_rgba(0,0,0,0.16)]"
-              >
-                Book Discovery Call
-              </Link>
-              <Link
-                to="/industries/manufacturing"
-                className="inline-flex items-center rounded-full px-6 py-3 text-sm font-medium shadow-sm transition-all duration-300 ease-out hover:bg-muted hover:shadow-[0_12px_28px_rgba(0,0,0,0.14)]"
-              >
-                Explore Manufacturing Solutions →
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+      <section className="mx-auto flex min-h-[520px] max-w-7xl items-center px-6 py-24 md:min-h-[560px] md:py-32">
+
+<div
+  className="
+    relative
+    w-full
+    overflow-hidden
+    rounded-3xl
+    border
+    border-black/5
+    bg-[linear-gradient(163deg,rgba(255,179,48,0.25)_20%,rgba(255,179,48,0.08)_50%,#ffffff_65%,#ffffff_100%)]
+    p-10
+    md:p-16
+  "
+>
+
+  <div className="max-w-3xl">
+    <h2 className="text-3xl font-semibold tracking-tight md:text-5xl">
+      Engineering Stronger Digital Foundations for Manufacturing Growth.
+    </h2>
+
+    <p className="mt-5 text-lg text-muted-foreground">
+      Whether you're a manufacturer, OEM, engineering company or industrial supplier,
+      Ace360degree helps transform technical expertise into digital experiences that
+      build trust, generate enquiries and support long-term business success.
+    </p>
+
+    <div className="mt-8 flex flex-wrap items-center gap-3">
+
+      <button
+        type="button"
+        onClick={() => window.dispatchEvent(new Event("ace360:open-strategy-call"))}
+        className="
+          inline-flex
+          items-center
+          justify-center
+          rounded-full
+          bg-primary
+          px-6
+          py-3
+          text-sm
+          font-medium
+          text-primary-foreground
+          transition-all
+          duration-300
+          ease-out
+          hover:-translate-y-0.5
+          hover:opacity-90
+          hover:shadow-[0_14px_34px_rgba(255,179,48,0.32)]
+        "
+      >
+        Book Discovery Call
+      </button>
+
+
+      <Link
+        to="/industries/manufacturing"
+        className="
+          inline-flex
+          items-center
+          justify-center
+          rounded-full
+          border
+          border-border
+          bg-white/60
+          px-6
+          py-3
+          text-sm
+          font-medium
+          transition-all
+          duration-300
+          ease-out
+          hover:-translate-y-0.5
+          hover:bg-white
+          hover:shadow-[0_12px_28px_rgba(0,0,0,0.14)]
+        "
+      >
+        Explore Manufacturing Solutions →
+      </Link>
+
+    </div>
+  </div>
+
+</div>
+
+</section>
 
       <SiteFooter />
     </div>

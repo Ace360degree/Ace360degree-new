@@ -271,7 +271,7 @@ function GrowthMarketingPage() {
             </div>
           </div>
           <div className="lg:col-span-5">
-            <div className="relative aspect-[4/5] overflow-hidden rounded-sm">
+            <div className="relative aspect-[4/5] overflow-hidden rounded-[28px]">
               <img
                 src={heroMesh}
                 alt="Growth marketing dashboard and analytics"

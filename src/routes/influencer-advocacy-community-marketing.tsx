@@ -346,7 +346,7 @@ function InfluencerAdvocacyPage() {
             </div>
           </div>
           <div className="lg:col-span-5">
-            <div className="relative aspect-[4/5] overflow-hidden rounded-sm">
+            <div className="relative aspect-[4/5] overflow-hidden rounded-[28px]">
               <img
                 src={heroImg}
                 alt="Influence and community building partner creating brand advocacy through trusted voices"

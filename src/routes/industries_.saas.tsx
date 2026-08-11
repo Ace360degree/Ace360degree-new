@@ -26,7 +26,7 @@ import {
 } from "lucide-react";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
-import heroImg from "@/assets/svc-technology1.jpg";
+import heroImg from "@/assets/svc-technology.jpg";
 
 export const Route = createFileRoute("/industries_/saas")({
   component: SaasPage,
@@ -120,36 +120,80 @@ function SaasPage() {
     <div className="min-h-screen bg-canvas text-dark">
       <SiteHeader />
 
-      <section className="relative overflow-hidden bg-dark text-canvas">
-        <div className="absolute inset-0">
-          <img src={heroImg} alt="Software and SaaS technology" className="w-full h-full object-cover opacity-40" width={1920} height={1080} />
-          <div className="absolute inset-0 bg-gradient-to-b from-dark/70 via-dark/60 to-dark" />
-        </div>
-        <div className="relative mx-auto max-w-7xl px-6 py-28 md:py-36">
+      <section className="relative isolate overflow-hidden bg-canvas text-dark">
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0 z-0"
+          style={{
+            background: `
+        linear-gradient(
+          180deg,
+          rgb(252, 252, 249) 0%,
+          rgb(252, 252, 249) 58%,
+          rgb(253, 247, 239) 62%,
+          rgb(253, 243, 231) 66%,
+          rgb(253, 238, 216) 70%,
+          rgb(252, 233, 204) 75%,
+          rgb(252, 230, 195) 80%,
+          rgb(252, 229, 193) 85%,
+          rgb(252, 229, 194) 90%,
+          rgb(252, 232, 200) 94%,
+          rgb(253, 236, 210) 97%,
+          rgb(253, 241, 223) 99%,
+          rgb(252, 247, 237) 100%
+        )
+      `,
+          }}
+        />
+        <div className="relative z-10 mx-auto max-w-7xl px-6 py-20 md:py-28">
+          <div className="grid items-center gap-12 lg:grid-cols-[1.2fr_0.9fr]">
+            <div className="min-w-0">
           <div className="text-[10px] uppercase tracking-[0.28em] text-brand font-semibold mb-6">Industry Solutions / Software, SaaS & Technology</div>
           <h1 className="font-serif text-5xl md:text-7xl leading-[1.02] tracking-tight max-w-4xl">
             Software, SaaS & Technology <span className="italic text-brand">Solutions</span>
           </h1>
-          <p className="mt-6 text-xl md:text-2xl text-canvas/80 max-w-3xl">
+          <p className="mt-6 text-xl md:text-2xl text-dark/85 max-w-3xl">
             Marketing, Branding & Technology Solutions for Software, SaaS & Technology Companies.
           </p>
-          <p className="mt-6 text-canvas/70 max-w-2xl leading-relaxed">
+          <p className="mt-6 text-dark/70 max-w-2xl leading-relaxed">
             A strategic growth partner for software companies, SaaS platforms, AI startups and technology businesses—combining product positioning, demand generation, digital platforms and growth systems to accelerate qualified pipeline, product adoption and recurring revenue.
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
-            <Link to="/contact" className="inline-flex items-center gap-2 rounded-2xl bg-brand text-dark px-6 py-3 font-semibold shadow-sm transition-all duration-300 ease-out hover:brightness-95 hover:shadow-[0_14px_34px_rgba(255,179,48,0.32)]">
+            <Link
+              to="/contact"
+              onClick={(e) => {
+                e.preventDefault();
+                window.dispatchEvent(new Event("ace360:open-strategy-call"));
+              }}
+              className="inline-flex items-center gap-2 rounded-2xl bg-brand text-dark px-6 py-3 font-semibold shadow-sm transition-all duration-300 ease-out hover:brightness-95 hover:shadow-[0_14px_34px_rgba(255,179,48,0.32)]"
+            >
               Book Discovery Call <ArrowRight className="size-4" />
             </Link>
-            <Link to="/portfolio" className="inline-flex items-center gap-2 rounded-2xl border border-canvas/30 text-canvas px-6 py-3 font-semibold shadow-sm transition-all duration-300 ease-out hover:bg-canvas hover:text-dark hover:shadow-[0_14px_34px_rgba(255,255,255,0.18)]">
+            <Link to="/portfolio" className="inline-flex items-center gap-2 rounded-2xl bg-white px-6 py-3 font-semibold text-dark shadow-sm transition-all duration-300 ease-out hover:border-brand hover:text-brand hover:shadow-[0_14px_34px_rgba(0,0,0,0.08)]">
               View Technology Projects <ArrowUpRight className="size-4" />
             </Link>
           </div>
 
-          <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 pt-10 border-t border-white/10">
+            </div>
+
+            <div className="lg:justify-self-end">
+              <div className="relative overflow-hidden rounded-[28px] bg-white shadow-[0_28px_80px_rgba(0,0,0,0.16)]">
+                <img
+                  src={heroImg}
+                  alt="Software and SaaS technology"
+                  className="aspect-[4/5] w-full object-cover"
+                  width={900}
+                  height={1125}
+                />
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 pt-10 border-t border-dark/10">
             {stats.map((s) => (
               <div key={s.l}>
                 <div className="font-serif text-4xl md:text-5xl text-brand">{s.v}</div>
-                <div className="mt-2 text-xs uppercase tracking-[0.18em] text-canvas/60">{s.l}</div>
+                <div className="mt-2 text-xs uppercase tracking-[0.18em] text-dark/60">{s.l}</div>
               </div>
             ))}
           </div>
@@ -369,10 +413,17 @@ function SaasPage() {
             Let's build a growth strategy that combines branding, digital platforms and demand generation to increase product visibility, qualified pipeline and long-term recurring revenue.
           </p>
           <div className="mt-10 flex flex-wrap gap-4 justify-center">
-            <Link to="/contact" className="inline-flex items-center gap-2 rounded-2xl bg-brand text-dark px-6 py-3 font-semibold shadow-sm transition-all duration-300 ease-out hover:brightness-95 hover:shadow-[0_14px_34px_rgba(255,179,48,0.32)]">
+            <Link
+              to="/contact"
+              onClick={(e) => {
+                e.preventDefault();
+                window.dispatchEvent(new Event("ace360:open-strategy-call"));
+              }}
+              className="inline-flex items-center gap-2 rounded-2xl bg-brand text-dark px-6 py-3 font-semibold shadow-sm transition-all duration-300 ease-out hover:brightness-95 hover:shadow-[0_14px_34px_rgba(255,179,48,0.32)]"
+            >
               Book Discovery Call <ArrowRight className="size-4" />
             </Link>
-            <Link to="/portfolio" className="inline-flex items-center gap-2 rounded-2xl border border-canvas/30 text-canvas px-6 py-3 font-semibold shadow-sm transition-all duration-300 ease-out hover:bg-canvas hover:text-dark hover:shadow-[0_14px_34px_rgba(255,255,255,0.18)]">
+            <Link to="/portfolio" className="inline-flex items-center gap-2 rounded-2xl text-canvas px-6 py-3 font-semibold shadow-sm transition-all duration-300 ease-out hover:bg-canvas hover:text-dark hover:shadow-[0_14px_34px_rgba(255,255,255,0.18)]">
               View Technology Projects <ArrowUpRight className="size-4" />
             </Link>
           </div>

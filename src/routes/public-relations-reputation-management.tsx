@@ -349,7 +349,7 @@ function PublicRelationsPage() {
             </div>
           </div>
           <div className="lg:col-span-5">
-            <div className="relative aspect-[4/5] overflow-hidden rounded-sm">
+            <div className="relative aspect-[4/5] overflow-hidden rounded-[28px]">
               <img
                 src={heroImg}
                 alt="Public relations and reputation management partner for building credibility and trust"

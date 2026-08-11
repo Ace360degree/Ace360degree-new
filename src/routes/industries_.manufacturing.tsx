@@ -32,8 +32,8 @@ import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 
 import heroImg from "@/assets/industry-manufacturing.6666.jpg";
-import caseRexello from "@/assets/case-rexello.777.jpg";
-import caseCosmos from "@/assets/case-cosmos.555.jpg";
+import caseRexello from "@/assets/case-rexello-hero.jpg";
+import caseCosmos from "@/assets/case-cosmos-seals-hero.jpg";
 
 export const Route = createFileRoute("/industries_/manufacturing")({
   component: ManufacturingPage,
@@ -449,6 +449,10 @@ function ManufacturingPage() {
           <div className="mt-10 flex flex-wrap gap-3">
             <Link
               to="/contact"
+              onClick={(e) => {
+                e.preventDefault();
+                window.dispatchEvent(new Event("ace360:open-strategy-call"));
+              }}
               className="inline-flex items-center gap-2 rounded-full bg-foreground px-6 py-3 text-sm font-medium text-background shadow-sm transition-all duration-300 ease-out hover:bg-foreground/90 hover:shadow-[0_12px_28px_rgba(0,0,0,0.22)]"
             >
               Book Discovery Call
@@ -457,7 +461,7 @@ function ManufacturingPage() {
 
             <Link
               to="/portfolio"
-              className="inline-flex items-center gap-2 rounded-full border border-border bg-background/70 px-6 py-3 text-sm font-medium text-foreground shadow-sm backdrop-blur-sm transition-all duration-300 ease-out hover:bg-background hover:shadow-[0_12px_28px_rgba(0,0,0,0.16)]"
+              className="inline-flex items-center gap-2 rounded-full bg-background/70 px-6 py-3 text-sm font-medium text-foreground shadow-sm backdrop-blur-sm transition-all duration-300 ease-out hover:bg-background hover:shadow-[0_12px_28px_rgba(0,0,0,0.16)]"
             >
               View Manufacturing Work
               <ArrowUpRight className="h-4 w-4" />
@@ -829,60 +833,6 @@ function ManufacturingPage() {
         </div>
       </section>
 
-      {/* RELATED SUCCESS STORIES */}
-      <section className="border-b border-border/60">
-        <div className="mx-auto max-w-7xl px-6 py-24">
-          <Reveal>
-            <div className="text-xs uppercase tracking-[0.18em] text-primary">
-              Related Success Stories
-            </div>
-            <h2 className="mt-4 max-w-3xl font-serif text-4xl leading-tight text-foreground md:text-5xl">
-              Real manufacturing growth stories.
-            </h2>
-          </Reveal>
-
-          <div className="mt-12 grid gap-6 md:grid-cols-2">
-            {[
-              {
-                name: "Rexello Castors",
-                tag: "Industrial Components",
-                img: caseRexello,
-                href: "/case-rexello-castors",
-              },
-              {
-                name: "Cosmos Seals India",
-                tag: "Precision Sealing",
-                img: caseCosmos,
-                href: "/case-cosmos-seals",
-              },
-            ].map((c) => (
-              <div
-                key={c.name}
-                className="overflow-hidden rounded-2xl border border-border/70 bg-card"
-              >
-                <div className="aspect-[16/9] overflow-hidden bg-muted">
-                  <img src={c.img} alt={c.name} className="h-full w-full object-cover" />
-                </div>
-                <div className="flex items-center justify-between p-7">
-                  <div>
-                    <div className="text-xs uppercase tracking-wider text-muted-foreground">
-                      {c.tag}
-                    </div>
-                    <div className="mt-1 font-serif text-2xl text-foreground">{c.name}</div>
-                  </div>
-                  <Link
-                    to={c.href}
-                    className="inline-flex items-center gap-1.5 text-sm font-medium text-primary"
-                  >
-                    View <ArrowUpRight className="h-4 w-4" />
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* FINAL CTA */}
      <section className="relative isolate overflow-hidden border-y border-foreground/[0.06] bg-[#FCFCFA]">
   {/* Soft diagonal cream background */}
@@ -944,6 +894,10 @@ function ManufacturingPage() {
       <div className="mt-10 flex flex-wrap justify-center gap-3">
         <Link
           to="/contact"
+          onClick={(e) => {
+            e.preventDefault();
+            window.dispatchEvent(new Event("ace360:open-strategy-call"));
+          }}
           className="inline-flex items-center gap-2 rounded-full bg-foreground px-7 py-3.5 text-sm font-medium text-background shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-foreground/90 hover:shadow-[0_14px_34px_rgba(242,164,0,0.32)]"
         >
           Book Discovery Call

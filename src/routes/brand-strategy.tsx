@@ -385,7 +385,7 @@ function BrandStrategyPage() {
             </div>
           </div>
           <div className="lg:col-span-5">
-            <div className="relative aspect-[4/5] overflow-hidden rounded-sm">
+            <div className="relative aspect-[4/5] overflow-hidden rounded-[28px]">
               <img
                 src={heroImg}
                 alt="Brand strategy, positioning and identity development"
@@ -572,7 +572,7 @@ function BrandStrategyPage() {
                   key={s.client}
                   className="border border-dark/10 bg-canvas overflow-hidden hover:border-dark transition-colors"
                 >
-                  <div className="aspect-video overflow-hidden">
+                  <div className="aspect-video overflow-hidden rounded-2xl">
                     <img
                       src={s.img}
                       alt={`${s.client} brand strategy and positioning case study`}

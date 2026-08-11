@@ -369,7 +369,7 @@ function AIStrategyPage() {
                 </button>
               </form>
             </div>
-            <div className="relative mt-6 aspect-[16/9] overflow-hidden rounded-sm">
+            <div className="relative mt-6 aspect-[16/9] overflow-hidden rounded-2xl">
               <img
                 src={heroImg}
                 alt="AI strategy and readiness assessment for executives"

@@ -442,7 +442,7 @@ function EducationPage() {
       `,
     }}
   />
-        <div className="container relative mx-auto grid gap-12 px-4 py-20 sm:py-28 lg:grid-cols-12 lg:gap-10 lg:py-32">
+        <div className="relative mx-auto grid max-w-7xl gap-12 px-6 py-20 sm:py-28 lg:grid-cols-12 lg:gap-10 lg:py-32">
           <div className="lg:col-span-7">
             <Reveal>
               <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-foreground/15 bg-background/60 px-3 py-1 text-xs uppercase tracking-[0.18em] text-foreground/70 backdrop-blur">
@@ -484,6 +484,10 @@ function EducationPage() {
                 </Link>
                 <Link
                   to="/contact"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    window.dispatchEvent(new Event("ace360:open-strategy-call"));
+                  }}
                   className="inline-flex items-center gap-2 rounded-full border border-foreground/20 px-6 py-3 text-sm font-medium text-foreground shadow-sm transition-all duration-300 ease-out hover:bg-foreground/5 hover:shadow-[0_14px_32px_rgba(0,0,0,0.18)]"
                 >
                   Book Discovery Call
@@ -518,7 +522,7 @@ function EducationPage() {
 
       {/* SECTION 2 — Education Has Changed */}
       <section className="border-b border-foreground/10 py-20 sm:py-28">
-        <div className="container mx-auto px-4">
+        <div className="mx-auto max-w-7xl px-6">
           <div className="grid gap-12 lg:grid-cols-12">
             <div className="lg:col-span-5">
               <Reveal>
@@ -575,7 +579,7 @@ function EducationPage() {
 
       {/* SECTION 3 — Challenges */}
       <section className="border-b border-foreground/10 bg-foreground/[0.02] py-20 sm:py-28">
-        <div className="container mx-auto px-4">
+        <div className="mx-auto max-w-7xl px-6">
           <Reveal>
             <div className="text-xs uppercase tracking-[0.18em] text-foreground/60">
               03 — Challenges We Solve
@@ -604,7 +608,7 @@ function EducationPage() {
 
       {/* SECTION 4 — Segments */}
       <section className="border-b border-foreground/10 py-20 sm:py-28">
-        <div className="container mx-auto px-4">
+        <div className="mx-auto max-w-7xl px-6">
           <Reveal>
             <div className="text-xs uppercase tracking-[0.18em] text-foreground/60">
               04 — Segments We Serve
@@ -651,7 +655,7 @@ function EducationPage() {
     `,
   }}
 >
-        <div className="container mx-auto px-4">
+        <div className="mx-auto max-w-7xl px-6">
           <Reveal>
             <div className="text-xs uppercase tracking-[0.18em] text-foreground/60">
               05 — Framework
@@ -689,7 +693,7 @@ function EducationPage() {
 
       {/* SECTION 6 — How Ace360degree Helps */}
       <section className="border-b border-foreground/10 py-20 sm:py-28">
-        <div className="container mx-auto px-4">
+        <div className="mx-auto max-w-7xl px-6">
           <Reveal>
             <div className="text-xs uppercase tracking-[0.18em] text-foreground/60">
               06 — Our Capabilities
@@ -730,7 +734,7 @@ function EducationPage() {
 
       {/* SECTION 7 — AI in Education */}
       <section className="border-b border-foreground/10 bg-foreground py-20 text-background sm:py-28">
-        <div className="container mx-auto px-4">
+        <div className="mx-auto max-w-7xl px-6">
           <div className="grid gap-12 lg:grid-cols-12">
             <div className="lg:col-span-5">
               <Reveal>
@@ -767,7 +771,7 @@ function EducationPage() {
 
       {/* SECTION 8 — Success Story */}
       <section className="border-b border-foreground/10 py-20 sm:py-28">
-        <div className="container mx-auto px-4">
+        <div className="mx-auto max-w-7xl px-6">
           <Reveal>
             <div className="text-xs uppercase tracking-[0.18em] text-foreground/60">
               08 — Education Industry Experience
@@ -822,7 +826,7 @@ function EducationPage() {
 
       {/* SECTION 9 — Why Choose */}
       <section className="border-b border-foreground/10 bg-foreground/[0.02] py-20 sm:py-28">
-        <div className="container mx-auto px-4">
+        <div className="mx-auto max-w-7xl px-6">
           <div className="grid gap-12 lg:grid-cols-12">
             <div className="lg:col-span-5">
               <Reveal>
@@ -854,7 +858,7 @@ function EducationPage() {
 
       {/* SECTION 10 — Future of Education */}
       <section className="border-b border-foreground/10 py-20 sm:py-28">
-        <div className="container mx-auto px-4">
+        <div className="mx-auto max-w-7xl px-6">
           <Reveal>
             <div className="text-xs uppercase tracking-[0.18em] text-foreground/60">
               10 — Outlook
@@ -886,7 +890,7 @@ function EducationPage() {
 
       {/* SECTION 11 — FAQ */}
       <section className="border-b border-foreground/10 bg-foreground/[0.02] py-20 sm:py-28">
-        <div className="container mx-auto px-4">
+        <div className="mx-auto max-w-7xl px-6">
           <div className="grid gap-12 lg:grid-cols-12">
             <div className="lg:col-span-4">
               <Reveal>
@@ -918,7 +922,7 @@ function EducationPage() {
 
       {/* SECTION 12 — Related Services */}
       <section className="border-b border-foreground/10 py-20 sm:py-28">
-        <div className="container mx-auto px-4">
+        <div className="mx-auto max-w-7xl px-6">
           <Reveal>
             <div className="text-xs uppercase tracking-[0.18em] text-foreground/60">
               12 — Related Services
@@ -981,6 +985,10 @@ function EducationPage() {
               </Link>
               <Link
                 to="/contact"
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.dispatchEvent(new Event("ace360:open-strategy-call"));
+                }}
                 className="inline-flex items-center gap-2 rounded-full border border-background/30 px-7 py-3.5 text-sm font-medium text-background shadow-sm transition-all duration-300 ease-out hover:bg-background/10 hover:shadow-[0_14px_34px_rgba(255,255,255,0.14)]"
               >
                 Book Discovery Call

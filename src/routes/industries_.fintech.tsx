@@ -462,6 +462,10 @@ function FintechPage() {
           <div className="mt-10 flex flex-wrap gap-3">
             <Link
               to="/contact"
+              onClick={(e) => {
+                e.preventDefault();
+                window.dispatchEvent(new Event("ace360:open-strategy-call"));
+              }}
               className="inline-flex items-center gap-2 rounded-full bg-foreground px-6 py-3 text-sm font-medium text-background shadow-sm transition-all duration-300 ease-out hover:bg-foreground/90 hover:shadow-[0_12px_28px_rgba(0,0,0,0.22)]"
             >
               Book Discovery Call
@@ -470,7 +474,7 @@ function FintechPage() {
 
             <Link
               to="/portfolio"
-              className="inline-flex items-center gap-2 rounded-full border border-border bg-background/70 px-6 py-3 text-sm font-medium text-foreground shadow-sm backdrop-blur-sm transition-all duration-300 ease-out hover:bg-background hover:shadow-[0_12px_28px_rgba(0,0,0,0.16)]"
+              className="inline-flex items-center gap-2 rounded-full bg-background/70 px-6 py-3 text-sm font-medium text-foreground shadow-sm backdrop-blur-sm transition-all duration-300 ease-out hover:bg-background hover:shadow-[0_12px_28px_rgba(0,0,0,0.16)]"
             >
               View Financial Services Work
               <ArrowUpRight className="h-4 w-4" />
@@ -966,6 +970,10 @@ function FintechPage() {
       <div className="mt-10 flex flex-wrap justify-center gap-3">
         <Link
           to="/contact"
+          onClick={(e) => {
+            e.preventDefault();
+            window.dispatchEvent(new Event("ace360:open-strategy-call"));
+          }}
           className="inline-flex items-center gap-2 rounded-full bg-foreground px-7 py-3.5 text-sm font-medium text-background shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-foreground/90 hover:shadow-[0_14px_34px_rgba(242,164,0,0.32)]"
         >
           Book Discovery Call

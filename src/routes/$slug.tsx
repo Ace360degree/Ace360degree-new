@@ -393,7 +393,7 @@ function HeroForm() {
   );
 }
 
-export function DynamicCountryPage() {
+function DynamicCountryPage() {
   const { page, renderedContent, childPages, cityPages, cityParentTitle } =
     Route.useLoaderData();
   const slug = page.slug;

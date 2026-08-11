@@ -475,7 +475,7 @@ function UxProductPage() {
             </div>
           </div>
           <div className="lg:col-span-5">
-            <div className="relative aspect-[5/4] overflow-hidden rounded-sm">
+            <div className="relative aspect-[5/4] overflow-hidden rounded-[28px]">
               <img
                 src={heroImg}
                 alt="Product design and engineering partner building intuitive digital experiences and scalable platforms"

@@ -394,7 +394,7 @@ function PackagingProductBrandingPage() {
             </div>
           </div>
           <div className="lg:col-span-5">
-            <div className="relative aspect-[4/5] overflow-hidden rounded-sm">
+            <div className="relative aspect-[4/5] overflow-hidden rounded-[28px]">
               <img
                 src={heroImg}
                 alt="Packaging and product branding systems for retail, e-commerce and B2B"

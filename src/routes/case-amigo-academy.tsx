@@ -5,28 +5,80 @@ import heroImg from "@/assets/case-amigo-academy-hero.jpg";
 import bannerImg from "@/assets/bannerAmingoAcademy.jpg";
 
 export const Route = createFileRoute("/case-amigo-academy")({
+  component: AmigoCaseStudyPage,
+
   head: () => ({
-  
-    
     meta: [
-      { title: "Amigo Academy Case Study | Education Marketing, Technology & AI — Ace360degree" },
+      {
+        title:
+          "Amigo Academy Case Study | Digital Transformation & Growth Marketing | Ace360degree",
+      },
       {
         name: "description",
         content:
-          "How Ace360degree partnered with Amigo Academy to build a future-ready education brand combining Growth Marketing, Branding, Technology and AI into one integrated growth strategy.",
+          "Explore Amigo Academy's case study showcasing Ace360degree's CRM, ERP, branding, website development and digital marketing solutions for education growth.",
       },
-      { property: "og:title", content: "Amigo Academy — Building a Future-Ready Education Brand" },
+      {
+        name: "keywords",
+        content:
+          "Education technology solutions, Website development case study, Business automation solutions, CRM implementation case study, Digital marketing case study India, Amigo Academy Case Study, Amigo Academy digital transformation",
+      },
+      {
+        property: "og:title",
+        content:
+          "Amigo Academy Case Study | Digital Transformation & Growth Marketing",
+      },
       {
         property: "og:description",
         content:
-          "A long-term strategic partnership transforming admissions, student engagement, institutional branding and digital learning systems.",
+          "Explore Amigo Academy's case study showcasing Ace360degree's CRM, ERP, branding, website development and digital marketing solutions.",
       },
-      { property: "og:image", content: heroImg },
+      {
+        property: "og:type",
+        content: "website",
+      },
+      {
+        property: "og:url",
+        content:
+          "https://www.ace360degree.com/case-amigo-academy",
+      },
+      {
+        property: "og:site_name",
+        content: "Ace360degree",
+      },
+      {
+        name: "robots",
+        content: "index, follow",
+      },
+      {
+        name: "author",
+        content: "Ace360degree",
+      },
+      {
+        name: "twitter:card",
+        content: "summary_large_image",
+      },
+      {
+        name: "twitter:title",
+        content:
+          "Amigo Academy Case Study | Digital Transformation & Growth Marketing",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "Explore Amigo Academy's case study showcasing Ace360degree's CRM, ERP, branding, website development and digital marketing solutions.",
+      },
+    ],
+
+    links: [
+      {
+        rel: "canonical",
+        href:
+          "https://www.ace360degree.com/case-amigo-academy",
+      },
     ],
   }),
-  component: AmigoCaseStudyPage,
 });
-
 /* ---------------- Data ---------------- */
 
 const snapshot = [
@@ -131,47 +183,61 @@ function AmigoCaseStudyPage() {
 
       {/* HERO */}
       <section className="border-b border-border/40 bg-background">
-        <div className="container mx-auto px-6 py-12 md:py-16 lg:py-20">
-          <div className="grid items-start gap-10 lg:grid-cols-[1.25fr_0.75fr] lg:gap-14">
-            <div className="max-w-3xl pt-2 md:pt-6">
-              <div className="inline-flex items-center rounded-full border border-[#f0a22e]/35 px-3 py-1 text-[10px] uppercase tracking-[0.24em] text-[#f0a22e]">
-                Success Story
+  <div className="mx-auto max-w-7xl px-6 py-12 md:py-16 lg:py-20">
+    <div className="grid items-start gap-10 lg:grid-cols-[1.25fr_0.75fr] lg:gap-14">
+      <div className="max-w-3xl pt-2 md:pt-6">
+        <div className="inline-flex items-center rounded-full border border-[#f0a22e]/35 px-3 py-1 text-[10px] uppercase tracking-[0.24em] text-[#f0a22e]">
+          Success Story
+        </div>
+
+        <h1 className="mt-5 text-4xl font-semibold leading-[0.98] tracking-tight text-foreground md:text-[3.4rem] md:leading-[0.95]">
+          Building a Future-Ready Education Brand Through Marketing, Technology
+          & AI
+        </h1>
+
+        <p className="mt-5 max-w-2xl text-[15px] leading-relaxed text-muted-foreground md:text-lg">
+          Transforming admissions, student engagement, institutional branding
+          and digital learning systems for{" "}
+          <span className="font-medium text-foreground">
+            Amigo Academy Pvt. Ltd.
+          </span>
+        </p>
+
+        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {snapshot.map((s) => (
+            <div
+              key={s.k}
+              className="rounded-xl border border-border/50 bg-white p-4 shadow-[0_1px_0_rgba(0,0,0,0.02)]"
+            >
+              <div className="text-[10px] uppercase tracking-[0.22em] text-muted-foreground">
+                {s.k}
               </div>
-              <h1 className="mt-5 text-4xl font-semibold leading-[0.98] tracking-tight text-foreground md:text-[3.4rem] md:leading-[0.95]">
-                Building a Future-Ready Education Brand Through Marketing, Technology & AI
-              </h1>
-              <p className="mt-5 max-w-2xl text-[15px] leading-relaxed text-muted-foreground md:text-lg">
-                Transforming admissions, student engagement, institutional branding and digital learning systems for{" "}
-                <span className="font-medium text-foreground">Amigo Academy Pvt. Ltd.</span>
-              </p>
-              <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-                {snapshot.map((s) => (
-                  <div key={s.k} className="rounded-xl border border-border/50 bg-white p-4 shadow-[0_1px_0_rgba(0,0,0,0.02)]">
-                    <div className="text-[10px] uppercase tracking-[0.22em] text-muted-foreground">{s.k}</div>
-                    <div className="mt-1 text-sm leading-snug font-medium">{s.v}</div>
-                  </div>
-                ))}
+
+              <div className="mt-1 text-sm font-medium leading-snug">
+                {s.v}
               </div>
             </div>
-
-            <div className="lg:justify-self-end">
-  <div className="overflow-hidden rounded-[2px] bg-muted shadow-[0_18px_50px_rgba(0,0,0,0.08)]">
-    <img
-      src={heroImg}
-      alt="Amigo Academy team collaborating in a modern education setting"
-      className="h-[380px] w-full object-cover object-center sm:h-[450px] md:h-[520px] lg:h-[560px] lg:w-[460px]"
-      width={900}
-      height={1100}
-      loading="eager"
-    />
-  </div>
-</div>
-          </div>
+          ))}
         </div>
-      </section>
+      </div>
 
+      <div className="lg:justify-self-end">
+        <div className="relative isolate overflow-hidden rounded-[28px] bg-muted shadow-[0_20px_60px_rgba(0,0,0,0.12)]">
+          <img
+            src={heroImg}
+            alt="Amigo Academy team collaborating in a modern education setting"
+            className="block h-[380px] w-full rounded-[28px] object-cover object-center sm:h-[450px] md:h-[520px] lg:h-[560px] lg:w-[460px]"
+            width={900}
+            height={1100}
+            loading="eager"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
       {/* CONTEXT */}
-      <section className="container mx-auto px-6 py-20 md:py-28">
+      <section className="mx-auto max-w-7xl px-6 py-20 md:py-28">
         <div className="grid lg:grid-cols-12 gap-12">
           <div className="lg:col-span-5">
             <div className="text-xs uppercase tracking-[0.2em] text-primary">The Context</div>
@@ -193,7 +259,7 @@ function AmigoCaseStudyPage() {
 
       {/* ABOUT */}
       <section className="border-y border-border/40 bg-muted/30">
-        <div className="container mx-auto px-6 py-20 md:py-24">
+        <div className="mx-auto max-w-7xl px-6 py-20 md:py-24">
           <div className="text-xs uppercase tracking-[0.2em] text-primary">About the Client</div>
           <h2 className="mt-3 text-3xl md:text-4xl font-semibold tracking-tight max-w-3xl">
             Building Future-Ready Professionals Through Modern Learning.
@@ -216,7 +282,7 @@ function AmigoCaseStudyPage() {
       </section>
 
       {/* CHALLENGES */}
-      <section className="container mx-auto px-6 py-20 md:py-28">
+      <section className="mx-auto max-w-7xl px-6 py-20 md:py-28">
         <div className="max-w-3xl">
           <div className="text-xs uppercase tracking-[0.2em] text-primary">Strategic Challenges</div>
           <h2 className="mt-3 text-3xl md:text-4xl font-semibold tracking-tight">
@@ -240,7 +306,7 @@ function AmigoCaseStudyPage() {
 
       {/* GROWTH MODEL */}
       <section className="border-y border-border/40 bg-muted/30">
-        <div className="container mx-auto px-6 py-20 md:py-28">
+        <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="max-w-3xl">
             <div className="text-xs uppercase tracking-[0.2em] text-primary">Our Growth Model</div>
             <h2 className="mt-3 text-3xl md:text-4xl font-semibold tracking-tight">
@@ -260,7 +326,7 @@ function AmigoCaseStudyPage() {
       </section>
 
       {/* DISCIPLINES */}
-      <section className="container mx-auto px-6 py-20 md:py-28">
+      <section className="mx-auto max-w-7xl px-6 py-20 md:py-28">
         <div className="max-w-3xl">
           <div className="text-xs uppercase tracking-[0.2em] text-primary">One Partner · Multiple Disciplines</div>
           <h2 className="mt-3 text-3xl md:text-4xl font-semibold tracking-tight">One Outcome.</h2>
@@ -284,7 +350,7 @@ function AmigoCaseStudyPage() {
 
       {/* OUTCOMES */}
       <section className="border-y border-border/40 bg-muted/30">
-        <div className="container mx-auto px-6 py-20 md:py-28">
+        <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="max-w-3xl">
             <div className="text-xs uppercase tracking-[0.2em] text-primary">Outcomes</div>
             <h2 className="mt-3 text-3xl md:text-4xl font-semibold tracking-tight">
@@ -307,7 +373,7 @@ function AmigoCaseStudyPage() {
       </section>
 
       {/* PARTNERSHIP TIMELINE */}
-      <section className="container mx-auto px-6 py-20 md:py-28">
+      <section className="mx-auto max-w-7xl px-6 py-20 md:py-28">
         <div className="grid items-start gap-10 lg:grid-cols-[1.05fr_0.85fr] lg:gap-16">
           <div className="max-w-3xl">
             <div className="text-xs uppercase tracking-[0.2em] text-primary">How the Partnership Unfolded</div>
@@ -324,11 +390,11 @@ function AmigoCaseStudyPage() {
           </div>
 
           <div className="lg:justify-self-end">
-            <div className="overflow-hidden rounded-[2px] bg-muted shadow-[0_18px_50px_rgba(0,0,0,0.08)]">
+            <div className="overflow-hidden rounded-[28px] bg-muted shadow-[0_18px_50px_rgba(0,0,0,0.08)]">
               <img
                 src={bannerImg}
                 alt="Amigo Academy partners collaborating in a modern education setting"
-                className="block h-auto w-full max-w-[1660px] object-contain"
+                className="block h-auto w-full max-w-full object-contain"
                 width={1100}
                 height={1400}
                 loading="lazy"
@@ -340,7 +406,7 @@ function AmigoCaseStudyPage() {
 
       {/* BLUEPRINT */}
       <section className="border-y border-border/40 bg-muted/30">
-        <div className="container mx-auto px-6 py-20 md:py-28">
+        <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="max-w-3xl">
             <div className="text-xs uppercase tracking-[0.2em] text-primary">More Than A Success Story</div>
             <h2 className="mt-3 text-3xl md:text-4xl font-semibold tracking-tight">A Digital Education Blueprint</h2>
@@ -361,7 +427,7 @@ function AmigoCaseStudyPage() {
       </section>
 
       {/* STACK */}
-      <section className="container mx-auto px-6 py-20 md:py-28">
+      <section className="mx-auto max-w-7xl px-6 py-20 md:py-28">
         <div className="max-w-3xl">
           <div className="text-xs uppercase tracking-[0.2em] text-primary">At a Glance</div>
           <h2 className="mt-3 text-3xl md:text-4xl font-semibold tracking-tight">
@@ -386,7 +452,7 @@ function AmigoCaseStudyPage() {
 
       {/* PROOFS */}
       <section className="border-y border-border/40 bg-muted/30">
-        <div className="container mx-auto px-6 py-20 md:py-28">
+        <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="max-w-3xl">
             <div className="text-xs uppercase tracking-[0.2em] text-primary">How We Work</div>
             <h2 className="mt-3 text-3xl md:text-4xl font-semibold tracking-tight">
@@ -405,7 +471,7 @@ function AmigoCaseStudyPage() {
       </section>
 
       {/* FINAL CTA */}
-      <section className="container mx-auto px-6 py-24 md:py-32">
+      <section className="mx-auto max-w-7xl px-6 py-24 md:py-32">
         <div className="relative overflow-hidden rounded-3xl
       border border-black/5
       bg-[linear-gradient(163deg,rgba(255,179,48,0.25)_20%,rgba(255,179,48,0.08)_50%,#ffffff_65%,#ffffff_100%)]
@@ -420,18 +486,19 @@ function AmigoCaseStudyPage() {
               future-ready digital ecosystems.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Link
-                to="/contact"
+              <button
+                type="button"
+                onClick={() => window.dispatchEvent(new Event("ace360:open-strategy-call"))}
                 className="inline-flex items-center rounded-full bg-primary text-primary-foreground px-6 py-3 text-sm font-medium shadow-sm transition-all duration-300 ease-out hover:opacity-90 hover:shadow-[0_14px_34px_rgba(255,179,48,0.32)]"
               >
-                Request Education Growth Audit
-              </Link>
-              <Link
+                Book Discovery Call
+              </button>
+              {/* <Link
                 to="/contact"
                 className="inline-flex items-center rounded-full border border-border bg-background px-6 py-3 text-sm font-medium shadow-sm transition-all duration-300 ease-out hover:bg-muted hover:shadow-[0_12px_28px_rgba(0,0,0,0.16)]"
               >
                 Book Discovery Call
-              </Link>
+              </Link> */}
               <Link
                 to="/industries/education"
                 className="inline-flex items-center rounded-full px-6 py-3 text-sm font-medium shadow-sm transition-all duration-300 ease-out hover:bg-muted hover:shadow-[0_12px_28px_rgba(0,0,0,0.14)]"

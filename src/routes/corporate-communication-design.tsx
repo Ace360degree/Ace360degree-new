@@ -397,7 +397,7 @@ function CorporateCommunicationPage() {
             </div>
           </div>
           <div className="lg:col-span-5">
-            <div className="relative aspect-[4/5] overflow-hidden rounded-sm">
+            <div className="relative aspect-[4/5] overflow-hidden rounded-[28px]">
               <img
                 src={heroImg}
                 alt="Corporate communication design, presentations and business profiles"
@@ -585,7 +585,7 @@ function CorporateCommunicationPage() {
                   key={s.client}
                   className="border border-dark/10 bg-canvas overflow-hidden hover:border-dark transition-colors"
                 >
-                  <div className="aspect-video overflow-hidden">
+                  <div className="aspect-video overflow-hidden rounded-2xl">
                     <img
                       src={s.img}
                       alt={`${s.client} corporate communication design case study`}

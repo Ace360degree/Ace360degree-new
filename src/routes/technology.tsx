@@ -266,7 +266,7 @@ function TechnologyPage() {
             </div>
           </div>
           <div className="lg:col-span-5">
-            <div className="relative aspect-[4/5] overflow-hidden rounded-sm">
+            <div className="relative aspect-[4/5] overflow-hidden rounded-[28px]">
               <img
                 src={heroTech}
                 alt="Technology platforms and digital transformation"
