@@ -75,6 +75,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { name: "google-site-verification", content: "4uZIu24BWSwtEqqNsMjgKIDkV2OI7R0KzxfGqdF6Cbw" },
+      { name: "google-site-verification", content: "T-dKEY4dhrUkyFk8Joqdd6J7JkabDiVP0vXTDfWlj6I" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
