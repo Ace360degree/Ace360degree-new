@@ -1034,7 +1034,7 @@ function IndustriesPage() {
                 );
               })}
             </div>
-            <button
+            {/* <button
               type="button"
               onClick={() => setShowContactRail((current) => !current)}
               aria-label={showContactRail ? "Collapse contact rail" : "Talk to experts"}
@@ -1052,7 +1052,7 @@ function IndustriesPage() {
               >
                 Talk to Experts
               </span>
-            </button>
+            </button> */}
           </div>
         </div>
       ) : null}
