@@ -742,7 +742,7 @@ function Logos() {
           {[...brandLogos, ...brandLogos].map((logo, i) => (
             <div
               key={i}
-              className="logo-item flex-shrink-0 h-36 w-80 flex items-center justify-center p-2"
+              className="logo-item flex-shrink-0 h-66 w-100 flex items-center justify-center p-2"
             >
               <img
                 src={logo.src}
