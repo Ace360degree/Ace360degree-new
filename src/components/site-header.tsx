@@ -3,7 +3,11 @@ import { ArrowRight, ChevronDown, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useLocation } from "@tanstack/react-router";
 import logo from "@/assets/ace360-logo.png";
-import { openStrategyCall, STRATEGY_CALL_OPEN_EVENT } from "@/lib/enquiry";
+import {
+  openStrategyCall,
+  submitEnquiry,
+  STRATEGY_CALL_OPEN_EVENT,
+} from "@/lib/enquiry";
 
 type NavItem = {
   label: string;
@@ -147,31 +151,22 @@ export function SiteHeader() {
     const formData = new FormData(event.currentTarget);
   
     try {
-      const response = await fetch(
-        "http://localhost:5000/api/enquiry",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            name: formData.get("name"),
-            email: formData.get("email"),
-            phone: formData.get("phone"),
-            service: formData.get("service"),
-            country: formData.get("country"),
-            message: formData.get("message"),
-            source: "header_popup",
-          }),
-        }
-      );
-  
-      const result = await response.json();
+      const result = await submitEnquiry({
+        name: String(formData.get("name") ?? ""),
+        email: String(formData.get("email") ?? ""),
+        phone: String(formData.get("phone") ?? ""),
+        service: String(formData.get("service") ?? ""),
+        country: String(formData.get("country") ?? ""),
+        message: String(formData.get("message") ?? ""),
+        source: "header_popup",
+      });
   
       if (result.success) {
         setSubmitted(true);
+      } else {
+        throw new Error(result.message || "Enquiry submission failed");
       }
-  
+
     } catch (error) {
       console.error("Enquiry submission failed:", error);
       alert("Something went wrong. Please try again.");
