@@ -33,6 +33,7 @@ import {
 } from "lucide-react";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import { openStrategyCall } from "@/lib/enquiry";
 
 import heroImg from "@/assets/industry-architecture.jpg";
 import caseLiving from "@/assets/case-living-concepts.jpg";
@@ -527,6 +528,10 @@ function ArchitecturePage() {
         <div className="mt-10 flex flex-wrap gap-3">
           <Link
             to="/contact"
+            onClick={(e) => {
+              e.preventDefault();
+              openStrategyCall();
+            }}
             className="group inline-flex items-center gap-2 rounded-full bg-foreground px-6 py-3 text-sm font-medium text-background shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-foreground/90 hover:shadow-[0_14px_32px_rgba(0,0,0,0.24)]"
           >
             Request Growth Audit
@@ -538,7 +543,7 @@ function ArchitecturePage() {
             to="/contact"
             onClick={(e) => {
               e.preventDefault();
-              window.dispatchEvent(new Event("ace360:open-strategy-call"));
+              openStrategyCall();
             }}
             className="inline-flex items-center gap-2 rounded-full border border-foreground/20 bg-background/40 px-6 py-3 text-sm font-medium text-foreground shadow-sm backdrop-blur-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-background/70 hover:shadow-[0_14px_32px_rgba(0,0,0,0.14)]"
           >
@@ -1044,21 +1049,25 @@ function ArchitecturePage() {
               that attract high-value clients and support sustainable growth.
             </p>
             <div className="mt-10 flex flex-wrap justify-center gap-3">
-              <Link
-                to="/contact"
-                className="group inline-flex items-center gap-2 rounded-full bg-background px-7 py-3.5 text-sm font-medium text-foreground shadow-sm transition-all duration-300 ease-out hover:bg-background/90 hover:shadow-[0_14px_34px_rgba(255,255,255,0.18)]"
-              >
+          <Link
+            to="/contact"
+            onClick={(e) => {
+              e.preventDefault();
+              openStrategyCall();
+            }}
+            className="group inline-flex items-center gap-2 rounded-full bg-background px-7 py-3.5 text-sm font-medium text-foreground shadow-sm transition-all duration-300 ease-out hover:bg-background/90 hover:shadow-[0_14px_34px_rgba(255,255,255,0.18)]"
+          >
                 Request Growth Audit
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
               </Link>
-              <Link
-                to="/contact"
-                onClick={(e) => {
-                  e.preventDefault();
-                  window.dispatchEvent(new Event("ace360:open-strategy-call"));
-                }}
-                className="inline-flex items-center gap-2 rounded-full border border-background/30 px-7 py-3.5 text-sm font-medium text-background shadow-sm transition-all duration-300 ease-out hover:bg-background/10 hover:shadow-[0_14px_34px_rgba(255,255,255,0.14)]"
-              >
+          <Link
+            to="/contact"
+            onClick={(e) => {
+              e.preventDefault();
+              openStrategyCall();
+            }}
+            className="inline-flex items-center gap-2 rounded-full border border-background/30 px-7 py-3.5 text-sm font-medium text-background shadow-sm transition-all duration-300 ease-out hover:bg-background/10 hover:shadow-[0_14px_34px_rgba(255,255,255,0.14)]"
+          >
                 Book Discovery Call
               </Link>
             </div>

@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import { openStrategyCall } from "@/lib/enquiry";
 import portfolioHero from "@/assets/herostories.jpg";
 import caseMos from "@/assets/case-mossy1.jpg";
 import caseKsa from "@/assets/case-mossy6.jpg";
@@ -319,7 +320,7 @@ function Hero() {
               </a>
               <button
                 type="button"
-                onClick={() => window.dispatchEvent(new Event("ace360:open-strategy-call"))}
+                onClick={openStrategyCall}
                 className="inline-flex items-center gap-2 rounded-2xl border border-dark/15 py-3 px-5 text-sm font-semibold shadow-sm transition-all duration-300 ease-out hover:border-dark/40 hover:shadow-[0_12px_28px_rgba(0,0,0,0.16)]"
               >
                 Book Discovery Call →
@@ -656,7 +657,7 @@ function MoreStories() {
           </a>
           <button
             type="button"
-            onClick={() => window.dispatchEvent(new Event("ace360:open-strategy-call"))}
+            onClick={openStrategyCall}
             className="inline-flex items-center gap-2 rounded-2xl border border-dark/15 py-3 px-5 text-sm font-semibold shadow-sm transition-all duration-300 ease-out hover:border-dark/40 hover:shadow-[0_12px_28px_rgba(0,0,0,0.16)]"
           >
             Book Discovery Call →
@@ -790,7 +791,7 @@ function FinalCTA() {
         <div className="mt-10 flex flex-wrap justify-center gap-3">
           <button
             type="button"
-            onClick={() => window.dispatchEvent(new Event("ace360:open-strategy-call"))}
+            onClick={openStrategyCall}
             className="inline-flex items-center gap-2 rounded-2xl bg-dark text-canvas py-3 px-5 text-sm font-semibold shadow-sm transition-all duration-300 ease-out hover:bg-dark/90 hover:shadow-[0_12px_28px_rgba(0,0,0,0.22)]"
           >
             Book Discovery Call →

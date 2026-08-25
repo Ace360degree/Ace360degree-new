@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import { openStrategyCall } from "@/lib/enquiry";
 import heroImg from "@/assets/case-amigo-academy-hero.jpg";
 import bannerImg from "@/assets/bannerAmingoAcademy.jpg";
 
@@ -488,7 +489,7 @@ function AmigoCaseStudyPage() {
             <div className="mt-8 flex flex-wrap gap-3">
               <button
                 type="button"
-                onClick={() => window.dispatchEvent(new Event("ace360:open-strategy-call"))}
+                onClick={openStrategyCall}
                 className="inline-flex items-center rounded-full bg-primary text-primary-foreground px-6 py-3 text-sm font-medium shadow-sm transition-all duration-300 ease-out hover:opacity-90 hover:shadow-[0_14px_34px_rgba(255,179,48,0.32)]"
               >
                 Book Discovery Call

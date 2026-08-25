@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import { openStrategyCall } from "@/lib/enquiry";
 
 import heroImg from "@/assets/icase-living-concepts1.jpg";
 import caseLivingHero from "@/assets/case-living-concepts.jpg";
@@ -386,7 +387,7 @@ function RealEstatePage() {
               to="/contact"
               onClick={(e) => {
                 e.preventDefault();
-                window.dispatchEvent(new Event("ace360:open-strategy-call"));
+                openStrategyCall();
               }}
               className="inline-flex items-center gap-2 rounded-full bg-[#ffb330] px-6 py-3 text-sm font-medium text-[#181818] shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-[#f0a419] hover:shadow-[0_12px_28px_rgba(24,24,24,0.22)]"
             >
@@ -798,7 +799,7 @@ function RealEstatePage() {
               to="/contact"
               onClick={(e) => {
                 e.preventDefault();
-                window.dispatchEvent(new Event("ace360:open-strategy-call"));
+                openStrategyCall();
               }}
               className="inline-flex items-center gap-2 rounded-2xl bg-[#ffb330] px-5 py-3 text-sm font-medium text-[#181818] shadow-sm transition-all duration-300 ease-out hover:bg-[#f0a419] hover:shadow-[0_14px_34px_rgba(255,179,48,0.32)]"
             >

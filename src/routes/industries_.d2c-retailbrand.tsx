@@ -25,6 +25,7 @@ import {
 } from "lucide-react";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import { openStrategyCall } from "@/lib/enquiry";
 import heroImg from "@/assets/d2c-retail-hero1111.png";
 
 export const Route = createFileRoute("/industries_/d2c-retailbrand")({
@@ -364,14 +365,14 @@ function D2CPage() {
         </p>
 
         <div className="mt-10 flex flex-wrap gap-4">
-          <Link
-            to="/contact"
-            onClick={(e) => {
-              e.preventDefault();
-              window.dispatchEvent(new Event("ace360:open-strategy-call"));
-            }}
-            className="inline-flex items-center gap-2 rounded-2xl bg-brand px-6 py-3 font-semibold text-dark shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:brightness-95 hover:shadow-[0_12px_28px_rgba(0,0,0,0.22)]"
-          >
+            <Link
+              to="/contact"
+              onClick={(e) => {
+                e.preventDefault();
+                openStrategyCall();
+              }}
+              className="inline-flex items-center gap-2 rounded-2xl bg-brand px-6 py-3 font-semibold text-dark shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:brightness-95 hover:shadow-[0_12px_28px_rgba(0,0,0,0.22)]"
+            >
             Book Discovery Call
             <ArrowRight className="size-4" />
           </Link>
@@ -663,7 +664,7 @@ function D2CPage() {
               to="/contact"
               onClick={(e) => {
                 e.preventDefault();
-                window.dispatchEvent(new Event("ace360:open-strategy-call"));
+                openStrategyCall();
               }}
               className="inline-flex items-center gap-2 rounded-2xl bg-brand text-dark px-6 py-3 font-semibold shadow-sm transition-all duration-300 ease-out hover:brightness-95 hover:shadow-[0_14px_34px_rgba(255,179,48,0.32)]"
             >

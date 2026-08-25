@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import heroImg from "@/assets/services-hero.jpg";
+import { openStrategyCall } from "@/lib/enquiry";
 
 export const Route = createFileRoute("/ai-customer-experience-solutions")({
   component: AICustomerExperienceSolutionsPage,
@@ -406,12 +407,20 @@ function AICustomerExperienceSolutionsPage() {
               <Link
                 to="/contact"
                 className="inline-flex items-center gap-2 rounded-2xl bg-dark text-canvas px-5 py-3 text-sm font-semibold shadow-sm transition-all duration-300 ease-out hover:bg-dark/90 hover:shadow-[0_12px_28px_rgba(0,0,0,0.22)]"
+                onClick={(event) => {
+                  event.preventDefault();
+                  openStrategyCall();
+                }}
               >
                 Book CX Strategy Session <span aria-hidden>→</span>
               </Link>
               <Link
                 to="/contact"
                 className="inline-flex items-center gap-2 rounded-2xl border border-dark/20 px-5 py-3 text-sm font-semibold shadow-sm transition-all duration-300 ease-out hover:border-dark hover:shadow-[0_12px_28px_rgba(0,0,0,0.16)]"
+                onClick={(event) => {
+                  event.preventDefault();
+                  openStrategyCall();
+                }}
               >
                 Request Experience Audit <span aria-hidden>→</span>
               </Link>
@@ -770,12 +779,20 @@ function AICustomerExperienceSolutionsPage() {
             <Link
               to="/contact"
               className="inline-flex items-center gap-2 rounded-2xl bg-brand text-dark px-6 py-3.5 text-sm font-semibold shadow-sm transition-all duration-300 ease-out hover:brightness-95 hover:shadow-[0_14px_34px_rgba(255,179,48,0.32)]"
+              onClick={(event) => {
+                event.preventDefault();
+                openStrategyCall();
+              }}
             >
               Book CX Strategy Session <span aria-hidden>→</span>
             </Link>
             <Link
               to="/contact"
               className="inline-flex items-center gap-2 rounded-2xl border border-canvas/30 px-6 py-3.5 text-sm font-semibold shadow-sm transition-all duration-300 ease-out hover:border-canvas hover:shadow-[0_14px_34px_rgba(255,255,255,0.18)]"
+              onClick={(event) => {
+                event.preventDefault();
+                openStrategyCall();
+              }}
             >
               Request Experience Audit <span aria-hidden>→</span>
             </Link>

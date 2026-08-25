@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import { openStrategyCall } from "@/lib/enquiry";
 import heroImg from "@/assets/services-hero.a1.jpg";
 
 export const Route = createFileRoute("/search-visibility")({
@@ -736,18 +737,26 @@ function SearchVisibilityPage() {
             discovery platforms — engineered for long-term business growth.
           </p>
           <div className="mt-10 flex flex-wrap gap-3 justify-center">
-            <Link
-              to="/contact"
-              className="inline-flex items-center gap-2 rounded-2xl bg-brand text-dark px-6 py-3.5 text-sm font-semibold shadow-sm transition-all duration-300 ease-out hover:brightness-95 hover:shadow-[0_14px_34px_rgba(255,179,48,0.32)]"
-            >
-              Schedule Search Strategy Consultation <span aria-hidden>→</span>
-            </Link>
-            <Link
-              to="/contact"
-              className="inline-flex items-center gap-2 rounded-2xl border border-canvas/30 px-6 py-3.5 text-sm font-semibold shadow-sm transition-all duration-300 ease-out hover:border-canvas hover:shadow-[0_14px_34px_rgba(255,255,255,0.18)]"
-            >
-              Get Free Search Visibility Audit <span aria-hidden>→</span>
-            </Link>
+              <Link
+                to="/contact"
+                onClick={(event) => {
+                  event.preventDefault();
+                  openStrategyCall();
+                }}
+                className="inline-flex items-center gap-2 rounded-2xl bg-brand text-dark px-6 py-3.5 text-sm font-semibold shadow-sm transition-all duration-300 ease-out hover:brightness-95 hover:shadow-[0_14px_34px_rgba(255,179,48,0.32)]"
+              >
+                Schedule Search Strategy Consultation <span aria-hidden>→</span>
+              </Link>
+              <Link
+                to="/contact"
+                onClick={(event) => {
+                  event.preventDefault();
+                  openStrategyCall();
+                }}
+                className="inline-flex items-center gap-2 rounded-2xl border border-canvas/30 px-6 py-3.5 text-sm font-semibold shadow-sm transition-all duration-300 ease-out hover:border-canvas hover:shadow-[0_14px_34px_rgba(255,255,255,0.18)]"
+              >
+                Get Free Search Visibility Audit <span aria-hidden>→</span>
+              </Link>
           </div>
         </div>
       </section>

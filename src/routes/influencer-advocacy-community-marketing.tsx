@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import { openStrategyCall } from "@/lib/enquiry";
 import heroImg from "@/assets/svc-branding.jpg";
 import caseMos from "@/assets/case-mos.jpg";
 import caseAmigo from "@/assets/case-amigo.jpg";
@@ -321,12 +322,20 @@ function InfluencerAdvocacyPage() {
             <div className="mt-9 flex flex-wrap gap-3">
               <Link
                 to="/contact"
+                onClick={(event) => {
+                  event.preventDefault();
+                  openStrategyCall();
+                }}
                 className="inline-flex items-center gap-2 rounded-2xl bg-dark text-canvas px-5 py-3 text-sm font-semibold shadow-sm transition-all duration-300 ease-out hover:bg-dark/90 hover:shadow-[0_12px_28px_rgba(0,0,0,0.22)]"
               >
                 Build My Influence Strategy <span aria-hidden>→</span>
               </Link>
               <Link
                 to="/contact"
+                onClick={(event) => {
+                  event.preventDefault();
+                  openStrategyCall();
+                }}
                 className="inline-flex items-center gap-2 rounded-2xl border border-dark/20 px-5 py-3 text-sm font-semibold shadow-sm transition-all duration-300 ease-out hover:border-dark hover:shadow-[0_12px_28px_rgba(0,0,0,0.16)]"
               >
                 Book Community Consultation <span aria-hidden>→</span>
@@ -671,10 +680,14 @@ function InfluencerAdvocacyPage() {
               >
                 Build My Influence Strategy <span aria-hidden>→</span>
               </Link>
-              <Link
-                to="/contact"
-                className="inline-flex items-center gap-2 rounded-2xl border border-dark/20 px-5 py-3 text-sm font-semibold shadow-sm transition-all duration-300 ease-out hover:border-dark hover:shadow-[0_12px_28px_rgba(0,0,0,0.16)]"
-              >
+            <Link
+              to="/contact"
+              onClick={(event) => {
+                event.preventDefault();
+                openStrategyCall();
+              }}
+              className="inline-flex items-center gap-2 rounded-2xl border border-dark/20 px-5 py-3 text-sm font-semibold shadow-sm transition-all duration-300 ease-out hover:border-dark hover:shadow-[0_12px_28px_rgba(0,0,0,0.16)]"
+            >
                 Book Community Consultation <span aria-hidden>→</span>
               </Link>
             </div>

@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import { openStrategyCall, submitEnquiry } from "@/lib/enquiry";
 import contactHero from "@/assets/contact-hero.a121.jpg";
 import whatappIcon from "@/assets/whatappiconcontant.png";
 import mailIcon from "@/assets/mailiconcontant.png";
@@ -244,6 +245,10 @@ function ContactPage() {
             <div className="mt-8 flex flex-wrap gap-3">
               <a
                 href="#form"
+                onClick={(event) => {
+                  event.preventDefault();
+                  openStrategyCall();
+                }}
                 className="inline-flex items-center gap-2 rounded-xl bg-dark px-5 py-3 text-sm font-semibold text-canvas shadow-sm transition-all duration-300 hover:bg-dark/90 hover:shadow-[0_12px_28px_rgba(0,0,0,0.22)]"
               >
                 Schedule a Call
@@ -426,33 +431,26 @@ function ContactPage() {
                   className="mt-10 space-y-7"
                   onSubmit={async (event) => {
                     event.preventDefault();
-                    
-                    const formData = new FormData(event.currentTarget);
-                    const data = Object.fromEntries(formData.entries());
-                    
-                    // Add current page URL
-                    data.page_submitted_from = window.location.href;
-
+                  
+                    const form = event.currentTarget;
+                    const formData = new FormData(form);
+                  
+                    const data = {
+                      name: String(formData.get("name") || ""),
+                      email: String(formData.get("email") || ""),
+                      phone: String(formData.get("phone") || ""),
+                      service: String(formData.get("service") || ""),
+                      country: String(formData.get("country") || ""),
+                      message: String(formData.get("message") || ""),
+                      source: "contact_page",
+                    };
+                  
                     try {
-                      // Adjust URL to point to where the PHP file is hosted, e.g., '/api/contact.php'
-                      const response = await fetch('/api/contact.php', {
-                        method: 'POST',
-                        headers: {
-                          'Content-Type': 'application/json',
-                        },
-                        body: JSON.stringify(data),
-                      });
-
-                      if (response.ok) {
-                        setSubmitted(true);
-                      } else {
-                        console.error('Failed to submit form');
-                        // You can handle error state here
-                        alert('Something went wrong. Please try again.');
-                      }
+                      await submitEnquiry(data);
+                      setSubmitted(true);
                     } catch (error) {
-                      console.error('Error submitting form:', error);
-                      alert('Something went wrong. Please try again.');
+                      console.error("Error submitting enquiry:", error);
+                      alert("Something went wrong. Please try again.");
                     }
                   }}
                 >

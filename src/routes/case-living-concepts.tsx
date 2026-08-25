@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import { openStrategyCall } from "@/lib/enquiry";
 import heroImg from "@/assets/livingconceptsheroace.png";
 import bannerImg from "@/assets/livingconceptsace1.png";
 import bannerImg2 from "@/assets/livingconceptsace2.png";
@@ -622,7 +623,7 @@ function LivingConceptsCaseStudyPage() {
         <div className="mt-8 flex flex-nowrap items-center gap-3 overflow-x-auto pb-1 lg:overflow-visible">
   <button
     type="button"
-    onClick={() => window.dispatchEvent(new Event("ace360:open-strategy-call"))}
+    onClick={openStrategyCall}
     className="inline-flex shrink-0 items-center justify-center whitespace-nowrap rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:opacity-90 hover:shadow-[0_14px_34px_rgba(255,179,48,0.32)]"
   >
      Book Discovery Call

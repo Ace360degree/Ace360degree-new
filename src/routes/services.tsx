@@ -2,6 +2,7 @@ import { Link, createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import { openStrategyCall } from "@/lib/enquiry";
 import servicesHero from "@/assets/services-hero.jpg";
 import svcBranding from "@/assets/svc-branding.jpg";
 import svcDigital from "@/assets/svc-digital.jpg";
@@ -431,6 +432,10 @@ function ServicesPage() {
                 </a>
                 <a
                   href="#cta"
+                  onClick={(event) => {
+                    event.preventDefault();
+                    openStrategyCall();
+                  }}
                   className="inline-flex items-center gap-2 rounded-2xl border border-dark/15 px-6 py-3.5 text-sm font-semibold text-dark shadow-sm transition-all duration-300 ease-out hover:border-dark hover:shadow-[0_12px_28px_rgba(0,0,0,0.16)]"
                 >
                   Book Discovery Call
@@ -538,6 +543,10 @@ function ServicesPage() {
             </p>
             <a
               href="#cta"
+              onClick={(event) => {
+                event.preventDefault();
+                openStrategyCall();
+              }}
               className="mt-7 inline-flex items-center gap-2 rounded-2xl bg-brand text-dark px-6 py-3.5 text-sm font-semibold shadow-sm transition-all duration-300 ease-out hover:brightness-95 hover:shadow-[0_14px_34px_rgba(255,179,48,0.32)]"
             >
               Book Discovery Call <span aria-hidden>→</span>
@@ -630,7 +639,14 @@ function ServicesPage() {
               Every business is different. Our discovery process helps uncover growth opportunities across customer acquisition, branding, technology, automation and AI.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <a href="#contact-form" className="inline-flex items-center gap-2 rounded-2xl bg-dark text-canvas px-6 py-3.5 text-sm font-semibold shadow-sm transition-all duration-300 ease-out hover:bg-dark/90 hover:shadow-[0_12px_28px_rgba(0,0,0,0.22)]">
+            <a
+              href="#contact-form"
+              onClick={(event) => {
+                event.preventDefault();
+                openStrategyCall();
+              }}
+              className="inline-flex items-center gap-2 rounded-2xl bg-dark text-canvas px-6 py-3.5 text-sm font-semibold shadow-sm transition-all duration-300 ease-out hover:bg-dark/90 hover:shadow-[0_12px_28px_rgba(0,0,0,0.22)]"
+            >
                 Book Discovery Call
               </a>
               <a href="#contact-form" className="inline-flex items-center gap-2 rounded-2xl border border-dark px-6 py-3.5 text-sm font-semibold shadow-sm transition-all duration-300 ease-out hover:bg-dark hover:text-canvas hover:shadow-[0_12px_28px_rgba(0,0,0,0.18)]">

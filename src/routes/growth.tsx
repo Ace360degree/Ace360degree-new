@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import { openStrategyCall } from "@/lib/enquiry";
 import heroMesh from "@/assets/hero-mesh.jpg";
 import showreel from "@/assets/showreel.jpg";
 import caseMos from "@/assets/case-mos.jpg";
@@ -63,6 +64,10 @@ function Hero() {
           <div className="mt-10 flex flex-wrap gap-4">
             <a
               href="#cta"
+              onClick={(event) => {
+                event.preventDefault();
+                openStrategyCall();
+              }}
               className="inline-flex items-center gap-2 bg-brand py-3 pr-5 pl-2.5 text-sm font-semibold text-dark ring-1 ring-brand hover:brightness-95 transition"
             >
               <span className="grid place-items-center size-6 rounded-full bg-dark/10">
@@ -503,6 +508,10 @@ function Founder() {
             </a>
             <a
               href="#cta"
+              onClick={(event) => {
+                event.preventDefault();
+                openStrategyCall();
+              }}
               className="inline-flex items-center px-6 py-3 text-sm font-semibold border border-dark/15 hover:bg-dark hover:text-canvas transition"
             >
               Book Discovery Call
@@ -822,7 +831,14 @@ function FinalCta() {
           implement AI or build scalable digital platforms — our team is ready to help.
         </p>
         <div className="mt-10 flex flex-wrap justify-center gap-4">
-          <a href="/contact" className="inline-flex items-center gap-2 bg-brand py-3 pr-5 pl-2.5 text-sm font-semibold text-dark ring-1 ring-brand hover:brightness-95 transition cursor-pointer">
+          <a
+            href="/contact"
+            onClick={(event) => {
+              event.preventDefault();
+              openStrategyCall();
+            }}
+            className="inline-flex items-center gap-2 bg-brand py-3 pr-5 pl-2.5 text-sm font-semibold text-dark ring-1 ring-brand hover:brightness-95 transition cursor-pointer"
+          >
             <span className="grid place-items-center size-6 rounded-full bg-dark/10">
               <span className="size-1.5 rounded-full bg-dark" />
             </span>

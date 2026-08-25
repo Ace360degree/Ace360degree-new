@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import { openStrategyCall } from "@/lib/enquiry";
 import heroImg from "@/assets/services-hero.a16.jpg";
 import caseCosmos from "@/assets/case-cosmos.a17.jpg";
 import caseRexello from "@/assets/case-rexello.a18.jpg";
@@ -389,6 +390,10 @@ function ContentMarketingPage() {
               </Link>
               <Link
                 to="/contact"
+                onClick={(event) => {
+                  event.preventDefault();
+                  openStrategyCall();
+                }}
                 className="inline-flex items-center gap-2 rounded-2xl border border-dark/20 px-5 py-3 text-sm font-semibold shadow-sm transition-all duration-300 ease-out hover:border-dark hover:shadow-[0_12px_28px_rgba(0,0,0,0.16)]"
               >
                 Book Content Consultation <span aria-hidden>→</span>
@@ -726,6 +731,10 @@ function ContentMarketingPage() {
             </Link>
             <Link
               to="/contact"
+              onClick={(event) => {
+                event.preventDefault();
+                openStrategyCall();
+              }}
               className="inline-flex items-center gap-2 rounded-2xl border border-canvas/30 px-6 py-3.5 text-sm font-semibold shadow-sm transition-all duration-300 ease-out hover:border-canvas hover:shadow-[0_14px_34px_rgba(255,255,255,0.18)]"
             >
               Book Content Consultation <span aria-hidden>→</span>
