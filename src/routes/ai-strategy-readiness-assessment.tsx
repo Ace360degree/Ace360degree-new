@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import heroImg from "@/assets/services-hero.jpg";
+import { openStrategyCall, submitEnquiry } from "@/lib/enquiry";
 
 export const Route = createFileRoute("/ai-strategy-readiness-assessment")({
   component: AIStrategyPage,
@@ -246,6 +247,60 @@ const faqs = [
 
 /* ---------- page ---------- */
 function AIStrategyPage() {
+  const [loading, setLoading] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+
+    const companyName = String(formData.get("name") ?? "").trim();
+    const industry = String(formData.get("industry") ?? "").trim();
+    const employees = String(formData.get("employees") ?? "").trim();
+    const technologyStack = String(formData.get("technologyStack") ?? "").trim();
+    const email = String(formData.get("email") ?? "").trim();
+    const phone = String(formData.get("phone") ?? "").trim();
+
+    const message = [
+      industry ? `Industry: ${industry}` : "",
+      employees ? `Employees: ${employees}` : "",
+      technologyStack ? `Current Technology Stack: ${technologyStack}` : "",
+    ]
+      .filter(Boolean)
+      .join(" | ");
+
+    try {
+      setLoading(true);
+      setError("");
+      setSubmitted(false);
+
+      const result = await submitEnquiry({
+        name: companyName || "AI Strategy Lead",
+        email,
+        phone,
+        service: "AI Strategy & Readiness Assessment",
+        country: "India",
+        message: message || "AI readiness assessment enquiry",
+        source: "ai_strategy_assessment",
+      });
+
+      if (result?.success) {
+        setSubmitted(true);
+        form.reset();
+      } else {
+        throw new Error(result?.message || "Failed to submit enquiry");
+      }
+    } catch (submitError) {
+      console.error(submitError);
+      setError("Unable to submit your enquiry. Please try again.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-canvas text-dark">
       <SiteHeader />
@@ -284,12 +339,20 @@ function AIStrategyPage() {
               <Link
                 to="/contact"
                 className="inline-flex items-center gap-2 rounded-2xl bg-dark text-canvas px-5 py-3 text-sm font-semibold shadow-sm transition-all duration-300 ease-out hover:bg-dark/90 hover:shadow-[0_12px_28px_rgba(0,0,0,0.22)]"
+                onClick={(event) => {
+                  event.preventDefault();
+                  openStrategyCall();
+                }}
               >
                 Assess My AI Readiness <span aria-hidden>→</span>
               </Link>
               <Link
                 to="/contact"
                 className="inline-flex items-center gap-2 rounded-2xl border border-dark/20 px-5 py-3 text-sm font-semibold shadow-sm transition-all duration-300 ease-out hover:border-dark hover:shadow-[0_12px_28px_rgba(0,0,0,0.16)]"
+                onClick={(event) => {
+                  event.preventDefault();
+                  openStrategyCall();
+                }}
               >
                 Book AI Strategy Consultation <span aria-hidden>→</span>
               </Link>
@@ -323,50 +386,66 @@ function AIStrategyPage() {
               </p>
               <form
                 className="mt-6 grid grid-cols-1 gap-3"
-                onSubmit={(e) => e.preventDefault()}
+                onSubmit={handleSubmit}
               >
                 <input
                   type="text"
                   placeholder="Company Name"
+                  name="name"
                   maxLength={150}
                   className="border border-dark/15 px-3 py-2.5 text-sm focus:outline-none focus:border-dark bg-canvas"
                 />
                 <input
                   type="text"
                   placeholder="Industry"
+                  name="industry"
                   maxLength={100}
                   className="border border-dark/15 px-3 py-2.5 text-sm focus:outline-none focus:border-dark bg-canvas"
                 />
                 <input
                   type="text"
                   placeholder="Number Of Employees"
+                  name="employees"
                   maxLength={20}
                   className="border border-dark/15 px-3 py-2.5 text-sm focus:outline-none focus:border-dark bg-canvas"
                 />
                 <input
                   type="text"
                   placeholder="Current Technology Stack"
+                  name="technologyStack"
                   maxLength={200}
                   className="border border-dark/15 px-3 py-2.5 text-sm focus:outline-none focus:border-dark bg-canvas"
                 />
                 <input
                   type="email"
                   placeholder="Email"
+                  name="email"
                   maxLength={255}
                   className="border border-dark/15 px-3 py-2.5 text-sm focus:outline-none focus:border-dark bg-canvas"
                 />
                 <input
                   type="tel"
                   placeholder="Phone"
+                  name="phone"
                   maxLength={30}
                   className="border border-dark/15 px-3 py-2.5 text-sm focus:outline-none focus:border-dark bg-canvas"
                 />
                 <button
                   type="submit"
-                  className="mt-2 inline-flex items-center justify-center gap-2 bg-brand text-dark px-5 py-3 text-sm font-semibold hover:brightness-95 transition"
+                  disabled={loading}
+                  className="mt-2 inline-flex items-center justify-center gap-2 bg-brand text-dark px-5 py-3 text-sm font-semibold hover:brightness-95 transition disabled:cursor-not-allowed disabled:opacity-70"
                 >
-                  Get My AI Readiness Assessment <span aria-hidden>→</span>
+                  {loading ? "Submitting..." : "Get My AI Readiness Assessment"}{" "}
+                  <span aria-hidden>→</span>
                 </button>
+                {error ? (
+                  <p className="text-sm text-red-600">{error}</p>
+                ) : null}
+                {submitted ? (
+                  <p className="text-sm text-emerald-700">
+                    Thanks. Your AI readiness enquiry has been submitted successfully.
+                  </p>
+                ) : null}
               </form>
             </div>
             <div className="relative mt-6 aspect-[16/9] overflow-hidden rounded-2xl">
@@ -721,18 +800,30 @@ function AIStrategyPage() {
             <Link
               to="/contact"
               className="inline-flex items-center gap-2 rounded-2xl bg-brand text-dark px-6 py-3.5 text-sm font-semibold shadow-sm transition-all duration-300 ease-out hover:brightness-95 hover:shadow-[0_14px_34px_rgba(255,179,48,0.32)]"
+              onClick={(event) => {
+                event.preventDefault();
+                openStrategyCall();
+              }}
             >
               Assess My AI Readiness <span aria-hidden>→</span>
             </Link>
             <Link
               to="/contact"
               className="inline-flex items-center gap-2 rounded-2xl border border-canvas/30 px-6 py-3.5 text-sm font-semibold shadow-sm transition-all duration-300 ease-out hover:border-canvas hover:shadow-[0_14px_34px_rgba(255,255,255,0.18)]"
+              onClick={(event) => {
+                event.preventDefault();
+                openStrategyCall();
+              }}
             >
               Book AI Strategy Consultation <span aria-hidden>→</span>
             </Link>
             <Link
               to="/contact"
               className="inline-flex items-center gap-2 rounded-2xl border border-canvas/30 px-6 py-3.5 text-sm font-semibold shadow-sm transition-all duration-300 ease-out hover:border-canvas hover:shadow-[0_14px_34px_rgba(255,255,255,0.18)]"
+              onClick={(event) => {
+                event.preventDefault();
+                openStrategyCall();
+              }}
             >
               Request Executive Workshop <span aria-hidden>→</span>
             </Link>

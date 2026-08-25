@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import { openStrategyCall } from "@/lib/enquiry";
 import heroImg from "@/assets/services-hero.a3.jpg";
 
 export const Route = createFileRoute("/performance-marketing")({
@@ -290,6 +291,10 @@ function PerformanceMarketingPage() {
               </Link>
               <Link
                 to="/contact"
+                onClick={(event) => {
+                  event.preventDefault();
+                  openStrategyCall();
+                }}
                 className="inline-flex items-center gap-2 rounded-2xl border border-dark/20 px-5 py-3 text-sm font-semibold shadow-sm transition-all duration-300 ease-out hover:border-dark hover:shadow-[0_12px_28px_rgba(0,0,0,0.16)]"
               >
                 Book Performance Consultation <span aria-hidden>→</span>
@@ -590,12 +595,20 @@ function PerformanceMarketingPage() {
           <div className="mt-10 flex flex-wrap justify-center gap-3">
             <Link
               to="/contact"
+              onClick={(event) => {
+                event.preventDefault();
+                openStrategyCall();
+              }}
               className="inline-flex items-center gap-2 rounded-2xl bg-brand text-dark px-6 py-3.5 text-sm font-semibold shadow-sm transition-all duration-300 ease-out hover:brightness-95 hover:shadow-[0_14px_34px_rgba(255,179,48,0.32)]"
             >
               Book Performance Consultation <span aria-hidden>→</span>
             </Link>
             <Link
               to="/contact"
+              onClick={(event) => {
+                event.preventDefault();
+                openStrategyCall();
+              }}
               className="inline-flex items-center gap-2 rounded-2xl border border-canvas/20 px-6 py-3.5 text-sm font-semibold shadow-sm transition-all duration-300 ease-out hover:border-canvas hover:shadow-[0_14px_34px_rgba(255,255,255,0.18)]"
             >
               Request Campaign Audit <span aria-hidden>→</span>

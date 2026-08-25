@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, ArrowUpRight, CheckCircle2 } from "lucide-react";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import { openStrategyCall } from "@/lib/enquiry";
 import heroImg from "@/assets/case-opus-dental.123.jpg";
 
 export const Route = createFileRoute("/case-opus-dental")({
@@ -129,7 +130,7 @@ function OpusDentalCaseStudyPage() {
           </h2>
           <button
             type="button"
-            onClick={() => window.dispatchEvent(new Event("ace360:open-strategy-call"))}
+            onClick={openStrategyCall}
             className="mt-8 inline-flex items-center gap-2 rounded-2xl bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-sm transition-all duration-300 ease-out hover:brightness-95 hover:shadow-[0_14px_34px_rgba(255,179,48,0.32)]"
           >
             Book Discovery Call <ArrowRight className="h-4 w-4" />

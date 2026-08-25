@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import { openStrategyCall } from "@/lib/enquiry";
 import heroImg from "@/assets/legaacyy1hero.jpg";
 import lessonsBanner from "@/assets/legaacyy2banner.png";
 
@@ -535,6 +536,10 @@ function FinalCTA() {
           </Link>
           <Link
             to="/contact"
+            onClick={(event) => {
+              event.preventDefault();
+              openStrategyCall();
+            }}
             className="inline-flex items-center gap-2 rounded-2xl border border-canvas/30 text-canvas px-6 py-3 text-sm font-semibold shadow-sm transition-all duration-300 ease-out hover:bg-canvas/5 hover:shadow-[0_14px_34px_rgba(255,255,255,0.18)]"
           >
             Book Discovery Call

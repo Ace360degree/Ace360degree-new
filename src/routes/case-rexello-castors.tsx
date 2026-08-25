@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import { openStrategyCall } from "@/lib/enquiry";
 import heroImg from "@/assets/heroRexelloy1.jpg";
 import aboutImg from "@/assets/bannerRexelloy1.jpg";
 import bannerImg from "@/assets/bannerRexelloy2.jpg";
@@ -577,7 +578,7 @@ function RexelloCaseStudyPage() {
         <div className="mt-8 flex flex-wrap items-center gap-3">
           <button
             type="button"
-            onClick={() => window.dispatchEvent(new Event("ace360:open-strategy-call"))}
+            onClick={openStrategyCall}
             className="inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:opacity-90 hover:shadow-[0_14px_34px_rgba(255,179,48,0.32)]"
           >
             Book Discovery Call

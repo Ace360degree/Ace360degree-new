@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import { openStrategyCall } from "@/lib/enquiry";
 import heroImg from "@/assets/Cosmoshero1.png";
 import bannerImg from "@/assets/Cosmosbannery2.png";
 export const Route = createFileRoute("/case-cosmos-seals")({
@@ -570,7 +571,7 @@ function CosmosSealsCaseStudyPage() {
 
       <button
         type="button"
-        onClick={() => window.dispatchEvent(new Event("ace360:open-strategy-call"))}
+        onClick={openStrategyCall}
         className="
           inline-flex
           items-center

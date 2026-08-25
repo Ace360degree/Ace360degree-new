@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import { openStrategyCall } from "@/lib/enquiry";
 import heroImg from "@/assets/svc-branding.222.jpg";
 import caseMos from "@/assets/case-mos.414.jpg";
 import  caseRexello from "@/assets/case-amigo.151.jpg";
@@ -374,12 +375,20 @@ function CorporateFilmsPage() {
             <div className="mt-9 flex flex-wrap gap-3">
               <Link
                 to="/contact"
+                onClick={(event) => {
+                  event.preventDefault();
+                  openStrategyCall();
+                }}
                 className="inline-flex items-center gap-2 rounded-2xl bg-dark text-canvas px-5 py-3 text-sm font-semibold shadow-sm transition-all duration-300 ease-out hover:bg-dark/90 hover:shadow-[0_12px_28px_rgba(0,0,0,0.22)]"
               >
                 Create My Corporate Film <span aria-hidden>→</span>
               </Link>
               <Link
                 to="/contact"
+                onClick={(event) => {
+                  event.preventDefault();
+                  openStrategyCall();
+                }}
                 className="inline-flex items-center gap-2 rounded-2xl border border-dark/20 px-5 py-3 text-sm font-semibold shadow-sm transition-all duration-300 ease-out hover:border-dark hover:shadow-[0_12px_28px_rgba(0,0,0,0.16)]"
               >
                 Book Storytelling Consultation <span aria-hidden>→</span>
@@ -721,12 +730,20 @@ function CorporateFilmsPage() {
           <div className="mt-10 flex flex-wrap gap-3 justify-center">
             <Link
               to="/contact"
+              onClick={(event) => {
+                event.preventDefault();
+                openStrategyCall();
+              }}
               className="inline-flex items-center gap-2 rounded-2xl bg-brand text-dark px-6 py-3.5 text-sm font-semibold shadow-sm transition-all duration-300 ease-out hover:brightness-95 hover:shadow-[0_14px_34px_rgba(255,179,48,0.32)]"
             >
               Request Corporate Film Proposal <span aria-hidden>→</span>
             </Link>
             <Link
               to="/contact"
+              onClick={(event) => {
+                event.preventDefault();
+                openStrategyCall();
+              }}
               className="inline-flex items-center gap-2 rounded-2xl border border-canvas/30 px-6 py-3.5 text-sm font-semibold shadow-sm transition-all duration-300 ease-out hover:border-canvas hover:shadow-[0_14px_34px_rgba(255,255,255,0.18)]"
             >
               Book Storytelling Consultation <span aria-hidden>→</span>

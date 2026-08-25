@@ -30,6 +30,7 @@ import {
 } from "lucide-react";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import { openStrategyCall } from "@/lib/enquiry";
 
 import heroImg from "@/assets/industry-manufacturing.6666.jpg";
 import caseRexello from "@/assets/case-rexello-hero.jpg";
@@ -451,7 +452,7 @@ function ManufacturingPage() {
               to="/contact"
               onClick={(e) => {
                 e.preventDefault();
-                window.dispatchEvent(new Event("ace360:open-strategy-call"));
+                openStrategyCall();
               }}
               className="inline-flex items-center gap-2 rounded-full bg-foreground px-6 py-3 text-sm font-medium text-background shadow-sm transition-all duration-300 ease-out hover:bg-foreground/90 hover:shadow-[0_12px_28px_rgba(0,0,0,0.22)]"
             >
@@ -892,14 +893,14 @@ function ManufacturingPage() {
 
     <Reveal delay={240}>
       <div className="mt-10 flex flex-wrap justify-center gap-3">
-        <Link
-          to="/contact"
-          onClick={(e) => {
-            e.preventDefault();
-            window.dispatchEvent(new Event("ace360:open-strategy-call"));
-          }}
-          className="inline-flex items-center gap-2 rounded-full bg-foreground px-7 py-3.5 text-sm font-medium text-background shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-foreground/90 hover:shadow-[0_14px_34px_rgba(242,164,0,0.32)]"
-        >
+          <Link
+            to="/contact"
+            onClick={(e) => {
+              e.preventDefault();
+              openStrategyCall();
+            }}
+            className="inline-flex items-center gap-2 rounded-full bg-foreground px-7 py-3.5 text-sm font-medium text-background shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-foreground/90 hover:shadow-[0_14px_34px_rgba(242,164,0,0.32)]"
+          >
           Book Discovery Call
           <ArrowRight className="h-4 w-4" />
         </Link>

@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState, useRef, ReactNode } from "react";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import { openStrategyCall } from "@/lib/enquiry";
 import heroMesh from "@/assets/index/AI growth visualization.png";
 import showreel from "@/assets/teamwork22222.png";
 import caseMos from "@/assets/index/story/MOS Utility.png";
@@ -193,6 +194,10 @@ function Hero() {
           <div className="mt-10 flex flex-wrap gap-4">
             <a
               href="#cta"
+              onClick={(event) => {
+                event.preventDefault();
+                openStrategyCall();
+              }}
               className="group relative inline-flex items-center gap-2 bg-brand rounded-2xl py-3 px-6 text-sm font-semibold text-dark ring-1 ring-brand hover:brightness-95 transition-all duration-300 shadow-sm hover:shadow-[0_12px_28px_rgba(0,0,0,0.22)] overflow-hidden"
             >
               <span className="absolute left-2.5 grid size-6 place-items-center rounded-full bg-dark/10">
@@ -314,7 +319,14 @@ function Showreel() {
               </span>
               <span className=" pl-6 group-hover:-translate-x-2 transition-transform duration-500">Start a Project</span>
             </a>
-            <a href="#cta" className="inline-flex items-center px-6 py-3 rounded-2xl text-sm font-semibold border border-dark/15 transition-all duration-300 shadow-sm hover:shadow-[0_12px_28px_rgba(0,0,0,0.22)]">
+            <a
+              href="#cta"
+              onClick={(event) => {
+                event.preventDefault();
+                openStrategyCall();
+              }}
+              className="inline-flex items-center px-6 py-3 rounded-2xl text-sm font-semibold border border-dark/15 transition-all duration-300 shadow-sm hover:shadow-[0_12px_28px_rgba(0,0,0,0.22)]"
+            >
               Book Consultation
             </a>
           </div>
