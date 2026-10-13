@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
   Outlet,
@@ -69,7 +70,7 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
   head: () => ({
-    
+
     meta: [
       { title: "Ace360degree — AI-Powered Digital Marketing, Branding & Technology Agency in Mumbai" },
       { charSet: "utf-8" },
@@ -83,7 +84,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "icon", type: "image/png", href: "/aceFavicon1.png" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      
+
       {
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Instrument+Serif:ital@0;1&display=swap",
@@ -110,11 +111,35 @@ function RootShell({ children }: { children: React.ReactNode }) {
   );
 }
 
+function TawkToWidget() {
+  useEffect(() => {
+    // Guard against duplicate injection
+    if (document.getElementById("tawk-to-script")) return;
+
+    const Tawk_API = (window as any).Tawk_API || {};
+    const Tawk_LoadStart = new Date();
+    (window as any).Tawk_API = Tawk_API;
+    (window as any).Tawk_LoadStart = Tawk_LoadStart;
+
+    const s1 = document.createElement("script");
+    const s0 = document.getElementsByTagName("script")[0];
+    s1.id = "tawk-to-script";
+    s1.async = true;
+    s1.src = "https://embed.tawk.to/6acddda2c4812e34cadda758/1k4q2jhi7";
+    s1.charset = "UTF-8";
+    s1.setAttribute("crossorigin", "*");
+    s0.parentNode!.insertBefore(s1, s0);
+  }, []);
+
+  return null;
+}
+
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
 
   return (
     <QueryClientProvider client={queryClient}>
+      <TawkToWidget />
       <Outlet />
     </QueryClientProvider>
   );
